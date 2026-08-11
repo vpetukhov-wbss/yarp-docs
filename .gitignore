@@ -1,0 +1,24 @@
+# Source PDFs (large, third-party Microsoft Learn exports — not project source)
+*.pdf
+
+# Tool-scratch output (not project artifacts)
+.remember/
+.playwright-mcp/
+
+# Node / Angular (applies once yarp-docs/ exists)
+node_modules/
+dist/
+.angular/
+coverage/
+*.log
+npm-debug.log*
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# Env files that may hold secrets later (none expected this phase, kept as a guardrail)
+.env
+.env.local

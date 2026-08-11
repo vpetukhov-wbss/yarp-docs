@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overview of YARP · yarp/docs</title>
+<style>
+  /* ============================================================
+     TOKENS — "Console": dark, monospace throughout, one accent
+     borrowed from HTTP's own vocabulary — 3xx redirect amber,
+     the status class a reverse proxy lives in. A thin traffic
+     ticker under the header is the signature move.
+     ============================================================ */
+  :root{
+    --bg:#0a0c10;
+    --surface:#10141a;
+    --surface-2:#161c24;
+    --border:#232a35;
+    --border-strong:#333d4d;
+    --ink:#dbe2ea;
+    --ink-soft:#aeb8c6;
+    --muted:#7c8a9c;
+    --faint:#4d5866;
+    --accent:#ffab40;
+    --accent-ink:#1a1206;
+    --accent-dim:#7a5a24;
+    --accent-soft:#241b0c;
+    --ok:#4ee0a0;
+    --code-bg:#0d1116;
+    --code-border:#1d2430;
+    --note-bg:#181310;
+    --note-border:#4a3210;
+    --note-ink:#ffcb8a;
+    --shadow:0 12px 32px -12px rgba(0,0,0,.7);
+    --font-ui:"Cascadia Code","Cascadia Mono",ui-monospace,"Consolas","JetBrains Mono","SFMono-Regular",Menlo,monospace;
+    --font-code:"Cascadia Code","Cascadia Mono",ui-monospace,"Consolas","SFMono-Regular",Menlo,monospace;
+    color-scheme: dark;
+  }
+  :root[data-theme="light"]{
+    --bg:#f7f7f5;
+    --surface:#ffffff;
+    --surface-2:#eef0ee;
+    --border:#dcdfdb;
+    --border-strong:#c3c8c2;
+    --ink:#14181a;
+    --ink-soft:#333c3f;
+    --muted:#5c6b6e;
+    --faint:#8b9a9c;
+    --accent:#b5690a;
+    --accent-ink:#ffffff;
+    --accent-dim:#e0ab6c;
+    --accent-soft:#fbeddb;
+    --ok:#0e8f5f;
+    --code-bg:#ffffff;
+    --code-border:#dcdfdb;
+    --note-bg:#fff3e4;
+    --note-border:#f0cc9a;
+    --note-ink:#8a5416;
+    --shadow:0 10px 28px -12px rgba(20,24,26,.25);
+    color-scheme: light;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1100px 480px at 12% -10%, color-mix(in srgb, var(--accent) 7%, transparent), transparent 60%),
+      var(--bg);
+    color:var(--ink); font-family:var(--font-ui); font-size:14.5px; line-height:1.7;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  a{color:var(--accent); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .skip-link{position:absolute; left:-999px; top:0; background:var(--accent); color:var(--accent-ink); padding:.6em 1em; z-index:200;}
+  .skip-link:focus{left:0;}
+
+  header.site{
+    position:sticky; top:0; z-index:50;
+    display:flex; align-items:center; gap:1rem; height:52px; padding:0 16px;
+    background:color-mix(in srgb, var(--bg) 90%, transparent);
+    backdrop-filter:blur(10px); border-bottom:1px solid var(--border);
+  }
+  .brand{display:flex; align-items:center; gap:.55rem; font-weight:600; font-size:13.5px; color:var(--ink); white-space:nowrap; letter-spacing:.01em;}
+  .brand svg{color:var(--accent); flex:none;}
+  .brand .path{color:var(--faint);}
+  .brand .path .seg{color:var(--ink-soft);}
+
+  .hdr-search{
+    flex:1; max-width:440px; margin:0 auto; display:flex; align-items:center; gap:.5rem;
+    background:var(--surface); border:1px solid var(--border); border-radius:4px;
+    padding:0 10px; height:30px; color:var(--faint); font-size:12.5px;
+  }
+  .hdr-search svg{flex:none;}
+  .hdr-search .kbd{margin-left:auto; display:flex; gap:3px;}
+  .hdr-search kbd{background:var(--bg); border:1px solid var(--border-strong); border-radius:3px; padding:1px 5px; font-size:10.5px; color:var(--muted);}
+
+  .hdr-actions{display:flex; align-items:center; gap:.3rem; flex:none;}
+  .icon-btn{
+    display:flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:4px;
+    border:1px solid transparent; background:transparent; color:var(--muted); cursor:pointer;
+  }
+  .icon-btn:hover{background:var(--surface); color:var(--accent); border-color:var(--border);}
+
+  .lang-wrap{position:relative;}
+  .lang-btn{
+    display:flex; align-items:center; gap:.4rem; height:30px; padding:0 8px; border:1px solid var(--border);
+    border-radius:4px; background:var(--surface); color:var(--ink-soft); font-size:12px; cursor:pointer;
+  }
+  .lang-btn:hover{border-color:var(--accent-dim);}
+  .lang-menu{
+    position:absolute; right:0; top:calc(100% + 8px); width:250px; background:var(--surface);
+    border:1px solid var(--border); border-radius:6px; box-shadow:var(--shadow); padding:5px; z-index:60;
+  }
+  .lang-menu .cap{padding:7px 8px 5px; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--faint); border-bottom:1px solid var(--border); margin-bottom:4px;}
+  .lang-item{
+    display:flex; align-items:center; gap:.6rem; width:100%; text-align:left; padding:6px 8px; border-radius:3px;
+    border:none; background:none; cursor:pointer; color:var(--ink-soft); font-size:12.5px; font-family:var(--font-ui);
+  }
+  .lang-item:hover{background:var(--surface-2);}
+  .lang-item.active{background:var(--accent-soft); color:var(--accent);}
+  .lang-item .code{margin-left:auto; font-size:10.5px; color:var(--faint);}
+  .lang-item.active .code{color:var(--accent);}
+  .lang-item .dot{width:5px;height:5px;border-radius:50%;background:var(--faint);flex:none;}
+  .lang-item.active .dot{background:var(--ok);}
+
+  /* traffic ticker — the signature element */
+  .ticker{
+    position:relative; height:26px; overflow:hidden; border-bottom:1px solid var(--border);
+    background:var(--surface); font-size:11px; color:var(--faint);
+  }
+  .ticker-track{
+    position:absolute; white-space:nowrap; display:flex; gap:2.5rem; align-items:center; height:100%;
+    animation:scroll-left 34s linear infinite; padding-left:100%;
+  }
+  .ticker-track span{display:inline-flex; align-items:center; gap:.4rem;}
+  .ticker .m200{color:var(--ok);}
+  .ticker .m301{color:var(--accent);}
+  .ticker .arrow{color:var(--faint);}
+  @keyframes scroll-left{ from{ transform:translateX(0);} to{ transform:translateX(-100%);} }
+  @media (prefers-reduced-motion: reduce){ .ticker-track{animation:none; padding-left:12px;} }
+
+  .shell{display:grid; grid-template-columns:264px minmax(0,1fr) 226px; max-width:1440px; margin:0 auto;}
+
+  nav.side{
+    border-right:1px solid var(--border); padding:18px 10px 60px; height:calc(100vh - 78px);
+    position:sticky; top:78px; overflow-y:auto;
+  }
+  .side-group summary{
+    list-style:none; cursor:pointer; display:flex; align-items:center; gap:6px; padding:7px 9px;
+    font-size:11px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--faint);
+  }
+  .side-group summary::-webkit-details-marker{display:none;}
+  .side-group summary:hover{color:var(--ink-soft);}
+  .side-group summary .chev{width:12px; height:12px; transition:transform .15s; flex:none; color:var(--faint);}
+  .side-group[open] summary .chev{transform:rotate(90deg);}
+  .side-list{list-style:none; margin:0 0 12px; padding:0 0 0 9px; border-left:1px dashed var(--border);}
+  .side-list li{margin:0;}
+  .side-list a{
+    display:flex; align-items:baseline; gap:8px; padding:5px 10px; margin-left:-1px;
+    border-left:2px solid transparent; font-size:12.5px; color:var(--ink-soft);
+  }
+  .side-list a .n{color:var(--faint); font-size:10.5px; flex:none;}
+  .side-list a:hover{background:var(--surface); text-decoration:none; color:var(--ink);}
+  .side-list a.current{border-left-color:var(--accent); background:var(--accent-soft); color:var(--accent); }
+  .side-list a.current .n{color:var(--accent);}
+
+  main.article-col{min-width:0; padding:36px 44px 96px;}
+  .crumbs{font-size:11.5px; color:var(--faint); margin-bottom:16px;}
+  .crumbs a{color:var(--faint);} .crumbs .sep{margin:0 6px; color:var(--border-strong);}
+
+  article h1{font-size:26px; font-weight:700; margin:0 0 8px; letter-spacing:-.01em;}
+  article h1 .prompt{color:var(--accent); margin-right:10px;}
+  .lede{color:var(--muted); font-size:14.5px; margin:0 0 30px; max-width:66ch; border-left:2px solid var(--border); padding-left:14px;}
+  article h2{
+    font-size:14px; font-weight:700; margin:44px 0 14px; scroll-margin-top:96px;
+    color:var(--ink); text-transform:uppercase; letter-spacing:.06em;
+    display:flex; align-items:center; gap:10px;
+  }
+  article h2::after{content:""; flex:1; height:1px; background:var(--border);}
+  article p{margin:0 0 16px; max-width:68ch; color:var(--ink-soft);}
+  article ul{margin:0 0 22px; padding-left:0; list-style:none; max-width:68ch;}
+  article ul li{position:relative; padding:4px 0 4px 22px; margin-bottom:8px; color:var(--ink-soft);}
+  article ul li::before{content:"▸"; position:absolute; left:2px; top:3px; color:var(--accent);}
+  article ul li strong{color:var(--ink); font-weight:600;}
+  article code:not(pre code){background:var(--surface-2); border:1px solid var(--border); border-radius:3px; padding:.08em .36em; color:var(--accent); font-size:.92em;}
+
+  .callout{
+    display:flex; gap:12px; margin:22px 0; padding:13px 15px; border-radius:4px;
+    background:var(--note-bg); border:1px solid var(--note-border); border-left:3px solid var(--accent); max-width:68ch;
+  }
+  .callout svg{flex:none; color:var(--accent); margin-top:1px;}
+  .callout .head{font-weight:700; font-size:11.5px; color:var(--note-ink); margin-bottom:3px; text-transform:uppercase; letter-spacing:.06em;}
+  .callout p{margin:0; color:var(--note-ink); font-size:13px; opacity:.9;}
+
+  .example-box{margin:26px 0 32px; border:1px solid var(--border); border-radius:6px; overflow:hidden; max-width:68ch; background:var(--code-bg);}
+  .example-box .eb-head{padding:11px 15px; border-bottom:1px solid var(--code-border); display:flex; align-items:center; gap:8px;}
+  .example-box .eb-head .dots{display:flex; gap:5px;}
+  .example-box .eb-head .dots span{width:8px; height:8px; border-radius:50%; background:var(--border-strong);}
+  .example-box .eb-head h3{margin:0; font-size:12px; font-weight:600; color:var(--ink-soft); text-transform:none; letter-spacing:0;}
+
+  pre.code-block{position:relative; margin:0; background:var(--code-bg); overflow-x:auto; padding:14px 16px; font-family:var(--font-code); font-size:12.5px; line-height:1.7;}
+  pre.code-block + pre.code-block{border-top:1px solid var(--code-border);}
+  .code-block .lang-tag{position:absolute; top:8px; right:42px; font-size:10px; color:var(--faint); text-transform:uppercase; letter-spacing:.06em; font-weight:700;}
+  .copy-btn{position:absolute; top:6px; right:6px; width:26px; height:26px; border-radius:4px; border:1px solid var(--border); background:var(--surface); color:var(--muted); display:flex; align-items:center; justify-content:center; cursor:pointer;}
+  .copy-btn:hover{color:var(--accent); border-color:var(--accent-dim);}
+  .copy-btn.copied{color:var(--ok); border-color:var(--ok);}
+  .copy-btn svg.check{display:none;} .copy-btn.copied svg.check{display:block;} .copy-btn.copied svg.copy{display:none;}
+
+  .tok-kw{color:#ff8fc0;} .tok-type{color:#69d9c9;} .tok-str{color:#a6e07a;}
+  .tok-com{color:var(--faint); font-style:italic;} .tok-prop{color:#ffab40;} .tok-punc{color:var(--ink-soft);} .tok-num{color:#7fb8ff;}
+  :root[data-theme="light"] .tok-kw{color:#c0388a;} :root[data-theme="light"] .tok-type{color:#0f7b6c;}
+  :root[data-theme="light"] .tok-str{color:#0a6f3c;} :root[data-theme="light"] .tok-prop{color:#a35a05;}
+  :root[data-theme="light"] .tok-num{color:#1a63c9;}
+
+  .page-nav{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:56px; max-width:68ch;}
+  .page-nav a{border:1px solid var(--border); border-radius:6px; padding:13px 15px; display:block;}
+  .page-nav a:hover{border-color:var(--accent-dim); background:var(--surface); text-decoration:none;}
+  .page-nav .dir{font-size:10.5px; color:var(--faint); text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px;}
+  .page-nav .next{text-align:right;}
+  .page-nav .title{font-weight:600; color:var(--ink); font-size:13px;}
+
+  .attribution{margin-top:28px; padding-top:16px; border-top:1px solid var(--border); font-size:11.5px; color:var(--faint); max-width:68ch;}
+  .attribution a{color:var(--faint); text-decoration:underline;}
+
+  aside.toc{padding:36px 18px 60px; height:calc(100vh - 78px); position:sticky; top:78px; overflow-y:auto;}
+  .toc-title{font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--faint); margin-bottom:10px;}
+  .toc-list{list-style:none; margin:0 0 24px; padding:0; border-left:1px dashed var(--border);}
+  .toc-list li a{display:block; padding:5px 0 5px 13px; margin-left:-1px; border-left:2px solid transparent; font-size:12px; color:var(--muted);}
+  .toc-list li a:hover{color:var(--ink); text-decoration:none;}
+  .toc-list li.active a{border-left-color:var(--accent); color:var(--accent);}
+  .side-card{border:1px solid var(--border); border-radius:5px; padding:11px 12px; margin-bottom:12px; background:var(--surface);}
+  .side-card .t{font-size:11px; font-weight:700; margin-bottom:8px; color:var(--ink-soft); display:flex; align-items:center; gap:6px; text-transform:uppercase; letter-spacing:.05em;}
+  .side-card a.ext{font-size:12px; color:var(--muted); display:block; padding:2px 0;}
+  .side-card a.ext:hover{color:var(--accent);}
+
+  @media (max-width:1180px){ .shell{grid-template-columns:240px minmax(0,1fr);} aside.toc{display:none;} }
+  @media (max-width:1024px){
+    .shell{grid-template-columns:1fr; max-width:760px;}
+    nav.side{position:fixed; left:0; top:78px; bottom:0; width:280px; z-index:80; background:var(--bg); transform:translateX(-100%); transition:transform .2s ease; box-shadow:var(--shadow); height:calc(100dvh - 78px);}
+    nav.side.open{transform:translateX(0);}
+    .menu-btn{display:flex !important;}
+    .hdr-search{display:none;}
+    main.article-col{padding:24px 18px 72px;}
+    .scrim{position:fixed; inset:78px 0 0 0; background:rgba(0,0,0,.5); z-index:70; display:none;}
+    .scrim.show{display:block;}
+  }
+  .menu-btn{display:none;}
+  @media (max-width:640px){ article h1{font-size:21px;} .page-nav{grid-template-columns:1fr;} .brand .path{display:none;} }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site">
+  <button class="icon-btn menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  <a href="#" class="brand">
+    <svg width="18" height="18" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <circle cx="6" cy="16" r="3.2" fill="currentColor"/>
+      <circle cx="26" cy="6" r="2.6" fill="currentColor" opacity=".5"/>
+      <circle cx="26" cy="16" r="2.6" fill="currentColor" opacity=".8"/>
+      <circle cx="26" cy="26" r="2.6" fill="currentColor" opacity=".5"/>
+      <path d="M9 16 L23 6 M9 16 L23 16 M9 16 L23 26" stroke="currentColor" stroke-width="1.6"/>
+    </svg>
+    <span>yarp/docs</span>
+    <span class="path">~/<span class="seg">en</span>/<span class="seg">overview</span></span>
+  </a>
+  <div class="hdr-search" role="button" tabindex="0" aria-label="Search documentation">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    <span>grep docs…</span>
+    <span class="kbd"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+  </div>
+  <div class="hdr-actions">
+    <div class="lang-wrap">
+      <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        en <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="lang-menu" id="langMenu">
+        <div class="cap">lang --list</div>
+        <button class="lang-item active"><span class="dot"></span>English <span class="code">en</span></button>
+        <button class="lang-item"><span class="dot"></span>Български <span class="code">bg</span></button>
+        <button class="lang-item"><span class="dot"></span>Русский <span class="code">ru</span></button>
+        <button class="lang-item"><span class="dot"></span>Français <span class="code">fr</span></button>
+        <button class="lang-item"><span class="dot"></span>Ελληνικά <span class="code">el</span></button>
+        <button class="lang-item"><span class="dot"></span>Español <span class="code">es</span></button>
+        <button class="lang-item"><span class="dot"></span>Deutsch <span class="code">de</span></button>
+        <button class="lang-item"><span class="dot"></span>Português (BR) <span class="code">pt-BR</span></button>
+        <button class="lang-item"><span class="dot"></span>简体中文 <span class="code">zh</span></button>
+      </div>
+    </div>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle color theme">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>GET /api/orders <span class="arrow">→</span> cluster-orders <span class="m200">200</span></span>
+    <span>GET /images/hero.png <span class="arrow">→</span> cluster-static <span class="m200">200</span></span>
+    <span>POST /checkout <span class="arrow">→</span> cluster-payments <span class="m200">200</span></span>
+    <span>GET /v1/legacy <span class="arrow">→</span> cluster-orders <span class="m301">301</span></span>
+    <span>GET /health <span class="arrow">→</span> active-probe <span class="m200">200</span></span>
+    <span>GET /api/orders <span class="arrow">→</span> cluster-orders <span class="m200">200</span></span>
+    <span>GET /images/hero.png <span class="arrow">→</span> cluster-static <span class="m200">200</span></span>
+    <span>POST /checkout <span class="arrow">→</span> cluster-payments <span class="m200">200</span></span>
+    <span>GET /v1/legacy <span class="arrow">→</span> cluster-orders <span class="m301">301</span></span>
+    <span>GET /health <span class="arrow">→</span> active-probe <span class="m200">200</span></span>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<div class="shell">
+  <nav class="side" id="sideNav" aria-label="Documentation">
+    <details class="side-group" open>
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>getting-started/</summary>
+      <ul class="side-list">
+        <li><a href="#" class="current" aria-current="page"><span class="n">01</span>overview</a></li>
+        <li><a href="#"><span class="n">02</span>getting-started</a></li>
+      </ul>
+    </details>
+    <details class="side-group">
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>configuration/</summary>
+      <ul class="side-list">
+        <li><a href="#"><span class="n">03</span>config-files</a></li>
+        <li><a href="#"><span class="n">04</span>config-filters</a></li>
+        <li><a href="#"><span class="n">05</span>config-providers</a></li>
+        <li><a href="#"><span class="n">06</span>http-client</a></li>
+      </ul>
+    </details>
+    <details class="side-group">
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>routing/</summary>
+      <ul class="side-list">
+        <li><a href="#"><span class="n">07</span>header-routing</a></li>
+        <li><a href="#"><span class="n">08</span>query-routing</a></li>
+      </ul>
+    </details>
+    <details class="side-group">
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>transforms/</summary>
+      <ul class="side-list">
+        <li><a href="#"><span class="n">09</span>overview</a></li>
+        <li><a href="#"><span class="n">10</span>request</a></li>
+        <li><a href="#"><span class="n">11</span>response</a></li>
+      </ul>
+    </details>
+    <details class="side-group">
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>reliability/</summary>
+      <ul class="side-list">
+        <li><a href="#"><span class="n">12</span>load-balancing</a></li>
+        <li><a href="#"><span class="n">13</span>session-affinity</a></li>
+        <li><a href="#"><span class="n">14</span>health-checks</a></li>
+        <li><a href="#"><span class="n">15</span>rate-limiting</a></li>
+        <li><a href="#"><span class="n">16</span>timeouts</a></li>
+      </ul>
+    </details>
+    <details class="side-group">
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>security/</summary>
+      <ul class="side-list">
+        <li><a href="#"><span class="n">17</span>authn-authz</a></li>
+        <li><a href="#"><span class="n">18</span>cors</a></li>
+        <li><a href="#"><span class="n">19</span>https-tls</a></li>
+        <li><a href="#"><span class="n">20</span>header-guidelines</a></li>
+      </ul>
+    </details>
+    <details class="side-group">
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>performance/</summary>
+      <ul class="side-list"><li><a href="#"><span class="n">21</span>output-caching</a></li></ul>
+    </details>
+    <details class="side-group">
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>protocols/</summary>
+      <ul class="side-list">
+        <li><a href="#"><span class="n">22</span>grpc</a></li>
+        <li><a href="#"><span class="n">23</span>http3</a></li>
+        <li><a href="#"><span class="n">24</span>websockets</a></li>
+      </ul>
+    </details>
+    <details class="side-group">
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>extensibility/</summary>
+      <ul class="side-list">
+        <li><a href="#"><span class="n">25</span>overview</a></li>
+        <li><a href="#"><span class="n">26</span>middleware</a></li>
+        <li><a href="#"><span class="n">27</span>direct-forwarding</a></li>
+        <li><a href="#"><span class="n">28</span>dest-resolvers</a></li>
+        <li><a href="#"><span class="n">29</span>transforms</a></li>
+      </ul>
+    </details>
+    <details class="side-group">
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>operations/</summary>
+      <ul class="side-list">
+        <li><a href="#"><span class="n">30</span>diagnostics</a></li>
+        <li><a href="#"><span class="n">31</span>tracing</a></li>
+        <li><a href="#"><span class="n">32</span>ab-testing</a></li>
+      </ul>
+    </details>
+    <details class="side-group">
+      <summary><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 6 6 6-6 6"/></svg>deployment/</summary>
+      <ul class="side-list">
+        <li><a href="#"><span class="n">33</span>k8s-ingress</a></li>
+        <li><a href="#"><span class="n">34</span>service-fabric</a></li>
+        <li><a href="#"><span class="n">35</span>httpsys-delegation</a></li>
+      </ul>
+    </details>
+  </nav>
+
+  <main class="article-col" id="main">
+    <div class="crumbs"><a href="#">docs</a><span class="sep">/</span><a href="#">getting-started</a><span class="sep">/</span><span>overview</span></div>
+
+    <article>
+      <h1><span class="prompt">#</span>Overview of YARP</h1>
+      <p class="lede">Yet Another Reverse Proxy — a highly customizable reverse proxy library for .NET. Robust, flexible, scalable, secure. Runs inside the ASP.NET Core process you already ship.</p>
+
+      <h2 id="introduction">introduction</h2>
+      <p>YARP helps you build reverse proxy solutions tailored to your own needs, in plain C#. It sits between clients and backend servers — forwarding requests to the right destination and relaying the response back — the same role nginx or Envoy play, but as a library, not a separate process to operate.</p>
+
+      <h2 id="what-it-does">what a reverse proxy does</h2>
+      <p>A reverse proxy earns its place in the request path:</p>
+      <ul>
+        <li><strong>Routing</strong> — directs requests by URL pattern or header. <code>/images</code>, <code>/api</code>, and <code>/db</code> each land on a different cluster.</li>
+        <li><strong>Load balancing</strong> — spreads traffic across backend instances so no single one gets overloaded.</li>
+        <li><strong>Scalability</strong> — destinations scale up or down without the client noticing.</li>
+        <li><strong>TLS termination</strong> — encryption ends at the proxy; backends stay simpler.</li>
+        <li><strong>Security</strong> — internal endpoints never face the public internet directly.</li>
+      </ul>
+
+      <h2 id="how-it-works">how a reverse proxy handles http</h2>
+      <p>Inbound connections terminate at the proxy. Pooled, reused connections carry outbound requests to destinations. YARP matches the request against configured routes, forwards it — transforming path and headers as needed — and streams the backend's response back to the caller.</p>
+
+      <div class="example-box">
+        <div class="eb-head"><div class="dots"><span></span><span></span><span></span></div><h3>Program.cs</h3></div>
+        <pre class="code-block"><span class="lang-tag">C#</span><button class="copy-btn" data-copy="cs-1" aria-label="Copy code"><svg class="copy" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></button><code id="cs-1"><span class="tok-com">// register the proxy, load routes + clusters from config</span>
+<span class="tok-kw">var</span> builder = WebApplication.<span class="tok-type">CreateBuilder</span>(args);
+
+builder.Services.<span class="tok-type">AddReverseProxy</span>()
+    .<span class="tok-type">LoadFromConfig</span>(builder.Configuration.<span class="tok-type">GetSection</span>(<span class="tok-str">"ReverseProxy"</span>));
+
+<span class="tok-kw">var</span> app = builder.<span class="tok-type">Build</span>();
+app.<span class="tok-type">MapReverseProxy</span>();
+app.<span class="tok-type">Run</span>();</code></pre>
+        <pre class="code-block"><span class="lang-tag">JSON</span><button class="copy-btn" data-copy="json-1" aria-label="Copy code"><svg class="copy" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></button><code id="json-1">{
+  <span class="tok-prop">"ReverseProxy"</span>: {
+    <span class="tok-prop">"Routes"</span>: { <span class="tok-prop">"route1"</span>: {
+      <span class="tok-prop">"ClusterId"</span>: <span class="tok-str">"cluster1"</span>,
+      <span class="tok-prop">"Match"</span>: { <span class="tok-prop">"Path"</span>: <span class="tok-str">"{**catch-all}"</span> }
+    }},
+    <span class="tok-prop">"Clusters"</span>: { <span class="tok-prop">"cluster1"</span>: {
+      <span class="tok-prop">"Destinations"</span>: { <span class="tok-prop">"cluster1/destination1"</span>: {
+        <span class="tok-prop">"Address"</span>: <span class="tok-str">"https://example.com/"</span>
+      }}
+    }}
+  }
+}</code></pre>
+      </div>
+
+      <div class="callout">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>
+        <div>
+          <div class="head">note</div>
+          <p>Config reloads live — no restart needed. Use <a href="#">configuration filters</a> to modify it during the load sequence.</p>
+        </div>
+      </div>
+
+      <h2 id="why-yarp">why choose yarp</h2>
+      <p>Built on ASP.NET Core, so extensibility means writing C#, not learning a proxy-specific DSL. Actively maintained by Microsoft; YARP and its docs are both open source.</p>
+
+      <div class="page-nav">
+        <a href="#" class="prev"><div class="dir">$ cd ..</div><div class="title">docs home</div></a>
+        <a href="#" class="next"><div class="dir">$ cd next</div><div class="title">getting-started</div></a>
+      </div>
+
+      <div class="attribution">
+        Adapted from <a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/yarp-overview" target="_blank" rel="noopener">Microsoft Learn — Overview of YARP</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
+      </div>
+    </article>
+  </main>
+
+  <aside class="toc">
+    <div class="toc-title">on this page</div>
+    <ul class="toc-list">
+      <li class="active"><a href="#introduction">introduction</a></li>
+      <li><a href="#what-it-does">what it does</a></li>
+      <li><a href="#how-it-works">how it works</a></li>
+      <li><a href="#why-yarp">why yarp</a></li>
+    </ul>
+    <div class="side-card">
+      <div class="t"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>contribute</div>
+      <a class="ext" href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/yarp-overview" target="_blank" rel="noopener">view source ↗</a>
+      <a class="ext" href="#">edit this page ↗</a>
+    </div>
+  </aside>
+</div>
+
+<script>
+  const themeBtn = document.getElementById('themeBtn');
+  const root = document.documentElement;
+  themeBtn.addEventListener('click', () => {
+    root.setAttribute('data-theme', root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+  });
+  const langBtn = document.getElementById('langBtn');
+  const langMenu = document.getElementById('langMenu');
+  langBtn.addEventListener('click', () => {
+    const open = langMenu.style.display !== 'none';
+    langMenu.style.display = open ? 'none' : 'block';
+    langBtn.setAttribute('aria-expanded', String(!open));
+  });
+  document.addEventListener('click', (e) => { if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) langMenu.style.display = 'none'; });
+  const menuBtn = document.getElementById('menuBtn');
+  const sideNav = document.getElementById('sideNav');
+  const scrim = document.getElementById('scrim');
+  menuBtn.addEventListener('click', () => {
+    const open = sideNav.classList.toggle('open');
+    scrim.classList.toggle('show', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  scrim.addEventListener('click', () => { sideNav.classList.remove('open'); scrim.classList.remove('show'); menuBtn.setAttribute('aria-expanded','false'); });
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const text = document.getElementById(btn.getAttribute('data-copy')).innerText;
+      try { await navigator.clipboard.writeText(text); }
+      catch (e) { const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }
+      btn.classList.add('copied'); setTimeout(() => btn.classList.remove('copied'), 1600);
+    });
+  });
+</script>
+</body>
+</html>
