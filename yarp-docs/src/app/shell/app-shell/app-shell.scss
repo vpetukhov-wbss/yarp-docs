@@ -1,0 +1,6 @@
+// Purely structural wrapper - host generates no box of its own so the header
+// and routed content lay out as direct flow siblings, not nested in an extra
+// inline element.
+:host {
+  display: contents;
+}

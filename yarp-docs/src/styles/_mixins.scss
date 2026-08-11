@@ -1,0 +1,23 @@
+// Shared style patterns used by more than one component. Kept as mixins (not
+// global classes) so component styles stay encapsulated - @use this from any
+// component's own .scss file via `@use 'mixins' as *;` (resolves through the
+// includePaths configured in angular.json).
+
+@mixin icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--surface);
+    color: var(--ink);
+    border-color: var(--border);
+  }
+}

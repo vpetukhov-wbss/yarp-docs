@@ -1,0 +1,27 @@
+<header class="site">
+  <a routerLink="./" class="brand">
+    <svg width="22" height="22" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <circle cx="6" cy="16" r="3.2" fill="currentColor" />
+      <circle cx="26" cy="6" r="2.6" fill="currentColor" opacity=".5" />
+      <circle cx="26" cy="16" r="2.6" fill="currentColor" opacity=".8" />
+      <circle cx="26" cy="26" r="2.6" fill="currentColor" opacity=".5" />
+      <path d="M9 16 L23 6 M9 16 L23 16 M9 16 L23 26" stroke="currentColor" stroke-width="1.6" />
+    </svg>
+    <span class="name">YARP Docs</span>
+    <span class="ver">v2.3</span>
+  </a>
+
+  <button type="button" class="hdr-search" disabled aria-label="Search documentation (coming soon)">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="11" cy="11" r="7" />
+      <path d="m21 21-4.3-4.3" />
+    </svg>
+    <span>Search documentation…</span>
+    <span class="kbd"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+  </button>
+
+  <div class="hdr-actions">
+    <app-language-picker />
+    <app-theme-toggle />
+  </div>
+</header>

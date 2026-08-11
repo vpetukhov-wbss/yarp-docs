@@ -1,0 +1,5 @@
+@use 'mixins' as *;
+
+.icon-btn {
+  @include icon-button;
+}
