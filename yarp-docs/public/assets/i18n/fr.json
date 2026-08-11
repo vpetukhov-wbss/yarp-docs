@@ -5,7 +5,7 @@
   },
   "header": {
     "searchPlaceholder": "Rechercher dans la documentation…",
-    "searchAriaLabel": "Rechercher dans la documentation (bientôt disponible)",
+    "searchAriaLabel": "Rechercher dans la documentation",
     "toggleNav": "Afficher/masquer la navigation"
   },
   "theme": {
@@ -72,5 +72,20 @@
     "title": "Vous êtes hors ligne",
     "body": "Impossible de joindre le service de documentation pour le moment. Cette page se rétablira automatiquement dès le retour de la connexion.",
     "retry": "Réessayer"
+  },
+  "search": {
+    "title": "Rechercher dans la documentation",
+    "close": "Fermer la recherche",
+    "recent": "Recherches récentes",
+    "quickLinks": "Liens rapides",
+    "quickOverview": "Présentation de YARP",
+    "quickBrowse": "Parcourir toute la documentation",
+    "typeMore": "Continuez à taper pour rechercher…",
+    "loadingIndex": "Chargement de l'index de recherche…",
+    "indexError": "La recherche n'a pas pu être chargée. Réessayez dans un instant.",
+    "noResults": "Aucun résultat pour « {{query}} ».",
+    "navigate": "pour naviguer",
+    "select": "pour sélectionner",
+    "dismiss": "pour fermer"
   }
 }

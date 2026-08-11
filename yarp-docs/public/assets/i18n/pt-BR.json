@@ -5,7 +5,7 @@
   },
   "header": {
     "searchPlaceholder": "Pesquisar na documentação…",
-    "searchAriaLabel": "Pesquisar na documentação (em breve)",
+    "searchAriaLabel": "Pesquisar na documentação",
     "toggleNav": "Alternar navegação"
   },
   "theme": {
@@ -72,5 +72,20 @@
     "title": "Você está offline",
     "body": "No momento não é possível conectar ao serviço de documentação. Esta página será restaurada automaticamente assim que sua conexão voltar.",
     "retry": "Tentar novamente"
+  },
+  "search": {
+    "title": "Pesquisar na documentação",
+    "close": "Fechar pesquisa",
+    "recent": "Pesquisas recentes",
+    "quickLinks": "Links rápidos",
+    "quickOverview": "Visão geral do YARP",
+    "quickBrowse": "Ver toda a documentação",
+    "typeMore": "Continue digitando para pesquisar…",
+    "loadingIndex": "Carregando índice de pesquisa…",
+    "indexError": "Não foi possível carregar a pesquisa. Tente novamente em instantes.",
+    "noResults": "Nenhum resultado para \"{{query}}\".",
+    "navigate": "para navegar",
+    "select": "para selecionar",
+    "dismiss": "para fechar"
   }
 }

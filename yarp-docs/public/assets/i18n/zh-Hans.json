@@ -5,7 +5,7 @@
   },
   "header": {
     "searchPlaceholder": "搜索文档…",
-    "searchAriaLabel": "搜索文档（即将推出）",
+    "searchAriaLabel": "搜索文档",
     "toggleNav": "切换导航"
   },
   "theme": {
@@ -72,5 +72,20 @@
     "title": "您已离线",
     "body": "目前无法连接到文档服务。网络恢复后，此页面将自动恢复。",
     "retry": "重试"
+  },
+  "search": {
+    "title": "搜索文档",
+    "close": "关闭搜索",
+    "recent": "最近搜索",
+    "quickLinks": "快速链接",
+    "quickOverview": "YARP 概述",
+    "quickBrowse": "浏览全部文档",
+    "typeMore": "继续输入以搜索…",
+    "loadingIndex": "正在加载搜索索引…",
+    "indexError": "搜索加载失败，请稍后重试。",
+    "noResults": "未找到与“{{query}}”相关的结果。",
+    "navigate": "导航",
+    "select": "选择",
+    "dismiss": "关闭"
   }
 }

@@ -1,0 +1,101 @@
+@if (open()) {
+  <button
+    type="button"
+    class="scrim"
+    [attr.aria-label]="'search.close' | translate"
+    (click)="close()"
+  ></button>
+
+  <div
+    #dialogRoot
+    class="dialog"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="'search.title' | translate"
+    (keydown)="onDialogKeydown($event)"
+  >
+    <div class="search-field">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" />
+        <path d="m21 21-4.3-4.3" />
+      </svg>
+      <input
+        #searchInput
+        type="search"
+        autocomplete="off"
+        spellcheck="false"
+        [value]="store.query()"
+        (input)="onInput($event)"
+        (keydown)="onInputKeydown($event)"
+        [placeholder]="'header.searchPlaceholder' | translate"
+        [attr.aria-label]="'header.searchAriaLabel' | translate"
+      />
+      <button type="button" class="close-btn" (click)="close()" [attr.aria-label]="'search.close' | translate">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M18 6 6 18M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="results" role="listbox">
+      @if (store.query().trim().length === 0) {
+        @if (recent().length) {
+          <div class="section">
+            <div class="section-label">{{ 'search.recent' | translate }}</div>
+            @for (item of recent(); track item) {
+              <button type="button" class="recent-item" (click)="selectRecent(item)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 3" />
+                </svg>
+                {{ item }}
+              </button>
+            }
+          </div>
+        }
+        @if (locale(); as loc) {
+          <div class="section">
+            <div class="section-label">{{ 'search.quickLinks' | translate }}</div>
+            <a class="quick-link" [routerLink]="['/', loc, 'yarp-overview']" (click)="close()">{{
+              'search.quickOverview' | translate
+            }}</a>
+            <a class="quick-link" [routerLink]="['/', loc, 'docs']" (click)="close()">{{
+              'search.quickBrowse' | translate
+            }}</a>
+          </div>
+        }
+      } @else if (store.query().trim().length < 2) {
+        <p class="hint">{{ 'search.typeMore' | translate }}</p>
+      } @else if (store.indexStatus() === 'loading') {
+        <p class="hint">{{ 'search.loadingIndex' | translate }}</p>
+      } @else if (store.indexStatus() === 'error') {
+        <p class="hint">{{ 'search.indexError' | translate }}</p>
+      } @else if (groupedResults().length === 0) {
+        <p class="hint">{{ 'search.noResults' | translate: { query: store.query() } }}</p>
+      } @else {
+        @for (group of groupedResults(); track group.groupId) {
+          <div class="section">
+            <div class="section-label">{{ group.label }}</div>
+            @for (item of group.items; track item.slug + '::' + (item.anchor ?? '')) {
+              <button
+                type="button"
+                class="result-item"
+                [class.highlighted]="item === store.highlightedResult()"
+                (click)="selectResult(item)"
+              >
+                <span class="result-title">{{ item.headingPath ?? item.title }}</span>
+                <span class="result-excerpt">{{ item.excerpt }}</span>
+              </button>
+            }
+          </div>
+        }
+      }
+    </div>
+
+    <div class="dialog-footer">
+      <span><kbd>&uarr;</kbd><kbd>&darr;</kbd> {{ 'search.navigate' | translate }}</span>
+      <span><kbd>Enter</kbd> {{ 'search.select' | translate }}</span>
+      <span><kbd>Esc</kbd> {{ 'search.dismiss' | translate }}</span>
+    </div>
+  </div>
+}

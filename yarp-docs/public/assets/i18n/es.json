@@ -5,7 +5,7 @@
   },
   "header": {
     "searchPlaceholder": "Buscar en la documentación…",
-    "searchAriaLabel": "Buscar en la documentación (próximamente)",
+    "searchAriaLabel": "Buscar en la documentación",
     "toggleNav": "Alternar navegación"
   },
   "theme": {
@@ -72,5 +72,20 @@
     "title": "Estás sin conexión",
     "body": "No podemos conectar con el servicio de documentación en este momento. Esta página se recuperará automáticamente en cuanto vuelva la conexión.",
     "retry": "Intentar de nuevo"
+  },
+  "search": {
+    "title": "Buscar en la documentación",
+    "close": "Cerrar búsqueda",
+    "recent": "Búsquedas recientes",
+    "quickLinks": "Enlaces rápidos",
+    "quickOverview": "Introducción a YARP",
+    "quickBrowse": "Ver toda la documentación",
+    "typeMore": "Sigue escribiendo para buscar…",
+    "loadingIndex": "Cargando índice de búsqueda…",
+    "indexError": "No se pudo cargar la búsqueda. Inténtalo de nuevo en un momento.",
+    "noResults": "Sin resultados para \"{{query}}\".",
+    "navigate": "para navegar",
+    "select": "para seleccionar",
+    "dismiss": "para cerrar"
   }
 }

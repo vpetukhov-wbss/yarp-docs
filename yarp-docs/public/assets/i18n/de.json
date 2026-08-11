@@ -5,7 +5,7 @@
   },
   "header": {
     "searchPlaceholder": "Dokumentation durchsuchen…",
-    "searchAriaLabel": "Dokumentation durchsuchen (demnächst verfügbar)",
+    "searchAriaLabel": "Dokumentation durchsuchen",
     "toggleNav": "Navigation umschalten"
   },
   "theme": {
@@ -72,5 +72,20 @@
     "title": "Sie sind offline",
     "body": "Der Dokumentationsdienst ist derzeit nicht erreichbar. Diese Seite wird automatisch wiederhergestellt, sobald Ihre Verbindung zurück ist.",
     "retry": "Erneut versuchen"
+  },
+  "search": {
+    "title": "Dokumentation durchsuchen",
+    "close": "Suche schließen",
+    "recent": "Letzte Suchanfragen",
+    "quickLinks": "Schnellzugriffe",
+    "quickOverview": "Überblick über YARP",
+    "quickBrowse": "Gesamte Dokumentation durchsuchen",
+    "typeMore": "Weitertippen, um zu suchen…",
+    "loadingIndex": "Suchindex wird geladen…",
+    "indexError": "Die Suche konnte nicht geladen werden. Versuchen Sie es gleich noch einmal.",
+    "noResults": "Keine Ergebnisse für „{{query}}“.",
+    "navigate": "zum Navigieren",
+    "select": "zum Auswählen",
+    "dismiss": "zum Schließen"
   }
 }

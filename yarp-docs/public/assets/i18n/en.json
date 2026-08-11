@@ -5,7 +5,7 @@
   },
   "header": {
     "searchPlaceholder": "Search documentation…",
-    "searchAriaLabel": "Search documentation (coming soon)",
+    "searchAriaLabel": "Search documentation",
     "toggleNav": "Toggle navigation"
   },
   "theme": {
@@ -72,5 +72,20 @@
     "title": "You're offline",
     "body": "We can't reach the documentation service right now. This page will recover automatically once your connection is back.",
     "retry": "Try again"
+  },
+  "search": {
+    "title": "Search documentation",
+    "close": "Close search",
+    "recent": "Recent searches",
+    "quickLinks": "Quick links",
+    "quickOverview": "Overview of YARP",
+    "quickBrowse": "Browse all docs",
+    "typeMore": "Keep typing to search…",
+    "loadingIndex": "Loading search index…",
+    "indexError": "Search couldn't be loaded. Try again in a moment.",
+    "noResults": "No results for \"{{query}}\".",
+    "navigate": "to navigate",
+    "select": "to select",
+    "dismiss": "to dismiss"
   }
 }

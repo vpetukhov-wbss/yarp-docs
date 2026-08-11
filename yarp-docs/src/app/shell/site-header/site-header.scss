@@ -61,9 +61,8 @@
   font-family: var(--font-ui);
   cursor: pointer;
 
-  &:disabled {
-    cursor: default;
-    opacity: 0.7;
+  &:hover {
+    border-color: var(--border-strong);
   }
 
   svg {
@@ -95,9 +94,20 @@
   flex: none;
 }
 
+// The full search field collapses below 1024px, same as the mockup - but
+// unlike the mockup, that's no longer a dead end: this button is the
+// replacement entry point, not just decoration hidden until then.
+.search-btn-mobile {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .hdr-search {
     display: none;
+  }
+
+  .search-btn-mobile {
+    display: flex;
   }
 
   .menu-btn {
