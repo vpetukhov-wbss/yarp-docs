@@ -1,0 +1,85 @@
+// Design tokens ported verbatim from design/mockup-1-learn.html ("Learn" direction).
+// Neutral slate + one confident blue accent. System UI for chrome, Cascadia Code for code.
+// Do not hand-tune these values here - if the design changes, change the mockup first,
+// then re-port, so the two never drift silently apart.
+
+:root {
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --surface-2: #eef0f3;
+  --border: #e2e5ea;
+  --border-strong: #cbd1da;
+  --ink: #1a1d24;
+  --ink-soft: #3b4150;
+  --muted: #5b6472;
+  --faint: #8790a0;
+  --accent: #3457d5;
+  --accent-ink: #ffffff;
+  --accent-soft: #eaeffc;
+  --accent-soft-ink: #2643ac;
+  --code-bg: #f6f7f9;
+  --code-border: #e2e5ea;
+  --note-bg: #eef4ff;
+  --note-border: #bcd2fb;
+  --note-ink: #1d3f8f;
+  --success: #1a9e6a;
+
+  // Syntax highlighting (hand-authored tok-* spans, not a highlighter library)
+  --tok-kw: #c0388a;
+  --tok-type: #0f7b6c;
+  --tok-str: #0a6f3c;
+  --tok-prop: #8a4b06;
+  --tok-num: #1a63c9;
+
+  --shadow: 0 8px 24px -8px rgba(23, 28, 41, 0.14), 0 2px 6px -2px rgba(23, 28, 41, 0.08);
+  --radius: 8px;
+  --font-ui:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-code: 'Cascadia Code', 'Cascadia Mono', ui-monospace, 'Consolas', 'SFMono-Regular', Menlo, monospace;
+
+  color-scheme: light;
+}
+
+// Dark palette: applied via system preference unless explicitly overridden by [data-theme],
+// AND applied explicitly by [data-theme="dark"] so the in-app toggle wins in both directions.
+@mixin dark-palette {
+  --bg: #0b0e14;
+  --surface: #10141c;
+  --surface-2: #161b25;
+  --border: #232a37;
+  --border-strong: #323b4b;
+  --ink: #e7e9ee;
+  --ink-soft: #c4c9d4;
+  --muted: #93a0b3;
+  --faint: #606b7f;
+  --accent: #6f8dff;
+  --accent-ink: #0b0e14;
+  --accent-soft: #161f3c;
+  --accent-soft-ink: #a9bcff;
+  --code-bg: #0e1219;
+  --code-border: #232a37;
+  --note-bg: #101d33;
+  --note-border: #274276;
+  --note-ink: #9fbdff;
+  --success: #1a9e6a;
+
+  --tok-kw: #ff7ad1;
+  --tok-type: #5fd9c4;
+  --tok-str: #8fd97f;
+  --tok-prop: #e3b567;
+  --tok-num: #7db3ff;
+
+  --shadow: 0 8px 28px -10px rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    @include dark-palette;
+  }
+}
+
+:root[data-theme='dark'] {
+  @include dark-palette;
+}
