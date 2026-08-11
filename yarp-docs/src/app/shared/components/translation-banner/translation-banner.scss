@@ -1,0 +1,17 @@
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  background: var(--note-bg);
+  border: 1px solid var(--note-border);
+  color: var(--note-ink);
+  font-size: 13.5px;
+  max-width: 70ch;
+
+  svg {
+    flex: none;
+  }
+}

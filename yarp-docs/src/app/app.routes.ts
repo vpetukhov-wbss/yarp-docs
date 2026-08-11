@@ -17,12 +17,14 @@ export const routes: Routes = [
       },
       {
         path: 'docs',
-        loadComponent: () => import('./features/docs-index/pages/docs-index').then((m) => m.DocsIndex),
+        loadComponent: () =>
+          import('./features/docs-index/pages/docs-index').then((m) => m.DocsIndex),
       },
       {
         // Registered after 'docs' so it doesn't swallow that path.
         path: ':slug',
-        loadComponent: () => import('./features/doc-article/pages/doc-article').then((m) => m.DocArticle),
+        loadComponent: () =>
+          import('./features/doc-article/pages/doc-article').then((m) => m.DocArticle),
       },
       {
         path: '**',

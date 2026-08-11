@@ -1,0 +1,18 @@
+@if (prev() || next()) {
+  <div class="page-nav">
+    @if (prev(); as prevLink) {
+      <a [routerLink]="['../', prevLink.slug]" class="prev">
+        <div class="dir">← previous</div>
+        <div class="title">{{ prevLink.title }}</div>
+      </a>
+    } @else {
+      <span></span>
+    }
+    @if (next(); as nextLink) {
+      <a [routerLink]="['../', nextLink.slug]" class="next">
+        <div class="dir">next →</div>
+        <div class="title">{{ nextLink.title }}</div>
+      </a>
+    }
+  </div>
+}

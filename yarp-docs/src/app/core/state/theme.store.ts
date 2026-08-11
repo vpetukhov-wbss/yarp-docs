@@ -1,5 +1,12 @@
 import { computed, effect } from '@angular/core';
-import { patchState, signalStore, withComputed, withHooks, withMethods, withState } from '@ngrx/signals';
+import {
+  patchState,
+  signalStore,
+  withComputed,
+  withHooks,
+  withMethods,
+  withState,
+} from '@ngrx/signals';
 
 type ThemePreference = 'light' | 'dark' | null;
 
@@ -30,7 +37,9 @@ export const ThemeStore = signalStore(
     // deliberate v1 simplification. CSS itself still reacts to OS changes
     // instantly regardless of what this signal reports; the only thing that
     // could lag is which icon the toggle button shows.
-    isDark: computed(() => preference() === 'dark' || (preference() === null && systemPrefersDark())),
+    isDark: computed(
+      () => preference() === 'dark' || (preference() === null && systemPrefersDark()),
+    ),
   })),
   withMethods((store) => ({
     toggle(): void {

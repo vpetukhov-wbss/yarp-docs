@@ -1,7 +1,7 @@
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import type { ApplicationConfig } from '@angular/core';
 import { provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withRouterConfig } from '@angular/router';
 
 import { environment } from '../environments/environment';
 import { routes } from './app.routes';
@@ -11,7 +11,14 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideRouter(routes),
-    provideHttpClient(withFetch(), withInterceptors(environment.useMockApi ? [mockApiInterceptor] : [])),
+    // paramsInheritanceStrategy: 'always' merges ancestor route params into
+    // every descendant's paramMap - DocArticle (':slug', a child of
+    // ':locale') needs both params together without manually walking
+    // route.parent.
+    provideRouter(routes, withRouterConfig({ paramsInheritanceStrategy: 'always' })),
+    provideHttpClient(
+      withFetch(),
+      withInterceptors(environment.useMockApi ? [mockApiInterceptor] : []),
+    ),
   ],
 };

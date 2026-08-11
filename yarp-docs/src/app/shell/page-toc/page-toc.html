@@ -1,0 +1,30 @@
+@if (headings().length) {
+  <div class="toc-title">On this page</div>
+  <ul class="toc-list">
+    @for (heading of headings(); track heading.id) {
+      <li [class.active]="heading.id === activeId()" [class.sub]="heading.level === 3">
+        <a [href]="'#' + heading.id">{{ heading.text }}</a>
+      </li>
+    }
+  </ul>
+}
+
+@if (sourceUrl(); as source) {
+  <div class="side-card">
+    <div class="t">
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
+        <path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
+      </svg>
+      Contribute
+    </div>
+    <a class="ext" [href]="source" target="_blank" rel="noopener">View source on Learn ↗</a>
+  </div>
+}

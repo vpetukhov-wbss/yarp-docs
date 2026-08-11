@@ -1,4 +1,82 @@
-<main id="main" class="placeholder">
-  <h1>Doc article: {{ slug() }}</h1>
-  <p>Full article template - built out in Step 9 against <code>DocArticleStore</code>.</p>
-</main>
+<div class="article-shell">
+  <main id="main" class="article-col">
+    <div class="crumbs">
+      <a routerLink="../docs">Docs</a>
+      @if (groupLabel(); as label) {
+        <span>/</span>
+        <span>{{ label }}</span>
+      }
+      @if (store.page(); as crumbPage) {
+        <span>/</span>
+        <span>{{ crumbPage.title }}</span>
+      }
+    </div>
+
+    @switch (store.status()) {
+      @case ('loading') {
+        <div class="skeleton-stack">
+          <app-skeleton height="34px" width="60%" />
+          <app-skeleton height="18px" width="90%" />
+          <app-skeleton height="14px" width="100%" />
+          <app-skeleton height="14px" width="95%" />
+          <app-skeleton height="14px" width="80%" />
+        </div>
+      }
+      @case ('error') {
+        @if (store.isNotFound()) {
+          <div class="state-card">
+            <h1>Page not found</h1>
+            <p>There's no page at this address in this language yet.</p>
+            <a routerLink="../docs" class="cta">Browse all docs</a>
+          </div>
+        } @else {
+          <div class="state-card">
+            <h1>Something went wrong</h1>
+            <p>This page couldn't be loaded. Check your connection and try again.</p>
+            <button type="button" class="cta" (click)="retry()">Retry</button>
+          </div>
+        }
+      }
+      @case ('success') {
+        @if (store.page(); as page) {
+          @if (!store.translated()) {
+            <app-translation-banner />
+          }
+          @if (store.isAppendix()) {
+            <div class="appendix-note">
+              <strong>Prerequisite background.</strong> This page is general ASP.NET Core
+              documentation, not YARP-specific — useful context before diving in, not a YARP
+              feature.
+            </div>
+          }
+
+          <h1>{{ page.title }}</h1>
+          <p class="lede">{{ page.lede }}</p>
+
+          <app-doc-body #bodyEl [bodyHtml]="page.bodyHtml" />
+
+          <app-prev-next [prev]="page.prev" [next]="page.next" />
+
+          <div class="attribution">
+            Adapted from
+            <a [href]="page.sourceUrl" target="_blank" rel="noopener">Microsoft Learn</a>, licensed
+            under
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"
+              >CC BY 4.0</a
+            >.
+          </div>
+        }
+      }
+    }
+  </main>
+
+  @if (store.status() === 'success') {
+    <aside class="toc">
+      <app-page-toc
+        [headings]="store.page()?.headings ?? []"
+        [activeId]="activeHeadingId()"
+        [sourceUrl]="store.page()?.sourceUrl ?? null"
+      />
+    </aside>
+  }
+</div>
