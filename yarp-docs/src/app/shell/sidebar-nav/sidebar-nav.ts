@@ -1,6 +1,7 @@
 import { Component, computed, effect, inject } from '@angular/core';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, NavigationEnd, Router, RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 import { filter, map } from 'rxjs';
 
 import type { LocaleCode } from '../../core/models/locale.model';
@@ -9,7 +10,7 @@ import { NavStore } from '../../core/state/nav.store';
 
 @Component({
   selector: 'app-sidebar-nav',
-  imports: [RouterLink],
+  imports: [RouterLink, TranslatePipe],
   templateUrl: './sidebar-nav.html',
   styleUrl: './sidebar-nav.scss',
 })

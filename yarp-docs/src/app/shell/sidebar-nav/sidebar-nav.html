@@ -3,14 +3,14 @@
   class="scrim"
   [class.show]="isOpen()"
   [tabindex]="isOpen() ? 0 : -1"
-  aria-label="Close navigation"
+  [attr.aria-label]="'nav.closeNavigation' | translate"
   (click)="closeDrawer()"
 ></button>
 
 <nav
   class="side"
   [class.open]="isOpen()"
-  aria-label="Documentation"
+  [attr.aria-label]="'nav.documentation' | translate"
   tabindex="-1"
   (keydown.escape)="closeDrawer()"
 >
@@ -36,7 +36,7 @@
 
   @if (appendix().length) {
     <div class="side-appendix">
-      <div class="side-appendix-label">Appendix</div>
+      <div class="side-appendix-label">{{ 'nav.appendix' | translate }}</div>
       <ul>
         @for (item of appendix(); track item.slug) {
           <li>

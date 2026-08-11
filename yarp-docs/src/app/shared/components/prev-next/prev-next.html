@@ -2,7 +2,7 @@
   <div class="page-nav">
     @if (prev(); as prevLink) {
       <a [routerLink]="['../', prevLink.slug]" class="prev">
-        <div class="dir">← previous</div>
+        <div class="dir">← {{ 'article.previous' | translate }}</div>
         <div class="title">{{ prevLink.title }}</div>
       </a>
     } @else {
@@ -10,7 +10,7 @@
     }
     @if (next(); as nextLink) {
       <a [routerLink]="['../', nextLink.slug]" class="next">
-        <div class="dir">next →</div>
+        <div class="dir">{{ 'article.next' | translate }} →</div>
         <div class="title">{{ nextLink.title }}</div>
       </a>
     }

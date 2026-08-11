@@ -1,12 +1,15 @@
 import { Component, ElementRef, computed, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 import { map } from 'rxjs';
 
 import { SUPPORTED_LOCALES } from '../../core/locales';
+import type { LocaleCode } from '../../core/models/locale.model';
 
 @Component({
   selector: 'app-language-picker',
+  imports: [TranslatePipe],
   templateUrl: './language-picker.html',
   styleUrl: './language-picker.scss',
   host: {
@@ -16,12 +19,11 @@ import { SUPPORTED_LOCALES } from '../../core/locales';
 export class LanguagePicker {
   private readonly elementRef = inject(ElementRef<HTMLElement>);
   private readonly route = inject(ActivatedRoute);
+  private readonly router = inject(Router);
 
   protected readonly locales = SUPPORTED_LOCALES;
   protected readonly open = signal(false);
 
-  // Reads the ':locale' route param reactively. Not yet backed by LocaleStore
-  // (that lands in Step 8) - this only reflects the URL, it can't switch it.
   protected readonly currentLocale = toSignal(
     this.route.paramMap.pipe(map((params) => params.get('locale'))),
     { initialValue: null },
@@ -38,6 +40,16 @@ export class LanguagePicker {
 
   protected close(): void {
     this.open.set(false);
+  }
+
+  // Navigates to the same path under the new locale (e.g. /en/load-balancing
+  // -> /bg/load-balancing); LocaleGuard does the rest (validate, persist,
+  // switch TranslateService) once the new route activates - this only ever
+  // needs to know what to navigate to, not how a locale switch is applied.
+  protected switchLocale(code: LocaleCode): void {
+    const rest = this.router.url.replace(/^\/[^/]+/, '');
+    void this.router.navigateByUrl(`/${code}${rest}`);
+    this.close();
   }
 
   protected onDocumentClick(event: MouseEvent): void {

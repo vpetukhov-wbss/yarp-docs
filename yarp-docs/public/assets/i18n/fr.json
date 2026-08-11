@@ -1,0 +1,45 @@
+{
+  "common": {
+    "skipToContent": "Passer au contenu",
+    "docs": "Docs"
+  },
+  "header": {
+    "searchPlaceholder": "Rechercher dans la documentation…",
+    "searchAriaLabel": "Rechercher dans la documentation (bientôt disponible)",
+    "toggleNav": "Afficher/masquer la navigation"
+  },
+  "theme": {
+    "switchToLight": "Passer au thème clair",
+    "switchToDark": "Passer au thème sombre"
+  },
+  "language": {
+    "chooseLanguage": "Choisissez une langue"
+  },
+  "nav": {
+    "documentation": "Documentation",
+    "appendix": "Annexe",
+    "closeNavigation": "Fermer la navigation"
+  },
+  "toc": {
+    "onThisPage": "Sur cette page",
+    "contribute": "Contribuer",
+    "viewSource": "Voir la source sur Learn ↗"
+  },
+  "article": {
+    "pageNotFoundTitle": "Page introuvable",
+    "pageNotFoundBody": "Il n'y a pas encore de page à cette adresse dans cette langue.",
+    "browseAllDocs": "Parcourir toute la documentation",
+    "errorTitle": "Une erreur s'est produite",
+    "errorBody": "Cette page n'a pas pu être chargée. Vérifiez votre connexion et réessayez.",
+    "retry": "Réessayer",
+    "appendixNoteTitle": "Contexte préalable.",
+    "appendixNoteBody": "Cette page est une documentation générale d'ASP.NET Core, pas spécifique à YARP — un contexte utile avant de commencer, pas une fonctionnalité de YARP.",
+    "adaptedFrom": "Adapté de",
+    "licensedUnder": "sous licence",
+    "previous": "précédent",
+    "next": "suivant"
+  },
+  "translationBanner": {
+    "message": "Cette page n'a pas encore été traduite — affichage en anglais."
+  }
+}

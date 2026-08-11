@@ -1,14 +1,16 @@
 import type { Routes } from '@angular/router';
 
-// LocaleGuard (validating the :locale segment, redirecting unresolvable ones,
-// and detecting a real default from navigator.language) lands in Step 12.
-// Until then 'en' is a fixed fallback so the app is navigable end to end.
-const FALLBACK_LOCALE = 'en';
+import { detectPreferredLocale, localeGuard } from './core/guards/locale.guard';
 
 export const routes: Routes = [
-  { path: '', redirectTo: FALLBACK_LOCALE, pathMatch: 'full' },
+  // A RedirectFunction runs in an injection context, so this reuses the
+  // exact same detection localeGuard falls back to for an unresolvable
+  // :locale segment - "which locale do we pick when we have to guess" has
+  // one implementation, not two that could drift apart.
+  { path: '', redirectTo: () => detectPreferredLocale(), pathMatch: 'full' },
   {
     path: ':locale',
+    canActivate: [localeGuard],
     loadComponent: () => import('./shell/app-shell/app-shell').then((m) => m.AppShell),
     children: [
       {
@@ -32,5 +34,5 @@ export const routes: Routes = [
       },
     ],
   },
-  { path: '**', redirectTo: FALLBACK_LOCALE },
+  { path: '**', redirectTo: () => detectPreferredLocale() },
 ];

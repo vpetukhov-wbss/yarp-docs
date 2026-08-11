@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 import { map } from 'rxjs';
 
 import type { LocaleCode } from '../../../core/models/locale.model';
@@ -29,7 +30,7 @@ const HEADER_CLEARANCE_PX = 64;
 
 @Component({
   selector: 'app-doc-article',
-  imports: [RouterLink, DocBody, PrevNext, TranslationBanner, Skeleton, PageToc, SidebarNav],
+  imports: [RouterLink, DocBody, PrevNext, TranslationBanner, Skeleton, PageToc, SidebarNav, TranslatePipe],
   providers: [DocArticleStore],
   templateUrl: './doc-article.html',
   styleUrl: './doc-article.scss',

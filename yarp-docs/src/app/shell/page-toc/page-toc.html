@@ -1,5 +1,5 @@
 @if (headings().length) {
-  <div class="toc-title">On this page</div>
+  <div class="toc-title">{{ 'toc.onThisPage' | translate }}</div>
   <ul class="toc-list">
     @for (heading of headings(); track heading.id) {
       <li [class.active]="heading.id === activeId()" [class.sub]="heading.level === 3">
@@ -23,8 +23,8 @@
       >
         <path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
       </svg>
-      Contribute
+      {{ 'toc.contribute' | translate }}
     </div>
-    <a class="ext" [href]="source" target="_blank" rel="noopener">View source on Learn ↗</a>
+    <a class="ext" [href]="source" target="_blank" rel="noopener">{{ 'toc.viewSource' | translate }}</a>
   </div>
 }

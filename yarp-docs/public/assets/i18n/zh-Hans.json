@@ -1,0 +1,45 @@
+{
+  "common": {
+    "skipToContent": "跳转到内容",
+    "docs": "文档"
+  },
+  "header": {
+    "searchPlaceholder": "搜索文档…",
+    "searchAriaLabel": "搜索文档（即将推出）",
+    "toggleNav": "切换导航"
+  },
+  "theme": {
+    "switchToLight": "切换到浅色主题",
+    "switchToDark": "切换到深色主题"
+  },
+  "language": {
+    "chooseLanguage": "选择语言"
+  },
+  "nav": {
+    "documentation": "文档",
+    "appendix": "附录",
+    "closeNavigation": "关闭导航"
+  },
+  "toc": {
+    "onThisPage": "本页内容",
+    "contribute": "贡献",
+    "viewSource": "在 Learn 上查看原文 ↗"
+  },
+  "article": {
+    "pageNotFoundTitle": "页面未找到",
+    "pageNotFoundBody": "该语言下此地址暂无页面。",
+    "browseAllDocs": "浏览全部文档",
+    "errorTitle": "出现了一些问题",
+    "errorBody": "此页面加载失败。请检查您的网络连接后重试。",
+    "retry": "重试",
+    "appendixNoteTitle": "预备背景知识。",
+    "appendixNoteBody": "本页是 ASP.NET Core 的通用文档，并非 YARP 专属内容——在深入学习前提供有用的背景信息，但不属于 YARP 的功能。",
+    "adaptedFrom": "改编自",
+    "licensedUnder": "许可协议",
+    "previous": "上一页",
+    "next": "下一页"
+  },
+  "translationBanner": {
+    "message": "此页面尚未翻译——目前显示英文内容。"
+  }
+}
