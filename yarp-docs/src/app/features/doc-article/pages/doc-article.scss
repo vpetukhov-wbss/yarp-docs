@@ -1,11 +1,11 @@
-// Two columns for now (main + toc) - Step 10 adds a 260px sidebar column
-// ahead of .article-col and widens max-width to 1440px, matching the
-// mockup's full three-column .shell. Not built here because SidebarNav
-// doesn't exist yet.
+// Full three-column .shell grid, matching the Phase 1 mockup exactly:
+// sidebar / article / toc, with the breakpoints below ported verbatim from
+// it (1180: sidebar narrows, toc hides · 1024: sidebar becomes the
+// SidebarNav's own off-canvas drawer, single column · 640: see below).
 .article-shell {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 232px;
-  max-width: 1180px;
+  grid-template-columns: 260px minmax(0, 1fr) 232px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -125,7 +125,14 @@ h1 {
     display: none;
   }
   .article-shell {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .article-shell {
     grid-template-columns: minmax(0, 1fr);
+    max-width: 760px;
   }
 }
 

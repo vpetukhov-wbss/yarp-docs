@@ -19,6 +19,7 @@ import { PrevNext } from '../../../shared/components/prev-next/prev-next';
 import { Skeleton } from '../../../shared/components/skeleton/skeleton';
 import { TranslationBanner } from '../../../shared/components/translation-banner/translation-banner';
 import { PageToc } from '../../../shell/page-toc/page-toc';
+import { SidebarNav } from '../../../shell/sidebar-nav/sidebar-nav';
 import { DocArticleStore, type LoadDocArticleParams } from '../state/doc-article.store';
 
 // A heading counts as "scrolled past" once its top edge clears the 56px
@@ -28,7 +29,7 @@ const HEADER_CLEARANCE_PX = 64;
 
 @Component({
   selector: 'app-doc-article',
-  imports: [RouterLink, DocBody, PrevNext, TranslationBanner, Skeleton, PageToc],
+  imports: [RouterLink, DocBody, PrevNext, TranslationBanner, Skeleton, PageToc, SidebarNav],
   providers: [DocArticleStore],
   templateUrl: './doc-article.html',
   styleUrl: './doc-article.scss',

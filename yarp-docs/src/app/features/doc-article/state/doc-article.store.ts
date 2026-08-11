@@ -41,13 +41,20 @@ export const DocArticleStore = signalStore(
   withMethods((store, docsApi = inject(DocsApiService)) => ({
     load: rxMethod<LoadDocArticleParams>(
       pipe(
-        tap(() => patchState(store, { status: 'loading', errorStatus: null })),
+        // `page` is cleared on every load, not just failures: an invariant
+        // of "page is non-null iff status is 'success'" means every
+        // consumer (the breadcrumb's group lookup, PageToc's headings, etc.)
+        // can read store.page() without separately checking status() first.
+        // Without this, a failed reload after a successful one left stale
+        // content (a page title, a breadcrumb) rendered next to a 404 card
+        // for a completely different page - a real bug caught in testing.
+        tap(() => patchState(store, { page: null, status: 'loading', errorStatus: null })),
         switchMap(({ locale, slug }) =>
           docsApi.getPage(locale, slug).pipe(
             tapResponse({
               next: (page) => patchState(store, { page, status: 'success' }),
               error: (error: HttpErrorResponse) =>
-                patchState(store, { status: 'error', errorStatus: error.status }),
+                patchState(store, { page: null, status: 'error', errorStatus: error.status }),
             }),
           ),
         ),

@@ -1,0 +1,56 @@
+<button
+  type="button"
+  class="scrim"
+  [class.show]="isOpen()"
+  [tabindex]="isOpen() ? 0 : -1"
+  aria-label="Close navigation"
+  (click)="closeDrawer()"
+></button>
+
+<nav
+  class="side"
+  [class.open]="isOpen()"
+  aria-label="Documentation"
+  tabindex="-1"
+  (keydown.escape)="closeDrawer()"
+>
+  @for (group of groups(); track group.id) {
+    <details class="side-group" [open]="group.id === activeGroupId()">
+      <summary>{{ group.label }}</summary>
+      <ul>
+        @for (item of group.items; track item.slug) {
+          <li>
+            <a
+              [routerLink]="['../', item.slug]"
+              [class.current]="item.slug === currentSlug()"
+              [attr.aria-current]="item.slug === currentSlug() ? 'page' : null"
+              (click)="closeDrawer()"
+            >
+              {{ item.title }}
+            </a>
+          </li>
+        }
+      </ul>
+    </details>
+  }
+
+  @if (appendix().length) {
+    <div class="side-appendix">
+      <div class="side-appendix-label">Appendix</div>
+      <ul>
+        @for (item of appendix(); track item.slug) {
+          <li>
+            <a
+              [routerLink]="['../', item.slug]"
+              [class.current]="item.slug === currentSlug()"
+              [attr.aria-current]="item.slug === currentSlug() ? 'page' : null"
+              (click)="closeDrawer()"
+            >
+              {{ item.title }}
+            </a>
+          </li>
+        }
+      </ul>
+    </div>
+  }
+</nav>
