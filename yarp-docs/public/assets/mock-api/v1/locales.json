@@ -1,0 +1,11 @@
+[
+  { "code": "en", "label": "English", "nativeLabel": "English", "dir": "ltr", "isDefault": true },
+  { "code": "bg", "label": "Bulgarian", "nativeLabel": "Български", "dir": "ltr" },
+  { "code": "ru", "label": "Russian", "nativeLabel": "Русский", "dir": "ltr" },
+  { "code": "fr", "label": "French", "nativeLabel": "Français", "dir": "ltr" },
+  { "code": "el", "label": "Greek", "nativeLabel": "Ελληνικά", "dir": "ltr" },
+  { "code": "es", "label": "Spanish", "nativeLabel": "Español", "dir": "ltr" },
+  { "code": "de", "label": "German", "nativeLabel": "Deutsch", "dir": "ltr" },
+  { "code": "pt-BR", "label": "Portuguese (Brazil)", "nativeLabel": "Português (BR)", "dir": "ltr" },
+  { "code": "zh-Hans", "label": "Chinese (Simplified)", "nativeLabel": "简体中文", "dir": "ltr" }
+]

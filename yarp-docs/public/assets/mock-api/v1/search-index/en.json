@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "yarp-overview",
+    "locale": "en",
+    "group": "getting-started",
+    "title": "Overview of YARP",
+    "excerpt": "YARP (Yet Another Reverse Proxy) is a highly customizable reverse proxy library for .NET.",
+    "keywords": ["reverse proxy", "introduction", "nginx", "envoy"]
+  }
+]
