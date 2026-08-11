@@ -310,6 +310,55 @@ function looksLikeHeading(block, pageTitle) {
   if (text.split(/\s+/).length > 8) {
     return false;
   }
+  // The rules below were added after diffing actual false positives found
+  // in the generated output (a code-fragment line surviving every rule
+  // above and ending up in a page's TOC) - each one is a confirmed case,
+  // not a speculative guess.
+  //
+  // A call/constructor fragment ("new RouteConfig()") or a wrapped method
+  // signature split across two blocks ("...Policy(IFoo" / "foo)") - no real
+  // heading in this corpus uses parentheses.
+  if (/[()]/.test(text)) {
+    return false;
+  }
+  // A line that's punctuation only (a lone "]" left dangling by a wrapped
+  // JSON/C# example) has no letters or digits at all.
+  if (!/[a-zA-Z0-9]/.test(text)) {
+    return false;
+  }
+  // Bare code literals and mid-page pagination fragments ("false", "5/8") -
+  // not caught by the print-header/footer stripping in cleanPdfText because
+  // they don't match that footer's URL-based pattern.
+  if (/^(true|false|null)$/i.test(text)) {
+    return false;
+  }
+  if (/^\d+\/\d+$/.test(text)) {
+    return false;
+  }
+  // A qualified identifier ("DestinationHealth.Unhealthy") - dotted with no
+  // spaces, which prose headings never are.
+  if (/^[A-Za-z_]\w*(\.[A-Za-z_]\w*)+$/.test(text)) {
+    return false;
+  }
+  // Any colon at all marks a key/value example fragment ("HeaderName:
+  // value", "Header1: Value1, Value2"), not a heading - a "Note:"/
+  // "Important:" callout line never reaches this function in the first
+  // place (parseBody checks for that prefix on multi-line blocks before
+  // ever calling looksLikeHeading), and a bare "Note"/"Important" label
+  // with no colon at all is handled by the exact-match check below.
+  if (text.includes(':')) {
+    return false;
+  }
+  if (/^(note|important)$/i.test(text)) {
+    return false;
+  }
+  // A heading is a label, not a sentence fragment left mid-thought by the
+  // PDF's own line wrapping ("The default route match precedence order
+  // is") - reject anything ending in a common function word no real
+  // heading would end on.
+  if (/\b(is|the|a|an|of|to|and|or|in|on|for|with)$/i.test(text)) {
+    return false;
+  }
   return true;
 }
 
@@ -348,12 +397,26 @@ function parseBody(blocks, pageTitle) {
   const htmlParts = [];
   let index = 0;
 
+  // A DOM id (and this app's PageToc/scrollspy @for tracking) must be
+  // unique per page - looksLikeHeading is a heuristic and can't be made
+  // airtight against plain-text-extracted PDFs (confirmed directly: this
+  // corpus has pages that legitimately repeat a short subsection heading
+  // like "Configuration" twice, once per parallel example), so a repeat
+  // slug gets a numeric suffix here rather than trusting the heuristic
+  // alone to never collide.
+  const idCounts = new Map();
+  function uniqueId(base) {
+    const seen = (idCounts.get(base) ?? 0) + 1;
+    idCounts.set(base, seen);
+    return seen === 1 ? base : `${base}-${seen}`;
+  }
+
   while (index < blocks.length) {
     const block = blocks[index];
     const firstLine = block[0].trim();
 
     if (looksLikeHeading(block, pageTitle)) {
-      const id = slugify(firstLine) || `section-${headings.length + 1}`;
+      const id = uniqueId(slugify(firstLine) || `section-${headings.length + 1}`);
       headings.push({ id, text: firstLine, level: 2 });
       htmlParts.push(`<h2 id="${id}">${escapeHtml(firstLine)}</h2>`);
       index += 1;
