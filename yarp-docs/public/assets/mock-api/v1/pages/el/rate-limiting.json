@@ -1,0 +1,42 @@
+{
+  "slug": "rate-limiting",
+  "locale": "el",
+  "group": "traffic-reliability",
+  "kind": "doc",
+  "title": "Rate limiting",
+  "lede": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination",
+  "headings": [
+    {
+      "id": "introduction",
+      "text": "Introduction",
+      "level": 2
+    },
+    {
+      "id": "defaults",
+      "text": "Defaults",
+      "level": 2
+    },
+    {
+      "id": "configuration",
+      "text": "Configuration",
+      "level": 2
+    },
+    {
+      "id": "disable-rate-limiting",
+      "text": "Disable Rate Limiting",
+      "level": 2
+    }
+  ],
+  "bodyHtml": "<h2 id=\"introduction\">Introduction</h2><p>The reverse proxy can be used to rate-limit requests before they are proxied to the destination servers. This can reduce load on the destination servers, add a layer of protection, and ensure consistent policies are implemented across your applications.</p><p>This feature is only available when using .NET 7 or later</p><h2 id=\"defaults\">Defaults</h2><p>No rate limiting is performed on requests unless enabled in the route or application configuration. However, the Rate Limiting middleware ( app.UseRateLimiter() ) can apply a default limiter applied to all routes, and this doesn't require any opt-in from the config. Example:</p><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-68\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-68\">   services.AddRateLimiter(options =&gt; options.GlobalLimiter = globalLimiter);</code></pre><h2 id=\"configuration\">Configuration</h2><p>Rate Limiter policies can be specified per route via RouteConfig.RateLimiterPolicy and can be bound from the Routes sections of the config file. As with other route properties, this can be modified and reloaded without restarting the proxy. Policy names are case insensitive.</p><p>Example:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-69\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-69\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n         \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"RateLimiterPolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n                   }\n      },\n      \"Clusters\": {\n                   \"cluster1\": {\n                      \"Destinations\": {\n                         \"cluster1/destination1\": {\n                            \"Address\": \"https://localhost:10001/\"\n                         }\n                      }\n                   }\n      }\n   }\n}\nRateLimiter policies are an ASP.NET Core concept that the proxy utilizes. The proxy provides\nthe above configuration to specify a policy per route and the rest is handled by existing\nASP.NET Core rate limiting middleware.\nRateLimiter policies can be configured in services as follows:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-70\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-70\">   services.AddRateLimiter(options =&gt;\n   {\n          options.AddFixedWindowLimiter(\"customPolicy\", opt =&gt;\n          {\n                 opt.PermitLimit = 4;\n                 opt.Window = TimeSpan.FromSeconds(12);\n                 opt.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;\n                 opt.QueueLimit = 2;\n          });\n   });\nThen add the RateLimiter middleware.\n    C#\n   app.UseRateLimiter();\n   app.MapReverseProxy();\nSee the Rate Limiting docs for setting up your preferred kind of rate limiting.</code></pre><h2 id=\"disable-rate-limiting\">Disable Rate Limiting</h2><p>Specifying the value disable in a route's RateLimiterPolicy parameter means the rate limiter middleware will not apply any policies to this route, even the default policy.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>The author created this article with assistance from AI. Learn more</p></div></div>",
+  "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/rate-limiting",
+  "lastUpdated": "2026-08-11",
+  "translated": false,
+  "prev": {
+    "slug": "dests-health-checks",
+    "title": "Destination health checks"
+  },
+  "next": {
+    "slug": "timeouts",
+    "title": "Request timeouts"
+  }
+}

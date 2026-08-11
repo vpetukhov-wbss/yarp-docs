@@ -1,0 +1,37 @@
+{
+  "slug": "http3",
+  "locale": "zh-Hans",
+  "group": "protocols",
+  "kind": "doc",
+  "title": "HTTP/3",
+  "lede": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support",
+  "headings": [
+    {
+      "id": "introduction",
+      "text": "Introduction",
+      "level": 2
+    },
+    {
+      "id": "set-up-http-3-on-kestrel",
+      "text": "Set up HTTP/3 on Kestrel",
+      "level": 2
+    },
+    {
+      "id": "httpclient",
+      "text": "HttpClient",
+      "level": 2
+    }
+  ],
+  "bodyHtml": "<h2 id=\"introduction\">Introduction</h2><p>YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support in .NET 7. To enable the HTTP/3 protocol in YARP you need to:</p><p>Configure inbound connections in Kestrel Configure outbound connections in HttpClient</p><h2 id=\"set-up-http-3-on-kestrel\">Set up HTTP/3 on Kestrel</h2><p>Protocols are required in the listener options:</p><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-80\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-80\">   var builder = WebApplication.CreateBuilder(args);\n   builder.WebHost.ConfigureKestrel(kestrel =&gt;\n   {\n          kestrel.ListenAnyIP(443, portOptions =&gt;\n          {\n                 portOptions.Protocols = HttpProtocols.Http1AndHttp2AndHttp3;\n                 portOptions.UseHttps();\n          });\n   });</code></pre><h2 id=\"httpclient\">HttpClient</h2><p>The default version of HttpRequest should be replaced by \"3\", find more details about HttpRequest configuration.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>The author created this article with assistance from AI. Learn more</p></div></div>",
+  "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/http3",
+  "lastUpdated": "2026-08-11",
+  "translated": false,
+  "prev": {
+    "slug": "grpc",
+    "title": "Proxying gRPC"
+  },
+  "next": {
+    "slug": "websockets",
+    "title": "WebSockets & SPDY"
+  }
+}

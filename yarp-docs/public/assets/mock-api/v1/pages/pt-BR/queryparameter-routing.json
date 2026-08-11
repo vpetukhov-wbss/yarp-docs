@@ -1,0 +1,172 @@
+{
+  "slug": "queryparameter-routing",
+  "locale": "pt-BR",
+  "group": "routing",
+  "kind": "doc",
+  "title": "Query parameter routing",
+  "lede": "Proxy routes specified in config or via code must include at least a path or host to match",
+  "headings": [
+    {
+      "id": "yarp-query-parameter-based-routing",
+      "text": "YARP Query Parameter Based Routing",
+      "level": 2
+    },
+    {
+      "id": "precedence",
+      "text": "Precedence",
+      "level": 2
+    },
+    {
+      "id": "configuration",
+      "text": "Configuration",
+      "level": 2
+    },
+    {
+      "id": "section-4",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "section-5",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "section-6",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "section-7",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "section-8",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "new-routeconfig",
+      "text": "new RouteConfig()",
+      "level": 2
+    },
+    {
+      "id": "new-routequeryparameter",
+      "text": "new RouteQueryParameter()",
+      "level": 2
+    },
+    {
+      "id": "new-routeconfig",
+      "text": "new RouteConfig()",
+      "level": 2
+    },
+    {
+      "id": "new-routequeryparameter",
+      "text": "new RouteQueryParameter()",
+      "level": 2
+    },
+    {
+      "id": "new-routequeryparameter",
+      "text": "new RouteQueryParameter()",
+      "level": 2
+    },
+    {
+      "id": "new-routeconfig",
+      "text": "new RouteConfig()",
+      "level": 2
+    },
+    {
+      "id": "new-routequeryparameter",
+      "text": "new RouteQueryParameter()",
+      "level": 2
+    },
+    {
+      "id": "new-routeconfig",
+      "text": "new RouteConfig()",
+      "level": 2
+    },
+    {
+      "id": "new-routequeryparameter",
+      "text": "new RouteQueryParameter()",
+      "level": 2
+    },
+    {
+      "id": "contract",
+      "text": "Contract",
+      "level": 2
+    },
+    {
+      "id": "name",
+      "text": "Name",
+      "level": 2
+    },
+    {
+      "id": "values",
+      "text": "Values",
+      "level": 2
+    },
+    {
+      "id": "mode",
+      "text": "Mode",
+      "level": 2
+    },
+    {
+      "id": "iscasesensitive",
+      "text": "IsCaseSensitive",
+      "level": 2
+    },
+    {
+      "id": "encoding",
+      "text": "Encoding",
+      "level": 2
+    },
+    {
+      "id": "matches-to",
+      "text": "Matches to",
+      "level": 2
+    },
+    {
+      "id": "or",
+      "text": "or",
+      "level": 2
+    },
+    {
+      "id": "examples",
+      "text": "Examples",
+      "level": 2
+    },
+    {
+      "id": "scenario-1-exact-query-parameter-match",
+      "text": "Scenario 1 - Exact Query Parameter Match",
+      "level": 2
+    },
+    {
+      "id": "scenario-2-multiple-values",
+      "text": "Scenario 2 - Multiple Values",
+      "level": 2
+    },
+    {
+      "id": "scenario-3-exists",
+      "text": "Scenario 3 - Exists",
+      "level": 2
+    },
+    {
+      "id": "scenario-4-multiple-queryparameters",
+      "text": "Scenario 4 - Multiple QueryParameters",
+      "level": 2
+    }
+  ],
+  "bodyHtml": "<h2 id=\"yarp-query-parameter-based-routing\">YARP Query Parameter Based Routing</h2><p>Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more query parameters that must be present on the request.</p><h2 id=\"precedence\">Precedence</h2><p>The default route match precedence order is 1) path, 2) method, 3) host, 4) headers 5) query parameters. That means a route which specifies methods and no query parameters will match before a route which specifies query parameters and no methods. This can be overridden by setting the Order property on a route.</p><h2 id=\"configuration\">Configuration</h2><p>Query Parameters are specified in the Match section of a proxy route.</p><p>If multiple query parameter rules are specified on a route then all must match for a route to be taken. OR logic must be implemented either within a query parameter rule or as separate routes.</p><p>Configuration:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-23\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-23\">\"Routes\": {\n   \"route1\" : {\n      \"ClusterId\": \"cluster1\",\n      \"Match\": {\n         \"Path\": \"{**catch-all}\",\n         \"QueryParameters\": [\n             {\n                \"Name\": \"queryparam1\",\n                \"Values\": [ \"value1\" ],\n                \"Mode\": \"Exact\"\n             }\n         ]\n      }\n   },\n   \"route2\" : {\n      \"ClusterId\": \"cluster1\",\n      \"Match\": {\n         \"Path\": \"{**catch-all}\",\n         \"QueryParameters\": [\n             {\n                          \"Name\": \"queryparam2\",\n                          \"Values\": [ \"1prefix\", \"2prefix\" ],\n                          \"Mode\": \"Prefix\"\n                      }</code></pre><h2 id=\"section-4\">]</h2><p>}</p><p>},</p><p>\"route3\" : {</p><p>\"ClusterId\": \"cluster1\",</p><p>\"Match\": {</p><p>\"Path\": \"{**catch-all}\",</p><p>\"QueryParameters\": [</p><p>{</p><p>\"Name\": \"queryparam3\",</p><p>\"Mode\": \"Exists\"</p><p>}</p><h2 id=\"section-5\">]</h2><p>}</p><p>},</p><p>\"route4\" : {</p><p>\"ClusterId\": \"cluster1\",</p><p>\"Match\": {</p><p>\"Path\": \"{**catch-all}\",</p><p>\"QueryParameters\": [</p><p>{</p><p>\"Name\": \"queryparam4\",</p><p>\"Values\": [ \"value1\", \"value2\" ],</p><p>\"Mode\": \"Exact\"</p><p>},</p><p>{</p><p>\"Name\": \"queryparam5\",</p><p>\"Mode\": \"Exists\"</p><p>}</p><h2 id=\"section-6\">]</h2><p>}</p><p>},</p><p>\"route5\" : {</p><p>\"ClusterId\": \"cluster1\",</p><p>\"Match\": {</p><p>\"Path\": \"{**catch-all}\",</p><p>\"QueryParameters\": [</p><p>{</p><p>\"Name\": \"queryparam5\",</p><p>\"Values\": [ \"value1\", \"value2\" ],</p><p>\"Mode\": \"Contains\"</p><p>},</p><p>{</p><p>\"Name\": \"queryparam6\",</p><p>\"Mode\": \"Exists\"</p><p>}</p><h2 id=\"section-7\">]</h2><p>}</p><p>},</p><p>\"route6\" : {</p><p>\"ClusterId\": \"cluster1\",</p><p>\"Match\": {</p><p>\"Path\": \"{**catch-all}\",</p><p>\"QueryParameters\": [</p><p>{</p><p>\"Name\": \"queryparam6\",</p><p>\"Values\": [ \"value1\", \"value2\" ],</p><p>\"Mode\": \"NotContains\"</p><p>},</p><p>{</p><p>\"Name\": \"queryparam7\",</p><p>\"Mode\": \"Exists\"</p><p>}</p><h2 id=\"section-8\">]</h2><p>}</p><p>}</p><p>}</p><p>Code:</p><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-24\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-24\">var routes = new[]\n{\n      new RouteConfig()\n      {\n             RouteId = \"route1\",\n             ClusterId = \"cluster1\",\n             Match = new RouteMatch\n             {\n                   Path = \"{**catch-all}\",\n                   QueryParameters = new[]\n                   {\n                          new RouteQueryParameter()\n                          {\n                                 Name = \"QueryParam1\",\n                                 Values = new[] { \"value1\" },\n                                 Mode = QueryParameterMatchMode.Exact\n                          }\n                   }\n             }\n      },\n      new RouteConfig()\n      {\n             RouteId = \"route2\",\n             ClusterId = \"cluster1\",\n             Match = new RouteMatch\n             {\n                   Path = \"{**catch-all}\",\n                   QueryParameters = new[]\n                   {\n                          new RouteQueryParameter()\n                          {\n                                 Name = \"QueryParam2\",\n                             Values = new[] { \"1prefix\", \"2prefix\" },\n                             Mode = QueryParameterMatchMode.Prefix\n                         }\n                      }\n                   }\n},</code></pre><h2 id=\"new-routeconfig\">new RouteConfig()</h2><p>{</p><p>RouteId = \"route3\",</p><p>ClusterId = \"cluster1\",</p><p>Match = new RouteMatch</p><p>{</p><p>Path = \"{**catch-all}\",</p><p>QueryParameters = new[]</p><p>{</p><h2 id=\"new-routequeryparameter\">new RouteQueryParameter()</h2><p>{</p><p>Name = \"QueryParam3\",</p><p>Mode = QueryParameterMatchMode.Exists</p><p>}</p><p>}</p><p>}</p><p>},</p><h2 id=\"new-routeconfig\">new RouteConfig()</h2><p>{</p><p>RouteId = \"route4\",</p><p>ClusterId = \"cluster1\",</p><p>Match = new RouteMatch</p><p>{</p><p>Path = \"{**catch-all}\",</p><p>QueryParameters = new[]</p><p>{</p><h2 id=\"new-routequeryparameter\">new RouteQueryParameter()</h2><p>{</p><p>Name = \"QueryParam4\",</p><p>Values = new[] { \"value1\", \"value2\" },</p><p>Mode = QueryParameterMatchMode.Exact</p><p>},</p><h2 id=\"new-routequeryparameter\">new RouteQueryParameter()</h2><p>{</p><p>Name = \"QueryParam5\",</p><p>Mode = QueryParameterMatchMode.Exists</p><p>}</p><p>}</p><p>}</p><p>},</p><h2 id=\"new-routeconfig\">new RouteConfig()</h2><p>{</p><p>RouteId = \"route5\",</p><p>ClusterId = \"cluster1\",</p><p>Match = new RouteMatch</p><p>{</p><p>Path = \"{**catch-all}\",</p><p>QueryParameters = new[]</p><p>{</p><h2 id=\"new-routequeryparameter\">new RouteQueryParameter()</h2><p>{</p><p>Name = \"QueryParam5\",</p><p>Values = new[] { \"value1\", \"value2\" },</p><p>Mode = QueryParameterMatchMode.Contains</p><p>}</p><p>}</p><p>}</p><p>},</p><h2 id=\"new-routeconfig\">new RouteConfig()</h2><p>{</p><p>RouteId = \"route6\",</p><p>ClusterId = \"cluster1\",</p><p>Match = new RouteMatch</p><p>{</p><p>Path = \"{**catch-all}\",</p><p>QueryParameters = new[]</p><p>{</p><h2 id=\"new-routequeryparameter\">new RouteQueryParameter()</h2><p>{</p><p>Name = \"QueryParam6\",</p><p>Values = new[] { \"value1\", \"value2\" },</p><p>Mode = QueryParameterMatchMode.NotContains</p><p>}</p><p>}</p><p>}</p><p>}</p><p>};</p><h2 id=\"contract\">Contract</h2><p>RouteQueryParameter defines the code contract and is mapped from config.</p><h2 id=\"name\">Name</h2><p>The query parameter name to check for on the request. A non-empty value is required. This field is case-insensitive.</p><h2 id=\"values\">Values</h2><p>A list of possible values to search for. The query parameter must match at least one of these values according to the specified Mode except for the 'NotContains'. At least one value is required unless Mode is set to Exists .</p><h2 id=\"mode\">Mode</h2><p>QueryParameterMatchMode specifies how to match the value(s) against the request query</p><p>parameter. The default is Exact .</p><p>Exact - The query parameter must match in its entirety, subject to the value of IsCaseSensitive . Only single query parameters are supported. If there are multiple query parameters with the same name then the match fails. Prefix - The query parameter must match by prefix, subject to the value of IsCaseSensitive . Only single query parameters are supported. If there are multiple query parameters with the same name then the match fails. Exists - The query parameter must exist and contain any non-empty value. Contains - The query parameter must contain the value for a match, subject to the value of IsCaseSensitive . Only single query parameters are supported. If there are multiple query parameters with the same name then the match fails. NotContains - The query parameter must not contain any of the match values, subject to the value of IsCaseSensitive . Only single query parameters are supported. If there are multiple query parameters with the same name then the match fails.</p><h2 id=\"iscasesensitive\">IsCaseSensitive</h2><p>Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive.</p><h2 id=\"encoding\">Encoding</h2><p>The request query string will be parsed and decoded before matching against the route rules.</p><p>\"route8\" : { \"ClusterId\": \"cluster1\", \"Match\": { \"Path\": \"{**catch-all}\", \"QueryParameters\": [ { \"Name\": \"queryparam8\", \"Values\": [ \"another value\" ], \"Mode\": \"Exact\" } ] }</p><h2 id=\"matches-to\">Matches to</h2><p>?queryparam8=another%20value</p><h2 id=\"or\">or</h2><p>?queryparam8=another+value</p><h2 id=\"examples\">Examples</h2><p>These examples use the configuration specified above.</p><h2 id=\"scenario-1-exact-query-parameter-match\">Scenario 1 - Exact Query Parameter Match</h2><p>A request with the following query parameter will match against route1.</p><p>?QueryParam1=Value1</p><p>Multiple query parameters with the same name are not currently supported and will not match.</p><p>?QueryParam1=Value1&amp;QueryParam1=Value2</p><h2 id=\"scenario-2-multiple-values\">Scenario 2 - Multiple Values</h2><p>Route2 defined multiple values to search for in a query parameter (\"1prefix\", \"2prefix\"), any of the values are acceptable. It also specified the Mode as Prefix , so any query parameter that starts with those values is acceptable. Any of the following query parameters will match route2.</p><p>?QueryParam2=1prefix</p><p>?QueryParam2=2prefix</p><p>?QueryParam2=1prefix-extra</p><p>?QueryParam2=2prefix-extra</p><p>Multiple query parameters with the same name are not currently supported and will not match.</p><p>?QueryParam2=2prefix&amp;QueryParam2=1prefix</p><h2 id=\"scenario-3-exists\">Scenario 3 - Exists</h2><p>Route3 only requires that the query parameter \"QueryParam3\" exists with any non-empty value The following is an example that will match route3.</p><p>?QueryParam3=value</p><p>An empty query parameter will not match.</p><p>?QueryParam3 ?QueryParam3=</p><p>This mode does support query parameters with multiple values and multiple query parameters with the same name since it does not look at the query parameter contents. The following will match.</p><p>?QueryParam3=value1&amp;QueryParam3=value2</p><h2 id=\"scenario-4-multiple-queryparameters\">Scenario 4 - Multiple QueryParameters</h2><p>Route4 requires both QueryParam4 and QueryParam5 , each matching according to their specified Mode . The following query parameters will match route4:</p><p>?QueryParam4=value1&amp;QueryParam5=AnyValue</p><p>?QueryParam4=value2&amp;QueryParam5=AnyValue</p><p>These will not match route4 because they are missing one of the required query parameters:</p><p>?QueryParam4=value2</p><p>?QueryParam5=AnyValue Note: The author created this article with assistance from AI. Learn more</p>",
+  "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/queryparameter-routing",
+  "lastUpdated": "2026-08-11",
+  "translated": false,
+  "prev": {
+    "slug": "header-routing",
+    "title": "Header-based routing"
+  },
+  "next": {
+    "slug": "transforms",
+    "title": "Overview"
+  }
+}

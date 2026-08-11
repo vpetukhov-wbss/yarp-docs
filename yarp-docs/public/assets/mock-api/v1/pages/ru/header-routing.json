@@ -1,0 +1,257 @@
+{
+  "slug": "header-routing",
+  "locale": "ru",
+  "group": "routing",
+  "kind": "doc",
+  "title": "Header-based routing",
+  "lede": "Proxy routes specified in config or via code must include at least a path or host to match",
+  "headings": [
+    {
+      "id": "yarp-header-based-routing",
+      "text": "YARP Header Based Routing",
+      "level": 2
+    },
+    {
+      "id": "precedence",
+      "text": "Precedence",
+      "level": 2
+    },
+    {
+      "id": "the-default-route-match-precedence-order-is",
+      "text": "The default route match precedence order is",
+      "level": 2
+    },
+    {
+      "id": "configuration",
+      "text": "Configuration",
+      "level": 2
+    },
+    {
+      "id": "section-5",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "section-6",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "section-7",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "section-8",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "section-9",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "section-10",
+      "text": "]",
+      "level": 2
+    },
+    {
+      "id": "new-routeconfig",
+      "text": "new RouteConfig()",
+      "level": 2
+    },
+    {
+      "id": "new-routeheader",
+      "text": "new RouteHeader()",
+      "level": 2
+    },
+    {
+      "id": "new-routeconfig",
+      "text": "new RouteConfig()",
+      "level": 2
+    },
+    {
+      "id": "new-routeheader",
+      "text": "new RouteHeader()",
+      "level": 2
+    },
+    {
+      "id": "new-routeconfig",
+      "text": "new RouteConfig()",
+      "level": 2
+    },
+    {
+      "id": "new-routeheader",
+      "text": "new RouteHeader()",
+      "level": 2
+    },
+    {
+      "id": "new-routeheader",
+      "text": "new RouteHeader()",
+      "level": 2
+    },
+    {
+      "id": "new-routeconfig",
+      "text": "new RouteConfig()",
+      "level": 2
+    },
+    {
+      "id": "new-routeheader",
+      "text": "new RouteHeader()",
+      "level": 2
+    },
+    {
+      "id": "new-routeconfig",
+      "text": "new RouteConfig()",
+      "level": 2
+    },
+    {
+      "id": "new-routeheader",
+      "text": "new RouteHeader()",
+      "level": 2
+    },
+    {
+      "id": "new-routeconfig",
+      "text": "new RouteConfig()",
+      "level": 2
+    },
+    {
+      "id": "new-routeheader",
+      "text": "new RouteHeader()",
+      "level": 2
+    },
+    {
+      "id": "contract",
+      "text": "Contract",
+      "level": 2
+    },
+    {
+      "id": "name",
+      "text": "Name",
+      "level": 2
+    },
+    {
+      "id": "values",
+      "text": "Values",
+      "level": 2
+    },
+    {
+      "id": "mode",
+      "text": "Mode",
+      "level": 2
+    },
+    {
+      "id": "iscasesensitive",
+      "text": "IsCaseSensitive",
+      "level": 2
+    },
+    {
+      "id": "examples",
+      "text": "Examples",
+      "level": 2
+    },
+    {
+      "id": "scenario-1-exact-header-match",
+      "text": "Scenario 1 - Exact Header Match",
+      "level": 2
+    },
+    {
+      "id": "header1-value1",
+      "text": "Header1: Value1",
+      "level": 2
+    },
+    {
+      "id": "header1-value1-value2",
+      "text": "Header1: Value1, Value2",
+      "level": 2
+    },
+    {
+      "id": "scenario-2-multiple-values",
+      "text": "Scenario 2 - Multiple Values",
+      "level": 2
+    },
+    {
+      "id": "header2-1prefix",
+      "text": "Header2: 1prefix",
+      "level": 2
+    },
+    {
+      "id": "header2-2prefix",
+      "text": "Header2: 2prefix",
+      "level": 2
+    },
+    {
+      "id": "header2-1prefix-extra",
+      "text": "Header2: 1prefix-extra",
+      "level": 2
+    },
+    {
+      "id": "header2-2prefix-extra",
+      "text": "Header2: 2prefix-extra",
+      "level": 2
+    },
+    {
+      "id": "header2-foo-1prefix-2prefix",
+      "text": "Header2: foo, 1prefix, 2prefix",
+      "level": 2
+    },
+    {
+      "id": "scenario-3-exists",
+      "text": "Scenario 3 - Exists",
+      "level": 2
+    },
+    {
+      "id": "header3-value",
+      "text": "Header3: value",
+      "level": 2
+    },
+    {
+      "id": "header3-value1-value2",
+      "text": "Header3: value1, value2",
+      "level": 2
+    },
+    {
+      "id": "scenario-4-multiple-headers",
+      "text": "Scenario 4 - Multiple Headers",
+      "level": 2
+    },
+    {
+      "id": "header4-value2",
+      "text": "Header4: value2",
+      "level": 2
+    },
+    {
+      "id": "header5-anyvalue",
+      "text": "Header5: AnyValue",
+      "level": 2
+    },
+    {
+      "id": "scenario-5-notexists",
+      "text": "Scenario 5 - NotExists",
+      "level": 2
+    },
+    {
+      "id": "notheader7-anyvalue",
+      "text": "NotHeader7: AnyValue",
+      "level": 2
+    },
+    {
+      "id": "header7-anyvalue",
+      "text": "Header7: AnyValue",
+      "level": 2
+    }
+  ],
+  "bodyHtml": "<h2 id=\"yarp-header-based-routing\">YARP Header Based Routing</h2><p>Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more headers that must be present on the request.</p><h2 id=\"precedence\">Precedence</h2><h2 id=\"the-default-route-match-precedence-order-is\">The default route match precedence order is</h2><ol><li>path</li><li>method</li><li>host</li><li>headers</li><li>query parameters</li></ol><p>That means a route which specifies methods and no headers will match before a route which specifies headers and no methods. This can be overridden by setting the Order property on a route (see example in config properties).</p><h2 id=\"configuration\">Configuration</h2><p>Headers are specified in the Match section of a proxy route.</p><p>If multiple headers rules are specified on a route then all must match for a route to be taken. OR logic must be implemented either within a header rule or as separate routes.</p><p>Configuration:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-21\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-21\">\"Routes\": {\n   \"route1\" : {\n      \"ClusterId\": \"cluster1\",\n      \"Match\": {\n         \"Path\": \"{**catch-all}\",\n         \"Headers\": [\n             {\n                \"Name\": \"header1\",\n                \"Values\": [ \"value1\" ],\n                \"Mode\": \"ExactHeader\"\n             }\n         ]\n      }\n},\n\"route2\" : {\n\"ClusterId\": \"cluster1\",\n\"Match\": {\n                   \"Path\": \"{**catch-all}\",\n                   \"Headers\": [\n                      {\n                          \"Name\": \"header2\",\n                          \"Values\": [ \"1prefix\", \"2prefix\" ],\n                          \"Mode\": \"HeaderPrefix\"\n                      }</code></pre><h2 id=\"section-5\">]</h2><p>}</p><p>},</p><p>\"route3\" : {</p><p>\"ClusterId\": \"cluster1\",</p><p>\"Match\": {</p><p>\"Path\": \"{**catch-all}\",</p><p>\"Headers\": [</p><p>{</p><p>\"Name\": \"header3\",</p><p>\"Mode\": \"Exists\"</p><p>}</p><h2 id=\"section-6\">]</h2><p>}</p><p>},</p><p>\"route4\" : {</p><p>\"ClusterId\": \"cluster1\",</p><p>\"Match\": {</p><p>\"Path\": \"{**catch-all}\",</p><p>\"Headers\": [</p><p>{</p><p>\"Name\": \"header4\",</p><p>\"Values\": [ \"value1\", \"value2\" ],</p><p>\"Mode\": \"ExactHeader\"</p><p>},</p><p>{</p><p>\"Name\": \"header5\",</p><p>\"Mode\": \"Exists\"</p><p>}</p><h2 id=\"section-7\">]</h2><p>}</p><p>},</p><p>\"route5\" : {</p><p>\"ClusterId\": \"cluster1\",</p><p>\"Match\": {</p><p>\"Path\": \"{**catch-all}\",</p><p>\"Headers\": [</p><p>{</p><p>\"Name\": \"header5\",</p><p>\"Values\": [ \"value1\", \"value2\" ],</p><p>\"Mode\": \"Contains\"</p><p>},</p><p>{</p><p>\"Name\": \"header6\",</p><p>\"Mode\": \"Exists\"</p><p>}</p><h2 id=\"section-8\">]</h2><p>}</p><p>},</p><p>\"route6\" : {</p><p>\"ClusterId\": \"cluster1\",</p><p>\"Match\": {</p><p>\"Path\": \"{**catch-all}\",</p><p>\"Headers\": [</p><p>{</p><p>\"Name\": \"header6\",</p><p>\"Values\": [ \"value1\", \"value2\" ],</p><p>\"Mode\": \"NotContains\"</p><p>},</p><p>{</p><p>\"Name\": \"header7\",</p><p>\"Mode\": \"Exists\"</p><p>}</p><h2 id=\"section-9\">]</h2><p>}</p><p>},</p><p>\"route7\" : {</p><p>\"ClusterId\": \"cluster1\",</p><p>\"Match\": {</p><p>\"Path\": \"{**catch-all}\",</p><p>\"Headers\": [</p><p>{</p><p>\"Name\": \"header7\",</p><p>\"Mode\": \"NotExists\"</p><p>}</p><h2 id=\"section-10\">]</h2><p>}</p><p>}</p><p>}</p><p>Code:</p><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-22\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-22\">var routes = new[]\n{\n      new RouteConfig()\n      {\n             RouteId = \"route1\",\n             ClusterId = \"cluster1\",\n             Match = new RouteMatch\n             {\n                   Path = \"{**catch-all}\",\n                   Headers = new[]\n                   {\n                          new RouteHeader()\n                          {\n                            Name = \"Header1\",\n                            Values = new[] { \"value1\" },\n                            Mode = HeaderMatchMode.ExactHeader\n                         }\n                      }\n                   }\n},</code></pre><h2 id=\"new-routeconfig\">new RouteConfig()</h2><p>{</p><p>RouteId = \"route2\",</p><p>ClusterId = \"cluster1\",</p><p>Match = new RouteMatch</p><p>{</p><p>Path = \"{**catch-all}\",</p><p>Headers = new[]</p><p>{</p><h2 id=\"new-routeheader\">new RouteHeader()</h2><p>{</p><p>Name = \"Header2\",</p><p>Values = new[] { \"1prefix\", \"2prefix\" },</p><p>Mode = HeaderMatchMode.HeaderPrefix</p><p>}</p><p>}</p><p>}</p><p>},</p><h2 id=\"new-routeconfig\">new RouteConfig()</h2><p>{</p><p>RouteId = \"route3\",</p><p>ClusterId = \"cluster1\",</p><p>Match = new RouteMatch</p><p>{</p><p>Path = \"{**catch-all}\",</p><p>Headers = new[]</p><p>{</p><h2 id=\"new-routeheader\">new RouteHeader()</h2><p>{</p><p>Name = \"Header3\",</p><p>Mode = HeaderMatchMode.Exists</p><p>}</p><p>}</p><p>}</p><p>},</p><h2 id=\"new-routeconfig\">new RouteConfig()</h2><p>{</p><p>RouteId = \"route4\",</p><p>ClusterId = \"cluster1\",</p><p>Match = new RouteMatch</p><p>{</p><p>Path = \"{**catch-all}\",</p><p>Headers = new[]</p><p>{</p><h2 id=\"new-routeheader\">new RouteHeader()</h2><p>{</p><p>Name = \"Header4\",</p><p>Values = new[] { \"value1\", \"value2\" },</p><p>Mode = HeaderMatchMode.ExactHeader</p><p>},</p><h2 id=\"new-routeheader\">new RouteHeader()</h2><p>{</p><p>Name = \"Header5\",</p><p>Mode = HeaderMatchMode.Exists</p><p>}</p><p>}</p><p>}</p><p>},</p><h2 id=\"new-routeconfig\">new RouteConfig()</h2><p>{</p><p>RouteId = \"route5\",</p><p>ClusterId = \"cluster1\",</p><p>Match = new RouteMatch</p><p>{</p><p>Path = \"{**catch-all}\",</p><p>Headers = new[]</p><p>{</p><h2 id=\"new-routeheader\">new RouteHeader()</h2><p>{</p><p>Name = \"Header5\",</p><p>Values = new[] { \"value1\", \"value2\" },</p><p>Mode = HeaderMatchMode.Contains</p><p>}</p><p>}</p><p>}</p><p>},</p><h2 id=\"new-routeconfig\">new RouteConfig()</h2><p>{</p><p>RouteId = \"route6\",</p><p>ClusterId = \"cluster1\",</p><p>Match = new RouteMatch</p><p>{</p><p>Path = \"{**catch-all}\",</p><p>Headers = new[]</p><p>{</p><h2 id=\"new-routeheader\">new RouteHeader()</h2><p>{</p><p>Name = \"Header6\",</p><p>Values = new[] { \"value1\", \"value2\" },</p><p>Mode = HeaderMatchMode.NotContains</p><p>}</p><p>}</p><p>}</p><p>},</p><h2 id=\"new-routeconfig\">new RouteConfig()</h2><p>{</p><p>RouteId = \"route7\",</p><p>ClusterId = \"cluster1\",</p><p>Match = new RouteMatch</p><p>{</p><p>Path = \"{**catch-all}\",</p><p>Headers = new[]</p><p>{</p><h2 id=\"new-routeheader\">new RouteHeader()</h2><p>{</p><p>Name = \"Header7\",</p><p>Mode = HeaderMatchMode.NotExists</p><p>}</p><p>}</p><p>}</p><p>}</p><p>};</p><h2 id=\"contract\">Contract</h2><p>RouteHeader defines the code contract and is mapped from config.</p><h2 id=\"name\">Name</h2><p>The header name to check for on the request. A non-empty value is required. This field is case- insensitive per the HTTP RFCs.</p><h2 id=\"values\">Values</h2><p>A list of possible values to search for. The header must match at least one of these values according to the specified Mode except for the 'NotContains'. At least one value is required unless Mode is set to Exists or NotExists .</p><h2 id=\"mode\">Mode</h2><p>HeaderMatchMode specifies how to match the value(s) against the request header. The default is ExactHeader .</p><p>ExactHeader - Any of the headers with the given name must match in its entirety, subject to the value of IsCaseSensitive . If a header contains multiple values (separated by , or ; ), they are split before matching. A single pair of quotes will also be stripped from the value before matching. HeaderPrefix - Any of the headers with the given name must match by prefix, subject to the value of IsCaseSensitive . If a header contains multiple values (separated by , or ; ), they are split before matching. A single pair of quotes will also be stripped from the value before matching. Exists - The header must exist and contain any non-empty value. If there are multiple headers with the same name, the rule will also match.</p><p>Contains - Any of the headers with the given name must contain any of the match values,</p><p>subject to the value of IsCaseSensitive .</p><p>NotContains - None of the headers with the given name may contain any of the match</p><p>values, subject to the value of IsCaseSensitive .</p><h2 id=\"iscasesensitive\">IsCaseSensitive</h2><p>Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive.</p><h2 id=\"examples\">Examples</h2><p>These examples use the configuration specified above.</p><h2 id=\"scenario-1-exact-header-match\">Scenario 1 - Exact Header Match</h2><p>A request with the following header will match against route1.</p><h2 id=\"header1-value1\">Header1: Value1</h2><p>If a header contains multiple values, each one will be matched separately. The following request will match.</p><h2 id=\"header1-value1-value2\">Header1: Value1, Value2</h2><p>The same holds if multiple values are split across multiple headers with the same name.</p><p>Header1: Value1 Header1: Value2</p><p>A single pair of enclosing quotes may be stripped from the value before matching. The following request will match.</p><p>Header1: \"Value1\"</p><p>Multiple pairs of quotes will not match.</p><p>Header1: \"\"Value1\"\"</p><h2 id=\"scenario-2-multiple-values\">Scenario 2 - Multiple Values</h2><p>Route2 defined multiple values to search for in a header (\"1prefix\", \"2prefix\"), any of the values are acceptable. It also specified the Mode as HeaderPrefix , so any header that starts with those values is acceptable. Any of the following headers will match route2.</p><h2 id=\"header2-1prefix\">Header2: 1prefix</h2><h2 id=\"header2-2prefix\">Header2: 2prefix</h2><h2 id=\"header2-1prefix-extra\">Header2: 1prefix-extra</h2><h2 id=\"header2-2prefix-extra\">Header2: 2prefix-extra</h2><p>If a header contains multiple values, each one will be matched separately. The following request will match.</p><h2 id=\"header2-foo-1prefix-2prefix\">Header2: foo, 1prefix, 2prefix</h2><p>The same holds if multiple values are split across multiple headers with the same name.</p><p>Header2: 1prefix Header2: 2prefix</p><p>A single pair of enclosing quotes may be stripped from the value before matching. The following request will match.</p><p>Header2: \"2prefix\"</p><p>Multiple pairs of quotes will not match.</p><p>Header2: \"\"2prefix\"\"</p><h2 id=\"scenario-3-exists\">Scenario 3 - Exists</h2><p>Route3 only requires that the header \"Header3\" exists with any non-empty value The following is an example that will match route3.</p><h2 id=\"header3-value\">Header3: value</h2><p>An empty header will not match.</p><p>Header3:</p><p>This mode does support headers with multiple values and multiple headers with the same name since it does not look at the header contents. The following will match.</p><h2 id=\"header3-value1-value2\">Header3: value1, value2</h2><p>Header3: value1 Header3: value2</p><p>Header3: Header3:</p><h2 id=\"scenario-4-multiple-headers\">Scenario 4 - Multiple Headers</h2><p>Route4 requires both header4 and header5 , each matching according to their specified Mode . The following headers will match route4:</p><p>Header4: value1 Header5: AnyValue</p><p>Header4: value2 Header5: AnyValue</p><p>These will not match route4 because they are missing one of the required headers:</p><h2 id=\"header4-value2\">Header4: value2</h2><h2 id=\"header5-anyvalue\">Header5: AnyValue</h2><h2 id=\"scenario-5-notexists\">Scenario 5 - NotExists</h2><p>Route7 requires that the header \"Header7\" must not exists The following headers will match route7:</p><h2 id=\"notheader7-anyvalue\">NotHeader7: AnyValue</h2><p>The following headers will not match route7 because the header \"Header7\" exists.</p><h2 id=\"header7-anyvalue\">Header7: AnyValue</h2><p>Header7: Note: The author created this article with assistance from AI. Learn more</p>",
+  "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/header-routing",
+  "lastUpdated": "2026-08-11",
+  "translated": false,
+  "prev": {
+    "slug": "http-client-config",
+    "title": "HTTP client configuration"
+  },
+  "next": {
+    "slug": "queryparameter-routing",
+    "title": "Query parameter routing"
+  }
+}

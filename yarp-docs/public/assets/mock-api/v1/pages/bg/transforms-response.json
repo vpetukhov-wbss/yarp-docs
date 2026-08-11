@@ -1,0 +1,102 @@
+{
+  "slug": "transforms-response",
+  "locale": "bg",
+  "group": "transforms",
+  "kind": "doc",
+  "title": "Response & trailer transforms",
+  "lede": "All response headers and trailers are copied from the proxied response to the outgoing client",
+  "headings": [
+    {
+      "id": "response-and-response-trailers",
+      "text": "Response and Response Trailers",
+      "level": 2
+    },
+    {
+      "id": "responseheaderscopy",
+      "text": "ResponseHeadersCopy",
+      "level": 2
+    },
+    {
+      "id": "responseheader",
+      "text": "ResponseHeader",
+      "level": 2
+    },
+    {
+      "id": "adds-or-replaces-response-headers",
+      "text": "Adds or replaces response headers",
+      "level": 2
+    },
+    {
+      "id": "headername-value",
+      "text": "HeaderName: value",
+      "level": 2
+    },
+    {
+      "id": "responseheaderremove",
+      "text": "ResponseHeaderRemove",
+      "level": 2
+    },
+    {
+      "id": "removes-response-headers",
+      "text": "Removes response headers",
+      "level": 2
+    },
+    {
+      "id": "responseheadersallowed",
+      "text": "ResponseHeadersAllowed",
+      "level": 2
+    },
+    {
+      "id": "responsetrailerscopy",
+      "text": "ResponseTrailersCopy",
+      "level": 2
+    },
+    {
+      "id": "responsetrailer",
+      "text": "ResponseTrailer",
+      "level": 2
+    },
+    {
+      "id": "adds-or-replaces-trailing-response-headers",
+      "text": "Adds or replaces trailing response headers",
+      "level": 2
+    },
+    {
+      "id": "5-8",
+      "text": "5/8",
+      "level": 2
+    },
+    {
+      "id": "headername-value",
+      "text": "HeaderName: value",
+      "level": 2
+    },
+    {
+      "id": "responsetrailerremove",
+      "text": "ResponseTrailerRemove",
+      "level": 2
+    },
+    {
+      "id": "removes-trailing-response-headers",
+      "text": "Removes trailing response headers",
+      "level": 2
+    },
+    {
+      "id": "responsetrailersallowed",
+      "text": "ResponseTrailersAllowed",
+      "level": 2
+    }
+  ],
+  "bodyHtml": "<h2 id=\"response-and-response-trailers\">Response and Response Trailers</h2><p>All response headers and trailers are copied from the proxied response to the outgoing client response by default. Response and response trailer transforms may specify if they should be applied only for successful responses or for all responses.</p><p>In code these are implemented as derivations of the abstract classes ResponseTransform and ResponseTrailersTransform.</p><h2 id=\"responseheaderscopy\">ResponseHeadersCopy</h2><p>Sets whether destination response headers are copied to the client</p><p>Key Value Default Expand table ResponseHeadersCopy true/false true Required yes</p><p>Config:</p><p>JSON { \"ResponseHeadersCopy\": \"false\" }</p><p>Code:</p><p>C# routeConfig = routeConfig.WithTransformCopyResponseHeaders(copy: false);</p><p>C# transformBuilderContext.CopyResponseHeaders = false;</p><p>This sets if all proxy response headers are copied to the client response. This setting is enabled by default and can be disabled by configuring the transform with a false value. Transforms that reference specific headers will still be run if this is disabled.</p><h2 id=\"responseheader\">ResponseHeader</h2><h2 id=\"adds-or-replaces-response-headers\">Adds or replaces response headers</h2><p>Key Value Default Expand table ResponseHeader The header name (none) Required Set/Append The header value (none) yes When Success/Always/Failure Success yes no</p><p>Config:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-40\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-40\">   {\n       \"ResponseHeader\": \"HeaderName\",\n       \"Append\": \"value\",\n       \"When\": \"Success\"\n   }\nCode:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-41\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-41\">   routeConfig = routeConfig.WithTransformResponseHeader(headerName: \"HeaderName\",\n   value: \"value\", append: true, ResponseCondition.Success);\n    C#\n   transformBuilderContext.AddResponseHeader(headerName: \"HeaderName\", value:\n   \"value\", append: true, always: ResponseCondition.Success);\nExample:</code></pre><h2 id=\"headername-value\">HeaderName: value</h2><p>This sets or appends the value for the named response header. Set replaces any existing header. Append adds an additional header with the given value. Note: setting \"\" as a header value is not recommended and can cause an undefined behavior.</p><p>When specifies if the response header should be included for all, successful, or failure</p><p>responses. Any response with a status code less than 400 is considered a success.</p><h2 id=\"responseheaderremove\">ResponseHeaderRemove</h2><h2 id=\"removes-response-headers\">Removes response headers</h2><p>Key Value Default Required ResponseHeaderRemove The header name (none) yes When Success/Always/Failure Success no</p><p>Config:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-42\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-42\">{\n   \"ResponseHeaderRemove\": \"HeaderName\",\n   \"When\": \"Success\"\n}\nCode:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-43\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-43\">   routeConfig = routeConfig.WithTransformResponseHeaderRemove(headerName:\n   \"HeaderName\", ResponseCondition.Success);\n    C#\n   transformBuilderContext.AddResponseHeaderRemove(headerName: \"HeaderName\",\n   ResponseCondition.Success);\nExample:\nHeaderName: value\nAnotherHeader: another-value\nThis removes the named response header.\nWhen specifies if the response header should be removed for all, successful, or failure\nresponses. Any response with a status code less than 400 is considered a success.</code></pre><h2 id=\"responseheadersallowed\">ResponseHeadersAllowed</h2><p>Key Value Required ResponseHeadersAllowed A semicolon separated list of allowed header names. yes</p><p>Config:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-44\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-44\">   {\n       \"ResponseHeadersAllowed\": \"Header1;header2\"\n   }\nCode:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-45\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-45\">   routeConfig = routeConfig.WithTransformResponseHeadersAllowed(\"Header1\",\n   \"header2\");</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-46\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-46\">   transformBuilderContext.AddResponseHeadersAllowed(\"Header1\", \"header2\");\nYARP copies most response headers from the proxy response by default (see\nResponseHeadersCopy). Some security models only allow specific headers to be proxied. This\ntransform disables ResponseHeadersCopy and only copies the given headers. Other transforms\nthat modify or append to existing headers may be affected if not included in the allow list.\nNote that there are some headers YARP does not copy by default since they are connection\nspecific or otherwise security sensitive (e.g. Connection , Alt-Svc ). Putting those header names\nin the allow list will bypass that restriction but is strongly discouraged as it may negatively\naffect the functionality of the proxy or cause security vulnerabilities.\nExample:\nHeader1: value1\nHeader2: value2\nAnotherHeader: AnotherValue\nOnly header1 and header2 are copied from the proxy response.</code></pre><h2 id=\"responsetrailerscopy\">ResponseTrailersCopy</h2><p>Sets whether destination trailing response headers are copied to the client</p><p>Key Value Default Expand table ResponseTrailersCopy true/false true Required yes</p><p>Config:</p><p>JSON { \"ResponseTrailersCopy\": \"false\" }</p><p>Code:</p><p>C# routeConfig = routeConfig.WithTransformCopyResponseTrailers(copy: false);</p><p>C# transformBuilderContext.CopyResponseTrailers = false;</p><p>This sets if all proxy response trailers are copied to the client response. This setting is enabled by default and can be disabled by configuring the transform with a false value. Transforms that reference specific headers will still be run if this is disabled.</p><h2 id=\"responsetrailer\">ResponseTrailer</h2><h2 id=\"adds-or-replaces-trailing-response-headers\">Adds or replaces trailing response headers</h2><p>https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/transforms-response?view=aspnetcore-9.0 Expand table</p><h2 id=\"5-8\">5/8</h2><p>Key Value Default Required ResponseTrailer Set/Append The header name (none) yes When The header value (none) yes</p><p>Success/Always/Failure Success no</p><p>Config:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-47\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-47\">   {\n       \"ResponseTrailer\": \"HeaderName\",\n       \"Append\": \"value\",\n       \"When\": \"Success\"\n   }\nCode:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-48\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-48\">   routeConfig = routeConfig.WithTransformResponseTrailer(headerName: \"HeaderName\",\n   value: \"value\", append: true, ResponseCondition.Success);\n    C#\n   transformBuilderContext.AddResponseTrailer(headerName: \"HeaderName\", value:\n   \"value\", append: true, ResponseCondition.Success);\nExample:</code></pre><h2 id=\"headername-value\">HeaderName: value</h2><p>Response trailers are headers sent at the end of the response body. Support for trailers is uncommon in HTTP/1.1 implementations but is becoming common in HTTP/2 implementations. Check your client and server for support.</p><p>ResponseTrailer follows the same structure and guidance as ResponseHeader.</p><h2 id=\"responsetrailerremove\">ResponseTrailerRemove</h2><h2 id=\"removes-trailing-response-headers\">Removes trailing response headers</h2><p>Key Expand table ResponseTrailerRemove When Value Default Required The header name (none) yes Success/Always/Failure Success no</p><p>Config:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-49\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-49\">   {\n       \"ResponseTrailerRemove\": \"HeaderName\",\n       \"When\": \"Success\"\n   }\nCode:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-50\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-50\">   routeConfig = routeConfig.WithTransformResponseTrailerRemove(headerName:\n   \"HeaderName\", ResponseCondition.Success);\n    C#\n   transformBuilderContext.AddResponseTrailerRemove(headerName: \"HeaderName\",\n   ResponseCondition.Success);\nExample:\n   HeaderName: value\n   AnotherHeader: another-value\nThis removes the named trailing header.\nResponseTrailerRemove follows the same structure and guidance as ResponseHeaderRemove.</code></pre><h2 id=\"responsetrailersallowed\">ResponseTrailersAllowed</h2><p>yes Key Value ResponseTrailersAllowed A semicolon separated list of allowed header names.</p><p>Config:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-51\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-51\">{\n   \"ResponseTrailersAllowed\": \"Header1;header2\"\n}\nCode:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-52\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-52\">   routeConfig = routeConfig.WithTransformResponseTrailersAllowed(\"Header1\",\n   \"header2\");</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-53\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-53\">   transformBuilderContext.AddResponseTrailersAllowed(\"Header1\", \"header2\");\nYARP copies most response trailers from the proxy response by default (see\nResponseTrailersCopy). Some security models only allow specific headers to be proxied. This\ntransform disables ResponseTrailersCopy and only copies the given headers. Other transforms\nthat modify or append to existing headers may be affected if not included in the allow list.\nNote that there are some headers YARP does not copy by default since they are connection\nspecific or otherwise security sensitive (e.g. Connection , Alt-Svc ). Putting those header names\nin the allow list will bypass that restriction but is strongly discouraged as it may negatively\naffect the functionality of the proxy or cause security vulnerabilities.\nExample:\nHeader1: value1\nHeader2: value2\nAnotherHeader: AnotherValue\nOnly header1 and header2 are copied from the proxy response.\n Note: The author created this article with assistance from AI. Learn more</code></pre>",
+  "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/transforms-response",
+  "lastUpdated": "2026-08-11",
+  "translated": false,
+  "prev": {
+    "slug": "transforms-request",
+    "title": "Request transforms"
+  },
+  "next": {
+    "slug": "load-balancing",
+    "title": "Load balancing"
+  }
+}
