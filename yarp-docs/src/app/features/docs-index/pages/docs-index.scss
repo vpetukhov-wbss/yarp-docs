@@ -1,5 +1,97 @@
-.placeholder {
-  padding: 40px 48px;
-  color: var(--ink-soft);
-  font-family: var(--font-ui);
+@use 'mixins' as *;
+
+.docs-index {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 48px 96px;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.lede {
+  margin: 0 0 36px;
+  max-width: 62ch;
+  font-size: 16.5px;
+  color: var(--muted);
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 48px;
+}
+
+.group,
+.appendix {
+  h2 {
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin: 0 0 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    font-size: 13.8px;
+    color: var(--ink-soft);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.appendix {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  max-width: 460px;
+}
+
+.cta {
+  @include cta-button;
+}
+
+@media (max-width: 768px) {
+  .groups {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .docs-index {
+    padding: 28px 20px 72px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
 }

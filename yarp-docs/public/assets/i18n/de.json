@@ -41,5 +41,36 @@
   },
   "translationBanner": {
     "message": "Diese Seite wurde noch nicht übersetzt — Anzeige auf Englisch."
+  },
+  "home": {
+    "heroEyebrow": "YARP-Dokumentation",
+    "heroTitle": "Yet Another Reverse Proxy, für .NET",
+    "heroLede": "Eine hochgradig anpassbare Reverse-Proxy-Bibliothek für schnelle, flexible Edge- und Gateway-Dienste auf Basis von ASP.NET Core.",
+    "getStarted": "Erste Schritte",
+    "browseDocs": "Gesamte Dokumentation durchsuchen",
+    "sectionsTitle": "Dokumentation erkunden",
+    "errorTitle": "Etwas ist schiefgelaufen",
+    "errorBody": "Der Dokumentationsindex konnte nicht geladen werden. Überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "retry": "Erneut versuchen",
+    "footerAttribution": "Inhalte angepasst von Microsoft Learn, lizenziert unter CC BY 4.0.",
+    "footerSourceProject": "YARP auf GitHub ↗"
+  },
+  "docsIndex": {
+    "title": "Gesamte Dokumentation",
+    "lede": "Alle YARP-Anleitungen und Referenzseiten, gruppiert nach Thema.",
+    "errorTitle": "Etwas ist schiefgelaufen",
+    "errorBody": "Der Dokumentationsindex konnte nicht geladen werden. Überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "retry": "Erneut versuchen"
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "body": "Diese Seite konnte nicht gefunden werden. Sie wurde möglicherweise verschoben, oder die Adresse ist falsch geschrieben.",
+    "browseDocs": "Gesamte Dokumentation durchsuchen",
+    "goHome": "Zur Startseite"
+  },
+  "offline": {
+    "title": "Sie sind offline",
+    "body": "Der Dokumentationsdienst ist derzeit nicht erreichbar. Diese Seite wird automatisch wiederhergestellt, sobald Ihre Verbindung zurück ist.",
+    "retry": "Erneut versuchen"
   }
 }

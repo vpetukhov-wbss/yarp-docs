@@ -21,3 +21,50 @@
     border-color: var(--border);
   }
 }
+
+// The h1/p shell used by every "loading failed" state (article errors, home,
+// docs-index, offline). Owns the h1's full appearance (size/weight/margin),
+// not just an override, because ErrorState is its own component - the page
+// h1 rule these values used to inherit from (e.g. doc-article's own `h1{}`)
+// doesn't reach across a component boundary.
+@mixin state-card {
+  max-width: 62ch;
+  padding: 32px 0;
+
+  h1 {
+    margin: 0 0 6px;
+    font-weight: 800;
+    font-size: 24px;
+    color: var(--ink);
+  }
+
+  p {
+    margin: 8px 0 20px;
+    color: var(--muted);
+  }
+}
+
+// The filled accent CTA button/link. Applied locally (`.cta { @include
+// cta-button; }`) by each component that projects one into ErrorState's
+// <ng-content>, since projected content keeps the *caller's* encapsulation
+// attribute, not ErrorState's - a style defined only in error-state.scss
+// would never match it.
+@mixin cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 600;
+  font-size: 13.5px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    opacity: 0.92;
+  }
+}

@@ -1,4 +1,49 @@
-<main id="main" class="placeholder">
-  <h1>Docs index</h1>
-  <p>Full section directory - built out in Step 13 against <code>NavStore</code>.</p>
+<main id="main" class="docs-index">
+  <h1>{{ 'docsIndex.title' | translate }}</h1>
+  <p class="lede">{{ 'docsIndex.lede' | translate }}</p>
+
+  @switch (navStore.status()) {
+    @case ('loading') {
+      <div class="groups">
+        @for (i of skeletonGroups; track i) {
+          <div class="group">
+            <app-skeleton height="13px" width="35%" />
+            <app-skeleton height="12px" width="70%" />
+            <app-skeleton height="12px" width="60%" />
+            <app-skeleton height="12px" width="65%" />
+          </div>
+        }
+      </div>
+    }
+    @case ('error') {
+      <app-error-state [title]="'docsIndex.errorTitle' | translate" [body]="'docsIndex.errorBody' | translate">
+        <button type="button" class="cta" (click)="retry()">{{ 'docsIndex.retry' | translate }}</button>
+      </app-error-state>
+    }
+    @case ('success') {
+      <div class="groups">
+        @for (group of navStore.groups(); track group.id) {
+          <div class="group">
+            <h2>{{ group.label }}</h2>
+            <ul>
+              @for (item of group.items; track item.slug) {
+                <li><a [routerLink]="['../', item.slug]">{{ item.title }}</a></li>
+              }
+            </ul>
+          </div>
+        }
+      </div>
+
+      @if (navStore.appendix().length) {
+        <div class="appendix">
+          <h2>{{ 'nav.appendix' | translate }}</h2>
+          <ul>
+            @for (item of navStore.appendix(); track item.slug) {
+              <li><a [routerLink]="['../', item.slug]">{{ item.title }}</a></li>
+            }
+          </ul>
+        </div>
+      }
+    }
+  }
 </main>

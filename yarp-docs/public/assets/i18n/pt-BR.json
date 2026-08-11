@@ -41,5 +41,36 @@
   },
   "translationBanner": {
     "message": "Esta página ainda não foi traduzida — exibindo em inglês."
+  },
+  "home": {
+    "heroEyebrow": "Documentação do YARP",
+    "heroTitle": "Yet Another Reverse Proxy, para .NET",
+    "heroLede": "Uma biblioteca de proxy reverso altamente personalizável para criar serviços de edge e gateway rápidos e flexíveis sobre o ASP.NET Core.",
+    "getStarted": "Começar",
+    "browseDocs": "Ver toda a documentação",
+    "sectionsTitle": "Explorar a documentação",
+    "errorTitle": "Algo deu errado",
+    "errorBody": "Não foi possível carregar o índice da documentação. Verifique sua conexão e tente novamente.",
+    "retry": "Tentar novamente",
+    "footerAttribution": "Conteúdo adaptado do Microsoft Learn, licenciado sob CC BY 4.0.",
+    "footerSourceProject": "YARP no GitHub ↗"
+  },
+  "docsIndex": {
+    "title": "Toda a documentação",
+    "lede": "Todos os guias e páginas de referência do YARP, agrupados por tópico.",
+    "errorTitle": "Algo deu errado",
+    "errorBody": "Não foi possível carregar o índice da documentação. Verifique sua conexão e tente novamente.",
+    "retry": "Tentar novamente"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "body": "Não conseguimos encontrar essa página. Ela pode ter sido movida, ou o endereço pode estar incorreto.",
+    "browseDocs": "Ver toda a documentação",
+    "goHome": "Ir para a página inicial"
+  },
+  "offline": {
+    "title": "Você está offline",
+    "body": "No momento não é possível conectar ao serviço de documentação. Esta página será restaurada automaticamente assim que sua conexão voltar.",
+    "retry": "Tentar novamente"
   }
 }

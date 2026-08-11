@@ -1,4 +1,12 @@
-<main id="main" class="placeholder">
-  <h1>Not found</h1>
-  <p>Real copy, search CTA, and docs-index link land in Step 13.</p>
+<main id="main" class="not-found">
+  <div class="state-card">
+    <h1>{{ 'notFound.title' | translate }}</h1>
+    <p>{{ 'notFound.body' | translate }}</p>
+    @if (locale(); as loc) {
+      <div class="actions">
+        <a [routerLink]="['/', loc, 'docs']" class="cta primary">{{ 'notFound.browseDocs' | translate }}</a>
+        <a [routerLink]="['/', loc]" class="cta secondary">{{ 'notFound.goHome' | translate }}</a>
+      </div>
+    }
+  </div>
 </main>

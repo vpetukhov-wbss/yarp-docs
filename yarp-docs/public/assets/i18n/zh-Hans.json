@@ -41,5 +41,36 @@
   },
   "translationBanner": {
     "message": "此页面尚未翻译——目前显示英文内容。"
+  },
+  "home": {
+    "heroEyebrow": "YARP 文档",
+    "heroTitle": "Yet Another Reverse Proxy —— 面向 .NET",
+    "heroLede": "一个高度可定制的反向代理库，用于在 ASP.NET Core 之上构建快速、灵活的边缘和网关服务。",
+    "getStarted": "开始使用",
+    "browseDocs": "浏览全部文档",
+    "sectionsTitle": "浏览文档分类",
+    "errorTitle": "出了点问题",
+    "errorBody": "无法加载文档索引。请检查网络连接后重试。",
+    "retry": "重试",
+    "footerAttribution": "内容改编自 Microsoft Learn，基于 CC BY 4.0 许可协议。",
+    "footerSourceProject": "在 GitHub 上查看 YARP ↗"
+  },
+  "docsIndex": {
+    "title": "全部文档",
+    "lede": "按主题分组的所有 YARP 指南与参考页面。",
+    "errorTitle": "出了点问题",
+    "errorBody": "无法加载文档索引。请检查网络连接后重试。",
+    "retry": "重试"
+  },
+  "notFound": {
+    "title": "未找到页面",
+    "body": "找不到该页面，它可能已被移动，或者地址有误。",
+    "browseDocs": "浏览全部文档",
+    "goHome": "返回首页"
+  },
+  "offline": {
+    "title": "您已离线",
+    "body": "目前无法连接到文档服务。网络恢复后，此页面将自动恢复。",
+    "retry": "重试"
   }
 }

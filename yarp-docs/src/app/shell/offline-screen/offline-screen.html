@@ -1,0 +1,5 @@
+<main id="main" class="offline">
+  <app-error-state [title]="'offline.title' | translate" [body]="'offline.body' | translate">
+    <button type="button" class="cta" (click)="reload()">{{ 'offline.retry' | translate }}</button>
+  </app-error-state>
+</main>

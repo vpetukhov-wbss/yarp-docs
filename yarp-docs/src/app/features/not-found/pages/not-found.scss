@@ -1,5 +1,45 @@
-.placeholder {
-  padding: 40px 48px;
-  color: var(--ink-soft);
-  font-family: var(--font-ui);
+@use 'mixins' as *;
+
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 56px);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.state-card {
+  @include state-card;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.cta {
+  &.primary {
+    @include cta-button;
+  }
+
+  &.secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 16px;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 13.5px;
+    border: 1px solid var(--border-strong);
+
+    &:hover {
+      background: var(--surface);
+      text-decoration: none;
+    }
+  }
 }

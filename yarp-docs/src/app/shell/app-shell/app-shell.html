@@ -1,3 +1,7 @@
 <a class="skip-link" href="#main">{{ 'common.skipToContent' | translate }}</a>
 <app-site-header />
-<router-outlet />
+@if (connectivity.health() === 'down') {
+  <app-offline-screen />
+} @else {
+  <router-outlet />
+}

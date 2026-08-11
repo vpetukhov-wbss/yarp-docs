@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 // Full three-column .shell grid, matching the Phase 1 mockup exactly:
 // sidebar / article / toc, with the breakpoints below ported verbatim from
 // it (1180: sidebar narrows, toc hides · 1024: sidebar becomes the
@@ -50,37 +52,8 @@ h1 {
   padding-top: 8px;
 }
 
-.state-card {
-  max-width: 62ch;
-  padding: 32px 0;
-
-  h1 {
-    font-size: 24px;
-  }
-
-  p {
-    color: var(--muted);
-    margin: 8px 0 20px;
-  }
-
-  .cta {
-    display: inline-flex;
-    align-items: center;
-    height: 36px;
-    padding: 0 16px;
-    border-radius: 8px;
-    background: var(--accent);
-    color: var(--accent-ink);
-    font-weight: 600;
-    font-size: 13.5px;
-    border: none;
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: none;
-      opacity: 0.92;
-    }
-  }
+.cta {
+  @include cta-button;
 }
 
 .appendix-note {

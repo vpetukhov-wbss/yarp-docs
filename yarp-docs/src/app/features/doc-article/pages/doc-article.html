@@ -26,17 +26,16 @@
       }
       @case ('error') {
         @if (store.isNotFound()) {
-          <div class="state-card">
-            <h1>{{ 'article.pageNotFoundTitle' | translate }}</h1>
-            <p>{{ 'article.pageNotFoundBody' | translate }}</p>
+          <app-error-state
+            [title]="'article.pageNotFoundTitle' | translate"
+            [body]="'article.pageNotFoundBody' | translate"
+          >
             <a routerLink="../docs" class="cta">{{ 'article.browseAllDocs' | translate }}</a>
-          </div>
+          </app-error-state>
         } @else {
-          <div class="state-card">
-            <h1>{{ 'article.errorTitle' | translate }}</h1>
-            <p>{{ 'article.errorBody' | translate }}</p>
+          <app-error-state [title]="'article.errorTitle' | translate" [body]="'article.errorBody' | translate">
             <button type="button" class="cta" (click)="retry()">{{ 'article.retry' | translate }}</button>
-          </div>
+          </app-error-state>
         }
       }
       @case ('success') {

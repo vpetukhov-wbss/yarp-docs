@@ -16,6 +16,7 @@ import { map } from 'rxjs';
 import type { LocaleCode } from '../../../core/models/locale.model';
 import { NavStore } from '../../../core/state/nav.store';
 import { DocBody } from '../../../shared/components/doc-body/doc-body';
+import { ErrorState } from '../../../shared/components/error-state/error-state';
 import { PrevNext } from '../../../shared/components/prev-next/prev-next';
 import { Skeleton } from '../../../shared/components/skeleton/skeleton';
 import { TranslationBanner } from '../../../shared/components/translation-banner/translation-banner';
@@ -30,7 +31,17 @@ const HEADER_CLEARANCE_PX = 64;
 
 @Component({
   selector: 'app-doc-article',
-  imports: [RouterLink, DocBody, PrevNext, TranslationBanner, Skeleton, PageToc, SidebarNav, TranslatePipe],
+  imports: [
+    RouterLink,
+    DocBody,
+    ErrorState,
+    PrevNext,
+    TranslationBanner,
+    Skeleton,
+    PageToc,
+    SidebarNav,
+    TranslatePipe,
+  ],
   providers: [DocArticleStore],
   templateUrl: './doc-article.html',
   styleUrl: './doc-article.scss',

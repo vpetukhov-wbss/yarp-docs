@@ -1,4 +1,57 @@
-<main id="main" class="placeholder">
-  <h1>Home</h1>
-  <p>Landing screen - built out in Step 13 against <code>NavStore</code>.</p>
+<main id="main" class="home">
+  <section class="hero">
+    <p class="eyebrow">{{ 'home.heroEyebrow' | translate }}</p>
+    <h1>{{ 'home.heroTitle' | translate }}</h1>
+    <p class="lede">{{ 'home.heroLede' | translate }}</p>
+    @if (locale(); as loc) {
+      <div class="hero-actions">
+        <a [routerLink]="['/', loc, 'yarp-overview']" class="cta primary">{{ 'home.getStarted' | translate }}</a>
+        <a [routerLink]="['/', loc, 'docs']" class="cta secondary">{{ 'home.browseDocs' | translate }}</a>
+      </div>
+    }
+  </section>
+
+  <h2 class="sections-title">{{ 'home.sectionsTitle' | translate }}</h2>
+
+  @switch (navStore.status()) {
+    @case ('loading') {
+      <div class="card-grid">
+        @for (i of skeletonCards; track i) {
+          <div class="card skeleton-card">
+            <app-skeleton height="14px" width="55%" />
+            <app-skeleton height="11px" width="85%" />
+            <app-skeleton height="11px" width="70%" />
+          </div>
+        }
+      </div>
+    }
+    @case ('error') {
+      <app-error-state [title]="'home.errorTitle' | translate" [body]="'home.errorBody' | translate">
+        <button type="button" class="cta primary" (click)="retry()">{{ 'home.retry' | translate }}</button>
+      </app-error-state>
+    }
+    @case ('success') {
+      @if (locale(); as loc) {
+        <div class="card-grid">
+          @for (group of navStore.groups(); track group.id) {
+            <div class="card">
+              <h3>{{ group.label }}</h3>
+              <ul>
+                @for (item of group.items; track item.slug) {
+                  <li><a [routerLink]="['/', loc, item.slug]">{{ item.title }}</a></li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+      }
+    }
+  }
+
+  <footer class="home-footer">
+    <p>{{ 'home.footerAttribution' | translate }}</p>
+    <a href="https://github.com/dotnet/yarp" target="_blank" rel="noopener">{{
+      'home.footerSourceProject' | translate
+    }}</a>
+  </footer>
 </main>
