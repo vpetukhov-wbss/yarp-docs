@@ -3,75 +3,75 @@
   "locale": "de",
   "group": "configuration",
   "kind": "doc",
-  "title": "Configuration providers",
-  "lede": "The Basic Yarp Sample show proxy configuration being loaded from appsettings.json.",
+  "title": "Konfigurationsanbieter",
+  "lede": "Das grundlegende YARP-Beispiel zeigt, wie die Proxykonfiguration aus appsettings.json geladen wird.",
   "headings": [
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "Einführung",
       "level": 2
     },
     {
       "id": "structure",
-      "text": "Structure",
+      "text": "Struktur",
       "level": 2
     },
     {
       "id": "routes",
-      "text": "Routes",
+      "text": "Routen",
       "level": 2
     },
     {
       "id": "clusters",
-      "text": "Clusters",
+      "text": "Cluster",
       "level": 2
     },
     {
       "id": "in-memory-config",
-      "text": "In Memory Config",
+      "text": "In-Memory-Konfiguration",
       "level": 2
     },
     {
       "id": "lifecycle",
-      "text": "Lifecycle",
+      "text": "Lebenszyklus",
       "level": 2
     },
     {
       "id": "startup",
-      "text": "Startup",
+      "text": "Start",
       "level": 2
     },
     {
       "id": "atomicity",
-      "text": "Atomicity",
+      "text": "Atomizität",
       "level": 2
     },
     {
       "id": "reload",
-      "text": "Reload",
+      "text": "Neu laden",
       "level": 2
     },
     {
       "id": "multiple-configuration-sources",
-      "text": "Multiple Configuration Sources",
+      "text": "Mehrere Konfigurationsquellen",
       "level": 2
     },
     {
       "id": "example",
-      "text": "Example",
+      "text": "Beispiel",
       "level": 2
     }
   ],
-  "bodyHtml": "<p>YARP Extensibility: Configuration Providers</p><h2 id=\"introduction\">Introduction</h2><p>The Basic Yarp Sample show proxy configuration being loaded from appsettings.json. Instead proxy configuration can be loaded programmatically from the source of your choosing. You do this by providing a couple of classes implementing IProxyConfigProvider and IProxyConfig.</p><p>See ReverseProxy.Code.Sample for an example of a custom configuration provider.</p><p>Configuration can be modified during the load sequence using Configuration Filters.</p><h2 id=\"structure\">Structure</h2><p>IProxyConfigProvider has a single method GetConfig() that should return an IProxyConfig instance. The IProxyConfig has lists of the current routes and clusters, as well as an IChangeToken to notify the proxy when this information is out of date and should be reloaded, which will cause GetConfig() to be called again.</p><h2 id=\"routes\">Routes</h2><p>The routes section is an unordered collection of named routes. A route contains matches and their associated configuration. A route requires at least the following fields:</p><p>RouteId - a unique name ClusterId - refers to the name of an entry in the clusters section. Match - contains either a Hosts array or a Path pattern string. Path is an ASP.NET Core route template that can be defined as explained here.</p><p>Headers, Authorization, CORS, and other route based policies can be configured on each route entry. For additional fields see RouteConfig.</p><p>The proxy will apply the given matching criteria and policies, and then pass off the request to the specified cluster.</p><h2 id=\"clusters\">Clusters</h2><p>The clusters section is an unordered collection of named clusters. A cluster primarily contains a</p><p>collection of named destinations and their addresses, any of which is considered capable of</p><p>handling requests for a given route. The proxy will process the request according to the route</p><p>and cluster configuration to select a destination.</p><p>For additional fields see ClusterConfig.</p><h2 id=\"in-memory-config\">In Memory Config</h2><p>The InMemoryConfigProvider implements IProxyConfigProvider and enables specifying routes and clusters directly in code by calling LoadFromMemory .</p><p>services.AddReverseProxy().LoadFromMemory(routes, clusters);</p><p>To update the config later, resolve the InMemoryConfigProvider from the services container and call Update with the new lists of routes and clusters.</p><p>httpContext.RequestServices.GetRequiredService&lt;InMemoryConfigProvider&gt; ().Update(routes, clusters);</p><h2 id=\"lifecycle\">Lifecycle</h2><h2 id=\"startup\">Startup</h2><p>The IProxyConfigProvider should be registered in the DI container as a singleton. At startup, the proxy will resolve this instance and call GetConfig() . On this first call the provider may choose to:</p><p>Throw an exception if the provider cannot produce a valid proxy configuration for any reason. This will prevent the application from starting. Synchronously block while it loads the configuration. This will block the application from starting until valid route data is available. Or, it may choose to return an empty IProxyConfig instance while it loads the configuration in the background. The provider will need to trigger the IChangeToken when the configuration is available.</p><p>The proxy will validate the given configuration and if it's invalid, an exception will be thrown</p><p>that prevents the application from starting. The provider can avoid this by using the</p><p>IConfigValidator to pre-validate routes and clusters and take whatever action it deems</p><p>appropriate such as excluding invalid entries.</p><h2 id=\"atomicity\">Atomicity</h2><p>The configuration objects and collections supplied to the proxy should be read-only and not modified once they have been handed to the proxy via GetConfig() .</p><h2 id=\"reload\">Reload</h2><p>If the IChangeToken supports ActiveChangeCallbacks , once the proxy has processed the initial set of configurations it will register a callback with this token. If the provider does not support callbacks then HasChanged will be polled every 5 minutes.</p><p>When the provider wants to provide a new configuration to the proxy it should:</p><p>Load that configuration in the background. Route and cluster objects are immutable, so new instances have to be created for any new data. Objects for unchanged routes and clusters can be re-used, or new instances can be created - changes will be detected by diffing them.</p><p>Optionally validate the configuration using the IConfigValidator, and only then signal the IChangeToken from the prior IProxyConfig instance that new data is available. The proxy will call GetConfig() again to retrieve the new data.</p><p>There are important differences when reloading configuration vs the first configuration load.</p><p>The new configuration will be diffed against the current one and only modified routes or clusters will be updated. The update will be applied atomically and will only affect new requests, not requests currently in progress. Any errors in the reload process will be logged and suppressed. The application will continue using the last known good configuration. If GetConfig() throws the proxy will be unable to listen for future changes because IChangeToken s are single-use.</p><p>Once the new configuration has been validated and applied, the proxy will register a callback with the new IChangeToken . Note if there are multiple reloads signaled in close succession, the proxy may skip some and load the next available configuration as soon as it's ready. Each IProxyConfig contains the full configuration state so nothing will be lost.</p><h2 id=\"multiple-configuration-sources\">Multiple Configuration Sources</h2><p>As of 1.1, YARP supports loading the proxy configuration from multiple sources. Multiple IProxyConfigProvider 's can be registered as singleton services and all will be resolved and combined. The sources may be the same or different types such as IConfiguration or InMemory. Routes can reference clusters from other sources. Note merging partial config from different sources for a given route or cluster is not supported.</p><p>services.AddReverseProxy() .LoadFromConfig(Configuration.GetSection(\"ReverseProxy1\")) .LoadFromConfig(Configuration.GetSection(\"ReverseProxy2\"));</p><p>or</p><p>services.AddReverseProxy() .LoadFromMemory(routes, clusters) .LoadFromConfig(Configuration.GetSection(\"ReverseProxy\"));</p><h2 id=\"example\">Example</h2><p>The InMemoryConfigProvider gives an example of an IProxyConfigProvider that has routes and clusters manually loaded into it.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>The author created this article with assistance from AI. Learn more</p></div></div>",
+  "bodyHtml": "<p>YARP-Erweiterbarkeit: Konfigurationsanbieter</p><h2 id=\"introduction\">Einführung</h2><p>Das grundlegende YARP-Beispiel zeigt, wie die Proxykonfiguration aus appsettings.json geladen wird. Alternativ kann die Proxykonfiguration programmgesteuert aus einer beliebigen Quelle Ihrer Wahl geladen werden. Dazu stellen Sie zwei Klassen bereit, die IProxyConfigProvider und IProxyConfig implementieren.</p><p>Ein Beispiel für einen benutzerdefinierten Konfigurationsanbieter finden Sie unter ReverseProxy.Code.Sample.</p><p>Die Konfiguration kann während des Ladevorgangs mithilfe von Konfigurationsfiltern verändert werden.</p><h2 id=\"structure\">Struktur</h2><p>IProxyConfigProvider verfügt über eine einzige Methode, GetConfig(), die eine IProxyConfig-Instanz zurückgeben soll. Die IProxyConfig enthält Listen der aktuellen Routen und Cluster sowie ein IChangeToken, das den Proxy benachrichtigt, wenn diese Informationen veraltet sind und neu geladen werden sollten – wodurch GetConfig() erneut aufgerufen wird.</p><h2 id=\"routes\">Routen</h2><p>Der Abschnitt „Routes“ ist eine ungeordnete Sammlung benannter Routen. Eine Route enthält Übereinstimmungen und die zugehörige Konfiguration. Eine Route benötigt mindestens die folgenden Felder:</p><p>RouteId – ein eindeutiger Name. ClusterId – verweist auf den Namen eines Eintrags im Abschnitt „Clusters“. Match – enthält entweder ein Hosts-Array oder eine Path-Musterzeichenfolge. Path ist eine ASP.NET Core-Routenvorlage, die wie hier beschrieben definiert werden kann.</p><p>Headers, Authorization, CORS und andere routenbasierte Richtlinien können für jeden Routeneintrag konfiguriert werden. Weitere Felder finden Sie unter RouteConfig.</p><p>Der Proxy wendet die angegebenen Übereinstimmungskriterien und Richtlinien an und übergibt die Anforderung anschließend an den angegebenen Cluster.</p><h2 id=\"clusters\">Cluster</h2><p>Der Abschnitt „Clusters“ ist eine ungeordnete Sammlung benannter Cluster. Ein Cluster enthält im Wesentlichen eine</p><p>Sammlung benannter Ziele und deren Adressen, von denen jedes als fähig gilt,</p><p>Anforderungen für eine bestimmte Route zu verarbeiten. Der Proxy verarbeitet die Anforderung anhand der Routen-</p><p>und Clusterkonfiguration, um ein Ziel auszuwählen.</p><p>Weitere Felder finden Sie unter ClusterConfig.</p><h2 id=\"in-memory-config\">In-Memory-Konfiguration</h2><p>Der InMemoryConfigProvider implementiert IProxyConfigProvider und ermöglicht es, Routen und Cluster direkt im Code anzugeben, indem LoadFromMemory aufgerufen wird.</p><p>services.AddReverseProxy().LoadFromMemory(routes, clusters);</p><p>Um die Konfiguration später zu aktualisieren, lösen Sie den InMemoryConfigProvider aus dem Services-Container auf, und rufen Sie Update mit den neuen Listen von Routen und Clustern auf.</p><p>httpContext.RequestServices.GetRequiredService&lt;InMemoryConfigProvider&gt; ().Update(routes, clusters);</p><h2 id=\"lifecycle\">Lebenszyklus</h2><h2 id=\"startup\">Start</h2><p>Der IProxyConfigProvider sollte im DI-Container als Singleton registriert werden. Beim Start löst der Proxy diese Instanz auf und ruft GetConfig() auf. Bei diesem ersten Aufruf kann der Anbieter wählen:</p><p>eine Ausnahme auszulösen, wenn der Anbieter aus irgendeinem Grund keine gültige Proxykonfiguration erzeugen kann. Dies verhindert den Start der Anwendung. Synchron zu blockieren, während die Konfiguration geladen wird. Dies verzögert den Anwendungsstart, bis gültige Routendaten verfügbar sind. Oder eine leere IProxyConfig-Instanz zurückzugeben, während die Konfiguration im Hintergrund geladen wird. In diesem Fall muss der Anbieter das IChangeToken auslösen, sobald die Konfiguration verfügbar ist.</p><p>Der Proxy validiert die angegebene Konfiguration, und wenn sie ungültig ist, wird eine Ausnahme ausgelöst,</p><p>die den Start der Anwendung verhindert. Der Anbieter kann dies vermeiden, indem er</p><p>den IConfigValidator verwendet, um Routen und Cluster vorab zu validieren und die als</p><p>geeignet erachtete Maßnahme zu ergreifen, etwa das Ausschließen ungültiger Einträge.</p><h2 id=\"atomicity\">Atomizität</h2><p>Die dem Proxy bereitgestellten Konfigurationsobjekte und -sammlungen sollten schreibgeschützt sein und nicht mehr verändert werden, sobald sie dem Proxy über GetConfig() übergeben wurden.</p><h2 id=\"reload\">Neu laden</h2><p>Wenn das IChangeToken ActiveChangeCallbacks unterstützt, registriert der Proxy nach der Verarbeitung des anfänglichen Konfigurationssatzes einen Rückruf bei diesem Token. Unterstützt der Anbieter keine Rückrufe, wird HasChanged alle 5 Minuten abgefragt.</p><p>Wenn der Anbieter dem Proxy eine neue Konfiguration bereitstellen möchte, sollte er:</p><p>die Konfiguration im Hintergrund laden. Routen- und Clusterobjekte sind unveränderlich, sodass für neue Daten neue Instanzen erstellt werden müssen. Objekte für unveränderte Routen und Cluster können wiederverwendet werden, oder es können neue Instanzen erstellt werden – Änderungen werden durch einen Vergleich (Diffing) erkannt.</p><p>optional die Konfiguration mit dem IConfigValidator validieren und erst dann das IChangeToken der vorherigen IProxyConfig-Instanz signalisieren, dass neue Daten verfügbar sind. Der Proxy ruft daraufhin erneut GetConfig() auf, um die neuen Daten abzurufen.</p><p>Beim erneuten Laden der Konfiguration gibt es wichtige Unterschiede gegenüber dem ersten Ladevorgang.</p><p>Die neue Konfiguration wird mit der aktuellen verglichen, und nur geänderte Routen oder Cluster werden aktualisiert. Die Aktualisierung wird atomar angewendet und wirkt sich nur auf neue Anforderungen aus, nicht auf bereits laufende. Fehler während des Neuladens werden protokolliert und unterdrückt. Die Anwendung verwendet weiterhin die letzte bekannte funktionierende Konfiguration. Löst GetConfig() eine Ausnahme aus, kann der Proxy keine weiteren Änderungen mehr abwarten, da IChangeToken-Instanzen nur einmal verwendet werden können.</p><p>Sobald die neue Konfiguration validiert und angewendet wurde, registriert der Proxy einen Rückruf beim neuen IChangeToken. Werden mehrere Neuladevorgänge kurz hintereinander signalisiert, kann der Proxy einige davon überspringen und die nächste verfügbare Konfiguration laden, sobald sie bereit ist. Jede IProxyConfig enthält den vollständigen Konfigurationszustand, sodass nichts verloren geht.</p><h2 id=\"multiple-configuration-sources\">Mehrere Konfigurationsquellen</h2><p>Seit Version 1.1 unterstützt YARP das Laden der Proxykonfiguration aus mehreren Quellen. Es können mehrere IProxyConfigProvider-Instanzen als Singleton-Dienste registriert werden; alle werden aufgelöst und kombiniert. Die Quellen können vom gleichen oder von unterschiedlichen Typen sein, etwa IConfiguration oder InMemory. Routen können auf Cluster aus anderen Quellen verweisen. Hinweis: Das Zusammenführen von Teilkonfigurationen aus unterschiedlichen Quellen für eine bestimmte Route oder einen bestimmten Cluster wird nicht unterstützt.</p><p>services.AddReverseProxy() .LoadFromConfig(Configuration.GetSection(\"ReverseProxy1\")) .LoadFromConfig(Configuration.GetSection(\"ReverseProxy2\"));</p><p>oder</p><p>services.AddReverseProxy() .LoadFromMemory(routes, clusters) .LoadFromConfig(Configuration.GetSection(\"ReverseProxy\"));</p><h2 id=\"example\">Beispiel</h2><p>Der InMemoryConfigProvider zeigt beispielhaft einen IProxyConfigProvider, in den Routen und Cluster manuell geladen werden.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Hinweis</div><p>Dieser Artikel wurde mit Unterstützung von KI erstellt. Weitere Informationen</p></div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/config-providers",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "config-filters",
-    "title": "Configuration filters"
+    "title": "Konfigurationsfilter"
   },
   "next": {
     "slug": "http-client-config",
-    "title": "HTTP client configuration"
+    "title": "HTTP-Clientkonfiguration"
   }
 }
