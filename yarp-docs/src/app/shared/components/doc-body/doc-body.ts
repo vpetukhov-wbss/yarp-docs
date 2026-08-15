@@ -28,15 +28,19 @@ import { CodeBlockEnhancerDirective } from '../../directives/code-block-enhancer
 // Deliberately ViewEncapsulation.None: Angular's scoped-style attributes are
 // only added to elements the framework itself creates from a template,
 // never to nodes injected via [innerHTML] - normal component styles would
-// silently not apply to any of this. Every selector in doc-body.scss is
-// nested under the single `.doc-body` host class so "no encapsulation"
-// doesn't mean "leaks app-wide" - it's contained the same way encapsulation
-// would have contained it, just by hand.
+// silently not apply to any of this. Since encapsulation buys nothing here
+// anyway, the styles for this content live in src/styles/_doc-body.scss
+// (global, `@use`'d from styles.scss) rather than a component styleUrl -
+// component styles still count against Angular's anyComponentStyle budget
+// even when ViewEncapsulation.None makes them logically global, and this
+// file was creeping toward that ceiling. Every selector there is nested
+// under the single `.doc-body` host class so "global file" doesn't mean
+// "leaks app-wide" - it's contained the same way encapsulation would have
+// contained it, just by hand.
 @Component({
   selector: 'app-doc-body',
   imports: [CodeBlockEnhancerDirective],
   templateUrl: './doc-body.html',
-  styleUrl: './doc-body.scss',
   encapsulation: ViewEncapsulation.None,
   host: { class: 'doc-body' },
 })

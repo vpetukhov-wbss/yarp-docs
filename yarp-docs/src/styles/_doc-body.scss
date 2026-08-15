@@ -1,0 +1,348 @@
+@use 'mixins' as *;
+
+// Styles for app-doc-body's [innerHTML] content. Lives here, not in the
+// component's own .scss, because DocBody uses ViewEncapsulation.None (see
+// doc-body.ts for why - Angular's scoped-style attribute is never applied to
+// nodes injected via [innerHTML], so component-scoped styles would silently
+// not apply to any of this regardless of where the file lives) and this file
+// was creeping toward Angular's anyComponentStyle budget (4kB warning) as a
+// component style even though it was never going to be encapsulated. Every
+// selector stays nested under .doc-body so "no encapsulation" still doesn't
+// mean "leaks app-wide" - it's contained by hand, the same as before.
+// Ported verbatim from mockup-1-learn.html's article/callout/example-box
+// rules; additions beyond the mockup are called out individually below.
+.doc-body {
+  h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 40px 0 14px;
+    scroll-margin-top: 72px;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+  }
+
+  // Not in the original mockup (which never needed a 3rd heading level) -
+  // sized between h2 and body text, same scroll-margin so anchor links and
+  // the scrollspy behave identically at either level.
+  h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 30px 0 10px;
+    scroll-margin-top: 72px;
+    letter-spacing: -0.004em;
+    color: var(--ink);
+  }
+
+  h4 {
+    font-size: 15px;
+    font-weight: 650;
+    margin: 22px 0 8px;
+    color: var(--ink-soft);
+  }
+
+  p {
+    margin: 0 0 16px;
+    max-width: 70ch;
+    color: var(--ink-soft);
+  }
+
+  // Persistent underline, unlike the global `a` rule (_base.scss), which
+  // only underlines on hover - in dense prose a color-only link is too easy
+  // to miss entirely.
+  a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+  }
+
+  ul {
+    margin: 0 0 20px;
+    padding-left: 0;
+    list-style: none;
+    max-width: 70ch;
+
+    li {
+      position: relative;
+      padding: 3px 0 3px 26px;
+      margin-bottom: 10px;
+      color: var(--ink-soft);
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 13px;
+        width: 7px;
+        height: 7px;
+        border-radius: 2px;
+        background: var(--accent);
+        opacity: 0.8;
+        transform: rotate(45deg);
+      }
+
+      strong {
+        color: var(--ink);
+        font-weight: 650;
+      }
+    }
+  }
+
+  // Not in the original mockup - <ol> renders with the browser default
+  // decimal marker, visually inconsistent with the diamond bullets above.
+  ol {
+    margin: 0 0 20px;
+    padding-left: 24px;
+    max-width: 70ch;
+
+    li {
+      padding: 3px 0;
+      margin-bottom: 10px;
+      color: var(--ink-soft);
+
+      &::marker {
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      strong {
+        color: var(--ink);
+        font-weight: 650;
+      }
+    }
+  }
+
+  // Not in the original mockup - no table existed anywhere in the content
+  // it was designed against. The wrapper echoes .example-box's card
+  // treatment (border + radius) and scrolls horizontally on its own rather
+  // than letting a wide table force the whole article wider.
+  .table-wrap {
+    margin: 22px 0 26px;
+    max-width: 70ch;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 650;
+    color: var(--ink);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border-strong);
+    padding: 9px 12px;
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink-soft);
+    vertical-align: top;
+
+    code {
+      white-space: nowrap;
+    }
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  code:not(pre code) {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.1em 0.38em;
+    color: var(--ink-soft);
+  }
+
+  .callout {
+    display: flex;
+    gap: 12px;
+    margin: 22px 0;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: var(--note-bg);
+    border: 1px solid var(--note-border);
+    max-width: 70ch;
+
+    svg {
+      flex: none;
+      color: var(--note-ink);
+      margin-top: 2px;
+    }
+
+    .head {
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--note-ink);
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    p {
+      margin: 0;
+      color: var(--note-ink);
+      font-size: 14.5px;
+      opacity: 0.92;
+    }
+  }
+
+  // Two more severities, same shape as .callout - only the swatch changes.
+  // Not in the original mockup until this pass added them there first (see
+  // design/mockup-1-learn.html) and ported the --warn-*/--tip-* tokens from it.
+  .callout.callout-important {
+    background: var(--warn-bg);
+    border-color: var(--warn-border);
+
+    svg,
+    .head,
+    p {
+      color: var(--warn-ink);
+    }
+  }
+
+  .callout.callout-tip {
+    background: var(--tip-bg);
+    border-color: var(--tip-border);
+
+    svg,
+    .head,
+    p {
+      color: var(--tip-ink);
+    }
+  }
+
+  .example-box {
+    margin: 26px 0 32px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 70ch;
+
+    .eb-head {
+      padding: 12px 16px 0;
+
+      h3 {
+        margin: 0 0 3px;
+        font-size: 15px;
+        // h3 above already sets scroll-margin-top/letter-spacing/color for
+        // every OTHER h3 in the article - an .eb-head h3 is an example
+        // title, not a section (the compiler never gives it an id or a
+        // headings[] entry), so it deliberately isn't scroll-margin'd or
+        // included in the TOC. Only override what actually differs.
+      }
+
+      p {
+        margin: 0 0 12px;
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+    }
+  }
+
+  pre.code-block {
+    position: relative;
+    margin: 0;
+    background: var(--code-bg);
+    border-top: 1px solid var(--code-border);
+    overflow-x: auto;
+    padding: 14px 16px;
+    font-family: var(--font-code);
+    font-size: 13px;
+    line-height: 1.65;
+
+    .lang-tag {
+      position: absolute;
+      top: 9px;
+      right: 44px;
+      font-size: 10.5px;
+      color: var(--faint);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-family: var(--font-ui);
+      font-weight: 700;
+    }
+
+    // Not in the original mockup - there, pre.code-block only ever lived
+    // inside .example-box, which supplies the outer border/radius via
+    // overflow:hidden, so a bare border-top was enough. A block outside any
+    // example box (most of them, once the content compiler lands) needs to
+    // supply its own complete border - otherwise it renders as an
+    // unbordered grey slab with a single hairline on top.
+    &.standalone {
+      border: 1px solid var(--code-border);
+      border-radius: 10px;
+      margin: 22px 0 26px;
+      max-width: 70ch;
+    }
+  }
+
+  .copy-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--ink);
+      border-color: var(--border-strong);
+    }
+
+    &.copied {
+      color: var(--success);
+      border-color: var(--success);
+    }
+
+    svg.check {
+      display: none;
+    }
+
+    &.copied svg.check {
+      display: block;
+    }
+
+    &.copied svg.copy {
+      display: none;
+    }
+  }
+
+  .tok-kw {
+    color: var(--tok-kw);
+  }
+  .tok-type {
+    color: var(--tok-type);
+  }
+  .tok-str {
+    color: var(--tok-str);
+  }
+  .tok-com {
+    color: var(--faint);
+    font-style: italic;
+  }
+  .tok-prop {
+    color: var(--tok-prop);
+  }
+  .tok-punc {
+    color: var(--ink-soft);
+  }
+  .tok-num {
+    color: var(--tok-num);
+  }
+}

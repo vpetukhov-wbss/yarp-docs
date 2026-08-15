@@ -29,6 +29,12 @@
     --note-bg:#eef4ff;
     --note-border:#bcd2fb;
     --note-ink:#1d3f8f;
+    --warn-bg:#fff6e8;
+    --warn-border:#f2d59b;
+    --warn-ink:#8a5300;
+    --tip-bg:#eafaf2;
+    --tip-border:#a9e2c6;
+    --tip-ink:#126b47;
     --shadow:0 8px 24px -8px rgba(23,28,41,.14), 0 2px 6px -2px rgba(23,28,41,.08);
     --radius:8px;
     --font-ui:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
@@ -56,6 +62,12 @@
       --note-bg:#101d33;
       --note-border:#274276;
       --note-ink:#9fbdff;
+      --warn-bg:#2a1f0c;
+      --warn-border:#5a4318;
+      --warn-ink:#e3b567;
+      --tip-bg:#0d2318;
+      --tip-border:#1f5138;
+      --tip-ink:#8fd97f;
       --shadow:0 8px 28px -10px rgba(0,0,0,.55);
       color-scheme: dark;
     }
@@ -79,6 +91,12 @@
       --note-bg:#101d33;
       --note-border:#274276;
       --note-ink:#9fbdff;
+      --warn-bg:#2a1f0c;
+      --warn-border:#5a4318;
+      --warn-ink:#e3b567;
+      --tip-bg:#0d2318;
+      --tip-border:#1f5138;
+      --tip-ink:#8fd97f;
       --shadow:0 8px 28px -10px rgba(0,0,0,.55);
       color-scheme: dark;
   }
@@ -214,6 +232,12 @@
   .callout svg{flex:none; color:var(--note-ink); margin-top:2px;}
   .callout .head{font-weight:700; font-size:13px; color:var(--note-ink); margin-bottom:3px; text-transform:uppercase; letter-spacing:.04em;}
   .callout p{margin:0; color:var(--note-ink); font-size:14.5px; opacity:.92;}
+
+  /* Two more severities, same shape as .callout - only the swatch changes. */
+  .callout.callout-important{background:var(--warn-bg); border-color:var(--warn-border);}
+  .callout.callout-important svg, .callout.callout-important .head, .callout.callout-important p{color:var(--warn-ink);}
+  .callout.callout-tip{background:var(--tip-bg); border-color:var(--tip-border);}
+  .callout.callout-tip svg, .callout.callout-tip .head, .callout.callout-tip p{color:var(--tip-ink);}
 
   .example-box{
     margin:26px 0 32px; border:1px solid var(--border); border-radius:10px; overflow:hidden; max-width:70ch;
@@ -526,6 +550,22 @@ app.<span class="tok-type">Run</span>();</code></pre>
         <div>
           <div class="head">Note</div>
           <p>Configuration is reloaded automatically when the source changes — no restart required. See <a href="#">Configuration filters</a> to modify config during the load sequence.</p>
+        </div>
+      </div>
+
+      <!-- callout severity reference - important and tip, same shape as Note above -->
+      <div class="callout callout-important">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        <div>
+          <div class="head">Important</div>
+          <p>Removing the Host header changes which certificate the destination presents during the TLS handshake.</p>
+        </div>
+      </div>
+      <div class="callout callout-tip">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a6 6 0 0 0-4 10.472V15h8v-2.528A6 6 0 0 0 12 2Z"/></svg>
+        <div>
+          <div class="head">Tip</div>
+          <p>Prefer a fixed path segment over a regex transform when the prefix you're matching never changes.</p>
         </div>
       </div>
 
