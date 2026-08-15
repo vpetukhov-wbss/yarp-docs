@@ -9,8 +9,9 @@ import {
   viewChild,
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { map } from 'rxjs';
 
 import type { LocaleCode } from '../../../core/models/locale.model';
@@ -50,6 +51,9 @@ export class DocArticle {
   protected readonly store = inject(DocArticleStore);
   private readonly navStore = inject(NavStore);
   private readonly route = inject(ActivatedRoute);
+  private readonly title = inject(Title);
+  private readonly meta = inject(Meta);
+  private readonly translate = inject(TranslateService);
 
   private readonly bodyEl = viewChild('bodyEl', { read: ElementRef });
 
@@ -83,6 +87,27 @@ export class DocArticle {
       if (params) {
         this.store.load(params);
       }
+    });
+
+    // AppTitleStrategy handles the app's static routes; this route has no
+    // titleKey there (a doc page's title is page content loaded async, not
+    // a route constant), so it's this effect's job instead - it only fires
+    // once the page has actually loaded, same guard AppTitleStrategy's own
+    // titleKey-presence check plays for the static routes.
+    effect(() => {
+      if (this.store.status() !== 'success') {
+        return;
+      }
+      const page = this.store.page();
+      if (!page) {
+        return;
+      }
+      this.translate.get('meta.titleTemplate', { title: page.title }).subscribe((title) => {
+        this.title.setTitle(title);
+      });
+      this.meta.updateTag({ name: 'description', content: page.lede });
+      this.meta.updateTag({ property: 'og:title', content: page.title });
+      this.meta.updateTag({ property: 'og:description', content: page.lede });
     });
 
     afterRenderEffect((onCleanup) => {

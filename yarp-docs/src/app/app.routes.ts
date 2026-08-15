@@ -22,21 +22,26 @@ export const routes: Routes = [
     children: [
       {
         path: '',
+        data: { titleKey: 'home.heroEyebrow', descriptionKey: 'home.heroLede' },
         loadComponent: () => import('./features/home/pages/home').then((m) => m.Home),
       },
       {
         path: 'docs',
+        data: { titleKey: 'docsIndex.title', descriptionKey: 'docsIndex.lede' },
         loadComponent: () =>
           import('./features/docs-index/pages/docs-index').then((m) => m.DocsIndex),
       },
       {
-        // Registered after 'docs' so it doesn't swallow that path.
+        // Registered after 'docs' so it doesn't swallow that path. No
+        // titleKey - DocArticle's title is page content, set by its own
+        // effect once the page has loaded (see AppTitleStrategy).
         path: ':slug',
         loadComponent: () =>
           import('./features/doc-article/pages/doc-article').then((m) => m.DocArticle),
       },
       {
         path: '**',
+        data: { titleKey: 'notFound.title' },
         loadComponent: () => import('./features/not-found/pages/not-found').then((m) => m.NotFound),
       },
     ],

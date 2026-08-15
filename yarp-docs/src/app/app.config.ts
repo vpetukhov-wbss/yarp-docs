@@ -1,7 +1,7 @@
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import type { ApplicationConfig } from '@angular/core';
 import { provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
-import { provideRouter, withRouterConfig } from '@angular/router';
+import { TitleStrategy, provideRouter, withRouterConfig } from '@angular/router';
 import { provideTranslateLoader, provideTranslateService } from '@ngx-translate/core';
 
 import { environment } from '../environments/environment';
@@ -9,6 +9,7 @@ import { routes } from './app.routes';
 import { DEFAULT_LOCALE } from './core/locales';
 import { mockApiInterceptor } from './core/interceptors/mock-api.interceptor';
 import { TranslateHttpLoader } from './core/services/translate-http-loader';
+import { AppTitleStrategy } from './core/title-strategy';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,6 +20,7 @@ export const appConfig: ApplicationConfig = {
     // ':locale') needs both params together without manually walking
     // route.parent.
     provideRouter(routes, withRouterConfig({ paramsInheritanceStrategy: 'always' })),
+    { provide: TitleStrategy, useExisting: AppTitleStrategy },
     provideHttpClient(
       withFetch(),
       withInterceptors(environment.useMockApi ? [mockApiInterceptor] : []),
