@@ -5,6 +5,16 @@
   display: none;
 }
 
+// Every icon-only button in this template shares this class - unlike
+// theme-toggle/language-picker (each a separate component, each defining
+// its own .icon-btn locally since component styles are encapsulated by
+// default), the mobile search button and this link both live directly in
+// site-header's own template, so this is the one place that needs the rule.
+.icon-btn {
+  @include icon-button;
+  text-decoration: none;
+}
+
 .site {
   position: sticky;
   top: 0;

@@ -6,7 +6,8 @@
   "header": {
     "searchPlaceholder": "Αναζήτηση τεκμηρίωσης…",
     "searchAriaLabel": "Αναζήτηση τεκμηρίωσης",
-    "toggleNav": "Εναλλαγή πλοήγησης"
+    "toggleNav": "Εναλλαγή πλοήγησης",
+    "creatorLinkedIn": "Προφίλ LinkedIn του δημιουργού"
   },
   "theme": {
     "switchToLight": "Εναλλαγή σε φωτεινό θέμα",

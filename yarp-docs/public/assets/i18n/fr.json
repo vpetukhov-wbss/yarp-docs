@@ -6,7 +6,8 @@
   "header": {
     "searchPlaceholder": "Rechercher dans la documentation…",
     "searchAriaLabel": "Rechercher dans la documentation",
-    "toggleNav": "Afficher/masquer la navigation"
+    "toggleNav": "Afficher/masquer la navigation",
+    "creatorLinkedIn": "Profil LinkedIn du créateur"
   },
   "theme": {
     "switchToLight": "Passer au thème clair",

@@ -6,7 +6,8 @@
   "header": {
     "searchPlaceholder": "Search documentation…",
     "searchAriaLabel": "Search documentation",
-    "toggleNav": "Toggle navigation"
+    "toggleNav": "Toggle navigation",
+    "creatorLinkedIn": "Creator's LinkedIn profile"
   },
   "theme": {
     "switchToLight": "Switch to light theme",

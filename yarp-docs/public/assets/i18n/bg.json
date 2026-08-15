@@ -6,7 +6,8 @@
   "header": {
     "searchPlaceholder": "Търсене в документацията…",
     "searchAriaLabel": "Търсене в документацията",
-    "toggleNav": "Превключване на навигацията"
+    "toggleNav": "Превключване на навигацията",
+    "creatorLinkedIn": "LinkedIn профил на създателя"
   },
   "theme": {
     "switchToLight": "Превключване към светла тема",

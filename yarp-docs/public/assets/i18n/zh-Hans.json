@@ -6,7 +6,8 @@
   "header": {
     "searchPlaceholder": "搜索文档…",
     "searchAriaLabel": "搜索文档",
-    "toggleNav": "切换导航"
+    "toggleNav": "切换导航",
+    "creatorLinkedIn": "创建者的 LinkedIn 主页"
   },
   "theme": {
     "switchToLight": "切换到浅色主题",
