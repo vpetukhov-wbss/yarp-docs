@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, inject, input } from '@angular/core';
 import { DomSanitizer, type SafeHtml } from '@angular/platform-browser';
 
 import { CodeBlockEnhancerDirective } from '../../directives/code-block-enhancer.directive';
+import { InternalLinkRouterDirective } from '../../directives/internal-link-router.directive';
 
 // bodyHtml is rendered via DomSanitizer.bypassSecurityTrustHtml, not a plain
 // [innerHTML] binding - deliberately, and only after confirming Angular's
@@ -41,7 +42,7 @@ import { CodeBlockEnhancerDirective } from '../../directives/code-block-enhancer
 // contained it, just by hand.
 @Component({
   selector: 'app-doc-body',
-  imports: [CodeBlockEnhancerDirective],
+  imports: [CodeBlockEnhancerDirective, InternalLinkRouterDirective],
   templateUrl: './doc-body.html',
   encapsulation: ViewEncapsulation.None,
   host: { class: 'doc-body' },
