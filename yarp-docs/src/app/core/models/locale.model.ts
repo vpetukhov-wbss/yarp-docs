@@ -4,6 +4,6 @@ export interface LocaleDescriptor {
   readonly code: LocaleCode;
   readonly label: string;
   readonly nativeLabel: string;
-  readonly dir: 'ltr';
+  readonly dir: 'ltr' | 'rtl';
   readonly isDefault?: boolean;
 }

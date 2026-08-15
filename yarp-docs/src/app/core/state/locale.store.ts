@@ -1,14 +1,14 @@
 import { effect } from '@angular/core';
 import { patchState, signalStore, withHooks, withMethods, withState } from '@ngrx/signals';
 
-import { DEFAULT_LOCALE } from '../locales';
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from '../locales';
 import type { LocaleCode } from '../models/locale.model';
 
 interface LocaleState {
   current: LocaleCode;
 }
 
-// Deliberately minimal: current locale + a setter + syncing <html lang>,
+// Deliberately minimal: current locale + a setter + syncing <html lang>/dir,
 // all safe to own unconditionally. Reading/validating a stored or
 // browser-preferred locale and persisting a chosen one both require
 // validating against SUPPORTED_LOCALES first, which is exactly what
@@ -25,7 +25,13 @@ export const LocaleStore = signalStore(
   withHooks({
     onInit(store) {
       effect(() => {
-        document.documentElement.lang = store.current();
+        const code = store.current();
+        document.documentElement.lang = code;
+        // Falls back to 'ltr' rather than throwing on a code somehow absent
+        // from SUPPORTED_LOCALES - a wrong/stale <html dir> would silently
+        // mirror the whole page, worse than assuming the common case.
+        document.documentElement.dir =
+          SUPPORTED_LOCALES.find((locale) => locale.code === code)?.dir ?? 'ltr';
       });
     },
   }),

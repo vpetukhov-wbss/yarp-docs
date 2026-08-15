@@ -39,6 +39,30 @@ a {
   }
 }
 
+// Arrows live in CSS, not the translated string, so a locale's own prose
+// never has to embed a directional glyph - and so they can flip for an RTL
+// locale without touching the translation at all. None of the 9 supported
+// locales are RTL today (see core/locales.ts); this is latent groundwork
+// that only activates via :host-context([dir="rtl"]) on <html>, set by
+// core/state/locale.store.ts.
+.prev .dir::before {
+  content: '←';
+}
+
+.next .dir::after {
+  content: '→';
+}
+
+:host-context([dir='rtl']) {
+  .prev .dir::before {
+    content: '→';
+  }
+
+  .next .dir::after {
+    content: '←';
+  }
+}
+
 .title {
   font-weight: 600;
   color: var(--ink);
