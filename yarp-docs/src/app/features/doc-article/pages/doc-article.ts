@@ -21,6 +21,7 @@ import { ErrorState } from '../../../shared/components/error-state/error-state';
 import { PrevNext } from '../../../shared/components/prev-next/prev-next';
 import { Skeleton } from '../../../shared/components/skeleton/skeleton';
 import { TranslationBanner } from '../../../shared/components/translation-banner/translation-banner';
+import { splitTemplate } from '../../../shared/utils/split-template';
 import { PageToc } from '../../../shell/page-toc/page-toc';
 import { SidebarNav } from '../../../shell/sidebar-nav/sidebar-nav';
 import { DocArticleStore, type LoadDocArticleParams } from '../state/doc-article.store';
@@ -80,6 +81,17 @@ export class DocArticle {
     ),
     { initialValue: null },
   );
+
+  // stream() (not get()/instant()) so a mid-session locale switch
+  // re-splits the attribution sentence too - article.attribution's
+  // {{learnLink}}/{{ccByLink}} tokens are deliberately left unresolved
+  // here (no interpolateParams) so splitTemplate can turn each one into a
+  // real, locale-correct-positioned <a> in the template instead of the
+  // translation JSON carrying raw HTML through [innerHTML].
+  private readonly attributionTemplate = toSignal(this.translate.stream('article.attribution'), {
+    initialValue: '',
+  });
+  protected readonly attributionSegments = computed(() => splitTemplate(this.attributionTemplate()));
 
   constructor() {
     effect(() => {

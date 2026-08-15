@@ -56,8 +56,6 @@
     "retry": "Tentar novamente",
     "appendixNoteTitle": "Conhecimento prévio necessário.",
     "appendixNoteBody": "Esta página é documentação geral do ASP.NET Core, não específica do YARP — um contexto útil antes de começar, não um recurso do YARP.",
-    "adaptedFrom": "Adaptado de",
-    "licensedUnder": "licenciado sob",
     "attribution": "Adaptado do {{learnLink}}, licenciado sob {{ccByLink}}.",
     "previous": "anterior",
     "next": "próxima"

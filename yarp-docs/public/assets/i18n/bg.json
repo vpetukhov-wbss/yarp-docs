@@ -56,8 +56,6 @@
     "retry": "Опитай отново",
     "appendixNoteTitle": "Предварителни знания.",
     "appendixNoteBody": "Тази страница е обща документация за ASP.NET Core, а не специфична за YARP — полезен контекст, преди да навлезете в темата, а не функция на YARP.",
-    "adaptedFrom": "Адаптирано от",
-    "licensedUnder": "лицензирано под",
     "attribution": "Адаптирано от {{learnLink}}, лицензирано под {{ccByLink}}.",
     "previous": "предишна",
     "next": "следваща"

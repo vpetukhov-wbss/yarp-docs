@@ -56,8 +56,6 @@
     "retry": "Retry",
     "appendixNoteTitle": "Prerequisite background.",
     "appendixNoteBody": "This page is general ASP.NET Core documentation, not YARP-specific — useful context before diving in, not a YARP feature.",
-    "adaptedFrom": "Adapted from",
-    "licensedUnder": "licensed under",
     "attribution": "Adapted from {{learnLink}}, licensed under {{ccByLink}}.",
     "previous": "previous",
     "next": "next"

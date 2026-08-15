@@ -56,8 +56,6 @@
     "retry": "Επανάληψη",
     "appendixNoteTitle": "Προαπαιτούμενο υπόβαθρο.",
     "appendixNoteBody": "Αυτή η σελίδα είναι γενική τεκμηρίωση του ASP.NET Core, όχι ειδική για το YARP — χρήσιμο πλαίσιο πριν ξεκινήσετε, όχι λειτουργία του YARP.",
-    "adaptedFrom": "Προσαρμογή από",
-    "licensedUnder": "με άδεια",
     "attribution": "Προσαρμογή από {{learnLink}}, με άδεια {{ccByLink}}.",
     "previous": "προηγούμενο",
     "next": "επόμενο"

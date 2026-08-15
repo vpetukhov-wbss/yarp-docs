@@ -58,12 +58,15 @@
           <app-prev-next [prev]="page.prev" [next]="page.next" />
 
           <div class="attribution">
-            {{ 'article.adaptedFrom' | translate }}
-            <a [href]="page.sourceUrl" target="_blank" rel="noopener">Microsoft Learn</a>,
-            {{ 'article.licensedUnder' | translate }}
-            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener"
-              >CC BY 4.0</a
-            >.
+            @for (segment of attributionSegments(); track $index) {
+              @if (segment.kind === 'text') {
+                {{ segment.value }}
+              } @else if (segment.name === 'learnLink') {
+                <a [href]="page.sourceUrl" target="_blank" rel="noopener">Microsoft Learn</a>
+              } @else if (segment.name === 'ccByLink') {
+                <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>
+              }
+            }
           </div>
         }
       }

@@ -56,8 +56,6 @@
     "retry": "重试",
     "appendixNoteTitle": "预备背景知识。",
     "appendixNoteBody": "本页是 ASP.NET Core 的通用文档，并非 YARP 专属内容——在深入学习前提供有用的背景信息，但不属于 YARP 的功能。",
-    "adaptedFrom": "改编自",
-    "licensedUnder": "许可协议",
     "attribution": "改编自 {{learnLink}}，遵循 {{ccByLink}} 许可协议。",
     "previous": "上一页",
     "next": "下一页"

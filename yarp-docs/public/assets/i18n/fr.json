@@ -56,8 +56,6 @@
     "retry": "Réessayer",
     "appendixNoteTitle": "Contexte préalable.",
     "appendixNoteBody": "Cette page est une documentation générale d'ASP.NET Core, pas spécifique à YARP — un contexte utile avant de commencer, pas une fonctionnalité de YARP.",
-    "adaptedFrom": "Adapté de",
-    "licensedUnder": "sous licence",
     "attribution": "Adapté de {{learnLink}}, sous licence {{ccByLink}}.",
     "previous": "précédent",
     "next": "suivant"
