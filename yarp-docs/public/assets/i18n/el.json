@@ -16,6 +16,9 @@
   "language": {
     "chooseLanguage": "Επιλέξτε γλώσσα"
   },
+  "meta": {
+    "titleTemplate": "{{title}} · YARP Docs"
+  },
   "docBody": {
     "copyCode": "Αντιγραφή κώδικα",
     "calloutNote": "Σημείωση",
@@ -55,6 +58,7 @@
     "appendixNoteBody": "Αυτή η σελίδα είναι γενική τεκμηρίωση του ASP.NET Core, όχι ειδική για το YARP — χρήσιμο πλαίσιο πριν ξεκινήσετε, όχι λειτουργία του YARP.",
     "adaptedFrom": "Προσαρμογή από",
     "licensedUnder": "με άδεια",
+    "attribution": "Προσαρμογή από {{learnLink}}, με άδεια {{ccByLink}}.",
     "previous": "προηγούμενο",
     "next": "επόμενο"
   },
@@ -105,6 +109,9 @@
     "noResults": "Δεν υπάρχουν αποτελέσματα για «{{query}}».",
     "navigate": "για πλοήγηση",
     "select": "για επιλογή",
-    "dismiss": "για κλείσιμο"
+    "dismiss": "για κλείσιμο",
+    "keyEnter": "Enter",
+    "keyEsc": "Esc",
+    "shortcutHint": "Αναζήτηση τεκμηρίωσης ({{key}})"
   }
 }

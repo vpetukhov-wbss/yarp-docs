@@ -16,6 +16,9 @@
   "language": {
     "chooseLanguage": "Choisissez une langue"
   },
+  "meta": {
+    "titleTemplate": "{{title}} · YARP Docs"
+  },
   "docBody": {
     "copyCode": "Copier le code",
     "calloutNote": "Remarque",
@@ -55,6 +58,7 @@
     "appendixNoteBody": "Cette page est une documentation générale d'ASP.NET Core, pas spécifique à YARP — un contexte utile avant de commencer, pas une fonctionnalité de YARP.",
     "adaptedFrom": "Adapté de",
     "licensedUnder": "sous licence",
+    "attribution": "Adapté de {{learnLink}}, sous licence {{ccByLink}}.",
     "previous": "précédent",
     "next": "suivant"
   },
@@ -105,6 +109,9 @@
     "noResults": "Aucun résultat pour « {{query}} ».",
     "navigate": "pour naviguer",
     "select": "pour sélectionner",
-    "dismiss": "pour fermer"
+    "dismiss": "pour fermer",
+    "keyEnter": "Entrée",
+    "keyEsc": "Échap",
+    "shortcutHint": "Rechercher dans la documentation ({{key}})"
   }
 }

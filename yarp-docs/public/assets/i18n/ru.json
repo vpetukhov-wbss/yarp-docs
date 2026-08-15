@@ -16,6 +16,9 @@
   "language": {
     "chooseLanguage": "Выберите язык"
   },
+  "meta": {
+    "titleTemplate": "{{title}} · YARP Docs"
+  },
   "docBody": {
     "copyCode": "Копировать код",
     "calloutNote": "Примечание",
@@ -55,6 +58,7 @@
     "appendixNoteBody": "Эта страница содержит общую документацию по ASP.NET Core, а не специфичную для YARP — полезный контекст, а не функция YARP.",
     "adaptedFrom": "Адаптировано из",
     "licensedUnder": "лицензировано по",
+    "attribution": "Адаптировано из {{learnLink}}, лицензия {{ccByLink}}.",
     "previous": "назад",
     "next": "далее"
   },
@@ -105,6 +109,9 @@
     "noResults": "Нет результатов по запросу «{{query}}».",
     "navigate": "для навигации",
     "select": "для выбора",
-    "dismiss": "чтобы закрыть"
+    "dismiss": "чтобы закрыть",
+    "keyEnter": "Enter",
+    "keyEsc": "Esc",
+    "shortcutHint": "Поиск по документации ({{key}})"
   }
 }

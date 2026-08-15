@@ -16,6 +16,9 @@
   "language": {
     "chooseLanguage": "Sprache auswählen"
   },
+  "meta": {
+    "titleTemplate": "{{title}} · YARP Docs"
+  },
   "docBody": {
     "copyCode": "Code kopieren",
     "calloutNote": "Hinweis",
@@ -55,6 +58,7 @@
     "appendixNoteBody": "Diese Seite enthält allgemeine ASP.NET-Core-Dokumentation und ist nicht YARP-spezifisch — nützlicher Kontext, bevor Sie einsteigen, keine YARP-Funktion.",
     "adaptedFrom": "Angepasst von",
     "licensedUnder": "lizenziert unter",
+    "attribution": "Angepasst von {{learnLink}}, lizenziert unter {{ccByLink}}.",
     "previous": "zurück",
     "next": "weiter"
   },
@@ -105,6 +109,9 @@
     "noResults": "Keine Ergebnisse für „{{query}}“.",
     "navigate": "zum Navigieren",
     "select": "zum Auswählen",
-    "dismiss": "zum Schließen"
+    "dismiss": "zum Schließen",
+    "keyEnter": "Enter",
+    "keyEsc": "Esc",
+    "shortcutHint": "Dokumentation durchsuchen ({{key}})"
   }
 }
