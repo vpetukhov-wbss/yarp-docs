@@ -3,27 +3,27 @@
   "locale": "ru",
   "group": "traffic-reliability",
   "kind": "doc",
-  "title": "Request timeouts",
-  "lede": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts",
+  "title": "Тайм-ауты запросов",
+  "lede": ".NET 8 представил промежуточное ПО Request Timeouts Middleware, позволяющее настраивать тайм-ауты запросов",
   "headings": [
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "Введение",
       "level": 2
     },
     {
       "id": "defaults",
-      "text": "Defaults",
+      "text": "Значения по умолчанию",
       "level": 2
     },
     {
       "id": "configuration",
-      "text": "Configuration",
+      "text": "Конфигурация",
       "level": 2
     },
     {
       "id": "disable-timeouts",
-      "text": "Disable timeouts",
+      "text": "Отключение тайм-аутов",
       "level": 2
     },
     {
@@ -32,16 +32,16 @@
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"introduction\">Introduction</h2><p>.NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts globally as well as per endpoint. This functionality is also available in YARP 2.1 when running on .NET 8 or newer.</p><h2 id=\"defaults\">Defaults</h2><p>Requests do not have any timeouts by default, other than the Activity Timeout used to clean up idle requests. A default policy specified in RequestTimeoutOptions will apply to proxied requests as well.</p><h2 id=\"configuration\">Configuration</h2><p>Timeouts and Timeout Policies can be specified per route via RouteConfig and can be bound from the Routes sections of the config file. As with other route properties, this can be modified and reloaded without restarting the proxy. Policy names are case insensitive.</p><p>Timeouts are specified in a TimeSpan format (HH:MM:SS). Specifying both a Timeout and a TimeoutPolicy on the same route is invalid and will cause the configuration to be rejected.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>that request timeouts do not apply when a debugger is attached to the process.</p></div></div><p>Example:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-71\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-71\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n         \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"TimeoutPolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n         }\n         \"route2\" : {\n             \"ClusterId\": \"cluster1\",\n             \"Timeout\": \"00:01:00\",\n             \"Match\": {\n                         \"Hosts\": [ \"localhost2\" ]\n                      }\n                   }\n      },\n      \"Clusters\": {\n                   \"cluster1\": {\n                      \"Destinations\": {\n                         \"cluster1/destination1\": {\n                            \"Address\": \"https://localhost:10001/\"\n                         }\n                      }\n                   }\n      }\n   }\n}\nTimeout policies and the default policy can be configured in the service collection and the\nmiddleware can be added as follows:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-72\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-72\">   var builder = WebApplication.CreateBuilder(args);\n   builder.Services.AddReverseProxy()\n          .LoadFromConfig(builder.Configuration.GetSection(\"ReverseProxy\"));\n   builder.Services.AddRequestTimeouts(options =&gt;\n   {\n          options.AddPolicy(\"customPolicy\", TimeSpan.FromSeconds(20));\n   });\n   var app = builder.Build();\n   app.UseRequestTimeouts();\n   app.MapReverseProxy();\n   app.Run();</code></pre><h2 id=\"disable-timeouts\">Disable timeouts</h2><p>Specifying the value disable in a route's TimeoutPolicy parameter means the request timeout middleware will not apply timeouts to this route.</p><h2 id=\"websockets\">WebSockets</h2><p>Request timeouts are disabled after the initial WebSocket handshake.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>The author created this article with assistance from AI. Learn more</p></div></div>",
+  "bodyHtml": "<h2 id=\"introduction\">Введение</h2><p>.NET 8 представил промежуточное ПО Request Timeouts Middleware, позволяющее настраивать тайм-ауты запросов как глобально, так и для отдельных конечных точек. Эта функциональность также доступна в YARP 2.1 при работе на .NET 8 или более поздней версии.</p><h2 id=\"defaults\">Значения по умолчанию</h2><p>По умолчанию у запросов нет никаких тайм-аутов, кроме Activity Timeout, который используется для очистки простаивающих запросов. Политика по умолчанию, заданная в RequestTimeoutOptions, применяется и к проксируемым запросам.</p><h2 id=\"configuration\">Конфигурация</h2><p>Тайм-ауты и политики тайм-аутов можно задать для каждого маршрута через RouteConfig; они привязываются из разделов Routes файла конфигурации. Как и другие свойства маршрута, это значение можно изменить и перезагрузить без перезапуска прокси. Имена политик не чувствительны к регистру.</p><p>Тайм-ауты задаются в формате TimeSpan (ЧЧ:ММ:СС). Одновременное указание Timeout и TimeoutPolicy для одного и того же маршрута недопустимо и приведёт к отклонению конфигурации.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Примечание</div><p>тайм-ауты запросов не применяются, если к процессу подключён отладчик.</p></div></div><p>Пример:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-71\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-71\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n         \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"TimeoutPolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n         }\n         \"route2\" : {\n             \"ClusterId\": \"cluster1\",\n             \"Timeout\": \"00:01:00\",\n             \"Match\": {\n                         \"Hosts\": [ \"localhost2\" ]\n                      }\n                   }\n      },\n      \"Clusters\": {\n                   \"cluster1\": {\n                      \"Destinations\": {\n                         \"cluster1/destination1\": {\n                            \"Address\": \"https://localhost:10001/\"\n                         }\n                      }\n                   }\n      }\n   }\n}\nTimeout policies and the default policy can be configured in the service collection and the\nmiddleware can be added as follows:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-72\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-72\">   var builder = WebApplication.CreateBuilder(args);\n   builder.Services.AddReverseProxy()\n          .LoadFromConfig(builder.Configuration.GetSection(\"ReverseProxy\"));\n   builder.Services.AddRequestTimeouts(options =&gt;\n   {\n          options.AddPolicy(\"customPolicy\", TimeSpan.FromSeconds(20));\n   });\n   var app = builder.Build();\n   app.UseRequestTimeouts();\n   app.MapReverseProxy();\n   app.Run();</code></pre><h2 id=\"disable-timeouts\">Отключение тайм-аутов</h2><p>Если для параметра TimeoutPolicy маршрута указано значение disable, промежуточное ПО тайм-аутов запросов не будет применять тайм-ауты к этому маршруту.</p><h2 id=\"websockets\">WebSockets</h2><p>После завершения начального рукопожатия WebSocket тайм-ауты запросов отключаются.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Примечание</div><p>Эта статья создана автором при помощи ИИ. Подробнее.</p></div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/timeouts",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "rate-limiting",
-    "title": "Rate limiting"
+    "title": "Ограничение скорости запросов"
   },
   "next": {
     "slug": "authn-authz",
-    "title": "Authentication & authorization"
+    "title": "Аутентификация и авторизация"
   }
 }

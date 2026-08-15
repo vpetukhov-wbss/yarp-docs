@@ -3,155 +3,155 @@
     "slug": "yarp-overview",
     "locale": "bg",
     "group": "getting-started",
-    "title": "Overview of YARP",
-    "excerpt": "Overview of YARP"
+    "title": "Преглед на YARP",
+    "excerpt": "Преглед на YARP"
   },
   {
     "slug": "getting-started",
     "locale": "bg",
     "group": "getting-started",
-    "title": "Getting started",
-    "excerpt": "Getting started"
+    "title": "Първи стъпки",
+    "excerpt": "Първи стъпки"
   },
   {
     "slug": "config-files",
     "locale": "bg",
     "group": "configuration",
-    "title": "Configuration files",
-    "excerpt": "Configuration files"
+    "title": "Конфигурационни файлове",
+    "excerpt": "Конфигурационни файлове"
   },
   {
     "slug": "config-filters",
     "locale": "bg",
     "group": "configuration",
-    "title": "Configuration filters",
-    "excerpt": "Configuration filters"
+    "title": "Конфигурационни филтри",
+    "excerpt": "Конфигурационни филтри"
   },
   {
     "slug": "config-providers",
     "locale": "bg",
     "group": "configuration",
-    "title": "Configuration providers",
-    "excerpt": "Configuration providers"
+    "title": "Доставчици на конфигурация",
+    "excerpt": "Доставчици на конфигурация"
   },
   {
     "slug": "http-client-config",
     "locale": "bg",
     "group": "configuration",
-    "title": "HTTP client configuration",
-    "excerpt": "HTTP client configuration"
+    "title": "Конфигурация на HTTP клиента",
+    "excerpt": "Конфигурация на HTTP клиента"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "excerpt": "Header-based routing"
+    "title": "Маршрутизиране по заглавни части",
+    "excerpt": "Маршрутизиране по заглавни части"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "excerpt": "Query parameter routing"
+    "title": "Маршрутизиране по параметри на заявката",
+    "excerpt": "Маршрутизиране по параметри на заявката"
   },
   {
     "slug": "transforms",
     "locale": "bg",
     "group": "transforms",
-    "title": "Overview",
-    "excerpt": "Overview"
+    "title": "Преглед",
+    "excerpt": "Преглед"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "excerpt": "Request transforms"
+    "title": "Трансформации на заявки",
+    "excerpt": "Трансформации на заявки"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "excerpt": "Response & trailer transforms"
+    "title": "Трансформации на отговори и трейлъри",
+    "excerpt": "Трансформации на отговори и трейлъри"
   },
   {
     "slug": "load-balancing",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Load balancing",
-    "excerpt": "Load balancing"
+    "title": "Балансиране на натоварването",
+    "excerpt": "Балансиране на натоварването"
   },
   {
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "excerpt": "Session affinity"
+    "title": "Афинитет на сесията",
+    "excerpt": "Афинитет на сесията"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "excerpt": "Destination health checks"
+    "title": "Проверки за състоянието на дестинациите",
+    "excerpt": "Проверки за състоянието на дестинациите"
   },
   {
     "slug": "rate-limiting",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "excerpt": "Rate limiting"
+    "title": "Ограничаване на скоростта на заявките",
+    "excerpt": "Ограничаване на скоростта на заявките"
   },
   {
     "slug": "timeouts",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "excerpt": "Request timeouts"
+    "title": "Таймаути на заявки",
+    "excerpt": "Таймаути на заявки"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "excerpt": "Authentication & authorization"
+    "title": "Удостоверяване и оторизация",
+    "excerpt": "Удостоверяване и оторизация"
   },
   {
     "slug": "cors",
     "locale": "bg",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "excerpt": "Cross-origin requests (CORS)"
+    "title": "Заявки от различен произход (CORS)",
+    "excerpt": "Заявки от различен произход (CORS)"
   },
   {
     "slug": "https-tls",
     "locale": "bg",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "excerpt": "HTTPS & TLS"
+    "title": "HTTPS и TLS",
+    "excerpt": "HTTPS и TLS"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "excerpt": "HTTP header guidelines"
+    "title": "Указания за HTTP заглавни части",
+    "excerpt": "Указания за HTTP заглавни части"
   },
   {
     "slug": "output-caching",
     "locale": "bg",
     "group": "performance",
-    "title": "Output caching",
-    "excerpt": "Output caching"
+    "title": "Кеширане на изхода",
+    "excerpt": "Кеширане на изхода"
   },
   {
     "slug": "grpc",
     "locale": "bg",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "excerpt": "Proxying gRPC"
+    "title": "Проксиране на gRPC",
+    "excerpt": "Проксиране на gRPC"
   },
   {
     "slug": "http3",
@@ -164,91 +164,91 @@
     "slug": "websockets",
     "locale": "bg",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "excerpt": "WebSockets & SPDY"
+    "title": "WebSockets и SPDY",
+    "excerpt": "WebSockets и SPDY"
   },
   {
     "slug": "extensibility",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Overview",
-    "excerpt": "Overview"
+    "title": "Преглед",
+    "excerpt": "Преглед"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "excerpt": "Middleware"
+    "title": "Междинен софтуер",
+    "excerpt": "Междинен софтуер"
   },
   {
     "slug": "direct-forwarding",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "excerpt": "Direct forwarding"
+    "title": "Директно препращане",
+    "excerpt": "Директно препращане"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "excerpt": "Destination resolvers"
+    "title": "Преобразуватели на дестинации",
+    "excerpt": "Преобразуватели на дестинации"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "excerpt": "Request & response transforms"
+    "title": "Трансформации на заявки и отговори",
+    "excerpt": "Трансформации на заявки и отговори"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "bg",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "excerpt": "Diagnosing YARP-based proxies"
+    "title": "Диагностика на прокси сървъри, базирани на YARP",
+    "excerpt": "Диагностика на прокси сървъри, базирани на YARP"
   },
   {
     "slug": "distributed-tracing",
     "locale": "bg",
     "group": "operations",
-    "title": "Distributed tracing",
-    "excerpt": "Distributed tracing"
+    "title": "Разпределено проследяване",
+    "excerpt": "Разпределено проследяване"
   },
   {
     "slug": "ab-testing",
     "locale": "bg",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "excerpt": "A/B testing & rolling upgrades"
+    "title": "A/B тестване и постепенни надграждания",
+    "excerpt": "A/B тестване и постепенни надграждания"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "excerpt": "Kubernetes Ingress Controller"
+    "title": "Kubernetes Ingress контролер",
+    "excerpt": "Kubernetes Ingress контролер"
   },
   {
     "slug": "service-fabric-int",
     "locale": "bg",
     "group": "deployment",
-    "title": "Service Fabric integration",
-    "excerpt": "Service Fabric integration"
+    "title": "Интеграция със Service Fabric",
+    "excerpt": "Интеграция със Service Fabric"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "bg",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "excerpt": "HTTP.sys delegation"
+    "title": "Делегиране на HTTP.sys",
+    "excerpt": "Делегиране на HTTP.sys"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "excerpt": "Get started with ASP.NET Core"
+    "title": "Първи стъпки с ASP.NET Core",
+    "excerpt": "Първи стъпки с ASP.NET Core"
   }
 ]

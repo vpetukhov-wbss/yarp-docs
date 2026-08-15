@@ -3,127 +3,127 @@
     "slug": "yarp-overview",
     "locale": "el",
     "group": "getting-started",
-    "title": "Overview of YARP",
-    "excerpt": "Overview of YARP"
+    "title": "Επισκόπηση του YARP",
+    "excerpt": "Επισκόπηση του YARP"
   },
   {
     "slug": "getting-started",
     "locale": "el",
     "group": "getting-started",
-    "title": "Getting started",
-    "excerpt": "Getting started"
+    "title": "Ξεκινώντας",
+    "excerpt": "Ξεκινώντας"
   },
   {
     "slug": "config-files",
     "locale": "el",
     "group": "configuration",
-    "title": "Configuration files",
-    "excerpt": "Configuration files"
+    "title": "Αρχεία διαμόρφωσης",
+    "excerpt": "Αρχεία διαμόρφωσης"
   },
   {
     "slug": "config-filters",
     "locale": "el",
     "group": "configuration",
-    "title": "Configuration filters",
-    "excerpt": "Configuration filters"
+    "title": "Φίλτρα διαμόρφωσης",
+    "excerpt": "Φίλτρα διαμόρφωσης"
   },
   {
     "slug": "config-providers",
     "locale": "el",
     "group": "configuration",
-    "title": "Configuration providers",
-    "excerpt": "Configuration providers"
+    "title": "Πάροχοι διαμόρφωσης",
+    "excerpt": "Πάροχοι διαμόρφωσης"
   },
   {
     "slug": "http-client-config",
     "locale": "el",
     "group": "configuration",
-    "title": "HTTP client configuration",
-    "excerpt": "HTTP client configuration"
+    "title": "Διαμόρφωση πελάτη HTTP",
+    "excerpt": "Διαμόρφωση πελάτη HTTP"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "excerpt": "Header-based routing"
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "excerpt": "Δρομολόγηση βάσει κεφαλίδων"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "excerpt": "Query parameter routing"
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "excerpt": "Δρομολόγηση βάσει παραμέτρων ερωτήματος"
   },
   {
     "slug": "transforms",
     "locale": "el",
     "group": "transforms",
-    "title": "Overview",
-    "excerpt": "Overview"
+    "title": "Επισκόπηση",
+    "excerpt": "Επισκόπηση"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "excerpt": "Request transforms"
+    "title": "Μετασχηματισμοί αιτήματος",
+    "excerpt": "Μετασχηματισμοί αιτήματος"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "excerpt": "Response & trailer transforms"
+    "title": "Μετασχηματισμοί απόκρισης & trailer",
+    "excerpt": "Μετασχηματισμοί απόκρισης & trailer"
   },
   {
     "slug": "load-balancing",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Load balancing",
-    "excerpt": "Load balancing"
+    "title": "Εξισορρόπηση φορτίου",
+    "excerpt": "Εξισορρόπηση φορτίου"
   },
   {
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "excerpt": "Session affinity"
+    "title": "Συνάφεια συνεδρίας",
+    "excerpt": "Συνάφεια συνεδρίας"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "excerpt": "Destination health checks"
+    "title": "Έλεγχοι υγείας προορισμού",
+    "excerpt": "Έλεγχοι υγείας προορισμού"
   },
   {
     "slug": "rate-limiting",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "excerpt": "Rate limiting"
+    "title": "Περιορισμός ρυθμού",
+    "excerpt": "Περιορισμός ρυθμού"
   },
   {
     "slug": "timeouts",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "excerpt": "Request timeouts"
+    "title": "Χρονικά όρια αιτημάτων",
+    "excerpt": "Χρονικά όρια αιτημάτων"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "excerpt": "Authentication & authorization"
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "excerpt": "Έλεγχος ταυτότητας & εξουσιοδότηση"
   },
   {
     "slug": "cors",
     "locale": "el",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "excerpt": "Cross-origin requests (CORS)"
+    "title": "Αιτήματα διαφορετικής προέλευσης (CORS)",
+    "excerpt": "Αιτήματα διαφορετικής προέλευσης (CORS)"
   },
   {
     "slug": "https-tls",
@@ -136,22 +136,22 @@
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "excerpt": "HTTP header guidelines"
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "excerpt": "Οδηγίες κεφαλίδων HTTP"
   },
   {
     "slug": "output-caching",
     "locale": "el",
     "group": "performance",
-    "title": "Output caching",
-    "excerpt": "Output caching"
+    "title": "Προσωρινή αποθήκευση εξόδου",
+    "excerpt": "Προσωρινή αποθήκευση εξόδου"
   },
   {
     "slug": "grpc",
     "locale": "el",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "excerpt": "Proxying gRPC"
+    "title": "Διαμεσολάβηση gRPC",
+    "excerpt": "Διαμεσολάβηση gRPC"
   },
   {
     "slug": "http3",
@@ -171,84 +171,84 @@
     "slug": "extensibility",
     "locale": "el",
     "group": "extensibility",
-    "title": "Overview",
-    "excerpt": "Overview"
+    "title": "Επισκόπηση",
+    "excerpt": "Επισκόπηση"
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "excerpt": "Middleware"
+    "title": "Ενδιάμεσο λογισμικό",
+    "excerpt": "Ενδιάμεσο λογισμικό"
   },
   {
     "slug": "direct-forwarding",
     "locale": "el",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "excerpt": "Direct forwarding"
+    "title": "Άμεση προώθηση",
+    "excerpt": "Άμεση προώθηση"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "excerpt": "Destination resolvers"
+    "title": "Επιλυτές προορισμού",
+    "excerpt": "Επιλυτές προορισμού"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "excerpt": "Request & response transforms"
+    "title": "Μετασχηματισμοί αιτήματος & απόκρισης",
+    "excerpt": "Μετασχηματισμοί αιτήματος & απόκρισης"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "el",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "excerpt": "Diagnosing YARP-based proxies"
+    "title": "Διάγνωση διαμεσολαβητών με βάση το YARP",
+    "excerpt": "Διάγνωση διαμεσολαβητών με βάση το YARP"
   },
   {
     "slug": "distributed-tracing",
     "locale": "el",
     "group": "operations",
-    "title": "Distributed tracing",
-    "excerpt": "Distributed tracing"
+    "title": "Κατανεμημένη ανίχνευση",
+    "excerpt": "Κατανεμημένη ανίχνευση"
   },
   {
     "slug": "ab-testing",
     "locale": "el",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "excerpt": "A/B testing & rolling upgrades"
+    "title": "Δοκιμές A/B & σταδιακές αναβαθμίσεις",
+    "excerpt": "Δοκιμές A/B & σταδιακές αναβαθμίσεις"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "excerpt": "Kubernetes Ingress Controller"
+    "title": "Ελεγκτής εισόδου Kubernetes",
+    "excerpt": "Ελεγκτής εισόδου Kubernetes"
   },
   {
     "slug": "service-fabric-int",
     "locale": "el",
     "group": "deployment",
-    "title": "Service Fabric integration",
-    "excerpt": "Service Fabric integration"
+    "title": "Ενσωμάτωση με το Service Fabric",
+    "excerpt": "Ενσωμάτωση με το Service Fabric"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "el",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "excerpt": "HTTP.sys delegation"
+    "title": "Ανάθεση HTTP.sys",
+    "excerpt": "Ανάθεση HTTP.sys"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "excerpt": "Get started with ASP.NET Core"
+    "title": "Ξεκινήστε με το ASP.NET Core",
+    "excerpt": "Ξεκινήστε με το ASP.NET Core"
   }
 ]

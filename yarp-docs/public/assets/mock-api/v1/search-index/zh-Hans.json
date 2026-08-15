@@ -3,155 +3,155 @@
     "slug": "yarp-overview",
     "locale": "zh-Hans",
     "group": "getting-started",
-    "title": "Overview of YARP",
-    "excerpt": "Overview of YARP"
+    "title": "YARP 概述",
+    "excerpt": "YARP 概述"
   },
   {
     "slug": "getting-started",
     "locale": "zh-Hans",
     "group": "getting-started",
-    "title": "Getting started",
-    "excerpt": "Getting started"
+    "title": "快速入门",
+    "excerpt": "快速入门"
   },
   {
     "slug": "config-files",
     "locale": "zh-Hans",
     "group": "configuration",
-    "title": "Configuration files",
-    "excerpt": "Configuration files"
+    "title": "配置文件",
+    "excerpt": "配置文件"
   },
   {
     "slug": "config-filters",
     "locale": "zh-Hans",
     "group": "configuration",
-    "title": "Configuration filters",
-    "excerpt": "Configuration filters"
+    "title": "配置筛选器",
+    "excerpt": "配置筛选器"
   },
   {
     "slug": "config-providers",
     "locale": "zh-Hans",
     "group": "configuration",
-    "title": "Configuration providers",
-    "excerpt": "Configuration providers"
+    "title": "配置提供程序",
+    "excerpt": "配置提供程序"
   },
   {
     "slug": "http-client-config",
     "locale": "zh-Hans",
     "group": "configuration",
-    "title": "HTTP client configuration",
-    "excerpt": "HTTP client configuration"
+    "title": "HTTP 客户端配置",
+    "excerpt": "HTTP 客户端配置"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "excerpt": "Header-based routing"
+    "title": "基于标头的路由",
+    "excerpt": "基于标头的路由"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "excerpt": "Query parameter routing"
+    "title": "查询参数路由",
+    "excerpt": "查询参数路由"
   },
   {
     "slug": "transforms",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Overview",
-    "excerpt": "Overview"
+    "title": "概述",
+    "excerpt": "概述"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "excerpt": "Request transforms"
+    "title": "请求转换",
+    "excerpt": "请求转换"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "excerpt": "Response & trailer transforms"
+    "title": "响应与尾部转换",
+    "excerpt": "响应与尾部转换"
   },
   {
     "slug": "load-balancing",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Load balancing",
-    "excerpt": "Load balancing"
+    "title": "负载均衡",
+    "excerpt": "负载均衡"
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "excerpt": "Session affinity"
+    "title": "会话亲和性",
+    "excerpt": "会话亲和性"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "excerpt": "Destination health checks"
+    "title": "目标运行状况检查",
+    "excerpt": "目标运行状况检查"
   },
   {
     "slug": "rate-limiting",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "excerpt": "Rate limiting"
+    "title": "速率限制",
+    "excerpt": "速率限制"
   },
   {
     "slug": "timeouts",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "excerpt": "Request timeouts"
+    "title": "请求超时",
+    "excerpt": "请求超时"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "excerpt": "Authentication & authorization"
+    "title": "身份验证与授权",
+    "excerpt": "身份验证与授权"
   },
   {
     "slug": "cors",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "excerpt": "Cross-origin requests (CORS)"
+    "title": "跨域请求 (CORS)",
+    "excerpt": "跨域请求 (CORS)"
   },
   {
     "slug": "https-tls",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "excerpt": "HTTPS & TLS"
+    "title": "HTTPS 与 TLS",
+    "excerpt": "HTTPS 与 TLS"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "excerpt": "HTTP header guidelines"
+    "title": "HTTP 标头准则",
+    "excerpt": "HTTP 标头准则"
   },
   {
     "slug": "output-caching",
     "locale": "zh-Hans",
     "group": "performance",
-    "title": "Output caching",
-    "excerpt": "Output caching"
+    "title": "输出缓存",
+    "excerpt": "输出缓存"
   },
   {
     "slug": "grpc",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "excerpt": "Proxying gRPC"
+    "title": "代理 gRPC",
+    "excerpt": "代理 gRPC"
   },
   {
     "slug": "http3",
@@ -164,91 +164,91 @@
     "slug": "websockets",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "excerpt": "WebSockets & SPDY"
+    "title": "WebSockets 与 SPDY",
+    "excerpt": "WebSockets 与 SPDY"
   },
   {
     "slug": "extensibility",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Overview",
-    "excerpt": "Overview"
+    "title": "概述",
+    "excerpt": "概述"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "excerpt": "Middleware"
+    "title": "中间件",
+    "excerpt": "中间件"
   },
   {
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "excerpt": "Direct forwarding"
+    "title": "直接转发",
+    "excerpt": "直接转发"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "excerpt": "Destination resolvers"
+    "title": "目标解析器",
+    "excerpt": "目标解析器"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "excerpt": "Request & response transforms"
+    "title": "请求与响应转换",
+    "excerpt": "请求与响应转换"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "excerpt": "Diagnosing YARP-based proxies"
+    "title": "诊断基于 YARP 的代理",
+    "excerpt": "诊断基于 YARP 的代理"
   },
   {
     "slug": "distributed-tracing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Distributed tracing",
-    "excerpt": "Distributed tracing"
+    "title": "分布式跟踪",
+    "excerpt": "分布式跟踪"
   },
   {
     "slug": "ab-testing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "excerpt": "A/B testing & rolling upgrades"
+    "title": "A/B 测试与滚动升级",
+    "excerpt": "A/B 测试与滚动升级"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "excerpt": "Kubernetes Ingress Controller"
+    "title": "Kubernetes Ingress 控制器",
+    "excerpt": "Kubernetes Ingress 控制器"
   },
   {
     "slug": "service-fabric-int",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Service Fabric integration",
-    "excerpt": "Service Fabric integration"
+    "title": "Service Fabric 集成",
+    "excerpt": "Service Fabric 集成"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "excerpt": "HTTP.sys delegation"
+    "title": "HTTP.sys 委派",
+    "excerpt": "HTTP.sys 委派"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "excerpt": "Get started with ASP.NET Core"
+    "title": "ASP.NET Core 入门",
+    "excerpt": "ASP.NET Core 入门"
   }
 ]

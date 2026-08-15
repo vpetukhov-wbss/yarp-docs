@@ -3,155 +3,155 @@
     "slug": "yarp-overview",
     "locale": "pt-BR",
     "group": "getting-started",
-    "title": "Overview of YARP",
-    "excerpt": "Overview of YARP"
+    "title": "Visão geral do YARP",
+    "excerpt": "Visão geral do YARP"
   },
   {
     "slug": "getting-started",
     "locale": "pt-BR",
     "group": "getting-started",
-    "title": "Getting started",
-    "excerpt": "Getting started"
+    "title": "Primeiros passos",
+    "excerpt": "Primeiros passos"
   },
   {
     "slug": "config-files",
     "locale": "pt-BR",
     "group": "configuration",
-    "title": "Configuration files",
-    "excerpt": "Configuration files"
+    "title": "Arquivos de configuração",
+    "excerpt": "Arquivos de configuração"
   },
   {
     "slug": "config-filters",
     "locale": "pt-BR",
     "group": "configuration",
-    "title": "Configuration filters",
-    "excerpt": "Configuration filters"
+    "title": "Filtros de configuração",
+    "excerpt": "Filtros de configuração"
   },
   {
     "slug": "config-providers",
     "locale": "pt-BR",
     "group": "configuration",
-    "title": "Configuration providers",
-    "excerpt": "Configuration providers"
+    "title": "Provedores de configuração",
+    "excerpt": "Provedores de configuração"
   },
   {
     "slug": "http-client-config",
     "locale": "pt-BR",
     "group": "configuration",
-    "title": "HTTP client configuration",
-    "excerpt": "HTTP client configuration"
+    "title": "Configuração do cliente HTTP",
+    "excerpt": "Configuração do cliente HTTP"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "excerpt": "Header-based routing"
+    "title": "Roteamento baseado em cabeçalho",
+    "excerpt": "Roteamento baseado em cabeçalho"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "excerpt": "Query parameter routing"
+    "title": "Roteamento por parâmetro de consulta",
+    "excerpt": "Roteamento por parâmetro de consulta"
   },
   {
     "slug": "transforms",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Overview",
-    "excerpt": "Overview"
+    "title": "Visão geral",
+    "excerpt": "Visão geral"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "excerpt": "Request transforms"
+    "title": "Transformações de requisição",
+    "excerpt": "Transformações de requisição"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "excerpt": "Response & trailer transforms"
+    "title": "Transformações de resposta e trailer",
+    "excerpt": "Transformações de resposta e trailer"
   },
   {
     "slug": "load-balancing",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Load balancing",
-    "excerpt": "Load balancing"
+    "title": "Balanceamento de carga",
+    "excerpt": "Balanceamento de carga"
   },
   {
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "excerpt": "Session affinity"
+    "title": "Afinidade de sessão",
+    "excerpt": "Afinidade de sessão"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "excerpt": "Destination health checks"
+    "title": "Verificações de integridade de destino",
+    "excerpt": "Verificações de integridade de destino"
   },
   {
     "slug": "rate-limiting",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "excerpt": "Rate limiting"
+    "title": "Limitação de taxa",
+    "excerpt": "Limitação de taxa"
   },
   {
     "slug": "timeouts",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "excerpt": "Request timeouts"
+    "title": "Tempos limite de requisição",
+    "excerpt": "Tempos limite de requisição"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "excerpt": "Authentication & authorization"
+    "title": "Autenticação e autorização",
+    "excerpt": "Autenticação e autorização"
   },
   {
     "slug": "cors",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "excerpt": "Cross-origin requests (CORS)"
+    "title": "Requisições entre origens (CORS)",
+    "excerpt": "Requisições entre origens (CORS)"
   },
   {
     "slug": "https-tls",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "excerpt": "HTTPS & TLS"
+    "title": "HTTPS e TLS",
+    "excerpt": "HTTPS e TLS"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "excerpt": "HTTP header guidelines"
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "excerpt": "Diretrizes de cabeçalhos HTTP"
   },
   {
     "slug": "output-caching",
     "locale": "pt-BR",
     "group": "performance",
-    "title": "Output caching",
-    "excerpt": "Output caching"
+    "title": "Cache de saída",
+    "excerpt": "Cache de saída"
   },
   {
     "slug": "grpc",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "excerpt": "Proxying gRPC"
+    "title": "Proxy de gRPC",
+    "excerpt": "Proxy de gRPC"
   },
   {
     "slug": "http3",
@@ -164,15 +164,15 @@
     "slug": "websockets",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "excerpt": "WebSockets & SPDY"
+    "title": "WebSockets e SPDY",
+    "excerpt": "WebSockets e SPDY"
   },
   {
     "slug": "extensibility",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Overview",
-    "excerpt": "Overview"
+    "title": "Visão geral",
+    "excerpt": "Visão geral"
   },
   {
     "slug": "middleware",
@@ -185,70 +185,70 @@
     "slug": "direct-forwarding",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "excerpt": "Direct forwarding"
+    "title": "Encaminhamento direto",
+    "excerpt": "Encaminhamento direto"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "excerpt": "Destination resolvers"
+    "title": "Resolvedores de destino",
+    "excerpt": "Resolvedores de destino"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "excerpt": "Request & response transforms"
+    "title": "Transformações de requisição e resposta",
+    "excerpt": "Transformações de requisição e resposta"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "excerpt": "Diagnosing YARP-based proxies"
+    "title": "Diagnosticando proxies baseados em YARP",
+    "excerpt": "Diagnosticando proxies baseados em YARP"
   },
   {
     "slug": "distributed-tracing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Distributed tracing",
-    "excerpt": "Distributed tracing"
+    "title": "Rastreamento distribuído",
+    "excerpt": "Rastreamento distribuído"
   },
   {
     "slug": "ab-testing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "excerpt": "A/B testing & rolling upgrades"
+    "title": "Testes A/B e atualizações graduais",
+    "excerpt": "Testes A/B e atualizações graduais"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "excerpt": "Kubernetes Ingress Controller"
+    "title": "Controlador de Ingress do Kubernetes",
+    "excerpt": "Controlador de Ingress do Kubernetes"
   },
   {
     "slug": "service-fabric-int",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Service Fabric integration",
-    "excerpt": "Service Fabric integration"
+    "title": "Integração com o Service Fabric",
+    "excerpt": "Integração com o Service Fabric"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "excerpt": "HTTP.sys delegation"
+    "title": "Delegação do HTTP.sys",
+    "excerpt": "Delegação do HTTP.sys"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "excerpt": "Get started with ASP.NET Core"
+    "title": "Primeiros passos com o ASP.NET Core",
+    "excerpt": "Primeiros passos com o ASP.NET Core"
   }
 ]

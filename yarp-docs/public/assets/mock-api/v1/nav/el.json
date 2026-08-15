@@ -3,18 +3,18 @@
   "groups": [
     {
       "id": "getting-started",
-      "label": "Getting started",
+      "label": "Ξεκινώντας",
       "order": 1,
       "items": [
         {
           "slug": "yarp-overview",
-          "title": "Overview of YARP",
+          "title": "Επισκόπηση του YARP",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "getting-started",
-          "title": "Getting started",
+          "title": "Ξεκινώντας",
           "order": 2,
           "kind": "doc"
         }
@@ -22,30 +22,30 @@
     },
     {
       "id": "configuration",
-      "label": "Configuration",
+      "label": "Διαμόρφωση",
       "order": 2,
       "items": [
         {
           "slug": "config-files",
-          "title": "Configuration files",
+          "title": "Αρχεία διαμόρφωσης",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "config-filters",
-          "title": "Configuration filters",
+          "title": "Φίλτρα διαμόρφωσης",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "config-providers",
-          "title": "Configuration providers",
+          "title": "Πάροχοι διαμόρφωσης",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "http-client-config",
-          "title": "HTTP client configuration",
+          "title": "Διαμόρφωση πελάτη HTTP",
           "order": 4,
           "kind": "doc"
         }
@@ -53,18 +53,18 @@
     },
     {
       "id": "routing",
-      "label": "Routing",
+      "label": "Δρομολόγηση",
       "order": 3,
       "items": [
         {
           "slug": "header-routing",
-          "title": "Header-based routing",
+          "title": "Δρομολόγηση βάσει κεφαλίδων",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "queryparameter-routing",
-          "title": "Query parameter routing",
+          "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
           "order": 2,
           "kind": "doc"
         }
@@ -72,24 +72,24 @@
     },
     {
       "id": "transforms",
-      "label": "Transforms",
+      "label": "Μετασχηματισμοί",
       "order": 4,
       "items": [
         {
           "slug": "transforms",
-          "title": "Overview",
+          "title": "Επισκόπηση",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "transforms-request",
-          "title": "Request transforms",
+          "title": "Μετασχηματισμοί αιτήματος",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "transforms-response",
-          "title": "Response & trailer transforms",
+          "title": "Μετασχηματισμοί απόκρισης & trailer",
           "order": 3,
           "kind": "doc"
         }
@@ -97,36 +97,36 @@
     },
     {
       "id": "traffic-reliability",
-      "label": "Traffic & reliability",
+      "label": "Κίνηση & αξιοπιστία",
       "order": 5,
       "items": [
         {
           "slug": "load-balancing",
-          "title": "Load balancing",
+          "title": "Εξισορρόπηση φορτίου",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "session-affinity",
-          "title": "Session affinity",
+          "title": "Συνάφεια συνεδρίας",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "dests-health-checks",
-          "title": "Destination health checks",
+          "title": "Έλεγχοι υγείας προορισμού",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "rate-limiting",
-          "title": "Rate limiting",
+          "title": "Περιορισμός ρυθμού",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "timeouts",
-          "title": "Request timeouts",
+          "title": "Χρονικά όρια αιτημάτων",
           "order": 5,
           "kind": "doc"
         }
@@ -134,18 +134,18 @@
     },
     {
       "id": "security",
-      "label": "Security",
+      "label": "Ασφάλεια",
       "order": 6,
       "items": [
         {
           "slug": "authn-authz",
-          "title": "Authentication & authorization",
+          "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "cors",
-          "title": "Cross-origin requests (CORS)",
+          "title": "Αιτήματα διαφορετικής προέλευσης (CORS)",
           "order": 2,
           "kind": "doc"
         },
@@ -157,7 +157,7 @@
         },
         {
           "slug": "header-guidelines",
-          "title": "HTTP header guidelines",
+          "title": "Οδηγίες κεφαλίδων HTTP",
           "order": 4,
           "kind": "doc"
         }
@@ -165,12 +165,12 @@
     },
     {
       "id": "performance",
-      "label": "Performance",
+      "label": "Απόδοση",
       "order": 7,
       "items": [
         {
           "slug": "output-caching",
-          "title": "Output caching",
+          "title": "Προσωρινή αποθήκευση εξόδου",
           "order": 1,
           "kind": "doc"
         }
@@ -178,12 +178,12 @@
     },
     {
       "id": "protocols",
-      "label": "Protocols",
+      "label": "Πρωτόκολλα",
       "order": 8,
       "items": [
         {
           "slug": "grpc",
-          "title": "Proxying gRPC",
+          "title": "Διαμεσολάβηση gRPC",
           "order": 1,
           "kind": "doc"
         },
@@ -203,36 +203,36 @@
     },
     {
       "id": "extensibility",
-      "label": "Extensibility",
+      "label": "Επεκτασιμότητα",
       "order": 9,
       "items": [
         {
           "slug": "extensibility",
-          "title": "Overview",
+          "title": "Επισκόπηση",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "middleware",
-          "title": "Middleware",
+          "title": "Ενδιάμεσο λογισμικό",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "direct-forwarding",
-          "title": "Direct forwarding",
+          "title": "Άμεση προώθηση",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "destination-resolvers",
-          "title": "Destination resolvers",
+          "title": "Επιλυτές προορισμού",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "extensibility-transforms",
-          "title": "Request & response transforms",
+          "title": "Μετασχηματισμοί αιτήματος & απόκρισης",
           "order": 5,
           "kind": "doc"
         }
@@ -240,24 +240,24 @@
     },
     {
       "id": "operations",
-      "label": "Operations",
+      "label": "Λειτουργίες",
       "order": 10,
       "items": [
         {
           "slug": "diagnosing-yarp-issues",
-          "title": "Diagnosing YARP-based proxies",
+          "title": "Διάγνωση διαμεσολαβητών με βάση το YARP",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "distributed-tracing",
-          "title": "Distributed tracing",
+          "title": "Κατανεμημένη ανίχνευση",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "ab-testing",
-          "title": "A/B testing & rolling upgrades",
+          "title": "Δοκιμές A/B & σταδιακές αναβαθμίσεις",
           "order": 3,
           "kind": "doc"
         }
@@ -265,24 +265,24 @@
     },
     {
       "id": "deployment",
-      "label": "Deployment",
+      "label": "Ανάπτυξη",
       "order": 11,
       "items": [
         {
           "slug": "kubernetes-ingress",
-          "title": "Kubernetes Ingress Controller",
+          "title": "Ελεγκτής εισόδου Kubernetes",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "service-fabric-int",
-          "title": "Service Fabric integration",
+          "title": "Ενσωμάτωση με το Service Fabric",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "httpsys-delegation",
-          "title": "HTTP.sys delegation",
+          "title": "Ανάθεση HTTP.sys",
           "order": 3,
           "kind": "doc"
         }
@@ -292,7 +292,7 @@
   "appendix": [
     {
       "slug": "aspnetcore-getting-started",
-      "title": "Get started with ASP.NET Core",
+      "title": "Ξεκινήστε με το ASP.NET Core",
       "order": 1,
       "kind": "appendix"
     }

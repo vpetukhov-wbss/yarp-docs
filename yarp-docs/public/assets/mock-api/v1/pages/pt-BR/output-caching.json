@@ -3,35 +3,35 @@
   "locale": "pt-BR",
   "group": "performance",
   "kind": "doc",
-  "title": "Output caching",
-  "lede": "The reverse proxy can be used to cache proxied responses and serve requests before they are",
+  "title": "Cache de saída",
+  "lede": "O proxy reverso pode ser usado para armazenar em cache as respostas encaminhadas por proxy e atender requisições antes que elas sejam",
   "headings": [
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "Introdução",
       "level": 2
     },
     {
       "id": "defaults",
-      "text": "Defaults",
+      "text": "Padrões",
       "level": 2
     },
     {
       "id": "configuration",
-      "text": "Configuration",
+      "text": "Configuração",
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"introduction\">Introduction</h2><p>The reverse proxy can be used to cache proxied responses and serve requests before they are proxied to the destination servers. This can reduce load on the destination servers, add a layer of protection, and ensure consistent policies are implemented across your applications.</p><p>This feature is only available when using .NET 7 or later</p><h2 id=\"defaults\">Defaults</h2><p>No output caching is performed unless enabled in the route or application configuration.</p><h2 id=\"configuration\">Configuration</h2><p>Output Cache policies can be specified per route via RouteConfig.OutputCachePolicy and can be bound from the Routes sections of the config file. As with other route properties, this can be modified and reloaded without restarting the proxy. Policy names are case insensitive.</p><p>Example:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-76\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-76\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n         \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"OutputCachePolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n         }\n      },\n      \"Clusters\": {\n         \"cluster1\": {\n             \"Destinations\": {\n                \"cluster1/destination1\": {\n                   \"Address\": \"https://localhost:10001/\"\n                }\n             }\n         }\n      }\n             }\n          }\nOutput cache policies are an ASP.NET Core concept that the proxy utilizes. The proxy provides\nthe above configuration to specify a policy per route and the rest is handled by existing\nASP.NET Core output caching middleware.\nOutput cache policies can be configured in Program.cs as follows:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-77\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-77\">   var builder = WebApplication.CreateBuilder(args);\n   builder.Services.AddOutputCache(options =&gt;\n   {\n          options.AddPolicy(\"customPolicy\", builder =&gt;\n   builder.Expire(TimeSpan.FromSeconds(20)));\n   });\nThen add the output caching middleware:\n    C#\n   var app = builder.Build();\n   app.UseOutputCache();\n   app.MapReverseProxy();\nSee the Output Caching docs for setting up your preferred kind of output caching.\n Note: The author created this article with assistance from AI. Learn more</code></pre>",
+  "bodyHtml": "<h2 id=\"introduction\">Introdução</h2><p>O proxy reverso pode ser usado para armazenar em cache as respostas encaminhadas por proxy e atender requisições antes que elas sejam encaminhadas para os servidores de destino. Isso pode reduzir a carga nos servidores de destino, adicionar uma camada de proteção e garantir que políticas consistentes sejam implementadas em suas aplicações.</p><p>Esse recurso está disponível somente ao usar o .NET 7 ou posterior</p><h2 id=\"defaults\">Padrões</h2><p>Nenhum cache de saída é realizado, a menos que isso seja habilitado na configuração da rota ou da aplicação.</p><h2 id=\"configuration\">Configuração</h2><p>As políticas de Output Cache podem ser especificadas por rota por meio de RouteConfig.OutputCachePolicy e podem ser vinculadas a partir das seções Routes do arquivo de configuração. Assim como outras propriedades de rota, isso pode ser modificado e recarregado sem reiniciar o proxy. Os nomes das políticas não diferenciam maiúsculas de minúsculas.</p><p>Exemplo:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-76\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-76\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n         \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"OutputCachePolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n         }\n      },\n      \"Clusters\": {\n         \"cluster1\": {\n             \"Destinations\": {\n                \"cluster1/destination1\": {\n                   \"Address\": \"https://localhost:10001/\"\n                }\n             }\n         }\n      }\n             }\n          }\nOutput cache policies are an ASP.NET Core concept that the proxy utilizes. The proxy provides\nthe above configuration to specify a policy per route and the rest is handled by existing\nASP.NET Core output caching middleware.\nOutput cache policies can be configured in Program.cs as follows:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"auto-code-77\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-77\">   var builder = WebApplication.CreateBuilder(args);\n   builder.Services.AddOutputCache(options =&gt;\n   {\n          options.AddPolicy(\"customPolicy\", builder =&gt;\n   builder.Expire(TimeSpan.FromSeconds(20)));\n   });\nThen add the output caching middleware:\n    C#\n   var app = builder.Build();\n   app.UseOutputCache();\n   app.MapReverseProxy();\nSee the Output Caching docs for setting up your preferred kind of output caching.\n Note: The author created this article with assistance from AI. Learn more</code></pre>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/output-caching",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "header-guidelines",
-    "title": "HTTP header guidelines"
+    "title": "Diretrizes de cabeçalhos HTTP"
   },
   "next": {
     "slug": "grpc",
-    "title": "Proxying gRPC"
+    "title": "Proxy de gRPC"
   }
 }

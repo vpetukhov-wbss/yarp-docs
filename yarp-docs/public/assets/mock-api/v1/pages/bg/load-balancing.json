@@ -3,35 +3,17 @@
   "locale": "bg",
   "group": "traffic-reliability",
   "kind": "doc",
-  "title": "Load balancing",
-  "lede": "When a cluster has more than one healthy destination, YARP picks which one handles each request using a configurable load balancing policy.",
+  "title": "Балансиране на натоварването",
+  "lede": "Когато даден клъстер разполага с повече от една здрава дестинация, YARP избира коя от тях да обработи всяка заявка чрез конфигурируема политика за балансиране на натоварването.",
   "headings": [
-    {
-      "id": "policies",
-      "text": "Policies",
-      "level": 2
-    },
-    {
-      "id": "configuration",
-      "text": "Configuration",
-      "level": 2
-    },
-    {
-      "id": "custom-policies",
-      "text": "Custom policies",
-      "level": 2
-    }
+    { "id": "policies", "text": "Политики", "level": 2 },
+    { "id": "configuration", "text": "Конфигурация", "level": 2 },
+    { "id": "custom-policies", "text": "Персонализирани политики", "level": 2 }
   ],
-  "bodyHtml": "<h2 id=\"policies\">Policies</h2><p>YARP ships with several built-in load balancing policies:</p><ul><li><strong>Round robin</strong> — cycles through the destination list in order, giving each an equal share of traffic.</li><li><strong>Least requests</strong> — sends each request to whichever destination currently has the fewest in-flight requests.</li><li><strong>Random</strong> — picks a destination at random.</li><li><strong>Power of two choices</strong> — samples two random destinations and picks whichever has fewer in-flight requests, a good default at scale since it avoids the herd effect random selection alone can cause.</li><li><strong>First</strong> — always the first available destination; mainly useful for testing and A/B scenarios.</li></ul><div class=\"example-box\"><div class=\"eb-head\"><h3>Set a cluster's policy</h3><p>The <code>LoadBalancingPolicy</code> field on a cluster.</p></div><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"json-lb-1\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"json-lb-1\">{\n  <span class=\"tok-prop\">\"Clusters\"</span>: {\n    <span class=\"tok-prop\">\"cluster1\"</span>: {\n      <span class=\"tok-prop\">\"LoadBalancingPolicy\"</span>: <span class=\"tok-str\">\"PowerOfTwoChoices\"</span>,\n      <span class=\"tok-prop\">\"Destinations\"</span>: {\n        <span class=\"tok-prop\">\"cluster1/destination1\"</span>: { <span class=\"tok-prop\">\"Address\"</span>: <span class=\"tok-str\">\"https://localhost:10000/\"</span> },\n        <span class=\"tok-prop\">\"cluster1/destination2\"</span>: { <span class=\"tok-prop\">\"Address\"</span>: <span class=\"tok-str\">\"https://localhost:10010/\"</span> }\n      }\n    }\n  }\n}</code></pre></div><h2 id=\"configuration\">Configuration</h2><p>The default policy is <strong>Power of two choices</strong> when none is specified. Only destinations known to be healthy are considered - see <a href=\"/en/dests-health-checks\">Destination health checks</a> for how a destination is marked unhealthy and excluded from rotation.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>Load balancing distributes requests across destinations; it does not pin a given client to the same destination across requests. If that's what you need, see <a href=\"/en/session-affinity\">Session affinity</a> instead.</p></div></div><h2 id=\"custom-policies\">Custom policies</h2><p>Implement <code>ILoadBalancingPolicy</code> and register it in DI to plug in custom selection logic - the same extensibility point YARP's own built-in policies are built on.</p>",
+  "bodyHtml": "<h2 id=\"policies\">Политики</h2><p>YARP се предлага с няколко вградени политики за балансиране на натоварването:</p><ul><li><strong>Round robin</strong> — обхожда списъка с дестинации последователно, като разпределя трафика поравно между тях.</li><li><strong>Least requests</strong> — изпраща всяка заявка към дестинацията, която в момента има най-малко чакащи заявки.</li><li><strong>Random</strong> — избира дестинация на случаен принцип.</li><li><strong>Power of two choices</strong> — избира на случаен принцип две дестинации и предава заявката на тази с по-малко чакащи заявки; добър избор по подразбиране при по-голям мащаб, тъй като избягва ефекта на струпване, който може да предизвика самостоятелният случаен избор.</li><li><strong>First</strong> — винаги първата налична дестинация; полезна най-вече за тестване и A/B сценарии.</li></ul><div class=\"example-box\"><div class=\"eb-head\"><h3>Set a cluster's policy</h3><p>Полето <code>LoadBalancingPolicy</code> на клъстер.</p></div><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"json-lb-1\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"json-lb-1\">{\n  <span class=\"tok-prop\">\"Clusters\"</span>: {\n    <span class=\"tok-prop\">\"cluster1\"</span>: {\n      <span class=\"tok-prop\">\"LoadBalancingPolicy\"</span>: <span class=\"tok-str\">\"PowerOfTwoChoices\"</span>,\n      <span class=\"tok-prop\">\"Destinations\"</span>: {\n        <span class=\"tok-prop\">\"cluster1/destination1\"</span>: { <span class=\"tok-prop\">\"Address\"</span>: <span class=\"tok-str\">\"https://localhost:10000/\"</span> },\n        <span class=\"tok-prop\">\"cluster1/destination2\"</span>: { <span class=\"tok-prop\">\"Address\"</span>: <span class=\"tok-str\">\"https://localhost:10010/\"</span> }\n      }\n    }\n  }\n}</code></pre></div><h2 id=\"configuration\">Конфигурация</h2><p>Политиката по подразбиране е <strong>Power of two choices</strong>, когато не е зададена друга. Разглеждат се само дестинациите, за които е известно, че са здрави - вижте <a href=\"/en/dests-health-checks\">Проверки за състоянието на дестинациите</a> за начина, по който дадена дестинация се маркира като нездрава и се изключва от ротацията.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>Балансирането на натоварването разпределя заявките между дестинациите; то не фиксира даден клиент към една и съща дестинация при следващи заявки. Ако имате нужда точно от това, вижте <a href=\"/en/session-affinity\">Афинитет на сесията</a> вместо това.</p></div></div><h2 id=\"custom-policies\">Персонализирани политики</h2><p>Имплементирайте <code>ILoadBalancingPolicy</code> и го регистрирайте в DI контейнера, за да вградите собствена логика за избор - същата точка за разширяемост, върху която са изградени и собствените вградени политики на YARP.</p>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/load-balancing",
   "lastUpdated": "2025-01-15",
-  "translated": false,
-  "prev": {
-    "slug": "transforms-response",
-    "title": "Response & trailer transforms"
-  },
-  "next": {
-    "slug": "session-affinity",
-    "title": "Session affinity"
-  }
+  "translated": true,
+  "prev": { "slug": "transforms-response", "title": "Трансформации на отговори и трейлъри" },
+  "next": { "slug": "session-affinity", "title": "Афинитет на сесията" }
 }

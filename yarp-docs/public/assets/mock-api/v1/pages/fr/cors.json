@@ -3,8 +3,8 @@
   "locale": "fr",
   "group": "security",
   "kind": "doc",
-  "title": "Cross-origin requests (CORS)",
-  "lede": "The reverse proxy can handle cross-origin requests before they are proxied to the destination",
+  "title": "Requêtes cross-origin (CORS)",
+  "lede": "Le proxy inverse peut traiter les requêtes cross-origin avant qu'elles ne soient transférées vers la destination",
   "headings": [
     {
       "id": "introduction",
@@ -13,7 +13,7 @@
     },
     {
       "id": "defaults",
-      "text": "Defaults",
+      "text": "Comportement par défaut",
       "level": 2
     },
     {
@@ -28,20 +28,20 @@
     },
     {
       "id": "disable-cors",
-      "text": "Disable CORS",
+      "text": "Désactiver CORS",
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"introduction\">Introduction</h2><p>The reverse proxy can handle cross-origin requests before they are proxied to the destination servers. This can reduce load on the destination servers and ensure consistent policies are implemented across your applications.</p><h2 id=\"defaults\">Defaults</h2><p>The requests won't be automatically matched for cors preflight requests unless enabled in the route or application configuration.</p><h2 id=\"configuration\">Configuration</h2><p>CORS policies can be specified per route via RouteConfig.CorsPolicy and can be bound from the Routes sections of the config file. As with other route properties, this can be modified and reloaded without restarting the proxy. Policy names are case insensitive.</p><p>Example:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-74\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-74\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n          \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"CorsPolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n          }\n      },\n      \"Clusters\": {\n          \"cluster1\": {\n             \"Destinations\": {\n                \"cluster1/destination1\": {\n                    \"Address\": \"https://localhost:10001/\"\n                }\n             }\n          }\n      }\n             }\n          }\nCORS policies are an ASP.NET Core concept that the proxy utilizes. The proxy provides the\nabove configuration to specify a policy per route and the rest is handled by existing ASP.NET\nCore CORS Middleware.\nCORS policies can be configured in the application as follows:\n   services.AddCors(options =&gt;\n   {\n          options.AddPolicy(\"customPolicy\", builder =&gt;\n          {\n                 builder.AllowAnyOrigin();\n          });\n   });\nThen add the CORS middleware.\n   app.UseCors();\n   app.MapReverseProxy();</code></pre><h2 id=\"defaultpolicy\">DefaultPolicy</h2><p>Specifying the value default in a route's CorsPolicy parameter means that route will use the policy defined in CorsOptions.DefaultPolicy.</p><h2 id=\"disable-cors\">Disable CORS</h2><p>Specifying the value disable in a route's CorsPolicy parameter means the CORS middleware will refuse the CORS requests.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>The author created this article with assistance from AI. Learn more</p></div></div>",
+  "bodyHtml": "<h2 id=\"introduction\">Introduction</h2><p>Le proxy inverse peut traiter les requêtes cross-origin avant qu'elles ne soient transférées vers les serveurs de destination. Cela permet de réduire la charge sur les serveurs de destination et de garantir une application cohérente des stratégies dans l'ensemble de vos applications.</p><h2 id=\"defaults\">Comportement par défaut</h2><p>Les requêtes ne seront pas automatiquement mises en correspondance pour les requêtes de pré-vérification (preflight) CORS, sauf si cela est activé dans la configuration de la route ou de l'application.</p><h2 id=\"configuration\">Configuration</h2><p>Les stratégies CORS peuvent être spécifiées par route via RouteConfig.CorsPolicy et peuvent être liées à partir des sections Routes du fichier de configuration. Comme pour les autres propriétés de route, cette configuration peut être modifiée et rechargée sans redémarrer le proxy. Les noms de stratégie ne respectent pas la casse.</p><p>Exemple :</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-74\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-74\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n          \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"CorsPolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n          }\n      },\n      \"Clusters\": {\n          \"cluster1\": {\n             \"Destinations\": {\n                \"cluster1/destination1\": {\n                    \"Address\": \"https://localhost:10001/\"\n                }\n             }\n          }\n      }\n             }\n          }\nCORS policies are an ASP.NET Core concept that the proxy utilizes. The proxy provides the\nabove configuration to specify a policy per route and the rest is handled by existing ASP.NET\nCore CORS Middleware.\nCORS policies can be configured in the application as follows:\n   services.AddCors(options =&gt;\n   {\n          options.AddPolicy(\"customPolicy\", builder =&gt;\n          {\n                 builder.AllowAnyOrigin();\n          });\n   });\nThen add the CORS middleware.\n   app.UseCors();\n   app.MapReverseProxy();</code></pre><h2 id=\"defaultpolicy\">DefaultPolicy</h2><p>Spécifier la valeur default dans le paramètre CorsPolicy d'une route signifie que cette route utilisera la stratégie définie dans CorsOptions.DefaultPolicy.</p><h2 id=\"disable-cors\">Désactiver CORS</h2><p>Spécifier la valeur disable dans le paramètre CorsPolicy d'une route signifie que le middleware CORS refusera les requêtes CORS.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Remarque</div><p>Cet article a été rédigé avec l'aide de l'IA. En savoir plus</p></div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/cors",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "authn-authz",
-    "title": "Authentication & authorization"
+    "title": "Authentification et autorisation"
   },
   "next": {
     "slug": "https-tls",
-    "title": "HTTPS & TLS"
+    "title": "HTTPS et TLS"
   }
 }

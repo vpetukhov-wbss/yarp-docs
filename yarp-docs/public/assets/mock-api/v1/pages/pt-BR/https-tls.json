@@ -3,40 +3,40 @@
   "locale": "pt-BR",
   "group": "security",
   "kind": "doc",
-  "title": "HTTPS & TLS",
-  "lede": "HTTPS (HTTP over TLS encrypted connections) is the standard way to make HTTP requests on",
+  "title": "HTTPS e TLS",
+  "lede": "HTTPS (HTTP sobre conexões criptografadas por TLS) é a forma padrão de fazer requisições HTTP na",
   "headings": [
     {
       "id": "tls-termination",
-      "text": "TLS Termination",
+      "text": "Terminação de TLS",
       "level": 2
     },
     {
       "id": "configuring-incoming-connections",
-      "text": "Configuring incoming connections",
+      "text": "Configurando conexões de entrada",
       "level": 2
     },
     {
       "id": "advanced-tls-filters-with-kestrel",
-      "text": "Advanced TLS filters with Kestrel",
+      "text": "Filtros avançados de TLS com o Kestrel",
       "level": 2
     },
     {
       "id": "configuring-outgoing-connections",
-      "text": "Configuring outgoing connections",
+      "text": "Configurando conexões de saída",
       "level": 2
     }
   ],
-  "bodyHtml": "<p>HTTPS (HTTP over TLS encrypted connections) is the standard way to make HTTP requests on the Internet for security, integrity, and privacy reasons. There are several HTTPS/TLS considerations to account for when using a reverse proxy like YARP.</p><h2 id=\"tls-termination\">TLS Termination</h2><p>YARP is a level 7 HTTP proxy which means that incoming HTTPS/TLS connections are fully decrypted by the proxy so it can process and forward the HTTP requests. This is commonly known as TLS Termination. The outgoing connections to the destination(s) may or may not be encrypted, depending on the configuration provided.</p><p>TLS tunneling (CONNECT)</p><p>TLS tunneling using the CONNECT method is a feature used to proxy requests without decrypting them. This is not supported by YARP and there are no plans to add it.</p><h2 id=\"configuring-incoming-connections\">Configuring incoming connections</h2><p>YARP can run on top of all ASP.NET Core servers and configuring HTTPS/TLS for incoming connections is server specific. Check the docs for Kestrel, IIS, and Http.Sys for configuration details.</p><h2 id=\"advanced-tls-filters-with-kestrel\">Advanced TLS filters with Kestrel</h2><p>Kestrel supports intercepting incoming connections before the TLS handshake. YARP includes a TlsFrameHelper API that can parse the raw TLS handshake and enable you to gather custom telemetry or eagerly reject connections. These APIs cannot modify the TLS handshake or decrypt the data stream. See this example .</p><h2 id=\"configuring-outgoing-connections\">Configuring outgoing connections</h2><p>To enable TLS encryption when communicating with a destination specify the destination address as https like \"https://destinationHost\" . See the configuration docs for examples.</p><p>The host name specified in the destination address will be used for the TLS handshake by</p><p>default, including SNI and server certificate validation. If proxying the original host header is</p><p>enabled, that value will be used for the TLS handshake instead. If a custom host value needs to</p><p>be used then use the RequestHeader transform to set the host header.</p><p>Outbound connections to the destinations are handled by HttpClient/SocketsHttpHandler. A different instance and settings can be configured per cluster. Some settings are available in the configuration model, while others can only be configured in code. See the HttpClient docs for details.</p><p>Destination server certificates need to be trusted by the proxy or custom validation needs to be applied via the HttpClient configuration.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>The author created this article with assistance from AI. Learn more</p></div></div>",
+  "bodyHtml": "<p>HTTPS (HTTP sobre conexões criptografadas por TLS) é a forma padrão de fazer requisições HTTP na Internet por motivos de segurança, integridade e privacidade. Há várias considerações sobre HTTPS/TLS a serem levadas em conta ao usar um proxy reverso como o YARP.</p><h2 id=\"tls-termination\">Terminação de TLS</h2><p>O YARP é um proxy HTTP de camada 7, o que significa que as conexões HTTPS/TLS de entrada são totalmente descriptografadas pelo proxy para que ele possa processar e encaminhar as requisições HTTP. Isso é comumente conhecido como terminação de TLS. As conexões de saída para o(s) destino(s) podem ou não ser criptografadas, dependendo da configuração fornecida.</p><p>Tunelamento de TLS (CONNECT)</p><p>O tunelamento de TLS usando o método CONNECT é um recurso usado para fazer proxy de requisições sem descriptografá-las. Isso não é compatível com o YARP e não há planos de adicionar suporte a ele.</p><h2 id=\"configuring-incoming-connections\">Configurando conexões de entrada</h2><p>O YARP pode ser executado sobre todos os servidores do ASP.NET Core, e a configuração de HTTPS/TLS para conexões de entrada é específica de cada servidor. Consulte a documentação do Kestrel, do IIS e do Http.Sys para obter detalhes de configuração.</p><h2 id=\"advanced-tls-filters-with-kestrel\">Filtros avançados de TLS com o Kestrel</h2><p>O Kestrel oferece suporte à interceptação de conexões de entrada antes do handshake de TLS. O YARP inclui uma API TlsFrameHelper que pode analisar o handshake de TLS bruto e permitir que você colete telemetria personalizada ou rejeite conexões antecipadamente. Essas APIs não podem modificar o handshake de TLS nem descriptografar o fluxo de dados. Veja este exemplo .</p><h2 id=\"configuring-outgoing-connections\">Configurando conexões de saída</h2><p>Para habilitar a criptografia TLS na comunicação com um destino, especifique o endereço de destino como https, como em \"https://destinationHost\" . Consulte a documentação de configuração para ver exemplos.</p><p>O nome do host especificado no endereço de destino será usado para o handshake de TLS por</p><p>padrão, incluindo o SNI e a validação do certificado do servidor. Se o encaminhamento do cabeçalho host original estiver</p><p>habilitado, esse valor será usado para o handshake de TLS. Se for necessário usar um valor de host</p><p>personalizado, use a transformação RequestHeader para definir o cabeçalho host.</p><p>As conexões de saída para os destinos são tratadas pelo HttpClient/SocketsHttpHandler. Uma instância e configurações diferentes podem ser definidas por cluster. Algumas configurações estão disponíveis no modelo de configuração, enquanto outras só podem ser configuradas em código. Consulte a documentação do HttpClient para obter detalhes.</p><p>Os certificados do servidor de destino precisam ser confiáveis para o proxy, ou uma validação personalizada precisa ser aplicada por meio da configuração do HttpClient.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Nota</div><p>O autor criou este artigo com o auxílio de IA. Saiba mais</p></div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/https-tls",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "cors",
-    "title": "Cross-origin requests (CORS)"
+    "title": "Requisições entre origens (CORS)"
   },
   "next": {
     "slug": "header-guidelines",
-    "title": "HTTP header guidelines"
+    "title": "Diretrizes de cabeçalhos HTTP"
   }
 }

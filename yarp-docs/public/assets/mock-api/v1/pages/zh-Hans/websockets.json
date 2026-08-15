@@ -3,22 +3,22 @@
   "locale": "zh-Hans",
   "group": "protocols",
   "kind": "doc",
-  "title": "WebSockets & SPDY",
-  "lede": "YARP enables proxying WebSocket and SPDY connections by default. This support works with",
+  "title": "WebSockets 与 SPDY",
+  "lede": "YARP 默认支持代理 WebSocket 和 SPDY 连接。此支持适用于",
   "headings": [
     {
       "id": "yarp-proxying-websockets-and-spdy",
-      "text": "YARP Proxying WebSockets and SPDY",
+      "text": "YARP 代理 WebSockets 和 SPDY",
       "level": 2
     },
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "简介",
       "level": 2
     },
     {
       "id": "http-1-1-upgrades",
-      "text": "HTTP/1.1 Upgrades",
+      "text": "HTTP/1.1 升级",
       "level": 2
     },
     {
@@ -28,20 +28,20 @@
     },
     {
       "id": "timeout",
-      "text": "Timeout",
+      "text": "超时",
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"yarp-proxying-websockets-and-spdy\">YARP Proxying WebSockets and SPDY</h2><h2 id=\"introduction\">Introduction</h2><p>YARP enables proxying WebSocket and SPDY connections by default. This support works with both the direct forwarding and full pipeline approaches.</p><p>WebSockets is a bidirectional streaming protocol built on HTTP/1.1 or later adapted to HTTP/2 .</p><p>SPDY is the precursor to HTTP/2 and is commonly used in Kubernetes environments.</p><h2 id=\"http-1-1-upgrades\">HTTP/1.1 Upgrades</h2><p>WebSockets and SPDY are built on top of HTTP/1.1 using a feature called connection upgrades . YARP proxies the initial request, and if the destination server responds with 101 Switching Protocols , upgrades the connection to an opaque, bidirectional stream using the new protocol. YARP does not support upgrading to other protocols like HTTP/2 this way.</p><h2 id=\"http-2\">HTTP/2</h2><p>YARP supports WebSockets over HTTP/2 starting in .NET 7 and YARP 2.0. Kestrel is the only available AspNetCore server that will accept incoming HTTP/2 WebSocket requests and that support is automatically enabled. Browsers can detect this support advertised by the server and automatically switch to HTTP/2.</p><p>The incoming and outgoing protocol versions do not need to match. The incoming WebSocket request can be HTTP/1.1 or 2. There is no configuration specific to WebSockets for outgoing requests, YARP will use the ForwarderRequestConfig's Version and VersionPolicy to determine the outbound version to use. These default to HTTP/2 and RequestVersionOrLower.</p><p>WebSockets require different HTTP headers for HTTP/2 so YARP will add and remove these headers as needed when adapting between the different versions.</p><p>After the initial handshake WebSockets function the same way over both HTTP versions.</p><h2 id=\"timeout\">Timeout</h2><p>Http Request Timeouts (.NET 8+) can apply timeouts to all requests by default or by policy.</p><p>These timeouts will be disabled after a WebSocket handshake. They will still apply to gRPC</p><p>requests. For additional configuration see Timeouts.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>The author created this article with assistance from AI. Learn more</p></div></div>",
+  "bodyHtml": "<h2 id=\"yarp-proxying-websockets-and-spdy\">YARP 代理 WebSockets 和 SPDY</h2><h2 id=\"introduction\">简介</h2><p>YARP 默认支持代理 WebSocket 和 SPDY 连接。该支持同时适用于直接转发和完整管道两种方式。</p><p>WebSockets 是一种双向流式协议,构建于 HTTP/1.1 之上,后来又适配到了 HTTP/2 。</p><p>SPDY 是 HTTP/2 的前身,常用于 Kubernetes 环境中。</p><h2 id=\"http-1-1-upgrades\">HTTP/1.1 升级</h2><p>WebSockets 和 SPDY 都构建于 HTTP/1.1 之上,借助一项称为“连接升级”的特性实现。YARP 会代理初始请求,如果目标服务器返回 101 Switching Protocols 响应,就会将该连接升级为使用新协议的不透明双向流。YARP 不支持以这种方式升级到 HTTP/2 等其他协议。</p><h2 id=\"http-2\">HTTP/2</h2><p>从 .NET 7 和 YARP 2.0 开始,YARP 支持基于 HTTP/2 的 WebSockets。Kestrel 是唯一支持接受传入 HTTP/2 WebSocket 请求的 AspNetCore 服务器,且该支持是自动启用的。浏览器可以检测到服务器公告的这一支持,并自动切换到 HTTP/2。</p><p>传入和传出的协议版本不需要一致。传入的 WebSocket 请求可以是 HTTP/1.1 或 HTTP/2。对于传出请求,没有专门针对 WebSockets 的配置,YARP 会使用 ForwarderRequestConfig 的 Version 和 VersionPolicy 来确定所用的出站版本。它们默认分别为 HTTP/2 和 RequestVersionOrLower。</p><p>WebSockets 在 HTTP/2 下需要使用不同的 HTTP 标头,因此 YARP 会在不同版本之间进行适配时按需添加和移除这些标头。</p><p>完成初始握手之后,WebSockets 在这两种 HTTP 版本下的工作方式是相同的。</p><h2 id=\"timeout\">超时</h2><p>HTTP 请求超时(.NET 8+)可以按默认设置或按策略为所有请求应用超时。</p><p>这些超时会在 WebSocket 握手完成后被禁用。它们仍会适用于 gRPC</p><p>请求。有关更多配置信息,请参阅请求超时。</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>本文作者在 AI 的协助下创作本文。了解详情</p></div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/websockets",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "http3",
     "title": "HTTP/3"
   },
   "next": {
     "slug": "extensibility",
-    "title": "Overview"
+    "title": "概述"
   }
 }

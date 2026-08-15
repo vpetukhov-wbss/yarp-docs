@@ -3,18 +3,18 @@
   "groups": [
     {
       "id": "getting-started",
-      "label": "Getting started",
+      "label": "快速入门",
       "order": 1,
       "items": [
         {
           "slug": "yarp-overview",
-          "title": "Overview of YARP",
+          "title": "YARP 概述",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "getting-started",
-          "title": "Getting started",
+          "title": "快速入门",
           "order": 2,
           "kind": "doc"
         }
@@ -22,30 +22,30 @@
     },
     {
       "id": "configuration",
-      "label": "Configuration",
+      "label": "配置",
       "order": 2,
       "items": [
         {
           "slug": "config-files",
-          "title": "Configuration files",
+          "title": "配置文件",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "config-filters",
-          "title": "Configuration filters",
+          "title": "配置筛选器",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "config-providers",
-          "title": "Configuration providers",
+          "title": "配置提供程序",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "http-client-config",
-          "title": "HTTP client configuration",
+          "title": "HTTP 客户端配置",
           "order": 4,
           "kind": "doc"
         }
@@ -53,18 +53,18 @@
     },
     {
       "id": "routing",
-      "label": "Routing",
+      "label": "路由",
       "order": 3,
       "items": [
         {
           "slug": "header-routing",
-          "title": "Header-based routing",
+          "title": "基于标头的路由",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "queryparameter-routing",
-          "title": "Query parameter routing",
+          "title": "查询参数路由",
           "order": 2,
           "kind": "doc"
         }
@@ -72,24 +72,24 @@
     },
     {
       "id": "transforms",
-      "label": "Transforms",
+      "label": "转换",
       "order": 4,
       "items": [
         {
           "slug": "transforms",
-          "title": "Overview",
+          "title": "概述",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "transforms-request",
-          "title": "Request transforms",
+          "title": "请求转换",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "transforms-response",
-          "title": "Response & trailer transforms",
+          "title": "响应与尾部转换",
           "order": 3,
           "kind": "doc"
         }
@@ -97,36 +97,36 @@
     },
     {
       "id": "traffic-reliability",
-      "label": "Traffic & reliability",
+      "label": "流量与可靠性",
       "order": 5,
       "items": [
         {
           "slug": "load-balancing",
-          "title": "Load balancing",
+          "title": "负载均衡",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "session-affinity",
-          "title": "Session affinity",
+          "title": "会话亲和性",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "dests-health-checks",
-          "title": "Destination health checks",
+          "title": "目标运行状况检查",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "rate-limiting",
-          "title": "Rate limiting",
+          "title": "速率限制",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "timeouts",
-          "title": "Request timeouts",
+          "title": "请求超时",
           "order": 5,
           "kind": "doc"
         }
@@ -134,30 +134,30 @@
     },
     {
       "id": "security",
-      "label": "Security",
+      "label": "安全",
       "order": 6,
       "items": [
         {
           "slug": "authn-authz",
-          "title": "Authentication & authorization",
+          "title": "身份验证与授权",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "cors",
-          "title": "Cross-origin requests (CORS)",
+          "title": "跨域请求 (CORS)",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "https-tls",
-          "title": "HTTPS & TLS",
+          "title": "HTTPS 与 TLS",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "header-guidelines",
-          "title": "HTTP header guidelines",
+          "title": "HTTP 标头准则",
           "order": 4,
           "kind": "doc"
         }
@@ -165,12 +165,12 @@
     },
     {
       "id": "performance",
-      "label": "Performance",
+      "label": "性能",
       "order": 7,
       "items": [
         {
           "slug": "output-caching",
-          "title": "Output caching",
+          "title": "输出缓存",
           "order": 1,
           "kind": "doc"
         }
@@ -178,12 +178,12 @@
     },
     {
       "id": "protocols",
-      "label": "Protocols",
+      "label": "协议",
       "order": 8,
       "items": [
         {
           "slug": "grpc",
-          "title": "Proxying gRPC",
+          "title": "代理 gRPC",
           "order": 1,
           "kind": "doc"
         },
@@ -195,7 +195,7 @@
         },
         {
           "slug": "websockets",
-          "title": "WebSockets & SPDY",
+          "title": "WebSockets 与 SPDY",
           "order": 3,
           "kind": "doc"
         }
@@ -203,36 +203,36 @@
     },
     {
       "id": "extensibility",
-      "label": "Extensibility",
+      "label": "可扩展性",
       "order": 9,
       "items": [
         {
           "slug": "extensibility",
-          "title": "Overview",
+          "title": "概述",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "middleware",
-          "title": "Middleware",
+          "title": "中间件",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "direct-forwarding",
-          "title": "Direct forwarding",
+          "title": "直接转发",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "destination-resolvers",
-          "title": "Destination resolvers",
+          "title": "目标解析器",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "extensibility-transforms",
-          "title": "Request & response transforms",
+          "title": "请求与响应转换",
           "order": 5,
           "kind": "doc"
         }
@@ -240,24 +240,24 @@
     },
     {
       "id": "operations",
-      "label": "Operations",
+      "label": "运维",
       "order": 10,
       "items": [
         {
           "slug": "diagnosing-yarp-issues",
-          "title": "Diagnosing YARP-based proxies",
+          "title": "诊断基于 YARP 的代理",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "distributed-tracing",
-          "title": "Distributed tracing",
+          "title": "分布式跟踪",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "ab-testing",
-          "title": "A/B testing & rolling upgrades",
+          "title": "A/B 测试与滚动升级",
           "order": 3,
           "kind": "doc"
         }
@@ -265,24 +265,24 @@
     },
     {
       "id": "deployment",
-      "label": "Deployment",
+      "label": "部署",
       "order": 11,
       "items": [
         {
           "slug": "kubernetes-ingress",
-          "title": "Kubernetes Ingress Controller",
+          "title": "Kubernetes Ingress 控制器",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "service-fabric-int",
-          "title": "Service Fabric integration",
+          "title": "Service Fabric 集成",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "httpsys-delegation",
-          "title": "HTTP.sys delegation",
+          "title": "HTTP.sys 委派",
           "order": 3,
           "kind": "doc"
         }
@@ -292,7 +292,7 @@
   "appendix": [
     {
       "slug": "aspnetcore-getting-started",
-      "title": "Get started with ASP.NET Core",
+      "title": "ASP.NET Core 入门",
       "order": 1,
       "kind": "appendix"
     }

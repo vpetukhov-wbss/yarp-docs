@@ -3,27 +3,27 @@
   "locale": "zh-Hans",
   "group": "security",
   "kind": "doc",
-  "title": "Authentication & authorization",
-  "lede": "The reverse proxy can be used to authenticate and authorize requests before they are proxied",
+  "title": "身份验证与授权",
+  "lede": "反向代理可用于在请求被转发之前对其进行身份验证和授权",
   "headings": [
     {
       "id": "yarp-authentication-and-authorization",
-      "text": "YARP Authentication and Authorization",
+      "text": "YARP 身份验证与授权",
       "level": 2
     },
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "简介",
       "level": 2
     },
     {
       "id": "defaults",
-      "text": "Defaults",
+      "text": "默认设置",
       "level": 2
     },
     {
       "id": "configuration",
-      "text": "Configuration",
+      "text": "配置",
       "level": 2
     },
     {
@@ -43,45 +43,45 @@
     },
     {
       "id": "flowing-credentials",
-      "text": "Flowing Credentials",
+      "text": "传递凭据",
       "level": 2
     },
     {
       "id": "cookie-bearer-api-keys",
-      "text": "Cookie, bearer, API keys",
+      "text": "Cookie、持有者令牌、API 密钥",
       "level": 2
     },
     {
       "id": "oauth2-openidconnect-wsfederation",
-      "text": "OAuth2, OpenIdConnect, WsFederation",
+      "text": "OAuth2、OpenIdConnect、WsFederation",
       "level": 2
     },
     {
       "id": "windows-negotiate-ntlm-kerberos",
-      "text": "Windows, Negotiate, NTLM, Kerberos",
+      "text": "Windows、Negotiate、NTLM、Kerberos",
       "level": 2
     },
     {
       "id": "client-certificates",
-      "text": "Client Certificates",
+      "text": "客户端证书",
       "level": 2
     },
     {
       "id": "swapping-authentication-types",
-      "text": "Swapping authentication types",
+      "text": "转换身份验证类型",
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"yarp-authentication-and-authorization\">YARP Authentication and Authorization</h2><h2 id=\"introduction\">Introduction</h2><p>The reverse proxy can be used to authenticate and authorize requests before they are proxied to the destination servers. This can reduce load on the destination servers, add a layer of protection, and ensure consistent policies are implemented across your applications.</p><h2 id=\"defaults\">Defaults</h2><p>No authentication or authorization is performed on requests unless enabled in the route or application configuration.</p><h2 id=\"configuration\">Configuration</h2><p>Authorization policies can be specified per route via RouteConfig.AuthorizationPolicy and can be bound from the Routes sections of the config file. As with other route properties, this can be modified and reloaded without restarting the proxy. Policy names are case insensitive.</p><p>Example:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-73\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-73\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n          \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"AuthorizationPolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n          }\n      },\n      \"Clusters\": {\n          \"cluster1\": {\n             \"Destinations\": {\n                \"cluster1/destination1\": {\n                    \"Address\": \"https://localhost:10001/\"\n                }\n             }\n          }\n      }\n             }\n          }\nAuthorization policies are an ASP.NET Core concept that the proxy utilizes. The proxy provides\nthe above configuration to specify a policy per route and the rest is handled by existing\nASP.NET Core authentication and authorization components.\nAuthorization policies can be configured in the application as follows:\n   services.AddAuthorization(options =&gt;\n   {\n          options.AddPolicy(\"customPolicy\", policy =&gt;\n                 policy.RequireAuthenticatedUser());\n   });\nIn Program.cs add the Authorization and Authentication middleware.\n   app.UseAuthentication();\n   app.UseAuthorization();\n   app.MapReverseProxy();\nSee the Authentication docs for setting up your preferred kind of authentication.\nSpecial values:\nIn addition to custom policy names, there are two special values that can be specified in a\nroute's authorization parameter: default and anonymous . ASP.NET Core also has a\nFallbackPolicy setting that applies to routes that do not specify a policy.</code></pre><h2 id=\"defaultpolicy\">DefaultPolicy</h2><p>Specifying the value default in a route's authorization parameter means that route will use the policy defined in AuthorizationOptions.DefaultPolicy. That policy is pre-configured to require authenticated users.</p><h2 id=\"anonymous\">Anonymous</h2><p>Specifying the value anonymous in a route's authorization parameter means that route will not</p><p>require authorization regardless of any other configuration in the application such as the</p><p>FallbackPolicy.</p><h2 id=\"fallbackpolicy\">FallbackPolicy</h2><p>AuthorizationOptions.FallbackPolicy is the policy that will be used for any request or route that was not configured with a policy. FallbackPolicy does not have a value by default, any request will be allowed.</p><h2 id=\"flowing-credentials\">Flowing Credentials</h2><p>Even after a request has been authorized in the proxy, the destination server may still need to know who the user is (authentication) and what they're allowed to do (authorization). How you flow that information will depend on the type of authentication being used.</p><h2 id=\"cookie-bearer-api-keys\">Cookie, bearer, API keys</h2><p>These authentication types already pass their values in the request headers and these will flow to the destination server by default. That server will still need to verify and interpret those values, causing some double work.</p><h2 id=\"oauth2-openidconnect-wsfederation\">OAuth2, OpenIdConnect, WsFederation</h2><p>These protocols are commonly used with remote identity providers. The authentication process can be configured in the proxy application and will result in an authentication cookie. That cookie will flow to the destination server as a normal request header.</p><h2 id=\"windows-negotiate-ntlm-kerberos\">Windows, Negotiate, NTLM, Kerberos</h2><p>These authentication types are often bound to a specific connection. They are not supported as means of authenticating a user in a destination server behind the YARP proxy (see #166 . They can be used to authenticate an incoming request to the proxy, but that identity information will have to be communicated to the destination server in another form. They can also be used to authenticate the proxy to the destination servers, but only as the proxy's own user, impersonating the client is not supported.</p><h2 id=\"client-certificates\">Client Certificates</h2><p>Client certificates are a TLS feature and are negotiated as part of a connection. See these docs</p><p>for additional information. The certificate can be forwarded to the destination server as an</p><p>HTTP header using the ClientCert transform.</p><h2 id=\"swapping-authentication-types\">Swapping authentication types</h2><p>Authentication types like Windows that don't flow naturally to the destination server will need to be converted in the proxy to an alternate form. For example a JWT bearer token can be created with the user information and set on the proxy request.</p><p>These swaps can be performed using custom request transforms. Detailed examples can be developed for specific scenarios if there is enough community interest. We need more community feedback on how you want to convert and flow identity information.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>The author created this article with assistance from AI. Learn more</p></div></div>",
+  "bodyHtml": "<h2 id=\"yarp-authentication-and-authorization\">YARP 身份验证与授权</h2><h2 id=\"introduction\">简介</h2><p>反向代理可用于在请求转发到目标服务器之前对其进行身份验证和授权。这样可以减轻目标服务器的负载,增加一层保护,并确保在各个应用程序中实施一致的策略。</p><h2 id=\"defaults\">默认设置</h2><p>除非在路由或应用程序配置中启用,否则不会对请求执行任何身份验证或授权。</p><h2 id=\"configuration\">配置</h2><p>可以通过 RouteConfig.AuthorizationPolicy 为每个路由指定授权策略,并可从配置文件的 Routes 部分进行绑定。与其他路由属性一样,可以在不重启代理的情况下修改并重新加载该设置。策略名称不区分大小写。</p><p>示例:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-73\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-73\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n          \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"AuthorizationPolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n          }\n      },\n      \"Clusters\": {\n          \"cluster1\": {\n             \"Destinations\": {\n                \"cluster1/destination1\": {\n                    \"Address\": \"https://localhost:10001/\"\n                }\n             }\n          }\n      }\n             }\n          }\nAuthorization policies are an ASP.NET Core concept that the proxy utilizes. The proxy provides\nthe above configuration to specify a policy per route and the rest is handled by existing\nASP.NET Core authentication and authorization components.\nAuthorization policies can be configured in the application as follows:\n   services.AddAuthorization(options =&gt;\n   {\n          options.AddPolicy(\"customPolicy\", policy =&gt;\n                 policy.RequireAuthenticatedUser());\n   });\nIn Program.cs add the Authorization and Authentication middleware.\n   app.UseAuthentication();\n   app.UseAuthorization();\n   app.MapReverseProxy();\nSee the Authentication docs for setting up your preferred kind of authentication.\nSpecial values:\nIn addition to custom policy names, there are two special values that can be specified in a\nroute's authorization parameter: default and anonymous . ASP.NET Core also has a\nFallbackPolicy setting that applies to routes that do not specify a policy.</code></pre><h2 id=\"defaultpolicy\">DefaultPolicy</h2><p>在路由的授权参数中指定值 default 表示该路由将使用 AuthorizationOptions.DefaultPolicy 中定义的策略。该策略已预先配置为要求经过身份验证的用户。</p><h2 id=\"anonymous\">Anonymous</h2><p>在路由的授权参数中指定值 anonymous 表示该路由将不会</p><p>要求进行授权,无论应用程序中是否配置了其他策略,例如</p><p>FallbackPolicy。</p><h2 id=\"fallbackpolicy\">FallbackPolicy</h2><p>AuthorizationOptions.FallbackPolicy 是应用于未配置策略的任何请求或路由的策略。FallbackPolicy 默认没有值,此时将允许所有请求通过。</p><h2 id=\"flowing-credentials\">传递凭据</h2><p>即使请求已在代理中获得授权,目标服务器可能仍需要知道用户是谁(身份验证)以及他们被允许执行哪些操作(授权)。如何传递这些信息取决于所使用的身份验证类型。</p><h2 id=\"cookie-bearer-api-keys\">Cookie、持有者令牌、API 密钥</h2><p>这些身份验证类型已经在请求标头中传递其值,默认情况下这些值会传递到目标服务器。目标服务器仍需要验证并解释这些值,这会造成一些重复工作。</p><h2 id=\"oauth2-openidconnect-wsfederation\">OAuth2、OpenIdConnect、WsFederation</h2><p>这些协议通常与远程标识提供程序一起使用。身份验证过程可以在代理应用程序中进行配置,并会生成一个身份验证 Cookie。该 Cookie 将作为普通请求标头传递到目标服务器。</p><h2 id=\"windows-negotiate-ntlm-kerberos\">Windows、Negotiate、NTLM、Kerberos</h2><p>这些身份验证类型通常绑定到特定连接。不支持将它们用作在 YARP 代理背后的目标服务器中对用户进行身份验证的手段(参见 #166)。它们可用于对传入代理的请求进行身份验证,但该身份信息必须以其他形式传递给目标服务器。它们也可用于让代理向目标服务器进行身份验证,但仅限于以代理自身用户的身份,不支持模拟客户端。</p><h2 id=\"client-certificates\">客户端证书</h2><p>客户端证书是 TLS 的一项功能,在连接建立过程中进行协商。请参阅这些文档</p><p>了解更多信息。可以使用 ClientCert 转换将该证书作为</p><p>HTTP 标头转发到目标服务器。</p><h2 id=\"swapping-authentication-types\">转换身份验证类型</h2><p>像 Windows 这样无法自然传递到目标服务器的身份验证类型,需要在代理中转换为另一种形式。例如,可以使用用户信息创建 JWT 持有者令牌,并将其设置在代理请求上。</p><p>这些转换可以通过自定义请求转换来实现。如果社区有足够的兴趣,可以针对特定场景开发详细示例。我们需要更多社区反馈,以了解您希望如何转换和传递身份信息。</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>本文作者在 AI 的协助下创作本文。了解详情</p></div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/authn-authz",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "timeouts",
-    "title": "Request timeouts"
+    "title": "请求超时"
   },
   "next": {
     "slug": "cors",
-    "title": "Cross-origin requests (CORS)"
+    "title": "跨域请求 (CORS)"
   }
 }

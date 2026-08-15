@@ -3,27 +3,27 @@
   "locale": "bg",
   "group": "security",
   "kind": "doc",
-  "title": "Authentication & authorization",
-  "lede": "The reverse proxy can be used to authenticate and authorize requests before they are proxied",
+  "title": "Удостоверяване и оторизация",
+  "lede": "Обратният прокси сървър може да се използва за удостоверяване и оторизация на заявките, преди те да бъдат препратени",
   "headings": [
     {
       "id": "yarp-authentication-and-authorization",
-      "text": "YARP Authentication and Authorization",
+      "text": "Удостоверяване и оторизация в YARP",
       "level": 2
     },
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "Въведение",
       "level": 2
     },
     {
       "id": "defaults",
-      "text": "Defaults",
+      "text": "Стойности по подразбиране",
       "level": 2
     },
     {
       "id": "configuration",
-      "text": "Configuration",
+      "text": "Конфигурация",
       "level": 2
     },
     {
@@ -43,12 +43,12 @@
     },
     {
       "id": "flowing-credentials",
-      "text": "Flowing Credentials",
+      "text": "Предаване на удостоверителни данни",
       "level": 2
     },
     {
       "id": "cookie-bearer-api-keys",
-      "text": "Cookie, bearer, API keys",
+      "text": "Cookie, bearer, API ключове",
       "level": 2
     },
     {
@@ -63,25 +63,25 @@
     },
     {
       "id": "client-certificates",
-      "text": "Client Certificates",
+      "text": "Клиентски сертификати",
       "level": 2
     },
     {
       "id": "swapping-authentication-types",
-      "text": "Swapping authentication types",
+      "text": "Смяна на типовете удостоверяване",
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"yarp-authentication-and-authorization\">YARP Authentication and Authorization</h2><h2 id=\"introduction\">Introduction</h2><p>The reverse proxy can be used to authenticate and authorize requests before they are proxied to the destination servers. This can reduce load on the destination servers, add a layer of protection, and ensure consistent policies are implemented across your applications.</p><h2 id=\"defaults\">Defaults</h2><p>No authentication or authorization is performed on requests unless enabled in the route or application configuration.</p><h2 id=\"configuration\">Configuration</h2><p>Authorization policies can be specified per route via RouteConfig.AuthorizationPolicy and can be bound from the Routes sections of the config file. As with other route properties, this can be modified and reloaded without restarting the proxy. Policy names are case insensitive.</p><p>Example:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-73\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-73\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n          \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"AuthorizationPolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n          }\n      },\n      \"Clusters\": {\n          \"cluster1\": {\n             \"Destinations\": {\n                \"cluster1/destination1\": {\n                    \"Address\": \"https://localhost:10001/\"\n                }\n             }\n          }\n      }\n             }\n          }\nAuthorization policies are an ASP.NET Core concept that the proxy utilizes. The proxy provides\nthe above configuration to specify a policy per route and the rest is handled by existing\nASP.NET Core authentication and authorization components.\nAuthorization policies can be configured in the application as follows:\n   services.AddAuthorization(options =&gt;\n   {\n          options.AddPolicy(\"customPolicy\", policy =&gt;\n                 policy.RequireAuthenticatedUser());\n   });\nIn Program.cs add the Authorization and Authentication middleware.\n   app.UseAuthentication();\n   app.UseAuthorization();\n   app.MapReverseProxy();\nSee the Authentication docs for setting up your preferred kind of authentication.\nSpecial values:\nIn addition to custom policy names, there are two special values that can be specified in a\nroute's authorization parameter: default and anonymous . ASP.NET Core also has a\nFallbackPolicy setting that applies to routes that do not specify a policy.</code></pre><h2 id=\"defaultpolicy\">DefaultPolicy</h2><p>Specifying the value default in a route's authorization parameter means that route will use the policy defined in AuthorizationOptions.DefaultPolicy. That policy is pre-configured to require authenticated users.</p><h2 id=\"anonymous\">Anonymous</h2><p>Specifying the value anonymous in a route's authorization parameter means that route will not</p><p>require authorization regardless of any other configuration in the application such as the</p><p>FallbackPolicy.</p><h2 id=\"fallbackpolicy\">FallbackPolicy</h2><p>AuthorizationOptions.FallbackPolicy is the policy that will be used for any request or route that was not configured with a policy. FallbackPolicy does not have a value by default, any request will be allowed.</p><h2 id=\"flowing-credentials\">Flowing Credentials</h2><p>Even after a request has been authorized in the proxy, the destination server may still need to know who the user is (authentication) and what they're allowed to do (authorization). How you flow that information will depend on the type of authentication being used.</p><h2 id=\"cookie-bearer-api-keys\">Cookie, bearer, API keys</h2><p>These authentication types already pass their values in the request headers and these will flow to the destination server by default. That server will still need to verify and interpret those values, causing some double work.</p><h2 id=\"oauth2-openidconnect-wsfederation\">OAuth2, OpenIdConnect, WsFederation</h2><p>These protocols are commonly used with remote identity providers. The authentication process can be configured in the proxy application and will result in an authentication cookie. That cookie will flow to the destination server as a normal request header.</p><h2 id=\"windows-negotiate-ntlm-kerberos\">Windows, Negotiate, NTLM, Kerberos</h2><p>These authentication types are often bound to a specific connection. They are not supported as means of authenticating a user in a destination server behind the YARP proxy (see #166 . They can be used to authenticate an incoming request to the proxy, but that identity information will have to be communicated to the destination server in another form. They can also be used to authenticate the proxy to the destination servers, but only as the proxy's own user, impersonating the client is not supported.</p><h2 id=\"client-certificates\">Client Certificates</h2><p>Client certificates are a TLS feature and are negotiated as part of a connection. See these docs</p><p>for additional information. The certificate can be forwarded to the destination server as an</p><p>HTTP header using the ClientCert transform.</p><h2 id=\"swapping-authentication-types\">Swapping authentication types</h2><p>Authentication types like Windows that don't flow naturally to the destination server will need to be converted in the proxy to an alternate form. For example a JWT bearer token can be created with the user information and set on the proxy request.</p><p>These swaps can be performed using custom request transforms. Detailed examples can be developed for specific scenarios if there is enough community interest. We need more community feedback on how you want to convert and flow identity information.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>The author created this article with assistance from AI. Learn more</p></div></div>",
+  "bodyHtml": "<h2 id=\"yarp-authentication-and-authorization\">Удостоверяване и оторизация в YARP</h2><h2 id=\"introduction\">Въведение</h2><p>Обратният прокси сървър може да се използва за удостоверяване и оторизация на заявките, преди те да бъдат препратени към дестинациите. Това може да намали натоварването на дестинациите, да добави допълнителен слой защита и да гарантира последователно прилагане на политиките във всички ваши приложения.</p><h2 id=\"defaults\">Стойности по подразбиране</h2><p>Върху заявките не се извършва удостоверяване или оторизация, освен ако това не е разрешено в конфигурацията на маршрута или на приложението.</p><h2 id=\"configuration\">Конфигурация</h2><p>Политиките за оторизация могат да бъдат зададени за всеки маршрут поотделно чрез RouteConfig.AuthorizationPolicy и могат да бъдат обвързани от секциите Routes на конфигурационния файл. Както при другите свойства на маршрута, това може да бъде променяно и презареждано без рестартиране на прокси сървъра. Имената на политиките не са чувствителни към главни и малки букви.</p><p>Пример:</p><pre class=\"code-block\"><span class=\"lang-tag\">JSON</span><button class=\"copy-btn\" data-copy=\"auto-code-73\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-73\">{\n   \"ReverseProxy\": {\n      \"Routes\": {\n          \"route1\" : {\n             \"ClusterId\": \"cluster1\",\n             \"AuthorizationPolicy\": \"customPolicy\",\n             \"Match\": {\n                \"Hosts\": [ \"localhost\" ]\n             }\n          }\n      },\n      \"Clusters\": {\n          \"cluster1\": {\n             \"Destinations\": {\n                \"cluster1/destination1\": {\n                    \"Address\": \"https://localhost:10001/\"\n                }\n             }\n          }\n      }\n             }\n          }\nAuthorization policies are an ASP.NET Core concept that the proxy utilizes. The proxy provides\nthe above configuration to specify a policy per route and the rest is handled by existing\nASP.NET Core authentication and authorization components.\nAuthorization policies can be configured in the application as follows:\n   services.AddAuthorization(options =&gt;\n   {\n          options.AddPolicy(\"customPolicy\", policy =&gt;\n                 policy.RequireAuthenticatedUser());\n   });\nIn Program.cs add the Authorization and Authentication middleware.\n   app.UseAuthentication();\n   app.UseAuthorization();\n   app.MapReverseProxy();\nSee the Authentication docs for setting up your preferred kind of authentication.\nSpecial values:\nIn addition to custom policy names, there are two special values that can be specified in a\nroute's authorization parameter: default and anonymous . ASP.NET Core also has a\nFallbackPolicy setting that applies to routes that do not specify a policy.</code></pre><h2 id=\"defaultpolicy\">DefaultPolicy</h2><p>Задаването на стойност default в параметъра за оторизация на даден маршрут означава, че този маршрут ще използва политиката, дефинирана в AuthorizationOptions.DefaultPolicy. Тази политика е предварително конфигурирана да изисква удостоверени потребители.</p><h2 id=\"anonymous\">Anonymous</h2><p>Задаването на стойност anonymous в параметъра за оторизация на даден маршрут означава, че този маршрут няма да</p><p>изисква оторизация, независимо от друга конфигурация в приложението, като например</p><p>FallbackPolicy.</p><h2 id=\"fallbackpolicy\">FallbackPolicy</h2><p>AuthorizationOptions.FallbackPolicy е политиката, която ще се използва за всяка заявка или маршрут, за които не е конфигурирана политика. FallbackPolicy няма стойност по подразбиране, така че всички заявки ще бъдат разрешени.</p><h2 id=\"flowing-credentials\">Предаване на удостоверителни данни</h2><p>Дори след като дадена заявка вече е била оторизирана в прокси сървъра, дестинацията може все още да се нуждае да знае кой е потребителят (удостоверяване) и какво му е позволено да прави (оторизация). Начинът, по който предавате тази информация, зависи от вида на използваното удостоверяване.</p><h2 id=\"cookie-bearer-api-keys\">Cookie, bearer, API ключове</h2><p>Тези типове удостоверяване вече предават стойностите си в заглавните части на заявката и по подразбиране те се прехвърлят към дестинацията. Тя все пак ще трябва да провери и интерпретира тези стойности, което води до известно дублиране на работата.</p><h2 id=\"oauth2-openidconnect-wsfederation\">OAuth2, OpenIdConnect, WsFederation</h2><p>Тези протоколи обикновено се използват с отдалечени доставчици на идентичност. Процесът на удостоверяване може да бъде конфигуриран в прокси приложението и води до създаването на бисквитка за удостоверяване. Тази бисквитка ще бъде прехвърлена към дестинацията като обикновена заглавна част на заявката.</p><h2 id=\"windows-negotiate-ntlm-kerberos\">Windows, Negotiate, NTLM, Kerberos</h2><p>Тези типове удостоверяване често са обвързани с конкретна връзка. Те не се поддържат като средство за удостоверяване на потребител в дестинация зад YARP прокси сървъра (вижте #166). Те могат да се използват за удостоверяване на входяща заявка към прокси сървъра, но тази информация за идентичността ще трябва да бъде предадена на дестинацията по друг начин. Освен това могат да се използват за удостоверяване на прокси сървъра пред дестинациите, но само от името на собствения потребител на прокси сървъра — представянето от името на клиента (impersonation) не се поддържа.</p><h2 id=\"client-certificates\">Клиентски сертификати</h2><p>Клиентските сертификати са функция на TLS и се договарят като част от установяването на връзката. Вижте тази документация</p><p>за допълнителна информация. Сертификатът може да бъде препратен към дестинацията като</p><p>HTTP заглавна част чрез трансформацията ClientCert.</p><h2 id=\"swapping-authentication-types\">Смяна на типовете удостоверяване</h2><p>Типове удостоверяване като Windows, които не се предават естествено към дестинацията, трябва да бъдат преобразувани в прокси сървъра в алтернативна форма. Например може да се създаде JWT bearer токен с информацията за потребителя и да се зададе в заявката на прокси сървъра.</p><p>Тези замени могат да се извършват чрез персонализирани трансформации на заявки. При достатъчен интерес от общността могат да бъдат разработени подробни примери за конкретни сценарии. Имаме нужда от повече обратна връзка от общността относно това как искате да преобразувате и предавате информацията за идентичност.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Забележка</div><p>Тази статия е създадена от автора с помощта на AI. Научете повече</p></div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/authn-authz",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "timeouts",
-    "title": "Request timeouts"
+    "title": "Таймаути на заявки"
   },
   "next": {
     "slug": "cors",
-    "title": "Cross-origin requests (CORS)"
+    "title": "Заявки от различен произход (CORS)"
   }
 }

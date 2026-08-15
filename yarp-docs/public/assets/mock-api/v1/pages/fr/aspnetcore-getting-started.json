@@ -3,12 +3,12 @@
   "locale": "fr",
   "group": "appendix",
   "kind": "appendix",
-  "title": "Get started with ASP.NET Core",
-  "lede": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI.",
+  "title": "Prise en main d'ASP.NET Core",
+  "lede": "Ce tutoriel montre comment créer et exécuter une application web ASP.NET Core à l'aide de l'interface CLI .NET.",
   "headings": [
     {
       "id": "prerequisites",
-      "text": "Prerequisites",
+      "text": "Prérequis",
       "level": 2
     },
     {
@@ -18,17 +18,17 @@
     },
     {
       "id": "create-a-web-app-project",
-      "text": "Create a web app project",
+      "text": "Créer un projet d'application web",
       "level": 2
     },
     {
       "id": "run-the-app",
-      "text": "Run the app",
+      "text": "Exécuter l'application",
       "level": 2
     },
     {
       "id": "edit-a-razor-page",
-      "text": "Edit a Razor page",
+      "text": "Modifier une page Razor",
       "level": 2
     },
     {
@@ -43,22 +43,22 @@
     },
     {
       "id": "next-steps",
-      "text": "Next steps",
+      "text": "Étapes suivantes",
       "level": 2
     },
     {
       "id": "overview-of-asp-net-core",
-      "text": "Overview of ASP.NET Core",
+      "text": "Vue d'ensemble d'ASP.NET Core",
       "level": 2
     }
   ],
-  "bodyHtml": "<p>Tutorial: Get started with ASP.NET Core</p><p>This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI.</p><p>For Blazor tutorials, see ASP.NET Core Blazor tutorials.</p><p>You'll learn how to: Create a web app project. Run the app. Edit a Razor page.</p><p>At the end, you'll have a working web app running on your local machine.</p><h2 id=\"prerequisites\">Prerequisites</h2><h2 id=\"net-8-sdk\">.NET 8 SDK</h2><h2 id=\"create-a-web-app-project\">Create a web app project</h2><p>Open a command shell, and enter the following command:</p><p>.NET CLI dotnet new webapp --output aspnetcoreapp --no-https</p><p>The preceding command creates a new web app project in a directory named aspnetcoreapp .</p><p>The project doesn't use HTTPS.</p><h2 id=\"run-the-app\">Run the app</h2><p>Run the following commands:</p><pre class=\"code-block\"><span class=\"lang-tag\">.NET CLI</span><button class=\"copy-btn\" data-copy=\"auto-code-114\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-114\">   cd aspnetcoreapp\n   dotnet run\nThe run command produces output like the following example:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">Output</span><button class=\"copy-btn\" data-copy=\"auto-code-115\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-115\">   Building...\n   info: Microsoft.Hosting.Lifetime[14]\n             Now listening on: http://localhost:5109\n   info: Microsoft.Hosting.Lifetime[0]\n             Application started. Press Ctrl+C to shut down.\n   info: Microsoft.Hosting.Lifetime[0]\n             Hosting environment: Development\n   info: Microsoft.Hosting.Lifetime[0]\n             Content root path: C:\\aspnetcoreapp\nOpen a browser and go to the URL shown in the output. In this example, the URL is\nhttp://localhost:5109 .\nThe browser shows the home page.</code></pre><h2 id=\"edit-a-razor-page\">Edit a Razor page</h2><p>Change the home page:</p><p>In the command shell, press Ctrl+C (Cmd+C in macOS) to exit the program.</p><p>Open Pages/Index.cshtml in a text editor.</p><p>Replace the line that begins with \"Learn about\" with the following highlighted markup and code:</p><h2 id=\"cshtml\">CSHTML</h2><p>@page @model IndexModel @{</p><p>ViewData[\"Title\"] = \"Home page\"; }</p><p>&lt;div class=\"text-center\"&gt; &lt;h1 class=\"display-4\"&gt;Welcome&lt;/h1&gt; &lt;p&gt;Hello, world! The time on the server is @DateTime.Now&lt;/p&gt;</p><h2 id=\"div\">&lt;/div&gt;</h2><p>Save your changes. In the command shell run the dotnet run command again. In the browser, refresh the page and verify the changes are displayed.</p><h2 id=\"next-steps\">Next steps</h2><p>In this tutorial, you learned how to:</p><p>Create a web app project. Run the project. Make a change.</p><p>To learn more about ASP.NET Core, see the following:</p><h2 id=\"overview-of-asp-net-core\">Overview of ASP.NET Core</h2>",
+  "bodyHtml": "<p>Tutoriel : Prise en main d'ASP.NET Core</p><p>Ce tutoriel montre comment créer et exécuter une application web ASP.NET Core à l'aide de l'interface CLI .NET.</p><p>Pour les tutoriels Blazor, consultez les tutoriels ASP.NET Core Blazor.</p><p>Vous allez apprendre à : Créer un projet d'application web. Exécuter l'application. Modifier une page Razor.</p><p>À la fin, vous disposerez d'une application web fonctionnelle s'exécutant sur votre ordinateur local.</p><h2 id=\"prerequisites\">Prérequis</h2><h2 id=\"net-8-sdk\">.NET 8 SDK</h2><h2 id=\"create-a-web-app-project\">Créer un projet d'application web</h2><p>Ouvrez un interpréteur de commandes et entrez la commande suivante :</p><p>.NET CLI dotnet new webapp --output aspnetcoreapp --no-https</p><p>La commande précédente crée un nouveau projet d'application web dans un répertoire nommé aspnetcoreapp .</p><p>Le projet n'utilise pas HTTPS.</p><h2 id=\"run-the-app\">Exécuter l'application</h2><p>Exécutez les commandes suivantes :</p><pre class=\"code-block\"><span class=\"lang-tag\">.NET CLI</span><button class=\"copy-btn\" data-copy=\"auto-code-114\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-114\">   cd aspnetcoreapp\n   dotnet run\nThe run command produces output like the following example:</code></pre><pre class=\"code-block\"><span class=\"lang-tag\">Output</span><button class=\"copy-btn\" data-copy=\"auto-code-115\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"auto-code-115\">   Building...\n   info: Microsoft.Hosting.Lifetime[14]\n             Now listening on: http://localhost:5109\n   info: Microsoft.Hosting.Lifetime[0]\n             Application started. Press Ctrl+C to shut down.\n   info: Microsoft.Hosting.Lifetime[0]\n             Hosting environment: Development\n   info: Microsoft.Hosting.Lifetime[0]\n             Content root path: C:\\aspnetcoreapp\nOpen a browser and go to the URL shown in the output. In this example, the URL is\nhttp://localhost:5109 .\nThe browser shows the home page.</code></pre><h2 id=\"edit-a-razor-page\">Modifier une page Razor</h2><p>Modifiez la page d'accueil :</p><p>Dans l'interpréteur de commandes, appuyez sur Ctrl+C (Cmd+C sur macOS) pour quitter le programme.</p><p>Ouvrez Pages/Index.cshtml dans un éditeur de texte.</p><p>Remplacez la ligne commençant par « Learn about » par le balisage et le code surlignés suivants :</p><h2 id=\"cshtml\">CSHTML</h2><p>@page @model IndexModel @{</p><p>ViewData[\"Title\"] = \"Home page\"; }</p><p>&lt;div class=\"text-center\"&gt; &lt;h1 class=\"display-4\"&gt;Welcome&lt;/h1&gt; &lt;p&gt;Hello, world! The time on the server is @DateTime.Now&lt;/p&gt;</p><h2 id=\"div\">&lt;/div&gt;</h2><p>Enregistrez vos modifications. Dans l'interpréteur de commandes, exécutez de nouveau la commande dotnet run . Dans le navigateur, actualisez la page et vérifiez que les modifications sont affichées.</p><h2 id=\"next-steps\">Étapes suivantes</h2><p>Dans ce tutoriel, vous avez appris à :</p><p>Créer un projet d'application web. Exécuter le projet. Apporter une modification.</p><p>Pour en savoir plus sur ASP.NET Core, consultez la ressource suivante :</p><h2 id=\"overview-of-asp-net-core\">Vue d'ensemble d'ASP.NET Core</h2>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/getting-started/",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "httpsys-delegation",
-    "title": "HTTP.sys delegation"
+    "title": "Délégation HTTP.sys"
   },
   "next": null
 }

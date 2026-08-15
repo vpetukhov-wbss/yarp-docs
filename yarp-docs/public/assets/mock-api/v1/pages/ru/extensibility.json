@@ -3,17 +3,17 @@
   "locale": "ru",
   "group": "extensibility",
   "kind": "doc",
-  "title": "Overview",
-  "lede": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:",
+  "title": "Обзор",
+  "lede": "Есть два основных способа расширения YARP — в зависимости от желаемого поведения маршрутизации:",
   "headings": [
     {
       "id": "overview-of-yarp-extensibility",
-      "text": "Overview of YARP extensibility",
+      "text": "Обзор расширяемости YARP",
       "level": 2
     },
     {
       "id": "middleware-pipeline",
-      "text": "Middleware pipeline",
+      "text": "Конвейер промежуточного ПО",
       "level": 2
     },
     {
@@ -22,16 +22,16 @@
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"overview-of-yarp-extensibility\">Overview of YARP extensibility</h2><p>There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:</p><p>Middleware Pipeline Http Forwarder</p><h2 id=\"middleware-pipeline\">Middleware pipeline</h2><p>YARP uses the concept of Routes, Clusters and Destinations. These can be supplied through configuration files or directly through code. Based on the routing rules, YARP picks a cluster and enumerates the possible destinations. It then uses the middleware pipeline to select the destination based on destination health, session affinity, load balancing etc.</p><p>Most of the prebuilt pipeline can be customized through code:</p><p>Configuration Providers Destination Enumeration Session Affinity Load Balancing Health Checks Request Transforms HttpClient configuration</p><p>You can also change the pipeline definition to replace modules with your own implementation(s) or add additional modules as needed. For more information see Middleware.</p><h2 id=\"http-forwarder\">HTTP Forwarder</h2><p>If the YARP pipeline is too rigid for your use case or the scale of routing rules and destinations isn't suitable for loading into memory, then you can implement your own routing logic and use the HTTP Forwarder to direct requests to your chosen destination. The HttpForwarder component takes the HTTP context and forwards the request to the supplied destination.</p><p>The transform component can still be used if the forwarder is needed. For more information see Direct forwarding.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Note</div><p>The author created this article with assistance from AI. Learn more</p></div></div>",
+  "bodyHtml": "<h2 id=\"overview-of-yarp-extensibility\">Обзор расширяемости YARP</h2><p>Есть два основных способа расширения YARP — в зависимости от желаемого поведения маршрутизации:</p><p>Конвейер промежуточного ПО (Middleware Pipeline). HTTP Forwarder.</p><h2 id=\"middleware-pipeline\">Конвейер промежуточного ПО</h2><p>YARP использует понятия маршрутов (Routes), кластеров (Clusters) и узлов назначения (Destinations). Они могут задаваться через файлы конфигурации или напрямую через код. На основе правил маршрутизации YARP выбирает кластер и перечисляет возможные узлы назначения. Затем с помощью конвейера промежуточного ПО он выбирает узел назначения с учётом работоспособности узла, привязки сеансов, балансировки нагрузки и т. д.</p><p>Большую часть готового конвейера можно настроить через код:</p><p>Поставщики конфигурации. Перечисление узлов назначения. Привязка сеансов. Балансировка нагрузки. Проверки работоспособности. Преобразования запросов. Настройка HttpClient.</p><p>Вы также можете изменить определение конвейера, заменив модули собственными реализациями или добавив дополнительные модули по мере необходимости. Дополнительные сведения см. в разделе Промежуточное ПО.</p><h2 id=\"http-forwarder\">HTTP Forwarder</h2><p>Если конвейер YARP слишком жёсткий для вашего сценария или масштаб правил маршрутизации и узлов назначения не подходит для загрузки в память, вы можете реализовать собственную логику маршрутизации и использовать HTTP Forwarder для направления запросов на выбранный узел назначения. Компонент HttpForwarder принимает HTTP-контекст и пересылает запрос на переданный узел назначения.</p><p>Компонент преобразований (transform) по-прежнему можно использовать вместе с пересыльщиком (forwarder), если он нужен. Дополнительные сведения см. в разделе Прямая пересылка.</p><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Примечание</div><p>Автор подготовил эту статью с помощью ИИ. Подробнее</p></div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/extensibility",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "websockets",
-    "title": "WebSockets & SPDY"
+    "title": "WebSockets и SPDY"
   },
   "next": {
     "slug": "middleware",
-    "title": "Middleware"
+    "title": "Промежуточное ПО"
   }
 }
