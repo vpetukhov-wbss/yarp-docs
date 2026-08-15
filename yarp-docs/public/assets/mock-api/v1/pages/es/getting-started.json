@@ -3,18 +3,40 @@
   "locale": "es",
   "group": "getting-started",
   "kind": "doc",
-  "title": "Primeros pasos",
-  "lede": "Agregue YARP a un nuevo proyecto de ASP.NET Core y reenvíe todas las solicitudes a un único backend en pocas líneas de código.",
+  "title": "Getting started with YARP",
+  "lede": "Add YARP to a new ASP.NET Core project and forward every request to a single backend in a few lines of code.",
   "headings": [
-    { "id": "prerequisites", "text": "Requisitos previos", "level": 2 },
-    { "id": "create-the-project", "text": "Crear el proyecto", "level": 2 },
-    { "id": "configure-the-proxy", "text": "Configurar el proxy", "level": 2 },
-    { "id": "run-it", "text": "Ejecutarlo", "level": 2 }
+    {
+      "id": "prerequisites",
+      "text": "Prerequisites",
+      "level": 2
+    },
+    {
+      "id": "create-the-project",
+      "text": "Create the project",
+      "level": 2
+    },
+    {
+      "id": "configure-the-proxy",
+      "text": "Configure the proxy",
+      "level": 2
+    },
+    {
+      "id": "run-it",
+      "text": "Run it",
+      "level": 2
+    }
   ],
-  "bodyHtml": "<h2 id=\"prerequisites\">Requisitos previos</h2><p>El SDK de .NET y un servidor backend al que reenviar solicitudes - cualquier servidor HTTP sirve para hacer pruebas, incluida otra aplicación ASP.NET Core que se ejecute localmente.</p><h2 id=\"create-the-project\">Crear el proyecto</h2><p>Cree un proyecto vacío de ASP.NET Core y agregue el paquete <code>Yarp.ReverseProxy</code>:</p><div class=\"example-box\"><div class=\"eb-head\"><h3>Crear y agregar el paquete</h3><p>Desde una carpeta vacía.</p></div><pre class=\"code-block\"><span class=\"lang-tag\">.NET CLI</span><button class=\"copy-btn\" data-copy=\"cli-1\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"cli-1\">dotnet new web -o MyProxy\ncd MyProxy\ndotnet add package Yarp.ReverseProxy</code></pre></div><h2 id=\"configure-the-proxy\">Configurar el proxy</h2><p>Registre el proxy inverso y cargue su configuración desde <code>appsettings.json</code>:</p><div class=\"example-box\"><div class=\"eb-head\"><h3>Program.cs</h3><p>Registra el proxy y asigna sus rutas.</p></div><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"cs-gs-1\" aria-label=\"Copy code\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"cs-gs-1\"><span class=\"tok-kw\">var</span> builder = WebApplication.<span class=\"tok-type\">CreateBuilder</span>(args);\n\nbuilder.Services.<span class=\"tok-type\">AddReverseProxy</span>()\n    .<span class=\"tok-type\">LoadFromConfig</span>(builder.Configuration.<span class=\"tok-type\">GetSection</span>(<span class=\"tok-str\">\"ReverseProxy\"</span>));\n\n<span class=\"tok-kw\">var</span> app = builder.<span class=\"tok-type\">Build</span>();\napp.<span class=\"tok-type\">MapReverseProxy</span>();\napp.<span class=\"tok-type\">Run</span>();</code></pre></div><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Nota</div><p>Consulte <a href=\"/en/config-files\">Archivos de configuración</a> para ver la forma completa de <code>appsettings.json</code> - una ruta y un clúster con al menos un destino.</p></div></div><h2 id=\"run-it\">Ejecutarlo</h2><p>Inicie la aplicación con <code>dotnet run</code> y envíe una solicitud a la URL del proxy - se reenvía al destino configurado y devuelve la respuesta sin cambios.</p>",
+  "bodyHtml": "<h2 id=\"prerequisites\">Prerequisites</h2><p>The .NET SDK, and a backend server to forward requests to - any HTTP server will do for testing, including another ASP.NET Core app running locally.</p>\n<h2 id=\"create-the-project\">Create the project</h2><p>Create an empty ASP.NET Core project and add the <code>Yarp.ReverseProxy</code> package:</p>\n<div class=\"example-box\"><div class=\"eb-head\"><h3>Create and add the package</h3><p>From an empty folder.</p>\n</div><pre class=\"code-block\"><span class=\"lang-tag\">.NET CLI</span><button class=\"copy-btn\" data-copy=\"getting-started-code-1\" aria-label=\"Copiar código\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"getting-started-code-1\">dotnet new web -o MyProxy\n<span class=\"tok-type\">cd</span> MyProxy\ndotnet <span class=\"tok-type\">add</span> package Yarp.ReverseProxy</code></pre></div><h2 id=\"configure-the-proxy\">Configure the proxy</h2><p>Register the reverse proxy and load its configuration from <code>appsettings.json</code>:</p>\n<div class=\"example-box\"><div class=\"eb-head\"><h3>Program.cs</h3><p>Registers the proxy and maps its routes.</p>\n</div><pre class=\"code-block\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"getting-started-code-2\" aria-label=\"Copiar código\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"getting-started-code-2\"><span class=\"tok-type\"><span class=\"tok-kw\">var</span></span> builder <span class=\"tok-punc\">=</span> WebApplication<span class=\"tok-punc\">.</span><span class=\"tok-type\">CreateBuilder</span><span class=\"tok-punc\">(</span>args<span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span>\n\nbuilder<span class=\"tok-punc\">.</span>Services<span class=\"tok-punc\">.</span><span class=\"tok-type\">AddReverseProxy</span><span class=\"tok-punc\">(</span><span class=\"tok-punc\">)</span>\n    <span class=\"tok-punc\">.</span><span class=\"tok-type\">LoadFromConfig</span><span class=\"tok-punc\">(</span>builder<span class=\"tok-punc\">.</span>Configuration<span class=\"tok-punc\">.</span><span class=\"tok-type\">GetSection</span><span class=\"tok-punc\">(</span><span class=\"tok-str\">\"ReverseProxy\"</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span>\n\n<span class=\"tok-type\"><span class=\"tok-kw\">var</span></span> app <span class=\"tok-punc\">=</span> builder<span class=\"tok-punc\">.</span><span class=\"tok-type\">Build</span><span class=\"tok-punc\">(</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span>\napp<span class=\"tok-punc\">.</span><span class=\"tok-type\">MapReverseProxy</span><span class=\"tok-punc\">(</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span>\napp<span class=\"tok-punc\">.</span><span class=\"tok-type\">Run</span><span class=\"tok-punc\">(</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span></code></pre></div><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Nota</div><p>See <a href=\"/es/config-files\">Configuration files</a> for the full <code>appsettings.json</code> shape - a route and a cluster with at least one destination.</p>\n</div></div><h2 id=\"run-it\">Run it</h2><p>Start the app with <code>dotnet run</code> and send a request to the proxy&#39;s URL - it forwards to your configured destination and relays the response back, unchanged.</p>\n",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/getting-started",
   "lastUpdated": "2025-02-10",
-  "translated": true,
-  "prev": { "slug": "yarp-overview", "title": "Información general de YARP" },
-  "next": { "slug": "config-files", "title": "Archivos de configuración" }
+  "translated": false,
+  "prev": {
+    "slug": "yarp-overview",
+    "title": "Overview of YARP"
+  },
+  "next": {
+    "slug": "config-files",
+    "title": "config-files"
+  }
 }

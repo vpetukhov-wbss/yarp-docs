@@ -16,6 +16,24 @@
   "language": {
     "chooseLanguage": "Choisissez une langue"
   },
+  "docBody": {
+    "copyCode": "Copier le code",
+    "calloutNote": "Remarque",
+    "calloutImportant": "Important",
+    "calloutTip": "Astuce",
+    "seeAlso": "Voir aussi",
+    "langOutput": "Sortie",
+    "langConsole": "Console"
+  },
+  "support": {
+    "cta": "Soutenir ce projet",
+    "menuTitle": "Soutenir ce projet",
+    "beerLabel": "Offrez-moi une bière",
+    "beerPrice": "5 €",
+    "knuckleLabel": "Offrez-moi un jarret de porc",
+    "knucklePrice": "10 €",
+    "note": "Ouvre Revolut dans un nouvel onglet"
+  },
   "nav": {
     "documentation": "Documentation",
     "appendix": "Annexe",

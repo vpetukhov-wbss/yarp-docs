@@ -16,6 +16,24 @@
   "language": {
     "chooseLanguage": "Επιλέξτε γλώσσα"
   },
+  "docBody": {
+    "copyCode": "Αντιγραφή κώδικα",
+    "calloutNote": "Σημείωση",
+    "calloutImportant": "Σημαντικό",
+    "calloutTip": "Συμβουλή",
+    "seeAlso": "Δείτε επίσης",
+    "langOutput": "Έξοδος",
+    "langConsole": "Κονσόλα"
+  },
+  "support": {
+    "cta": "Υποστήριξε αυτό το έργο",
+    "menuTitle": "Υποστήριξε αυτό το έργο",
+    "beerLabel": "Κέρασέ με μια μπύρα",
+    "beerPrice": "5€",
+    "knuckleLabel": "Κέρασέ με ένα χοιρινό κότσι",
+    "knucklePrice": "10€",
+    "note": "Ανοίγει το Revolut σε νέα καρτέλα"
+  },
   "nav": {
     "documentation": "Τεκμηρίωση",
     "appendix": "Παράρτημα",

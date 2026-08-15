@@ -6,10 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test && vitest run --config vitest.content.config.mts",
     "lint": "ng lint",
     "format": "prettier --write \"src/**/*.{ts,html,scss}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,html,scss}\""
+    "format:check": "prettier --check \"src/**/*.{ts,html,scss}\"",
+    "content:build": "node scripts/content/build-content.mjs",
+    "content:check": "node scripts/content/validate.mjs"
   },
   "private": true,
   "packageManager": "npm@11.11.0",
@@ -35,8 +37,11 @@
     "angular-eslint": "21.4.0",
     "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",
+    "js-yaml": "5.3.0",
     "jsdom": "^28.0.0",
+    "marked": "15.0.7",
     "prettier": "^3.8.1",
+    "prismjs": "1.30.0",
     "typescript": "~5.9.2",
     "typescript-eslint": "8.59.2",
     "vitest": "^4.0.8"

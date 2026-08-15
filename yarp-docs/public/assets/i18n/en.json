@@ -16,6 +16,24 @@
   "language": {
     "chooseLanguage": "Choose a language"
   },
+  "docBody": {
+    "copyCode": "Copy code",
+    "calloutNote": "Note",
+    "calloutImportant": "Important",
+    "calloutTip": "Tip",
+    "seeAlso": "See also",
+    "langOutput": "Output",
+    "langConsole": "Console"
+  },
+  "support": {
+    "cta": "Support this project",
+    "menuTitle": "Support this project",
+    "beerLabel": "Buy me a beer",
+    "beerPrice": "€5",
+    "knuckleLabel": "Buy me a pork knuckle",
+    "knucklePrice": "€10",
+    "note": "Opens Revolut in a new tab"
+  },
   "nav": {
     "documentation": "Documentation",
     "appendix": "Appendix",

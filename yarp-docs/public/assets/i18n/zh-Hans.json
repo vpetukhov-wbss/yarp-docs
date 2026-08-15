@@ -16,6 +16,24 @@
   "language": {
     "chooseLanguage": "选择语言"
   },
+  "docBody": {
+    "copyCode": "复制代码",
+    "calloutNote": "说明",
+    "calloutImportant": "重要",
+    "calloutTip": "提示",
+    "seeAlso": "另请参阅",
+    "langOutput": "输出",
+    "langConsole": "控制台"
+  },
+  "support": {
+    "cta": "支持这个项目",
+    "menuTitle": "支持这个项目",
+    "beerLabel": "请我喝杯啤酒",
+    "beerPrice": "5€",
+    "knuckleLabel": "请我吃个猪肘",
+    "knucklePrice": "10€",
+    "note": "在新标签页中打开 Revolut"
+  },
   "nav": {
     "documentation": "文档",
     "appendix": "附录",

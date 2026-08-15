@@ -16,6 +16,24 @@
   "language": {
     "chooseLanguage": "Выберите язык"
   },
+  "docBody": {
+    "copyCode": "Копировать код",
+    "calloutNote": "Примечание",
+    "calloutImportant": "Важно",
+    "calloutTip": "Совет",
+    "seeAlso": "См. также",
+    "langOutput": "Вывод",
+    "langConsole": "Консоль"
+  },
+  "support": {
+    "cta": "Поддержать проект",
+    "menuTitle": "Поддержать проект",
+    "beerLabel": "Угости меня пивом",
+    "beerPrice": "5€",
+    "knuckleLabel": "Угости меня свиной рулькой",
+    "knucklePrice": "10€",
+    "note": "Открывает Revolut в новой вкладке"
+  },
   "nav": {
     "documentation": "Документация",
     "appendix": "Приложение",
