@@ -1,0 +1,41 @@
+<div class="support-wrap">
+  <button
+    type="button"
+    class="icon-btn support-btn"
+    (click)="toggleOpen()"
+    aria-haspopup="true"
+    [attr.aria-expanded]="open()"
+    [attr.aria-label]="'support.cta' | translate"
+  >
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="6" y="8" width="10" height="12" rx="1.5" />
+      <path d="M16 11a3 3 0 0 1 0 6" />
+      <path d="M6 11.5h10" />
+    </svg>
+  </button>
+
+  @if (open()) {
+    <div class="support-menu">
+      <div class="cap">{{ 'support.menuTitle' | translate }}</div>
+      <a class="support-item" [href]="beerUrl" target="_blank" rel="noopener" (click)="close()">
+        {{ 'support.beerLabel' | translate }}
+        <span class="price">{{ 'support.beerPrice' | translate }}</span>
+      </a>
+      <a class="support-item" [href]="knuckleUrl" target="_blank" rel="noopener" (click)="close()">
+        {{ 'support.knuckleLabel' | translate }}
+        <span class="price">{{ 'support.knucklePrice' | translate }}</span>
+      </a>
+      <div class="note">{{ 'support.note' | translate }}</div>
+    </div>
+  }
+</div>
