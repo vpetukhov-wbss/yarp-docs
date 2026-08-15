@@ -1,0 +1,52 @@
+YARP Docs - Third-Party Content Notice
+=======================================
+
+The documentation content served by this application (everything under
+yarp-docs/content/ and compiled to yarp-docs/public/assets/mock-api/v1/) is
+adapted from Microsoft's YARP documentation on Microsoft Learn:
+
+  https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/
+
+Copyright (c) Microsoft Corporation. Licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0):
+
+  https://creativecommons.org/licenses/by/4.0/
+
+Changes were made. This is not a verbatim republication of the original
+Microsoft Learn pages. The content in this repository has been:
+
+  - restructured and, in most pages, substantially expanded with
+    additional conceptual framing, worked examples, and cross-links not
+    present in the original source, while every API name, type, method,
+    config key, default value, and version claim remains grounded in the
+    original source text;
+  - re-authored as Markdown with a custom compiler (see
+    yarp-docs/content/README.md) rather than copied HTML;
+  - translated into Bulgarian, Russian, French, Greek, Spanish, German,
+    Portuguese (Brazil), and Simplified Chinese, in addition to the
+    original English.
+
+Each individual page in yarp-docs/content/ records its own specific
+Microsoft Learn source URL in its `sourceUrl` frontmatter field, and every
+compiled page displays a per-page attribution line linking back to that
+exact source and to the CC BY 4.0 license, in the reader's own language
+(see the `article.attribution` translation key in each of
+yarp-docs/public/assets/i18n/*.json).
+
+Source PDFs
+-----------
+
+The 36 PDF files at the root of this repository (one per documentation
+topic, e.g. "Overview of YARP _ Microsoft Learn.pdf") are plain-text
+extractions of the original Microsoft Learn pages, kept as a grounding and
+fact-checking reference for authoring and reviewing the content above -
+see yarp-docs/scripts/content/extract-pdf.mjs. They are not modified or
+redistributed beyond their role as an internal authoring aid, and are
+covered by the same CC BY 4.0 license and attribution above.
+
+YARP itself
+-----------
+
+YARP (Yet Another Reverse Proxy) is an open-source project from the .NET
+Foundation, unrelated in license terms to the documentation notice above.
+See https://github.com/dotnet/yarp for YARP's own source and license.
