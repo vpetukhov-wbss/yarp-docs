@@ -23,7 +23,12 @@
     <span class="ver">v2.3</span>
   </a>
 
-  <button type="button" class="hdr-search" (click)="openSearch()" [attr.aria-label]="'header.searchAriaLabel' | translate">
+  <button
+    type="button"
+    class="hdr-search"
+    (click)="openSearch()"
+    [attr.aria-label]="'search.shortcutHint' | translate: { key: shortcutKey }"
+  >
     <svg
       width="15"
       height="15"
@@ -37,7 +42,14 @@
       <path d="m21 21-4.3-4.3" />
     </svg>
     <span>{{ 'header.searchPlaceholder' | translate }}</span>
-    <span class="kbd"><kbd>Ctrl</kbd><kbd>K</kbd></span>
+    <span class="kbd" aria-hidden="true">
+      @if (isApple) {
+        <kbd>⌘</kbd>
+      } @else {
+        <kbd>Ctrl</kbd>
+      }
+      <kbd>K</kbd>
+    </span>
   </button>
 
   <div class="hdr-actions">
