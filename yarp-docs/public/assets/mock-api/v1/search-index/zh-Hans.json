@@ -441,684 +441,684 @@
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+    "title": "基于标头的路由",
+    "excerpt": "无论是在配置中指定,还是通过代码指定,代理路由都必须至少包含一个用于匹配的路径或主机。"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › YARP Header Based Routing",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › YARP 基于标头的路由",
     "anchor": "yarp-header-based-routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+    "excerpt": "无论是在配置中指定,还是通过代码指定,代理路由都必须至少包含一个用于匹配的路径或主机。除此之外,路由还可以指定一个或多个必须出现在请求中的标头。"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Precedence",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 优先级",
     "anchor": "precedence",
-    "excerpt": "The default route match precedence order is path method host headers query parameters That means a route which specifies methods and no headers will match…"
+    "excerpt": "默认的路由匹配优先级顺序为: 路径 方法 主机 标头 查询参数 这意味着,一个指定了方法但未指定标头的路由,会先于一个指定了标头但未指定方法的路由被匹配。可以通过在路由上设置 Order 属性来覆盖这一默认顺序(参见配置属性中的示例)。"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Configuration",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 配置",
     "anchor": "configuration",
-    "excerpt": "Headers are specified in the Match section of a proxy route. If multiple headers rules are specified on a route then all must match for a route to be taken. OR…"
+    "excerpt": "标头在代理路由的 Match 部分中指定。 如果在一个路由上指定了多条标头规则,则必须全部匹配,该路由才会被采用。若要实现&quot;或&quot;逻辑,则必须在单条标头规则内部实现,或者拆分为多个独立的路由来实现。 配置: JSON\"Routes\": { \"route1\" : { \"ClusterId\":…"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Contract",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 协定",
     "anchor": "contract",
-    "excerpt": "RouteHeader defines the code contract and is mapped from config."
+    "excerpt": "RouteHeader 定义了代码协定,并从配置中进行映射。"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Name",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 名称",
     "anchor": "name",
-    "excerpt": "The header name to check for on the request. A non-empty value is required. This field is case- insensitive per the HTTP RFCs."
+    "excerpt": "要在请求上检查的标头名称。必须为非空值。根据 HTTP RFC 的规定,该字段不区分大小写。"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Values",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 值",
     "anchor": "values",
-    "excerpt": "A list of possible values to search for. The header must match at least one of these values according to the specified Mode except for the…"
+    "excerpt": "要查找的一组可能取值的列表。除 &#39;NotContains&#39; 之外,标头必须根据指定的 Mode 至少匹配这些值中的一个。除非 Mode 设置为 Exists 或 NotExists,否则至少需要提供一个值。"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Mode",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 模式",
     "anchor": "mode",
-    "excerpt": "HeaderMatchMode specifies how to match the value(s) against the request header. The default is ExactHeader . ExactHeader - Any of the headers with the given…"
+    "excerpt": "HeaderMatchMode 指定了应如何将这些值与请求标头进行匹配。默认值为 ExactHeader。 ExactHeader——具有给定名称的任意标头必须完整匹配,是否区分大小写取决于 IsCaseSensitive 的值。如果某个标头包含多个值(以 , 或 ;…"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › IsCaseSensitive",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › IsCaseSensitive",
     "anchor": "iscasesensitive",
-    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+    "excerpt": "指示值匹配是否区分大小写。默认值为 false,即不区分大小写。"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Examples",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 示例",
     "anchor": "examples",
-    "excerpt": "These examples use the configuration specified above."
+    "excerpt": "以下示例均使用上文指定的配置。"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 1 - Exact Header Match",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 场景 1 - 精确标头匹配",
     "anchor": "scenario-1-exact-header-match",
-    "excerpt": "A request with the following header will match against route1. Header1: Value1 If a header contains multiple values, each one will be matched separately. The…"
+    "excerpt": "带有以下标头的请求将匹配 route1。 Header1: Value1 如果一个标头包含多个值,每个值都会单独进行匹配。以下请求将会匹配。 Header1: Value1, Value2 如果多个值分散在多个同名标头中,同样成立。 Header1: Value1 Header1: Value2…"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 2 - Multiple Values",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 场景 2 - 多个值",
     "anchor": "scenario-2-multiple-values",
-    "excerpt": "Route2 defined multiple values to search for in a header (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also specified the…"
+    "excerpt": "route2 为要在标头中查找的值定义了多个候选值(&quot;1prefix&quot;、&quot;2prefix&quot;),其中任意一个都可以接受。它还将 Mode 指定为 HeaderPrefix,因此任何以这些值开头的标头都可以接受。以下任意一个标头都会匹配 route2。 Header2:…"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 3 - Exists",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 场景 3 - Exists",
     "anchor": "scenario-3-exists",
-    "excerpt": "Route3 only requires that the header &quot;Header3&quot; exists with any non-empty value The following is an example that will match route3. Header3: value An…"
+    "excerpt": "route3 只要求标头 &quot;Header3&quot; 存在且包含任意非空值。以下是一个会匹配 route3 的示例。 Header3: value 空标头不会匹配。 Header3: 由于该模式并不检查标头的具体内容,因此它确实支持包含多个值的标头,以及多个同名标头。以下情况都会匹配。 Header3:…"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 4 - Multiple Headers",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 场景 4 - 多个标头",
     "anchor": "scenario-4-multiple-headers",
-    "excerpt": "Route4 requires both header4 and header5 , each matching according to their specified Mode . The following headers will match route4: Header4: value1 Header5:…"
+    "excerpt": "route4 要求 header4 和 header5 同时存在,并分别按照各自指定的 Mode 进行匹配。以下标头组合将匹配 route4: Header4: value1 Header5: AnyValue Header4: value2 Header5: AnyValue 以下标头组合不会匹配…"
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 5 - NotExists",
+    "title": "基于标头的路由",
+    "headingPath": "基于标头的路由 › 场景 5 - NotExists",
     "anchor": "scenario-5-notexists",
-    "excerpt": "Route7 requires that the header &quot;Header7&quot; must not exists The following headers will match route7: NotHeader7: AnyValue The following headers will…"
+    "excerpt": "route7 要求标头 &quot;Header7&quot; 必须不存在。以下标头将匹配 route7: NotHeader7: AnyValue 以下标头不会匹配 route7,因为标头 &quot;Header7&quot; 存在。 Header7: AnyValue Header7: 注意:本文作者在 AI…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+    "title": "基于查询参数的路由",
+    "excerpt": "无论是在配置中指定,还是通过代码指定,代理路由都必须至少包含一个用于匹配的路径或主机。"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › YARP Query Parameter Based Routing",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › YARP 基于查询参数的路由",
     "anchor": "yarp-query-parameter-based-routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+    "excerpt": "无论是在配置中指定,还是通过代码指定,代理路由都必须至少包含一个用于匹配的路径或主机。除此之外,路由还可以指定一个或多个必须出现在请求中的查询参数。"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Precedence",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 优先级",
     "anchor": "precedence",
-    "excerpt": "The default route match precedence order is 1) path, 2) method, 3) host, 4) headers 5) query parameters. That means a route which specifies methods and no…"
+    "excerpt": "默认的路由匹配优先级顺序为:1)路径,2)方法,3)主机,4)标头,5)查询参数。这意味着,一个指定了方法但未指定查询参数的路由,会先于一个指定了查询参数但未指定方法的路由被匹配。可以通过在路由上设置 Order 属性来覆盖这一默认顺序。"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Configuration",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 配置",
     "anchor": "configuration",
-    "excerpt": "Query Parameters are specified in the Match section of a proxy route. If multiple query parameter rules are specified on a route then all must match for a…"
+    "excerpt": "查询参数在代理路由的 Match 部分中指定。 如果在一个路由上指定了多条查询参数规则,则必须全部匹配,该路由才会被采用。若要实现&quot;或&quot;逻辑,则必须在单条查询参数规则内部实现,或者拆分为多个独立的路由来实现。 配置: JSON\"Routes\": { \"route1\" : {…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Contract",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 协定",
     "anchor": "contract",
-    "excerpt": "RouteQueryParameter defines the code contract and is mapped from config."
+    "excerpt": "RouteQueryParameter 定义了代码协定,并从配置中进行映射。"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Name",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 名称",
     "anchor": "name",
-    "excerpt": "The query parameter name to check for on the request. A non-empty value is required. This field is case-insensitive."
+    "excerpt": "要在请求上检查的查询参数名称。必须为非空值。该字段不区分大小写。"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Values",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 值",
     "anchor": "values",
-    "excerpt": "A list of possible values to search for. The query parameter must match at least one of these values according to the specified Mode except for the…"
+    "excerpt": "要查找的一组可能取值的列表。除 &#39;NotContains&#39; 之外,查询参数必须根据指定的 Mode 至少匹配这些值中的一个。除非 Mode 设置为 Exists,否则至少需要提供一个值。"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Mode",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 模式",
     "anchor": "mode",
-    "excerpt": "QueryParameterMatchMode specifies how to match the value(s) against the request query parameter. The default is Exact . Exact - The query parameter must match…"
+    "excerpt": "QueryParameterMatchMode 指定了应如何将这些值与请求中的查询参数进行匹配。默认值为 Exact。 Exact——查询参数必须完整匹配,是否区分大小写取决于 IsCaseSensitive…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › IsCaseSensitive",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › IsCaseSensitive",
     "anchor": "iscasesensitive",
-    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+    "excerpt": "指示值匹配是否区分大小写。默认值为 false,即不区分大小写。"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Encoding",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 编码",
     "anchor": "encoding",
-    "excerpt": "The request query string will be parsed and decoded before matching against the route rules. &quot;route8&quot; : { &quot;ClusterId&quot;:…"
+    "excerpt": "请求的查询字符串会先经过解析和解码,然后再与路由规则进行匹配。 &quot;route8&quot; : { &quot;ClusterId&quot;: &quot;cluster1&quot;, &quot;Match&quot;: { &quot;Path&quot;:…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Examples",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 示例",
     "anchor": "examples",
-    "excerpt": "These examples use the configuration specified above."
+    "excerpt": "以下示例均使用上文指定的配置。"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 1 - Exact Query Parameter Match",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 场景 1 - 精确查询参数匹配",
     "anchor": "scenario-1-exact-query-parameter-match",
-    "excerpt": "A request with the following query parameter will match against route1. ?QueryParam1=Value1 Multiple query parameters with the same name are not currently…"
+    "excerpt": "带有以下查询参数的请求将匹配 route1。 ?QueryParam1=Value1 目前不支持多个同名查询参数,因此不会匹配。 ?QueryParam1=Value1&amp;QueryParam1=Value2"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 2 - Multiple Values",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 场景 2 - 多个值",
     "anchor": "scenario-2-multiple-values",
-    "excerpt": "Route2 defined multiple values to search for in a query parameter (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also…"
+    "excerpt": "route2 为要在查询参数中查找的值定义了多个候选值(&quot;1prefix&quot;、&quot;2prefix&quot;),其中任意一个都可以接受。它还将 Mode 指定为 Prefix,因此任何以这些值开头的查询参数都可以接受。以下任意一个查询参数都会匹配 route2。…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 3 - Exists",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 场景 3 - Exists",
     "anchor": "scenario-3-exists",
-    "excerpt": "Route3 only requires that the query parameter &quot;QueryParam3&quot; exists with any non-empty value The following is an example that will match route3.…"
+    "excerpt": "route3 只要求查询参数 &quot;QueryParam3&quot; 存在且包含任意非空值。以下是一个会匹配 route3 的示例。 ?QueryParam3=value 空查询参数不会匹配。 ?QueryParam3 ?QueryParam3=…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 4 - Multiple QueryParameters",
+    "title": "基于查询参数的路由",
+    "headingPath": "基于查询参数的路由 › 场景 4 - 多个查询参数",
     "anchor": "scenario-4-multiple-queryparameters",
-    "excerpt": "Route4 requires both QueryParam4 and QueryParam5 , each matching according to their specified Mode . The following query parameters will match route4:…"
+    "excerpt": "route4 要求 QueryParam4 和 QueryParam5 同时存在,并分别按照各自指定的 Mode 进行匹配。以下查询参数组合将匹配 route4: ?QueryParam4=value1&amp;QueryParam5=AnyValue…"
   },
   {
     "slug": "transforms",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Overview",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "title": "概述",
+    "excerpt": "在代理请求时,通常需要修改请求或响应的部分内容,以适应目标服务器的要求。"
   },
   {
     "slug": "transforms",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › YARP Request and Response Transforms",
+    "title": "概述",
+    "headingPath": "概述 › YARP 请求与响应转换",
     "anchor": "yarp-request-and-response-transforms",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "在代理请求时,通常需要修改请求或响应的部分内容,以适应目标服务器的要求。"
   },
   {
     "slug": "transforms",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Introduction",
+    "title": "概述",
+    "headingPath": "概述 › 简介",
     "anchor": "introduction",
-    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+    "excerpt": "在代理请求时,通常需要修改请求或响应的部分内容,以适应目标服务器的要求,或传递客户端原始 IP 地址等额外数据。这一过程是通过转换来实现的。转换的类型在应用程序级别全局定义,随后由各个路由提供参数来启用和配置这些转换。这些转换不会修改原始请求对象,只会修改代理请求。 YARP…"
   },
   {
     "slug": "transforms",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Defaults",
+    "title": "概述",
+    "headingPath": "概述 › 默认设置",
     "anchor": "defaults",
-    "excerpt": "The following transforms are enabled by default for all routes. They can be configured or disabled as shown later in this document. Host - Suppress the…"
+    "excerpt": "以下转换针对所有路由默认启用,可以按照本文后面所示的方式对其进行配置或禁用。 Host——抑制传入请求的 Host 标头。代理请求默认使用目标服务器地址中指定的主机名。参见下文的 RequestHeaderOriginalHost。X-Forwarded-For——将客户端的 IP 地址设置到…"
   },
   {
     "slug": "transforms",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Transform Categories",
+    "title": "概述",
+    "headingPath": "概述 › 转换类别",
     "anchor": "transform-categories",
-    "excerpt": "Transforms fall into a few categories: Request, Response, and Response Trailers. Request trailers are not supported because they are not supported by the…"
+    "excerpt": "转换分为几个类别:请求、响应,以及响应尾部标头。由于底层的 HttpClient 不支持请求尾部标头,因此不支持对其进行转换。 如果内置的转换集合不够用,可以通过扩展性机制添加自定义转换。"
   },
   {
     "slug": "transforms",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Adding transforms",
+    "title": "概述",
+    "headingPath": "概述 › 添加转换",
     "anchor": "adding-transforms",
-    "excerpt": "Transforms can be added to routes either through configuration or programmatically."
+    "excerpt": "转换既可以通过配置添加到路由,也可以通过编程方式添加。"
   },
   {
     "slug": "transforms",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › From Configuration",
+    "title": "概述",
+    "headingPath": "概述 › 通过配置添加",
     "anchor": "from-configuration",
-    "excerpt": "Transforms can be configured on RouteConfig.Transforms and can be bound from the Routes sections of the config file. These can be modified and reloaded without…"
+    "excerpt": "转换可以在 RouteConfig.Transforms 上进行配置,并可以从配置文件的 Routes 部分绑定。这些设置可以在不重启代理的情况下进行修改和重新加载。一个转换通过一个或多个键值字符串对来配置。 下面是一个常见转换的示例: JSON{ \"ReverseProxy\": { \"Routes\": {…"
   },
   {
     "slug": "transforms",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › From Code",
+    "title": "概述",
+    "headingPath": "概述 › 通过代码添加",
     "anchor": "from-code",
-    "excerpt": "Transforms can be added to routes programmatically by calling the AddTransforms method. AddTransforms can be called after AddReverseProxy to provide a callback…"
+    "excerpt": "可以通过调用 AddTransforms 方法,以编程方式将转换添加到路由。 AddTransforms 可以在 AddReverseProxy 之后调用,用于提供一个配置转换的回调。每当路由被构建或重新构建时都会调用该回调,开发者可以借此检查 RouteConfig 信息,并按条件为其添加转换。…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "title": "请求转换",
+    "excerpt": "请求转换涉及请求路径、查询字符串、HTTP 版本、方法和标头。"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathPrefix",
+    "title": "请求转换",
+    "headingPath": "请求转换 › PathPrefix",
     "anchor": "pathprefix",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "请求转换涉及请求路径、查询字符串、HTTP 版本、方法和标头。"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Modifies the request path adding a prefix value",
+    "title": "请求转换",
+    "headingPath": "请求转换 › 为请求路径添加前缀值",
     "anchor": "modifies-the-request-path-adding-a-prefix-value",
-    "excerpt": "Key Value Required PathPrefix A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } Code: C# routeConfig =…"
+    "excerpt": "键为 PathPrefix,值为以 &#39;/&#39; 开头的路径,为必需项。 配置: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } 代码: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathRemovePrefix",
+    "title": "请求转换",
+    "headingPath": "请求转换 › PathRemovePrefix",
     "anchor": "pathremoveprefix",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "请求转换涉及请求路径、查询字符串、HTTP 版本、方法和标头。"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Modifies the request path removing a prefix value",
+    "title": "请求转换",
+    "headingPath": "请求转换 › 从请求路径中移除前缀值",
     "anchor": "modifies-the-request-path-removing-a-prefix-value",
-    "excerpt": "Key Value Expand table PathRemovePrefix A path starting with a &#39;/&#39; Required yes Config: 1/13 JSON…"
+    "excerpt": "键为 PathRemovePrefix,值为以 &#39;/&#39; 开头的路径,为必需项。 配置: JSON { &quot;PathRemovePrefix&quot;: &quot;/prefix&quot; } 代码: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathSet",
+    "title": "请求转换",
+    "headingPath": "请求转换 › PathSet",
     "anchor": "pathset",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "请求转换涉及请求路径、查询字符串、HTTP 版本、方法和标头。"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Replaces the request path with the specified value",
+    "title": "请求转换",
+    "headingPath": "请求转换 › 将请求路径替换为指定的值",
     "anchor": "replaces-the-request-path-with-the-specified-value",
-    "excerpt": "Key Value Required PathSet A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } Code: C# routeConfig =…"
+    "excerpt": "键为 PathSet,值为以 &#39;/&#39; 开头的路径,为必需项。 配置: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } 代码: C# routeConfig = routeConfig.WithTransformPathSet(path:…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathPattern",
+    "title": "请求转换",
+    "headingPath": "请求转换 › PathPattern",
     "anchor": "pathpattern",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "请求转换涉及请求路径、查询字符串、HTTP 版本、方法和标头。"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Replaces the request path using a pattern template",
+    "title": "请求转换",
+    "headingPath": "请求转换 › 使用模式模板替换请求路径",
     "anchor": "replaces-the-request-path-using-a-pattern-template",
-    "excerpt": "Key Value Expand table PathPattern A path template starting with a &#39;/&#39; Required yes Config: 2/13 JSON…"
+    "excerpt": "键为 PathPattern,值为以 &#39;/&#39; 开头的路径模板,为必需项。 配置: JSON { &quot;PathPattern&quot;: &quot;/my/{plugin}/api/{**remainder}&quot; } 代码: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryValueParameter",
+    "title": "请求转换",
+    "headingPath": "请求转换 › QueryValueParameter",
     "anchor": "queryvalueparameter",
-    "excerpt": "Adds or replaces parameters in the request query string Key Value Expand table QueryValueParameter Name of a query string parameter Required Set/Append Static…"
+    "excerpt": "在请求查询字符串中添加或替换参数 键 QueryValueParameter 的值为查询字符串参数的名称,为必需项;键 Set/Append 的值为静态值,同样为必需项。 配置: JSON { &quot;QueryValueParameter&quot;: &quot;foo&quot;,…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryRouteParameter",
+    "title": "请求转换",
+    "headingPath": "请求转换 › QueryRouteParameter",
     "anchor": "queryrouteparameter",
-    "excerpt": "Adds or replaces a query string parameter with a value from the route configuration Key Value Expand table QueryRouteParameter Name of a query string parameter…"
+    "excerpt": "使用来自路由配置的值添加或替换查询字符串参数 键 QueryRouteParameter 的值为查询字符串参数的名称,为必需项;键 Set/Append 的值为路由值的名称,同样为必需项。 配置: JSON { \"QueryRouteParameter\": \"foo\", \"Append\": \"remainder\" }…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryRemoveParameter",
+    "title": "请求转换",
+    "headingPath": "请求转换 › QueryRemoveParameter",
     "anchor": "queryremoveparameter",
-    "excerpt": "Removes the specified parameter from the request query string Key Value Expand table QueryRemoveParameter Name of a query string parameter Required yes Config:…"
+    "excerpt": "从请求查询字符串中移除指定的参数 键 QueryRemoveParameter 的值为查询字符串参数的名称,为必需项。 配置: JSON { &quot;QueryRemoveParameter&quot;: &quot;foo&quot; } 代码: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › HttpMethodChange",
+    "title": "请求转换",
+    "headingPath": "请求转换 › HttpMethodChange",
     "anchor": "httpmethodchange",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "请求转换涉及请求路径、查询字符串、HTTP 版本、方法和标头。"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Changes the http method used in the request",
+    "title": "请求转换",
+    "headingPath": "请求转换 › 更改请求中使用的 HTTP 方法",
     "anchor": "changes-the-http-method-used-in-the-request",
-    "excerpt": "Key Value Expand table HttpMethodChange The http method to replace Required Set The new http method yes yes Config: JSON { \"HttpMethodChange\": \"PUT\", \"Set\":…"
+    "excerpt": "键 HttpMethodChange 的值为要替换的 HTTP 方法,为必需项;键 Set 的值为新的 HTTP 方法,同样为必需项。 配置: JSON { \"HttpMethodChange\": \"PUT\", \"Set\": \"POST\" } Code: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeadersCopy",
+    "title": "请求转换",
+    "headingPath": "请求转换 › RequestHeadersCopy",
     "anchor": "requestheaderscopy",
-    "excerpt": "Sets whether incoming request headers are copied to the outbound request Key Value Default Expand table RequestHeadersCopy true/false true Required yes Config:…"
+    "excerpt": "设置是否将传入的请求标头复制到出站请求 键 RequestHeadersCopy 的值为 true/false,默认值为 true,为必需项。 配置: JSON { &quot;RequestHeadersCopy&quot;: &quot;false&quot; } 代码: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderOriginalHost",
+    "title": "请求转换",
+    "headingPath": "请求转换 › RequestHeaderOriginalHost",
     "anchor": "requestheaderoriginalhost",
-    "excerpt": "Specifies if the incoming request Host header should be copied to the proxy request Key Value Default Expand table RequestHeaderOriginalHost true/false false…"
+    "excerpt": "指定是否应将传入请求的 Host 标头复制到代理请求 键 RequestHeaderOriginalHost 的值为 true/false,默认值为 false,为必需项。 配置: JSON { &quot;RequestHeaderOriginalHost&quot;: &quot;true&quot; } C#…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeader",
+    "title": "请求转换",
+    "headingPath": "请求转换 › RequestHeader",
     "anchor": "requestheader",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "请求转换涉及请求路径、查询字符串、HTTP 版本、方法和标头。"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Adds or replaces request headers",
+    "title": "请求转换",
+    "headingPath": "请求转换 › 添加或替换请求标头",
     "anchor": "adds-or-replaces-request-headers",
-    "excerpt": "Key Expand table RequestHeader Set/Append Value Required The header name yes Config: The header value yes JSON { &quot;RequestHeader&quot;:…"
+    "excerpt": "键 RequestHeader 的值为标头名称,为必需项;键 Set/Append 的值为标头值,同样为必需项。 配置: JSON { &quot;RequestHeader&quot;: &quot;MyHeader&quot;, &quot;Set&quot;: &quot;MyValue&quot; } 代码:…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderRouteValue",
+    "title": "请求转换",
+    "headingPath": "请求转换 › RequestHeaderRouteValue",
     "anchor": "requestheaderroutevalue",
-    "excerpt": "Adds or replaces a header with a value from the route configuration Key Value Expand table RequestHeader Name of a query string parameter Required Set/Append…"
+    "excerpt": "通过路由配置中的值添加或替换标头 键 RequestHeader 的值为查询字符串参数的名称,为必需项;键 Set/Append 的值为路由值的名称,同样为必需项。 配置: JSON{ \"RequestHeaderRouteValue\": \"MyHeader\", \"Set\": \"MyRouteKey\" } Code:…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderRemove",
+    "title": "请求转换",
+    "headingPath": "请求转换 › RequestHeaderRemove",
     "anchor": "requestheaderremove",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "请求转换涉及请求路径、查询字符串、HTTP 版本、方法和标头。"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Removes request headers",
+    "title": "请求转换",
+    "headingPath": "请求转换 › 移除请求标头",
     "anchor": "removes-request-headers",
-    "excerpt": "Key Value Expand table RequestHeaderRemove The header name Required yes Config: JSON { \"RequestHeaderRemove\": \"MyHeader\" } Code: C# routeConfig =…"
+    "excerpt": "键 RequestHeaderRemove 的值为标头名称,为必需项。 配置: JSON { \"RequestHeaderRemove\": \"MyHeader\" } Code: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeadersAllowed",
+    "title": "请求转换",
+    "headingPath": "请求转换 › RequestHeadersAllowed",
     "anchor": "requestheadersallowed",
-    "excerpt": "Key Value Expand table RequestHeadersAllowed A semicolon separated list of allowed header names. Required yes…"
+    "excerpt": "键 RequestHeadersAllowed 的值为一个以分号分隔的允许标头名称列表,为必需项。 配置: JSON { \"RequestHeadersAllowed\": \"Header1;header2\" } Code: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › X-Forwarded",
+    "title": "请求转换",
+    "headingPath": "请求转换 › X-Forwarded",
     "anchor": "x-forwarded",
-    "excerpt": "Adds headers with information about the original client request Key Value Default Required X-Forwarded Default action (Set, Append, Remove, Off) to apply to…"
+    "excerpt": "添加包含原始客户端请求信息的标头 键 X-Forwarded 的值为要应用于下面列出的所有 X-Forwarded-* 标头的默认操作(Set、Append、Remove、Off),默认值为 Set,为必需项。键 For、Proto、Host、Prefix 的值分别是要应用于对应标头的操作(参见下文的…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Forwarded",
+    "title": "请求转换",
+    "headingPath": "请求转换 › Forwarded",
     "anchor": "forwarded",
-    "excerpt": "Adds a header with information about the original client request Key Value Default Re Forwarded A comma separated list containing any of these values:…"
+    "excerpt": "添加一个包含原始客户端请求信息的标头 键 Forwarded 的值为一个以逗号分隔的列表,可包含 for、by、proto、host 中的任意值,没有默认值,为必需项。键 ForFormat 和 ByFormat 的可选值为…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › ClientCert",
+    "title": "请求转换",
+    "headingPath": "请求转换 › ClientCert",
     "anchor": "clientcert",
-    "excerpt": "Forwards the client cert used on the inbound connection as a header to destination Key Value Required ClientCert The header name yes Config: JSON {…"
+    "excerpt": "将入站连接上使用的客户端证书作为标头转发给目标 键 ClientCert 的值为标头名称,为必需项。 配置: JSON { &quot;ClientCert&quot;: &quot;X-Client-Cert&quot; } 代码: C# routeConfig =…"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "title": "响应与响应尾部转换",
+    "excerpt": "默认情况下,系统会将所有响应标头和响应尾部从代理响应复制到发往客户端的响应中。"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Response and Response Trailers",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › 响应与响应尾部",
     "anchor": "response-and-response-trailers",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client response by default. Response and response trailer transforms may…"
+    "excerpt": "默认情况下,系统会将所有响应标头和响应尾部从代理响应复制到发往客户端的响应中。响应转换和响应尾部转换可以指定自己应仅应用于成功的响应,还是应用于所有响应。 在代码中,它们分别通过派生自抽象类 ResponseTransform 和 ResponseTrailersTransform 来实现。"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeadersCopy",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › ResponseHeadersCopy",
     "anchor": "responseheaderscopy",
-    "excerpt": "Sets whether destination response headers are copied to the client Key Value Default Expand table ResponseHeadersCopy true/false true Required yes Config: JSON…"
+    "excerpt": "设置是否将目标的响应标头复制到客户端 键 ResponseHeadersCopy 的值为 true/false,默认值为 true,为必需项。 配置: JSON { &quot;ResponseHeadersCopy&quot;: &quot;false&quot; } 代码: C# routeConfig =…"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeader",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › ResponseHeader",
     "anchor": "responseheader",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "默认情况下,系统会将所有响应标头和响应尾部从代理响应复制到发往客户端的响应中。"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Adds or replaces response headers",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › 添加或替换响应标头",
     "anchor": "adds-or-replaces-response-headers",
-    "excerpt": "Key Value Default Expand table ResponseHeader The header name (none) Required Set/Append The header value (none) yes When Success/Always/Failure Success yes no…"
+    "excerpt": "键 ResponseHeader 的值为标头名称,没有默认值,为必需项。键 Set/Append 的值为标头值,没有默认值,同样为必需项。键 When 的值为 Success/Always/Failure 之一,默认值为 Success,为可选项。 配置: JSON { \"ResponseHeader\":…"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeaderRemove",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › ResponseHeaderRemove",
     "anchor": "responseheaderremove",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "默认情况下,系统会将所有响应标头和响应尾部从代理响应复制到发往客户端的响应中。"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Removes response headers",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › 移除响应标头",
     "anchor": "removes-response-headers",
-    "excerpt": "Key Value Default Required ResponseHeaderRemove The header name (none) yes When Success/Always/Failure Success no Config: JSON{ \"ResponseHeaderRemove\":…"
+    "excerpt": "键 ResponseHeaderRemove 的值为标头名称,没有默认值,为必需项。键 When 的值为 Success/Always/Failure 之一,默认值为 Success,为可选项。 配置: JSON{ \"ResponseHeaderRemove\": \"HeaderName\", \"When\":…"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeadersAllowed",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › ResponseHeadersAllowed",
     "anchor": "responseheadersallowed",
-    "excerpt": "Key Value Required ResponseHeadersAllowed A semicolon separated list of allowed header names. yes Config: JSON { \"ResponseHeadersAllowed\": \"Header1;header2\" }…"
+    "excerpt": "键 ResponseHeadersAllowed 的值为一个以分号分隔的允许标头名称列表,为必需项。 配置: JSON { \"ResponseHeadersAllowed\": \"Header1;header2\" } Code:C# routeConfig =…"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailersCopy",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › ResponseTrailersCopy",
     "anchor": "responsetrailerscopy",
-    "excerpt": "Sets whether destination trailing response headers are copied to the client Key Value Default Expand table ResponseTrailersCopy true/false true Required yes…"
+    "excerpt": "设置是否将目标的响应尾部标头复制到客户端 键 ResponseTrailersCopy 的值为 true/false,默认值为 true,为必需项。 配置: JSON { &quot;ResponseTrailersCopy&quot;: &quot;false&quot; } 代码: C# routeConfig…"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailer",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › ResponseTrailer",
     "anchor": "responsetrailer",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "默认情况下,系统会将所有响应标头和响应尾部从代理响应复制到发往客户端的响应中。"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Adds or replaces trailing response headers",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › 添加或替换响应尾部标头",
     "anchor": "adds-or-replaces-trailing-response-headers",
-    "excerpt": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/transforms-response?view=aspnetcore-9.0 Expand table 5/8 Key Value Default Required…"
+    "excerpt": "键 ResponseTrailer 的值为标头名称,没有默认值,为必需项。键 Set/Append 的值为标头值,没有默认值,同样为必需项。键 When 的值为 Success/Always/Failure 之一,默认值为 Success,为可选项。 配置: JSON { \"ResponseTrailer\":…"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailerRemove",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › ResponseTrailerRemove",
     "anchor": "responsetrailerremove",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "默认情况下,系统会将所有响应标头和响应尾部从代理响应复制到发往客户端的响应中。"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Removes trailing response headers",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › 移除响应尾部标头",
     "anchor": "removes-trailing-response-headers",
-    "excerpt": "Key Expand table ResponseTrailerRemove When Value Default Required The header name (none) yes Success/Always/Failure Success no Config: JSON {…"
+    "excerpt": "键 ResponseTrailerRemove 的值为标头名称,没有默认值,为必需项。键 When 的值为 Success/Always/Failure 之一,默认值为 Success,为可选项。 配置: JSON { \"ResponseTrailerRemove\": \"HeaderName\", \"When\":…"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailersAllowed",
+    "title": "响应与响应尾部转换",
+    "headingPath": "响应与响应尾部转换 › ResponseTrailersAllowed",
     "anchor": "responsetrailersallowed",
-    "excerpt": "yes Key Value ResponseTrailersAllowed A semicolon separated list of allowed header names. Config: JSON{ \"ResponseTrailersAllowed\": \"Header1;header2\" } Code:C#…"
+    "excerpt": "键 ResponseTrailersAllowed 的值为一个以分号分隔的允许标头名称列表,为必需项。 配置: JSON{ \"ResponseTrailersAllowed\": \"Header1;header2\" } Code:C# routeConfig =…"
   },
   {
     "slug": "load-balancing",
@@ -1164,112 +1164,112 @@
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+    "title": "会话相关性",
+    "excerpt": "当负载在多个目标之间进行均衡时,会话相关性是一种将一系列因果相关的请求绑定(建立相关性)到处理 第一个请求的那个目标上的机制。"
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Concept",
+    "title": "会话相关性",
+    "headingPath": "会话相关性 › 概念",
     "anchor": "concept",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the destination that handled the first request when the load is…"
+    "excerpt": "当负载在多个目标之间进行均衡时,会话相关性是一种将一系列因果相关的请求绑定(建立相关性)到处理第一个请求的那个目标上的机制。在这样的场景中它很有用:一个序列中的大多数请求都要处理相同的数据,而不同节点(目标)处理请求时的数据访问成本各不相同。最常见的例子是瞬态缓存(例如内存缓存):第一个请求从较慢的持久性存储中获取数据…"
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Configuration",
+    "title": "会话相关性",
+    "headingPath": "会话相关性 › 配置",
     "anchor": "configuration",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+    "excerpt": "当负载在多个目标之间进行均衡时,会话相关性是一种将一系列因果相关的请求绑定(建立相关性)到处理 第一个请求的那个目标上的机制。"
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Services and middleware registration",
+    "title": "会话相关性",
+    "headingPath": "会话相关性 › 服务与中间件注册",
     "anchor": "services-and-middleware-registration",
-    "excerpt": "Session affinity services are registered in the DI container automatically by AddReverseProxy() . The middleware UseSessionAffinity() is included by default in…"
+    "excerpt": "会话相关性服务由 AddReverseProxy() 自动注册到 DI 容器中。中间件 UseSessionAffinity() 默认包含在无参数版本的 MapReverseProxy 方法中。如果你正在自定义代理管道,请将它作为第一个中间件,添加在 UseLoadBalancing() 之前。 示例: C#…"
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Cluster configuration",
+    "title": "会话相关性",
+    "headingPath": "会话相关性 › 群集配置",
     "anchor": "cluster-configuration",
-    "excerpt": "Session affinity is configured per cluster according to the following configuration scheme. JSON\"ReverseProxy\": { \"Clusters\": { \"&lt;cluster-name&gt;\": {…"
+    "excerpt": "会话相关性按群集进行配置,配置方案如下。 JSON\"ReverseProxy\": { \"Clusters\": { \"&lt;cluster-name&gt;\": { \"SessionAffinity\": { \"Enabled\": \"(true|false)\", // defaults to 'false'…"
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Cookie configuration",
+    "title": "会话相关性",
+    "headingPath": "会话相关性 › Cookie 配置",
     "anchor": "cookie-configuration",
-    "excerpt": "Attributes for configuring the cookie used with the HashCookie, ArrCookie and Cookie policies can be configured using SessionAffinityCookieConfig . The…"
+    "excerpt": "用于配置 HashCookie、ArrCookie 和 Cookie 策略所使用 Cookie 的各项属性,可以通过 SessionAffinityCookieConfig 进行配置。这些属性既可以像上面那样通过 JSON 配置,也可以像下面这样通过代码配置: C#new ClusterConfig {…"
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Affinity Key",
+    "title": "会话相关性",
+    "headingPath": "会话相关性 › 相关性密钥",
     "anchor": "affinity-key",
-    "excerpt": "Request to destination affinity is established via the affinity key identifying the target destination. That key can be stored on different request parts…"
+    "excerpt": "请求与目标之间的相关性,是通过标识目标的相关性密钥来建立的。根据具体会话相关性实现的不同,该密钥可以存储在请求的不同部分,但每个请求最多只能携带一个这样的密钥。密钥的具体语义取决于实现方式,目前内置的策略使用 DestinationId 作为相关性密钥。…"
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Key Protection",
+    "title": "会话相关性",
+    "headingPath": "会话相关性 › 密钥保护",
     "anchor": "key-protection",
-    "excerpt": "The HashCookie policy uses the XxHash64 hash to produce a fast, compact, obscured output format for the cookie value. The ArrCookie policy uses the SHA-256…"
+    "excerpt": "HashCookie 策略使用 XxHash64 哈希算法,为 Cookie 值生成一种快速、紧凑且经过混淆处理的输出格式。 ArrCookie 策略使用 SHA-256 哈希算法,为 Cookie 值生成一种经过混淆处理的输出,使其与 IIS 的 ARR 相关性 Cookie 格式相匹配。ARR…"
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Affinity failure policy",
+    "title": "会话相关性",
+    "headingPath": "会话相关性 › 相关性失败策略",
     "anchor": "affinity-failure-policy",
-    "excerpt": "If the affinity key cannot be decoded or no healthy destination found it&#39;s considered as a failure and an affinity failure policy is called to handle it.…"
+    "excerpt": "如果相关性密钥无法解码,或未找到运行状况良好的目标,则会被视为一次失败,并调用相关性失败策略来处理。该策略可以完全访问 HttpContext,并可以自行向客户端发送响应。它会返回一个布尔值,指示请求处理是继续沿管道向下进行,还是必须终止。 系统内置了两种失败策略,默认策略是 Redistribute。…"
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Request pipeline",
+    "title": "会话相关性",
+    "headingPath": "会话相关性 › 请求管道",
     "anchor": "request-pipeline",
-    "excerpt": "The session affinity mechanisms are implemented by the services (mentioned above) and the two following middleware: SessionAffinityMiddleware - coordinates the…"
+    "excerpt": "会话相关性机制由上述服务以及以下两个中间件共同实现: SessionAffinityMiddleware——协调请求的相关性解析过程。它首先调用 ClusterConfig.SessionAffinity.Policy 属性中为给定群集指定的策略,然后检查该策略返回的相关性解析状态,并在发生失败时调用…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+    "title": "目标运行状况检查",
+    "excerpt": "在大多数实际系统中，人们预期其节点会偶尔遇到"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Active health checks",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 主动运行状况检查",
     "anchor": "active-health-checks",
-    "excerpt": "YARP can proactively monitor destination health by sending periodic probing requests to designated health endpoints and analyzing responses. That analysis is…"
+    "excerpt": "YARP 可以通过向指定的运行状况终结点定期发送探测请求并分析响应，来主动监视目标的运行状况。这项分析由为群集指定的主动运行状况检查策略执行，并计算出新的目标运行状况。最终，该策略会根据 HTTP 响应代码（2xx 被视为运行状况良好）将每个目标标记为健康或不健康，并重新构建群集中运行状况良好的目标集合。…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 文件示例",
     "anchor": "file-example",
     "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Active\": { \"Enabled\": \"true\", \"Interval\": \"00:00:10\", \"Timeout\": \"00:00:10\", \"Policy\": \"ConsecutiveFailures\",…"
   },
@@ -1277,8 +1277,8 @@
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Code example",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 代码示例",
     "anchor": "code-example",
     "excerpt": "C# var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Active = new ActiveHealthCheckConfig { Enabled =…"
   },
@@ -1286,71 +1286,71 @@
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 配置",
     "anchor": "configuration",
-    "excerpt": "All but one of active health check settings are specified on the cluster level in Cluster/HealthCheck/Active section. The only exception is an optional…"
+    "excerpt": "除一项设置外，所有主动运行状况检查设置都在群集级别的 Cluster/HealthCheck/Active 部分中指定。唯一的例外是可选的 Destination/Health 元素，用于指定单独的主动运行状况检查终结点。实际的运行状况探测 URI 由 Destination/Address（如果设置了…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Built-in policies",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 内置策略",
     "anchor": "built-in-policies",
-    "excerpt": "There is currently one built-in active health check policy - ConsecutiveFailuresHealthPolicy . It counts consecutive health probe failures and marks a…"
+    "excerpt": "目前有一个内置的主动运行状况检查策略——ConsecutiveFailuresHealthPolicy。它会统计连续的运行状况探测失败次数，一旦达到给定阈值，就将目标标记为不健康。收到第一个成功响应时，目标会被标记为健康，同时计数器会被重置。该策略的参数在群集的元数据中按如下方式设置：…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Design",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 设计",
     "anchor": "design",
-    "excerpt": "The main service in this process is IActiveHealthCheckMonitor that periodically creates probing requests via IProbingRequestFactory, sends them to all…"
+    "excerpt": "在此过程中，主要的服务是 IActiveHealthCheckMonitor，它会通过 IProbingRequestFactory 定期创建探测请求，将其发送给每个已启用主动运行状况检查的 ClusterConfig 下的所有 DestinationConfig，然后将所有响应下发给为该群集指定的…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Extensibility",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 可扩展性",
     "anchor": "extensibility",
-    "excerpt": "There are 2 main extensibility points in the active health check subsystem."
+    "excerpt": "主动运行状况检查子系统中有两个主要的可扩展点。"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IActiveHealthCheckPolicy",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › IActiveHealthCheckPolicy",
     "anchor": "iactivehealthcheckpolicy",
-    "excerpt": "IActiveHealthCheckPolicy analyzes how destinations respond to active health probes sent by IActiveHealthCheckMonitor , evaluates new active health states for…"
+    "excerpt": "IActiveHealthCheckPolicy 会分析各个目标对 IActiveHealthCheckMonitor 发送的主动运行状况探测的响应情况，为所有被探测的目标评估出新的主动运行状况，然后调用 IDestinationHealthUpdater.SetActive…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IProbingRequestFactory",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › IProbingRequestFactory",
     "anchor": "iprobingrequestfactory",
-    "excerpt": "IProbingRequestFactory creates active health probing requests to be sent to destination health endpoints. It can take into account…"
+    "excerpt": "IProbingRequestFactory 用于创建将发送到目标运行状况终结点的主动运行状况探测请求。它可以参考 ActiveHealthCheckOptions.Path、DestinationConfig.Health 以及其他配置设置来构造探测请求。 默认的 IProbingRequestFactory…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Passive health checks",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 被动运行状况检查",
     "anchor": "passive-health-checks",
-    "excerpt": "YARP can passively watch for successes and failures in client request proxying to reactively evaluate destination health states. Responses to the proxied…"
+    "excerpt": "YARP…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 文件示例",
     "anchor": "file-example-2",
     "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Passive\": { \"Enabled\": \"true\", \"Policy\": \"TransportFailureRate\", \"ReactivationPeriod\": \"00:02:00\" } },…"
   },
@@ -1358,8 +1358,8 @@
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Code example",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 代码示例",
     "anchor": "code-example-2",
     "excerpt": "C#var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Passive = new PassiveHealthCheckConfig { Enabled =…"
   },
@@ -1367,71 +1367,71 @@
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 配置",
     "anchor": "configuration-2",
-    "excerpt": "Passive health check settings are specified on the cluster level in Cluster/HealthCheck/Passive section. Alternatively, they can be defined in code via the…"
+    "excerpt": "被动运行状况检查设置在群集级别的 Cluster/HealthCheck/Passive 部分中指定。也可以通过代码来定义，具体方式是使用 Yarp.ReverseProxy.Configuration 命名空间中与配置契约相对应的类型。 被动运行状况检查需要将…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Built-in policies",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 内置策略",
     "anchor": "built-in-policies-2",
-    "excerpt": "There is currently one built-in passive health check policy - TransportFailureRateHealthPolicy. It calculates the proxied requests failure rate for each…"
+    "excerpt": "目前有一个内置的被动运行状况检查策略——TransportFailureRateHealthPolicy。它会为每个目标计算已代理请求的失败率，如果超过指定的限制，就将该目标标记为不健康。失败率的计算方式是：在给定时间段内，代理到某个目标的失败请求数占总请求数的百分比。失败计数器和总计数器都是在一个滑动时间窗口内进行跟…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Design",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 设计",
     "anchor": "design-2",
-    "excerpt": "The main component is PassiveHealthCheckMiddleware sitting in the request pipeline and analyzing responses returned by destinations. For each response from a…"
+    "excerpt": "主要组件是位于请求管道中的 PassiveHealthCheckMiddleware，它负责分析各个目标返回的响应。对于来自已启用被动运行状况检查的群集下某个目标的每个响应，PassiveHealthCheckMiddleware 都会调用为该群集指定的…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Extensibility",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 可扩展性",
     "anchor": "extensibility-2",
-    "excerpt": "There is one main extensibility point in the passive health check subsystem, the IPassiveHealthCheckPolicy ."
+    "excerpt": "被动运行状况检查子系统中有一个主要的可扩展点，即 IPassiveHealthCheckPolicy。"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IPassiveHealthCheckPolicy",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › IPassiveHealthCheckPolicy",
     "anchor": "ipassivehealthcheckpolicy",
-    "excerpt": "IPassiveHealthCheckPolicy analyzes how a destination responded to a proxied client request, evaluates its new passive health state and finally calls…"
+    "excerpt": "IPassiveHealthCheckPolicy 会分析目标对某个被代理的客户端请求作出的响应，评估其新的被动运行状况，最后调用 IDestinationHealthUpdater.SetPassiveAsync 来创建一个异步任务，实际更新被动运行状况并重新构建运行状况良好的目标集合。 下面是一个自定义…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Available destination collection",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 可用目标集合",
     "anchor": "available-destination-collection",
-    "excerpt": "Destinations health state is used to determine which of them are eligible for receiving proxied requests. Each cluster maintains its own list of available…"
+    "excerpt": "目标的运行状况被用来确定哪些目标有资格接收被代理的请求。每个群集都会在 ClusterDestinationState 类型的 AvailableDestinations 属性中维护自己的可用目标列表。当任何目标的运行状况发生变化时，该列表都会被重新构建。这一过程由…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 配置",
     "anchor": "configuration-3",
-    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+    "excerpt": "在大多数实际系统中，人们预期其节点会偶尔遇到"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "目标运行状况检查",
+    "headingPath": "目标运行状况检查 › 文件示例",
     "anchor": "file-example-3",
     "excerpt": "JSON \"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"AvailableDestinationsPolicy\": \"HealthyOrPanic\", \"Passive\": { \"Enabled\": \"true\" } }, \"Destinations\": {…"
   },
@@ -1658,53 +1658,53 @@
     "slug": "cors",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination"
+    "title": "跨域请求（CORS）",
+    "excerpt": "反向代理可以在将跨域请求代理到目标服务器之前对其进行处理"
   },
   {
     "slug": "cors",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Introduction",
+    "title": "跨域请求（CORS）",
+    "headingPath": "跨域请求（CORS） › 简介",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination servers. This can reduce load on the destination servers and…"
+    "excerpt": "反向代理可以在跨域请求被代理到目标服务器之前先对其进行处理。这样可以减轻目标服务器的负载，并确保各个应用程序之间实施一致的策略。"
   },
   {
     "slug": "cors",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Defaults",
+    "title": "跨域请求（CORS）",
+    "headingPath": "跨域请求（CORS） › 默认设置",
     "anchor": "defaults",
-    "excerpt": "The requests won&#39;t be automatically matched for cors preflight requests unless enabled in the route or application configuration."
+    "excerpt": "除非在路由或应用程序配置中启用了该功能，否则请求不会被自动匹配为 CORS 预检请求。"
   },
   {
     "slug": "cors",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Configuration",
+    "title": "跨域请求（CORS）",
+    "headingPath": "跨域请求（CORS） › 配置",
     "anchor": "configuration",
-    "excerpt": "CORS policies can be specified per route via RouteConfig.CorsPolicy and can be bound from the Routes sections of the config file. As with other route…"
+    "excerpt": "可以通过 RouteConfig.CorsPolicy 为每个路由指定 CORS 策略，并且可以从配置文件的 Routes 部分绑定该设置。与其他路由属性一样，该设置也可以在不重启代理的情况下进行修改和重新加载。策略名称不区分大小写。 示例： JSON{ \"ReverseProxy\": { \"Routes\": {…"
   },
   {
     "slug": "cors",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › DefaultPolicy",
+    "title": "跨域请求（CORS）",
+    "headingPath": "跨域请求（CORS） › DefaultPolicy",
     "anchor": "defaultpolicy",
-    "excerpt": "Specifying the value default in a route&#39;s CorsPolicy parameter means that route will use the policy defined in CorsOptions.DefaultPolicy."
+    "excerpt": "在路由的 CorsPolicy 参数中指定值 default，意味着该路由将使用 CorsOptions.DefaultPolicy 中定义的策略。"
   },
   {
     "slug": "cors",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Disable CORS",
+    "title": "跨域请求（CORS）",
+    "headingPath": "跨域请求（CORS） › 禁用 CORS",
     "anchor": "disable-cors",
-    "excerpt": "Specifying the value disable in a route&#39;s CorsPolicy parameter means the CORS middleware will refuse the CORS requests. 说明The author created this article…"
+    "excerpt": "在路由的 CorsPolicy 参数中指定值 disable，意味着 CORS 中间件将拒绝该路由的 CORS 请求。 说明本文作者在 AI 协助下创作了这篇文章。了解更多信息"
   },
   {
     "slug": "https-tls",
@@ -2076,191 +2076,191 @@
     "slug": "extensibility",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Overview",
-    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:"
+    "title": "概述",
+    "excerpt": "YARP 有两种主要的可扩展性方式，具体取决于所需的路由行为："
   },
   {
     "slug": "extensibility",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › Overview of YARP extensibility",
+    "title": "概述",
+    "headingPath": "概述 › YARP 可扩展性概述",
     "anchor": "overview-of-yarp-extensibility",
-    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired: Middleware Pipeline Http Forwarder"
+    "excerpt": "根据所需的路由行为，YARP 提供了两种主要的可扩展性方式： 中间件管道 HTTP 转发器"
   },
   {
     "slug": "extensibility",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › Middleware pipeline",
+    "title": "概述",
+    "headingPath": "概述 › 中间件管道",
     "anchor": "middleware-pipeline",
-    "excerpt": "YARP uses the concept of Routes, Clusters and Destinations. These can be supplied through configuration files or directly through code. Based on the routing…"
+    "excerpt": "YARP 使用路由、群集和目标这几个概念。它们既可以通过配置文件提供，也可以直接在代码中提供。根据路由规则，YARP 会选取一个群集并枚举其中可能的目标，然后使用中间件管道，依据目标运行状况、会话相关性、负载均衡等因素来选择目标。 预构建管道中的大部分环节都可以通过代码进行自定义： 配置提供程序 目标枚举 会话相关性…"
   },
   {
     "slug": "extensibility",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › HTTP Forwarder",
+    "title": "概述",
+    "headingPath": "概述 › HTTP 转发器",
     "anchor": "http-forwarder",
-    "excerpt": "If the YARP pipeline is too rigid for your use case or the scale of routing rules and destinations isn&#39;t suitable for loading into memory, then you can…"
+    "excerpt": "如果 YARP 管道对您的使用场景而言过于死板，或者路由规则和目标的规模不适合全部加载到内存中，那么您可以实现自己的路由逻辑，并使用 HTTP 转发器将请求定向到您所选择的目标。HttpForwarder 组件会获取 HTTP 上下文，并将请求转发到指定的目标。…"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The"
+    "title": "中间件",
+    "excerpt": "ASP.NET Core 使用中间件管道将请求处理划分为多个独立的步骤。"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Introduction",
+    "title": "中间件",
+    "headingPath": "中间件 › 简介",
     "anchor": "introduction",
-    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The app developer can add and order middleware as needed. ASP.NET…"
+    "excerpt": "ASP.NET Core 使用中间件管道将请求处理划分为多个独立的步骤。应用开发者可以根据需要添加中间件并安排其执行顺序。ASP.NET Core 中间件同样用于实现和自定义反向代理功能。"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Defaults",
+    "title": "中间件",
+    "headingPath": "中间件 › 默认设置",
     "anchor": "defaults",
-    "excerpt": "The getting started sample shows the following Configure method. This sets up a middleware pipeline with development tools, routing, and proxy configured…"
+    "excerpt": "快速入门示例展示了以下 Configure 方法。它设置了一个包含开发工具、路由以及代理配置终结点(MapReverseProxy)的中间件管道。 C# var builder = WebApplication.CreateBuilder(args);…"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Adding Middleware",
+    "title": "中间件",
+    "headingPath": "中间件 › 添加中间件",
     "anchor": "adding-middleware",
-    "excerpt": "Middleware added to your application pipeline will see the request in different states of processing depending on where the middleware is added. Middleware…"
+    "excerpt": "添加到应用程序管道中的中间件,会依据其添加位置的不同,看到处于不同处理阶段的请求。添加在 UseRouting 之前的中间件会看到所有请求,并可以在任何路由发生之前对其进行处理。添加在 UseRouting 和 UseEndpoints 之间的中间件可以调用 HttpContext.GetEndpoint()…"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › // Custom inline middleware",
+    "title": "中间件",
+    "headingPath": "中间件 › // 自定义内联中间件",
     "anchor": "custom-inline-middleware",
-    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); By default this overload…"
+    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); 默认情况下,这个 MapReverseProxy…"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Custom Proxy Middleware",
+    "title": "中间件",
+    "headingPath": "中间件 › 自定义代理中间件",
     "anchor": "custom-proxy-middleware",
-    "excerpt": "Middleware inside the MapReverseProxy pipeline have access to all of the proxy data and state associated with a request (the route, cluster, destinations,…"
+    "excerpt": "MapReverseProxy 管道内的中间件可以通过 IReverseProxyFeature 访问与请求相关联的所有代理数据和状态(路由、群集、目标等)。可以从 HttpContext.Features 获取该功能,也可以使用扩展方法 HttpContext.GetReverseProxyFeature()…"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › What to do with middleware",
+    "title": "中间件",
+    "headingPath": "中间件 › 中间件的推荐用法",
     "anchor": "what-to-do-with-middleware",
-    "excerpt": "Middleware can generate logs, control if a request gets proxied or not, influence where it&#39;s proxied to, and add additional features like error handling,…"
+    "excerpt": "中间件可以生成日志、控制请求是否被代理、影响请求被代理到何处,还可以添加错误处理、重试等附加功能。"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Logs and Metrics",
+    "title": "中间件",
+    "headingPath": "中间件 › 日志和指标",
     "anchor": "logs-and-metrics",
-    "excerpt": "Middleware can inspect request and response fields to generate logs and aggregate metrics. See the note about bodies under &quot;What not to do with…"
+    "excerpt": "中间件可以检查请求和响应的各个字段,以生成日志并汇总指标。有关正文(body)方面的注意事项,请参阅下文&quot;中间件不应有的用法&quot;中的说明。 C# proxyPipeline.Use(async (context, next) =&gt; { LogRequest(context); await…"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Send an immediate response",
+    "title": "中间件",
+    "headingPath": "中间件 › 立即发送响应",
     "anchor": "send-an-immediate-response",
-    "excerpt": "If a middleware inspects a request and determines that it should not be proxied, it may generate its own response and return control to the server without…"
+    "excerpt": "如果某个中间件在检查请求后认定不应对其进行代理,它可以自行生成响应,并在不调用 next() 的情况下将控制权交还给服务器。 C# proxyPipeline.Use((context, next) =&gt; { if (!CheckAllowedRequest(context, out var reason))…"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Filter destinations",
+    "title": "中间件",
+    "headingPath": "中间件 › 筛选目标",
     "anchor": "filter-destinations",
-    "excerpt": "Middleware like session affinity and load balancing examine the IReverseProxyFeature and the cluster configuration to decide which destination a request should…"
+    "excerpt": "会话相关性和负载均衡等中间件会检查 IReverseProxyFeature 和群集配置,以决定应将请求发送到哪个目标。AllDestinations 列出了所选群集中的所有目标。 AvailableDestinations 列出了当前被认为有资格处理该请求的目标。它的初始值为…"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Error handling",
+    "title": "中间件",
+    "headingPath": "中间件 › 错误处理",
     "anchor": "error-handling",
-    "excerpt": "Middleware can wrap the call to await next() in a try/catch block to handle exceptions from later components. The proxy logic at the end of the pipeline…"
+    "excerpt": "中间件可以将对 await next() 的调用包装在 try/catch 块中,以处理来自后续组件的异常。 管道末尾的代理逻辑(IHttpForwarder)不会针对常见的请求代理错误抛出异常。这些错误会被捕获,并通过 HttpContext.Features 中的…"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › What not to do with middleware",
+    "title": "中间件",
+    "headingPath": "中间件 › 中间件不应有的用法",
     "anchor": "what-not-to-do-with-middleware",
-    "excerpt": "Middleware should be cautious about modifying request fields such as headers in order to affect the outgoing proxied request. Such modifications may interfere…"
+    "excerpt": "中间件应谨慎修改标头等请求字段以影响发出的代理请求。这类修改可能会干扰重试等功能,更适合交由转换来处理。 在调用 next() 之后,中间件在修改响应字段之前必须先检查…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "excerpt": "Some applications only need the ability to take a specific request and forward it to a specific"
+    "title": "直接转发",
+    "excerpt": "有些应用程序只需要能够获取特定请求并将其转发到特定"
   },
   {
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › IHttpForwarder",
+    "title": "直接转发",
+    "headingPath": "直接转发 › IHttpForwarder",
     "anchor": "ihttpforwarder",
-    "excerpt": "IHttpForwarder serves as the core proxy adapter between incoming AspNetCore and outgoing System.Net.Http requests. It handles the mechanics of creating a…"
+    "excerpt": "IHttpForwarder 是介于传入的 AspNetCore 请求与传出的 System.Net.Http 请求之间的核心代理适配器。它负责处理从 HttpContext 创建 HttpRequestMessage、发送该请求以及转发响应这一系列底层机制。 IHttpForwarder 支持：…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Example",
+    "title": "直接转发",
+    "headingPath": "直接转发 › 示例",
     "anchor": "example",
-    "excerpt": "See ReverseProxy.Direct.Sample as a pre-built sample, or use the steps below."
+    "excerpt": "请参阅预构建示例 ReverseProxy.Direct.Sample，或按照以下步骤操作。"
   },
   {
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Create a new project",
+    "title": "直接转发",
+    "headingPath": "直接转发 › 创建新项目",
     "anchor": "create-a-new-project",
-    "excerpt": "Follow the Getting Started guide to create a project and add the Yarp.ReverseProxy nuget dependency."
+    "excerpt": "请按照&quot;入门指南&quot;创建一个项目，并添加 Yarp.ReverseProxy NuGet 依赖项。"
   },
   {
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Update Program.cs",
+    "title": "直接转发",
+    "headingPath": "直接转发 › 更新 Program.cs",
     "anchor": "update-program-cs",
-    "excerpt": "In this example the IHttpForwarder is registered in DI, injected into the endpoint method, and used to forward requests from a specific route to…"
+    "excerpt": "在此示例中，IHttpForwarder 被注册到依赖关系注入容器中，注入到终结点方法中，并用于将来自特定路由的请求转发到 https://localhost:10000/prefix/ 。 可选的转换展示了如何复制除 Host 之外的所有请求标头；目标通常需要使用来自该 URL 自身的 Host，这是很常见的情况。…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › // Check if the operation was successful",
+    "title": "直接转发",
+    "headingPath": "直接转发 › // 检查操作是否成功",
     "anchor": "check-if-the-operation-was-successful",
     "excerpt": "if (error != ForwarderError.None) { var errorFeature = httpContext.GetForwarderErrorFeature(); var exception = errorFeature.Exception; } }); app.Run(); /// ///…"
   },
@@ -2268,132 +2268,132 @@
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › The HTTP Client",
+    "title": "直接转发",
+    "headingPath": "直接转发 › HTTP 客户端",
     "anchor": "the-http-client",
-    "excerpt": "The http client may be customized, but the above example is recommended for common proxy scenarios. Always use HttpMessageInvoker rather than HttpClient,…"
+    "excerpt": "HTTP 客户端是可以自定义的，但对于常见的代理场景，建议使用上面示例中的方式。请始终使用 HttpMessageInvoker，而不要使用 HttpClient，因为 HttpClient…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Transforms",
+    "title": "直接转发",
+    "headingPath": "直接转发 › 转换",
     "anchor": "transforms",
-    "excerpt": "The request and response can be modified by providing a derived HttpTransformer as a parameter to SendAsync method."
+    "excerpt": "可以通过向 SendAsync 方法提供一个派生自 HttpTransformer 的参数来修改请求和响应。"
   },
   {
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Error handling",
+    "title": "直接转发",
+    "headingPath": "直接转发 › 错误处理",
     "anchor": "error-handling",
-    "excerpt": "IHttpForwarder catches exceptions and timeouts from the HTTP client, logs them, and converts them to 5xx status codes or aborts the response. An error code is…"
+    "excerpt": "IHttpForwarder 会捕获来自 HTTP 客户端的异常和超时，将其记录下来，并将其转换为 5xx 状态代码或直接中止响应。SendAsync 会返回一个错误代码，错误详情可以像上文所示的那样，从 IForwarderErrorFeature 中获取。 说明本文作者在 AI 协助下创作了这篇文章。了解更多信息"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "title": "目标解析器",
+    "excerpt": "YARP 使用目标解析器来扩展已配置的目标地址集合。"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › YARP Extensibility Destination Resolvers",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › YARP 可扩展性：目标解析器",
     "anchor": "yarp-extensibility-destination-resolvers",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "YARP 使用目标解析器来扩展已配置的目标地址集合。"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Introduction",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › 简介",
     "anchor": "introduction",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The destination resolver can be used as an integration point with…"
+    "excerpt": "YARP 使用目标解析器来扩展已配置的目标地址集合。目标解析器可以用作与服务发现系统集成的一个接入点。"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Structure",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › 结构",
     "anchor": "structure",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "YARP 使用目标解析器来扩展已配置的目标地址集合。"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › IDestinationResolver has a single method",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › IDestinationResolver 只有一个方法",
     "anchor": "idestinationresolver-has-a-single-method",
-    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken) which should return a…"
+    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken) 应返回一个…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › DestinationConfig",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › DestinationConfig",
     "anchor": "destinationconfig",
-    "excerpt": "DestinationConfig has a Host property which can be used to specify the default Host header value which the proxy should use when communicating with that…"
+    "excerpt": "DestinationConfig 具有一个 Host 属性，可用于指定代理在与该目标通信时应使用的默认 Host 标头值。这样一来，IDestinationResolver 就可以将目标解析为一组 IP 地址，例如，而不会导致基于 SNI 或主机的路由失败。"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Lifecycle",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › 生命周期",
     "anchor": "lifecycle",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "YARP 使用目标解析器来扩展已配置的目标地址集合。"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Startup",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › 启动",
     "anchor": "startup",
-    "excerpt": "The IDestinationResolver should be registered in the DI container as a singleton. At startup, the proxy will resolve this instance and call…"
+    "excerpt": "IDestinationResolver 应作为单例注册到依赖关系注入容器中。启动时，代理会解析该实例，并使用从已解析的 IProxyConfigProviders 中获取的已配置目标来调用 ResolveDestinationsAsync(...)。在这次首次调用中，提供程序可以选择：…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Atomicity",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › 原子性",
     "anchor": "atomicity",
-    "excerpt": "The destinations objects and collections supplied to the proxy should be read-only and not modified once they have been handed to the proxy via GetConfig() ."
+    "excerpt": "提供给代理的目标对象和集合应为只读，一旦通过 GetConfig() 交给代理后，就不应再被修改。"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Reload",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › 重新加载",
     "anchor": "reload",
-    "excerpt": "If the IChangeToken supports ActiveChangeCallbacks , once the proxy has processed the initial set of destinations it will register a callback with this token.…"
+    "excerpt": "如果 IChangeToken 支持 ActiveChangeCallbacks，那么代理在处理完初始的目标集合后，会向该令牌注册一个回调。如果提供程序不支持回调，则 HasChanged 会与 IProxyConfig 的更改令牌一起，每 5 分钟被轮询一次。 当提供程序想要向代理提供一组新目标时，应执行以下操作：…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › DNS Destination Resolver",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › DNS 目标解析器",
     "anchor": "dns-destination-resolver",
-    "excerpt": "YARP includes an IDestinationResolver implementation which expands the set of configured destinations by resolving each host name to one or more IP addresses…"
+    "excerpt": "YARP 内置了一个 IDestinationResolver 实现，它会通过 DNS 将每个主机名解析为一个或多个 IP 地址，并为每个解析出的 IP 创建一个目标，从而扩展已配置的目标集合。可以使用 IReverseProxyBuilder.AddDnsDestinationResolver(Action)…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Example",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › 示例",
     "anchor": "example",
     "excerpt": "C#// Add the DNS destination resolver, restricting results to IPv4 addresses reverseProxyBuilder.AddDnsDestinationResolver(o =&gt; o.AddressFamily =…"
   },
@@ -2401,288 +2401,288 @@
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Configuration",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › 配置",
     "anchor": "configuration",
-    "excerpt": "The DNS destination resolver&#39;s options, DnsDestinationResolverOptions, has the following properties:"
+    "excerpt": "DNS 目标解析器的选项 DnsDestinationResolverOptions 具有以下属性："
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › RefreshPeriod",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › RefreshPeriod",
     "anchor": "refreshperiod",
-    "excerpt": "The period between requesting a refresh of a resolved name. This defaults to 5 minutes."
+    "excerpt": "两次请求刷新已解析名称之间的时间间隔。默认值为 5 分钟。"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › AddressFamily",
+    "title": "目标解析器",
+    "headingPath": "目标解析器 › AddressFamily",
     "anchor": "addressfamily",
-    "excerpt": "Optionally, specify an System.Net.Sockets.AddressFamily value of AddressFamily.InterNetwork or AddressFamily.InterNetworkV6 to restrict resolved resolution to…"
+    "excerpt": "可以选择性地指定一个 System.Net.Sockets.AddressFamily 值——AddressFamily.InterNetwork 或 AddressFamily.InterNetworkV6——以将解析结果分别限制为 IPv4 或 IPv6 地址。默认值 null…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "title": "请求与响应转换",
+    "excerpt": "在代理请求时，通常需要修改请求或响应的部分内容，以适应"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Request and Response Transform",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › 请求与响应转换",
     "anchor": "request-and-response-transform",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "在代理请求时，通常需要修改请求或响应的部分内容，以适应"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Extensibility",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › 可扩展性",
     "anchor": "extensibility",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "在代理请求时，通常需要修改请求或响应的部分内容，以适应"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Introduction",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › 简介",
     "anchor": "introduction",
-    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+    "excerpt": "在代理请求时，通常需要修改请求或响应的某些部分，以适应目标服务器的要求，或者传递额外的数据（例如客户端的原始 IP 地址）。这一过程是通过转换来实现的。转换的类型是在应用程序级别全局定义的，然后由各个路由提供参数来启用并配置这些转换。这些转换不会修改原始请求对象，只会修改代理请求。 YARP…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › RequestTransform",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › RequestTransform",
     "anchor": "requesttransform",
-    "excerpt": "All request transforms must derive from the abstract base class RequestTransform. These can freely modify the proxy HttpRequestMessage . Avoid reading or…"
+    "excerpt": "所有请求转换都必须派生自抽象基类 RequestTransform。它们可以自由修改代理的 HttpRequestMessage。请避免读取或修改请求正文，因为这可能会破坏代理流程。此外，建议在 TransformBuilderContext 上添加一个带参数的扩展方法，以提升可发现性并方便使用。…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ResponseTransform",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › ResponseTransform",
     "anchor": "responsetransform",
-    "excerpt": "All response transforms must derive from the abstract base class ResponseTransform. These can freely modify the client HttpResponse . Avoid reading or…"
+    "excerpt": "所有响应转换都必须派生自抽象基类 ResponseTransform。它们可以自由修改客户端的 HttpResponse。请避免读取或修改响应正文，因为这可能会破坏代理流程。此外，建议在 TransformBuilderContext 上添加一个带参数的扩展方法，以提升可发现性并方便使用。…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ResponseTrailersTransform",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › ResponseTrailersTransform",
     "anchor": "responsetrailerstransform",
-    "excerpt": "All response trailers transforms must derive from the abstract base class ResponseTrailersTransform. These can freely modify the client HttpResponse trailers.…"
+    "excerpt": "所有响应尾部转换都必须派生自抽象基类 ResponseTrailersTransform。它们可以自由修改客户端 HttpResponse 的尾部（trailers）。这些转换在响应正文之后运行，不应尝试修改响应标头或正文。此外，建议在 TransformBuilderContext…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Request body transforms",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › 请求正文转换",
     "anchor": "request-body-transforms",
-    "excerpt": "YARP does not provide any built in transforms for modifying the request body. However, the body can be modified by custom transforms. Be careful about which…"
+    "excerpt": "YARP 没有提供任何用于修改请求正文的内置转换，不过可以通过自定义转换来修改正文。 请谨慎考虑要修改哪些类型的请求、需要缓冲多少数据、如何强制实施超时、如何解析不受信任的输入，以及如何更新与正文相关的标头（例如 Content-Length）。…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › any",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › 任何",
     "anchor": "any",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "在代理请求时，通常需要修改请求或响应的部分内容，以适应"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › // needed headers on the ProxyRequest",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › // 在 ProxyRequest 上需要的标头",
     "anchor": "needed-headers-on-the-proxyrequest",
-    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); Custom transforms can only modify a request body if one is already present.…"
+    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); 自定义转换只能在请求已经存在正文的情况下修改该正文。它们无法为原本没有正文的请求添加新的正文（例如没有正文的 POST 请求，或 GET…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Response body transforms",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › 响应正文转换",
     "anchor": "response-body-transforms",
-    "excerpt": "YARP does not provide any built in transforms for modifying the response body. However, the body can be modified by custom transforms. Be careful about which…"
+    "excerpt": "YARP 没有提供任何用于修改响应正文的内置转换，不过可以通过自定义转换来修改正文。 请谨慎考虑要修改哪些类型的响应、需要缓冲多少数据、如何强制实施超时、如何解析不受信任的输入，以及如何更新与正文相关的标头（例如 Content-Length）。根据 Content-Encoding…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ITransformProvider",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › ITransformProvider",
     "anchor": "itransformprovider",
-    "excerpt": "ITransformProvider provides the functionality of AddTransforms described above as well as DI integration and validation support. ITransformProvider &#39;s can…"
+    "excerpt": "ITransformProvider 提供了上文所述 AddTransforms 的功能，此外还提供了依赖关系注入集成和验证支持。 可以通过调用 AddTransforms 将 ITransformProvider 注册到依赖关系注入容器中。可以注册多个 ITransformProvider 实现，它们都会被运行。…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ITransformFactory",
+    "title": "请求与响应转换",
+    "headingPath": "请求与响应转换 › ITransformFactory",
     "anchor": "itransformfactory",
-    "excerpt": "Developers that want to integrate their custom transforms with the Transforms section of configuration can implement an ITransformFactory. This should be…"
+    "excerpt": "如果开发人员希望将自定义转换与配置的 Transforms 部分集成，可以实现一个 ITransformFactory。该实现应使用 AddTransformFactory() 方法注册到依赖关系注入容器中。可以注册多个工厂，它们都会被使用。 ITransformFactory 提供了两个方法：Validate 和…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "excerpt": "When using a reverse proxy, there is an additional hop from the client to the proxy, and then"
+    "title": "诊断基于 YARP 的代理",
+    "excerpt": "使用反向代理时，从客户端到代理、再从代理到目标之间都会多出一跳"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Logging",
+    "title": "诊断基于 YARP 的代理",
+    "headingPath": "诊断基于 YARP 的代理 › 日志记录",
     "anchor": "logging",
-    "excerpt": "The first step to being able to tell what is going on with YARP is to turn on logging. This is a configuration flag so can be changed on the fly. YARP is…"
+    "excerpt": "要弄清 YARP 中发生了什么，第一步就是开启日志记录。这是一个配置标志，因此可以随时更改。YARP 是作为 ASP.NET Core 的一个中间件组件实现的，因此您需要同时为 YARP 和 ASP.NET 启用日志记录，才能全面了解系统中发生的情况。 默认情况下，ASP.NET…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Understanding log entries",
+    "title": "诊断基于 YARP 的代理",
+    "headingPath": "诊断基于 YARP 的代理 › 了解日志条目",
     "anchor": "understanding-log-entries",
-    "excerpt": "The logging output is directly tied to the way that ASP.NET Core processes requests. It&#39;s important to realize that as middleware, YARP is relying on much…"
+    "excerpt": "日志输出与 ASP.NET Core 处理请求的方式直接相关。需要注意的是，作为中间件，YARP 在处理请求时依赖了大量 ASP.NET 的现有功能；例如，下面就是在启用&quot;Debug&quot;模式后，处理一次请求时的输出： Level Log Message Description dbug…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using ASP.NET request logging",
+    "title": "诊断基于 YARP 的代理",
+    "headingPath": "诊断基于 YARP 的代理 › 使用 ASP.NET 请求日志记录",
     "anchor": "using-asp-net-request-logging",
-    "excerpt": "ASP.NET includes a middleware component that can be used to provide more details about the request and response. The UseHttpLogging component can be added to…"
+    "excerpt": "ASP.NET 内置了一个中间件组件，可用于提供有关请求和响应的更多详细信息。可以将 UseHttpLogging 组件添加到请求管道中，它会在日志中添加额外的条目，详细记录传入和传出的请求标头。 C# app.UseHttpLogging(); // Enable endpoint routing,…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using telemetry events",
+    "title": "诊断基于 YARP 的代理",
+    "headingPath": "诊断基于 YARP 的代理 › 使用遥测事件",
     "anchor": "using-telemetry-events",
-    "excerpt": "We recommend reading Networking telemetry in .NET as a primer on how to consume networking telemetry in .NET. The Metrics sample shows how to listen to events…"
+    "excerpt": "我们建议先阅读&quot;.NET 中的网络遥测&quot;一文，以此作为了解如何在 .NET 中使用网络遥测数据的入门材料。 Metrics 示例展示了如何侦听 YARP 中各个负责收集遥测数据的提供程序所发出的事件。从诊断的角度来看，其中最重要的是： ForwarderTelemetryConsumer…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using custom middleware",
+    "title": "诊断基于 YARP 的代理",
+    "headingPath": "诊断基于 YARP 的代理 › 使用自定义中间件",
     "anchor": "using-custom-middleware",
-    "excerpt": "Another way to inspect the state for requests is to insert additional middleware into the request pipeline. You can insert between the other stages to see the…"
+    "excerpt": "另一种检查请求状态的方法是向请求管道中插入额外的中间件。您可以将其插入到其他阶段之间，以便查看请求的状态。 C# // We can customize the proxy pipeline and add/remove/replace steps app.MapReverseProxy(proxyPipeline…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using the debugger",
+    "title": "诊断基于 YARP 的代理",
+    "headingPath": "诊断基于 YARP 的代理 › 使用调试器",
     "anchor": "using-the-debugger",
-    "excerpt": "A debugger, such as Visual Studio, can be attached to the proxy process. However, unless you have existing middleware, there isn&#39;t a good place in the app…"
+    "excerpt": "可以将调试器（例如 Visual Studio）附加到代理进程上。但是，除非您已经有现成的中间件，否则应用代码中并没有一个合适的位置可用于中断并检查请求的状态。因此，最好将调试器与前面介绍的某种技术结合使用，这样您就可以在明确的位置设置断点。"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Network tracing",
+    "title": "诊断基于 YARP 的代理",
+    "headingPath": "诊断基于 YARP 的代理 › 网络跟踪",
     "anchor": "network-tracing",
-    "excerpt": "It can be attractive to use network tracing tools like Fiddler or Wireshark to try to monitor what&#39;s happening either side of the proxy. However, be…"
+    "excerpt": "使用 Fiddler 或 Wireshark 等网络跟踪工具来尝试监视代理两端所发生的情况，看起来颇具吸引力。不过，使用这两种工具时都需要谨慎： Fiddler 会将自己注册为一个代理，并依赖于应用使用默认代理设置才能监视流量。这种方式对于从浏览器到 YARP 的入站流量是有效的，但无法捕获出站请求，因为 YARP…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Distributed tracing",
-    "excerpt": "As an ASP.NET Core component, YARP can easily integrate into different tracing systems the"
+    "title": "分布式跟踪",
+    "excerpt": "作为一个 ASP.NET Core 组件，YARP 可以轻松集成到各种不同的跟踪系统中，如同"
   },
   {
     "slug": "distributed-tracing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Using Open Telemetry",
+    "title": "分布式跟踪",
+    "headingPath": "分布式跟踪 › 使用 Open Telemetry",
     "anchor": "using-open-telemetry",
-    "excerpt": "YARP supports distributed tracing using Open Telemetry (OTEL). When a request comes in, and there is a listener for Activities, then ASP.NET Core will…"
+    "excerpt": "YARP 支持使用 Open Telemetry（OTEL）进行分布式跟踪。当请求进入时，如果存在针对 Activity 的侦听器，那么 ASP.NET Core 会传播 Trace Context 的 trace-id（如有必要则创建一个新的），并为所执行的工作创建新的 span/activity。此外，YARP…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Using custom tracing headers",
+    "title": "分布式跟踪",
+    "headingPath": "分布式跟踪 › 使用自定义跟踪标头",
     "anchor": "using-custom-tracing-headers",
-    "excerpt": "When using a propagation mechanism that is not built into .NET (e.g. B3 propagation ), you should implement a custom [ DistributedContextPropagator ] for that…"
+    "excerpt": "如果使用的传播机制并非 .NET 内置支持的（例如 B3 propagation），则应为该方案实现一个自定义的 DistributedContextPropagator。 YARP 会移除 DistributedContextPropagator.Fields 中列出的所有标头，以便传播器可以在 Inject…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Pass-through proxy",
+    "title": "分布式跟踪",
+    "headingPath": "分布式跟踪 › 透传代理",
     "anchor": "pass-through-proxy",
-    "excerpt": "If you do not wish the proxy to actively participate in the trace, and wish to keep all the tracing headers as-is, you may do so by setting…"
+    "excerpt": "如果不希望代理主动参与跟踪，并且希望保持所有跟踪标头原样不变，则可以将 SocketsHttpHandler.ActivityHeadersPropagator 设置为 null 来实现。 C#services.AddReverseProxy() .ConfigureHttpClient((context,…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › DistributedContextPropagator DistributedContextPropagator.Fields",
+    "title": "分布式跟踪",
+    "headingPath": "分布式跟踪 › DistributedContextPropagator DistributedContextPropagator.Fields",
     "anchor": "distributedcontextpropagator-distributedcontextpropagator-fi",
-    "excerpt": "说明The author created this article with assistance from AI. Learn more"
+    "excerpt": "说明本文作者在 AI 协助下创作了这篇文章。了解更多信息"
   },
   {
     "slug": "ab-testing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+    "title": "A/B 测试与滚动升级",
+    "excerpt": "A/B 测试和滚动升级都需要有相应的机制来动态分配传入流量"
   },
   {
     "slug": "ab-testing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › YARP A/B Testing and Rolling Upgrades",
+    "title": "A/B 测试与滚动升级",
+    "headingPath": "A/B 测试与滚动升级 › YARP A/B 测试和滚动升级",
     "anchor": "yarp-a-b-testing-and-rolling-upgrades",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+    "excerpt": "A/B 测试和滚动升级都需要有相应的机制来动态分配传入流量"
   },
   {
     "slug": "ab-testing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Introduction",
+    "title": "A/B 测试与滚动升级",
+    "headingPath": "A/B 测试与滚动升级 › 简介",
     "anchor": "introduction",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic to evaluate changes in the destination application. YARP does…"
+    "excerpt": "A/B 测试和滚动升级都需要有相应的机制来动态分配传入流量，以便评估目标应用程序中的变更效果。YARP 并没有为此提供内置模型，但它确实公开了一些可用于构建此类系统的基础设施。有关此场景的更多详情，请参阅 issue #126。"
   },
   {
     "slug": "ab-testing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Example",
+    "title": "A/B 测试与滚动升级",
+    "headingPath": "A/B 测试与滚动升级 › 示例",
     "anchor": "example",
     "excerpt": "app.MapReverseProxy(proxyPipeline =&gt; { // Custom cluster selection proxyPipeline.Use((context, next) =&gt; { var lookup =…"
   },
@@ -2690,234 +2690,234 @@
     "slug": "ab-testing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Usage",
+    "title": "A/B 测试与滚动升级",
+    "headingPath": "A/B 测试与滚动升级 › 用法",
     "anchor": "usage",
-    "excerpt": "This scenario makes use of two APIs, IProxyStateLookup and ReassignProxyRequest, called from a custom proxy middleware as shown in the sample above.…"
+    "excerpt": "此场景使用了两个 API：IProxyStateLookup 和 ReassignProxyRequest，它们在上面示例所示的自定义代理中间件中被调用。 IProxyStateLookup 是依赖关系注入容器中提供的一个服务，可用于查找或枚举当前的路由和群集。请注意，如果配置发生变更，这些数据也可能随之变化。A/B…"
   },
   {
     "slug": "ab-testing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Session affinity",
+    "title": "A/B 测试与滚动升级",
+    "headingPath": "A/B 测试与滚动升级 › 会话相关性",
     "anchor": "session-affinity",
-    "excerpt": "说明that session affinity functionality is split between middleware, which reads it settings from the current cluster, and transforms, which are part of the…"
+    "excerpt": "说明会话相关性功能被拆分在两处：中间件会从当前群集读取其设置，而转换则是原始路由的一部分。用于 A/B 测试的各个群集应使用相同的会话相关性配置，以避免发生冲突。 说明本文作者在 AI 协助下创作了这篇文章。了解更多信息"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+    "title": "Kubernetes Ingress 控制器",
+    "excerpt": "YARP 可以与 Kubernetes 集成,作为管理进入 Kubernetes 群集的 HTTP/HTTPS 流量的反向代理。"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Prerequisites",
+    "title": "Kubernetes Ingress 控制器",
+    "headingPath": "Kubernetes Ingress 控制器 › 前提条件",
     "anchor": "prerequisites",
-    "excerpt": "Before we continue with this tutorial, make sure you have the following ready... Installing Docker based on your operating system. A container registry. Docker…"
+    "excerpt": "在继续本教程之前,请确保你已经准备好以下内容…… 根据你的操作系统安装 Docker。 一个容器注册表。默认情况下,Docker 会在 DockerHub 上创建一个容器注册表。你也可以使用 Azure Container Registry,或你选择的其他容器注册表,例如用于测试的本地注册表。 一个…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Get started",
+    "title": "Kubernetes Ingress 控制器",
+    "headingPath": "Kubernetes Ingress 控制器 › 开始使用",
     "anchor": "get-started",
-    "excerpt": "说明For now, there is no official Docker image for the YARP ingress controller. In the meantime, the YARP ingress controller must be built locally and deploy it.…"
+    "excerpt": "说明目前还没有官方提供的 YARP Ingress 控制器 Docker 镜像。 在此之前,你必须在本地构建 YARP Ingress 控制器并进行部署。在仓库根目录下运行: docker build . -t {REGISTRY_NAME}/yarp-controller:{TAG} -f…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f ingress-controller.yaml",
+    "title": "Kubernetes Ingress 控制器",
+    "headingPath": "Kubernetes Ingress 控制器 › kubectl apply -f ingress-controller.yaml",
     "anchor": "kubectl-apply-f-ingress-controller-yaml",
-    "excerpt": "To verify that the ingress controller has been deployed, run:"
+    "excerpt": "要验证 Ingress 控制器是否已部署成功,请运行:"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl get pods -n yarp",
+    "title": "Kubernetes Ingress 控制器",
+    "headingPath": "Kubernetes Ingress 控制器 › kubectl get pods -n yarp",
     "anchor": "kubectl-get-pods-n-yarp",
-    "excerpt": "You can then check logs from the ingress controller by running: kubectl logs {POD NAME} -n yarp All services, deployments, and pods for YARP are in the…"
+    "excerpt": "随后,你可以通过运行以下命令查看 Ingress 控制器的日志: kubectl logs {POD NAME} -n yarp YARP 的所有服务、部署和 Pod 都位于 yarp 命名空间中。如果要查看 yarp 的状态,请务必加上 -n yarp。接下来,构建并部署 Ingress。在仓库根目录下运行:…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress.yaml",
+    "title": "Kubernetes Ingress 控制器",
+    "headingPath": "Kubernetes Ingress 控制器 › kubectl apply -f .\\ingress.yaml",
     "anchor": "kubectl-apply-f-ingress-yaml",
-    "excerpt": "At this point, your ingress and controller should be running."
+    "excerpt": "至此,你的 Ingress 和控制器应该已经在运行了。"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Deploying an app",
+    "title": "Kubernetes Ingress 控制器",
+    "headingPath": "Kubernetes Ingress 控制器 › 部署应用",
     "anchor": "deploying-an-app",
-    "excerpt": "To use the ingress, we now need to deploy an application to Kubernetes. Navigate to samples\\KuberenetesIngress.Sample\\backend and run: docker build . -t…"
+    "excerpt": "要使用该 Ingress,现在需要将一个应用程序部署到 Kubernetes。进入 samples\\KuberenetesIngress.Sample\\backend,并运行: docker build . -t {REGISTRY_NAME}/backend:{TAG} docker push…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\backend.yaml",
+    "title": "Kubernetes Ingress 控制器",
+    "headingPath": "Kubernetes Ingress 控制器 › kubectl apply -f .\\backend.yaml",
     "anchor": "kubectl-apply-f-backend-yaml",
-    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+    "excerpt": "YARP 可以与 Kubernetes 集成,作为管理进入 Kubernetes 群集的 HTTP/HTTPS 流量的反向代理。"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Creating the ingress definition",
+    "title": "Kubernetes Ingress 控制器",
+    "headingPath": "Kubernetes Ingress 控制器 › 创建 Ingress 定义",
     "anchor": "creating-the-ingress-definition",
-    "excerpt": "Finally, once we have deployed the backend application, we need to route traffic to the backend. To do this, run in the backend directory:"
+    "excerpt": "最后,在部署完后端应用程序之后,我们需要将流量路由到该后端。为此,请在 backend 目录下运行:"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress-sample.yaml",
+    "title": "Kubernetes Ingress 控制器",
+    "headingPath": "Kubernetes Ingress 控制器 › kubectl apply -f .\\ingress-sample.yaml",
     "anchor": "kubectl-apply-f-ingress-sample-yaml",
-    "excerpt": "And then execute the following command to get the external IP of the ingress, the name of the related service being yarp-proxy :"
+    "excerpt": "然后执行以下命令,获取该 Ingress 的外部 IP 地址(相关服务的名称为 yarp-proxy):"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl get service -n yarp",
+    "title": "Kubernetes Ingress 控制器",
+    "headingPath": "Kubernetes Ingress 控制器 › kubectl get service -n yarp",
     "anchor": "kubectl-get-service-n-yarp",
-    "excerpt": "If you&#39;re using a local K8s cluster and don&#39;t get an external IP, you may be able to avoid using the default port: 80 for the yarp-proxy service. If…"
+    "excerpt": "如果你使用的是本地 K8s 群集,并且没有获得外部 IP,你可以尝试不为 yarp-proxy 服务使用默认端口 80。如果是这种情况,请再次修改 ingress.yaml 文件以使用另一个端口(例如 port: 8085),然后将该 Ingress 重新部署到 Kubernetes。 导航到该外部…"
   },
   {
     "slug": "service-fabric-int",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Service Fabric integration",
-    "excerpt": "This functionality has been deprecated in favor of service-fabric-yarp (GitHub repository) ."
+    "title": "Service Fabric 集成",
+    "excerpt": "此功能已被弃用,建议改用 service-fabric-yarp(GitHub 存储库)。"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which"
+    "title": "HTTP.sys 委派",
+    "excerpt": "HTTP.sys 委派是较新版本 Windows 中新增的一项内核级功能,它能以极小的开销和极低的额外延迟,将 请求从接收进程的 HTTP.sys 队列转移到目标进程的 HTTP.sys 队列。"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Introduction",
+    "title": "HTTP.sys 委派",
+    "headingPath": "HTTP.sys 委派 › 简介",
     "anchor": "introduction",
-    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which allows a request to be transferred from the receiving process&#39;s…"
+    "excerpt": "HTTP.sys 委派是较新版本 Windows 中新增的一项内核级功能,它能以极小的开销和极低的额外延迟,将请求从接收进程的 HTTP.sys 队列转移到目标进程的 HTTP.sys…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Requirements",
+    "title": "HTTP.sys 委派",
+    "headingPath": "HTTP.sys 委派 › 要求",
     "anchor": "requirements",
-    "excerpt": "HTTP.sys delegation requires: ASP.NET Core&#39;s HTTP.sys server Windows Server 2019 or Windows 10 (build number 1809) or newer."
+    "excerpt": "HTTP.sys 委派需要: ASP.NET Core 的 HTTP.sys 服务器;Windows Server 2019 或 Windows 10(内部版本 1809)或更高版本。"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Defaults",
+    "title": "HTTP.sys 委派",
+    "headingPath": "HTTP.sys 委派 › 默认设置",
     "anchor": "defaults",
-    "excerpt": "HTTP.sys delegation won&#39;t be used unless added to the proxy pipeline and enabled in the destination configuration."
+    "excerpt": "除非将 HTTP.sys 委派添加到代理管道并在目标配置中启用,否则不会使用该功能。"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Configuration",
+    "title": "HTTP.sys 委派",
+    "headingPath": "HTTP.sys 委派 › 配置",
     "anchor": "configuration",
-    "excerpt": "HTTP.sys delegation can be enabled per destination by adding the HttpSysDelegationQueue metadata to the destination. The value of this metadata should be the…"
+    "excerpt": "可以通过向目标添加 HttpSysDelegationQueue 元数据,按目标启用 HTTP.sys 委派。该元数据的值应为目标 HTTP.sys 队列的名称。目标的 Address 用于指定该 HTTP.sys 队列的 URL 前缀。 JSON{ \"ReverseProxy\": { \"Routes\": {…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Delegation queue lifetime",
+    "title": "HTTP.sys 委派",
+    "headingPath": "HTTP.sys 委派 › 委派队列的生命周期",
     "anchor": "delegation-queue-lifetime",
-    "excerpt": "When YARP is configured to use delegation for a destination, a handle is created to the specified HTTP.sys queue. This handle is kept alive as long as the…"
+    "excerpt": "当 YARP 为某个目标配置了委派后,系统会为指定的 HTTP.sys 队列创建一个句柄。只要引用该队列的目标仍然存在,这个句柄就会一直保持存活。这些句柄的清理工作在垃圾回收(GC)期间进行,因此如果句柄进入第 2…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "title": "ASP.NET Core 入门",
+    "excerpt": "本教程演示如何使用 .NET CLI 创建并运行 ASP.NET Core Web 应用。"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Prerequisites",
+    "title": "ASP.NET Core 入门",
+    "headingPath": "ASP.NET Core 入门 › 先决条件",
     "anchor": "prerequisites",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "本教程演示如何使用 .NET CLI 创建并运行 ASP.NET Core Web 应用。"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › .NET 8 SDK",
+    "title": "ASP.NET Core 入门",
+    "headingPath": "ASP.NET Core 入门 › .NET 8 SDK",
     "anchor": "net-8-sdk",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "本教程演示如何使用 .NET CLI 创建并运行 ASP.NET Core Web 应用。"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Create a web app project",
+    "title": "ASP.NET Core 入门",
+    "headingPath": "ASP.NET Core 入门 › 创建 Web 应用项目",
     "anchor": "create-a-web-app-project",
-    "excerpt": "Open a command shell, and enter the following command: .NET CLI dotnet new webapp --output aspnetcoreapp --no-https The preceding command creates a new web app…"
+    "excerpt": "打开命令行窗口，输入以下命令： .NET CLI dotnet new webapp --output aspnetcoreapp --no-https 上述命令会在名为 aspnetcoreapp 的目录中创建一个新的 Web 应用项目。 该项目不使用 HTTPS。"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Run the app",
+    "title": "ASP.NET Core 入门",
+    "headingPath": "ASP.NET Core 入门 › 运行应用",
     "anchor": "run-the-app",
-    "excerpt": "Run the following commands: .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:输出 Building... info:…"
+    "excerpt": "运行以下命令： .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:输出 Building... info: Microsoft.Hosting.Lifetime[14] Now…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Edit a Razor page",
+    "title": "ASP.NET Core 入门",
+    "headingPath": "ASP.NET Core 入门 › 编辑 Razor 页面",
     "anchor": "edit-a-razor-page",
-    "excerpt": "Change the home page: In the command shell, press Ctrl+C (Cmd+C in macOS) to exit the program. Open Pages/Index.cshtml in a text editor. Replace the line that…"
+    "excerpt": "更改主页： 在命令行窗口中按 Ctrl+C（在 macOS 上为 Cmd+C）退出程序。 使用文本编辑器打开 Pages/Index.cshtml。 将以 &quot;Learn about&quot; 开头的那一行替换为以下突出显示的标记和代码："
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › CSHTML",
+    "title": "ASP.NET Core 入门",
+    "headingPath": "ASP.NET Core 入门 › CSHTML",
     "anchor": "cshtml",
     "excerpt": "@page @model IndexModel @{ ViewData[&quot;Title&quot;] = &quot;Home page&quot;; } Welcome Hello, world! The time on the server is @DateTime.Now"
   },
@@ -2925,27 +2925,27 @@
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › </div>",
+    "title": "ASP.NET Core 入门",
+    "headingPath": "ASP.NET Core 入门 › </div>",
     "anchor": "div",
-    "excerpt": "Save your changes. In the command shell run the dotnet run command again. In the browser, refresh the page and verify the changes are displayed."
+    "excerpt": "保存所做的更改。在命令行窗口中再次运行 dotnet run 命令。在浏览器中刷新页面，确认更改已生效。"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Next steps",
+    "title": "ASP.NET Core 入门",
+    "headingPath": "ASP.NET Core 入门 › 后续步骤",
     "anchor": "next-steps",
-    "excerpt": "In this tutorial, you learned how to: Create a web app project. Run the project. Make a change. To learn more about ASP.NET Core, see the following:"
+    "excerpt": "在本教程中，您学习了如何： 创建 Web 应用项目、运行该项目、进行更改。 要了解有关 ASP.NET Core 的更多信息，请参阅下列内容："
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Overview of ASP.NET Core",
+    "title": "ASP.NET Core 入门",
+    "headingPath": "ASP.NET Core 入门 › ASP.NET Core 概述",
     "anchor": "overview-of-asp-net-core",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "本教程演示如何使用 .NET CLI 创建并运行 ASP.NET Core Web 应用。"
   }
 ]

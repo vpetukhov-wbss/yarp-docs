@@ -58,13 +58,13 @@
       "items": [
         {
           "slug": "header-routing",
-          "title": "Header-based routing",
+          "title": "基于标头的路由",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "queryparameter-routing",
-          "title": "Query parameter routing",
+          "title": "基于查询参数的路由",
           "order": 2,
           "kind": "doc"
         }
@@ -77,19 +77,19 @@
       "items": [
         {
           "slug": "transforms",
-          "title": "Overview",
+          "title": "概述",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "transforms-request",
-          "title": "Request transforms",
+          "title": "请求转换",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "transforms-response",
-          "title": "Response & trailer transforms",
+          "title": "响应与响应尾部转换",
           "order": 3,
           "kind": "doc"
         }
@@ -108,13 +108,13 @@
         },
         {
           "slug": "session-affinity",
-          "title": "Session affinity",
+          "title": "会话相关性",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "dests-health-checks",
-          "title": "Destination health checks",
+          "title": "目标运行状况检查",
           "order": 3,
           "kind": "doc"
         },
@@ -145,7 +145,7 @@
         },
         {
           "slug": "cors",
-          "title": "Cross-origin requests (CORS)",
+          "title": "跨域请求（CORS）",
           "order": 2,
           "kind": "doc"
         },
@@ -208,31 +208,31 @@
       "items": [
         {
           "slug": "extensibility",
-          "title": "Overview",
+          "title": "概述",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "middleware",
-          "title": "Middleware",
+          "title": "中间件",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "direct-forwarding",
-          "title": "Direct forwarding",
+          "title": "直接转发",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "destination-resolvers",
-          "title": "Destination resolvers",
+          "title": "目标解析器",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "extensibility-transforms",
-          "title": "Request & response transforms",
+          "title": "请求与响应转换",
           "order": 5,
           "kind": "doc"
         }
@@ -245,19 +245,19 @@
       "items": [
         {
           "slug": "diagnosing-yarp-issues",
-          "title": "Diagnosing YARP-based proxies",
+          "title": "诊断基于 YARP 的代理",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "distributed-tracing",
-          "title": "Distributed tracing",
+          "title": "分布式跟踪",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "ab-testing",
-          "title": "A/B testing & rolling upgrades",
+          "title": "A/B 测试与滚动升级",
           "order": 3,
           "kind": "doc"
         }
@@ -270,19 +270,19 @@
       "items": [
         {
           "slug": "kubernetes-ingress",
-          "title": "Kubernetes Ingress Controller",
+          "title": "Kubernetes Ingress 控制器",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "service-fabric-int",
-          "title": "Service Fabric integration",
+          "title": "Service Fabric 集成",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "httpsys-delegation",
-          "title": "HTTP.sys delegation",
+          "title": "HTTP.sys 委派",
           "order": 3,
           "kind": "doc"
         }
@@ -292,7 +292,7 @@
   "appendix": [
     {
       "slug": "aspnetcore-getting-started",
-      "title": "Get started with ASP.NET Core",
+      "title": "ASP.NET Core 入门",
       "order": 1,
       "kind": "appendix"
     }

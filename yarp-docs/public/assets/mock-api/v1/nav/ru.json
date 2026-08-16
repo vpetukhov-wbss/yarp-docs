@@ -270,19 +270,19 @@
       "items": [
         {
           "slug": "kubernetes-ingress",
-          "title": "Kubernetes Ingress Controller",
+          "title": "Ingress-контроллер Kubernetes",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "service-fabric-int",
-          "title": "Service Fabric integration",
+          "title": "Интеграция с Service Fabric",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "httpsys-delegation",
-          "title": "HTTP.sys delegation",
+          "title": "Делегирование HTTP.sys",
           "order": 3,
           "kind": "doc"
         }
@@ -292,7 +292,7 @@
   "appendix": [
     {
       "slug": "aspnetcore-getting-started",
-      "title": "Get started with ASP.NET Core",
+      "title": "Начало работы с ASP.NET Core",
       "order": 1,
       "kind": "appendix"
     }

@@ -2708,216 +2708,216 @@
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+    "title": "Ingress-контроллер Kubernetes",
+    "excerpt": "YARP можно интегрировать с Kubernetes в качестве обратного прокси, управляющего входящим трафиком HTTP/HTTPS"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Prerequisites",
+    "title": "Ingress-контроллер Kubernetes",
+    "headingPath": "Ingress-контроллер Kubernetes › Предварительные требования",
     "anchor": "prerequisites",
-    "excerpt": "Before we continue with this tutorial, make sure you have the following ready... Installing Docker based on your operating system. A container registry. Docker…"
+    "excerpt": "Прежде чем продолжить работу с этим руководством, убедитесь, что у вас готово следующее... Установка Docker в соответствии с вашей операционной системой.…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Get started",
+    "title": "Ingress-контроллер Kubernetes",
+    "headingPath": "Ingress-контроллер Kubernetes › Начало работы",
     "anchor": "get-started",
-    "excerpt": "ПримечаниеFor now, there is no official Docker image for the YARP ingress controller. In the meantime, the YARP ingress controller must be built locally and…"
+    "excerpt": "ПримечаниеНа данный момент официального образа Docker для Ingress-контроллера YARP не существует. Пока что Ingress-контроллер YARP нужно собрать локально и…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f ingress-controller.yaml",
+    "title": "Ingress-контроллер Kubernetes",
+    "headingPath": "Ingress-контроллер Kubernetes › kubectl apply -f ingress-controller.yaml",
     "anchor": "kubectl-apply-f-ingress-controller-yaml",
-    "excerpt": "To verify that the ingress controller has been deployed, run:"
+    "excerpt": "Чтобы убедиться, что Ingress-контроллер развернут, выполните команду:"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl get pods -n yarp",
+    "title": "Ingress-контроллер Kubernetes",
+    "headingPath": "Ingress-контроллер Kubernetes › kubectl get pods -n yarp",
     "anchor": "kubectl-get-pods-n-yarp",
-    "excerpt": "You can then check logs from the ingress controller by running: kubectl logs {POD NAME} -n yarp All services, deployments, and pods for YARP are in the…"
+    "excerpt": "Затем вы можете проверить журналы Ingress-контроллера, выполнив команду: kubectl logs {POD NAME} -n yarp Все службы, развертывания и поды YARP находятся в…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress.yaml",
+    "title": "Ingress-контроллер Kubernetes",
+    "headingPath": "Ingress-контроллер Kubernetes › kubectl apply -f .\\ingress.yaml",
     "anchor": "kubectl-apply-f-ingress-yaml",
-    "excerpt": "At this point, your ingress and controller should be running."
+    "excerpt": "На этом этапе ваш Ingress и контроллер должны быть запущены."
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Deploying an app",
+    "title": "Ingress-контроллер Kubernetes",
+    "headingPath": "Ingress-контроллер Kubernetes › Развертывание приложения",
     "anchor": "deploying-an-app",
-    "excerpt": "To use the ingress, we now need to deploy an application to Kubernetes. Navigate to samples\\KuberenetesIngress.Sample\\backend and run: docker build . -t…"
+    "excerpt": "Чтобы использовать Ingress, теперь необходимо развернуть приложение в Kubernetes. Перейдите в каталог samples\\KuberenetesIngress.Sample\\backend и выполните…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\backend.yaml",
+    "title": "Ingress-контроллер Kubernetes",
+    "headingPath": "Ingress-контроллер Kubernetes › kubectl apply -f .\\backend.yaml",
     "anchor": "kubectl-apply-f-backend-yaml",
-    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+    "excerpt": "YARP можно интегрировать с Kubernetes в качестве обратного прокси, управляющего входящим трафиком HTTP/HTTPS"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Creating the ingress definition",
+    "title": "Ingress-контроллер Kubernetes",
+    "headingPath": "Ingress-контроллер Kubernetes › Создание определения Ingress",
     "anchor": "creating-the-ingress-definition",
-    "excerpt": "Finally, once we have deployed the backend application, we need to route traffic to the backend. To do this, run in the backend directory:"
+    "excerpt": "Наконец, после развертывания серверного приложения (backend) необходимо направить трафик на него. Для этого выполните команду в каталоге backend:"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress-sample.yaml",
+    "title": "Ingress-контроллер Kubernetes",
+    "headingPath": "Ingress-контроллер Kubernetes › kubectl apply -f .\\ingress-sample.yaml",
     "anchor": "kubectl-apply-f-ingress-sample-yaml",
-    "excerpt": "And then execute the following command to get the external IP of the ingress, the name of the related service being yarp-proxy :"
+    "excerpt": "Затем выполните следующую команду, чтобы получить внешний IP-адрес ingress; имя связанной службы — yarp-proxy :"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "ru",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl get service -n yarp",
+    "title": "Ingress-контроллер Kubernetes",
+    "headingPath": "Ingress-контроллер Kubernetes › kubectl get service -n yarp",
     "anchor": "kubectl-get-service-n-yarp",
-    "excerpt": "If you&#39;re using a local K8s cluster and don&#39;t get an external IP, you may be able to avoid using the default port: 80 for the yarp-proxy service. If…"
+    "excerpt": "Если вы используете локальный кластер K8s и не получаете внешний IP-адрес, вы можете отказаться от использования порта по умолчанию: 80 для службы yarp-proxy.…"
   },
   {
     "slug": "service-fabric-int",
     "locale": "ru",
     "group": "deployment",
-    "title": "Service Fabric integration",
-    "excerpt": "This functionality has been deprecated in favor of service-fabric-yarp (GitHub repository) ."
+    "title": "Интеграция с Service Fabric",
+    "excerpt": "Эта функциональность объявлена устаревшей в пользу service-fabric-yarp (репозиторий на GitHub) ."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "ru",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which"
+    "title": "Делегирование HTTP.sys",
+    "excerpt": "Делегирование HTTP.sys — это функция уровня ядра, добавленная в более новые версии Windows, которая"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "ru",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Introduction",
+    "title": "Делегирование HTTP.sys",
+    "headingPath": "Делегирование HTTP.sys › Введение",
     "anchor": "introduction",
-    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which allows a request to be transferred from the receiving process&#39;s…"
+    "excerpt": "Делегирование HTTP.sys — это функция уровня ядра, добавленная в более новые версии Windows, которая позволяет передавать запрос из очереди HTTP.sys…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "ru",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Requirements",
+    "title": "Делегирование HTTP.sys",
+    "headingPath": "Делегирование HTTP.sys › Требования",
     "anchor": "requirements",
-    "excerpt": "HTTP.sys delegation requires: ASP.NET Core&#39;s HTTP.sys server Windows Server 2019 or Windows 10 (build number 1809) or newer."
+    "excerpt": "Для делегирования HTTP.sys необходимо следующее: Сервер HTTP.sys, входящий в состав ASP.NET Core. Windows Server 2019 или Windows 10 (сборка 1809) либо более…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "ru",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Defaults",
+    "title": "Делегирование HTTP.sys",
+    "headingPath": "Делегирование HTTP.sys › Значения по умолчанию",
     "anchor": "defaults",
-    "excerpt": "HTTP.sys delegation won&#39;t be used unless added to the proxy pipeline and enabled in the destination configuration."
+    "excerpt": "Делегирование HTTP.sys используется только в том случае, если оно добавлено в конвейер прокси-сервера и включено в конфигурации узла назначения."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "ru",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Configuration",
+    "title": "Делегирование HTTP.sys",
+    "headingPath": "Делегирование HTTP.sys › Настройка",
     "anchor": "configuration",
-    "excerpt": "HTTP.sys delegation can be enabled per destination by adding the HttpSysDelegationQueue metadata to the destination. The value of this metadata should be the…"
+    "excerpt": "Делегирование HTTP.sys можно включить для отдельного узла назначения, добавив в него метаданные HttpSysDelegationQueue. Значением этих метаданных должно быть…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "ru",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Delegation queue lifetime",
+    "title": "Делегирование HTTP.sys",
+    "headingPath": "Делегирование HTTP.sys › Время жизни очереди делегирования",
     "anchor": "delegation-queue-lifetime",
-    "excerpt": "When YARP is configured to use delegation for a destination, a handle is created to the specified HTTP.sys queue. This handle is kept alive as long as the…"
+    "excerpt": "Когда YARP настроен на использование делегирования для узла назначения, создается дескриптор указанной очереди HTTP.sys. Этот дескриптор остается активным,…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "ru",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "title": "Начало работы с ASP.NET Core",
+    "excerpt": "В этом руководстве показано, как создать и запустить веб-приложение ASP.NET Core с помощью .NET CLI."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "ru",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Prerequisites",
+    "title": "Начало работы с ASP.NET Core",
+    "headingPath": "Начало работы с ASP.NET Core › Предварительные требования",
     "anchor": "prerequisites",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "В этом руководстве показано, как создать и запустить веб-приложение ASP.NET Core с помощью .NET CLI."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "ru",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › .NET 8 SDK",
+    "title": "Начало работы с ASP.NET Core",
+    "headingPath": "Начало работы с ASP.NET Core › .NET 8 SDK",
     "anchor": "net-8-sdk",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "В этом руководстве показано, как создать и запустить веб-приложение ASP.NET Core с помощью .NET CLI."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "ru",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Create a web app project",
+    "title": "Начало работы с ASP.NET Core",
+    "headingPath": "Начало работы с ASP.NET Core › Создание проекта веб-приложения",
     "anchor": "create-a-web-app-project",
-    "excerpt": "Open a command shell, and enter the following command: .NET CLI dotnet new webapp --output aspnetcoreapp --no-https The preceding command creates a new web app…"
+    "excerpt": "Откройте командную оболочку и введите следующую команду: .NET CLI dotnet new webapp --output aspnetcoreapp --no-https Предыдущая команда создает новый проект…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "ru",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Run the app",
+    "title": "Начало работы с ASP.NET Core",
+    "headingPath": "Начало работы с ASP.NET Core › Запуск приложения",
     "anchor": "run-the-app",
-    "excerpt": "Run the following commands: .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:Вывод Building... info:…"
+    "excerpt": "Выполните следующие команды: .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:Вывод Building... info:…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "ru",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Edit a Razor page",
+    "title": "Начало работы с ASP.NET Core",
+    "headingPath": "Начало работы с ASP.NET Core › Редактирование страницы Razor",
     "anchor": "edit-a-razor-page",
-    "excerpt": "Change the home page: In the command shell, press Ctrl+C (Cmd+C in macOS) to exit the program. Open Pages/Index.cshtml in a text editor. Replace the line that…"
+    "excerpt": "Измените главную страницу: В командной оболочке нажмите Ctrl+C (Cmd+C в macOS), чтобы завершить работу программы. Откройте файл Pages/Index.cshtml в текстовом…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "ru",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › CSHTML",
+    "title": "Начало работы с ASP.NET Core",
+    "headingPath": "Начало работы с ASP.NET Core › CSHTML",
     "anchor": "cshtml",
     "excerpt": "@page @model IndexModel @{ ViewData[&quot;Title&quot;] = &quot;Home page&quot;; } Welcome Hello, world! The time on the server is @DateTime.Now"
   },
@@ -2925,27 +2925,27 @@
     "slug": "aspnetcore-getting-started",
     "locale": "ru",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › </div>",
+    "title": "Начало работы с ASP.NET Core",
+    "headingPath": "Начало работы с ASP.NET Core › </div>",
     "anchor": "div",
-    "excerpt": "Save your changes. In the command shell run the dotnet run command again. In the browser, refresh the page and verify the changes are displayed."
+    "excerpt": "Сохраните изменения. В командной оболочке снова выполните команду dotnet run. В браузере обновите страницу и убедитесь, что изменения отображаются."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "ru",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Next steps",
+    "title": "Начало работы с ASP.NET Core",
+    "headingPath": "Начало работы с ASP.NET Core › Дальнейшие действия",
     "anchor": "next-steps",
-    "excerpt": "In this tutorial, you learned how to: Create a web app project. Run the project. Make a change. To learn more about ASP.NET Core, see the following:"
+    "excerpt": "В этом руководстве вы узнали, как выполнить следующие действия: Создать проект веб-приложения. Запустить проект. Внести изменение. Чтобы узнать больше о…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "ru",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Overview of ASP.NET Core",
+    "title": "Начало работы с ASP.NET Core",
+    "headingPath": "Начало работы с ASP.NET Core › Обзор ASP.NET Core",
     "anchor": "overview-of-asp-net-core",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "В этом руководстве показано, как создать и запустить веб-приложение ASP.NET Core с помощью .NET CLI."
   }
 ]

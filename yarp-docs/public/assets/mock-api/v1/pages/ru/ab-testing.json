@@ -42,6 +42,6 @@
   },
   "next": {
     "slug": "kubernetes-ingress",
-    "title": "Kubernetes Ingress Controller"
+    "title": "Ingress-контроллер Kubernetes"
   }
 }

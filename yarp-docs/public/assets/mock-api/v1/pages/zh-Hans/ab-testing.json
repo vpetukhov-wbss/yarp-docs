@@ -3,45 +3,45 @@
   "locale": "zh-Hans",
   "group": "operations",
   "kind": "doc",
-  "title": "A/B testing & rolling upgrades",
-  "lede": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic",
+  "title": "A/B 测试与滚动升级",
+  "lede": "A/B 测试和滚动升级都需要有相应的机制来动态分配传入流量",
   "headings": [
     {
       "id": "yarp-a-b-testing-and-rolling-upgrades",
-      "text": "YARP A/B Testing and Rolling Upgrades",
+      "text": "YARP A/B 测试和滚动升级",
       "level": 2
     },
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "简介",
       "level": 2
     },
     {
       "id": "example",
-      "text": "Example",
+      "text": "示例",
       "level": 2
     },
     {
       "id": "usage",
-      "text": "Usage",
+      "text": "用法",
       "level": 2
     },
     {
       "id": "session-affinity",
-      "text": "Session affinity",
+      "text": "会话相关性",
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"yarp-a-b-testing-and-rolling-upgrades\">YARP A/B Testing and Rolling Upgrades</h2><h2 id=\"introduction\">Introduction</h2><p>A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic to evaluate changes in the destination application. YARP does not have a built-in model for this, but it does expose some infrastructure useful for building such a system. See issue #126 for additional details about this scenario.</p>\n<h2 id=\"example\">Example</h2><p>app.MapReverseProxy(proxyPipeline =&gt; {</p>\n<p>// Custom cluster selection proxyPipeline.Use((context, next) =&gt; {</p>\n<p>var lookup = context.RequestServices.GetRequiredService<IProxyStateLookup> ();</p>\n<p>if (lookup.TryGetCluster(ChooseCluster(context), out var cluster)) {</p>\n<p>context.ReassignProxyRequest(cluster); }</p>\n<p>return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); });</p>\n<p>string ChooseCluster(HttpContext context) {</p>\n<p>// Decide which cluster to use. This could be random, weighted, based on head- ers, etc.</p>\n<p>return Random.Shared.Next(2) == 1 ? &quot;cluster1&quot; : &quot;cluster2&quot;; }</p>\n<h2 id=\"usage\">Usage</h2><p>This scenario makes use of two APIs, IProxyStateLookup and ReassignProxyRequest, called from a custom proxy middleware as shown in the sample above.</p>\n<p>IProxyStateLookup is a service available in the Dependency Injection container that can be</p>\n<p>used to look up or enumerate the current routes and clusters. Note this data may change if the</p>\n<p>configuration changes. An A/B orchestration algorithm can examine the request, decide which</p>\n<p>cluster to send it to, and then retrieve that cluster from IProxyStateLookup.TryGetCluster .</p>\n<p>Once the cluster is selected, ReassignProxyRequest can be called to assign the request to that cluster. This updates the IReverseProxyFeature with the new cluster and destination information needed for the rest of the proxy middleware pipeline to handle the request.</p>\n<h2 id=\"session-affinity\">Session affinity</h2><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">说明</div><p>that session affinity functionality is split between middleware, which reads it settings from the current cluster, and transforms, which are part of the original route. Clusters used for A/B testing should use the same session affinity configuration to avoid conflicts.</p>\n</div></div><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">说明</div><p>The author created this article with assistance from AI. Learn more</p>\n</div></div>",
+  "bodyHtml": "<h2 id=\"yarp-a-b-testing-and-rolling-upgrades\">YARP A/B 测试和滚动升级</h2><h2 id=\"introduction\">简介</h2><p>A/B 测试和滚动升级都需要有相应的机制来动态分配传入流量，以便评估目标应用程序中的变更效果。YARP 并没有为此提供内置模型，但它确实公开了一些可用于构建此类系统的基础设施。有关此场景的更多详情，请参阅 issue #126。</p>\n<h2 id=\"example\">示例</h2><p>app.MapReverseProxy(proxyPipeline =&gt; {</p>\n<p>// Custom cluster selection proxyPipeline.Use((context, next) =&gt; {</p>\n<p>var lookup = context.RequestServices.GetRequiredService<IProxyStateLookup> ();</p>\n<p>if (lookup.TryGetCluster(ChooseCluster(context), out var cluster)) {</p>\n<p>context.ReassignProxyRequest(cluster); }</p>\n<p>return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); });</p>\n<p>string ChooseCluster(HttpContext context) {</p>\n<p>// Decide which cluster to use. This could be random, weighted, based on head- ers, etc.</p>\n<p>return Random.Shared.Next(2) == 1 ? &quot;cluster1&quot; : &quot;cluster2&quot;; }</p>\n<h2 id=\"usage\">用法</h2><p>此场景使用了两个 API：IProxyStateLookup 和 ReassignProxyRequest，它们在上面示例所示的自定义代理中间件中被调用。</p>\n<p>IProxyStateLookup 是依赖关系注入容器中提供的一个服务，可用于查找或枚举当前的路由和群集。请注意，如果配置发生变更，这些数据也可能随之变化。A/B 编排算法可以检查请求，决定应将其发送到哪个群集，然后通过 IProxyStateLookup.TryGetCluster 获取该群集。</p>\n<p>选定群集后，可以调用 ReassignProxyRequest 将请求分配给该群集。这会使用新的群集和目标信息更新 IReverseProxyFeature，供代理中间件管道的后续部分处理该请求时使用。</p>\n<h2 id=\"session-affinity\">会话相关性</h2><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">说明</div><p>会话相关性功能被拆分在两处：中间件会从当前群集读取其设置，而转换则是原始路由的一部分。用于 A/B 测试的各个群集应使用相同的会话相关性配置，以避免发生冲突。</p>\n</div></div><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">说明</div><p>本文作者在 AI 协助下创作了这篇文章。了解更多信息</p>\n</div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/ab-testing",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "distributed-tracing",
-    "title": "Distributed tracing"
+    "title": "分布式跟踪"
   },
   "next": {
     "slug": "kubernetes-ingress",
-    "title": "Kubernetes Ingress Controller"
+    "title": "Kubernetes Ingress 控制器"
   }
 }

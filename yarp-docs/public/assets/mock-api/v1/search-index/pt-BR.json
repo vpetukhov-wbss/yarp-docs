@@ -2864,60 +2864,60 @@
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "title": "Introdução ao ASP.NET Core",
+    "excerpt": "Este tutorial mostra como criar e executar um aplicativo web ASP.NET Core usando a CLI do .NET."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Prerequisites",
+    "title": "Introdução ao ASP.NET Core",
+    "headingPath": "Introdução ao ASP.NET Core › Pré-requisitos",
     "anchor": "prerequisites",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "Este tutorial mostra como criar e executar um aplicativo web ASP.NET Core usando a CLI do .NET."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › .NET 8 SDK",
+    "title": "Introdução ao ASP.NET Core",
+    "headingPath": "Introdução ao ASP.NET Core › SDK do .NET 8",
     "anchor": "net-8-sdk",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "Este tutorial mostra como criar e executar um aplicativo web ASP.NET Core usando a CLI do .NET."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Create a web app project",
+    "title": "Introdução ao ASP.NET Core",
+    "headingPath": "Introdução ao ASP.NET Core › Criar um projeto de aplicativo web",
     "anchor": "create-a-web-app-project",
-    "excerpt": "Open a command shell, and enter the following command: .NET CLI dotnet new webapp --output aspnetcoreapp --no-https The preceding command creates a new web app…"
+    "excerpt": "Abra um shell de comando e insira o seguinte comando: .NET CLI dotnet new webapp --output aspnetcoreapp --no-https O comando anterior cria um novo projeto de…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Run the app",
+    "title": "Introdução ao ASP.NET Core",
+    "headingPath": "Introdução ao ASP.NET Core › Executar o aplicativo",
     "anchor": "run-the-app",
-    "excerpt": "Run the following commands: .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:Saída Building... info:…"
+    "excerpt": "Execute os seguintes comandos: .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:Saída Building... info:…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Edit a Razor page",
+    "title": "Introdução ao ASP.NET Core",
+    "headingPath": "Introdução ao ASP.NET Core › Editar uma página Razor",
     "anchor": "edit-a-razor-page",
-    "excerpt": "Change the home page: In the command shell, press Ctrl+C (Cmd+C in macOS) to exit the program. Open Pages/Index.cshtml in a text editor. Replace the line that…"
+    "excerpt": "Altere a página inicial: No shell de comando, pressione Ctrl+C (Cmd+C no macOS) para sair do programa. Abra Pages/Index.cshtml em um editor de texto. Substitua…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › CSHTML",
+    "title": "Introdução ao ASP.NET Core",
+    "headingPath": "Introdução ao ASP.NET Core › CSHTML",
     "anchor": "cshtml",
     "excerpt": "@page @model IndexModel @{ ViewData[&quot;Title&quot;] = &quot;Home page&quot;; } Welcome Hello, world! The time on the server is @DateTime.Now"
   },
@@ -2925,27 +2925,27 @@
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › </div>",
+    "title": "Introdução ao ASP.NET Core",
+    "headingPath": "Introdução ao ASP.NET Core › </div>",
     "anchor": "div",
-    "excerpt": "Save your changes. In the command shell run the dotnet run command again. In the browser, refresh the page and verify the changes are displayed."
+    "excerpt": "Salve as alterações. No shell de comando, execute o comando dotnet run novamente. No navegador, atualize a página e verifique se as alterações são exibidas."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Next steps",
+    "title": "Introdução ao ASP.NET Core",
+    "headingPath": "Introdução ao ASP.NET Core › Próximas etapas",
     "anchor": "next-steps",
-    "excerpt": "In this tutorial, you learned how to: Create a web app project. Run the project. Make a change. To learn more about ASP.NET Core, see the following:"
+    "excerpt": "Neste tutorial, você aprendeu a: Criar um projeto de aplicativo web. Executar o projeto. Fazer uma alteração. Para saber mais sobre o ASP.NET Core, consulte o…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "pt-BR",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Overview of ASP.NET Core",
+    "title": "Introdução ao ASP.NET Core",
+    "headingPath": "Introdução ao ASP.NET Core › Visão geral do ASP.NET Core",
     "anchor": "overview-of-asp-net-core",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "Este tutorial mostra como criar e executar um aplicativo web ASP.NET Core usando a CLI do .NET."
   }
 ]

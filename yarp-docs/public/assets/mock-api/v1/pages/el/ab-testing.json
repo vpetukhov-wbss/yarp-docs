@@ -3,45 +3,45 @@
   "locale": "el",
   "group": "operations",
   "kind": "doc",
-  "title": "A/B testing & rolling upgrades",
-  "lede": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic",
+  "title": "Δοκιμές A/B και σταδιακές αναβαθμίσεις",
+  "lede": "Οι δοκιμές A/B και οι σταδιακές αναβαθμίσεις (rolling upgrades) απαιτούν διαδικασίες για τη δυναμική ανάθεση εισερχόμενης κυκλοφορίας",
   "headings": [
     {
       "id": "yarp-a-b-testing-and-rolling-upgrades",
-      "text": "YARP A/B Testing and Rolling Upgrades",
+      "text": "Δοκιμές A/B και σταδιακές αναβαθμίσεις στο YARP",
       "level": 2
     },
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "Εισαγωγή",
       "level": 2
     },
     {
       "id": "example",
-      "text": "Example",
+      "text": "Παράδειγμα",
       "level": 2
     },
     {
       "id": "usage",
-      "text": "Usage",
+      "text": "Χρήση",
       "level": 2
     },
     {
       "id": "session-affinity",
-      "text": "Session affinity",
+      "text": "Συνάφεια συνεδρίας",
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"yarp-a-b-testing-and-rolling-upgrades\">YARP A/B Testing and Rolling Upgrades</h2><h2 id=\"introduction\">Introduction</h2><p>A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic to evaluate changes in the destination application. YARP does not have a built-in model for this, but it does expose some infrastructure useful for building such a system. See issue #126 for additional details about this scenario.</p>\n<h2 id=\"example\">Example</h2><p>app.MapReverseProxy(proxyPipeline =&gt; {</p>\n<p>// Custom cluster selection proxyPipeline.Use((context, next) =&gt; {</p>\n<p>var lookup = context.RequestServices.GetRequiredService<IProxyStateLookup> ();</p>\n<p>if (lookup.TryGetCluster(ChooseCluster(context), out var cluster)) {</p>\n<p>context.ReassignProxyRequest(cluster); }</p>\n<p>return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); });</p>\n<p>string ChooseCluster(HttpContext context) {</p>\n<p>// Decide which cluster to use. This could be random, weighted, based on head- ers, etc.</p>\n<p>return Random.Shared.Next(2) == 1 ? &quot;cluster1&quot; : &quot;cluster2&quot;; }</p>\n<h2 id=\"usage\">Usage</h2><p>This scenario makes use of two APIs, IProxyStateLookup and ReassignProxyRequest, called from a custom proxy middleware as shown in the sample above.</p>\n<p>IProxyStateLookup is a service available in the Dependency Injection container that can be</p>\n<p>used to look up or enumerate the current routes and clusters. Note this data may change if the</p>\n<p>configuration changes. An A/B orchestration algorithm can examine the request, decide which</p>\n<p>cluster to send it to, and then retrieve that cluster from IProxyStateLookup.TryGetCluster .</p>\n<p>Once the cluster is selected, ReassignProxyRequest can be called to assign the request to that cluster. This updates the IReverseProxyFeature with the new cluster and destination information needed for the rest of the proxy middleware pipeline to handle the request.</p>\n<h2 id=\"session-affinity\">Session affinity</h2><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Σημείωση</div><p>that session affinity functionality is split between middleware, which reads it settings from the current cluster, and transforms, which are part of the original route. Clusters used for A/B testing should use the same session affinity configuration to avoid conflicts.</p>\n</div></div><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Σημείωση</div><p>The author created this article with assistance from AI. Learn more</p>\n</div></div>",
+  "bodyHtml": "<h2 id=\"yarp-a-b-testing-and-rolling-upgrades\">Δοκιμές A/B και σταδιακές αναβαθμίσεις στο YARP</h2><h2 id=\"introduction\">Εισαγωγή</h2><p>Οι δοκιμές A/B και οι σταδιακές αναβαθμίσεις απαιτούν διαδικασίες για τη δυναμική ανάθεση της εισερχόμενης κυκλοφορίας, ώστε να αξιολογούνται αλλαγές στην εφαρμογή προορισμού. Το YARP δεν διαθέτει ενσωματωμένο μοντέλο για αυτό, εκθέτει όμως κάποια υποδομή χρήσιμη για τη δημιουργία ενός τέτοιου συστήματος. Δείτε το issue #126 για επιπλέον λεπτομέρειες σχετικά με αυτό το σενάριο.</p>\n<h2 id=\"example\">Παράδειγμα</h2><p>app.MapReverseProxy(proxyPipeline =&gt; {</p>\n<p>// Custom cluster selection proxyPipeline.Use((context, next) =&gt; {</p>\n<p>var lookup = context.RequestServices.GetRequiredService<IProxyStateLookup> ();</p>\n<p>if (lookup.TryGetCluster(ChooseCluster(context), out var cluster)) {</p>\n<p>context.ReassignProxyRequest(cluster); }</p>\n<p>return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); });</p>\n<p>string ChooseCluster(HttpContext context) {</p>\n<p>// Decide which cluster to use. This could be random, weighted, based on head- ers, etc.</p>\n<p>return Random.Shared.Next(2) == 1 ? &quot;cluster1&quot; : &quot;cluster2&quot;; }</p>\n<h2 id=\"usage\">Χρήση</h2><p>Αυτό το σενάριο κάνει χρήση δύο API, του IProxyStateLookup και του ReassignProxyRequest, που καλούνται από ένα προσαρμοσμένο ενδιάμεσο λογισμικό διακομιστή μεσολάβησης, όπως φαίνεται στο παραπάνω παράδειγμα.</p>\n<p>Το IProxyStateLookup είναι μια υπηρεσία διαθέσιμη στο container έγχυσης εξαρτήσεων (Dependency Injection) που μπορεί να χρησιμοποιηθεί για την αναζήτηση ή την απαρίθμηση των τρεχουσών διαδρομών και clusters. Σημειώστε ότι αυτά τα δεδομένα ενδέχεται να αλλάξουν αν αλλάξει η διαμόρφωση. Ένας αλγόριθμος ενορχήστρωσης A/B μπορεί να εξετάσει το αίτημα, να αποφασίσει σε ποιο cluster θα το στείλει, και στη συνέχεια να ανακτήσει αυτό το cluster από το IProxyStateLookup.TryGetCluster .</p>\n<p>Μόλις επιλεγεί το cluster, μπορεί να κληθεί η ReassignProxyRequest για να αναθέσει το αίτημα σε αυτό το cluster. Αυτό ενημερώνει το IReverseProxyFeature με τις νέες πληροφορίες cluster και προορισμού που χρειάζονται ώστε το υπόλοιπο pipeline ενδιάμεσου λογισμικού του διακομιστή μεσολάβησης να διαχειριστεί το αίτημα.</p>\n<h2 id=\"session-affinity\">Συνάφεια συνεδρίας</h2><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Σημείωση</div><p>ότι η λειτουργικότητα της συνάφειας συνεδρίας διαμοιράζεται μεταξύ του ενδιάμεσου λογισμικού, το οποίο διαβάζει τις ρυθμίσεις της από το τρέχον cluster, και των μετασχηματισμών, οι οποίοι αποτελούν μέρος της αρχικής διαδρομής. Τα clusters που χρησιμοποιούνται για δοκιμές A/B θα πρέπει να χρησιμοποιούν την ίδια διαμόρφωση συνάφειας συνεδρίας για να αποφεύγονται συγκρούσεις.</p>\n</div></div><div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Σημείωση</div><p>Ο συγγραφέας δημιούργησε αυτό το άρθρο με τη βοήθεια AI. Μάθετε περισσότερα</p>\n</div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/ab-testing",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "distributed-tracing",
-    "title": "Distributed tracing"
+    "title": "Κατανεμημένη ανίχνευση"
   },
   "next": {
     "slug": "kubernetes-ingress",
-    "title": "Kubernetes Ingress Controller"
+    "title": "Ελεγκτής Ingress του Kubernetes"
   }
 }

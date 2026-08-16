@@ -33,7 +33,7 @@
   "translated": true,
   "prev": {
     "slug": "cors",
-    "title": "Cross-origin requests (CORS)"
+    "title": "跨域请求（CORS）"
   },
   "next": {
     "slug": "header-guidelines",

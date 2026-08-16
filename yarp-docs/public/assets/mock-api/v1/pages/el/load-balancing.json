@@ -28,10 +28,10 @@
   "translated": true,
   "prev": {
     "slug": "transforms-response",
-    "title": "Response & trailer transforms"
+    "title": "Μετασχηματισμοί απόκρισης και trailer"
   },
   "next": {
     "slug": "session-affinity",
-    "title": "Session affinity"
+    "title": "Συνάφεια συνεδρίας"
   }
 }

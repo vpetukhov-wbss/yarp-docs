@@ -441,655 +441,655 @@
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "excerpt": "Οι διαδρομές του διακομιστή μεσολάβησης που ορίζονται στη διαμόρφωση ή μέσω κώδικα πρέπει να περιλαμβάνουν τουλάχιστον ένα path ή έναν host προς αντιστοίχιση"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › YARP Header Based Routing",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Δρομολόγηση βάσει κεφαλίδων στο YARP",
     "anchor": "yarp-header-based-routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+    "excerpt": "Οι διαδρομές του διακομιστή μεσολάβησης που ορίζονται στη διαμόρφωση ή μέσω κώδικα πρέπει να περιλαμβάνουν τουλάχιστον ένα path ή έναν host προς αντιστοίχιση.…"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Precedence",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Προτεραιότητα",
     "anchor": "precedence",
-    "excerpt": "The default route match precedence order is path method host headers query parameters That means a route which specifies methods and no headers will match…"
+    "excerpt": "Η προεπιλεγμένη σειρά προτεραιότητας αντιστοίχισης διαδρομών είναι path μέθοδος host κεφαλίδες παράμετροι ερωτήματος Αυτό σημαίνει ότι μια διαδρομή που ορίζει…"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Configuration",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "Headers are specified in the Match section of a proxy route. If multiple headers rules are specified on a route then all must match for a route to be taken. OR…"
+    "excerpt": "Οι κεφαλίδες ορίζονται στην ενότητα Match μιας διαδρομής μεσολάβησης. Αν έχουν οριστεί πολλαπλοί κανόνες κεφαλίδων σε μια διαδρομή, τότε όλοι πρέπει να…"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Contract",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Σύμβαση",
     "anchor": "contract",
-    "excerpt": "RouteHeader defines the code contract and is mapped from config."
+    "excerpt": "Το RouteHeader ορίζει τη σύμβαση κώδικα και αντιστοιχίζεται από τη διαμόρφωση."
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Name",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Name",
     "anchor": "name",
-    "excerpt": "The header name to check for on the request. A non-empty value is required. This field is case- insensitive per the HTTP RFCs."
+    "excerpt": "Το όνομα της κεφαλίδας που αναζητείται στο αίτημα. Απαιτείται μια μη κενή τιμή. Αυτό το πεδίο δεν κάνει διάκριση πεζών-κεφαλαίων, σύμφωνα με τα RFC του HTTP."
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Values",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Values",
     "anchor": "values",
-    "excerpt": "A list of possible values to search for. The header must match at least one of these values according to the specified Mode except for the…"
+    "excerpt": "Μια λίστα πιθανών τιμών προς αναζήτηση. Η κεφαλίδα πρέπει να ταιριάζει με τουλάχιστον μία από αυτές τις τιμές, σύμφωνα με το καθορισμένο Mode, με εξαίρεση το…"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Mode",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Mode",
     "anchor": "mode",
-    "excerpt": "HeaderMatchMode specifies how to match the value(s) against the request header. The default is ExactHeader . ExactHeader - Any of the headers with the given…"
+    "excerpt": "Το HeaderMatchMode καθορίζει τον τρόπο αντιστοίχισης της τιμής/τιμών με την κεφαλίδα του αιτήματος. Η προεπιλογή είναι ExactHeader. ExactHeader - Οποιαδήποτε…"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › IsCaseSensitive",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › IsCaseSensitive",
     "anchor": "iscasesensitive",
-    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+    "excerpt": "Υποδεικνύει αν η αντιστοίχιση τιμών πρέπει να γίνεται με διάκριση ή χωρίς διάκριση πεζών-κεφαλαίων. Η προεπιλογή είναι false, δηλαδή χωρίς διάκριση."
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Examples",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Παραδείγματα",
     "anchor": "examples",
-    "excerpt": "These examples use the configuration specified above."
+    "excerpt": "Αυτά τα παραδείγματα χρησιμοποιούν τη διαμόρφωση που ορίστηκε παραπάνω."
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 1 - Exact Header Match",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Σενάριο 1 - Ακριβής αντιστοίχιση κεφαλίδας",
     "anchor": "scenario-1-exact-header-match",
-    "excerpt": "A request with the following header will match against route1. Header1: Value1 If a header contains multiple values, each one will be matched separately. The…"
+    "excerpt": "Ένα αίτημα με την ακόλουθη κεφαλίδα θα ταιριάξει με το route1. Header1: Value1 Αν μια κεφαλίδα περιέχει πολλαπλές τιμές, καθεμία θα αντιστοιχιστεί ξεχωριστά.…"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 2 - Multiple Values",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Σενάριο 2 - Πολλαπλές τιμές",
     "anchor": "scenario-2-multiple-values",
-    "excerpt": "Route2 defined multiple values to search for in a header (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also specified the…"
+    "excerpt": "Το route2 όρισε πολλαπλές τιμές προς αναζήτηση σε μια κεφαλίδα (&quot;1prefix&quot;, &quot;2prefix&quot;), οποιαδήποτε από τις τιμές είναι αποδεκτή. Όρισε…"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 3 - Exists",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Σενάριο 3 - Exists",
     "anchor": "scenario-3-exists",
-    "excerpt": "Route3 only requires that the header &quot;Header3&quot; exists with any non-empty value The following is an example that will match route3. Header3: value An…"
+    "excerpt": "Το route3 απαιτεί μόνο η κεφαλίδα &quot;Header3&quot; να υπάρχει με οποιαδήποτε μη κενή τιμή. Το ακόλουθο είναι ένα παράδειγμα που θα ταιριάξει με το route3.…"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 4 - Multiple Headers",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Σενάριο 4 - Πολλαπλές κεφαλίδες",
     "anchor": "scenario-4-multiple-headers",
-    "excerpt": "Route4 requires both header4 and header5 , each matching according to their specified Mode . The following headers will match route4: Header4: value1 Header5:…"
+    "excerpt": "Το route4 απαιτεί τόσο την header4 όσο και την header5, καθεμία να ταιριάζει σύμφωνα με το καθορισμένο Mode. Οι ακόλουθες κεφαλίδες θα ταιριάξουν με το route4:…"
   },
   {
     "slug": "header-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 5 - NotExists",
+    "title": "Δρομολόγηση βάσει κεφαλίδων",
+    "headingPath": "Δρομολόγηση βάσει κεφαλίδων › Σενάριο 5 - NotExists",
     "anchor": "scenario-5-notexists",
-    "excerpt": "Route7 requires that the header &quot;Header7&quot; must not exists The following headers will match route7: NotHeader7: AnyValue The following headers will…"
+    "excerpt": "Το route7 απαιτεί η κεφαλίδα &quot;Header7&quot; να μην υπάρχει. Οι ακόλουθες κεφαλίδες θα ταιριάξουν με το route7: NotHeader7: AnyValue Οι ακόλουθες κεφαλίδες…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "excerpt": "Οι διαδρομές του διακομιστή μεσολάβησης που ορίζονται στη διαμόρφωση ή μέσω κώδικα πρέπει να περιλαμβάνουν τουλάχιστον ένα path ή έναν host προς αντιστοίχιση"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › YARP Query Parameter Based Routing",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Δρομολόγηση βάσει παραμέτρων ερωτήματος στο YARP",
     "anchor": "yarp-query-parameter-based-routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+    "excerpt": "Οι διαδρομές του διακομιστή μεσολάβησης που ορίζονται στη διαμόρφωση ή μέσω κώδικα πρέπει να περιλαμβάνουν τουλάχιστον ένα path ή έναν host προς αντιστοίχιση.…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Precedence",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Προτεραιότητα",
     "anchor": "precedence",
-    "excerpt": "The default route match precedence order is 1) path, 2) method, 3) host, 4) headers 5) query parameters. That means a route which specifies methods and no…"
+    "excerpt": "Η προεπιλεγμένη σειρά προτεραιότητας αντιστοίχισης διαδρομών είναι 1) path, 2) μέθοδος, 3) host, 4) κεφαλίδες, 5) παράμετροι ερωτήματος. Αυτό σημαίνει ότι μια…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Configuration",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "Query Parameters are specified in the Match section of a proxy route. If multiple query parameter rules are specified on a route then all must match for a…"
+    "excerpt": "Οι παράμετροι ερωτήματος ορίζονται στην ενότητα Match μιας διαδρομής μεσολάβησης. Αν έχουν οριστεί πολλαπλοί κανόνες παραμέτρων ερωτήματος σε μια διαδρομή,…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Contract",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Σύμβαση",
     "anchor": "contract",
-    "excerpt": "RouteQueryParameter defines the code contract and is mapped from config."
+    "excerpt": "Το RouteQueryParameter ορίζει τη σύμβαση κώδικα και αντιστοιχίζεται από τη διαμόρφωση."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Name",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Name",
     "anchor": "name",
-    "excerpt": "The query parameter name to check for on the request. A non-empty value is required. This field is case-insensitive."
+    "excerpt": "Το όνομα της παραμέτρου ερωτήματος που αναζητείται στο αίτημα. Απαιτείται μια μη κενή τιμή. Αυτό το πεδίο δεν κάνει διάκριση πεζών-κεφαλαίων."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Values",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Values",
     "anchor": "values",
-    "excerpt": "A list of possible values to search for. The query parameter must match at least one of these values according to the specified Mode except for the…"
+    "excerpt": "Μια λίστα πιθανών τιμών προς αναζήτηση. Η παράμετρος ερωτήματος πρέπει να ταιριάζει με τουλάχιστον μία από αυτές τις τιμές, σύμφωνα με το καθορισμένο Mode, με…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Mode",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Mode",
     "anchor": "mode",
-    "excerpt": "QueryParameterMatchMode specifies how to match the value(s) against the request query parameter. The default is Exact . Exact - The query parameter must match…"
+    "excerpt": "Το QueryParameterMatchMode καθορίζει τον τρόπο αντιστοίχισης της τιμής/τιμών με την παράμετρο ερωτήματος του αιτήματος. Η προεπιλογή είναι Exact. Exact - Η…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › IsCaseSensitive",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › IsCaseSensitive",
     "anchor": "iscasesensitive",
-    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+    "excerpt": "Υποδεικνύει αν η αντιστοίχιση τιμών πρέπει να γίνεται με διάκριση ή χωρίς διάκριση πεζών-κεφαλαίων. Η προεπιλογή είναι false, δηλαδή χωρίς διάκριση."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Encoding",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Encoding",
     "anchor": "encoding",
-    "excerpt": "The request query string will be parsed and decoded before matching against the route rules. &quot;route8&quot; : { &quot;ClusterId&quot;:…"
+    "excerpt": "Η συμβολοσειρά ερωτήματος του αιτήματος αναλύεται και αποκωδικοποιείται πριν από την αντιστοίχιση με τους κανόνες της διαδρομής. &quot;route8&quot; : {…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Examples",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Παραδείγματα",
     "anchor": "examples",
-    "excerpt": "These examples use the configuration specified above."
+    "excerpt": "Αυτά τα παραδείγματα χρησιμοποιούν τη διαμόρφωση που ορίστηκε παραπάνω."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 1 - Exact Query Parameter Match",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Σενάριο 1 - Ακριβής αντιστοίχιση παραμέτρου ερωτήματος",
     "anchor": "scenario-1-exact-query-parameter-match",
-    "excerpt": "A request with the following query parameter will match against route1. ?QueryParam1=Value1 Multiple query parameters with the same name are not currently…"
+    "excerpt": "Ένα αίτημα με την ακόλουθη παράμετρο ερωτήματος θα ταιριάξει με το route1. ?QueryParam1=Value1 Πολλαπλές παράμετροι ερωτήματος με το ίδιο όνομα δεν…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 2 - Multiple Values",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Σενάριο 2 - Πολλαπλές τιμές",
     "anchor": "scenario-2-multiple-values",
-    "excerpt": "Route2 defined multiple values to search for in a query parameter (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also…"
+    "excerpt": "Το route2 όρισε πολλαπλές τιμές προς αναζήτηση σε μια παράμετρο ερωτήματος (&quot;1prefix&quot;, &quot;2prefix&quot;), οποιαδήποτε από τις τιμές είναι…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 3 - Exists",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Σενάριο 3 - Exists",
     "anchor": "scenario-3-exists",
-    "excerpt": "Route3 only requires that the query parameter &quot;QueryParam3&quot; exists with any non-empty value The following is an example that will match route3.…"
+    "excerpt": "Το route3 απαιτεί μόνο η παράμετρος ερωτήματος &quot;QueryParam3&quot; να υπάρχει με οποιαδήποτε μη κενή τιμή. Το ακόλουθο είναι ένα παράδειγμα που θα…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "el",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 4 - Multiple QueryParameters",
+    "title": "Δρομολόγηση βάσει παραμέτρων ερωτήματος",
+    "headingPath": "Δρομολόγηση βάσει παραμέτρων ερωτήματος › Σενάριο 4 - Πολλαπλές παράμετροι ερωτήματος",
     "anchor": "scenario-4-multiple-queryparameters",
-    "excerpt": "Route4 requires both QueryParam4 and QueryParam5 , each matching according to their specified Mode . The following query parameters will match route4:…"
+    "excerpt": "Το route4 απαιτεί τόσο το QueryParam4 όσο και το QueryParam5, καθένα να ταιριάζει σύμφωνα με το καθορισμένο Mode. Οι ακόλουθες παράμετροι ερωτήματος θα…"
   },
   {
     "slug": "transforms",
     "locale": "el",
     "group": "transforms",
-    "title": "Overview",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "title": "Επισκόπηση",
+    "excerpt": "Κατά τη μεσολάβηση ενός αιτήματος, είναι συνηθισμένο να τροποποιούνται τμήματα του αιτήματος ή της απόκρισης για προσαρμογή"
   },
   {
     "slug": "transforms",
     "locale": "el",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › YARP Request and Response Transforms",
+    "title": "Επισκόπηση",
+    "headingPath": "Επισκόπηση › Μετασχηματισμοί αιτήματος και απόκρισης στο YARP",
     "anchor": "yarp-request-and-response-transforms",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "Κατά τη μεσολάβηση ενός αιτήματος, είναι συνηθισμένο να τροποποιούνται τμήματα του αιτήματος ή της απόκρισης για προσαρμογή"
   },
   {
     "slug": "transforms",
     "locale": "el",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Introduction",
+    "title": "Επισκόπηση",
+    "headingPath": "Επισκόπηση › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+    "excerpt": "Κατά τη μεσολάβηση ενός αιτήματος, είναι συνηθισμένο να τροποποιούνται τμήματα του αιτήματος ή της απόκρισης, ώστε να προσαρμόζονται στις απαιτήσεις του…"
   },
   {
     "slug": "transforms",
     "locale": "el",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Defaults",
+    "title": "Επισκόπηση",
+    "headingPath": "Επισκόπηση › Προεπιλογές",
     "anchor": "defaults",
-    "excerpt": "The following transforms are enabled by default for all routes. They can be configured or disabled as shown later in this document. Host - Suppress the…"
+    "excerpt": "Οι ακόλουθοι μετασχηματισμοί είναι ενεργοποιημένοι από προεπιλογή για όλες τις διαδρομές. Μπορούν να διαμορφωθούν ή να απενεργοποιηθούν όπως φαίνεται παρακάτω…"
   },
   {
     "slug": "transforms",
     "locale": "el",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Transform Categories",
+    "title": "Επισκόπηση",
+    "headingPath": "Επισκόπηση › Κατηγορίες μετασχηματισμών",
     "anchor": "transform-categories",
-    "excerpt": "Transforms fall into a few categories: Request, Response, and Response Trailers. Request trailers are not supported because they are not supported by the…"
+    "excerpt": "Οι μετασχηματισμοί κατατάσσονται σε λίγες κατηγορίες: αιτήματος, απόκρισης και trailer απόκρισης. Τα trailer αιτήματος δεν υποστηρίζονται, επειδή δεν…"
   },
   {
     "slug": "transforms",
     "locale": "el",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Adding transforms",
+    "title": "Επισκόπηση",
+    "headingPath": "Επισκόπηση › Προσθήκη μετασχηματισμών",
     "anchor": "adding-transforms",
-    "excerpt": "Transforms can be added to routes either through configuration or programmatically."
+    "excerpt": "Οι μετασχηματισμοί μπορούν να προστεθούν σε διαδρομές είτε μέσω διαμόρφωσης είτε προγραμματιστικά."
   },
   {
     "slug": "transforms",
     "locale": "el",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › From Configuration",
+    "title": "Επισκόπηση",
+    "headingPath": "Επισκόπηση › Από τη διαμόρφωση",
     "anchor": "from-configuration",
-    "excerpt": "Transforms can be configured on RouteConfig.Transforms and can be bound from the Routes sections of the config file. These can be modified and reloaded without…"
+    "excerpt": "Οι μετασχηματισμοί μπορούν να διαμορφωθούν στο RouteConfig.Transforms και μπορούν να δεσμευτούν (bind) από τις ενότητες Routes του αρχείου διαμόρφωσης. Αυτοί…"
   },
   {
     "slug": "transforms",
     "locale": "el",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › From Code",
+    "title": "Επισκόπηση",
+    "headingPath": "Επισκόπηση › Από τον κώδικα",
     "anchor": "from-code",
-    "excerpt": "Transforms can be added to routes programmatically by calling the AddTransforms method. AddTransforms can be called after AddReverseProxy to provide a callback…"
+    "excerpt": "Οι μετασχηματισμοί μπορούν να προστεθούν σε διαδρομές προγραμματιστικά, καλώντας τη μέθοδο AddTransforms. Η AddTransforms μπορεί να κληθεί μετά την…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "title": "Μετασχηματισμοί αιτήματος",
+    "excerpt": "Οι μετασχηματισμοί αιτήματος περιλαμβάνουν το path, το query, την έκδοση HTTP, τη μέθοδο και τις κεφαλίδες του αιτήματος. Στον κώδικα αυτά αναπαρίστανται από το"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathPrefix",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › PathPrefix",
     "anchor": "pathprefix",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Οι μετασχηματισμοί αιτήματος περιλαμβάνουν το path, το query, την έκδοση HTTP, τη μέθοδο και τις κεφαλίδες του αιτήματος. Στον κώδικα αυτά αναπαρίστανται από το"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Modifies the request path adding a prefix value",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › Τροποποιεί το path του αιτήματος προσθέτοντας μια τιμή προθέματος",
     "anchor": "modifies-the-request-path-adding-a-prefix-value",
-    "excerpt": "Key Value Required PathPrefix A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } Code: C# routeConfig =…"
+    "excerpt": "Key Value Required PathPrefix Ένα path που ξεκινά με &#39;/&#39; yes Διαμόρφωση: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } Κώδικας: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathRemovePrefix",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › PathRemovePrefix",
     "anchor": "pathremoveprefix",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Οι μετασχηματισμοί αιτήματος περιλαμβάνουν το path, το query, την έκδοση HTTP, τη μέθοδο και τις κεφαλίδες του αιτήματος. Στον κώδικα αυτά αναπαρίστανται από το"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Modifies the request path removing a prefix value",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › Τροποποιεί το path του αιτήματος αφαιρώντας μια τιμή προθέματος",
     "anchor": "modifies-the-request-path-removing-a-prefix-value",
-    "excerpt": "Key Value Expand table PathRemovePrefix A path starting with a &#39;/&#39; Required yes Config: 1/13 JSON…"
+    "excerpt": "Key Value Expand table PathRemovePrefix Ένα path που ξεκινά με &#39;/&#39; Required yes Διαμόρφωση: 1/13 JSON…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathSet",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › PathSet",
     "anchor": "pathset",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Οι μετασχηματισμοί αιτήματος περιλαμβάνουν το path, το query, την έκδοση HTTP, τη μέθοδο και τις κεφαλίδες του αιτήματος. Στον κώδικα αυτά αναπαρίστανται από το"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Replaces the request path with the specified value",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › Αντικαθιστά το path του αιτήματος με την καθορισμένη τιμή",
     "anchor": "replaces-the-request-path-with-the-specified-value",
-    "excerpt": "Key Value Required PathSet A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } Code: C# routeConfig =…"
+    "excerpt": "Key Value Required PathSet Ένα path που ξεκινά με &#39;/&#39; yes Διαμόρφωση: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } Κώδικας: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathPattern",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › PathPattern",
     "anchor": "pathpattern",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Οι μετασχηματισμοί αιτήματος περιλαμβάνουν το path, το query, την έκδοση HTTP, τη μέθοδο και τις κεφαλίδες του αιτήματος. Στον κώδικα αυτά αναπαρίστανται από το"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Replaces the request path using a pattern template",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › Αντικαθιστά το path του αιτήματος χρησιμοποιώντας ένα πρότυπο (pattern template)",
     "anchor": "replaces-the-request-path-using-a-pattern-template",
-    "excerpt": "Key Value Expand table PathPattern A path template starting with a &#39;/&#39; Required yes Config: 2/13 JSON…"
+    "excerpt": "Key Value Expand table PathPattern Ένα πρότυπο path που ξεκινά με &#39;/&#39; Required yes Διαμόρφωση: 2/13 JSON…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryValueParameter",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › QueryValueParameter",
     "anchor": "queryvalueparameter",
-    "excerpt": "Adds or replaces parameters in the request query string Key Value Expand table QueryValueParameter Name of a query string parameter Required Set/Append Static…"
+    "excerpt": "Προσθέτει ή αντικαθιστά παραμέτρους στη συμβολοσειρά ερωτήματος του αιτήματος Key Value Expand table QueryValueParameter Όνομα μιας παραμέτρου ερωτήματος…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryRouteParameter",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › QueryRouteParameter",
     "anchor": "queryrouteparameter",
-    "excerpt": "Adds or replaces a query string parameter with a value from the route configuration Key Value Expand table QueryRouteParameter Name of a query string parameter…"
+    "excerpt": "Προσθέτει ή αντικαθιστά μια παράμετρο ερωτήματος με μια τιμή από τη διαμόρφωση της διαδρομής Key Value Expand table QueryRouteParameter Όνομα μιας παραμέτρου…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryRemoveParameter",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › QueryRemoveParameter",
     "anchor": "queryremoveparameter",
-    "excerpt": "Removes the specified parameter from the request query string Key Value Expand table QueryRemoveParameter Name of a query string parameter Required yes Config:…"
+    "excerpt": "Αφαιρεί την καθορισμένη παράμετρο από τη συμβολοσειρά ερωτήματος του αιτήματος Key Value Expand table QueryRemoveParameter Όνομα μιας παραμέτρου ερωτήματος…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › HttpMethodChange",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › HttpMethodChange",
     "anchor": "httpmethodchange",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Οι μετασχηματισμοί αιτήματος περιλαμβάνουν το path, το query, την έκδοση HTTP, τη μέθοδο και τις κεφαλίδες του αιτήματος. Στον κώδικα αυτά αναπαρίστανται από το"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Changes the http method used in the request",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › Αλλάζει τη μέθοδο HTTP που χρησιμοποιείται στο αίτημα",
     "anchor": "changes-the-http-method-used-in-the-request",
-    "excerpt": "Key Value Expand table HttpMethodChange The http method to replace Required Set The new http method yes yes Config: JSON { \"HttpMethodChange\": \"PUT\", \"Set\":…"
+    "excerpt": "Key Value Expand table HttpMethodChange Η μέθοδος HTTP προς αντικατάσταση Required Set Η νέα μέθοδος HTTP yes yes Διαμόρφωση: JSON { \"HttpMethodChange\": \"PUT\",…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeadersCopy",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › RequestHeadersCopy",
     "anchor": "requestheaderscopy",
-    "excerpt": "Sets whether incoming request headers are copied to the outbound request Key Value Default Expand table RequestHeadersCopy true/false true Required yes Config:…"
+    "excerpt": "Ορίζει αν οι κεφαλίδες του εισερχόμενου αιτήματος αντιγράφονται στο εξερχόμενο αίτημα Key Value Default Expand table RequestHeadersCopy true/false true…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderOriginalHost",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › RequestHeaderOriginalHost",
     "anchor": "requestheaderoriginalhost",
-    "excerpt": "Specifies if the incoming request Host header should be copied to the proxy request Key Value Default Expand table RequestHeaderOriginalHost true/false false…"
+    "excerpt": "Καθορίζει αν η κεφαλίδα Host του εισερχόμενου αιτήματος πρέπει να αντιγραφεί στο αίτημα του διακομιστή μεσολάβησης Key Value Default Expand table…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeader",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › RequestHeader",
     "anchor": "requestheader",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Οι μετασχηματισμοί αιτήματος περιλαμβάνουν το path, το query, την έκδοση HTTP, τη μέθοδο και τις κεφαλίδες του αιτήματος. Στον κώδικα αυτά αναπαρίστανται από το"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Adds or replaces request headers",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › Προσθέτει ή αντικαθιστά κεφαλίδες αιτήματος",
     "anchor": "adds-or-replaces-request-headers",
-    "excerpt": "Key Expand table RequestHeader Set/Append Value Required The header name yes Config: The header value yes JSON { &quot;RequestHeader&quot;:…"
+    "excerpt": "Key Expand table RequestHeader Set/Append Value Required Το όνομα της κεφαλίδας yes Διαμόρφωση: Η τιμή της κεφαλίδας yes JSON { &quot;RequestHeader&quot;:…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderRouteValue",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › RequestHeaderRouteValue",
     "anchor": "requestheaderroutevalue",
-    "excerpt": "Adds or replaces a header with a value from the route configuration Key Value Expand table RequestHeader Name of a query string parameter Required Set/Append…"
+    "excerpt": "Προσθέτει ή αντικαθιστά μια κεφαλίδα με μια τιμή από τη διαμόρφωση της διαδρομής Key Value Expand table RequestHeader Όνομα μιας παραμέτρου ερωτήματος Required…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderRemove",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › RequestHeaderRemove",
     "anchor": "requestheaderremove",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Οι μετασχηματισμοί αιτήματος περιλαμβάνουν το path, το query, την έκδοση HTTP, τη μέθοδο και τις κεφαλίδες του αιτήματος. Στον κώδικα αυτά αναπαρίστανται από το"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Removes request headers",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › Αφαιρεί κεφαλίδες αιτήματος",
     "anchor": "removes-request-headers",
-    "excerpt": "Key Value Expand table RequestHeaderRemove The header name Required yes Config: JSON { \"RequestHeaderRemove\": \"MyHeader\" } Code: C# routeConfig =…"
+    "excerpt": "Key Value Expand table RequestHeaderRemove Το όνομα της κεφαλίδας Required yes Διαμόρφωση: JSON { \"RequestHeaderRemove\": \"MyHeader\" } Code: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeadersAllowed",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › RequestHeadersAllowed",
     "anchor": "requestheadersallowed",
-    "excerpt": "Key Value Expand table RequestHeadersAllowed A semicolon separated list of allowed header names. Required yes…"
+    "excerpt": "Key Value Expand table RequestHeadersAllowed Μια λίστα επιτρεπόμενων ονομάτων κεφαλίδων, χωρισμένη με ερωτηματικά. Required yes…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › X-Forwarded",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › X-Forwarded",
     "anchor": "x-forwarded",
-    "excerpt": "Adds headers with information about the original client request Key Value Default Required X-Forwarded Default action (Set, Append, Remove, Off) to apply to…"
+    "excerpt": "Προσθέτει κεφαλίδες με πληροφορίες σχετικά με το αρχικό αίτημα του client Key Value Default Required X-Forwarded Προεπιλεγμένη ενέργεια (Set, Append, Remove,…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Forwarded",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › Forwarded",
     "anchor": "forwarded",
-    "excerpt": "Adds a header with information about the original client request Key Value Default Re Forwarded A comma separated list containing any of these values:…"
+    "excerpt": "Προσθέτει μια κεφαλίδα με πληροφορίες σχετικά με το αρχικό αίτημα του client Key Value Default Re Forwarded Λίστα χωρισμένη με κόμματα που περιέχει οποιαδήποτε…"
   },
   {
     "slug": "transforms-request",
     "locale": "el",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › ClientCert",
+    "title": "Μετασχηματισμοί αιτήματος",
+    "headingPath": "Μετασχηματισμοί αιτήματος › ClientCert",
     "anchor": "clientcert",
-    "excerpt": "Forwards the client cert used on the inbound connection as a header to destination Key Value Required ClientCert The header name yes Config: JSON {…"
+    "excerpt": "Προωθεί το πιστοποιητικό client που χρησιμοποιήθηκε στην εισερχόμενη σύνδεση, ως κεφαλίδα προς τον προορισμό Key Value Required ClientCert Το όνομα της…"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "excerpt": "Όλες οι κεφαλίδες και τα trailer της απόκρισης αντιγράφονται από την απόκριση του διακομιστή μεσολάβησης στην εξερχόμενη απόκριση προς τον client"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Response and Response Trailers",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › Απόκριση και trailer απόκρισης",
     "anchor": "response-and-response-trailers",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client response by default. Response and response trailer transforms may…"
+    "excerpt": "Όλες οι κεφαλίδες και τα trailer της απόκρισης αντιγράφονται από την απόκριση του διακομιστή μεσολάβησης στην εξερχόμενη απόκριση προς τον client, από…"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeadersCopy",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › ResponseHeadersCopy",
     "anchor": "responseheaderscopy",
-    "excerpt": "Sets whether destination response headers are copied to the client Key Value Default Expand table ResponseHeadersCopy true/false true Required yes Config: JSON…"
+    "excerpt": "Ορίζει αν οι κεφαλίδες απόκρισης του προορισμού αντιγράφονται στον client Key Value Default Expand table ResponseHeadersCopy true/false true Required yes…"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeader",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › ResponseHeader",
     "anchor": "responseheader",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Όλες οι κεφαλίδες και τα trailer της απόκρισης αντιγράφονται από την απόκριση του διακομιστή μεσολάβησης στην εξερχόμενη απόκριση προς τον client"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Adds or replaces response headers",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › Προσθέτει ή αντικαθιστά κεφαλίδες απόκρισης",
     "anchor": "adds-or-replaces-response-headers",
-    "excerpt": "Key Value Default Expand table ResponseHeader The header name (none) Required Set/Append The header value (none) yes When Success/Always/Failure Success yes no…"
+    "excerpt": "Key Value Default Expand table ResponseHeader Το όνομα της κεφαλίδας (καμία) Required Set/Append Η τιμή της κεφαλίδας (καμία) yes When Success/Always/Failure…"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeaderRemove",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › ResponseHeaderRemove",
     "anchor": "responseheaderremove",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Όλες οι κεφαλίδες και τα trailer της απόκρισης αντιγράφονται από την απόκριση του διακομιστή μεσολάβησης στην εξερχόμενη απόκριση προς τον client"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Removes response headers",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › Αφαιρεί κεφαλίδες απόκρισης",
     "anchor": "removes-response-headers",
-    "excerpt": "Key Value Default Required ResponseHeaderRemove The header name (none) yes When Success/Always/Failure Success no Config: JSON{ \"ResponseHeaderRemove\":…"
+    "excerpt": "Key Value Default Required ResponseHeaderRemove Το όνομα της κεφαλίδας (καμία) yes When Success/Always/Failure Success no Διαμόρφωση: JSON{…"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeadersAllowed",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › ResponseHeadersAllowed",
     "anchor": "responseheadersallowed",
-    "excerpt": "Key Value Required ResponseHeadersAllowed A semicolon separated list of allowed header names. yes Config: JSON { \"ResponseHeadersAllowed\": \"Header1;header2\" }…"
+    "excerpt": "Key Value Required ResponseHeadersAllowed Μια λίστα επιτρεπόμενων ονομάτων κεφαλίδων, χωρισμένη με ερωτηματικά. yes Διαμόρφωση: JSON {…"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailersCopy",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › ResponseTrailersCopy",
     "anchor": "responsetrailerscopy",
-    "excerpt": "Sets whether destination trailing response headers are copied to the client Key Value Default Expand table ResponseTrailersCopy true/false true Required yes…"
+    "excerpt": "Ορίζει αν τα trailer της απόκρισης του προορισμού αντιγράφονται στον client Key Value Default Expand table ResponseTrailersCopy true/false true Required yes…"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailer",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › ResponseTrailer",
     "anchor": "responsetrailer",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Όλες οι κεφαλίδες και τα trailer της απόκρισης αντιγράφονται από την απόκριση του διακομιστή μεσολάβησης στην εξερχόμενη απόκριση προς τον client"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Adds or replaces trailing response headers",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › Προσθέτει ή αντικαθιστά trailer απόκρισης",
     "anchor": "adds-or-replaces-trailing-response-headers",
     "excerpt": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/transforms-response?view=aspnetcore-9.0 Expand table 5/8 Key Value Default Required…"
   },
@@ -1097,28 +1097,28 @@
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailerRemove",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › ResponseTrailerRemove",
     "anchor": "responsetrailerremove",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Όλες οι κεφαλίδες και τα trailer της απόκρισης αντιγράφονται από την απόκριση του διακομιστή μεσολάβησης στην εξερχόμενη απόκριση προς τον client"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Removes trailing response headers",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › Αφαιρεί trailer απόκρισης",
     "anchor": "removes-trailing-response-headers",
-    "excerpt": "Key Expand table ResponseTrailerRemove When Value Default Required The header name (none) yes Success/Always/Failure Success no Config: JSON {…"
+    "excerpt": "Key Expand table ResponseTrailerRemove When Value Default Required Το όνομα της κεφαλίδας (καμία) yes Success/Always/Failure Success no Διαμόρφωση: JSON {…"
   },
   {
     "slug": "transforms-response",
     "locale": "el",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailersAllowed",
+    "title": "Μετασχηματισμοί απόκρισης και trailer",
+    "headingPath": "Μετασχηματισμοί απόκρισης και trailer › ResponseTrailersAllowed",
     "anchor": "responsetrailersallowed",
-    "excerpt": "yes Key Value ResponseTrailersAllowed A semicolon separated list of allowed header names. Config: JSON{ \"ResponseTrailersAllowed\": \"Header1;header2\" } Code:C#…"
+    "excerpt": "yes Key Value ResponseTrailersAllowed Μια λίστα επιτρεπόμενων ονομάτων κεφαλίδων, χωρισμένη με ερωτηματικά. Διαμόρφωση: JSON{ \"ResponseTrailersAllowed\":…"
   },
   {
     "slug": "load-balancing",
@@ -1164,112 +1164,112 @@
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+    "title": "Συνάφεια συνεδρίας",
+    "excerpt": "Η συνάφεια συνεδρίας είναι ένας μηχανισμός για τη δέσμευση (affinitization) μιας αιτιωδώς συσχετισμένης ακολουθίας αιτημάτων προς τον"
   },
   {
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Concept",
+    "title": "Συνάφεια συνεδρίας",
+    "headingPath": "Συνάφεια συνεδρίας › Έννοια",
     "anchor": "concept",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the destination that handled the first request when the load is…"
+    "excerpt": "Η συνάφεια συνεδρίας είναι ένας μηχανισμός για τη δέσμευση (affinitization) μιας αιτιωδώς συσχετισμένης ακολουθίας αιτημάτων προς τον προορισμό που χειρίστηκε…"
   },
   {
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Configuration",
+    "title": "Συνάφεια συνεδρίας",
+    "headingPath": "Συνάφεια συνεδρίας › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+    "excerpt": "Η συνάφεια συνεδρίας είναι ένας μηχανισμός για τη δέσμευση (affinitization) μιας αιτιωδώς συσχετισμένης ακολουθίας αιτημάτων προς τον"
   },
   {
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Services and middleware registration",
+    "title": "Συνάφεια συνεδρίας",
+    "headingPath": "Συνάφεια συνεδρίας › Καταχώριση υπηρεσιών και ενδιάμεσου λογισμικού",
     "anchor": "services-and-middleware-registration",
-    "excerpt": "Session affinity services are registered in the DI container automatically by AddReverseProxy() . The middleware UseSessionAffinity() is included by default in…"
+    "excerpt": "Οι υπηρεσίες συνάφειας συνεδρίας καταχωρίζονται αυτόματα στο container DI από την AddReverseProxy(). Το ενδιάμεσο λογισμικό UseSessionAffinity() περιλαμβάνεται…"
   },
   {
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Cluster configuration",
+    "title": "Συνάφεια συνεδρίας",
+    "headingPath": "Συνάφεια συνεδρίας › Διαμόρφωση cluster",
     "anchor": "cluster-configuration",
-    "excerpt": "Session affinity is configured per cluster according to the following configuration scheme. JSON\"ReverseProxy\": { \"Clusters\": { \"&lt;cluster-name&gt;\": {…"
+    "excerpt": "Η συνάφεια συνεδρίας διαμορφώνεται ανά cluster, σύμφωνα με το ακόλουθο σχήμα διαμόρφωσης. JSON\"ReverseProxy\": { \"Clusters\": { \"&lt;cluster-name&gt;\": {…"
   },
   {
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Cookie configuration",
+    "title": "Συνάφεια συνεδρίας",
+    "headingPath": "Συνάφεια συνεδρίας › Διαμόρφωση cookie",
     "anchor": "cookie-configuration",
-    "excerpt": "Attributes for configuring the cookie used with the HashCookie, ArrCookie and Cookie policies can be configured using SessionAffinityCookieConfig . The…"
+    "excerpt": "Οι ιδιότητες για τη διαμόρφωση του cookie που χρησιμοποιείται με τις πολιτικές HashCookie, ArrCookie και Cookie μπορούν να διαμορφωθούν χρησιμοποιώντας το…"
   },
   {
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Affinity Key",
+    "title": "Συνάφεια συνεδρίας",
+    "headingPath": "Συνάφεια συνεδρίας › Κλειδί συνάφειας",
     "anchor": "affinity-key",
-    "excerpt": "Request to destination affinity is established via the affinity key identifying the target destination. That key can be stored on different request parts…"
+    "excerpt": "Η συνάφεια αιτήματος-προς-προορισμό καθιερώνεται μέσω του κλειδιού συνάφειας, το οποίο αναγνωρίζει τον στοχευόμενο προορισμό. Αυτό το κλειδί μπορεί να…"
   },
   {
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Key Protection",
+    "title": "Συνάφεια συνεδρίας",
+    "headingPath": "Συνάφεια συνεδρίας › Προστασία κλειδιού",
     "anchor": "key-protection",
-    "excerpt": "The HashCookie policy uses the XxHash64 hash to produce a fast, compact, obscured output format for the cookie value. The ArrCookie policy uses the SHA-256…"
+    "excerpt": "Η πολιτική HashCookie χρησιμοποιεί το hash XxHash64 για να παράγει μια γρήγορη, συμπαγή και συγκαλυμμένη μορφή εξόδου για την τιμή του cookie. Η πολιτική…"
   },
   {
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Affinity failure policy",
+    "title": "Συνάφεια συνεδρίας",
+    "headingPath": "Συνάφεια συνεδρίας › Πολιτική αποτυχίας συνάφειας",
     "anchor": "affinity-failure-policy",
-    "excerpt": "If the affinity key cannot be decoded or no healthy destination found it&#39;s considered as a failure and an affinity failure policy is called to handle it.…"
+    "excerpt": "Αν το κλειδί συνάφειας δεν μπορεί να αποκωδικοποιηθεί ή δεν βρεθεί υγιής προορισμός, αυτό θεωρείται αποτυχία και καλείται μια πολιτική αποτυχίας συνάφειας για…"
   },
   {
     "slug": "session-affinity",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Request pipeline",
+    "title": "Συνάφεια συνεδρίας",
+    "headingPath": "Συνάφεια συνεδρίας › Pipeline αιτήματος",
     "anchor": "request-pipeline",
-    "excerpt": "The session affinity mechanisms are implemented by the services (mentioned above) and the two following middleware: SessionAffinityMiddleware - coordinates the…"
+    "excerpt": "Οι μηχανισμοί συνάφειας συνεδρίας υλοποιούνται από τις υπηρεσίες (που αναφέρθηκαν παραπάνω) και το ακόλουθο ζεύγος ενδιάμεσου λογισμικού:…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+    "title": "Έλεγχοι υγείας προορισμού",
+    "excerpt": "Στα περισσότερα πραγματικά συστήματα, είναι αναμενόμενο οι κόμβοι τους να αντιμετωπίζουν κατά καιρούς παροδικά προβλήματα"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Active health checks",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Ενεργοί έλεγχοι υγείας",
     "anchor": "active-health-checks",
-    "excerpt": "YARP can proactively monitor destination health by sending periodic probing requests to designated health endpoints and analyzing responses. That analysis is…"
+    "excerpt": "Το YARP μπορεί να παρακολουθεί προληπτικά την υγεία των προορισμών, στέλνοντας περιοδικά αιτήματα δοκιμής σε καθορισμένα endpoints υγείας και αναλύοντας τις…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Παράδειγμα αρχείου",
     "anchor": "file-example",
     "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Active\": { \"Enabled\": \"true\", \"Interval\": \"00:00:10\", \"Timeout\": \"00:00:10\", \"Policy\": \"ConsecutiveFailures\",…"
   },
@@ -1277,8 +1277,8 @@
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Code example",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Παράδειγμα κώδικα",
     "anchor": "code-example",
     "excerpt": "C# var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Active = new ActiveHealthCheckConfig { Enabled =…"
   },
@@ -1286,71 +1286,71 @@
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "All but one of active health check settings are specified on the cluster level in Cluster/HealthCheck/Active section. The only exception is an optional…"
+    "excerpt": "Όλες οι ρυθμίσεις ενεργού ελέγχου υγείας, εκτός από μία, καθορίζονται σε επίπεδο cluster, στην ενότητα Cluster/HealthCheck/Active. Η μόνη εξαίρεση είναι το…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Built-in policies",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Ενσωματωμένες πολιτικές",
     "anchor": "built-in-policies",
-    "excerpt": "There is currently one built-in active health check policy - ConsecutiveFailuresHealthPolicy . It counts consecutive health probe failures and marks a…"
+    "excerpt": "Υπάρχει προς το παρόν μία ενσωματωμένη πολιτική ενεργού ελέγχου υγείας - η ConsecutiveFailuresHealthPolicy. Μετρά τις διαδοχικές αποτυχίες δοκιμής υγείας και…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Design",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Σχεδιασμός",
     "anchor": "design",
-    "excerpt": "The main service in this process is IActiveHealthCheckMonitor that periodically creates probing requests via IProbingRequestFactory, sends them to all…"
+    "excerpt": "Η κύρια υπηρεσία σε αυτή τη διαδικασία είναι το IActiveHealthCheckMonitor, το οποίο δημιουργεί περιοδικά αιτήματα δοκιμής μέσω του IProbingRequestFactory, τα…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Extensibility",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Επεκτασιμότητα",
     "anchor": "extensibility",
-    "excerpt": "There are 2 main extensibility points in the active health check subsystem."
+    "excerpt": "Υπάρχουν 2 κύρια σημεία επεκτασιμότητας στο υποσύστημα ενεργού ελέγχου υγείας."
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IActiveHealthCheckPolicy",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › IActiveHealthCheckPolicy",
     "anchor": "iactivehealthcheckpolicy",
-    "excerpt": "IActiveHealthCheckPolicy analyzes how destinations respond to active health probes sent by IActiveHealthCheckMonitor , evaluates new active health states for…"
+    "excerpt": "Το IActiveHealthCheckPolicy αναλύει πώς οι προορισμοί ανταποκρίνονται στις ενεργές δοκιμές υγείας που στέλνει το IActiveHealthCheckMonitor, αξιολογεί νέες…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IProbingRequestFactory",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › IProbingRequestFactory",
     "anchor": "iprobingrequestfactory",
-    "excerpt": "IProbingRequestFactory creates active health probing requests to be sent to destination health endpoints. It can take into account…"
+    "excerpt": "Το IProbingRequestFactory δημιουργεί αιτήματα ενεργής δοκιμής υγείας που θα σταλούν στα endpoints υγείας των προορισμών. Μπορεί να λάβει υπόψη τα…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Passive health checks",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Παθητικοί έλεγχοι υγείας",
     "anchor": "passive-health-checks",
-    "excerpt": "YARP can passively watch for successes and failures in client request proxying to reactively evaluate destination health states. Responses to the proxied…"
+    "excerpt": "Το YARP μπορεί να παρακολουθεί παθητικά τις επιτυχίες και τις αποτυχίες κατά τη μεσολάβηση αιτημάτων clients, ώστε να αξιολογεί αντιδραστικά τις καταστάσεις…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Παράδειγμα αρχείου",
     "anchor": "file-example-2",
     "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Passive\": { \"Enabled\": \"true\", \"Policy\": \"TransportFailureRate\", \"ReactivationPeriod\": \"00:02:00\" } },…"
   },
@@ -1358,8 +1358,8 @@
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Code example",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Παράδειγμα κώδικα",
     "anchor": "code-example-2",
     "excerpt": "C#var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Passive = new PassiveHealthCheckConfig { Enabled =…"
   },
@@ -1367,71 +1367,71 @@
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Διαμόρφωση",
     "anchor": "configuration-2",
-    "excerpt": "Passive health check settings are specified on the cluster level in Cluster/HealthCheck/Passive section. Alternatively, they can be defined in code via the…"
+    "excerpt": "Οι ρυθμίσεις παθητικού ελέγχου υγείας καθορίζονται σε επίπεδο cluster, στην ενότητα Cluster/HealthCheck/Passive. Εναλλακτικά, μπορούν να οριστούν σε κώδικα,…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Built-in policies",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Ενσωματωμένες πολιτικές",
     "anchor": "built-in-policies-2",
-    "excerpt": "There is currently one built-in passive health check policy - TransportFailureRateHealthPolicy. It calculates the proxied requests failure rate for each…"
+    "excerpt": "Υπάρχει προς το παρόν μία ενσωματωμένη πολιτική παθητικού ελέγχου υγείας - η TransportFailureRateHealthPolicy. Υπολογίζει το ποσοστό αποτυχίας των αιτημάτων…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Design",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Σχεδιασμός",
     "anchor": "design-2",
-    "excerpt": "The main component is PassiveHealthCheckMiddleware sitting in the request pipeline and analyzing responses returned by destinations. For each response from a…"
+    "excerpt": "Το κύριο στοιχείο είναι το PassiveHealthCheckMiddleware, το οποίο βρίσκεται στο pipeline αιτημάτων και αναλύει τις αποκρίσεις που επιστρέφουν οι προορισμοί.…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Extensibility",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Επεκτασιμότητα",
     "anchor": "extensibility-2",
-    "excerpt": "There is one main extensibility point in the passive health check subsystem, the IPassiveHealthCheckPolicy ."
+    "excerpt": "Υπάρχει ένα κύριο σημείο επεκτασιμότητας στο υποσύστημα παθητικού ελέγχου υγείας, το IPassiveHealthCheckPolicy."
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IPassiveHealthCheckPolicy",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › IPassiveHealthCheckPolicy",
     "anchor": "ipassivehealthcheckpolicy",
-    "excerpt": "IPassiveHealthCheckPolicy analyzes how a destination responded to a proxied client request, evaluates its new passive health state and finally calls…"
+    "excerpt": "Το IPassiveHealthCheckPolicy αναλύει πώς ανταποκρίθηκε ένας προορισμός σε ένα αίτημα client που μεσολαβήθηκε, αξιολογεί τη νέα παθητική κατάσταση υγείας του,…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Available destination collection",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Συλλογή διαθέσιμων προορισμών",
     "anchor": "available-destination-collection",
-    "excerpt": "Destinations health state is used to determine which of them are eligible for receiving proxied requests. Each cluster maintains its own list of available…"
+    "excerpt": "Η κατάσταση υγείας των προορισμών χρησιμοποιείται για να καθοριστεί ποιοι από αυτούς είναι επιλέξιμοι να λαμβάνουν αιτήματα που μεσολαβούνται. Κάθε cluster…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Διαμόρφωση",
     "anchor": "configuration-3",
-    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+    "excerpt": "Στα περισσότερα πραγματικά συστήματα, είναι αναμενόμενο οι κόμβοι τους να αντιμετωπίζουν κατά καιρούς παροδικά προβλήματα"
   },
   {
     "slug": "dests-health-checks",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Έλεγχοι υγείας προορισμού",
+    "headingPath": "Έλεγχοι υγείας προορισμού › Παράδειγμα αρχείου",
     "anchor": "file-example-3",
     "excerpt": "JSON \"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"AvailableDestinationsPolicy\": \"HealthyOrPanic\", \"Passive\": { \"Enabled\": \"true\" } }, \"Destinations\": {…"
   },
@@ -1439,577 +1439,643 @@
     "slug": "rate-limiting",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination"
+    "title": "Περιορισμός ρυθμού",
+    "excerpt": "Ο αντίστροφος διακομιστής μεσολάβησης μπορεί να χρησιμοποιηθεί για τον περιορισμό ρυθμού αιτημάτων πριν αυτά μεσολαβηθούν προς τους διακομιστές προορισμού"
   },
   {
     "slug": "rate-limiting",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Introduction",
+    "title": "Περιορισμός ρυθμού",
+    "headingPath": "Περιορισμός ρυθμού › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination servers. This can reduce load on the destination servers, add a…"
+    "excerpt": "Ο αντίστροφος διακομιστής μεσολάβησης μπορεί να χρησιμοποιηθεί για τον περιορισμό ρυθμού αιτημάτων, πριν αυτά μεσολαβηθούν προς τους διακομιστές προορισμού.…"
   },
   {
     "slug": "rate-limiting",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Defaults",
+    "title": "Περιορισμός ρυθμού",
+    "headingPath": "Περιορισμός ρυθμού › Προεπιλογές",
     "anchor": "defaults",
-    "excerpt": "No rate limiting is performed on requests unless enabled in the route or application configuration. However, the Rate Limiting middleware (…"
+    "excerpt": "Δεν εκτελείται κανένας περιορισμός ρυθμού στα αιτήματα, εκτός αν ενεργοποιηθεί στη διαμόρφωση της διαδρομής ή της εφαρμογής. Ωστόσο, το ενδιάμεσο λογισμικό…"
   },
   {
     "slug": "rate-limiting",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Configuration",
+    "title": "Περιορισμός ρυθμού",
+    "headingPath": "Περιορισμός ρυθμού › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "Rate Limiter policies can be specified per route via RouteConfig.RateLimiterPolicy and can be bound from the Routes sections of the config file. As with other…"
+    "excerpt": "Οι πολιτικές του Rate Limiter μπορούν να καθοριστούν ανά διαδρομή, μέσω του RouteConfig.RateLimiterPolicy, και μπορούν να δεσμευτούν (bind) από τις ενότητες…"
   },
   {
     "slug": "rate-limiting",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Disable Rate Limiting",
+    "title": "Περιορισμός ρυθμού",
+    "headingPath": "Περιορισμός ρυθμού › Απενεργοποίηση περιορισμού ρυθμού",
     "anchor": "disable-rate-limiting",
-    "excerpt": "Specifying the value disable in a route&#39;s RateLimiterPolicy parameter means the rate limiter middleware will not apply any policies to this route, even the…"
+    "excerpt": "Ο ορισμός της τιμής disable στην παράμετρο RateLimiterPolicy μιας διαδρομής σημαίνει ότι το ενδιάμεσο λογισμικό rate limiter δεν θα εφαρμόσει καμία πολιτική σε…"
   },
   {
     "slug": "timeouts",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts"
+    "title": "Χρονικά όρια αιτήματος",
+    "excerpt": "Το .NET 8 εισήγαγε το Request Timeouts Middleware, για τη διαμόρφωση χρονικών ορίων αιτήματος"
   },
   {
     "slug": "timeouts",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Introduction",
+    "title": "Χρονικά όρια αιτήματος",
+    "headingPath": "Χρονικά όρια αιτήματος › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts globally as well as per endpoint. This functionality is also available…"
+    "excerpt": "Το .NET 8 εισήγαγε το Request Timeouts Middleware, το οποίο επιτρέπει τη διαμόρφωση χρονικών ορίων αιτήματος καθολικά, καθώς και ανά endpoint. Αυτή η…"
   },
   {
     "slug": "timeouts",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Defaults",
+    "title": "Χρονικά όρια αιτήματος",
+    "headingPath": "Χρονικά όρια αιτήματος › Προεπιλογές",
     "anchor": "defaults",
-    "excerpt": "Requests do not have any timeouts by default, other than the Activity Timeout used to clean up idle requests. A default policy specified in…"
+    "excerpt": "Τα αιτήματα δεν έχουν κανένα χρονικό όριο από προεπιλογή, πέρα από το Activity Timeout που χρησιμοποιείται για τον καθαρισμό ανενεργών αιτημάτων. Μια…"
   },
   {
     "slug": "timeouts",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Configuration",
+    "title": "Χρονικά όρια αιτήματος",
+    "headingPath": "Χρονικά όρια αιτήματος › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "Timeouts and Timeout Policies can be specified per route via RouteConfig and can be bound from the Routes sections of the config file. As with other route…"
+    "excerpt": "Τα χρονικά όρια και οι πολιτικές χρονικού ορίου μπορούν να καθοριστούν ανά διαδρομή, μέσω του RouteConfig, και μπορούν να δεσμευτούν (bind) από τις ενότητες…"
   },
   {
     "slug": "timeouts",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Disable timeouts",
+    "title": "Χρονικά όρια αιτήματος",
+    "headingPath": "Χρονικά όρια αιτήματος › Απενεργοποίηση χρονικών ορίων",
     "anchor": "disable-timeouts",
-    "excerpt": "Specifying the value disable in a route&#39;s TimeoutPolicy parameter means the request timeout middleware will not apply timeouts to this route."
+    "excerpt": "Ο ορισμός της τιμής disable στην παράμετρο TimeoutPolicy μιας διαδρομής σημαίνει ότι το ενδιάμεσο λογισμικό χρονικού ορίου αιτήματος δεν θα εφαρμόσει χρονικά…"
   },
   {
     "slug": "timeouts",
     "locale": "el",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › WebSockets",
+    "title": "Χρονικά όρια αιτήματος",
+    "headingPath": "Χρονικά όρια αιτήματος › WebSockets",
     "anchor": "websockets",
-    "excerpt": "Request timeouts are disabled after the initial WebSocket handshake. ΣημείωσηThe author created this article with assistance from AI. Learn more"
+    "excerpt": "Τα χρονικά όρια αιτήματος απενεργοποιούνται μετά την αρχική χειραψία (handshake) του WebSocket. ΣημείωσηΟ συγγραφέας δημιούργησε αυτό το άρθρο με τη βοήθεια…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "excerpt": "Ο αντίστροφος διακομιστής μεσολάβησης μπορεί να χρησιμοποιηθεί για τον έλεγχο ταυτότητας και την εξουσιοδότηση αιτημάτων πριν αυτά μεσολαβηθούν"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › YARP Authentication and Authorization",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › Έλεγχος ταυτότητας και εξουσιοδότηση στο YARP",
     "anchor": "yarp-authentication-and-authorization",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+    "excerpt": "Ο αντίστροφος διακομιστής μεσολάβησης μπορεί να χρησιμοποιηθεί για τον έλεγχο ταυτότητας και την εξουσιοδότηση αιτημάτων πριν αυτά μεσολαβηθούν"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Introduction",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied to the destination servers. This can reduce load on the…"
+    "excerpt": "Ο αντίστροφος διακομιστής μεσολάβησης μπορεί να χρησιμοποιηθεί για τον έλεγχο ταυτότητας και την εξουσιοδότηση αιτημάτων, πριν αυτά μεσολαβηθούν προς τους…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Defaults",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › Προεπιλογές",
     "anchor": "defaults",
-    "excerpt": "No authentication or authorization is performed on requests unless enabled in the route or application configuration."
+    "excerpt": "Δεν εκτελείται κανένας έλεγχος ταυτότητας ή εξουσιοδότηση στα αιτήματα, εκτός αν ενεργοποιηθεί στη διαμόρφωση της διαδρομής ή της εφαρμογής."
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Configuration",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "Authorization policies can be specified per route via RouteConfig.AuthorizationPolicy and can be bound from the Routes sections of the config file. As with…"
+    "excerpt": "Οι πολιτικές εξουσιοδότησης μπορούν να καθοριστούν ανά διαδρομή, μέσω του RouteConfig.AuthorizationPolicy, και μπορούν να δεσμευτούν (bind) από τις ενότητες…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › DefaultPolicy",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › DefaultPolicy",
     "anchor": "defaultpolicy",
-    "excerpt": "Specifying the value default in a route&#39;s authorization parameter means that route will use the policy defined in AuthorizationOptions.DefaultPolicy. That…"
+    "excerpt": "Ο ορισμός της τιμής default στην παράμετρο εξουσιοδότησης μιας διαδρομής σημαίνει ότι αυτή η διαδρομή θα χρησιμοποιήσει την πολιτική που ορίζεται στο…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Anonymous",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › Anonymous",
     "anchor": "anonymous",
-    "excerpt": "Specifying the value anonymous in a route&#39;s authorization parameter means that route will not require authorization regardless of any other configuration…"
+    "excerpt": "Ο ορισμός της τιμής anonymous στην παράμετρο εξουσιοδότησης μιας διαδρομής σημαίνει ότι αυτή η διαδρομή δεν θα απαιτεί εξουσιοδότηση, ανεξάρτητα από…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › FallbackPolicy",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › FallbackPolicy",
     "anchor": "fallbackpolicy",
-    "excerpt": "AuthorizationOptions.FallbackPolicy is the policy that will be used for any request or route that was not configured with a policy. FallbackPolicy does not…"
+    "excerpt": "Το AuthorizationOptions.FallbackPolicy είναι η πολιτική που θα χρησιμοποιηθεί για κάθε αίτημα ή διαδρομή που δεν έχει διαμορφωθεί με πολιτική. Το…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Flowing Credentials",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › Μεταφορά διαπιστευτηρίων",
     "anchor": "flowing-credentials",
-    "excerpt": "Even after a request has been authorized in the proxy, the destination server may still need to know who the user is (authentication) and what they&#39;re…"
+    "excerpt": "Ακόμα και αφού ένα αίτημα έχει εξουσιοδοτηθεί στον διακομιστή μεσολάβησης, ο διακομιστής προορισμού μπορεί να χρειάζεται ακόμα να γνωρίζει ποιος είναι ο…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Cookie, bearer, API keys",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › Cookie, bearer, κλειδιά API",
     "anchor": "cookie-bearer-api-keys",
-    "excerpt": "These authentication types already pass their values in the request headers and these will flow to the destination server by default. That server will still…"
+    "excerpt": "Αυτοί οι τύποι ελέγχου ταυτότητας περνούν ήδη τις τιμές τους στις κεφαλίδες αιτήματος, και αυτές θα μεταφερθούν στον διακομιστή προορισμού από προεπιλογή.…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › OAuth2, OpenIdConnect, WsFederation",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › OAuth2, OpenIdConnect, WsFederation",
     "anchor": "oauth2-openidconnect-wsfederation",
-    "excerpt": "These protocols are commonly used with remote identity providers. The authentication process can be configured in the proxy application and will result in an…"
+    "excerpt": "Αυτά τα πρωτόκολλα χρησιμοποιούνται συνήθως με απομακρυσμένους παρόχους ταυτότητας. Η διαδικασία ελέγχου ταυτότητας μπορεί να διαμορφωθεί στην εφαρμογή του…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Windows, Negotiate, NTLM, Kerberos",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › Windows, Negotiate, NTLM, Kerberos",
     "anchor": "windows-negotiate-ntlm-kerberos",
-    "excerpt": "These authentication types are often bound to a specific connection. They are not supported as means of authenticating a user in a destination server behind…"
+    "excerpt": "Αυτοί οι τύποι ελέγχου ταυτότητας συνδέονται συχνά με μια συγκεκριμένη σύνδεση. Δεν υποστηρίζονται ως μέσο ελέγχου ταυτότητας ενός χρήστη σε έναν διακομιστή…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Client Certificates",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › Πιστοποιητικά client",
     "anchor": "client-certificates",
-    "excerpt": "Client certificates are a TLS feature and are negotiated as part of a connection. See these docs for additional information. The certificate can be forwarded…"
+    "excerpt": "Τα πιστοποιητικά client είναι ένα χαρακτηριστικό του TLS και διαπραγματεύονται ως μέρος μιας σύνδεσης. Δείτε αυτή την τεκμηρίωση για πρόσθετες πληροφορίες. Το…"
   },
   {
     "slug": "authn-authz",
     "locale": "el",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Swapping authentication types",
+    "title": "Έλεγχος ταυτότητας & εξουσιοδότηση",
+    "headingPath": "Έλεγχος ταυτότητας & εξουσιοδότηση › Εναλλαγή τύπων ελέγχου ταυτότητας",
     "anchor": "swapping-authentication-types",
-    "excerpt": "Authentication types like Windows that don&#39;t flow naturally to the destination server will need to be converted in the proxy to an alternate form. For…"
+    "excerpt": "Τύποι ελέγχου ταυτότητας όπως το Windows, που δεν μεταφέρονται φυσικά στον διακομιστή προορισμού, θα χρειαστεί να μετατραπούν στον διακομιστή μεσολάβησης σε…"
   },
   {
     "slug": "cors",
     "locale": "el",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination"
+    "title": "Αιτήματα διαφορετικής προέλευσης (CORS)",
+    "excerpt": "Ο αντίστροφος διακομιστής μεσολάβησης μπορεί να χειρίζεται αιτήματα διαφορετικής προέλευσης πριν αυτά προωθηθούν στον προορισμό."
   },
   {
     "slug": "cors",
     "locale": "el",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Introduction",
+    "title": "Αιτήματα διαφορετικής προέλευσης (CORS)",
+    "headingPath": "Αιτήματα διαφορετικής προέλευσης (CORS) › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination servers. This can reduce load on the destination servers and…"
+    "excerpt": "Ο αντίστροφος διακομιστής μεσολάβησης μπορεί να χειρίζεται αιτήματα διαφορετικής προέλευσης πριν αυτά προωθηθούν στους διακομιστές προορισμού. Αυτό μπορεί να…"
   },
   {
     "slug": "cors",
     "locale": "el",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Defaults",
+    "title": "Αιτήματα διαφορετικής προέλευσης (CORS)",
+    "headingPath": "Αιτήματα διαφορετικής προέλευσης (CORS) › Προεπιλογές",
     "anchor": "defaults",
-    "excerpt": "The requests won&#39;t be automatically matched for cors preflight requests unless enabled in the route or application configuration."
+    "excerpt": "Τα αιτήματα δεν θα αντιστοιχίζονται αυτόματα σε προκαταρκτικά (preflight) αιτήματα CORS, εκτός αν αυτό ενεργοποιηθεί στη διαμόρφωση της διαδρομής ή της…"
   },
   {
     "slug": "cors",
     "locale": "el",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Configuration",
+    "title": "Αιτήματα διαφορετικής προέλευσης (CORS)",
+    "headingPath": "Αιτήματα διαφορετικής προέλευσης (CORS) › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "CORS policies can be specified per route via RouteConfig.CorsPolicy and can be bound from the Routes sections of the config file. As with other route…"
+    "excerpt": "Οι πολιτικές CORS μπορούν να οριστούν ανά διαδρομή μέσω του RouteConfig.CorsPolicy και μπορούν να δεσμευτούν από την ενότητα Routes του αρχείου διαμόρφωσης.…",
+    "keywords": [
+      "RouteConfig.CorsPolicy"
+    ]
   },
   {
     "slug": "cors",
     "locale": "el",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › DefaultPolicy",
+    "title": "Αιτήματα διαφορετικής προέλευσης (CORS)",
+    "headingPath": "Αιτήματα διαφορετικής προέλευσης (CORS) › DefaultPolicy",
     "anchor": "defaultpolicy",
-    "excerpt": "Specifying the value default in a route&#39;s CorsPolicy parameter means that route will use the policy defined in CorsOptions.DefaultPolicy."
+    "excerpt": "Ο ορισμός της τιμής default στην παράμετρο CorsPolicy μιας διαδρομής σημαίνει ότι η διαδρομή αυτή θα χρησιμοποιήσει την πολιτική που ορίζεται στο…",
+    "keywords": [
+      "default",
+      "CorsPolicy",
+      "CorsOptions.DefaultPolicy"
+    ]
   },
   {
     "slug": "cors",
     "locale": "el",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Disable CORS",
+    "title": "Αιτήματα διαφορετικής προέλευσης (CORS)",
+    "headingPath": "Αιτήματα διαφορετικής προέλευσης (CORS) › Απενεργοποίηση του CORS",
     "anchor": "disable-cors",
-    "excerpt": "Specifying the value disable in a route&#39;s CorsPolicy parameter means the CORS middleware will refuse the CORS requests. ΣημείωσηThe author created this…"
+    "excerpt": "Ο ορισμός της τιμής disable στην παράμετρο CorsPolicy μιας διαδρομής σημαίνει ότι το ενδιάμεσο λογισμικό CORS θα απορρίπτει τα αιτήματα CORS. ΣημείωσηΑυτό το…",
+    "keywords": [
+      "disable",
+      "CorsPolicy"
+    ]
   },
   {
     "slug": "https-tls",
     "locale": "el",
     "group": "security",
     "title": "HTTPS & TLS",
-    "excerpt": "HTTPS (HTTP over TLS encrypted connections) is the standard way to make HTTP requests on"
+    "excerpt": "Το HTTPS (HTTP μέσω κρυπτογραφημένων συνδέσεων TLS) είναι ο καθιερωμένος τρόπος πραγματοποίησης αιτημάτων HTTP."
   },
   {
     "slug": "https-tls",
     "locale": "el",
     "group": "security",
     "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › TLS Termination",
+    "headingPath": "HTTPS & TLS › Τερματισμός TLS",
     "anchor": "tls-termination",
-    "excerpt": "YARP is a level 7 HTTP proxy which means that incoming HTTPS/TLS connections are fully decrypted by the proxy so it can process and forward the HTTP requests.…"
+    "excerpt": "Το YARP είναι ένας διακομιστής μεσολάβησης HTTP επιπέδου 7, πράγμα που σημαίνει ότι οι εισερχόμενες συνδέσεις HTTPS/TLS αποκρυπτογραφούνται πλήρως από τον…"
   },
   {
     "slug": "https-tls",
     "locale": "el",
     "group": "security",
     "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Configuring incoming connections",
+    "headingPath": "HTTPS & TLS › Διαμόρφωση εισερχόμενων συνδέσεων",
     "anchor": "configuring-incoming-connections",
-    "excerpt": "YARP can run on top of all ASP.NET Core servers and configuring HTTPS/TLS for incoming connections is server specific. Check the docs for Kestrel, IIS, and…"
+    "excerpt": "Το YARP μπορεί να εκτελεστεί πάνω σε όλους τους διακομιστές ASP.NET Core, και η διαμόρφωση του HTTPS/TLS για τις εισερχόμενες συνδέσεις εξαρτάται από τον…"
   },
   {
     "slug": "https-tls",
     "locale": "el",
     "group": "security",
     "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Advanced TLS filters with Kestrel",
+    "headingPath": "HTTPS & TLS › Προηγμένα φίλτρα TLS με το Kestrel",
     "anchor": "advanced-tls-filters-with-kestrel",
-    "excerpt": "Kestrel supports intercepting incoming connections before the TLS handshake. YARP includes a TlsFrameHelper API that can parse the raw TLS handshake and enable…"
+    "excerpt": "Το Kestrel υποστηρίζει την υποκλοπή εισερχόμενων συνδέσεων πριν από τη χειραψία TLS (TLS handshake). Το YARP περιλαμβάνει ένα API TlsFrameHelper που μπορεί να…",
+    "keywords": [
+      "TlsFrameHelper"
+    ]
   },
   {
     "slug": "https-tls",
     "locale": "el",
     "group": "security",
     "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Configuring outgoing connections",
+    "headingPath": "HTTPS & TLS › Διαμόρφωση εξερχόμενων συνδέσεων",
     "anchor": "configuring-outgoing-connections",
-    "excerpt": "To enable TLS encryption when communicating with a destination specify the destination address as https like &quot;https://destinationHost&quot; . See the…"
+    "excerpt": "Για να ενεργοποιήσετε την κρυπτογράφηση TLS κατά την επικοινωνία με έναν προορισμό, ορίστε τη διεύθυνση προορισμού ως https, όπως…",
+    "keywords": [
+      "&quot;https://destinationHost&quot;",
+      "RequestHeader",
+      "HttpClient",
+      "SocketsHttpHandler"
+    ]
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "excerpt": "Οι κεφαλίδες αποτελούν πολύ σημαντικό μέρος της επεξεργασίας αιτημάτων HTTP."
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › YARP header filtering",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Φιλτράρισμα κεφαλίδων στο YARP",
     "anchor": "yarp-header-filtering",
-    "excerpt": "YARP automatically removes request and response headers that could impact its ability to forward a request correctly, or that may be used maliciously to bypass…"
+    "excerpt": "Το YARP αφαιρεί αυτόματα κεφαλίδες αιτήματος και απόκρισης που θα μπορούσαν να επηρεάσουν την ικανότητά του να προωθήσει σωστά ένα αίτημα, ή που θα μπορούσαν…"
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Connection , KeepAlive , Close",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Connection, KeepAlive, Close",
     "anchor": "connection-keepalive-close",
-    "excerpt": "These headers control how the TCP connection is managed and are removed to prevent impacting the connection on the other side of the proxy."
+    "excerpt": "Αυτές οι κεφαλίδες ελέγχουν τον τρόπο διαχείρισης της σύνδεσης TCP και αφαιρούνται για να μην επηρεάζουν τη σύνδεση στην άλλη πλευρά του διακομιστή μεσολάβησης."
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Transfer-Encoding",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Transfer-Encoding",
     "anchor": "transfer-encoding",
-    "excerpt": "This header describes the format of the request or response body on the wire, e.g. &#39;chunked&#39;, and is removed because the format can vary between the…"
+    "excerpt": "Αυτή η κεφαλίδα περιγράφει τη μορφή του σώματος του αιτήματος ή της απόκρισης πάνω στη σύνδεση (π.χ. «chunked») και αφαιρείται επειδή η μορφή μπορεί να…"
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › TE",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › TE",
     "anchor": "te",
-    "excerpt": "Only the TE: trailers header value is allowed through the proxy since it&#39;s required for some gRPC implementations."
+    "excerpt": "Μόνο η τιμή κεφαλίδας TE: trailers επιτρέπεται να περάσει από τον διακομιστή μεσολάβησης, καθώς απαιτείται από ορισμένες υλοποιήσεις gRPC.",
+    "keywords": [
+      "TE: trailers"
+    ]
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Upgrade",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Upgrade",
     "anchor": "upgrade",
-    "excerpt": "This is used for protocols like WebSockets. It is removed by default and only added back for specifically supported protocols (WebSockets, SPDY)."
+    "excerpt": "Αυτή χρησιμοποιείται για πρωτόκολλα όπως το WebSockets. Αφαιρείται από προεπιλογή και προστίθεται ξανά μόνο για τα ρητά υποστηριζόμενα πρωτόκολλα (WebSockets,…"
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Proxy-*",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Proxy-*",
     "anchor": "proxy",
-    "excerpt": "These are headers used with proxies and are not considered appropriate to forward."
+    "excerpt": "Πρόκειται για κεφαλίδες που χρησιμοποιούνται με διακομιστές μεσολάβησης και δεν θεωρείται κατάλληλο να προωθούνται."
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Alt-Svc",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Alt-Svc",
     "anchor": "alt-svc",
-    "excerpt": "This response header is used with HTTP/3 upgrades and only applies to the immediate connection."
+    "excerpt": "Αυτή η κεφαλίδα απόκρισης χρησιμοποιείται με αναβαθμίσεις σε HTTP/3 και ισχύει μόνο για την άμεση σύνδεση."
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Distributed tracing headers",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Κεφαλίδες κατανεμημένης ιχνηλάτησης",
     "anchor": "distributed-tracing-headers",
-    "excerpt": "These headers include TraceParent , Request-Id , TraceState , Baggage , and Correlation- Context . They&#39;re automatically removed based on…"
+    "excerpt": "Σε αυτές τις κεφαλίδες περιλαμβάνονται οι TraceParent, Request-Id, TraceState, Baggage και Correlation-Context. Αφαιρούνται αυτόματα με βάση το…",
+    "keywords": [
+      "TraceParent",
+      "Request-Id",
+      "TraceState",
+      "Baggage",
+      "Correlation-Context",
+      "DistributedContextPropagator.Fields",
+      "HttpClient",
+      "null"
+    ]
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Strict-Transport-Security",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Strict-Transport-Security",
     "anchor": "strict-transport-security",
-    "excerpt": "This header instructs clients to always use HTTPS, but there may be a conflict between values provided by the proxy and destination. To avoid confusion, the…"
+    "excerpt": "Αυτή η κεφαλίδα δίνει εντολή στους clients να χρησιμοποιούν πάντα HTTPS, όμως μπορεί να υπάρξει σύγκρουση μεταξύ των τιμών που παρέχονται από τον διακομιστή…"
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Other header guidelines",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Άλλες οδηγίες κεφαλίδων",
     "anchor": "other-header-guidelines",
-    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+    "excerpt": "Οι κεφαλίδες αποτελούν πολύ σημαντικό μέρος της επεξεργασίας αιτημάτων HTTP."
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Host",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Host",
     "anchor": "host",
-    "excerpt": "The Host header indicates which site on the server the request is intended for. This header is removed by default since the host name used publicly by the…"
+    "excerpt": "Η κεφαλίδα Host υποδεικνύει σε ποιον ιστότοπο του διακομιστή προορίζεται το αίτημα. Αυτή η κεφαλίδα αφαιρείται από προεπιλογή, καθώς το όνομα host που…",
+    "keywords": [
+      "Host",
+      "RequestHeaderOriginalHost"
+    ]
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-Forwarded-* , Forwarded",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › X-Forwarded-*, Forwarded",
     "anchor": "x-forwarded-forwarded",
-    "excerpt": "Because a separate connection is used to communicate with the destination, these request headers can be used to forward information about the original…"
+    "excerpt": "Επειδή χρησιμοποιείται ξεχωριστή σύνδεση για την επικοινωνία με τον προορισμό, αυτές οι κεφαλίδες αιτήματος μπορούν να χρησιμοποιηθούν για την προώθηση…",
+    "keywords": [
+      "X-Forwarded-For",
+      "X-Forwarded-Proto",
+      "X-Forwarded-Host",
+      "X-Forwarded-Prefix"
+    ]
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-http-method-override , x-http-method , x-method-override",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › X-http-method-override, x-http-method, x-method-override",
     "anchor": "x-http-method-override-x-http-method-x-method-override",
-    "excerpt": "Some clients and servers limit which HTTP methods they allow (for example, GET). These request headers are sometimes used to work around those restrictions.…"
+    "excerpt": "Ορισμένοι clients και διακομιστές περιορίζουν τις μεθόδους HTTP που επιτρέπουν (για παράδειγμα, μόνο GET). Αυτές οι κεφαλίδες αιτήματος χρησιμοποιούνται…",
+    "keywords": [
+      "RequestHeaderRemove"
+    ]
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Set-Cookie",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Set-Cookie",
     "anchor": "set-cookie",
-    "excerpt": "This response header may contain fields that constrain aspects of the URL, such as the scheme, domain, or path, where the cookie should be used. Using a…"
+    "excerpt": "Αυτή η κεφαλίδα απόκρισης μπορεί να περιέχει πεδία που περιορίζουν πτυχές του URL, όπως το σχήμα, το domain ή τη διαδρομή στα οποία πρέπει να χρησιμοποιείται…",
+    "keywords": [
+      "Set-Cookie"
+    ]
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Location",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Location",
     "anchor": "location",
-    "excerpt": "This response header is used with redirects and may contain a scheme, domain, and path that differ from the public values due to the use of the proxy. While it…"
+    "excerpt": "Αυτή η κεφαλίδα απόκρισης χρησιμοποιείται με ανακατευθύνσεις και μπορεί να περιέχει σχήμα, domain και διαδρομή που διαφέρουν από τις δημόσιες τιμές λόγω της…",
+    "keywords": [
+      "Location"
+    ]
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Server",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › Server",
     "anchor": "server",
-    "excerpt": "This response header indicates what server technology was used to generate the response (for example, IIS, Kestrel). This header is proxied from the…"
+    "excerpt": "Αυτή η κεφαλίδα απόκρισης υποδεικνύει ποια τεχνολογία διακομιστή χρησιμοποιήθηκε για τη δημιουργία της απόκρισης (για παράδειγμα, IIS, Kestrel). Αυτή η…",
+    "keywords": [
+      "ResponseHeaderRemove"
+    ]
   },
   {
     "slug": "header-guidelines",
     "locale": "el",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-Powered-By",
+    "title": "Οδηγίες κεφαλίδων HTTP",
+    "headingPath": "Οδηγίες κεφαλίδων HTTP › X-Powered-By",
     "anchor": "x-powered-by",
-    "excerpt": "This response header indicates what web framework was used to generate the response (for example, ASP.NET). ASP.NET Core does not generate this header but IIS…"
+    "excerpt": "Αυτή η κεφαλίδα απόκρισης υποδεικνύει ποιο web framework χρησιμοποιήθηκε για τη δημιουργία της απόκρισης (για παράδειγμα, ASP.NET). Το ASP.NET Core δεν παράγει…",
+    "keywords": [
+      "ResponseHeaderRemove"
+    ]
   },
   {
     "slug": "output-caching",
     "locale": "el",
     "group": "performance",
-    "title": "Output caching",
-    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are"
+    "title": "Προσωρινή αποθήκευση εξόδου",
+    "excerpt": "Ο αντίστροφος διακομιστής μεσολάβησης μπορεί να χρησιμοποιηθεί για την προσωρινή αποθήκευση προωθημένων αποκρίσεων και την εξυπηρέτηση αιτημάτων."
   },
   {
     "slug": "output-caching",
     "locale": "el",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Introduction",
+    "title": "Προσωρινή αποθήκευση εξόδου",
+    "headingPath": "Προσωρινή αποθήκευση εξόδου › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are proxied to the destination servers. This can reduce load on the…"
+    "excerpt": "Ο αντίστροφος διακομιστής μεσολάβησης μπορεί να χρησιμοποιηθεί για την προσωρινή αποθήκευση προωθημένων αποκρίσεων και την εξυπηρέτηση αιτημάτων πριν αυτά…"
   },
   {
     "slug": "output-caching",
     "locale": "el",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Defaults",
+    "title": "Προσωρινή αποθήκευση εξόδου",
+    "headingPath": "Προσωρινή αποθήκευση εξόδου › Προεπιλογές",
     "anchor": "defaults",
-    "excerpt": "No output caching is performed unless enabled in the route or application configuration."
+    "excerpt": "Δεν πραγματοποιείται προσωρινή αποθήκευση εξόδου, εκτός αν αυτή ενεργοποιηθεί στη διαμόρφωση της διαδρομής ή της εφαρμογής."
   },
   {
     "slug": "output-caching",
     "locale": "el",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Configuration",
+    "title": "Προσωρινή αποθήκευση εξόδου",
+    "headingPath": "Προσωρινή αποθήκευση εξόδου › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "Output Cache policies can be specified per route via RouteConfig.OutputCachePolicy and can be bound from the Routes sections of the config file. As with other…"
+    "excerpt": "Οι πολιτικές προσωρινής αποθήκευσης εξόδου (Output Cache) μπορούν να οριστούν ανά διαδρομή μέσω του RouteConfig.OutputCachePolicy και μπορούν να δεσμευτούν από…",
+    "keywords": [
+      "RouteConfig.OutputCachePolicy"
+    ]
   },
   {
     "slug": "grpc",
     "locale": "el",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It's"
+    "title": "Προώθηση gRPC",
+    "excerpt": "Το gRPC είναι ένα framework Remote Procedure Call (RPC) υψηλής απόδοσης, ανεξάρτητο γλώσσας προγραμματισμού."
   },
   {
     "slug": "grpc",
     "locale": "el",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Introduction",
+    "title": "Προώθηση gRPC",
+    "headingPath": "Προώθηση gRPC › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It&#39;s built on top of HTTP/2 and can be proxied through YARP. While…"
+    "excerpt": "Το gRPC είναι ένα framework Remote Procedure Call (RPC) υψηλής απόδοσης, ανεξάρτητο γλώσσας προγραμματισμού. Είναι χτισμένο πάνω στο HTTP/2 και μπορεί να…"
   },
   {
     "slug": "grpc",
     "locale": "el",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Configure YARP's Incoming Protocols",
+    "title": "Προώθηση gRPC",
+    "headingPath": "Προώθηση gRPC › Διαμόρφωση των εισερχόμενων πρωτοκόλλων του YARP",
     "anchor": "configure-yarp-s-incoming-protocols",
-    "excerpt": "gRPC requires HTTP/2 for most scenarios. HTTP/1.1 and HTTP/2 are enabled by default on ASP.NET Core servers (YARP&#39;s front end) but they require https (TLS)…"
+    "excerpt": "Το gRPC απαιτεί HTTP/2 στα περισσότερα σενάρια. Τα HTTP/1.1 και HTTP/2 είναι ενεργοποιημένα από προεπιλογή στους διακομιστές ASP.NET Core (το front end του…"
   },
   {
     "slug": "grpc",
     "locale": "el",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Configure YARP's Outgoing Protocols",
+    "title": "Προώθηση gRPC",
+    "headingPath": "Προώθηση gRPC › Διαμόρφωση των εξερχόμενων πρωτοκόλλων του YARP",
     "anchor": "configure-yarp-s-outgoing-protocols",
-    "excerpt": "YARP automatically negotiates HTTP/1.1 or HTTP/2 for outgoing proxy requests, but only for https (TLS). HTTP/2 over http (non-TLS) requires additional…"
+    "excerpt": "Το YARP διαπραγματεύεται αυτόματα HTTP/1.1 ή HTTP/2 για τα εξερχόμενα αιτήματα του διακομιστή μεσολάβησης, αλλά μόνο για https (TLS). Το HTTP/2 μέσω http…"
   },
   {
     "slug": "grpc",
     "locale": "el",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › gRPC-Web",
+    "title": "Προώθηση gRPC",
+    "headingPath": "Προώθηση gRPC › gRPC-Web",
     "anchor": "grpc-web",
-    "excerpt": "gRPC-Web is an alternative wire-format for gRPC that&#39;s compatible with HTTP/1.1. application/grpc - gRPC over HTTP/2 is how gRPC is typically used.…"
+    "excerpt": "Το gRPC-Web είναι μια εναλλακτική μορφή δεδομένων (wire format) για το gRPC, συμβατή με το HTTP/1.1. application/grpc - το gRPC μέσω HTTP/2 είναι ο τρόπος με…",
+    "keywords": [
+      "application/grpc",
+      "application/grpc-web"
+    ]
   },
   {
     "slug": "http3",
     "locale": "el",
     "group": "protocols",
     "title": "HTTP/3",
-    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support"
+    "excerpt": "Το YARP 1.1 υποστηρίζει το HTTP/3 για εισερχόμενες και εξερχόμενες συνδέσεις, αξιοποιώντας την υποστήριξη HTTP/3."
   },
   {
     "slug": "http3",
     "locale": "el",
     "group": "protocols",
     "title": "HTTP/3",
-    "headingPath": "HTTP/3 › Introduction",
+    "headingPath": "HTTP/3 › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support in .NET 7. To enable the HTTP/3 protocol in YARP you need to: Configure…"
+    "excerpt": "Το YARP 1.1 υποστηρίζει το HTTP/3 για εισερχόμενες και εξερχόμενες συνδέσεις, αξιοποιώντας την υποστήριξη HTTP/3 του .NET 7. Για να ενεργοποιήσετε το…"
   },
   {
     "slug": "http3",
     "locale": "el",
     "group": "protocols",
     "title": "HTTP/3",
-    "headingPath": "HTTP/3 › Set up HTTP/3 on Kestrel",
+    "headingPath": "HTTP/3 › Ρύθμιση του HTTP/3 στο Kestrel",
     "anchor": "set-up-http-3-on-kestrel",
-    "excerpt": "Protocols are required in the listener options: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel =&gt; {…"
+    "excerpt": "Απαιτείται ορισμός των πρωτοκόλλων στις επιλογές του listener: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel…"
   },
   {
     "slug": "http3",
@@ -2018,41 +2084,47 @@
     "title": "HTTP/3",
     "headingPath": "HTTP/3 › HttpClient",
     "anchor": "httpclient",
-    "excerpt": "The default version of HttpRequest should be replaced by &quot;3&quot;, find more details about HttpRequest configuration. ΣημείωσηThe author created this…"
+    "excerpt": "Η προεπιλεγμένη έκδοση του HttpRequest θα πρέπει να αντικατασταθεί με «3» - δείτε περισσότερες λεπτομέρειες σχετικά με τη διαμόρφωση του HttpRequest.…",
+    "keywords": [
+      "HttpRequest"
+    ]
   },
   {
     "slug": "websockets",
     "locale": "el",
     "group": "protocols",
     "title": "WebSockets & SPDY",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+    "excerpt": "Το YARP επιτρέπει την προώθηση συνδέσεων WebSocket και SPDY από προεπιλογή."
   },
   {
     "slug": "websockets",
     "locale": "el",
     "group": "protocols",
     "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › YARP Proxying WebSockets and SPDY",
+    "headingPath": "WebSockets & SPDY › Προώθηση WebSockets και SPDY από το YARP",
     "anchor": "yarp-proxying-websockets-and-spdy",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+    "excerpt": "Το YARP επιτρέπει την προώθηση συνδέσεων WebSocket και SPDY από προεπιλογή."
   },
   {
     "slug": "websockets",
     "locale": "el",
     "group": "protocols",
     "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › Introduction",
+    "headingPath": "WebSockets & SPDY › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with both the direct forwarding and full pipeline approaches. WebSockets is…"
+    "excerpt": "Το YARP επιτρέπει την προώθηση συνδέσεων WebSocket και SPDY από προεπιλογή. Αυτή η υποστήριξη λειτουργεί τόσο με την απευθείας προώθηση όσο και με την πλήρη…"
   },
   {
     "slug": "websockets",
     "locale": "el",
     "group": "protocols",
     "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › HTTP/1.1 Upgrades",
+    "headingPath": "WebSockets & SPDY › Αναβαθμίσεις HTTP/1.1",
     "anchor": "http-1-1-upgrades",
-    "excerpt": "WebSockets and SPDY are built on top of HTTP/1.1 using a feature called connection upgrades . YARP proxies the initial request, and if the destination server…"
+    "excerpt": "Τα WebSockets και το SPDY είναι χτισμένα πάνω στο HTTP/1.1, χρησιμοποιώντας ένα χαρακτηριστικό που ονομάζεται αναβαθμίσεις σύνδεσης (connection upgrades). Το…",
+    "keywords": [
+      "101 Switching Protocols"
+    ]
   },
   {
     "slug": "websockets",
@@ -2061,339 +2133,423 @@
     "title": "WebSockets & SPDY",
     "headingPath": "WebSockets & SPDY › HTTP/2",
     "anchor": "http-2",
-    "excerpt": "YARP supports WebSockets over HTTP/2 starting in .NET 7 and YARP 2.0. Kestrel is the only available AspNetCore server that will accept incoming HTTP/2…"
+    "excerpt": "Το YARP υποστηρίζει τα WebSockets μέσω HTTP/2 από το .NET 7 και το YARP 2.0 και έπειτα. Το Kestrel είναι ο μόνος διαθέσιμος διακομιστής ASP.NET Core που…",
+    "keywords": [
+      "Version",
+      "VersionPolicy",
+      "ForwarderRequestConfig",
+      "RequestVersionOrLower"
+    ]
   },
   {
     "slug": "websockets",
     "locale": "el",
     "group": "protocols",
     "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › Timeout",
+    "headingPath": "WebSockets & SPDY › Χρονικό όριο (Timeout)",
     "anchor": "timeout",
-    "excerpt": "Http Request Timeouts (.NET 8+) can apply timeouts to all requests by default or by policy. These timeouts will be disabled after a WebSocket handshake. They…"
+    "excerpt": "Τα Http Request Timeouts (.NET 8+) μπορούν να εφαρμόζουν χρονικά όρια σε όλα τα αιτήματα, είτε από προεπιλογή είτε μέσω πολιτικής. Αυτά τα χρονικά όρια…"
   },
   {
     "slug": "extensibility",
     "locale": "el",
     "group": "extensibility",
-    "title": "Overview",
-    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:"
+    "title": "Επισκόπηση",
+    "excerpt": "Υπάρχουν 2 βασικά στυλ επεκτασιμότητας για το YARP, ανάλογα με τη συμπεριφορά δρομολόγησης που επιθυμείτε."
   },
   {
     "slug": "extensibility",
     "locale": "el",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › Overview of YARP extensibility",
+    "title": "Επισκόπηση",
+    "headingPath": "Επισκόπηση › Επισκόπηση της επεκτασιμότητας του YARP",
     "anchor": "overview-of-yarp-extensibility",
-    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired: Middleware Pipeline Http Forwarder"
+    "excerpt": "Υπάρχουν 2 βασικά στυλ επεκτασιμότητας για το YARP, ανάλογα με τη συμπεριφορά δρομολόγησης που επιθυμείτε: Pipeline ενδιάμεσου λογισμικού (Middleware Pipeline)…"
   },
   {
     "slug": "extensibility",
     "locale": "el",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › Middleware pipeline",
+    "title": "Επισκόπηση",
+    "headingPath": "Επισκόπηση › Pipeline ενδιάμεσου λογισμικού",
     "anchor": "middleware-pipeline",
-    "excerpt": "YARP uses the concept of Routes, Clusters and Destinations. These can be supplied through configuration files or directly through code. Based on the routing…"
+    "excerpt": "Το YARP χρησιμοποιεί την έννοια των διαδρομών (Routes), των clusters και των προορισμών (Destinations). Αυτά μπορούν να παρέχονται μέσω αρχείων διαμόρφωσης ή…"
   },
   {
     "slug": "extensibility",
     "locale": "el",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › HTTP Forwarder",
+    "title": "Επισκόπηση",
+    "headingPath": "Επισκόπηση › HTTP Forwarder",
     "anchor": "http-forwarder",
-    "excerpt": "If the YARP pipeline is too rigid for your use case or the scale of routing rules and destinations isn&#39;t suitable for loading into memory, then you can…"
+    "excerpt": "Αν το pipeline του YARP είναι πολύ άκαμπτο για τη δική σας περίπτωση χρήσης, ή αν η κλίμακα των κανόνων δρομολόγησης και των προορισμών δεν είναι κατάλληλη για…",
+    "keywords": [
+      "HttpForwarder"
+    ]
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The"
+    "title": "Ενδιάμεσο λογισμικό",
+    "excerpt": "Το ASP.NET Core χρησιμοποιεί ένα pipeline ενδιάμεσου λογισμικού για να διαιρέσει την επεξεργασία των αιτημάτων σε διακριτά βήματα."
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Introduction",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The app developer can add and order middleware as needed. ASP.NET…"
+    "excerpt": "Το ASP.NET Core χρησιμοποιεί ένα pipeline ενδιάμεσου λογισμικού για να διαιρέσει την επεξεργασία των αιτημάτων σε διακριτά βήματα. Ο προγραμματιστής της…"
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Defaults",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › Προεπιλογές",
     "anchor": "defaults",
-    "excerpt": "The getting started sample shows the following Configure method. This sets up a middleware pipeline with development tools, routing, and proxy configured…"
+    "excerpt": "Το δείγμα κώδικα «Ξεκινώντας» δείχνει την ακόλουθη μέθοδο διαμόρφωσης. Αυτή ρυθμίζει ένα pipeline ενδιάμεσου λογισμικού με εργαλεία ανάπτυξης, δρομολόγηση και…",
+    "keywords": [
+      "MapReverseProxy"
+    ]
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Adding Middleware",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › Προσθήκη ενδιάμεσου λογισμικού",
     "anchor": "adding-middleware",
-    "excerpt": "Middleware added to your application pipeline will see the request in different states of processing depending on where the middleware is added. Middleware…"
+    "excerpt": "Το ενδιάμεσο λογισμικό που προστίθεται στο pipeline της εφαρμογής σας θα βλέπει το αίτημα σε διαφορετικά στάδια επεξεργασίας, ανάλογα με το πού έχει προστεθεί.…",
+    "keywords": [
+      "UseRouting",
+      "UseEndpoints",
+      "HttpContext.GetEndpoint()",
+      "MapReverseProxy"
+    ]
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › // Custom inline middleware",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › // Προσαρμοσμένο inline ενδιάμεσο λογισμικό",
     "anchor": "custom-inline-middleware",
-    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); By default this overload…"
+    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); Από προεπιλογή, αυτή η…",
+    "keywords": [
+      "MapReverseProxy"
+    ]
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Custom Proxy Middleware",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › Προσαρμοσμένο ενδιάμεσο λογισμικό διακομιστή μεσολάβησης",
     "anchor": "custom-proxy-middleware",
-    "excerpt": "Middleware inside the MapReverseProxy pipeline have access to all of the proxy data and state associated with a request (the route, cluster, destinations,…"
+    "excerpt": "Το ενδιάμεσο λογισμικό εντός του pipeline της MapReverseProxy έχει πρόσβαση σε όλα τα δεδομένα και την κατάσταση του διακομιστή μεσολάβησης που σχετίζονται με…",
+    "keywords": [
+      "MapReverseProxy",
+      "IReverseProxyFeature",
+      "HttpContext.Features",
+      "HttpContext.GetReverseProxyFeature()"
+    ]
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › What to do with middleware",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › Τι μπορείτε να κάνετε με το ενδιάμεσο λογισμικό",
     "anchor": "what-to-do-with-middleware",
-    "excerpt": "Middleware can generate logs, control if a request gets proxied or not, influence where it&#39;s proxied to, and add additional features like error handling,…"
+    "excerpt": "Το ενδιάμεσο λογισμικό μπορεί να παράγει logs, να ελέγχει αν ένα αίτημα θα προωθηθεί ή όχι, να επηρεάζει προς τα πού θα προωθηθεί, και να προσθέτει επιπλέον…"
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Logs and Metrics",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › Logs και μετρικές",
     "anchor": "logs-and-metrics",
-    "excerpt": "Middleware can inspect request and response fields to generate logs and aggregate metrics. See the note about bodies under &quot;What not to do with…"
+    "excerpt": "Το ενδιάμεσο λογισμικό μπορεί να επιθεωρεί πεδία του αιτήματος και της απόκρισης για να παράγει logs και να συγκεντρώνει μετρικές. Δείτε τη σημείωση σχετικά με…"
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Send an immediate response",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › Αποστολή άμεσης απόκρισης",
     "anchor": "send-an-immediate-response",
-    "excerpt": "If a middleware inspects a request and determines that it should not be proxied, it may generate its own response and return control to the server without…"
+    "excerpt": "Αν ένα ενδιάμεσο λογισμικό επιθεωρήσει ένα αίτημα και διαπιστώσει ότι δεν θα πρέπει να προωθηθεί, μπορεί να δημιουργήσει τη δική του απόκριση και να επιστρέψει…",
+    "keywords": [
+      "next()"
+    ]
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Filter destinations",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › Φιλτράρισμα προορισμών",
     "anchor": "filter-destinations",
-    "excerpt": "Middleware like session affinity and load balancing examine the IReverseProxyFeature and the cluster configuration to decide which destination a request should…"
+    "excerpt": "Ενδιάμεσο λογισμικό όπως η συνάφεια συνεδρίας και η εξισορρόπηση φορτίου εξετάζουν το IReverseProxyFeature και τη διαμόρφωση του cluster για να αποφασίσουν σε…",
+    "keywords": [
+      "IReverseProxyFeature",
+      "AllDestinations",
+      "AvailableDestinations",
+      "ProxiedDestination"
+    ]
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Error handling",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › Χειρισμός σφαλμάτων",
     "anchor": "error-handling",
-    "excerpt": "Middleware can wrap the call to await next() in a try/catch block to handle exceptions from later components. The proxy logic at the end of the pipeline…"
+    "excerpt": "Το ενδιάμεσο λογισμικό μπορεί να τυλίξει την κλήση await next() σε ένα block try/catch για να χειριστεί εξαιρέσεις από μεταγενέστερα components. Η λογική του…",
+    "keywords": [
+      "await next()",
+      "try/catch",
+      "IHttpForwarder",
+      "IForwarderErrorFeature",
+      "HttpContext.Features",
+      "HttpContext.GetForwarderErrorFeature()"
+    ]
   },
   {
     "slug": "middleware",
     "locale": "el",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › What not to do with middleware",
+    "title": "Ενδιάμεσο λογισμικό",
+    "headingPath": "Ενδιάμεσο λογισμικό › Τι δεν πρέπει να κάνετε με το ενδιάμεσο λογισμικό",
     "anchor": "what-not-to-do-with-middleware",
-    "excerpt": "Middleware should be cautious about modifying request fields such as headers in order to affect the outgoing proxied request. Such modifications may interfere…"
+    "excerpt": "Το ενδιάμεσο λογισμικό θα πρέπει να είναι προσεκτικό ως προς την τροποποίηση πεδίων του αιτήματος, όπως οι κεφαλίδες, με σκοπό να επηρεάσει το εξερχόμενο…",
+    "keywords": [
+      "HttpResponse.HasStarted",
+      "next()",
+      "ResponseCompression",
+      "HttpContext"
+    ]
   },
   {
     "slug": "direct-forwarding",
     "locale": "el",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "excerpt": "Some applications only need the ability to take a specific request and forward it to a specific"
+    "title": "Απευθείας προώθηση",
+    "excerpt": "Ορισμένες εφαρμογές χρειάζονται μόνο τη δυνατότητα να λαμβάνουν ένα συγκεκριμένο αίτημα και να το προωθούν."
   },
   {
     "slug": "direct-forwarding",
     "locale": "el",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › IHttpForwarder",
+    "title": "Απευθείας προώθηση",
+    "headingPath": "Απευθείας προώθηση › IHttpForwarder",
     "anchor": "ihttpforwarder",
-    "excerpt": "IHttpForwarder serves as the core proxy adapter between incoming AspNetCore and outgoing System.Net.Http requests. It handles the mechanics of creating a…"
+    "excerpt": "Το IHttpForwarder λειτουργεί ως ο βασικός προσαρμογέας (adapter) του διακομιστή μεσολάβησης ανάμεσα στα εισερχόμενα αιτήματα ASP.NET Core και τα εξερχόμενα…",
+    "keywords": [
+      "IHttpForwarder",
+      "System.Net.Http",
+      "HttpRequestMessage",
+      "HttpContext",
+      "HttpMessageInvoker"
+    ]
   },
   {
     "slug": "direct-forwarding",
     "locale": "el",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Example",
+    "title": "Απευθείας προώθηση",
+    "headingPath": "Απευθείας προώθηση › Παράδειγμα",
     "anchor": "example",
-    "excerpt": "See ReverseProxy.Direct.Sample as a pre-built sample, or use the steps below."
+    "excerpt": "Δείτε το ReverseProxy.Direct.Sample ως ένα προκατασκευασμένο δείγμα, ή ακολουθήστε τα παρακάτω βήματα.",
+    "keywords": [
+      "ReverseProxy.Direct.Sample"
+    ]
   },
   {
     "slug": "direct-forwarding",
     "locale": "el",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Create a new project",
+    "title": "Απευθείας προώθηση",
+    "headingPath": "Απευθείας προώθηση › Δημιουργία νέου έργου",
     "anchor": "create-a-new-project",
-    "excerpt": "Follow the Getting Started guide to create a project and add the Yarp.ReverseProxy nuget dependency."
+    "excerpt": "Ακολουθήστε τον οδηγό «Ξεκινώντας» για να δημιουργήσετε ένα έργο και να προσθέσετε την εξάρτηση nuget Yarp.ReverseProxy.",
+    "keywords": [
+      "Yarp.ReverseProxy"
+    ]
   },
   {
     "slug": "direct-forwarding",
     "locale": "el",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Update Program.cs",
+    "title": "Απευθείας προώθηση",
+    "headingPath": "Απευθείας προώθηση › Ενημέρωση του Program.cs",
     "anchor": "update-program-cs",
-    "excerpt": "In this example the IHttpForwarder is registered in DI, injected into the endpoint method, and used to forward requests from a specific route to…"
+    "excerpt": "Σε αυτό το παράδειγμα, το IHttpForwarder καταχωρίζεται στο DI, γίνεται inject στη μέθοδο endpoint, και χρησιμοποιείται για να προωθεί αιτήματα από μια…",
+    "keywords": [
+      "IHttpForwarder",
+      "https://localhost:10000/prefix/",
+      "Host"
+    ]
   },
   {
     "slug": "direct-forwarding",
     "locale": "el",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › // Check if the operation was successful",
+    "title": "Απευθείας προώθηση",
+    "headingPath": "Απευθείας προώθηση › // Έλεγχος αν η λειτουργία ήταν επιτυχής",
     "anchor": "check-if-the-operation-was-successful",
-    "excerpt": "if (error != ForwarderError.None) { var errorFeature = httpContext.GetForwarderErrorFeature(); var exception = errorFeature.Exception; } }); app.Run(); /// ///…"
+    "excerpt": "if (error != ForwarderError.None) { var errorFeature = httpContext.GetForwarderErrorFeature(); var exception = errorFeature.Exception; } }); app.Run(); /// ///…",
+    "keywords": [
+      "IHttpForwarder"
+    ]
   },
   {
     "slug": "direct-forwarding",
     "locale": "el",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › The HTTP Client",
+    "title": "Απευθείας προώθηση",
+    "headingPath": "Απευθείας προώθηση › Ο HTTP Client",
     "anchor": "the-http-client",
-    "excerpt": "The http client may be customized, but the above example is recommended for common proxy scenarios. Always use HttpMessageInvoker rather than HttpClient,…"
+    "excerpt": "Ο HTTP client μπορεί να προσαρμοστεί, όμως το παραπάνω παράδειγμα συνιστάται για τα συνήθη σενάρια χρήσης διακομιστή μεσολάβησης. Χρησιμοποιείτε πάντα…",
+    "keywords": [
+      "HttpMessageInvoker",
+      "HttpClient"
+    ]
   },
   {
     "slug": "direct-forwarding",
     "locale": "el",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Transforms",
+    "title": "Απευθείας προώθηση",
+    "headingPath": "Απευθείας προώθηση › Μετασχηματισμοί",
     "anchor": "transforms",
-    "excerpt": "The request and response can be modified by providing a derived HttpTransformer as a parameter to SendAsync method."
+    "excerpt": "Το αίτημα και η απόκριση μπορούν να τροποποιηθούν παρέχοντας έναν παράγωγο HttpTransformer ως παράμετρο στη μέθοδο SendAsync.",
+    "keywords": [
+      "HttpTransformer",
+      "SendAsync"
+    ]
   },
   {
     "slug": "direct-forwarding",
     "locale": "el",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Error handling",
+    "title": "Απευθείας προώθηση",
+    "headingPath": "Απευθείας προώθηση › Χειρισμός σφαλμάτων",
     "anchor": "error-handling",
-    "excerpt": "IHttpForwarder catches exceptions and timeouts from the HTTP client, logs them, and converts them to 5xx status codes or aborts the response. An error code is…"
+    "excerpt": "Το IHttpForwarder συλλαμβάνει εξαιρέσεις και timeouts από τον HTTP client, τα καταγράφει και τα μετατρέπει σε κωδικούς κατάστασης 5xx ή ματαιώνει την απόκριση.…",
+    "keywords": [
+      "IHttpForwarder",
+      "SendAsync",
+      "IForwarderErrorFeature"
+    ]
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "title": "Επιλυτές προορισμού",
+    "excerpt": "Το YARP χρησιμοποιεί έναν επιλυτή προορισμού (destination resolver) για να επεκτείνει το σύνολο των διαμορφωμένων διευθύνσεων προορισμού. Ο"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › YARP Extensibility Destination Resolvers",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Επεκτασιμότητα YARP – Επιλυτές προορισμού",
     "anchor": "yarp-extensibility-destination-resolvers",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "Το YARP χρησιμοποιεί έναν επιλυτή προορισμού (destination resolver) για να επεκτείνει το σύνολο των διαμορφωμένων διευθύνσεων προορισμού. Ο"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Introduction",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The destination resolver can be used as an integration point with…"
+    "excerpt": "Το YARP χρησιμοποιεί έναν επιλυτή προορισμού (destination resolver) για να επεκτείνει το σύνολο των διαμορφωμένων διευθύνσεων προορισμού. Ο επιλυτής προορισμού…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Structure",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Δομή",
     "anchor": "structure",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "Το YARP χρησιμοποιεί έναν επιλυτή προορισμού (destination resolver) για να επεκτείνει το σύνολο των διαμορφωμένων διευθύνσεων προορισμού. Ο"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › IDestinationResolver has a single method",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Το IDestinationResolver έχει μία μόνο μέθοδο",
     "anchor": "idestinationresolver-has-a-single-method",
-    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken) which should return a…"
+    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken), η οποία πρέπει να επιστρέφει…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › DestinationConfig",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › DestinationConfig",
     "anchor": "destinationconfig",
-    "excerpt": "DestinationConfig has a Host property which can be used to specify the default Host header value which the proxy should use when communicating with that…"
+    "excerpt": "Το DestinationConfig διαθέτει μια ιδιότητα Host που μπορεί να χρησιμοποιηθεί για να καθορίσει την προεπιλεγμένη τιμή της κεφαλίδας Host που θα πρέπει να…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Lifecycle",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Κύκλος ζωής",
     "anchor": "lifecycle",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "Το YARP χρησιμοποιεί έναν επιλυτή προορισμού (destination resolver) για να επεκτείνει το σύνολο των διαμορφωμένων διευθύνσεων προορισμού. Ο"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Startup",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Εκκίνηση",
     "anchor": "startup",
-    "excerpt": "The IDestinationResolver should be registered in the DI container as a singleton. At startup, the proxy will resolve this instance and call…"
+    "excerpt": "Το IDestinationResolver θα πρέπει να καταχωρίζεται στο container έγχυσης εξαρτήσεων (DI) ως singleton. Κατά την εκκίνηση, ο διακομιστής μεσολάβησης θα επιλύσει…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Atomicity",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Ατομικότητα",
     "anchor": "atomicity",
-    "excerpt": "The destinations objects and collections supplied to the proxy should be read-only and not modified once they have been handed to the proxy via GetConfig() ."
+    "excerpt": "Τα αντικείμενα και οι συλλογές προορισμών που παρέχονται στον διακομιστή μεσολάβησης θα πρέπει να είναι μόνο για ανάγνωση και να μην τροποποιούνται αφότου…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Reload",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Επαναφόρτωση",
     "anchor": "reload",
-    "excerpt": "If the IChangeToken supports ActiveChangeCallbacks , once the proxy has processed the initial set of destinations it will register a callback with this token.…"
+    "excerpt": "Αν το IChangeToken υποστηρίζει ActiveChangeCallbacks , μόλις ο διακομιστής μεσολάβησης επεξεργαστεί το αρχικό σύνολο προορισμών, θα καταχωρίσει μια επανάκληση…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › DNS Destination Resolver",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Επιλυτής προορισμού DNS",
     "anchor": "dns-destination-resolver",
-    "excerpt": "YARP includes an IDestinationResolver implementation which expands the set of configured destinations by resolving each host name to one or more IP addresses…"
+    "excerpt": "Το YARP περιλαμβάνει μια υλοποίηση του IDestinationResolver που επεκτείνει το σύνολο των διαμορφωμένων προορισμών επιλύοντας κάθε όνομα κεντρικού υπολογιστή…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Example",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Παράδειγμα",
     "anchor": "example",
     "excerpt": "C#// Add the DNS destination resolver, restricting results to IPv4 addresses reverseProxyBuilder.AddDnsDestinationResolver(o =&gt; o.AddressFamily =…"
   },
@@ -2401,288 +2557,288 @@
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Configuration",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "The DNS destination resolver&#39;s options, DnsDestinationResolverOptions, has the following properties:"
+    "excerpt": "Οι επιλογές του επιλυτή προορισμού DNS, DnsDestinationResolverOptions, διαθέτουν τις παρακάτω ιδιότητες:"
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › RefreshPeriod",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › RefreshPeriod",
     "anchor": "refreshperiod",
-    "excerpt": "The period between requesting a refresh of a resolved name. This defaults to 5 minutes."
+    "excerpt": "Το χρονικό διάστημα μεταξύ των αιτημάτων ανανέωσης ενός επιλυμένου ονόματος. Η προεπιλεγμένη τιμή είναι 5 λεπτά."
   },
   {
     "slug": "destination-resolvers",
     "locale": "el",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › AddressFamily",
+    "title": "Επιλυτές προορισμού",
+    "headingPath": "Επιλυτές προορισμού › AddressFamily",
     "anchor": "addressfamily",
-    "excerpt": "Optionally, specify an System.Net.Sockets.AddressFamily value of AddressFamily.InterNetwork or AddressFamily.InterNetworkV6 to restrict resolved resolution to…"
+    "excerpt": "Προαιρετικά, καθορίστε μια τιμή System.Net.Sockets.AddressFamily ίση με AddressFamily.InterNetwork ή AddressFamily.InterNetworkV6 για να περιορίσετε την…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "excerpt": "Κατά την προώθηση (proxying) ενός αιτήματος, είναι συνηθισμένο να τροποποιούνται τμήματα του αιτήματος ή της απόκρισης ώστε να προσαρμόζονται στις"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Request and Response Transform",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › Μετασχηματισμός αιτήματος και απόκρισης",
     "anchor": "request-and-response-transform",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "Κατά την προώθηση (proxying) ενός αιτήματος, είναι συνηθισμένο να τροποποιούνται τμήματα του αιτήματος ή της απόκρισης ώστε να προσαρμόζονται στις"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Extensibility",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › Επεκτασιμότητα",
     "anchor": "extensibility",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "Κατά την προώθηση (proxying) ενός αιτήματος, είναι συνηθισμένο να τροποποιούνται τμήματα του αιτήματος ή της απόκρισης ώστε να προσαρμόζονται στις"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Introduction",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+    "excerpt": "Κατά την προώθηση (proxying) ενός αιτήματος, είναι συνηθισμένο να τροποποιούνται τμήματα του αιτήματος ή της απόκρισης ώστε να προσαρμόζονται στις απαιτήσεις…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › RequestTransform",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › RequestTransform",
     "anchor": "requesttransform",
-    "excerpt": "All request transforms must derive from the abstract base class RequestTransform. These can freely modify the proxy HttpRequestMessage . Avoid reading or…"
+    "excerpt": "Όλοι οι μετασχηματισμοί αιτήματος πρέπει να παράγονται (derive) από την αφηρημένη βασική κλάση RequestTransform. Αυτοί μπορούν να τροποποιήσουν ελεύθερα το…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ResponseTransform",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › ResponseTransform",
     "anchor": "responsetransform",
-    "excerpt": "All response transforms must derive from the abstract base class ResponseTransform. These can freely modify the client HttpResponse . Avoid reading or…"
+    "excerpt": "Όλοι οι μετασχηματισμοί απόκρισης πρέπει να παράγονται από την αφηρημένη βασική κλάση ResponseTransform. Αυτοί μπορούν να τροποποιήσουν ελεύθερα το…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ResponseTrailersTransform",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › ResponseTrailersTransform",
     "anchor": "responsetrailerstransform",
-    "excerpt": "All response trailers transforms must derive from the abstract base class ResponseTrailersTransform. These can freely modify the client HttpResponse trailers.…"
+    "excerpt": "Όλοι οι μετασχηματισμοί trailers απόκρισης πρέπει να παράγονται από την αφηρημένη βασική κλάση ResponseTrailersTransform. Αυτοί μπορούν να τροποποιήσουν…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Request body transforms",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › Μετασχηματισμοί σώματος αιτήματος",
     "anchor": "request-body-transforms",
-    "excerpt": "YARP does not provide any built in transforms for modifying the request body. However, the body can be modified by custom transforms. Be careful about which…"
+    "excerpt": "Το YARP δεν παρέχει ενσωματωμένους μετασχηματισμούς για την τροποποίηση του σώματος του αιτήματος. Ωστόσο, το σώμα μπορεί να τροποποιηθεί από προσαρμοσμένους…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › any",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › any",
     "anchor": "any",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "Κατά την προώθηση (proxying) ενός αιτήματος, είναι συνηθισμένο να τροποποιούνται τμήματα του αιτήματος ή της απόκρισης ώστε να προσαρμόζονται στις"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › // needed headers on the ProxyRequest",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › // needed headers on the ProxyRequest",
     "anchor": "needed-headers-on-the-proxyrequest",
-    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); Custom transforms can only modify a request body if one is already present.…"
+    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); Οι προσαρμοσμένοι μετασχηματισμοί μπορούν να τροποποιήσουν το σώμα ενός…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Response body transforms",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › Μετασχηματισμοί σώματος απόκρισης",
     "anchor": "response-body-transforms",
-    "excerpt": "YARP does not provide any built in transforms for modifying the response body. However, the body can be modified by custom transforms. Be careful about which…"
+    "excerpt": "Το YARP δεν παρέχει ενσωματωμένους μετασχηματισμούς για την τροποποίηση του σώματος της απόκρισης. Ωστόσο, το σώμα μπορεί να τροποποιηθεί από προσαρμοσμένους…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ITransformProvider",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › ITransformProvider",
     "anchor": "itransformprovider",
-    "excerpt": "ITransformProvider provides the functionality of AddTransforms described above as well as DI integration and validation support. ITransformProvider &#39;s can…"
+    "excerpt": "Το ITransformProvider παρέχει τη λειτουργικότητα του AddTransforms που περιγράφηκε παραπάνω, καθώς και ενσωμάτωση με το DI και υποστήριξη επικύρωσης.…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "el",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ITransformFactory",
+    "title": "Μετασχηματισμοί αιτήματος και απόκρισης",
+    "headingPath": "Μετασχηματισμοί αιτήματος και απόκρισης › ITransformFactory",
     "anchor": "itransformfactory",
-    "excerpt": "Developers that want to integrate their custom transforms with the Transforms section of configuration can implement an ITransformFactory. This should be…"
+    "excerpt": "Οι προγραμματιστές που θέλουν να ενσωματώσουν τους προσαρμοσμένους μετασχηματισμούς τους με την ενότητα Transforms της διαμόρφωσης μπορούν να υλοποιήσουν ένα…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "el",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "excerpt": "When using a reverse proxy, there is an additional hop from the client to the proxy, and then"
+    "title": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP",
+    "excerpt": "Όταν χρησιμοποιείτε έναν αντίστροφο διακομιστή μεσολάβησης, υπάρχει ένα επιπλέον hop από τον client προς τον διακομιστή μεσολάβησης, και στη συνέχεια"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "el",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Logging",
+    "title": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP",
+    "headingPath": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP › Καταγραφή",
     "anchor": "logging",
-    "excerpt": "The first step to being able to tell what is going on with YARP is to turn on logging. This is a configuration flag so can be changed on the fly. YARP is…"
+    "excerpt": "Το πρώτο βήμα για να μπορείτε να καταλάβετε τι συμβαίνει με το YARP είναι να ενεργοποιήσετε την καταγραφή (logging). Πρόκειται για μια σημαία διαμόρφωσης,…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "el",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Understanding log entries",
+    "title": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP",
+    "headingPath": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP › Κατανόηση των καταχωρίσεων καταγραφής",
     "anchor": "understanding-log-entries",
-    "excerpt": "The logging output is directly tied to the way that ASP.NET Core processes requests. It&#39;s important to realize that as middleware, YARP is relying on much…"
+    "excerpt": "Η έξοδος καταγραφής συνδέεται άμεσα με τον τρόπο που το ASP.NET Core επεξεργάζεται τα αιτήματα. Είναι σημαντικό να συνειδητοποιήσετε ότι, ως ενδιάμεσο…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "el",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using ASP.NET request logging",
+    "title": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP",
+    "headingPath": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP › Χρήση της καταγραφής αιτημάτων του ASP.NET",
     "anchor": "using-asp-net-request-logging",
-    "excerpt": "ASP.NET includes a middleware component that can be used to provide more details about the request and response. The UseHttpLogging component can be added to…"
+    "excerpt": "Το ASP.NET περιλαμβάνει ένα στοιχείο ενδιάμεσου λογισμικού που μπορεί να χρησιμοποιηθεί για την παροχή περισσότερων λεπτομερειών σχετικά με το αίτημα και την…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "el",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using telemetry events",
+    "title": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP",
+    "headingPath": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP › Χρήση συμβάντων τηλεμετρίας",
     "anchor": "using-telemetry-events",
-    "excerpt": "We recommend reading Networking telemetry in .NET as a primer on how to consume networking telemetry in .NET. The Metrics sample shows how to listen to events…"
+    "excerpt": "Συνιστούμε να διαβάσετε το Networking telemetry in .NET ως εισαγωγή στο πώς να καταναλώνετε τηλεμετρία δικτύωσης στο .NET. Το δείγμα Metrics δείχνει πώς να…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "el",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using custom middleware",
+    "title": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP",
+    "headingPath": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP › Χρήση προσαρμοσμένου ενδιάμεσου λογισμικού",
     "anchor": "using-custom-middleware",
-    "excerpt": "Another way to inspect the state for requests is to insert additional middleware into the request pipeline. You can insert between the other stages to see the…"
+    "excerpt": "Ένας άλλος τρόπος για να επιθεωρήσετε την κατάσταση των αιτημάτων είναι να εισαγάγετε επιπλέον ενδιάμεσο λογισμικό στο pipeline αιτημάτων. Μπορείτε να το…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "el",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using the debugger",
+    "title": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP",
+    "headingPath": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP › Χρήση του debugger",
     "anchor": "using-the-debugger",
-    "excerpt": "A debugger, such as Visual Studio, can be attached to the proxy process. However, unless you have existing middleware, there isn&#39;t a good place in the app…"
+    "excerpt": "Ένας debugger, όπως το Visual Studio, μπορεί να συνδεθεί (attached) στη διεργασία του διακομιστή μεσολάβησης. Ωστόσο, εκτός αν διαθέτετε ήδη ενδιάμεσο…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "el",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Network tracing",
+    "title": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP",
+    "headingPath": "Διάγνωση διακομιστών μεσολάβησης που βασίζονται σε YARP › Ιχνηλάτηση δικτύου",
     "anchor": "network-tracing",
-    "excerpt": "It can be attractive to use network tracing tools like Fiddler or Wireshark to try to monitor what&#39;s happening either side of the proxy. However, be…"
+    "excerpt": "Μπορεί να είναι δελεαστικό να χρησιμοποιήσετε εργαλεία ιχνηλάτησης δικτύου όπως το Fiddler ή το Wireshark, για να προσπαθήσετε να παρακολουθήσετε τι συμβαίνει…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "el",
     "group": "operations",
-    "title": "Distributed tracing",
-    "excerpt": "As an ASP.NET Core component, YARP can easily integrate into different tracing systems the"
+    "title": "Κατανεμημένη ανίχνευση",
+    "excerpt": "Ως στοιχείο ASP.NET Core, το YARP μπορεί εύκολα να ενσωματωθεί σε διαφορετικά συστήματα ιχνηλάτησης με τον"
   },
   {
     "slug": "distributed-tracing",
     "locale": "el",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Using Open Telemetry",
+    "title": "Κατανεμημένη ανίχνευση",
+    "headingPath": "Κατανεμημένη ανίχνευση › Χρήση του Open Telemetry",
     "anchor": "using-open-telemetry",
-    "excerpt": "YARP supports distributed tracing using Open Telemetry (OTEL). When a request comes in, and there is a listener for Activities, then ASP.NET Core will…"
+    "excerpt": "Το YARP υποστηρίζει κατανεμημένη ανίχνευση χρησιμοποιώντας το Open Telemetry (OTEL). Όταν εισέρχεται ένα αίτημα και υπάρχει listener για Activities, τότε το…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "el",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Using custom tracing headers",
+    "title": "Κατανεμημένη ανίχνευση",
+    "headingPath": "Κατανεμημένη ανίχνευση › Χρήση προσαρμοσμένων κεφαλίδων ιχνηλάτησης",
     "anchor": "using-custom-tracing-headers",
-    "excerpt": "When using a propagation mechanism that is not built into .NET (e.g. B3 propagation ), you should implement a custom [ DistributedContextPropagator ] for that…"
+    "excerpt": "Όταν χρησιμοποιείτε έναν μηχανισμό διάδοσης (propagation) που δεν είναι ενσωματωμένος στο .NET (π.χ. B3 propagation ), θα πρέπει να υλοποιήσετε ένα…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "el",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Pass-through proxy",
+    "title": "Κατανεμημένη ανίχνευση",
+    "headingPath": "Κατανεμημένη ανίχνευση › Διακομιστής μεσολάβησης pass-through",
     "anchor": "pass-through-proxy",
-    "excerpt": "If you do not wish the proxy to actively participate in the trace, and wish to keep all the tracing headers as-is, you may do so by setting…"
+    "excerpt": "Αν δεν επιθυμείτε ο διακομιστής μεσολάβησης να συμμετέχει ενεργά στο trace, και θέλετε να διατηρήσετε όλες τις κεφαλίδες ιχνηλάτησης όπως έχουν, μπορείτε να το…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "el",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › DistributedContextPropagator DistributedContextPropagator.Fields",
+    "title": "Κατανεμημένη ανίχνευση",
+    "headingPath": "Κατανεμημένη ανίχνευση › DistributedContextPropagator DistributedContextPropagator.Fields",
     "anchor": "distributedcontextpropagator-distributedcontextpropagator-fi",
-    "excerpt": "ΣημείωσηThe author created this article with assistance from AI. Learn more"
+    "excerpt": "ΣημείωσηΟ συγγραφέας δημιούργησε αυτό το άρθρο με τη βοήθεια AI. Μάθετε περισσότερα"
   },
   {
     "slug": "ab-testing",
     "locale": "el",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+    "title": "Δοκιμές A/B και σταδιακές αναβαθμίσεις",
+    "excerpt": "Οι δοκιμές A/B και οι σταδιακές αναβαθμίσεις (rolling upgrades) απαιτούν διαδικασίες για τη δυναμική ανάθεση εισερχόμενης κυκλοφορίας"
   },
   {
     "slug": "ab-testing",
     "locale": "el",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › YARP A/B Testing and Rolling Upgrades",
+    "title": "Δοκιμές A/B και σταδιακές αναβαθμίσεις",
+    "headingPath": "Δοκιμές A/B και σταδιακές αναβαθμίσεις › Δοκιμές A/B και σταδιακές αναβαθμίσεις στο YARP",
     "anchor": "yarp-a-b-testing-and-rolling-upgrades",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+    "excerpt": "Οι δοκιμές A/B και οι σταδιακές αναβαθμίσεις (rolling upgrades) απαιτούν διαδικασίες για τη δυναμική ανάθεση εισερχόμενης κυκλοφορίας"
   },
   {
     "slug": "ab-testing",
     "locale": "el",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Introduction",
+    "title": "Δοκιμές A/B και σταδιακές αναβαθμίσεις",
+    "headingPath": "Δοκιμές A/B και σταδιακές αναβαθμίσεις › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic to evaluate changes in the destination application. YARP does…"
+    "excerpt": "Οι δοκιμές A/B και οι σταδιακές αναβαθμίσεις απαιτούν διαδικασίες για τη δυναμική ανάθεση της εισερχόμενης κυκλοφορίας, ώστε να αξιολογούνται αλλαγές στην…"
   },
   {
     "slug": "ab-testing",
     "locale": "el",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Example",
+    "title": "Δοκιμές A/B και σταδιακές αναβαθμίσεις",
+    "headingPath": "Δοκιμές A/B και σταδιακές αναβαθμίσεις › Παράδειγμα",
     "anchor": "example",
     "excerpt": "app.MapReverseProxy(proxyPipeline =&gt; { // Custom cluster selection proxyPipeline.Use((context, next) =&gt; { var lookup =…"
   },
@@ -2690,234 +2846,234 @@
     "slug": "ab-testing",
     "locale": "el",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Usage",
+    "title": "Δοκιμές A/B και σταδιακές αναβαθμίσεις",
+    "headingPath": "Δοκιμές A/B και σταδιακές αναβαθμίσεις › Χρήση",
     "anchor": "usage",
-    "excerpt": "This scenario makes use of two APIs, IProxyStateLookup and ReassignProxyRequest, called from a custom proxy middleware as shown in the sample above.…"
+    "excerpt": "Αυτό το σενάριο κάνει χρήση δύο API, του IProxyStateLookup και του ReassignProxyRequest, που καλούνται από ένα προσαρμοσμένο ενδιάμεσο λογισμικό διακομιστή…"
   },
   {
     "slug": "ab-testing",
     "locale": "el",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Session affinity",
+    "title": "Δοκιμές A/B και σταδιακές αναβαθμίσεις",
+    "headingPath": "Δοκιμές A/B και σταδιακές αναβαθμίσεις › Συνάφεια συνεδρίας",
     "anchor": "session-affinity",
-    "excerpt": "Σημείωσηthat session affinity functionality is split between middleware, which reads it settings from the current cluster, and transforms, which are part of…"
+    "excerpt": "Σημείωσηότι η λειτουργικότητα της συνάφειας συνεδρίας διαμοιράζεται μεταξύ του ενδιάμεσου λογισμικού, το οποίο διαβάζει τις ρυθμίσεις της από το τρέχον…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "excerpt": "Το YARP μπορεί να ενσωματωθεί με το Kubernetes ως αντίστροφος διακομιστής μεσολάβησης που διαχειρίζεται την κυκλοφορία HTTP/HTTPS"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Prerequisites",
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "headingPath": "Ελεγκτής Ingress του Kubernetes › Προαπαιτούμενα",
     "anchor": "prerequisites",
-    "excerpt": "Before we continue with this tutorial, make sure you have the following ready... Installing Docker based on your operating system. A container registry. Docker…"
+    "excerpt": "Πριν συνεχίσουμε με αυτό το σεμινάριο, βεβαιωθείτε ότι έχετε έτοιμα τα εξής... Εγκατάσταση του Docker ανάλογα με το λειτουργικό σας σύστημα. Ένα container…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Get started",
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "headingPath": "Ελεγκτής Ingress του Kubernetes › Ξεκινώντας",
     "anchor": "get-started",
-    "excerpt": "ΣημείωσηFor now, there is no official Docker image for the YARP ingress controller. In the meantime, the YARP ingress controller must be built locally and…"
+    "excerpt": "ΣημείωσηΠρος το παρόν, δεν υπάρχει επίσημη εικόνα Docker για τον ελεγκτή YARP ingress. Στο μεταξύ, ο ελεγκτής YARP ingress πρέπει να δημιουργηθεί (built)…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f ingress-controller.yaml",
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "headingPath": "Ελεγκτής Ingress του Kubernetes › kubectl apply -f ingress-controller.yaml",
     "anchor": "kubectl-apply-f-ingress-controller-yaml",
-    "excerpt": "To verify that the ingress controller has been deployed, run:"
+    "excerpt": "Για να επαληθεύσετε ότι ο ελεγκτής ingress έχει αναπτυχθεί, εκτελέστε:"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl get pods -n yarp",
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "headingPath": "Ελεγκτής Ingress του Kubernetes › kubectl get pods -n yarp",
     "anchor": "kubectl-get-pods-n-yarp",
-    "excerpt": "You can then check logs from the ingress controller by running: kubectl logs {POD NAME} -n yarp All services, deployments, and pods for YARP are in the…"
+    "excerpt": "Στη συνέχεια, μπορείτε να ελέγξετε τα logs του ελεγκτή ingress εκτελώντας: kubectl logs {POD NAME} -n yarp Όλες οι υπηρεσίες, αναπτύξεις (deployments) και pods…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress.yaml",
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "headingPath": "Ελεγκτής Ingress του Kubernetes › kubectl apply -f .\\ingress.yaml",
     "anchor": "kubectl-apply-f-ingress-yaml",
-    "excerpt": "At this point, your ingress and controller should be running."
+    "excerpt": "Σε αυτό το σημείο, το ingress και ο ελεγκτής σας θα πρέπει να εκτελούνται."
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Deploying an app",
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "headingPath": "Ελεγκτής Ingress του Kubernetes › Ανάπτυξη μιας εφαρμογής",
     "anchor": "deploying-an-app",
-    "excerpt": "To use the ingress, we now need to deploy an application to Kubernetes. Navigate to samples\\KuberenetesIngress.Sample\\backend and run: docker build . -t…"
+    "excerpt": "Για να χρησιμοποιήσετε το ingress, χρειάζεται τώρα να αναπτύξουμε μια εφαρμογή στο Kubernetes. Μεταβείτε στο samples\\KuberenetesIngress.Sample\\backend και…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\backend.yaml",
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "headingPath": "Ελεγκτής Ingress του Kubernetes › kubectl apply -f .\\backend.yaml",
     "anchor": "kubectl-apply-f-backend-yaml",
-    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+    "excerpt": "Το YARP μπορεί να ενσωματωθεί με το Kubernetes ως αντίστροφος διακομιστής μεσολάβησης που διαχειρίζεται την κυκλοφορία HTTP/HTTPS"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Creating the ingress definition",
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "headingPath": "Ελεγκτής Ingress του Kubernetes › Δημιουργία του ορισμού ingress",
     "anchor": "creating-the-ingress-definition",
-    "excerpt": "Finally, once we have deployed the backend application, we need to route traffic to the backend. To do this, run in the backend directory:"
+    "excerpt": "Τέλος, αφού έχουμε αναπτύξει την εφαρμογή backend, χρειάζεται να δρομολογήσουμε την κυκλοφορία προς το backend. Για να το κάνετε αυτό, εκτελέστε στον κατάλογο…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress-sample.yaml",
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "headingPath": "Ελεγκτής Ingress του Kubernetes › kubectl apply -f .\\ingress-sample.yaml",
     "anchor": "kubectl-apply-f-ingress-sample-yaml",
-    "excerpt": "And then execute the following command to get the external IP of the ingress, the name of the related service being yarp-proxy :"
+    "excerpt": "Και στη συνέχεια εκτελέστε την παρακάτω εντολή για να λάβετε την εξωτερική IP του ingress, με το όνομα της σχετικής υπηρεσίας να είναι yarp-proxy :"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "el",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl get service -n yarp",
+    "title": "Ελεγκτής Ingress του Kubernetes",
+    "headingPath": "Ελεγκτής Ingress του Kubernetes › kubectl get service -n yarp",
     "anchor": "kubectl-get-service-n-yarp",
-    "excerpt": "If you&#39;re using a local K8s cluster and don&#39;t get an external IP, you may be able to avoid using the default port: 80 for the yarp-proxy service. If…"
+    "excerpt": "Αν χρησιμοποιείτε ένα τοπικό cluster K8s και δεν λαμβάνετε εξωτερική IP, ίσως μπορέσετε να αποφύγετε τη χρήση της προεπιλεγμένης θύρας: 80 για την υπηρεσία…"
   },
   {
     "slug": "service-fabric-int",
     "locale": "el",
     "group": "deployment",
-    "title": "Service Fabric integration",
-    "excerpt": "This functionality has been deprecated in favor of service-fabric-yarp (GitHub repository) ."
+    "title": "Ενσωμάτωση Service Fabric",
+    "excerpt": "Αυτή η λειτουργικότητα έχει καταργηθεί υπέρ του service-fabric-yarp (αποθετήριο GitHub)."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "el",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which"
+    "title": "Ανάθεση HTTP.sys",
+    "excerpt": "Η ανάθεση (delegation) HTTP.sys είναι ένα χαρακτηριστικό σε επίπεδο πυρήνα (kernel) που προστέθηκε σε νεότερες εκδόσεις των Windows, το οποίο"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "el",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Introduction",
+    "title": "Ανάθεση HTTP.sys",
+    "headingPath": "Ανάθεση HTTP.sys › Εισαγωγή",
     "anchor": "introduction",
-    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which allows a request to be transferred from the receiving process&#39;s…"
+    "excerpt": "Η ανάθεση (delegation) HTTP.sys είναι ένα χαρακτηριστικό σε επίπεδο πυρήνα (kernel) που προστέθηκε σε νεότερες εκδόσεις των Windows και επιτρέπει τη μεταφορά…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "el",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Requirements",
+    "title": "Ανάθεση HTTP.sys",
+    "headingPath": "Ανάθεση HTTP.sys › Απαιτήσεις",
     "anchor": "requirements",
-    "excerpt": "HTTP.sys delegation requires: ASP.NET Core&#39;s HTTP.sys server Windows Server 2019 or Windows 10 (build number 1809) or newer."
+    "excerpt": "Η ανάθεση HTTP.sys απαιτεί: Τον διακομιστή HTTP.sys του ASP.NET Core. Windows Server 2019 ή Windows 10 (build 1809) ή νεότερο."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "el",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Defaults",
+    "title": "Ανάθεση HTTP.sys",
+    "headingPath": "Ανάθεση HTTP.sys › Προεπιλογές",
     "anchor": "defaults",
-    "excerpt": "HTTP.sys delegation won&#39;t be used unless added to the proxy pipeline and enabled in the destination configuration."
+    "excerpt": "Η ανάθεση HTTP.sys δεν θα χρησιμοποιηθεί εκτός αν προστεθεί στο pipeline του διακομιστή μεσολάβησης και ενεργοποιηθεί στη διαμόρφωση του προορισμού."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "el",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Configuration",
+    "title": "Ανάθεση HTTP.sys",
+    "headingPath": "Ανάθεση HTTP.sys › Διαμόρφωση",
     "anchor": "configuration",
-    "excerpt": "HTTP.sys delegation can be enabled per destination by adding the HttpSysDelegationQueue metadata to the destination. The value of this metadata should be the…"
+    "excerpt": "Η ανάθεση HTTP.sys μπορεί να ενεργοποιηθεί ανά προορισμό προσθέτοντας τα μεταδεδομένα HttpSysDelegationQueue στον προορισμό. Η τιμή αυτών των μεταδεδομένων θα…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "el",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Delegation queue lifetime",
+    "title": "Ανάθεση HTTP.sys",
+    "headingPath": "Ανάθεση HTTP.sys › Κύκλος ζωής της ουράς ανάθεσης",
     "anchor": "delegation-queue-lifetime",
-    "excerpt": "When YARP is configured to use delegation for a destination, a handle is created to the specified HTTP.sys queue. This handle is kept alive as long as the…"
+    "excerpt": "Όταν το YARP έχει διαμορφωθεί ώστε να χρησιμοποιεί ανάθεση για έναν προορισμό, δημιουργείται μια λαβή (handle) προς την καθορισμένη ουρά HTTP.sys. Αυτή η λαβή…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "title": "Ξεκινώντας με το ASP.NET Core",
+    "excerpt": "Αυτό το σεμινάριο δείχνει πώς να δημιουργήσετε και να εκτελέσετε μια εφαρμογή web ASP.NET Core χρησιμοποιώντας το .NET CLI."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Prerequisites",
+    "title": "Ξεκινώντας με το ASP.NET Core",
+    "headingPath": "Ξεκινώντας με το ASP.NET Core › Προαπαιτούμενα",
     "anchor": "prerequisites",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "Αυτό το σεμινάριο δείχνει πώς να δημιουργήσετε και να εκτελέσετε μια εφαρμογή web ASP.NET Core χρησιμοποιώντας το .NET CLI."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › .NET 8 SDK",
+    "title": "Ξεκινώντας με το ASP.NET Core",
+    "headingPath": "Ξεκινώντας με το ASP.NET Core › .NET 8 SDK",
     "anchor": "net-8-sdk",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "Αυτό το σεμινάριο δείχνει πώς να δημιουργήσετε και να εκτελέσετε μια εφαρμογή web ASP.NET Core χρησιμοποιώντας το .NET CLI."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Create a web app project",
+    "title": "Ξεκινώντας με το ASP.NET Core",
+    "headingPath": "Ξεκινώντας με το ASP.NET Core › Δημιουργία ενός έργου εφαρμογής web",
     "anchor": "create-a-web-app-project",
-    "excerpt": "Open a command shell, and enter the following command: .NET CLI dotnet new webapp --output aspnetcoreapp --no-https The preceding command creates a new web app…"
+    "excerpt": "Ανοίξτε ένα κέλυφος εντολών και εισαγάγετε την παρακάτω εντολή: .NET CLI dotnet new webapp --output aspnetcoreapp --no-https Η προηγούμενη εντολή δημιουργεί…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Run the app",
+    "title": "Ξεκινώντας με το ASP.NET Core",
+    "headingPath": "Ξεκινώντας με το ASP.NET Core › Εκτέλεση της εφαρμογής",
     "anchor": "run-the-app",
-    "excerpt": "Run the following commands: .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:Έξοδος Building... info:…"
+    "excerpt": "Εκτελέστε τις παρακάτω εντολές: .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:Έξοδος Building... info:…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Edit a Razor page",
+    "title": "Ξεκινώντας με το ASP.NET Core",
+    "headingPath": "Ξεκινώντας με το ASP.NET Core › Επεξεργασία μιας σελίδας Razor",
     "anchor": "edit-a-razor-page",
-    "excerpt": "Change the home page: In the command shell, press Ctrl+C (Cmd+C in macOS) to exit the program. Open Pages/Index.cshtml in a text editor. Replace the line that…"
+    "excerpt": "Αλλάξτε την αρχική σελίδα: Στο κέλυφος εντολών, πατήστε Ctrl+C (Cmd+C σε macOS) για να τερματίσετε το πρόγραμμα. Ανοίξτε το Pages/Index.cshtml σε έναν…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › CSHTML",
+    "title": "Ξεκινώντας με το ASP.NET Core",
+    "headingPath": "Ξεκινώντας με το ASP.NET Core › CSHTML",
     "anchor": "cshtml",
     "excerpt": "@page @model IndexModel @{ ViewData[&quot;Title&quot;] = &quot;Home page&quot;; } Welcome Hello, world! The time on the server is @DateTime.Now"
   },
@@ -2925,27 +3081,27 @@
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › </div>",
+    "title": "Ξεκινώντας με το ASP.NET Core",
+    "headingPath": "Ξεκινώντας με το ASP.NET Core › </div>",
     "anchor": "div",
-    "excerpt": "Save your changes. In the command shell run the dotnet run command again. In the browser, refresh the page and verify the changes are displayed."
+    "excerpt": "Αποθηκεύστε τις αλλαγές σας. Στο κέλυφος εντολών, εκτελέστε ξανά την εντολή dotnet run. Στο πρόγραμμα περιήγησης, ανανεώστε τη σελίδα και επαληθεύστε ότι…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Next steps",
+    "title": "Ξεκινώντας με το ASP.NET Core",
+    "headingPath": "Ξεκινώντας με το ASP.NET Core › Επόμενα βήματα",
     "anchor": "next-steps",
-    "excerpt": "In this tutorial, you learned how to: Create a web app project. Run the project. Make a change. To learn more about ASP.NET Core, see the following:"
+    "excerpt": "Σε αυτό το σεμινάριο, μάθατε πώς να: Δημιουργήσετε ένα έργο εφαρμογής web. Εκτελέσετε το έργο. Κάνετε μια αλλαγή. Για να μάθετε περισσότερα σχετικά με το…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "el",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Overview of ASP.NET Core",
+    "title": "Ξεκινώντας με το ASP.NET Core",
+    "headingPath": "Ξεκινώντας με το ASP.NET Core › Επισκόπηση του ASP.NET Core",
     "anchor": "overview-of-asp-net-core",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "Αυτό το σεμινάριο δείχνει πώς να δημιουργήσετε και να εκτελέσετε μια εφαρμογή web ASP.NET Core χρησιμοποιώντας το .NET CLI."
   }
 ]

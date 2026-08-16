@@ -3,12 +3,12 @@
   "locale": "ru",
   "group": "appendix",
   "kind": "appendix",
-  "title": "Get started with ASP.NET Core",
-  "lede": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI.",
+  "title": "Начало работы с ASP.NET Core",
+  "lede": "В этом руководстве показано, как создать и запустить веб-приложение ASP.NET Core с помощью .NET CLI.",
   "headings": [
     {
       "id": "prerequisites",
-      "text": "Prerequisites",
+      "text": "Предварительные требования",
       "level": 2
     },
     {
@@ -18,17 +18,17 @@
     },
     {
       "id": "create-a-web-app-project",
-      "text": "Create a web app project",
+      "text": "Создание проекта веб-приложения",
       "level": 2
     },
     {
       "id": "run-the-app",
-      "text": "Run the app",
+      "text": "Запуск приложения",
       "level": 2
     },
     {
       "id": "edit-a-razor-page",
-      "text": "Edit a Razor page",
+      "text": "Редактирование страницы Razor",
       "level": 2
     },
     {
@@ -43,22 +43,22 @@
     },
     {
       "id": "next-steps",
-      "text": "Next steps",
+      "text": "Дальнейшие действия",
       "level": 2
     },
     {
       "id": "overview-of-asp-net-core",
-      "text": "Overview of ASP.NET Core",
+      "text": "Обзор ASP.NET Core",
       "level": 2
     }
   ],
-  "bodyHtml": "<p>Tutorial: Get started with ASP.NET Core</p>\n<p>This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI.</p>\n<p>For Blazor tutorials, see ASP.NET Core Blazor tutorials.</p>\n<p>You&#39;ll learn how to: Create a web app project. Run the app. Edit a Razor page.</p>\n<p>At the end, you&#39;ll have a working web app running on your local machine.</p>\n<h2 id=\"prerequisites\">Prerequisites</h2><h2 id=\"net-8-sdk\">.NET 8 SDK</h2><h2 id=\"create-a-web-app-project\">Create a web app project</h2><p>Open a command shell, and enter the following command:</p>\n<p>.NET CLI dotnet new webapp --output aspnetcoreapp --no-https</p>\n<p>The preceding command creates a new web app project in a directory named aspnetcoreapp .</p>\n<p>The project doesn&#39;t use HTTPS.</p>\n<h2 id=\"run-the-app\">Run the app</h2><p>Run the following commands:</p>\n<pre class=\"code-block standalone\"><span class=\"lang-tag\">.NET CLI</span><button class=\"copy-btn\" data-copy=\"aspnetcore-getting-started-code-1\" aria-label=\"Копировать код\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"aspnetcore-getting-started-code-1\">   <span class=\"tok-type\">cd</span> aspnetcoreapp\n   dotnet run\nThe run <span class=\"tok-type\">command</span> produces output like the following example:</code></pre><pre class=\"code-block standalone\"><span class=\"lang-tag\">Вывод</span><button class=\"copy-btn\" data-copy=\"aspnetcore-getting-started-code-2\" aria-label=\"Копировать код\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"aspnetcore-getting-started-code-2\">   Building...\n   info: Microsoft.Hosting.Lifetime[14]\n             Now listening on: http://localhost:5109\n   info: Microsoft.Hosting.Lifetime[0]\n             Application started. Press Ctrl+C to shut down.\n   info: Microsoft.Hosting.Lifetime[0]\n             Hosting environment: Development\n   info: Microsoft.Hosting.Lifetime[0]\n             Content root path: C:\\aspnetcoreapp\nOpen a browser and go to the URL shown in the output. In this example, the URL is\nhttp://localhost:5109 .\nThe browser shows the home page.</code></pre><h2 id=\"edit-a-razor-page\">Edit a Razor page</h2><p>Change the home page:</p>\n<p>In the command shell, press Ctrl+C (Cmd+C in macOS) to exit the program.</p>\n<p>Open Pages/Index.cshtml in a text editor.</p>\n<p>Replace the line that begins with &quot;Learn about&quot; with the following highlighted markup and code:</p>\n<h2 id=\"cshtml\">CSHTML</h2><p>@page @model IndexModel @{</p>\n<p>ViewData[&quot;Title&quot;] = &quot;Home page&quot;; }</p>\n<div class=\"text-center\"> <h1 class=\"display-4\">Welcome</h1> <p>Hello, world! The time on the server is @DateTime.Now</p>\n\n<h2 id=\"div\"></div></h2><p>Save your changes. In the command shell run the dotnet run command again. In the browser, refresh the page and verify the changes are displayed.</p>\n<h2 id=\"next-steps\">Next steps</h2><p>In this tutorial, you learned how to:</p>\n<p>Create a web app project. Run the project. Make a change.</p>\n<p>To learn more about ASP.NET Core, see the following:</p>\n<h2 id=\"overview-of-asp-net-core\">Overview of ASP.NET Core</h2>",
+  "bodyHtml": "<p>Руководство: начало работы с ASP.NET Core</p>\n<p>В этом руководстве показано, как создать и запустить веб-приложение ASP.NET Core с помощью .NET CLI.</p>\n<p>Учебные материалы по Blazor см. в разделе Учебные материалы по ASP.NET Core Blazor.</p>\n<p>Вы узнаете, как: создать проект веб-приложения. Запустить приложение. Отредактировать страницу Razor.</p>\n<p>В итоге у вас будет работающее веб-приложение, запущенное на вашем локальном компьютере.</p>\n<h2 id=\"prerequisites\">Предварительные требования</h2><h2 id=\"net-8-sdk\">.NET 8 SDK</h2><h2 id=\"create-a-web-app-project\">Создание проекта веб-приложения</h2><p>Откройте командную оболочку и введите следующую команду:</p>\n<p>.NET CLI dotnet new webapp --output aspnetcoreapp --no-https</p>\n<p>Предыдущая команда создает новый проект веб-приложения в каталоге с именем aspnetcoreapp .</p>\n<p>Проект не использует HTTPS.</p>\n<h2 id=\"run-the-app\">Запуск приложения</h2><p>Выполните следующие команды:</p>\n<pre class=\"code-block standalone\"><span class=\"lang-tag\">.NET CLI</span><button class=\"copy-btn\" data-copy=\"aspnetcore-getting-started-code-1\" aria-label=\"Копировать код\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"aspnetcore-getting-started-code-1\">   <span class=\"tok-type\">cd</span> aspnetcoreapp\n   dotnet run\nThe run <span class=\"tok-type\">command</span> produces output like the following example:</code></pre><pre class=\"code-block standalone\"><span class=\"lang-tag\">Вывод</span><button class=\"copy-btn\" data-copy=\"aspnetcore-getting-started-code-2\" aria-label=\"Копировать код\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"aspnetcore-getting-started-code-2\">   Building...\n   info: Microsoft.Hosting.Lifetime[14]\n             Now listening on: http://localhost:5109\n   info: Microsoft.Hosting.Lifetime[0]\n             Application started. Press Ctrl+C to shut down.\n   info: Microsoft.Hosting.Lifetime[0]\n             Hosting environment: Development\n   info: Microsoft.Hosting.Lifetime[0]\n             Content root path: C:\\aspnetcoreapp\nOpen a browser and go to the URL shown in the output. In this example, the URL is\nhttp://localhost:5109 .\nThe browser shows the home page.</code></pre><h2 id=\"edit-a-razor-page\">Редактирование страницы Razor</h2><p>Измените главную страницу:</p>\n<p>В командной оболочке нажмите Ctrl+C (Cmd+C в macOS), чтобы завершить работу программы.</p>\n<p>Откройте файл Pages/Index.cshtml в текстовом редакторе.</p>\n<p>Замените строку, начинающуюся с «Learn about», следующей выделенной разметкой и кодом:</p>\n<h2 id=\"cshtml\">CSHTML</h2><p>@page @model IndexModel @{</p>\n<p>ViewData[&quot;Title&quot;] = &quot;Home page&quot;; }</p>\n<div class=\"text-center\"> <h1 class=\"display-4\">Welcome</h1> <p>Hello, world! The time on the server is @DateTime.Now</p>\n\n<h2 id=\"div\"></div></h2><p>Сохраните изменения. В командной оболочке снова выполните команду dotnet run. В браузере обновите страницу и убедитесь, что изменения отображаются.</p>\n<h2 id=\"next-steps\">Дальнейшие действия</h2><p>В этом руководстве вы узнали, как выполнить следующие действия:</p>\n<p>Создать проект веб-приложения. Запустить проект. Внести изменение.</p>\n<p>Чтобы узнать больше о ASP.NET Core, см. следующие материалы:</p>\n<h2 id=\"overview-of-asp-net-core\">Обзор ASP.NET Core</h2>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/getting-started/",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "httpsys-delegation",
-    "title": "HTTP.sys delegation"
+    "title": "Делегирование HTTP.sys"
   },
   "next": null
 }

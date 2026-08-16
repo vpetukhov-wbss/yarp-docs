@@ -4,21 +4,21 @@
   "group": "protocols",
   "kind": "doc",
   "title": "WebSockets & SPDY",
-  "lede": "YARP enables proxying WebSocket and SPDY connections by default. This support works with",
+  "lede": "Το YARP επιτρέπει την προώθηση συνδέσεων WebSocket και SPDY από προεπιλογή.",
   "headings": [
     {
       "id": "yarp-proxying-websockets-and-spdy",
-      "text": "YARP Proxying WebSockets and SPDY",
+      "text": "Προώθηση WebSockets και SPDY από το YARP",
       "level": 2
     },
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "Εισαγωγή",
       "level": 2
     },
     {
       "id": "http-1-1-upgrades",
-      "text": "HTTP/1.1 Upgrades",
+      "text": "Αναβαθμίσεις HTTP/1.1",
       "level": 2
     },
     {
@@ -28,20 +28,20 @@
     },
     {
       "id": "timeout",
-      "text": "Timeout",
+      "text": "Χρονικό όριο (Timeout)",
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"yarp-proxying-websockets-and-spdy\">YARP Proxying WebSockets and SPDY</h2><h2 id=\"introduction\">Introduction</h2><p>YARP enables proxying WebSocket and SPDY connections by default. This support works with both the direct forwarding and full pipeline approaches.</p>\n<p>WebSockets is a bidirectional streaming protocol built on HTTP/1.1 or later adapted to HTTP/2 .</p>\n<p>SPDY is the precursor to HTTP/2 and is commonly used in Kubernetes environments.</p>\n<h2 id=\"http-1-1-upgrades\">HTTP/1.1 Upgrades</h2><p>WebSockets and SPDY are built on top of HTTP/1.1 using a feature called connection upgrades . YARP proxies the initial request, and if the destination server responds with 101 Switching Protocols , upgrades the connection to an opaque, bidirectional stream using the new protocol. YARP does not support upgrading to other protocols like HTTP/2 this way.</p>\n<h2 id=\"http-2\">HTTP/2</h2><p>YARP supports WebSockets over HTTP/2 starting in .NET 7 and YARP 2.0. Kestrel is the only available AspNetCore server that will accept incoming HTTP/2 WebSocket requests and that support is automatically enabled. Browsers can detect this support advertised by the server and automatically switch to HTTP/2.</p>\n<p>The incoming and outgoing protocol versions do not need to match. The incoming WebSocket request can be HTTP/1.1 or 2. There is no configuration specific to WebSockets for outgoing requests, YARP will use the ForwarderRequestConfig&#39;s Version and VersionPolicy to determine the outbound version to use. These default to HTTP/2 and RequestVersionOrLower.</p>\n<p>WebSockets require different HTTP headers for HTTP/2 so YARP will add and remove these headers as needed when adapting between the different versions.</p>\n<p>After the initial handshake WebSockets function the same way over both HTTP versions.</p>\n<h2 id=\"timeout\">Timeout</h2><p>Http Request Timeouts (.NET 8+) can apply timeouts to all requests by default or by policy.</p>\n<p>These timeouts will be disabled after a WebSocket handshake. They will still apply to gRPC</p>\n<p>requests. For additional configuration see Timeouts.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Σημείωση</div><p>The author created this article with assistance from AI. Learn more</p>\n</div></div>",
+  "bodyHtml": "<h2 id=\"yarp-proxying-websockets-and-spdy\">Προώθηση WebSockets και SPDY από το YARP</h2><h2 id=\"introduction\">Εισαγωγή</h2><p>Το YARP επιτρέπει την προώθηση συνδέσεων WebSocket και SPDY από προεπιλογή. Αυτή η υποστήριξη λειτουργεί τόσο με την απευθείας προώθηση όσο και με την πλήρη προσέγγιση pipeline.</p>\n<p>Το WebSockets είναι ένα αμφίδρομο πρωτόκολλο ροής (streaming), χτισμένο πάνω στο HTTP/1.1 και αργότερα προσαρμοσμένο στο HTTP/2.</p>\n<p>Το SPDY είναι ο πρόδρομος του HTTP/2 και χρησιμοποιείται συνήθως σε περιβάλλοντα Kubernetes.</p>\n<h2 id=\"http-1-1-upgrades\">Αναβαθμίσεις HTTP/1.1</h2><p>Τα WebSockets και το SPDY είναι χτισμένα πάνω στο HTTP/1.1, χρησιμοποιώντας ένα χαρακτηριστικό που ονομάζεται αναβαθμίσεις σύνδεσης (connection upgrades). Το YARP προωθεί το αρχικό αίτημα και, αν ο διακομιστής προορισμού απαντήσει με <code>101 Switching Protocols</code>, αναβαθμίζει τη σύνδεση σε μια αδιαφανή, αμφίδρομη ροή με χρήση του νέου πρωτοκόλλου. Το YARP δεν υποστηρίζει την αναβάθμιση σε άλλα πρωτόκολλα, όπως το HTTP/2, με αυτόν τον τρόπο.</p>\n<h2 id=\"http-2\">HTTP/2</h2><p>Το YARP υποστηρίζει τα WebSockets μέσω HTTP/2 από το .NET 7 και το YARP 2.0 και έπειτα. Το Kestrel είναι ο μόνος διαθέσιμος διακομιστής ASP.NET Core που δέχεται εισερχόμενα αιτήματα WebSocket μέσω HTTP/2, και αυτή η υποστήριξη είναι αυτόματα ενεργοποιημένη. Οι browsers μπορούν να εντοπίσουν αυτή την υποστήριξη όπως διαφημίζεται από τον διακομιστή και να μεταβούν αυτόματα σε HTTP/2.</p>\n<p>Οι εκδόσεις πρωτοκόλλου εισερχόμενης και εξερχόμενης σύνδεσης δεν χρειάζεται να ταιριάζουν. Το εισερχόμενο αίτημα WebSocket μπορεί να είναι HTTP/1.1 ή HTTP/2. Δεν υπάρχει καμία ειδική διαμόρφωση για τα WebSockets στα εξερχόμενα αιτήματα· το YARP θα χρησιμοποιήσει τα <code>Version</code> και <code>VersionPolicy</code> του <code>ForwarderRequestConfig</code> για να καθορίσει την εξερχόμενη έκδοση που θα χρησιμοποιηθεί. Οι προεπιλεγμένες τιμές είναι HTTP/2 και <code>RequestVersionOrLower</code>.</p>\n<p>Τα WebSockets απαιτούν διαφορετικές κεφαλίδες HTTP για το HTTP/2, οπότε το YARP θα προσθέτει και θα αφαιρεί αυτές τις κεφαλίδες όπως χρειάζεται κατά την προσαρμογή μεταξύ των διαφορετικών εκδόσεων.</p>\n<p>Μετά την αρχική χειραψία, τα WebSockets λειτουργούν με τον ίδιο τρόπο και στις δύο εκδόσεις HTTP.</p>\n<h2 id=\"timeout\">Χρονικό όριο (Timeout)</h2><p>Τα Http Request Timeouts (.NET 8+) μπορούν να εφαρμόζουν χρονικά όρια σε όλα τα αιτήματα, είτε από προεπιλογή είτε μέσω πολιτικής.</p>\n<p>Αυτά τα χρονικά όρια απενεργοποιούνται μετά από μια χειραψία WebSocket. Εξακολουθούν να ισχύουν για αιτήματα gRPC. Για πρόσθετη διαμόρφωση, δείτε το Timeouts.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Σημείωση</div><p>Αυτό το άρθρο δημιουργήθηκε από τον συγγραφέα με τη βοήθεια τεχνητής νοημοσύνης (AI). Μάθετε περισσότερα</p>\n</div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/websockets",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "http3",
     "title": "HTTP/3"
   },
   "next": {
     "slug": "extensibility",
-    "title": "Overview"
+    "title": "Επισκόπηση"
   }
 }

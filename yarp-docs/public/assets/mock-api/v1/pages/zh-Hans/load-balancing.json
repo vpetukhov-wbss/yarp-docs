@@ -28,10 +28,10 @@
   "translated": true,
   "prev": {
     "slug": "transforms-response",
-    "title": "Response & trailer transforms"
+    "title": "响应与响应尾部转换"
   },
   "next": {
     "slug": "session-affinity",
-    "title": "Session affinity"
+    "title": "会话相关性"
   }
 }

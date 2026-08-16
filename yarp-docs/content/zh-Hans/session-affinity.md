@@ -1,0 +1,151 @@
+---
+slug: session-affinity
+title: 会话相关性
+lede: >-
+  当负载在多个目标之间进行均衡时,会话相关性是一种将一系列因果相关的请求绑定(建立相关性)到处理
+  第一个请求的那个目标上的机制。
+sourceUrl: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/session-affinity
+lastUpdated: 2026-08-11
+---
+
+## 概念
+
+当负载在多个目标之间进行均衡时,会话相关性是一种将一系列因果相关的请求绑定(建立相关性)到处理第一个请求的那个目标上的机制。在这样的场景中它很有用:一个序列中的大多数请求都要处理相同的数据,而不同节点(目标)处理请求时的数据访问成本各不相同。最常见的例子是瞬态缓存(例如内存缓存):第一个请求从较慢的持久性存储中获取数据,并放入速度较快的本地缓存,后续请求只需处理缓存中的数据,从而提高吞吐量。
+
+## 配置
+
+## 服务与中间件注册
+
+会话相关性服务由 AddReverseProxy() 自动注册到 DI 容器中。中间件 UseSessionAffinity() 默认包含在无参数版本的 MapReverseProxy 方法中。如果你正在自定义代理管道,请将它作为第一个中间件,添加在 UseLoadBalancing() 之前。
+
+示例:
+
+```csharp
+   app.MapReverseProxy(proxyPipeline =>
+   {
+          proxyPipeline.UseSessionAffinity();
+          proxyPipeline.UseLoadBalancing();
+   });
+Note Some session affinity implementations depend on Data Protection, which will require
+additional configuration for scenarios like multiple proxy instances. See Key Protection for
+details.
+```
+
+## 群集配置
+
+会话相关性按群集进行配置,配置方案如下。
+
+```json
+"ReverseProxy": {
+   "Clusters": {
+      "<cluster-name>": {
+         "SessionAffinity": {
+             "Enabled": "(true|false)", // defaults to 'false'
+             "Policy": "(HashCookie|ArrCookie|Cookie|CustomHeader)", // defaults to
+'HashCookie'
+             "FailurePolicy": "(Redistribute|Return503Error)", // defaults to
+'Redistribute'
+             "AffinityKeyName": "Key1",
+             "Cookie": {
+                "Domain": "localhost",
+                "Expiration": "03:00:00",
+                "HttpOnly": true,
+                "IsEssential": true,
+                "MaxAge": "1.00:00:00",
+                "Path": "mypath",
+                "SameSite": "Strict",
+                "SecurePolicy": "Always"
+             }
+         }
+      }
+   }
+}
+```
+
+## Cookie 配置
+
+用于配置 HashCookie、ArrCookie 和 Cookie 策略所使用 Cookie 的各项属性,可以通过 SessionAffinityCookieConfig 进行配置。这些属性既可以像上面那样通过 JSON 配置,也可以像下面这样通过代码配置:
+
+```csharp
+new ClusterConfig
+{
+      ClusterId = "cluster1",
+      SessionAffinity = new SessionAffinityConfig
+      {
+             Enabled = true,
+             FailurePolicy = "Return503Error",
+             Policy = "HashCookie",
+             AffinityKeyName = "Key1",
+             Cookie = new SessionAffinityCookieConfig
+             {
+                   Domain = "mydomain",
+                   Expiration = TimeSpan.FromHours(3),
+                   HttpOnly = true,
+                   IsEssential = true,
+                   MaxAge = TimeSpan.FromDays(1),
+                      Path = "mypath",
+                      SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Strict,
+                      SecurePolicy =
+Microsoft.AspNetCore.Http.CookieSecurePolicy.SameAsRequest
+                   }
+   }
+}
+```
+
+## 相关性密钥
+
+请求与目标之间的相关性,是通过标识目标的相关性密钥来建立的。根据具体会话相关性实现的不同,该密钥可以存储在请求的不同部分,但每个请求最多只能携带一个这样的密钥。密钥的具体语义取决于实现方式,目前内置的策略使用 DestinationId 作为相关性密钥。
+
+当前的设计并不要求密钥必须唯一标识单个已建立相关性的目标。系统允许将相关性建立到一个目标组上,在这种情况下,具体由哪个目标处理给定的请求,将由负载均衡器决定。
+
+建立新的相关性,或解析已有的相关性
+
+请求到达并被路由到启用了会话相关性的群集后,代理会根据请求上是否存在有效的相关性密钥,自动决定应当建立新的相关性,还是解析已有的相关性,具体规则如下:
+
+1. 请求不包含密钥。跳过解析步骤,将针对负载均衡器所选择的目标建立一个新的相关性
+
+2. 请求上存在有效的相关性密钥。相关性机制会尝试找出所有与该密钥匹配的运行状况良好的目标,如果找到,则将请求继续沿管道向下传递。如果找到多个匹配的目标,则会调用负载均衡器来选出唯一的目标。如果只找到一个匹配的目标,负载均衡器不会执行任何操作。
+
+3. 相关性密钥无效,或未找到运行状况良好的已建立相关性的目标。这种情况会被视为一次失败,由下文介绍的失败策略处理
+
+如果为该请求建立了新的相关性,相关性密钥就会被附加到响应上,其具体的表示形式和位置取决于所用的实现。目前有两种内置策略,分别将密钥存储在 Cookie 或自定义标头中。响应送达客户端后,由客户端负责在同一会话中的所有后续请求上附带该密钥。此后,当携带该密钥的下一个请求到达代理时,代理会解析已有的相关性,但不会再次将相关性密钥附加到响应上。因此,只有第一个响应会携带相关性密钥。
+
+系统内置了四种相关性策略,它们在请求和响应上格式化及存储密钥的方式各不相同。默认策略是 HashCookie。
+
+HashCookie、ArrCookie 和 Cookie 策略分别以哈希或加密的形式将密钥存储为 Cookie,详见下文的密钥保护。请求中的密钥会以配置名称对应的 Cookie 形式传递,并在相关性序列的第一个响应上通过 Set-Cookie 标头设置同名 Cookie。Cookie 名称必须通过 SessionAffinityConfig.AffinityKeyName 显式设置。其他 Cookie 属性可以通过 SessionAffinityCookieConfig 进行配置。CustomHeader 将密钥存储为加密的标头。它要求相关性密钥通过配置名称对应的自定义标头传递,并在相关性序列的第一个响应上设置同名标头。标头名称必须通过 SessionAffinityConfig.AffinityKeyName 设置。
+
+:::note
+AffinityKeyName 在所有启用了会话相关性的群集中必须唯一,以避免冲突。
+:::
+
+## 密钥保护
+
+HashCookie 策略使用 XxHash64 哈希算法,为 Cookie 值生成一种快速、紧凑且经过混淆处理的输出格式。
+
+ArrCookie 策略使用 SHA-256 哈希算法,为 Cookie 值生成一种经过混淆处理的输出,使其与 IIS 的 ARR 相关性 Cookie 格式相匹配。ARR 使用目标主机名作为输入值,因此如果要与 ARR 配合使用,YARP 的目标 ID 需要配置为与之匹配。
+
+HashCookie 和 ArrCookie 并不提供强隐私保护,敏感数据不应包含在目标 ID 中。这些策略也不会隐藏代理背后唯一目标的总数,如果这一点是你所关心的问题,则不应使用这些策略。
+
+Cookie 和 CustomHeader 策略使用数据保护(Data Protection)对密钥进行加密。这为密钥提供了强隐私保护,但在使用多个代理实例时需要额外的配置。
+
+## 相关性失败策略
+
+如果相关性密钥无法解码,或未找到运行状况良好的目标,则会被视为一次失败,并调用相关性失败策略来处理。该策略可以完全访问 HttpContext,并可以自行向客户端发送响应。它会返回一个布尔值,指示请求处理是继续沿管道向下进行,还是必须终止。
+
+系统内置了两种失败策略,默认策略是 Redistribute。
+
+1. Redistribute——跳过相关性查找步骤,尝试针对某个可用的运行状况良好的目标建立新的相关性,做法与不带任何相关性的请求相同,即把所有运行状况良好的目标都交给负载均衡器处理。请求处理会继续进行。此策略由 RedistributeAffinityFailurePolicy 实现。
+
+2. Return503Error——向客户端发送 503 响应,并终止请求处理。此策略由 Return503ErrorAffinityFailurePolicy 实现
+
+## 请求管道
+
+会话相关性机制由上述服务以及以下两个中间件共同实现:
+
+1. SessionAffinityMiddleware——协调请求的相关性解析过程。它首先调用 ClusterConfig.SessionAffinity.Policy 属性中为给定群集指定的策略,然后检查该策略返回的相关性解析状态,并在发生失败时调用 ClusterConfig.SessionAffinity.FailurePolicy 中设置的失败处理策略。它必须被添加在负载均衡器之前的管道中。
+
+2. AffinitizeTransform——如果为该请求建立了新的相关性,则在响应上设置密钥。否则,如果该请求沿用的是已有的相关性,则不执行任何操作。它会被自动添加为响应转换。
+
+:::note
+本文作者在 AI 的协助下创作本文。了解详情
+:::
