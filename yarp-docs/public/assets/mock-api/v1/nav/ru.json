@@ -3,7 +3,7 @@
   "groups": [
     {
       "id": "getting-started",
-      "label": "Начало работы",
+      "label": "Getting started",
       "order": 1,
       "items": [
         {
@@ -22,7 +22,7 @@
     },
     {
       "id": "configuration",
-      "label": "Конфигурация",
+      "label": "Configuration",
       "order": 2,
       "items": [
         {
@@ -53,18 +53,18 @@
     },
     {
       "id": "routing",
-      "label": "Маршрутизация",
+      "label": "Routing",
       "order": 3,
       "items": [
         {
           "slug": "header-routing",
-          "title": "Маршрутизация на основе заголовков",
+          "title": "Header-based routing",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "queryparameter-routing",
-          "title": "Маршрутизация по параметрам запроса",
+          "title": "Query parameter routing",
           "order": 2,
           "kind": "doc"
         }
@@ -72,24 +72,24 @@
     },
     {
       "id": "transforms",
-      "label": "Преобразования",
+      "label": "Transforms",
       "order": 4,
       "items": [
         {
           "slug": "transforms",
-          "title": "Обзор",
+          "title": "Overview",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "transforms-request",
-          "title": "Преобразования запросов",
+          "title": "Request transforms",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "transforms-response",
-          "title": "Преобразования ответов и трейлеров",
+          "title": "Response & trailer transforms",
           "order": 3,
           "kind": "doc"
         }
@@ -97,7 +97,7 @@
     },
     {
       "id": "traffic-reliability",
-      "label": "Трафик и отказоустойчивость",
+      "label": "Traffic & reliability",
       "order": 5,
       "items": [
         {
@@ -108,25 +108,25 @@
         },
         {
           "slug": "session-affinity",
-          "title": "Привязка сеансов",
+          "title": "Session affinity",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "dests-health-checks",
-          "title": "Проверки работоспособности узлов назначения",
+          "title": "Destination health checks",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "rate-limiting",
-          "title": "Ограничение скорости запросов",
+          "title": "Rate limiting",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "timeouts",
-          "title": "Тайм-ауты запросов",
+          "title": "Request timeouts",
           "order": 5,
           "kind": "doc"
         }
@@ -134,30 +134,30 @@
     },
     {
       "id": "security",
-      "label": "Безопасность",
+      "label": "Security",
       "order": 6,
       "items": [
         {
           "slug": "authn-authz",
-          "title": "Аутентификация и авторизация",
+          "title": "Authentication & authorization",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "cors",
-          "title": "Междоменные запросы (CORS)",
+          "title": "Cross-origin requests (CORS)",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "https-tls",
-          "title": "HTTPS и TLS",
+          "title": "HTTPS & TLS",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "header-guidelines",
-          "title": "Рекомендации по HTTP-заголовкам",
+          "title": "HTTP header guidelines",
           "order": 4,
           "kind": "doc"
         }
@@ -165,12 +165,12 @@
     },
     {
       "id": "performance",
-      "label": "Производительность",
+      "label": "Performance",
       "order": 7,
       "items": [
         {
           "slug": "output-caching",
-          "title": "Кэширование вывода",
+          "title": "Output caching",
           "order": 1,
           "kind": "doc"
         }
@@ -178,12 +178,12 @@
     },
     {
       "id": "protocols",
-      "label": "Протоколы",
+      "label": "Protocols",
       "order": 8,
       "items": [
         {
           "slug": "grpc",
-          "title": "Проксирование gRPC",
+          "title": "Proxying gRPC",
           "order": 1,
           "kind": "doc"
         },
@@ -195,7 +195,7 @@
         },
         {
           "slug": "websockets",
-          "title": "WebSockets и SPDY",
+          "title": "WebSockets & SPDY",
           "order": 3,
           "kind": "doc"
         }
@@ -203,36 +203,36 @@
     },
     {
       "id": "extensibility",
-      "label": "Расширяемость",
+      "label": "Extensibility",
       "order": 9,
       "items": [
         {
           "slug": "extensibility",
-          "title": "Обзор",
+          "title": "Overview",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "middleware",
-          "title": "Промежуточное ПО",
+          "title": "Middleware",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "direct-forwarding",
-          "title": "Прямая пересылка",
+          "title": "Direct forwarding",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "destination-resolvers",
-          "title": "Распознаватели узлов назначения",
+          "title": "Destination resolvers",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "extensibility-transforms",
-          "title": "Преобразования запросов и ответов",
+          "title": "Request & response transforms",
           "order": 5,
           "kind": "doc"
         }
@@ -240,24 +240,24 @@
     },
     {
       "id": "operations",
-      "label": "Эксплуатация",
+      "label": "Operations",
       "order": 10,
       "items": [
         {
           "slug": "diagnosing-yarp-issues",
-          "title": "Диагностика прокси на основе YARP",
+          "title": "Diagnosing YARP-based proxies",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "distributed-tracing",
-          "title": "Распределённая трассировка",
+          "title": "Distributed tracing",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "ab-testing",
-          "title": "A/B-тестирование и поэтапные обновления",
+          "title": "A/B testing & rolling upgrades",
           "order": 3,
           "kind": "doc"
         }
@@ -265,24 +265,24 @@
     },
     {
       "id": "deployment",
-      "label": "Развёртывание",
+      "label": "Deployment",
       "order": 11,
       "items": [
         {
           "slug": "kubernetes-ingress",
-          "title": "Контроллер Ingress для Kubernetes",
+          "title": "Kubernetes Ingress Controller",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "service-fabric-int",
-          "title": "Интеграция со Service Fabric",
+          "title": "Service Fabric integration",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "httpsys-delegation",
-          "title": "Делегирование HTTP.sys",
+          "title": "HTTP.sys delegation",
           "order": 3,
           "kind": "doc"
         }
@@ -292,7 +292,7 @@
   "appendix": [
     {
       "slug": "aspnetcore-getting-started",
-      "title": "Начало работы с ASP.NET Core",
+      "title": "Get started with ASP.NET Core",
       "order": 1,
       "kind": "appendix"
     }

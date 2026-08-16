@@ -4,251 +4,2948 @@
     "locale": "zh-Hans",
     "group": "getting-started",
     "title": "YARP 概述",
-    "excerpt": "YARP 概述"
+    "excerpt": "YARP(Yet Another Reverse Proxy)是一个专为 .NET 打造的高度可定制反向代理库——旨在实现稳健、灵活、 可扩展、安全,并且易于部署在你现有的服务前面。"
+  },
+  {
+    "slug": "yarp-overview",
+    "locale": "zh-Hans",
+    "group": "getting-started",
+    "title": "YARP 概述",
+    "headingPath": "YARP 概述 › 简介",
+    "anchor": "introduction",
+    "excerpt": "YARP 可以帮助开发者构建强大高效、且针对自身需求量身定制的反向代理解决方案。它位于客户端设备和后端服务器之间,将客户端请求转发到相应的目标并返回响应——这与 nginx 或 Envoy 所扮演的角色相同,只是 YARP 是一个托管在你自己的 ASP.NET Core 进程内的库。"
+  },
+  {
+    "slug": "yarp-overview",
+    "locale": "zh-Hans",
+    "group": "getting-started",
+    "title": "YARP 概述",
+    "headingPath": "YARP 概述 › 反向代理的作用",
+    "anchor": "what-it-does",
+    "excerpt": "反向代理在普通后端基础之上提供了多项优势: 路由 — 根据预定义的规则(例如 URL 模式或请求标头)将请求定向到不同的后端服务器。/images、/api 和 /db 可以分别路由到不同的服务器。 负载均衡 — 将传入流量分配到多个后端服务器,防止其中任何一个过载。 可扩展性 —…",
+    "keywords": [
+      "/images",
+      "/api",
+      "/db"
+    ]
+  },
+  {
+    "slug": "yarp-overview",
+    "locale": "zh-Hans",
+    "group": "getting-started",
+    "title": "YARP 概述",
+    "headingPath": "YARP 概述 › 反向代理如何处理 HTTP",
+    "anchor": "how-it-works",
+    "excerpt": "入站连接在代理处终止;出站请求会使用新建的、经过池化的连接发送到各个目标。YARP 会根据配置的路由规则确定应由哪个群集处理该请求,并在必要时转换路径和标头后转发该请求,再将后端的响应中继回客户端。 快速示例注册代理,并直接从配置中加载路由和群集。 C#using…"
+  },
+  {
+    "slug": "yarp-overview",
+    "locale": "zh-Hans",
+    "group": "getting-started",
+    "title": "YARP 概述",
+    "headingPath": "YARP 概述 › 为什么选择 YARP 而非其他代理",
+    "anchor": "why-yarp",
+    "excerpt": "YARP 构建于 ASP.NET Core 之上,因此可以直接与 .NET 生态系统集成,并为你提供丰富的可扩展点——路由、负载均衡和转换均可使用你熟悉的 C# 进行自定义,而不必依赖某种专用的代理配置语言。YARP 由 Microsoft 积极维护,并且 YARP 本身及其文档都是开源的。"
   },
   {
     "slug": "getting-started",
     "locale": "zh-Hans",
     "group": "getting-started",
-    "title": "快速入门",
-    "excerpt": "快速入门"
+    "title": "YARP 入门",
+    "excerpt": "只需几行代码,即可将 YARP 添加到新的 ASP.NET Core 项目中,并将所有请求转发到单个后端。"
+  },
+  {
+    "slug": "getting-started",
+    "locale": "zh-Hans",
+    "group": "getting-started",
+    "title": "YARP 入门",
+    "headingPath": "YARP 入门 › 先决条件",
+    "anchor": "prerequisites",
+    "excerpt": ".NET SDK,以及一个用于接收转发请求的后端服务器——用于测试时,任何 HTTP 服务器都可以,包括本地运行的另一个 ASP.NET Core 应用。"
+  },
+  {
+    "slug": "getting-started",
+    "locale": "zh-Hans",
+    "group": "getting-started",
+    "title": "YARP 入门",
+    "headingPath": "YARP 入门 › 创建项目",
+    "anchor": "create-the-project",
+    "excerpt": "创建一个空的 ASP.NET Core 项目,并添加 Yarp.ReverseProxy 包: 创建并添加包从一个空文件夹开始。 .NET CLIdotnet new web -o MyProxy cd MyProxy dotnet add package Yarp.ReverseProxy",
+    "keywords": [
+      "Yarp.ReverseProxy"
+    ]
+  },
+  {
+    "slug": "getting-started",
+    "locale": "zh-Hans",
+    "group": "getting-started",
+    "title": "YARP 入门",
+    "headingPath": "YARP 入门 › 配置代理",
+    "anchor": "configure-the-proxy",
+    "excerpt": "注册反向代理,并从 appsettings.json 加载其配置: Program.cs注册代理并映射其路由。 C#var builder = WebApplication.CreateBuilder(args); builder.Services.AddReverseProxy()…",
+    "keywords": [
+      "appsettings.json"
+    ]
+  },
+  {
+    "slug": "getting-started",
+    "locale": "zh-Hans",
+    "group": "getting-started",
+    "title": "YARP 入门",
+    "headingPath": "YARP 入门 › 运行",
+    "anchor": "run-it",
+    "excerpt": "使用 dotnet run 启动应用,然后向代理的 URL 发送请求——它会将请求转发到你配置的目标,并原样将响应中继回来。",
+    "keywords": [
+      "dotnet run"
+    ]
   },
   {
     "slug": "config-files",
     "locale": "zh-Hans",
     "group": "configuration",
     "title": "配置文件",
-    "excerpt": "配置文件"
+    "excerpt": "从 appsettings.json 或任何其他 IConfiguration 源加载路由和群集,并让代理在无需重启的情况下自动应用 这些变更。"
+  },
+  {
+    "slug": "config-files",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置文件",
+    "headingPath": "配置文件 › 加载配置",
+    "anchor": "loading-configuration",
+    "excerpt": "YARP 可以从任何 IConfiguration 源加载其路由和群集——下面的示例中使用的是 appsettings.json,但任何提供程序的工作方式都相同。每当配置源发生变化时,代理都会重新读取配置并自动应用变更,无需重启。 Program.cs从配置的 &quot;ReverseProxy&quot;…",
+    "keywords": [
+      "IConfiguration",
+      "appsettings.json"
+    ]
+  },
+  {
+    "slug": "config-files",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置文件",
+    "headingPath": "配置文件 › 配置结构",
+    "anchor": "configuration-structure",
+    "excerpt": "传递给 LoadFromConfig 的命名节——即上文中的 &quot;ReverseProxy&quot;——包含两个子节:Routes 和 Clusters。 JSON{ \"ReverseProxy\": { \"Routes\": { \"route1\": { \"ClusterId\": \"cluster1\",…",
+    "keywords": [
+      "LoadFromConfig",
+      "&quot;ReverseProxy&quot;",
+      "Routes",
+      "Clusters"
+    ]
+  },
+  {
+    "slug": "config-files",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置文件",
+    "headingPath": "配置文件 › 路由",
+    "anchor": "routes",
+    "excerpt": "Routes 是一个无序的路由条目集合,每个条目至少需要包含: RouteId — 该路由的唯一名称。 ClusterId — Clusters 中某个条目的名称,匹配该路由的请求会被发送到该条目。 Match — 一个 Hosts 数组、一个 Path 模式(一个 ASP.NET Core 路由模板),或两者兼有。…",
+    "keywords": [
+      "Routes",
+      "RouteId",
+      "ClusterId",
+      "Clusters",
+      "Match",
+      "Hosts",
+      "Path",
+      "Order"
+    ]
+  },
+  {
+    "slug": "config-files",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置文件",
+    "headingPath": "配置文件 › 群集",
+    "anchor": "clusters",
+    "excerpt": "Clusters 是一个由具名群集组成的无序集合。每个群集包含一组具名的 Destinations——被认为能够处理指向该群集的任何路由请求的后端地址。一旦路由匹配成功,该群集的负载均衡策略就会选择实际处理该请求的目标——请参阅负载均衡。",
+    "keywords": [
+      "Clusters",
+      "Destinations"
+    ]
+  },
+  {
+    "slug": "config-files",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置文件",
+    "headingPath": "配置文件 › 多个配置源",
+    "anchor": "multiple-configuration-sources",
+    "excerpt": "LoadFromConfig 可以被多次调用,分别指向不同的节,甚至不同的提供程序——可以将其与自定义配置提供程序结合使用,从完全不同的位置加载配置: C#services.AddReverseProxy()…",
+    "keywords": [
+      "LoadFromConfig"
+    ]
+  },
+  {
+    "slug": "config-files",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置文件",
+    "headingPath": "配置文件 › 所有配置属性",
+    "anchor": "all-properties",
+    "excerpt": "以下示例展示了一个路由和一个完整指定的群集,并列出了所有顶级属性: 完整参考结构大多数字段都是可选的;路由上只有 RouteId/ClusterId/Match、群集上只有 Destinations 是必需的。HealthCheck、SessionAffinity 以及 HttpClient/HttpRequest…",
+    "keywords": [
+      "RouteId",
+      "ClusterId",
+      "Match",
+      "Destinations",
+      "HealthCheck",
+      "SessionAffinity",
+      "HttpClient",
+      "HttpRequest"
+    ]
   },
   {
     "slug": "config-filters",
     "locale": "zh-Hans",
     "group": "configuration",
     "title": "配置筛选器",
-    "excerpt": "配置筛选器"
+    "excerpt": "在路由和群集加载完成之后、验证之前对其进行修改——从环境中填充值、应用默认值,或在所有条目中强制执行策略。"
+  },
+  {
+    "slug": "config-filters",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置筛选器",
+    "headingPath": "配置筛选器 › 筛选器的用途",
+    "anchor": "what-filters-are-for",
+    "excerpt": "从文件或自定义提供程序加载的配置属于原始输入——筛选器可以在其被验证和应用之前对其进行修改。典型用途包括: 从部署环境中填充字段(例如仅在运行时才能确定的目标地址)。 应用组织范围内的默认值,或在所有路由或群集中强制执行策略。 替换占位符值。 在细微的配置错误演变成严重故障之前,对其进行规范化或修正。"
+  },
+  {
+    "slug": "config-filters",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置筛选器",
+    "headingPath": "配置筛选器 › 注册筛选器",
+    "anchor": "registering-a-filter",
+    "excerpt": "筛选器通过 AddConfigFilter 注册到依赖注入中。可以添加任意数量的筛选器;它们会按照注册的顺序依次运行。 C#services.AddReverseProxy() .LoadFromConfig(_configuration.GetSection(\"ReverseProxy\"))…",
+    "keywords": [
+      "AddConfigFilter"
+    ]
+  },
+  {
+    "slug": "config-filters",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置筛选器",
+    "headingPath": "配置筛选器 › 编写筛选器",
+    "anchor": "writing-a-filter",
+    "excerpt": "筛选器实现 IProxyConfigFilter 接口,每种配置类型对应一个方法——ConfigureRouteAsync 和 ConfigureClusterAsync。由于筛选器是从 DI…",
+    "keywords": [
+      "IProxyConfigFilter",
+      "ConfigureRouteAsync",
+      "ConfigureClusterAsync",
+      "with",
+      "{{key}}",
+      "key",
+      "Order",
+      "1",
+      "0"
+    ]
   },
   {
     "slug": "config-providers",
     "locale": "zh-Hans",
     "group": "configuration",
     "title": "配置提供程序",
-    "excerpt": "配置提供程序"
+    "excerpt": "通过自行实现 IProxyConfigProvider,以编程方式加载路由和群集,而不是从文件中加载——适用于数据库、 远程 API 或任何其他来源。"
+  },
+  {
+    "slug": "config-providers",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置提供程序",
+    "headingPath": "配置提供程序 › 提供程序接口",
+    "anchor": "the-provider-interface",
+    "excerpt": "配置文件涵盖了从 IConfiguration 加载配置这一常见场景。要从其他任何位置加载配置,需要自行实现 IProxyConfigProvider 和 IProxyConfig。 IProxyConfigProvider 只有一个方法 GetConfig(),返回一个…",
+    "keywords": [
+      "IConfiguration",
+      "IProxyConfigProvider",
+      "IProxyConfig",
+      "GetConfig()",
+      "IChangeToken"
+    ]
+  },
+  {
+    "slug": "config-providers",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置提供程序",
+    "headingPath": "配置提供程序 › 直接加载路由和群集",
+    "anchor": "in-memory",
+    "excerpt": "对于最简单的情形——路由和群集完全在代码中已知——InMemoryConfigProvider 是一个现成的 IProxyConfigProvider: C#services.AddReverseProxy().LoadFromMemory(routes,…",
+    "keywords": [
+      "InMemoryConfigProvider",
+      "IProxyConfigProvider",
+      "Update"
+    ]
+  },
+  {
+    "slug": "config-providers",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置提供程序",
+    "headingPath": "配置提供程序 › 提供程序生命周期",
+    "anchor": "lifecycle",
+    "excerpt": "通过自行实现 IProxyConfigProvider,以编程方式加载路由和群集,而不是从文件中加载——适用于数据库、 远程 API 或任何其他来源。"
+  },
+  {
+    "slug": "config-providers",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置提供程序",
+    "headingPath": "配置提供程序 › 提供程序生命周期 › 启动",
+    "anchor": "startup",
+    "excerpt": "IProxyConfigProvider 以单例形式注册。启动时,代理会解析该提供程序并调用一次 GetConfig();此时提供程序可以: 如果无法生成有效配置,则抛出异常——这会阻止应用程序启动; 同步阻塞,直到配置加载完成,从而将启动过程延迟到有效的路由数据可用为止;或者 立即返回一个空的…",
+    "keywords": [
+      "IProxyConfigProvider",
+      "GetConfig()",
+      "IProxyConfig",
+      "IChangeToken",
+      "IConfigValidator"
+    ]
+  },
+  {
+    "slug": "config-providers",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置提供程序",
+    "headingPath": "配置提供程序 › 提供程序生命周期 › 重新加载",
+    "anchor": "reloading",
+    "excerpt": "如果 IChangeToken 支持主动更改回调,代理会在首次加载后注册一个回调;否则会每 5 分钟轮询一次 HasChanged。要发布新配置,提供程序应在后台加载它——由于路由/群集对象是不可变的,需要构建新的实例,但未发生变化的实例可以复用——可选地对其进行验证,然后才对先前的 IChangeToken…",
+    "keywords": [
+      "IChangeToken",
+      "HasChanged",
+      "GetConfig()",
+      "IProxyConfig"
+    ]
+  },
+  {
+    "slug": "config-providers",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "配置提供程序",
+    "headingPath": "配置提供程序 › 多个提供程序",
+    "anchor": "multiple-providers",
+    "excerpt": "可以将多个 IProxyConfigProvider 注册为单例;它们都会被解析,并将各自的配置合并在一起,这与多个配置文件节的合并方式相同。来自一个提供程序的路由可以引用来自另一个提供程序的群集,但单个路由或群集不能由分散在两个提供程序中的部分数据组装而成。",
+    "keywords": [
+      "IProxyConfigProvider"
+    ]
   },
   {
     "slug": "http-client-config",
     "locale": "zh-Hans",
     "group": "configuration",
     "title": "HTTP 客户端配置",
-    "excerpt": "HTTP 客户端配置"
+    "excerpt": "每个群集都拥有自己专属的 HTTP 客户端,用于与其目标通信——可以独立于任何其他群集,分别配置其连接、 TLS 和按请求行为。"
+  },
+  {
+    "slug": "http-client-config",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "HTTP 客户端配置",
+    "headingPath": "HTTP 客户端配置 › 每个群集一个客户端",
+    "anchor": "one-client-per-cluster",
+    "excerpt": "每个群集都有自己的 HttpMessageInvoker,用于转发到其目标的每一个请求。启动时,每个群集都会获得一个新的实例;如果某个群集的配置之后发生变化,IForwarderHttpClientFactory 会决定是继续使用现有的客户端,还是需要创建一个新的——默认实现会在 HttpClientConfig…",
+    "keywords": [
+      "HttpMessageInvoker",
+      "IForwarderHttpClientFactory",
+      "HttpClientConfig"
+    ]
+  },
+  {
+    "slug": "http-client-config",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "HTTP 客户端配置",
+    "headingPath": "HTTP 客户端配置 › HttpClient 设置",
+    "anchor": "httpclient-settings",
+    "excerpt": "在群集的 HttpClient 下使用 HttpClientConfig 进行配置: JSON\"HttpClient\": { \"SslProtocols\": [\"Tls12\", \"Tls13\"], \"MaxConnectionsPerServer\": \"10\",…",
+    "keywords": [
+      "HttpClient",
+      "HttpClientConfig",
+      "SslProtocols",
+      "MaxConnectionsPerServer",
+      "int32.MaxValue",
+      "DangerousAcceptAnyServerCertificate",
+      "true",
+      "false",
+      "RequestHeaderEncoding",
+      "ResponseHeaderEncoding",
+      "SocketsHttpHandler",
+      "&quot;utf-8&quot;"
+    ]
+  },
+  {
+    "slug": "http-client-config",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "HTTP 客户端配置",
+    "headingPath": "HTTP 客户端配置 › HttpRequest 设置",
+    "anchor": "httprequest-settings",
+    "excerpt": "在群集的 HttpRequest 下使用 ForwarderRequestConfig 进行配置——这些设置控制的是出站请求本身,而不是底层连接: JSON\"HttpRequest\": { \"ActivityTimeout\": \"00:01:40\", \"Version\": \"2\", \"VersionPolicy\":…",
+    "keywords": [
+      "HttpRequest",
+      "ForwarderRequestConfig",
+      "ActivityTimeout",
+      "Version",
+      "1.0",
+      "1.1",
+      "2",
+      "3",
+      "VersionPolicy",
+      "RequestVersionOrLower",
+      "RequestVersionOrHigher",
+      "RequestVersionExact"
+    ]
+  },
+  {
+    "slug": "http-client-config",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "HTTP 客户端配置",
+    "headingPath": "HTTP 客户端配置 › 在代码中配置",
+    "anchor": "code-configuration",
+    "excerpt": "当直接在代码中构建群集,而不是从 IConfiguration 构建时,同样的设置也适用——在将群集传递给 LoadFromMemory 之前,将一个 HttpClientConfig 赋值给 ClusterConfig.HttpClient: C#var clusters = new[] { new…",
+    "keywords": [
+      "IConfiguration",
+      "LoadFromMemory",
+      "HttpClientConfig",
+      "ClusterConfig.HttpClient",
+      "ConfigureHttpClient",
+      "SocketsHttpHandler"
+    ]
+  },
+  {
+    "slug": "http-client-config",
+    "locale": "zh-Hans",
+    "group": "configuration",
+    "title": "HTTP 客户端配置",
+    "headingPath": "HTTP 客户端配置 › 完全替换客户端工厂",
+    "anchor": "custom-factory",
+    "excerpt": "如需完全掌控,可以用自定义实现替换 IForwarderHttpClientFactory——从默认的 ForwarderHttpClientFactory 派生即可覆盖大多数场景。为避免破坏代理行为或增加不必要的开销,自定义工厂仍应设置与默认实现相同的 SocketsHttpHandler 属性:UseProxy…",
+    "keywords": [
+      "IForwarderHttpClientFactory",
+      "ForwarderHttpClientFactory",
+      "SocketsHttpHandler",
+      "UseProxy = false",
+      "AllowAutoRedirect = false",
+      "UseCookies = false",
+      "HttpMessageInvoker",
+      "HttpClient"
+    ]
   },
   {
     "slug": "header-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "基于标头的路由",
-    "excerpt": "基于标头的路由"
+    "title": "Header-based routing",
+    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › YARP Header Based Routing",
+    "anchor": "yarp-header-based-routing",
+    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Precedence",
+    "anchor": "precedence",
+    "excerpt": "The default route match precedence order is path method host headers query parameters That means a route which specifies methods and no headers will match…"
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Configuration",
+    "anchor": "configuration",
+    "excerpt": "Headers are specified in the Match section of a proxy route. If multiple headers rules are specified on a route then all must match for a route to be taken. OR…"
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Contract",
+    "anchor": "contract",
+    "excerpt": "RouteHeader defines the code contract and is mapped from config."
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Name",
+    "anchor": "name",
+    "excerpt": "The header name to check for on the request. A non-empty value is required. This field is case- insensitive per the HTTP RFCs."
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Values",
+    "anchor": "values",
+    "excerpt": "A list of possible values to search for. The header must match at least one of these values according to the specified Mode except for the…"
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Mode",
+    "anchor": "mode",
+    "excerpt": "HeaderMatchMode specifies how to match the value(s) against the request header. The default is ExactHeader . ExactHeader - Any of the headers with the given…"
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › IsCaseSensitive",
+    "anchor": "iscasesensitive",
+    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Examples",
+    "anchor": "examples",
+    "excerpt": "These examples use the configuration specified above."
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Scenario 1 - Exact Header Match",
+    "anchor": "scenario-1-exact-header-match",
+    "excerpt": "A request with the following header will match against route1. Header1: Value1 If a header contains multiple values, each one will be matched separately. The…"
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Scenario 2 - Multiple Values",
+    "anchor": "scenario-2-multiple-values",
+    "excerpt": "Route2 defined multiple values to search for in a header (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also specified the…"
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Scenario 3 - Exists",
+    "anchor": "scenario-3-exists",
+    "excerpt": "Route3 only requires that the header &quot;Header3&quot; exists with any non-empty value The following is an example that will match route3. Header3: value An…"
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Scenario 4 - Multiple Headers",
+    "anchor": "scenario-4-multiple-headers",
+    "excerpt": "Route4 requires both header4 and header5 , each matching according to their specified Mode . The following headers will match route4: Header4: value1 Header5:…"
+  },
+  {
+    "slug": "header-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Header-based routing",
+    "headingPath": "Header-based routing › Scenario 5 - NotExists",
+    "anchor": "scenario-5-notexists",
+    "excerpt": "Route7 requires that the header &quot;Header7&quot; must not exists The following headers will match route7: NotHeader7: AnyValue The following headers will…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "zh-Hans",
     "group": "routing",
-    "title": "查询参数路由",
-    "excerpt": "查询参数路由"
+    "title": "Query parameter routing",
+    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › YARP Query Parameter Based Routing",
+    "anchor": "yarp-query-parameter-based-routing",
+    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Precedence",
+    "anchor": "precedence",
+    "excerpt": "The default route match precedence order is 1) path, 2) method, 3) host, 4) headers 5) query parameters. That means a route which specifies methods and no…"
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Configuration",
+    "anchor": "configuration",
+    "excerpt": "Query Parameters are specified in the Match section of a proxy route. If multiple query parameter rules are specified on a route then all must match for a…"
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Contract",
+    "anchor": "contract",
+    "excerpt": "RouteQueryParameter defines the code contract and is mapped from config."
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Name",
+    "anchor": "name",
+    "excerpt": "The query parameter name to check for on the request. A non-empty value is required. This field is case-insensitive."
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Values",
+    "anchor": "values",
+    "excerpt": "A list of possible values to search for. The query parameter must match at least one of these values according to the specified Mode except for the…"
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Mode",
+    "anchor": "mode",
+    "excerpt": "QueryParameterMatchMode specifies how to match the value(s) against the request query parameter. The default is Exact . Exact - The query parameter must match…"
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › IsCaseSensitive",
+    "anchor": "iscasesensitive",
+    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Encoding",
+    "anchor": "encoding",
+    "excerpt": "The request query string will be parsed and decoded before matching against the route rules. &quot;route8&quot; : { &quot;ClusterId&quot;:…"
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Examples",
+    "anchor": "examples",
+    "excerpt": "These examples use the configuration specified above."
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Scenario 1 - Exact Query Parameter Match",
+    "anchor": "scenario-1-exact-query-parameter-match",
+    "excerpt": "A request with the following query parameter will match against route1. ?QueryParam1=Value1 Multiple query parameters with the same name are not currently…"
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Scenario 2 - Multiple Values",
+    "anchor": "scenario-2-multiple-values",
+    "excerpt": "Route2 defined multiple values to search for in a query parameter (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also…"
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Scenario 3 - Exists",
+    "anchor": "scenario-3-exists",
+    "excerpt": "Route3 only requires that the query parameter &quot;QueryParam3&quot; exists with any non-empty value The following is an example that will match route3.…"
+  },
+  {
+    "slug": "queryparameter-routing",
+    "locale": "zh-Hans",
+    "group": "routing",
+    "title": "Query parameter routing",
+    "headingPath": "Query parameter routing › Scenario 4 - Multiple QueryParameters",
+    "anchor": "scenario-4-multiple-queryparameters",
+    "excerpt": "Route4 requires both QueryParam4 and QueryParam5 , each matching according to their specified Mode . The following query parameters will match route4:…"
   },
   {
     "slug": "transforms",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "概述",
-    "excerpt": "概述"
+    "title": "Overview",
+    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+  },
+  {
+    "slug": "transforms",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Overview",
+    "headingPath": "Overview › YARP Request and Response Transforms",
+    "anchor": "yarp-request-and-response-transforms",
+    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+  },
+  {
+    "slug": "transforms",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Overview",
+    "headingPath": "Overview › Introduction",
+    "anchor": "introduction",
+    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+  },
+  {
+    "slug": "transforms",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Overview",
+    "headingPath": "Overview › Defaults",
+    "anchor": "defaults",
+    "excerpt": "The following transforms are enabled by default for all routes. They can be configured or disabled as shown later in this document. Host - Suppress the…"
+  },
+  {
+    "slug": "transforms",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Overview",
+    "headingPath": "Overview › Transform Categories",
+    "anchor": "transform-categories",
+    "excerpt": "Transforms fall into a few categories: Request, Response, and Response Trailers. Request trailers are not supported because they are not supported by the…"
+  },
+  {
+    "slug": "transforms",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Overview",
+    "headingPath": "Overview › Adding transforms",
+    "anchor": "adding-transforms",
+    "excerpt": "Transforms can be added to routes either through configuration or programmatically."
+  },
+  {
+    "slug": "transforms",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Overview",
+    "headingPath": "Overview › From Configuration",
+    "anchor": "from-configuration",
+    "excerpt": "Transforms can be configured on RouteConfig.Transforms and can be bound from the Routes sections of the config file. These can be modified and reloaded without…"
+  },
+  {
+    "slug": "transforms",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Overview",
+    "headingPath": "Overview › From Code",
+    "anchor": "from-code",
+    "excerpt": "Transforms can be added to routes programmatically by calling the AddTransforms method. AddTransforms can be called after AddReverseProxy to provide a callback…"
   },
   {
     "slug": "transforms-request",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "请求转换",
-    "excerpt": "请求转换"
+    "title": "Request transforms",
+    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › PathPrefix",
+    "anchor": "pathprefix",
+    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › Modifies the request path adding a prefix value",
+    "anchor": "modifies-the-request-path-adding-a-prefix-value",
+    "excerpt": "Key Value Required PathPrefix A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } Code: C# routeConfig =…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › PathRemovePrefix",
+    "anchor": "pathremoveprefix",
+    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › Modifies the request path removing a prefix value",
+    "anchor": "modifies-the-request-path-removing-a-prefix-value",
+    "excerpt": "Key Value Expand table PathRemovePrefix A path starting with a &#39;/&#39; Required yes Config: 1/13 JSON…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › PathSet",
+    "anchor": "pathset",
+    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › Replaces the request path with the specified value",
+    "anchor": "replaces-the-request-path-with-the-specified-value",
+    "excerpt": "Key Value Required PathSet A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } Code: C# routeConfig =…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › PathPattern",
+    "anchor": "pathpattern",
+    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › Replaces the request path using a pattern template",
+    "anchor": "replaces-the-request-path-using-a-pattern-template",
+    "excerpt": "Key Value Expand table PathPattern A path template starting with a &#39;/&#39; Required yes Config: 2/13 JSON…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › QueryValueParameter",
+    "anchor": "queryvalueparameter",
+    "excerpt": "Adds or replaces parameters in the request query string Key Value Expand table QueryValueParameter Name of a query string parameter Required Set/Append Static…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › QueryRouteParameter",
+    "anchor": "queryrouteparameter",
+    "excerpt": "Adds or replaces a query string parameter with a value from the route configuration Key Value Expand table QueryRouteParameter Name of a query string parameter…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › QueryRemoveParameter",
+    "anchor": "queryremoveparameter",
+    "excerpt": "Removes the specified parameter from the request query string Key Value Expand table QueryRemoveParameter Name of a query string parameter Required yes Config:…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › HttpMethodChange",
+    "anchor": "httpmethodchange",
+    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › Changes the http method used in the request",
+    "anchor": "changes-the-http-method-used-in-the-request",
+    "excerpt": "Key Value Expand table HttpMethodChange The http method to replace Required Set The new http method yes yes Config: JSON { \"HttpMethodChange\": \"PUT\", \"Set\":…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › RequestHeadersCopy",
+    "anchor": "requestheaderscopy",
+    "excerpt": "Sets whether incoming request headers are copied to the outbound request Key Value Default Expand table RequestHeadersCopy true/false true Required yes Config:…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › RequestHeaderOriginalHost",
+    "anchor": "requestheaderoriginalhost",
+    "excerpt": "Specifies if the incoming request Host header should be copied to the proxy request Key Value Default Expand table RequestHeaderOriginalHost true/false false…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › RequestHeader",
+    "anchor": "requestheader",
+    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › Adds or replaces request headers",
+    "anchor": "adds-or-replaces-request-headers",
+    "excerpt": "Key Expand table RequestHeader Set/Append Value Required The header name yes Config: The header value yes JSON { &quot;RequestHeader&quot;:…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › RequestHeaderRouteValue",
+    "anchor": "requestheaderroutevalue",
+    "excerpt": "Adds or replaces a header with a value from the route configuration Key Value Expand table RequestHeader Name of a query string parameter Required Set/Append…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › RequestHeaderRemove",
+    "anchor": "requestheaderremove",
+    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › Removes request headers",
+    "anchor": "removes-request-headers",
+    "excerpt": "Key Value Expand table RequestHeaderRemove The header name Required yes Config: JSON { \"RequestHeaderRemove\": \"MyHeader\" } Code: C# routeConfig =…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › RequestHeadersAllowed",
+    "anchor": "requestheadersallowed",
+    "excerpt": "Key Value Expand table RequestHeadersAllowed A semicolon separated list of allowed header names. Required yes…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › X-Forwarded",
+    "anchor": "x-forwarded",
+    "excerpt": "Adds headers with information about the original client request Key Value Default Required X-Forwarded Default action (Set, Append, Remove, Off) to apply to…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › Forwarded",
+    "anchor": "forwarded",
+    "excerpt": "Adds a header with information about the original client request Key Value Default Re Forwarded A comma separated list containing any of these values:…"
+  },
+  {
+    "slug": "transforms-request",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Request transforms",
+    "headingPath": "Request transforms › ClientCert",
+    "anchor": "clientcert",
+    "excerpt": "Forwards the client cert used on the inbound connection as a header to destination Key Value Required ClientCert The header name yes Config: JSON {…"
   },
   {
     "slug": "transforms-response",
     "locale": "zh-Hans",
     "group": "transforms",
-    "title": "响应与尾部转换",
-    "excerpt": "响应与尾部转换"
+    "title": "Response & trailer transforms",
+    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › Response and Response Trailers",
+    "anchor": "response-and-response-trailers",
+    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client response by default. Response and response trailer transforms may…"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › ResponseHeadersCopy",
+    "anchor": "responseheaderscopy",
+    "excerpt": "Sets whether destination response headers are copied to the client Key Value Default Expand table ResponseHeadersCopy true/false true Required yes Config: JSON…"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › ResponseHeader",
+    "anchor": "responseheader",
+    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › Adds or replaces response headers",
+    "anchor": "adds-or-replaces-response-headers",
+    "excerpt": "Key Value Default Expand table ResponseHeader The header name (none) Required Set/Append The header value (none) yes When Success/Always/Failure Success yes no…"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › ResponseHeaderRemove",
+    "anchor": "responseheaderremove",
+    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › Removes response headers",
+    "anchor": "removes-response-headers",
+    "excerpt": "Key Value Default Required ResponseHeaderRemove The header name (none) yes When Success/Always/Failure Success no Config: JSON{ \"ResponseHeaderRemove\":…"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › ResponseHeadersAllowed",
+    "anchor": "responseheadersallowed",
+    "excerpt": "Key Value Required ResponseHeadersAllowed A semicolon separated list of allowed header names. yes Config: JSON { \"ResponseHeadersAllowed\": \"Header1;header2\" }…"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › ResponseTrailersCopy",
+    "anchor": "responsetrailerscopy",
+    "excerpt": "Sets whether destination trailing response headers are copied to the client Key Value Default Expand table ResponseTrailersCopy true/false true Required yes…"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › ResponseTrailer",
+    "anchor": "responsetrailer",
+    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › Adds or replaces trailing response headers",
+    "anchor": "adds-or-replaces-trailing-response-headers",
+    "excerpt": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/transforms-response?view=aspnetcore-9.0 Expand table 5/8 Key Value Default Required…"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › ResponseTrailerRemove",
+    "anchor": "responsetrailerremove",
+    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › Removes trailing response headers",
+    "anchor": "removes-trailing-response-headers",
+    "excerpt": "Key Expand table ResponseTrailerRemove When Value Default Required The header name (none) yes Success/Always/Failure Success no Config: JSON {…"
+  },
+  {
+    "slug": "transforms-response",
+    "locale": "zh-Hans",
+    "group": "transforms",
+    "title": "Response & trailer transforms",
+    "headingPath": "Response & trailer transforms › ResponseTrailersAllowed",
+    "anchor": "responsetrailersallowed",
+    "excerpt": "yes Key Value ResponseTrailersAllowed A semicolon separated list of allowed header names. Config: JSON{ \"ResponseTrailersAllowed\": \"Header1;header2\" } Code:C#…"
   },
   {
     "slug": "load-balancing",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
     "title": "负载均衡",
-    "excerpt": "负载均衡"
+    "excerpt": "当一个群集拥有多个运行状况良好的目标时,YARP 会使用可配置的负载均衡策略,选择由哪一个目标处理 每个请求。"
+  },
+  {
+    "slug": "load-balancing",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "负载均衡",
+    "headingPath": "负载均衡 › 策略",
+    "anchor": "policies",
+    "excerpt": "YARP 内置了多种负载均衡策略: 轮询(Round robin) — 按顺序依次遍历目标列表,使每个目标获得均等的流量份额。 最少请求数(Least requests) — 将每个请求发送到当前正在处理的请求数最少的目标。 随机(Random) — 随机选择一个目标。 二选一(Power of two…",
+    "keywords": [
+      "LoadBalancingPolicy"
+    ]
+  },
+  {
+    "slug": "load-balancing",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "负载均衡",
+    "headingPath": "负载均衡 › 配置",
+    "anchor": "configuration",
+    "excerpt": "如果未指定策略,则默认使用**二选一(Power of two choices)**策略。系统只会考虑已知运行状况良好的目标——有关如何将某个目标标记为运行状况不良并将其从轮换中排除,请参阅目标运行状况检查。…"
+  },
+  {
+    "slug": "load-balancing",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "负载均衡",
+    "headingPath": "负载均衡 › 自定义策略",
+    "anchor": "custom-policies",
+    "excerpt": "实现 ILoadBalancingPolicy 并将其注册到 DI 中,即可接入自定义的选择逻辑——这正是 YARP 自身内置策略所依赖的同一个扩展点。",
+    "keywords": [
+      "ILoadBalancingPolicy"
+    ]
   },
   {
     "slug": "session-affinity",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "会话亲和性",
-    "excerpt": "会话亲和性"
+    "title": "Session affinity",
+    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+  },
+  {
+    "slug": "session-affinity",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Session affinity",
+    "headingPath": "Session affinity › Concept",
+    "anchor": "concept",
+    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the destination that handled the first request when the load is…"
+  },
+  {
+    "slug": "session-affinity",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Session affinity",
+    "headingPath": "Session affinity › Configuration",
+    "anchor": "configuration",
+    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+  },
+  {
+    "slug": "session-affinity",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Session affinity",
+    "headingPath": "Session affinity › Services and middleware registration",
+    "anchor": "services-and-middleware-registration",
+    "excerpt": "Session affinity services are registered in the DI container automatically by AddReverseProxy() . The middleware UseSessionAffinity() is included by default in…"
+  },
+  {
+    "slug": "session-affinity",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Session affinity",
+    "headingPath": "Session affinity › Cluster configuration",
+    "anchor": "cluster-configuration",
+    "excerpt": "Session affinity is configured per cluster according to the following configuration scheme. JSON\"ReverseProxy\": { \"Clusters\": { \"&lt;cluster-name&gt;\": {…"
+  },
+  {
+    "slug": "session-affinity",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Session affinity",
+    "headingPath": "Session affinity › Cookie configuration",
+    "anchor": "cookie-configuration",
+    "excerpt": "Attributes for configuring the cookie used with the HashCookie, ArrCookie and Cookie policies can be configured using SessionAffinityCookieConfig . The…"
+  },
+  {
+    "slug": "session-affinity",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Session affinity",
+    "headingPath": "Session affinity › Affinity Key",
+    "anchor": "affinity-key",
+    "excerpt": "Request to destination affinity is established via the affinity key identifying the target destination. That key can be stored on different request parts…"
+  },
+  {
+    "slug": "session-affinity",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Session affinity",
+    "headingPath": "Session affinity › Key Protection",
+    "anchor": "key-protection",
+    "excerpt": "The HashCookie policy uses the XxHash64 hash to produce a fast, compact, obscured output format for the cookie value. The ArrCookie policy uses the SHA-256…"
+  },
+  {
+    "slug": "session-affinity",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Session affinity",
+    "headingPath": "Session affinity › Affinity failure policy",
+    "anchor": "affinity-failure-policy",
+    "excerpt": "If the affinity key cannot be decoded or no healthy destination found it&#39;s considered as a failure and an affinity failure policy is called to handle it.…"
+  },
+  {
+    "slug": "session-affinity",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Session affinity",
+    "headingPath": "Session affinity › Request pipeline",
+    "anchor": "request-pipeline",
+    "excerpt": "The session affinity mechanisms are implemented by the services (mentioned above) and the two following middleware: SessionAffinityMiddleware - coordinates the…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "目标运行状况检查",
-    "excerpt": "目标运行状况检查"
+    "title": "Destination health checks",
+    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Active health checks",
+    "anchor": "active-health-checks",
+    "excerpt": "YARP can proactively monitor destination health by sending periodic probing requests to designated health endpoints and analyzing responses. That analysis is…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › File example",
+    "anchor": "file-example",
+    "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Active\": { \"Enabled\": \"true\", \"Interval\": \"00:00:10\", \"Timeout\": \"00:00:10\", \"Policy\": \"ConsecutiveFailures\",…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Code example",
+    "anchor": "code-example",
+    "excerpt": "C# var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Active = new ActiveHealthCheckConfig { Enabled =…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Configuration",
+    "anchor": "configuration",
+    "excerpt": "All but one of active health check settings are specified on the cluster level in Cluster/HealthCheck/Active section. The only exception is an optional…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Built-in policies",
+    "anchor": "built-in-policies",
+    "excerpt": "There is currently one built-in active health check policy - ConsecutiveFailuresHealthPolicy . It counts consecutive health probe failures and marks a…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Design",
+    "anchor": "design",
+    "excerpt": "The main service in this process is IActiveHealthCheckMonitor that periodically creates probing requests via IProbingRequestFactory, sends them to all…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Extensibility",
+    "anchor": "extensibility",
+    "excerpt": "There are 2 main extensibility points in the active health check subsystem."
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › IActiveHealthCheckPolicy",
+    "anchor": "iactivehealthcheckpolicy",
+    "excerpt": "IActiveHealthCheckPolicy analyzes how destinations respond to active health probes sent by IActiveHealthCheckMonitor , evaluates new active health states for…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › IProbingRequestFactory",
+    "anchor": "iprobingrequestfactory",
+    "excerpt": "IProbingRequestFactory creates active health probing requests to be sent to destination health endpoints. It can take into account…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Passive health checks",
+    "anchor": "passive-health-checks",
+    "excerpt": "YARP can passively watch for successes and failures in client request proxying to reactively evaluate destination health states. Responses to the proxied…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › File example",
+    "anchor": "file-example-2",
+    "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Passive\": { \"Enabled\": \"true\", \"Policy\": \"TransportFailureRate\", \"ReactivationPeriod\": \"00:02:00\" } },…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Code example",
+    "anchor": "code-example-2",
+    "excerpt": "C#var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Passive = new PassiveHealthCheckConfig { Enabled =…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Configuration",
+    "anchor": "configuration-2",
+    "excerpt": "Passive health check settings are specified on the cluster level in Cluster/HealthCheck/Passive section. Alternatively, they can be defined in code via the…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Built-in policies",
+    "anchor": "built-in-policies-2",
+    "excerpt": "There is currently one built-in passive health check policy - TransportFailureRateHealthPolicy. It calculates the proxied requests failure rate for each…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Design",
+    "anchor": "design-2",
+    "excerpt": "The main component is PassiveHealthCheckMiddleware sitting in the request pipeline and analyzing responses returned by destinations. For each response from a…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Extensibility",
+    "anchor": "extensibility-2",
+    "excerpt": "There is one main extensibility point in the passive health check subsystem, the IPassiveHealthCheckPolicy ."
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › IPassiveHealthCheckPolicy",
+    "anchor": "ipassivehealthcheckpolicy",
+    "excerpt": "IPassiveHealthCheckPolicy analyzes how a destination responded to a proxied client request, evaluates its new passive health state and finally calls…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Available destination collection",
+    "anchor": "available-destination-collection",
+    "excerpt": "Destinations health state is used to determine which of them are eligible for receiving proxied requests. Each cluster maintains its own list of available…"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › Configuration",
+    "anchor": "configuration-3",
+    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+  },
+  {
+    "slug": "dests-health-checks",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Destination health checks",
+    "headingPath": "Destination health checks › File example",
+    "anchor": "file-example-3",
+    "excerpt": "JSON \"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"AvailableDestinationsPolicy\": \"HealthyOrPanic\", \"Passive\": { \"Enabled\": \"true\" } }, \"Destinations\": {…"
   },
   {
     "slug": "rate-limiting",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "速率限制",
-    "excerpt": "速率限制"
+    "title": "Rate limiting",
+    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination"
+  },
+  {
+    "slug": "rate-limiting",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Rate limiting",
+    "headingPath": "Rate limiting › Introduction",
+    "anchor": "introduction",
+    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination servers. This can reduce load on the destination servers, add a…"
+  },
+  {
+    "slug": "rate-limiting",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Rate limiting",
+    "headingPath": "Rate limiting › Defaults",
+    "anchor": "defaults",
+    "excerpt": "No rate limiting is performed on requests unless enabled in the route or application configuration. However, the Rate Limiting middleware (…"
+  },
+  {
+    "slug": "rate-limiting",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Rate limiting",
+    "headingPath": "Rate limiting › Configuration",
+    "anchor": "configuration",
+    "excerpt": "Rate Limiter policies can be specified per route via RouteConfig.RateLimiterPolicy and can be bound from the Routes sections of the config file. As with other…"
+  },
+  {
+    "slug": "rate-limiting",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Rate limiting",
+    "headingPath": "Rate limiting › Disable Rate Limiting",
+    "anchor": "disable-rate-limiting",
+    "excerpt": "Specifying the value disable in a route&#39;s RateLimiterPolicy parameter means the rate limiter middleware will not apply any policies to this route, even the…"
   },
   {
     "slug": "timeouts",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "请求超时",
-    "excerpt": "请求超时"
+    "title": "Request timeouts",
+    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts"
+  },
+  {
+    "slug": "timeouts",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Request timeouts",
+    "headingPath": "Request timeouts › Introduction",
+    "anchor": "introduction",
+    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts globally as well as per endpoint. This functionality is also available…"
+  },
+  {
+    "slug": "timeouts",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Request timeouts",
+    "headingPath": "Request timeouts › Defaults",
+    "anchor": "defaults",
+    "excerpt": "Requests do not have any timeouts by default, other than the Activity Timeout used to clean up idle requests. A default policy specified in…"
+  },
+  {
+    "slug": "timeouts",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Request timeouts",
+    "headingPath": "Request timeouts › Configuration",
+    "anchor": "configuration",
+    "excerpt": "Timeouts and Timeout Policies can be specified per route via RouteConfig and can be bound from the Routes sections of the config file. As with other route…"
+  },
+  {
+    "slug": "timeouts",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Request timeouts",
+    "headingPath": "Request timeouts › Disable timeouts",
+    "anchor": "disable-timeouts",
+    "excerpt": "Specifying the value disable in a route&#39;s TimeoutPolicy parameter means the request timeout middleware will not apply timeouts to this route."
+  },
+  {
+    "slug": "timeouts",
+    "locale": "zh-Hans",
+    "group": "traffic-reliability",
+    "title": "Request timeouts",
+    "headingPath": "Request timeouts › WebSockets",
+    "anchor": "websockets",
+    "excerpt": "Request timeouts are disabled after the initial WebSocket handshake. 说明The author created this article with assistance from AI. Learn more"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "身份验证与授权",
-    "excerpt": "身份验证与授权"
+    "title": "Authentication & authorization",
+    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › YARP Authentication and Authorization",
+    "anchor": "yarp-authentication-and-authorization",
+    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › Introduction",
+    "anchor": "introduction",
+    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied to the destination servers. This can reduce load on the…"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › Defaults",
+    "anchor": "defaults",
+    "excerpt": "No authentication or authorization is performed on requests unless enabled in the route or application configuration."
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › Configuration",
+    "anchor": "configuration",
+    "excerpt": "Authorization policies can be specified per route via RouteConfig.AuthorizationPolicy and can be bound from the Routes sections of the config file. As with…"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › DefaultPolicy",
+    "anchor": "defaultpolicy",
+    "excerpt": "Specifying the value default in a route&#39;s authorization parameter means that route will use the policy defined in AuthorizationOptions.DefaultPolicy. That…"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › Anonymous",
+    "anchor": "anonymous",
+    "excerpt": "Specifying the value anonymous in a route&#39;s authorization parameter means that route will not require authorization regardless of any other configuration…"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › FallbackPolicy",
+    "anchor": "fallbackpolicy",
+    "excerpt": "AuthorizationOptions.FallbackPolicy is the policy that will be used for any request or route that was not configured with a policy. FallbackPolicy does not…"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › Flowing Credentials",
+    "anchor": "flowing-credentials",
+    "excerpt": "Even after a request has been authorized in the proxy, the destination server may still need to know who the user is (authentication) and what they&#39;re…"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › Cookie, bearer, API keys",
+    "anchor": "cookie-bearer-api-keys",
+    "excerpt": "These authentication types already pass their values in the request headers and these will flow to the destination server by default. That server will still…"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › OAuth2, OpenIdConnect, WsFederation",
+    "anchor": "oauth2-openidconnect-wsfederation",
+    "excerpt": "These protocols are commonly used with remote identity providers. The authentication process can be configured in the proxy application and will result in an…"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › Windows, Negotiate, NTLM, Kerberos",
+    "anchor": "windows-negotiate-ntlm-kerberos",
+    "excerpt": "These authentication types are often bound to a specific connection. They are not supported as means of authenticating a user in a destination server behind…"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › Client Certificates",
+    "anchor": "client-certificates",
+    "excerpt": "Client certificates are a TLS feature and are negotiated as part of a connection. See these docs for additional information. The certificate can be forwarded…"
+  },
+  {
+    "slug": "authn-authz",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Authentication & authorization",
+    "headingPath": "Authentication & authorization › Swapping authentication types",
+    "anchor": "swapping-authentication-types",
+    "excerpt": "Authentication types like Windows that don&#39;t flow naturally to the destination server will need to be converted in the proxy to an alternate form. For…"
   },
   {
     "slug": "cors",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "跨域请求 (CORS)",
-    "excerpt": "跨域请求 (CORS)"
+    "title": "Cross-origin requests (CORS)",
+    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination"
+  },
+  {
+    "slug": "cors",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Cross-origin requests (CORS)",
+    "headingPath": "Cross-origin requests (CORS) › Introduction",
+    "anchor": "introduction",
+    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination servers. This can reduce load on the destination servers and…"
+  },
+  {
+    "slug": "cors",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Cross-origin requests (CORS)",
+    "headingPath": "Cross-origin requests (CORS) › Defaults",
+    "anchor": "defaults",
+    "excerpt": "The requests won&#39;t be automatically matched for cors preflight requests unless enabled in the route or application configuration."
+  },
+  {
+    "slug": "cors",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Cross-origin requests (CORS)",
+    "headingPath": "Cross-origin requests (CORS) › Configuration",
+    "anchor": "configuration",
+    "excerpt": "CORS policies can be specified per route via RouteConfig.CorsPolicy and can be bound from the Routes sections of the config file. As with other route…"
+  },
+  {
+    "slug": "cors",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Cross-origin requests (CORS)",
+    "headingPath": "Cross-origin requests (CORS) › DefaultPolicy",
+    "anchor": "defaultpolicy",
+    "excerpt": "Specifying the value default in a route&#39;s CorsPolicy parameter means that route will use the policy defined in CorsOptions.DefaultPolicy."
+  },
+  {
+    "slug": "cors",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "Cross-origin requests (CORS)",
+    "headingPath": "Cross-origin requests (CORS) › Disable CORS",
+    "anchor": "disable-cors",
+    "excerpt": "Specifying the value disable in a route&#39;s CorsPolicy parameter means the CORS middleware will refuse the CORS requests. 说明The author created this article…"
   },
   {
     "slug": "https-tls",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTPS 与 TLS",
-    "excerpt": "HTTPS 与 TLS"
+    "title": "HTTPS & TLS",
+    "excerpt": "HTTPS (HTTP over TLS encrypted connections) is the standard way to make HTTP requests on"
+  },
+  {
+    "slug": "https-tls",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTPS & TLS",
+    "headingPath": "HTTPS & TLS › TLS Termination",
+    "anchor": "tls-termination",
+    "excerpt": "YARP is a level 7 HTTP proxy which means that incoming HTTPS/TLS connections are fully decrypted by the proxy so it can process and forward the HTTP requests.…"
+  },
+  {
+    "slug": "https-tls",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTPS & TLS",
+    "headingPath": "HTTPS & TLS › Configuring incoming connections",
+    "anchor": "configuring-incoming-connections",
+    "excerpt": "YARP can run on top of all ASP.NET Core servers and configuring HTTPS/TLS for incoming connections is server specific. Check the docs for Kestrel, IIS, and…"
+  },
+  {
+    "slug": "https-tls",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTPS & TLS",
+    "headingPath": "HTTPS & TLS › Advanced TLS filters with Kestrel",
+    "anchor": "advanced-tls-filters-with-kestrel",
+    "excerpt": "Kestrel supports intercepting incoming connections before the TLS handshake. YARP includes a TlsFrameHelper API that can parse the raw TLS handshake and enable…"
+  },
+  {
+    "slug": "https-tls",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTPS & TLS",
+    "headingPath": "HTTPS & TLS › Configuring outgoing connections",
+    "anchor": "configuring-outgoing-connections",
+    "excerpt": "To enable TLS encryption when communicating with a destination specify the destination address as https like &quot;https://destinationHost&quot; . See the…"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP 标头准则",
-    "excerpt": "HTTP 标头准则"
+    "title": "HTTP header guidelines",
+    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › YARP header filtering",
+    "anchor": "yarp-header-filtering",
+    "excerpt": "YARP automatically removes request and response headers that could impact its ability to forward a request correctly, or that may be used maliciously to bypass…"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Connection , KeepAlive , Close",
+    "anchor": "connection-keepalive-close",
+    "excerpt": "These headers control how the TCP connection is managed and are removed to prevent impacting the connection on the other side of the proxy."
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Transfer-Encoding",
+    "anchor": "transfer-encoding",
+    "excerpt": "This header describes the format of the request or response body on the wire, e.g. &#39;chunked&#39;, and is removed because the format can vary between the…"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › TE",
+    "anchor": "te",
+    "excerpt": "Only the TE: trailers header value is allowed through the proxy since it&#39;s required for some gRPC implementations."
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Upgrade",
+    "anchor": "upgrade",
+    "excerpt": "This is used for protocols like WebSockets. It is removed by default and only added back for specifically supported protocols (WebSockets, SPDY)."
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Proxy-*",
+    "anchor": "proxy",
+    "excerpt": "These are headers used with proxies and are not considered appropriate to forward."
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Alt-Svc",
+    "anchor": "alt-svc",
+    "excerpt": "This response header is used with HTTP/3 upgrades and only applies to the immediate connection."
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Distributed tracing headers",
+    "anchor": "distributed-tracing-headers",
+    "excerpt": "These headers include TraceParent , Request-Id , TraceState , Baggage , and Correlation- Context . They&#39;re automatically removed based on…"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Strict-Transport-Security",
+    "anchor": "strict-transport-security",
+    "excerpt": "This header instructs clients to always use HTTPS, but there may be a conflict between values provided by the proxy and destination. To avoid confusion, the…"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Other header guidelines",
+    "anchor": "other-header-guidelines",
+    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Host",
+    "anchor": "host",
+    "excerpt": "The Host header indicates which site on the server the request is intended for. This header is removed by default since the host name used publicly by the…"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › X-Forwarded-* , Forwarded",
+    "anchor": "x-forwarded-forwarded",
+    "excerpt": "Because a separate connection is used to communicate with the destination, these request headers can be used to forward information about the original…"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › X-http-method-override , x-http-method , x-method-override",
+    "anchor": "x-http-method-override-x-http-method-x-method-override",
+    "excerpt": "Some clients and servers limit which HTTP methods they allow (for example, GET). These request headers are sometimes used to work around those restrictions.…"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Set-Cookie",
+    "anchor": "set-cookie",
+    "excerpt": "This response header may contain fields that constrain aspects of the URL, such as the scheme, domain, or path, where the cookie should be used. Using a…"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Location",
+    "anchor": "location",
+    "excerpt": "This response header is used with redirects and may contain a scheme, domain, and path that differ from the public values due to the use of the proxy. While it…"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › Server",
+    "anchor": "server",
+    "excerpt": "This response header indicates what server technology was used to generate the response (for example, IIS, Kestrel). This header is proxied from the…"
+  },
+  {
+    "slug": "header-guidelines",
+    "locale": "zh-Hans",
+    "group": "security",
+    "title": "HTTP header guidelines",
+    "headingPath": "HTTP header guidelines › X-Powered-By",
+    "anchor": "x-powered-by",
+    "excerpt": "This response header indicates what web framework was used to generate the response (for example, ASP.NET). ASP.NET Core does not generate this header but IIS…"
   },
   {
     "slug": "output-caching",
     "locale": "zh-Hans",
     "group": "performance",
-    "title": "输出缓存",
-    "excerpt": "输出缓存"
+    "title": "Output caching",
+    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are"
+  },
+  {
+    "slug": "output-caching",
+    "locale": "zh-Hans",
+    "group": "performance",
+    "title": "Output caching",
+    "headingPath": "Output caching › Introduction",
+    "anchor": "introduction",
+    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are proxied to the destination servers. This can reduce load on the…"
+  },
+  {
+    "slug": "output-caching",
+    "locale": "zh-Hans",
+    "group": "performance",
+    "title": "Output caching",
+    "headingPath": "Output caching › Defaults",
+    "anchor": "defaults",
+    "excerpt": "No output caching is performed unless enabled in the route or application configuration."
+  },
+  {
+    "slug": "output-caching",
+    "locale": "zh-Hans",
+    "group": "performance",
+    "title": "Output caching",
+    "headingPath": "Output caching › Configuration",
+    "anchor": "configuration",
+    "excerpt": "Output Cache policies can be specified per route via RouteConfig.OutputCachePolicy and can be bound from the Routes sections of the config file. As with other…"
   },
   {
     "slug": "grpc",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "代理 gRPC",
-    "excerpt": "代理 gRPC"
+    "title": "Proxying gRPC",
+    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It's"
+  },
+  {
+    "slug": "grpc",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "Proxying gRPC",
+    "headingPath": "Proxying gRPC › Introduction",
+    "anchor": "introduction",
+    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It&#39;s built on top of HTTP/2 and can be proxied through YARP. While…"
+  },
+  {
+    "slug": "grpc",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "Proxying gRPC",
+    "headingPath": "Proxying gRPC › Configure YARP's Incoming Protocols",
+    "anchor": "configure-yarp-s-incoming-protocols",
+    "excerpt": "gRPC requires HTTP/2 for most scenarios. HTTP/1.1 and HTTP/2 are enabled by default on ASP.NET Core servers (YARP&#39;s front end) but they require https (TLS)…"
+  },
+  {
+    "slug": "grpc",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "Proxying gRPC",
+    "headingPath": "Proxying gRPC › Configure YARP's Outgoing Protocols",
+    "anchor": "configure-yarp-s-outgoing-protocols",
+    "excerpt": "YARP automatically negotiates HTTP/1.1 or HTTP/2 for outgoing proxy requests, but only for https (TLS). HTTP/2 over http (non-TLS) requires additional…"
+  },
+  {
+    "slug": "grpc",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "Proxying gRPC",
+    "headingPath": "Proxying gRPC › gRPC-Web",
+    "anchor": "grpc-web",
+    "excerpt": "gRPC-Web is an alternative wire-format for gRPC that&#39;s compatible with HTTP/1.1. application/grpc - gRPC over HTTP/2 is how gRPC is typically used.…"
   },
   {
     "slug": "http3",
     "locale": "zh-Hans",
     "group": "protocols",
     "title": "HTTP/3",
-    "excerpt": "HTTP/3"
+    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support"
+  },
+  {
+    "slug": "http3",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "HTTP/3",
+    "headingPath": "HTTP/3 › Introduction",
+    "anchor": "introduction",
+    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support in .NET 7. To enable the HTTP/3 protocol in YARP you need to: Configure…"
+  },
+  {
+    "slug": "http3",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "HTTP/3",
+    "headingPath": "HTTP/3 › Set up HTTP/3 on Kestrel",
+    "anchor": "set-up-http-3-on-kestrel",
+    "excerpt": "Protocols are required in the listener options: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel =&gt; {…"
+  },
+  {
+    "slug": "http3",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "HTTP/3",
+    "headingPath": "HTTP/3 › HttpClient",
+    "anchor": "httpclient",
+    "excerpt": "The default version of HttpRequest should be replaced by &quot;3&quot;, find more details about HttpRequest configuration. 说明The author created this article…"
   },
   {
     "slug": "websockets",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "WebSockets 与 SPDY",
-    "excerpt": "WebSockets 与 SPDY"
+    "title": "WebSockets & SPDY",
+    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+  },
+  {
+    "slug": "websockets",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "WebSockets & SPDY",
+    "headingPath": "WebSockets & SPDY › YARP Proxying WebSockets and SPDY",
+    "anchor": "yarp-proxying-websockets-and-spdy",
+    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+  },
+  {
+    "slug": "websockets",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "WebSockets & SPDY",
+    "headingPath": "WebSockets & SPDY › Introduction",
+    "anchor": "introduction",
+    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with both the direct forwarding and full pipeline approaches. WebSockets is…"
+  },
+  {
+    "slug": "websockets",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "WebSockets & SPDY",
+    "headingPath": "WebSockets & SPDY › HTTP/1.1 Upgrades",
+    "anchor": "http-1-1-upgrades",
+    "excerpt": "WebSockets and SPDY are built on top of HTTP/1.1 using a feature called connection upgrades . YARP proxies the initial request, and if the destination server…"
+  },
+  {
+    "slug": "websockets",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "WebSockets & SPDY",
+    "headingPath": "WebSockets & SPDY › HTTP/2",
+    "anchor": "http-2",
+    "excerpt": "YARP supports WebSockets over HTTP/2 starting in .NET 7 and YARP 2.0. Kestrel is the only available AspNetCore server that will accept incoming HTTP/2…"
+  },
+  {
+    "slug": "websockets",
+    "locale": "zh-Hans",
+    "group": "protocols",
+    "title": "WebSockets & SPDY",
+    "headingPath": "WebSockets & SPDY › Timeout",
+    "anchor": "timeout",
+    "excerpt": "Http Request Timeouts (.NET 8+) can apply timeouts to all requests by default or by policy. These timeouts will be disabled after a WebSocket handshake. They…"
   },
   {
     "slug": "extensibility",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "概述",
-    "excerpt": "概述"
+    "title": "Overview",
+    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:"
+  },
+  {
+    "slug": "extensibility",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Overview",
+    "headingPath": "Overview › Overview of YARP extensibility",
+    "anchor": "overview-of-yarp-extensibility",
+    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired: Middleware Pipeline Http Forwarder"
+  },
+  {
+    "slug": "extensibility",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Overview",
+    "headingPath": "Overview › Middleware pipeline",
+    "anchor": "middleware-pipeline",
+    "excerpt": "YARP uses the concept of Routes, Clusters and Destinations. These can be supplied through configuration files or directly through code. Based on the routing…"
+  },
+  {
+    "slug": "extensibility",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Overview",
+    "headingPath": "Overview › HTTP Forwarder",
+    "anchor": "http-forwarder",
+    "excerpt": "If the YARP pipeline is too rigid for your use case or the scale of routing rules and destinations isn&#39;t suitable for loading into memory, then you can…"
   },
   {
     "slug": "middleware",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "中间件",
-    "excerpt": "中间件"
+    "title": "Middleware",
+    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › Introduction",
+    "anchor": "introduction",
+    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The app developer can add and order middleware as needed. ASP.NET…"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › Defaults",
+    "anchor": "defaults",
+    "excerpt": "The getting started sample shows the following Configure method. This sets up a middleware pipeline with development tools, routing, and proxy configured…"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › Adding Middleware",
+    "anchor": "adding-middleware",
+    "excerpt": "Middleware added to your application pipeline will see the request in different states of processing depending on where the middleware is added. Middleware…"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › // Custom inline middleware",
+    "anchor": "custom-inline-middleware",
+    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); By default this overload…"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › Custom Proxy Middleware",
+    "anchor": "custom-proxy-middleware",
+    "excerpt": "Middleware inside the MapReverseProxy pipeline have access to all of the proxy data and state associated with a request (the route, cluster, destinations,…"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › What to do with middleware",
+    "anchor": "what-to-do-with-middleware",
+    "excerpt": "Middleware can generate logs, control if a request gets proxied or not, influence where it&#39;s proxied to, and add additional features like error handling,…"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › Logs and Metrics",
+    "anchor": "logs-and-metrics",
+    "excerpt": "Middleware can inspect request and response fields to generate logs and aggregate metrics. See the note about bodies under &quot;What not to do with…"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › Send an immediate response",
+    "anchor": "send-an-immediate-response",
+    "excerpt": "If a middleware inspects a request and determines that it should not be proxied, it may generate its own response and return control to the server without…"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › Filter destinations",
+    "anchor": "filter-destinations",
+    "excerpt": "Middleware like session affinity and load balancing examine the IReverseProxyFeature and the cluster configuration to decide which destination a request should…"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › Error handling",
+    "anchor": "error-handling",
+    "excerpt": "Middleware can wrap the call to await next() in a try/catch block to handle exceptions from later components. The proxy logic at the end of the pipeline…"
+  },
+  {
+    "slug": "middleware",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Middleware",
+    "headingPath": "Middleware › What not to do with middleware",
+    "anchor": "what-not-to-do-with-middleware",
+    "excerpt": "Middleware should be cautious about modifying request fields such as headers in order to affect the outgoing proxied request. Such modifications may interfere…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "直接转发",
-    "excerpt": "直接转发"
+    "title": "Direct forwarding",
+    "excerpt": "Some applications only need the ability to take a specific request and forward it to a specific"
+  },
+  {
+    "slug": "direct-forwarding",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Direct forwarding",
+    "headingPath": "Direct forwarding › IHttpForwarder",
+    "anchor": "ihttpforwarder",
+    "excerpt": "IHttpForwarder serves as the core proxy adapter between incoming AspNetCore and outgoing System.Net.Http requests. It handles the mechanics of creating a…"
+  },
+  {
+    "slug": "direct-forwarding",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Direct forwarding",
+    "headingPath": "Direct forwarding › Example",
+    "anchor": "example",
+    "excerpt": "See ReverseProxy.Direct.Sample as a pre-built sample, or use the steps below."
+  },
+  {
+    "slug": "direct-forwarding",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Direct forwarding",
+    "headingPath": "Direct forwarding › Create a new project",
+    "anchor": "create-a-new-project",
+    "excerpt": "Follow the Getting Started guide to create a project and add the Yarp.ReverseProxy nuget dependency."
+  },
+  {
+    "slug": "direct-forwarding",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Direct forwarding",
+    "headingPath": "Direct forwarding › Update Program.cs",
+    "anchor": "update-program-cs",
+    "excerpt": "In this example the IHttpForwarder is registered in DI, injected into the endpoint method, and used to forward requests from a specific route to…"
+  },
+  {
+    "slug": "direct-forwarding",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Direct forwarding",
+    "headingPath": "Direct forwarding › // Check if the operation was successful",
+    "anchor": "check-if-the-operation-was-successful",
+    "excerpt": "if (error != ForwarderError.None) { var errorFeature = httpContext.GetForwarderErrorFeature(); var exception = errorFeature.Exception; } }); app.Run(); /// ///…"
+  },
+  {
+    "slug": "direct-forwarding",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Direct forwarding",
+    "headingPath": "Direct forwarding › The HTTP Client",
+    "anchor": "the-http-client",
+    "excerpt": "The http client may be customized, but the above example is recommended for common proxy scenarios. Always use HttpMessageInvoker rather than HttpClient,…"
+  },
+  {
+    "slug": "direct-forwarding",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Direct forwarding",
+    "headingPath": "Direct forwarding › Transforms",
+    "anchor": "transforms",
+    "excerpt": "The request and response can be modified by providing a derived HttpTransformer as a parameter to SendAsync method."
+  },
+  {
+    "slug": "direct-forwarding",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Direct forwarding",
+    "headingPath": "Direct forwarding › Error handling",
+    "anchor": "error-handling",
+    "excerpt": "IHttpForwarder catches exceptions and timeouts from the HTTP client, logs them, and converts them to 5xx status codes or aborts the response. An error code is…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "目标解析器",
-    "excerpt": "目标解析器"
+    "title": "Destination resolvers",
+    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › YARP Extensibility Destination Resolvers",
+    "anchor": "yarp-extensibility-destination-resolvers",
+    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › Introduction",
+    "anchor": "introduction",
+    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The destination resolver can be used as an integration point with…"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › Structure",
+    "anchor": "structure",
+    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › IDestinationResolver has a single method",
+    "anchor": "idestinationresolver-has-a-single-method",
+    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken) which should return a…"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › DestinationConfig",
+    "anchor": "destinationconfig",
+    "excerpt": "DestinationConfig has a Host property which can be used to specify the default Host header value which the proxy should use when communicating with that…"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › Lifecycle",
+    "anchor": "lifecycle",
+    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › Startup",
+    "anchor": "startup",
+    "excerpt": "The IDestinationResolver should be registered in the DI container as a singleton. At startup, the proxy will resolve this instance and call…"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › Atomicity",
+    "anchor": "atomicity",
+    "excerpt": "The destinations objects and collections supplied to the proxy should be read-only and not modified once they have been handed to the proxy via GetConfig() ."
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › Reload",
+    "anchor": "reload",
+    "excerpt": "If the IChangeToken supports ActiveChangeCallbacks , once the proxy has processed the initial set of destinations it will register a callback with this token.…"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › DNS Destination Resolver",
+    "anchor": "dns-destination-resolver",
+    "excerpt": "YARP includes an IDestinationResolver implementation which expands the set of configured destinations by resolving each host name to one or more IP addresses…"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › Example",
+    "anchor": "example",
+    "excerpt": "C#// Add the DNS destination resolver, restricting results to IPv4 addresses reverseProxyBuilder.AddDnsDestinationResolver(o =&gt; o.AddressFamily =…"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › Configuration",
+    "anchor": "configuration",
+    "excerpt": "The DNS destination resolver&#39;s options, DnsDestinationResolverOptions, has the following properties:"
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › RefreshPeriod",
+    "anchor": "refreshperiod",
+    "excerpt": "The period between requesting a refresh of a resolved name. This defaults to 5 minutes."
+  },
+  {
+    "slug": "destination-resolvers",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Destination resolvers",
+    "headingPath": "Destination resolvers › AddressFamily",
+    "anchor": "addressfamily",
+    "excerpt": "Optionally, specify an System.Net.Sockets.AddressFamily value of AddressFamily.InterNetwork or AddressFamily.InterNetworkV6 to restrict resolved resolution to…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "zh-Hans",
     "group": "extensibility",
-    "title": "请求与响应转换",
-    "excerpt": "请求与响应转换"
+    "title": "Request & response transforms",
+    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › Request and Response Transform",
+    "anchor": "request-and-response-transform",
+    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › Extensibility",
+    "anchor": "extensibility",
+    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › Introduction",
+    "anchor": "introduction",
+    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › RequestTransform",
+    "anchor": "requesttransform",
+    "excerpt": "All request transforms must derive from the abstract base class RequestTransform. These can freely modify the proxy HttpRequestMessage . Avoid reading or…"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › ResponseTransform",
+    "anchor": "responsetransform",
+    "excerpt": "All response transforms must derive from the abstract base class ResponseTransform. These can freely modify the client HttpResponse . Avoid reading or…"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › ResponseTrailersTransform",
+    "anchor": "responsetrailerstransform",
+    "excerpt": "All response trailers transforms must derive from the abstract base class ResponseTrailersTransform. These can freely modify the client HttpResponse trailers.…"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › Request body transforms",
+    "anchor": "request-body-transforms",
+    "excerpt": "YARP does not provide any built in transforms for modifying the request body. However, the body can be modified by custom transforms. Be careful about which…"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › any",
+    "anchor": "any",
+    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › // needed headers on the ProxyRequest",
+    "anchor": "needed-headers-on-the-proxyrequest",
+    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); Custom transforms can only modify a request body if one is already present.…"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › Response body transforms",
+    "anchor": "response-body-transforms",
+    "excerpt": "YARP does not provide any built in transforms for modifying the response body. However, the body can be modified by custom transforms. Be careful about which…"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › ITransformProvider",
+    "anchor": "itransformprovider",
+    "excerpt": "ITransformProvider provides the functionality of AddTransforms described above as well as DI integration and validation support. ITransformProvider &#39;s can…"
+  },
+  {
+    "slug": "extensibility-transforms",
+    "locale": "zh-Hans",
+    "group": "extensibility",
+    "title": "Request & response transforms",
+    "headingPath": "Request & response transforms › ITransformFactory",
+    "anchor": "itransformfactory",
+    "excerpt": "Developers that want to integrate their custom transforms with the Transforms section of configuration can implement an ITransformFactory. This should be…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "诊断基于 YARP 的代理",
-    "excerpt": "诊断基于 YARP 的代理"
+    "title": "Diagnosing YARP-based proxies",
+    "excerpt": "When using a reverse proxy, there is an additional hop from the client to the proxy, and then"
+  },
+  {
+    "slug": "diagnosing-yarp-issues",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Diagnosing YARP-based proxies",
+    "headingPath": "Diagnosing YARP-based proxies › Logging",
+    "anchor": "logging",
+    "excerpt": "The first step to being able to tell what is going on with YARP is to turn on logging. This is a configuration flag so can be changed on the fly. YARP is…"
+  },
+  {
+    "slug": "diagnosing-yarp-issues",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Diagnosing YARP-based proxies",
+    "headingPath": "Diagnosing YARP-based proxies › Understanding log entries",
+    "anchor": "understanding-log-entries",
+    "excerpt": "The logging output is directly tied to the way that ASP.NET Core processes requests. It&#39;s important to realize that as middleware, YARP is relying on much…"
+  },
+  {
+    "slug": "diagnosing-yarp-issues",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Diagnosing YARP-based proxies",
+    "headingPath": "Diagnosing YARP-based proxies › Using ASP.NET request logging",
+    "anchor": "using-asp-net-request-logging",
+    "excerpt": "ASP.NET includes a middleware component that can be used to provide more details about the request and response. The UseHttpLogging component can be added to…"
+  },
+  {
+    "slug": "diagnosing-yarp-issues",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Diagnosing YARP-based proxies",
+    "headingPath": "Diagnosing YARP-based proxies › Using telemetry events",
+    "anchor": "using-telemetry-events",
+    "excerpt": "We recommend reading Networking telemetry in .NET as a primer on how to consume networking telemetry in .NET. The Metrics sample shows how to listen to events…"
+  },
+  {
+    "slug": "diagnosing-yarp-issues",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Diagnosing YARP-based proxies",
+    "headingPath": "Diagnosing YARP-based proxies › Using custom middleware",
+    "anchor": "using-custom-middleware",
+    "excerpt": "Another way to inspect the state for requests is to insert additional middleware into the request pipeline. You can insert between the other stages to see the…"
+  },
+  {
+    "slug": "diagnosing-yarp-issues",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Diagnosing YARP-based proxies",
+    "headingPath": "Diagnosing YARP-based proxies › Using the debugger",
+    "anchor": "using-the-debugger",
+    "excerpt": "A debugger, such as Visual Studio, can be attached to the proxy process. However, unless you have existing middleware, there isn&#39;t a good place in the app…"
+  },
+  {
+    "slug": "diagnosing-yarp-issues",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Diagnosing YARP-based proxies",
+    "headingPath": "Diagnosing YARP-based proxies › Network tracing",
+    "anchor": "network-tracing",
+    "excerpt": "It can be attractive to use network tracing tools like Fiddler or Wireshark to try to monitor what&#39;s happening either side of the proxy. However, be…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "分布式跟踪",
-    "excerpt": "分布式跟踪"
+    "title": "Distributed tracing",
+    "excerpt": "As an ASP.NET Core component, YARP can easily integrate into different tracing systems the"
+  },
+  {
+    "slug": "distributed-tracing",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Distributed tracing",
+    "headingPath": "Distributed tracing › Using Open Telemetry",
+    "anchor": "using-open-telemetry",
+    "excerpt": "YARP supports distributed tracing using Open Telemetry (OTEL). When a request comes in, and there is a listener for Activities, then ASP.NET Core will…"
+  },
+  {
+    "slug": "distributed-tracing",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Distributed tracing",
+    "headingPath": "Distributed tracing › Using custom tracing headers",
+    "anchor": "using-custom-tracing-headers",
+    "excerpt": "When using a propagation mechanism that is not built into .NET (e.g. B3 propagation ), you should implement a custom [ DistributedContextPropagator ] for that…"
+  },
+  {
+    "slug": "distributed-tracing",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Distributed tracing",
+    "headingPath": "Distributed tracing › Pass-through proxy",
+    "anchor": "pass-through-proxy",
+    "excerpt": "If you do not wish the proxy to actively participate in the trace, and wish to keep all the tracing headers as-is, you may do so by setting…"
+  },
+  {
+    "slug": "distributed-tracing",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "Distributed tracing",
+    "headingPath": "Distributed tracing › DistributedContextPropagator DistributedContextPropagator.Fields",
+    "anchor": "distributedcontextpropagator-distributedcontextpropagator-fi",
+    "excerpt": "说明The author created this article with assistance from AI. Learn more"
   },
   {
     "slug": "ab-testing",
     "locale": "zh-Hans",
     "group": "operations",
-    "title": "A/B 测试与滚动升级",
-    "excerpt": "A/B 测试与滚动升级"
+    "title": "A/B testing & rolling upgrades",
+    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+  },
+  {
+    "slug": "ab-testing",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "A/B testing & rolling upgrades",
+    "headingPath": "A/B testing & rolling upgrades › YARP A/B Testing and Rolling Upgrades",
+    "anchor": "yarp-a-b-testing-and-rolling-upgrades",
+    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+  },
+  {
+    "slug": "ab-testing",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "A/B testing & rolling upgrades",
+    "headingPath": "A/B testing & rolling upgrades › Introduction",
+    "anchor": "introduction",
+    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic to evaluate changes in the destination application. YARP does…"
+  },
+  {
+    "slug": "ab-testing",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "A/B testing & rolling upgrades",
+    "headingPath": "A/B testing & rolling upgrades › Example",
+    "anchor": "example",
+    "excerpt": "app.MapReverseProxy(proxyPipeline =&gt; { // Custom cluster selection proxyPipeline.Use((context, next) =&gt; { var lookup =…"
+  },
+  {
+    "slug": "ab-testing",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "A/B testing & rolling upgrades",
+    "headingPath": "A/B testing & rolling upgrades › Usage",
+    "anchor": "usage",
+    "excerpt": "This scenario makes use of two APIs, IProxyStateLookup and ReassignProxyRequest, called from a custom proxy middleware as shown in the sample above.…"
+  },
+  {
+    "slug": "ab-testing",
+    "locale": "zh-Hans",
+    "group": "operations",
+    "title": "A/B testing & rolling upgrades",
+    "headingPath": "A/B testing & rolling upgrades › Session affinity",
+    "anchor": "session-affinity",
+    "excerpt": "说明that session affinity functionality is split between middleware, which reads it settings from the current cluster, and transforms, which are part of the…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Kubernetes Ingress 控制器",
-    "excerpt": "Kubernetes Ingress 控制器"
+    "title": "Kubernetes Ingress Controller",
+    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+  },
+  {
+    "slug": "kubernetes-ingress",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "Kubernetes Ingress Controller",
+    "headingPath": "Kubernetes Ingress Controller › Prerequisites",
+    "anchor": "prerequisites",
+    "excerpt": "Before we continue with this tutorial, make sure you have the following ready... Installing Docker based on your operating system. A container registry. Docker…"
+  },
+  {
+    "slug": "kubernetes-ingress",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "Kubernetes Ingress Controller",
+    "headingPath": "Kubernetes Ingress Controller › Get started",
+    "anchor": "get-started",
+    "excerpt": "说明For now, there is no official Docker image for the YARP ingress controller. In the meantime, the YARP ingress controller must be built locally and deploy it.…"
+  },
+  {
+    "slug": "kubernetes-ingress",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "Kubernetes Ingress Controller",
+    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f ingress-controller.yaml",
+    "anchor": "kubectl-apply-f-ingress-controller-yaml",
+    "excerpt": "To verify that the ingress controller has been deployed, run:"
+  },
+  {
+    "slug": "kubernetes-ingress",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "Kubernetes Ingress Controller",
+    "headingPath": "Kubernetes Ingress Controller › kubectl get pods -n yarp",
+    "anchor": "kubectl-get-pods-n-yarp",
+    "excerpt": "You can then check logs from the ingress controller by running: kubectl logs {POD NAME} -n yarp All services, deployments, and pods for YARP are in the…"
+  },
+  {
+    "slug": "kubernetes-ingress",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "Kubernetes Ingress Controller",
+    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress.yaml",
+    "anchor": "kubectl-apply-f-ingress-yaml",
+    "excerpt": "At this point, your ingress and controller should be running."
+  },
+  {
+    "slug": "kubernetes-ingress",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "Kubernetes Ingress Controller",
+    "headingPath": "Kubernetes Ingress Controller › Deploying an app",
+    "anchor": "deploying-an-app",
+    "excerpt": "To use the ingress, we now need to deploy an application to Kubernetes. Navigate to samples\\KuberenetesIngress.Sample\\backend and run: docker build . -t…"
+  },
+  {
+    "slug": "kubernetes-ingress",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "Kubernetes Ingress Controller",
+    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\backend.yaml",
+    "anchor": "kubectl-apply-f-backend-yaml",
+    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+  },
+  {
+    "slug": "kubernetes-ingress",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "Kubernetes Ingress Controller",
+    "headingPath": "Kubernetes Ingress Controller › Creating the ingress definition",
+    "anchor": "creating-the-ingress-definition",
+    "excerpt": "Finally, once we have deployed the backend application, we need to route traffic to the backend. To do this, run in the backend directory:"
+  },
+  {
+    "slug": "kubernetes-ingress",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "Kubernetes Ingress Controller",
+    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress-sample.yaml",
+    "anchor": "kubectl-apply-f-ingress-sample-yaml",
+    "excerpt": "And then execute the following command to get the external IP of the ingress, the name of the related service being yarp-proxy :"
+  },
+  {
+    "slug": "kubernetes-ingress",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "Kubernetes Ingress Controller",
+    "headingPath": "Kubernetes Ingress Controller › kubectl get service -n yarp",
+    "anchor": "kubectl-get-service-n-yarp",
+    "excerpt": "If you&#39;re using a local K8s cluster and don&#39;t get an external IP, you may be able to avoid using the default port: 80 for the yarp-proxy service. If…"
   },
   {
     "slug": "service-fabric-int",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "Service Fabric 集成",
-    "excerpt": "Service Fabric 集成"
+    "title": "Service Fabric integration",
+    "excerpt": "This functionality has been deprecated in favor of service-fabric-yarp (GitHub repository) ."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "zh-Hans",
     "group": "deployment",
-    "title": "HTTP.sys 委派",
-    "excerpt": "HTTP.sys 委派"
+    "title": "HTTP.sys delegation",
+    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which"
+  },
+  {
+    "slug": "httpsys-delegation",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "HTTP.sys delegation",
+    "headingPath": "HTTP.sys delegation › Introduction",
+    "anchor": "introduction",
+    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which allows a request to be transferred from the receiving process&#39;s…"
+  },
+  {
+    "slug": "httpsys-delegation",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "HTTP.sys delegation",
+    "headingPath": "HTTP.sys delegation › Requirements",
+    "anchor": "requirements",
+    "excerpt": "HTTP.sys delegation requires: ASP.NET Core&#39;s HTTP.sys server Windows Server 2019 or Windows 10 (build number 1809) or newer."
+  },
+  {
+    "slug": "httpsys-delegation",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "HTTP.sys delegation",
+    "headingPath": "HTTP.sys delegation › Defaults",
+    "anchor": "defaults",
+    "excerpt": "HTTP.sys delegation won&#39;t be used unless added to the proxy pipeline and enabled in the destination configuration."
+  },
+  {
+    "slug": "httpsys-delegation",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "HTTP.sys delegation",
+    "headingPath": "HTTP.sys delegation › Configuration",
+    "anchor": "configuration",
+    "excerpt": "HTTP.sys delegation can be enabled per destination by adding the HttpSysDelegationQueue metadata to the destination. The value of this metadata should be the…"
+  },
+  {
+    "slug": "httpsys-delegation",
+    "locale": "zh-Hans",
+    "group": "deployment",
+    "title": "HTTP.sys delegation",
+    "headingPath": "HTTP.sys delegation › Delegation queue lifetime",
+    "anchor": "delegation-queue-lifetime",
+    "excerpt": "When YARP is configured to use delegation for a destination, a handle is created to the specified HTTP.sys queue. This handle is kept alive as long as the…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "zh-Hans",
     "group": "appendix",
-    "title": "ASP.NET Core 入门",
-    "excerpt": "ASP.NET Core 入门"
+    "title": "Get started with ASP.NET Core",
+    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+  },
+  {
+    "slug": "aspnetcore-getting-started",
+    "locale": "zh-Hans",
+    "group": "appendix",
+    "title": "Get started with ASP.NET Core",
+    "headingPath": "Get started with ASP.NET Core › Prerequisites",
+    "anchor": "prerequisites",
+    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+  },
+  {
+    "slug": "aspnetcore-getting-started",
+    "locale": "zh-Hans",
+    "group": "appendix",
+    "title": "Get started with ASP.NET Core",
+    "headingPath": "Get started with ASP.NET Core › .NET 8 SDK",
+    "anchor": "net-8-sdk",
+    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+  },
+  {
+    "slug": "aspnetcore-getting-started",
+    "locale": "zh-Hans",
+    "group": "appendix",
+    "title": "Get started with ASP.NET Core",
+    "headingPath": "Get started with ASP.NET Core › Create a web app project",
+    "anchor": "create-a-web-app-project",
+    "excerpt": "Open a command shell, and enter the following command: .NET CLI dotnet new webapp --output aspnetcoreapp --no-https The preceding command creates a new web app…"
+  },
+  {
+    "slug": "aspnetcore-getting-started",
+    "locale": "zh-Hans",
+    "group": "appendix",
+    "title": "Get started with ASP.NET Core",
+    "headingPath": "Get started with ASP.NET Core › Run the app",
+    "anchor": "run-the-app",
+    "excerpt": "Run the following commands: .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:输出 Building... info:…"
+  },
+  {
+    "slug": "aspnetcore-getting-started",
+    "locale": "zh-Hans",
+    "group": "appendix",
+    "title": "Get started with ASP.NET Core",
+    "headingPath": "Get started with ASP.NET Core › Edit a Razor page",
+    "anchor": "edit-a-razor-page",
+    "excerpt": "Change the home page: In the command shell, press Ctrl+C (Cmd+C in macOS) to exit the program. Open Pages/Index.cshtml in a text editor. Replace the line that…"
+  },
+  {
+    "slug": "aspnetcore-getting-started",
+    "locale": "zh-Hans",
+    "group": "appendix",
+    "title": "Get started with ASP.NET Core",
+    "headingPath": "Get started with ASP.NET Core › CSHTML",
+    "anchor": "cshtml",
+    "excerpt": "@page @model IndexModel @{ ViewData[&quot;Title&quot;] = &quot;Home page&quot;; } Welcome Hello, world! The time on the server is @DateTime.Now"
+  },
+  {
+    "slug": "aspnetcore-getting-started",
+    "locale": "zh-Hans",
+    "group": "appendix",
+    "title": "Get started with ASP.NET Core",
+    "headingPath": "Get started with ASP.NET Core › </div>",
+    "anchor": "div",
+    "excerpt": "Save your changes. In the command shell run the dotnet run command again. In the browser, refresh the page and verify the changes are displayed."
+  },
+  {
+    "slug": "aspnetcore-getting-started",
+    "locale": "zh-Hans",
+    "group": "appendix",
+    "title": "Get started with ASP.NET Core",
+    "headingPath": "Get started with ASP.NET Core › Next steps",
+    "anchor": "next-steps",
+    "excerpt": "In this tutorial, you learned how to: Create a web app project. Run the project. Make a change. To learn more about ASP.NET Core, see the following:"
+  },
+  {
+    "slug": "aspnetcore-getting-started",
+    "locale": "zh-Hans",
+    "group": "appendix",
+    "title": "Get started with ASP.NET Core",
+    "headingPath": "Get started with ASP.NET Core › Overview of ASP.NET Core",
+    "anchor": "overview-of-asp-net-core",
+    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
   }
 ]

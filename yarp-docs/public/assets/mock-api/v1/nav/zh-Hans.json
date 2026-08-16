@@ -3,7 +3,7 @@
   "groups": [
     {
       "id": "getting-started",
-      "label": "快速入门",
+      "label": "Getting started",
       "order": 1,
       "items": [
         {
@@ -22,7 +22,7 @@
     },
     {
       "id": "configuration",
-      "label": "配置",
+      "label": "Configuration",
       "order": 2,
       "items": [
         {
@@ -53,18 +53,18 @@
     },
     {
       "id": "routing",
-      "label": "路由",
+      "label": "Routing",
       "order": 3,
       "items": [
         {
           "slug": "header-routing",
-          "title": "基于标头的路由",
+          "title": "Header-based routing",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "queryparameter-routing",
-          "title": "查询参数路由",
+          "title": "Query parameter routing",
           "order": 2,
           "kind": "doc"
         }
@@ -72,24 +72,24 @@
     },
     {
       "id": "transforms",
-      "label": "转换",
+      "label": "Transforms",
       "order": 4,
       "items": [
         {
           "slug": "transforms",
-          "title": "概述",
+          "title": "Overview",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "transforms-request",
-          "title": "请求转换",
+          "title": "Request transforms",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "transforms-response",
-          "title": "响应与尾部转换",
+          "title": "Response & trailer transforms",
           "order": 3,
           "kind": "doc"
         }
@@ -97,7 +97,7 @@
     },
     {
       "id": "traffic-reliability",
-      "label": "流量与可靠性",
+      "label": "Traffic & reliability",
       "order": 5,
       "items": [
         {
@@ -108,25 +108,25 @@
         },
         {
           "slug": "session-affinity",
-          "title": "会话亲和性",
+          "title": "Session affinity",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "dests-health-checks",
-          "title": "目标运行状况检查",
+          "title": "Destination health checks",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "rate-limiting",
-          "title": "速率限制",
+          "title": "Rate limiting",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "timeouts",
-          "title": "请求超时",
+          "title": "Request timeouts",
           "order": 5,
           "kind": "doc"
         }
@@ -134,30 +134,30 @@
     },
     {
       "id": "security",
-      "label": "安全",
+      "label": "Security",
       "order": 6,
       "items": [
         {
           "slug": "authn-authz",
-          "title": "身份验证与授权",
+          "title": "Authentication & authorization",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "cors",
-          "title": "跨域请求 (CORS)",
+          "title": "Cross-origin requests (CORS)",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "https-tls",
-          "title": "HTTPS 与 TLS",
+          "title": "HTTPS & TLS",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "header-guidelines",
-          "title": "HTTP 标头准则",
+          "title": "HTTP header guidelines",
           "order": 4,
           "kind": "doc"
         }
@@ -165,12 +165,12 @@
     },
     {
       "id": "performance",
-      "label": "性能",
+      "label": "Performance",
       "order": 7,
       "items": [
         {
           "slug": "output-caching",
-          "title": "输出缓存",
+          "title": "Output caching",
           "order": 1,
           "kind": "doc"
         }
@@ -178,12 +178,12 @@
     },
     {
       "id": "protocols",
-      "label": "协议",
+      "label": "Protocols",
       "order": 8,
       "items": [
         {
           "slug": "grpc",
-          "title": "代理 gRPC",
+          "title": "Proxying gRPC",
           "order": 1,
           "kind": "doc"
         },
@@ -195,7 +195,7 @@
         },
         {
           "slug": "websockets",
-          "title": "WebSockets 与 SPDY",
+          "title": "WebSockets & SPDY",
           "order": 3,
           "kind": "doc"
         }
@@ -203,36 +203,36 @@
     },
     {
       "id": "extensibility",
-      "label": "可扩展性",
+      "label": "Extensibility",
       "order": 9,
       "items": [
         {
           "slug": "extensibility",
-          "title": "概述",
+          "title": "Overview",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "middleware",
-          "title": "中间件",
+          "title": "Middleware",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "direct-forwarding",
-          "title": "直接转发",
+          "title": "Direct forwarding",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "destination-resolvers",
-          "title": "目标解析器",
+          "title": "Destination resolvers",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "extensibility-transforms",
-          "title": "请求与响应转换",
+          "title": "Request & response transforms",
           "order": 5,
           "kind": "doc"
         }
@@ -240,24 +240,24 @@
     },
     {
       "id": "operations",
-      "label": "运维",
+      "label": "Operations",
       "order": 10,
       "items": [
         {
           "slug": "diagnosing-yarp-issues",
-          "title": "诊断基于 YARP 的代理",
+          "title": "Diagnosing YARP-based proxies",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "distributed-tracing",
-          "title": "分布式跟踪",
+          "title": "Distributed tracing",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "ab-testing",
-          "title": "A/B 测试与滚动升级",
+          "title": "A/B testing & rolling upgrades",
           "order": 3,
           "kind": "doc"
         }
@@ -265,24 +265,24 @@
     },
     {
       "id": "deployment",
-      "label": "部署",
+      "label": "Deployment",
       "order": 11,
       "items": [
         {
           "slug": "kubernetes-ingress",
-          "title": "Kubernetes Ingress 控制器",
+          "title": "Kubernetes Ingress Controller",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "service-fabric-int",
-          "title": "Service Fabric 集成",
+          "title": "Service Fabric integration",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "httpsys-delegation",
-          "title": "HTTP.sys 委派",
+          "title": "HTTP.sys delegation",
           "order": 3,
           "kind": "doc"
         }
@@ -292,7 +292,7 @@
   "appendix": [
     {
       "slug": "aspnetcore-getting-started",
-      "title": "ASP.NET Core 入门",
+      "title": "Get started with ASP.NET Core",
       "order": 1,
       "kind": "appendix"
     }

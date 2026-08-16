@@ -1,0 +1,94 @@
+---
+slug: header-guidelines
+title: HTTP header guidelines
+lede: >-
+  Headers are a very important part of processing HTTP requests and each have their own
+sourceUrl: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/header-guidelines
+lastUpdated: 2026-08-11
+---
+
+Headers are a very important part of processing HTTP requests and each have their own semantics and considerations. Most headers are proxied by default, though some used to control how the request is delivered are automatically adjusted or removed by the proxy. The connections between the client and the proxy and between the proxy and the destination are independent. Therefore, headers that affect the connection and transport must be filtered. Many headers contain information like domain names, paths, or other details that may be affected when a reverse proxy is included in the application architecture. The following is a collection of guidelines about how specific headers might be impacted and what to do about them.
+
+## YARP header filtering {#yarp-header-filtering}
+
+YARP automatically removes request and response headers that could impact its ability to forward a request correctly, or that may be used maliciously to bypass features of the proxy. A complete list can be found here , with some highlights described below.
+
+## Connection , KeepAlive , Close {#connection-keepalive-close}
+
+These headers control how the TCP connection is managed and are removed to prevent impacting the connection on the other side of the proxy.
+
+## Transfer-Encoding {#transfer-encoding}
+
+This header describes the format of the request or response body on the wire, e.g. 'chunked', and is removed because the format can vary between the internal and external connection. The incoming and outgoing HTTP stacks will add transport headers as needed.
+
+## TE {#te}
+
+Only the TE: trailers header value is allowed through the proxy since it's required for some gRPC implementations.
+
+## Upgrade {#upgrade}
+
+This is used for protocols like WebSockets. It is removed by default and only added back for specifically supported protocols (WebSockets, SPDY).
+
+## Proxy-* {#proxy}
+
+These are headers used with proxies and are not considered appropriate to forward.
+
+## Alt-Svc {#alt-svc}
+
+This response header is used with HTTP/3 upgrades and only applies to the immediate connection.
+
+## Distributed tracing headers {#distributed-tracing-headers}
+
+These headers include TraceParent , Request-Id , TraceState , Baggage , and Correlation- Context .
+
+They're automatically removed based on DistributedContextPropagator.Fields, allowing the forwarding HttpClient to replace them with updated values.
+
+You can opt out of modifying these headers by setting SocketsHttpHandler.ActivityHeadersPropagator to null :
+
+```csharp
+   services.AddReverseProxy()
+          .ConfigureHttpClient((_, handler) => handler.ActivityHeadersPropagator =
+   null);
+```
+
+## Strict-Transport-Security {#strict-transport-security}
+
+This header instructs clients to always use HTTPS, but there may be a conflict between values provided by the proxy and destination. To avoid confusion, the destination's value is not copied to the response if one was already added to the response by the proxy application.
+
+## Other header guidelines {#other-header-guidelines}
+
+## Host {#host}
+
+The Host header indicates which site on the server the request is intended for. This header is removed by default since the host name used publicly by the proxy is likely to differ from the one used by the service behind the proxy. This can be configured using the RequestHeaderOriginalHost transform.
+
+## X-Forwarded-* , Forwarded {#x-forwarded-forwarded}
+
+Because a separate connection is used to communicate with the destination, these request headers can be used to forward information about the original connection, such as the IP, scheme, port, and client certificate. X-Forwarded-For , X-Forwarded-Proto , X-Forwarded-Host , and X-Forwarded-Prefix are enabled by default. This information is subject to spoofing attacks so any existing headers on the request are removed and replaced by default. The destination app should be careful about how much trust it places in these values. See transforms for configuring these in the proxy. For guidance on configuring the destination app to read these headers, see Configure ASP.NET Core to work with proxy servers and load balancers.
+
+## X-http-method-override , x-http-method , x-method-override {#x-http-method-override-x-http-method-x-method-override}
+
+Some clients and servers limit which HTTP methods they allow (for example, GET). These request headers are sometimes used to work around those restrictions. These headers are proxied by default. If in the proxy you want to prevent these bypasses then use the RequestHeaderRemove transform.
+
+## Set-Cookie {#set-cookie}
+
+This response header may contain fields that constrain aspects of the URL, such as the scheme, domain, or path, where the cookie should be used. Using a reverse proxy may change the effective scheme, domain, or path of a site from the public view. While it would be possible to rewrite response cookies using custom transforms , we recommended instead to use the Forwarded headers described earlier to flow the correct values to the destination app so it can generate the correct set-cookie headers.
+
+## Location {#location}
+
+This response header is used with redirects and may contain a scheme, domain, and path that differ from the public values due to the use of the proxy. While it would be possible to rewrite the Location header using custom transforms, it's recommended instead to use the Forwarded headers described above to flow the correct values to the destination app so it can generate the correct Location headers.
+
+## Server {#server}
+
+This response header indicates what server technology was used to generate the response (for example, IIS, Kestrel). This header is proxied from the destination by default. Applications that want to remove it can use the ResponseHeaderRemove transform, in which case the proxy's
+
+default server header will be used. Suppressing the proxy default server header is server
+
+specific, such as for Kestrel.
+
+## X-Powered-By {#x-powered-by}
+
+This response header indicates what web framework was used to generate the response (for example, ASP.NET). ASP.NET Core does not generate this header but IIS can. This header is proxied from the destination by default. Applications that want to remove it can use the ResponseHeaderRemove transform.
+
+:::note
+The author created this article with assistance from AI. Learn more
+:::

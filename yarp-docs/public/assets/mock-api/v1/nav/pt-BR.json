@@ -3,7 +3,7 @@
   "groups": [
     {
       "id": "getting-started",
-      "label": "Primeiros passos",
+      "label": "Getting started",
       "order": 1,
       "items": [
         {
@@ -22,7 +22,7 @@
     },
     {
       "id": "configuration",
-      "label": "Configuração",
+      "label": "Configuration",
       "order": 2,
       "items": [
         {
@@ -53,18 +53,18 @@
     },
     {
       "id": "routing",
-      "label": "Roteamento",
+      "label": "Routing",
       "order": 3,
       "items": [
         {
           "slug": "header-routing",
-          "title": "Roteamento baseado em cabeçalho",
+          "title": "Header-based routing",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "queryparameter-routing",
-          "title": "Roteamento por parâmetro de consulta",
+          "title": "Query parameter routing",
           "order": 2,
           "kind": "doc"
         }
@@ -72,24 +72,24 @@
     },
     {
       "id": "transforms",
-      "label": "Transformações",
+      "label": "Transforms",
       "order": 4,
       "items": [
         {
           "slug": "transforms",
-          "title": "Visão geral",
+          "title": "Overview",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "transforms-request",
-          "title": "Transformações de requisição",
+          "title": "Request transforms",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "transforms-response",
-          "title": "Transformações de resposta e trailer",
+          "title": "Response & trailer transforms",
           "order": 3,
           "kind": "doc"
         }
@@ -97,7 +97,7 @@
     },
     {
       "id": "traffic-reliability",
-      "label": "Tráfego e confiabilidade",
+      "label": "Traffic & reliability",
       "order": 5,
       "items": [
         {
@@ -108,25 +108,25 @@
         },
         {
           "slug": "session-affinity",
-          "title": "Afinidade de sessão",
+          "title": "Session affinity",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "dests-health-checks",
-          "title": "Verificações de integridade de destino",
+          "title": "Destination health checks",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "rate-limiting",
-          "title": "Limitação de taxa",
+          "title": "Rate limiting",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "timeouts",
-          "title": "Tempos limite de requisição",
+          "title": "Request timeouts",
           "order": 5,
           "kind": "doc"
         }
@@ -134,30 +134,30 @@
     },
     {
       "id": "security",
-      "label": "Segurança",
+      "label": "Security",
       "order": 6,
       "items": [
         {
           "slug": "authn-authz",
-          "title": "Autenticação e autorização",
+          "title": "Authentication & authorization",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "cors",
-          "title": "Requisições entre origens (CORS)",
+          "title": "Cross-origin requests (CORS)",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "https-tls",
-          "title": "HTTPS e TLS",
+          "title": "HTTPS & TLS",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "header-guidelines",
-          "title": "Diretrizes de cabeçalhos HTTP",
+          "title": "HTTP header guidelines",
           "order": 4,
           "kind": "doc"
         }
@@ -165,12 +165,12 @@
     },
     {
       "id": "performance",
-      "label": "Desempenho",
+      "label": "Performance",
       "order": 7,
       "items": [
         {
           "slug": "output-caching",
-          "title": "Cache de saída",
+          "title": "Output caching",
           "order": 1,
           "kind": "doc"
         }
@@ -178,12 +178,12 @@
     },
     {
       "id": "protocols",
-      "label": "Protocolos",
+      "label": "Protocols",
       "order": 8,
       "items": [
         {
           "slug": "grpc",
-          "title": "Proxy de gRPC",
+          "title": "Proxying gRPC",
           "order": 1,
           "kind": "doc"
         },
@@ -195,7 +195,7 @@
         },
         {
           "slug": "websockets",
-          "title": "WebSockets e SPDY",
+          "title": "WebSockets & SPDY",
           "order": 3,
           "kind": "doc"
         }
@@ -203,12 +203,12 @@
     },
     {
       "id": "extensibility",
-      "label": "Extensibilidade",
+      "label": "Extensibility",
       "order": 9,
       "items": [
         {
           "slug": "extensibility",
-          "title": "Visão geral",
+          "title": "Overview",
           "order": 1,
           "kind": "doc"
         },
@@ -220,19 +220,19 @@
         },
         {
           "slug": "direct-forwarding",
-          "title": "Encaminhamento direto",
+          "title": "Direct forwarding",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "destination-resolvers",
-          "title": "Resolvedores de destino",
+          "title": "Destination resolvers",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "extensibility-transforms",
-          "title": "Transformações de requisição e resposta",
+          "title": "Request & response transforms",
           "order": 5,
           "kind": "doc"
         }
@@ -240,24 +240,24 @@
     },
     {
       "id": "operations",
-      "label": "Operações",
+      "label": "Operations",
       "order": 10,
       "items": [
         {
           "slug": "diagnosing-yarp-issues",
-          "title": "Diagnosticando proxies baseados em YARP",
+          "title": "Diagnosing YARP-based proxies",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "distributed-tracing",
-          "title": "Rastreamento distribuído",
+          "title": "Distributed tracing",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "ab-testing",
-          "title": "Testes A/B e atualizações graduais",
+          "title": "A/B testing & rolling upgrades",
           "order": 3,
           "kind": "doc"
         }
@@ -265,24 +265,24 @@
     },
     {
       "id": "deployment",
-      "label": "Implantação",
+      "label": "Deployment",
       "order": 11,
       "items": [
         {
           "slug": "kubernetes-ingress",
-          "title": "Controlador de Ingress do Kubernetes",
+          "title": "Kubernetes Ingress Controller",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "service-fabric-int",
-          "title": "Integração com o Service Fabric",
+          "title": "Service Fabric integration",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "httpsys-delegation",
-          "title": "Delegação do HTTP.sys",
+          "title": "HTTP.sys delegation",
           "order": 3,
           "kind": "doc"
         }
@@ -292,7 +292,7 @@
   "appendix": [
     {
       "slug": "aspnetcore-getting-started",
-      "title": "Primeiros passos com o ASP.NET Core",
+      "title": "Get started with ASP.NET Core",
       "order": 1,
       "kind": "appendix"
     }
