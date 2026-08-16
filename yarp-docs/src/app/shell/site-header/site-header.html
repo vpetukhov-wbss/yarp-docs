@@ -66,28 +66,28 @@
     </button>
     <app-language-picker />
     <app-theme-toggle />
-
-    <span class="hdr-divider" aria-hidden="true"></span>
-
-    <app-support-button />
-    <a
-      class="icon-btn"
-      href="https://www.linkedin.com/in/vladimir-petukhov-5b32ba210"
-      target="_blank"
-      rel="noopener"
-      [attr.aria-label]="'header.creatorLinkedIn' | translate"
-      [attr.title]="'header.creatorLinkedIn' | translate"
-    >
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor" opacity=".12" />
-        <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.6" />
-        <circle cx="7.5" cy="7.5" r="1.6" fill="currentColor" />
-        <rect x="6.2" y="10.5" width="2.6" height="8" rx="0.5" fill="currentColor" />
-        <path
-          d="M11.5 10.5h2.5v1.4c.55-.95 1.7-1.6 3-1.6 2.6 0 3.4 1.7 3.4 4v4.2h-2.6v-3.7c0-1.1-.4-1.9-1.5-1.9-1.1 0-1.7.75-1.7 1.9v3.7h-2.6v-8z"
-          fill="currentColor"
-        />
-      </svg>
-    </a>
   </div>
 </header>
+
+<div class="fab-rail">
+  <app-support-button />
+  <a
+    class="fab-btn"
+    href="https://www.linkedin.com/in/vladimir-petukhov-5b32ba210"
+    target="_blank"
+    rel="noopener"
+    [attr.aria-label]="'header.creatorLinkedIn' | translate"
+    [attr.title]="'header.creatorLinkedIn' | translate"
+  >
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor" opacity=".12" />
+      <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.6" />
+      <circle cx="7.5" cy="7.5" r="1.6" fill="currentColor" />
+      <rect x="6.2" y="10.5" width="2.6" height="8" rx="0.5" fill="currentColor" />
+      <path
+        d="M11.5 10.5h2.5v1.4c.55-.95 1.7-1.6 3-1.6 2.6 0 3.4 1.7 3.4 4v4.2h-2.6v-3.7c0-1.1-.4-1.9-1.5-1.9-1.1 0-1.7.75-1.7 1.9v3.7h-2.6v-8z"
+        fill="currentColor"
+      />
+    </svg>
+  </a>
+</div>

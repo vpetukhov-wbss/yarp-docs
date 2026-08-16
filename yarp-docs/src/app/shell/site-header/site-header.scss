@@ -104,12 +104,56 @@
   flex: none;
 }
 
-.hdr-divider {
-  width: 1px;
-  height: 20px;
-  margin: 0 0.15rem;
-  background: var(--border);
-  flex: none;
+// Floating vertical dock, pinned to the right edge of the viewport and
+// vertically centered - independent of .site's document flow so it stays
+// put across scroll. Houses the two non-functional/social icons (support,
+// LinkedIn); language + theme stay in the header since those are controls
+// people expect to find there.
+.fab-rail {
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 55;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  color: var(--muted);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease,
+    border-color 0.15s ease;
+
+  &:hover {
+    color: var(--ink);
+    border-color: var(--border-strong);
+    transform: scale(1.06);
+  }
+}
+
+@media (max-width: 640px) {
+  .fab-rail {
+    right: 12px;
+  }
+
+  .fab-btn {
+    width: 42px;
+    height: 42px;
+  }
 }
 
 // The full search field collapses below 1024px, same as the mockup - but
