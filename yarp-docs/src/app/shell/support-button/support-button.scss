@@ -9,14 +9,9 @@
   text-decoration: none;
 }
 
-.support-btn {
-  // Warm accent even at rest so the CTA reads as an invitation, not just
-  // another utility icon in the row.
-  color: #d97706;
-
-  &:hover {
-    color: #d97706;
-  }
+.support-emoji {
+  font-size: 16px;
+  line-height: 1;
 }
 
 .support-menu {
