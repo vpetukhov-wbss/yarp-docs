@@ -4,14 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run sitemap:build && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test && vitest run --config vitest.content.config.mts",
     "lint": "ng lint",
     "format": "prettier --write \"src/**/*.{ts,html,scss}\"",
     "format:check": "prettier --check \"src/**/*.{ts,html,scss}\"",
     "content:build": "node scripts/content/build-content.mjs",
-    "content:check": "node scripts/content/validate.mjs"
+    "content:check": "node scripts/content/validate.mjs",
+    "sitemap:build": "node scripts/seo/build-sitemap.mjs"
   },
   "private": true,
   "packageManager": "npm@11.11.0",

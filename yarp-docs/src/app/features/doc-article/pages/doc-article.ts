@@ -15,6 +15,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { map } from 'rxjs';
 
 import type { LocaleCode } from '../../../core/models/locale.model';
+import { SeoService } from '../../../core/seo.service';
 import { NavStore } from '../../../core/state/nav.store';
 import { DocBody } from '../../../shared/components/doc-body/doc-body';
 import { ErrorState } from '../../../shared/components/error-state/error-state';
@@ -55,6 +56,7 @@ export class DocArticle {
   private readonly title = inject(Title);
   private readonly meta = inject(Meta);
   private readonly translate = inject(TranslateService);
+  private readonly seo = inject(SeoService);
 
   private readonly bodyEl = viewChild('bodyEl', { read: ElementRef });
 
@@ -111,15 +113,18 @@ export class DocArticle {
         return;
       }
       const page = this.store.page();
-      if (!page) {
+      const params = this.routeParams();
+      if (!page || !params) {
         return;
       }
+      const path = `/${params.locale}/${params.slug}`;
+      this.seo.setCanonical(path);
+      this.seo.setHreflangAlternates(`/${params.slug}`);
       this.translate.get('meta.titleTemplate', { title: page.title }).subscribe((title) => {
         this.title.setTitle(title);
+        this.meta.updateTag({ name: 'description', content: page.lede });
+        this.seo.setSocialTags({ title, description: page.lede, path });
       });
-      this.meta.updateTag({ name: 'description', content: page.lede });
-      this.meta.updateTag({ property: 'og:title', content: page.title });
-      this.meta.updateTag({ property: 'og:description', content: page.lede });
     });
 
     afterRenderEffect((onCleanup) => {
