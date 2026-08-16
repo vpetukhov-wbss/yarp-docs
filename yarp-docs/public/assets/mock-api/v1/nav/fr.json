@@ -14,7 +14,7 @@
         },
         {
           "slug": "getting-started",
-          "title": "Prise en main",
+          "title": "Prise en main de YARP",
           "order": 2,
           "kind": "doc"
         }
@@ -102,7 +102,7 @@
       "items": [
         {
           "slug": "load-balancing",
-          "title": "Répartition de charge",
+          "title": "Équilibrage de charge",
           "order": 1,
           "kind": "doc"
         },

@@ -8,13 +8,13 @@
       "items": [
         {
           "slug": "yarp-overview",
-          "title": "Información general de YARP",
+          "title": "Información general sobre YARP",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "getting-started",
-          "title": "Primeros pasos",
+          "title": "Introducción a YARP",
           "order": 2,
           "kind": "doc"
         }
@@ -102,7 +102,7 @@
       "items": [
         {
           "slug": "load-balancing",
-          "title": "Balanceo de carga",
+          "title": "Equilibrio de carga",
           "order": 1,
           "kind": "doc"
         },

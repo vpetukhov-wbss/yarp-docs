@@ -14,7 +14,7 @@
         },
         {
           "slug": "getting-started",
-          "title": "Начало работы",
+          "title": "Начало работы с YARP",
           "order": 2,
           "kind": "doc"
         }
@@ -27,7 +27,7 @@
       "items": [
         {
           "slug": "config-files",
-          "title": "Файлы конфигурации",
+          "title": "Конфигурационные файлы",
           "order": 1,
           "kind": "doc"
         },
@@ -39,7 +39,7 @@
         },
         {
           "slug": "config-providers",
-          "title": "Поставщики конфигурации",
+          "title": "Провайдеры конфигурации",
           "order": 3,
           "kind": "doc"
         },

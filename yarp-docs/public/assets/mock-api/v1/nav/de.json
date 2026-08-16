@@ -8,13 +8,13 @@
       "items": [
         {
           "slug": "yarp-overview",
-          "title": "Übersicht über YARP",
+          "title": "Überblick über YARP",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "getting-started",
-          "title": "Erste Schritte",
+          "title": "Erste Schritte mit YARP",
           "order": 2,
           "kind": "doc"
         }
@@ -39,13 +39,13 @@
         },
         {
           "slug": "config-providers",
-          "title": "Konfigurationsanbieter",
+          "title": "Konfigurationsprovider",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "http-client-config",
-          "title": "HTTP-Clientkonfiguration",
+          "title": "HTTP-Client-Konfiguration",
           "order": 4,
           "kind": "doc"
         }
@@ -102,7 +102,7 @@
       "items": [
         {
           "slug": "load-balancing",
-          "title": "Lastenausgleich",
+          "title": "Lastverteilung",
           "order": 1,
           "kind": "doc"
         },

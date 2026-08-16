@@ -14,7 +14,7 @@
         },
         {
           "slug": "getting-started",
-          "title": "Първи стъпки",
+          "title": "Първи стъпки с YARP",
           "order": 2,
           "kind": "doc"
         }
@@ -27,13 +27,13 @@
       "items": [
         {
           "slug": "config-files",
-          "title": "Конфигурационни файлове",
+          "title": "Файлове с конфигурация",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "config-filters",
-          "title": "Конфигурационни филтри",
+          "title": "Филтри за конфигурация",
           "order": 2,
           "kind": "doc"
         },
