@@ -3,27 +3,27 @@
   "locale": "de",
   "group": "extensibility",
   "kind": "doc",
-  "title": "Destination resolvers",
-  "lede": "YARP uses a destination resolver to expand the set of configured destination addresses. The",
+  "title": "Ziel-Resolver",
+  "lede": "YARP verwendet einen Ziel-Resolver, um die Menge der konfigurierten Zieladressen zu erweitern. Der",
   "headings": [
     {
       "id": "yarp-extensibility-destination-resolvers",
-      "text": "YARP Extensibility Destination Resolvers",
+      "text": "YARP-Erweiterbarkeit: Ziel-Resolver",
       "level": 2
     },
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "Einführung",
       "level": 2
     },
     {
       "id": "structure",
-      "text": "Structure",
+      "text": "Struktur",
       "level": 2
     },
     {
       "id": "idestinationresolver-has-a-single-method",
-      "text": "IDestinationResolver has a single method",
+      "text": "IDestinationResolver hat eine einzige Methode",
       "level": 2
     },
     {
@@ -33,37 +33,37 @@
     },
     {
       "id": "lifecycle",
-      "text": "Lifecycle",
+      "text": "Lebenszyklus",
       "level": 2
     },
     {
       "id": "startup",
-      "text": "Startup",
+      "text": "Start",
       "level": 2
     },
     {
       "id": "atomicity",
-      "text": "Atomicity",
+      "text": "Atomarität",
       "level": 2
     },
     {
       "id": "reload",
-      "text": "Reload",
+      "text": "Neuladen",
       "level": 2
     },
     {
       "id": "dns-destination-resolver",
-      "text": "DNS Destination Resolver",
+      "text": "DNS-Ziel-Resolver",
       "level": 2
     },
     {
       "id": "example",
-      "text": "Example",
+      "text": "Beispiel",
       "level": 2
     },
     {
       "id": "configuration",
-      "text": "Configuration",
+      "text": "Konfiguration",
       "level": 2
     },
     {
@@ -77,16 +77,16 @@
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"yarp-extensibility-destination-resolvers\">YARP Extensibility Destination Resolvers</h2><h2 id=\"introduction\">Introduction</h2><p>YARP uses a destination resolver to expand the set of configured destination addresses. The destination resolver can be used as an integration point with service discovery systems.</p>\n<h2 id=\"structure\">Structure</h2><h2 id=\"idestinationresolver-has-a-single-method\">IDestinationResolver has a single method</h2><p>ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations,</p>\n<p>CancellationToken cancellationToken) which should return a ResolvedDestinationCollection instance. The ResolvedDestinationCollection has a collection of DestinationConfig instances, as well as an IChangeToken to notify the proxy when this information is out of date and should be reloaded, which will cause ResolveDestinationsAsync to be called again.</p>\n<h2 id=\"destinationconfig\">DestinationConfig</h2><p>DestinationConfig has a Host property which can be used to specify the default Host header value which the proxy should use when communicating with that destination. This allows the IDestinationResolver to resolve destinations to a collection of IP addresses, for example, without causing SNI or host-based routing to fail.</p>\n<h2 id=\"lifecycle\">Lifecycle</h2><h2 id=\"startup\">Startup</h2><p>The IDestinationResolver should be registered in the DI container as a singleton. At startup, the proxy will resolve this instance and call ResolveDestinationsAsync(...) with the configured destinations retrieved from the resolved IProxyConfigProviders . On this first call the provider may choose to:</p>\n<p>Throw an exception if the provider cannot produce a valid proxy configuration for any reason. This will prevent the application from starting. Asynchronously resolve the destinations. This will stop the application from starting until resolved destinations are available.</p>\n<p>Or, it may choose to return an empty ResolvedDestinationCollection instance while it</p>\n<p>resolves destinations in the background. The provider will need to trigger the</p>\n<p>IChangeToken when the configuration is available.</p>\n<h2 id=\"atomicity\">Atomicity</h2><p>The destinations objects and collections supplied to the proxy should be read-only and not modified once they have been handed to the proxy via GetConfig() .</p>\n<h2 id=\"reload\">Reload</h2><p>If the IChangeToken supports ActiveChangeCallbacks , once the proxy has processed the initial set of destinations it will register a callback with this token. If the provider does not support callbacks then HasChanged will be polled alongside IProxyConfig change tokens, every 5 minutes.</p>\n<p>When the provider wants to provide a new set of destinations to the proxy it should:</p>\n<p>Resolve those destinations in the background. ResolvedDestinationCollection is immutable, so new instances have to be created for any new data. Objects for unchanged destinations can be re-used, or new instances can be created.</p>\n<p>Invalidate the IChangeToken returned from the previous ResolveDestinationsAsync invocation.</p>\n<p>Once the new destinations have been applied, the proxy will register a callback with the new IChangeToken . Note if there are multiple reloads signaled in close succession, the proxy may skip some and resolve destinations as soon as it&#39;s ready.</p>\n<h2 id=\"dns-destination-resolver\">DNS Destination Resolver</h2><p>YARP includes an IDestinationResolver implementation which expands the set of configured destinations by resolving each host name to one or more IP addresses using DNS, creating a destination for each resolved IP. The DNS destination resolver can be added to your reverse proxy using the</p>\n<p>IReverseProxyBuilder.AddDnsDestinationResolver(Action<DnsDestinationResolverOptions>)</p>\n<p>method. The method accepts an optional delegate to configure the resolver&#39;s options, DnsDestinationResolverOptions.</p>\n<h2 id=\"example\">Example</h2><pre class=\"code-block standalone\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"destination-resolvers-code-1\" aria-label=\"Code kopieren\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"destination-resolvers-code-1\"><span class=\"tok-com\">// Add the DNS destination resolver, restricting results to IPv4 addresses</span>\nreverseProxyBuilder<span class=\"tok-punc\">.</span><span class=\"tok-type\">AddDnsDestinationResolver</span><span class=\"tok-punc\">(</span>o <span class=\"tok-punc\">=&gt;</span> o<span class=\"tok-punc\">.</span>AddressFamily <span class=\"tok-punc\">=</span>\nAddressFamily<span class=\"tok-punc\">.</span>InterNetwork<span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span></code></pre><h2 id=\"configuration\">Configuration</h2><p>The DNS destination resolver&#39;s options, DnsDestinationResolverOptions, has the following properties:</p>\n<h2 id=\"refreshperiod\">RefreshPeriod</h2><p>The period between requesting a refresh of a resolved name. This defaults to 5 minutes.</p>\n<h2 id=\"addressfamily\">AddressFamily</h2><p>Optionally, specify an System.Net.Sockets.AddressFamily value of AddressFamily.InterNetwork or AddressFamily.InterNetworkV6 to restrict resolved resolution to IPv4 or IPv6 addresses, respectively. The default value, null , instructs the resolver to not restrict the address family of the results and to use accept all returned addresses.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Hinweis</div><p>The author created this article with assistance from AI. Learn more</p>\n</div></div>",
+  "bodyHtml": "<h2 id=\"yarp-extensibility-destination-resolvers\">YARP-Erweiterbarkeit: Ziel-Resolver</h2><h2 id=\"introduction\">Einführung</h2><p>YARP verwendet einen Ziel-Resolver, um die Menge der konfigurierten Zieladressen zu erweitern. Der Ziel-Resolver kann als Integrationspunkt mit Systemen zur Dienstermittlung (Service Discovery) verwendet werden.</p>\n<h2 id=\"structure\">Struktur</h2><h2 id=\"idestinationresolver-has-a-single-method\">IDestinationResolver hat eine einzige Methode</h2><p>ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations,</p>\n<p>CancellationToken cancellationToken), die eine ResolvedDestinationCollection-Instanz zurückgeben soll. Die ResolvedDestinationCollection enthält eine Sammlung von DestinationConfig-Instanzen sowie ein IChangeToken, um den Proxy zu benachrichtigen, wenn diese Informationen veraltet sind und neu geladen werden sollten, was dazu führt, dass ResolveDestinationsAsync erneut aufgerufen wird.</p>\n<h2 id=\"destinationconfig\">DestinationConfig</h2><p>DestinationConfig verfügt über eine Host-Eigenschaft, mit der der Standard-Host-Headerwert angegeben werden kann, den der Proxy bei der Kommunikation mit diesem Ziel verwenden soll. Dies ermöglicht es dem IDestinationResolver, Ziele beispielsweise auf eine Sammlung von IP-Adressen aufzulösen, ohne dass SNI- oder hostbasiertes Routing dabei fehlschlägt.</p>\n<h2 id=\"lifecycle\">Lebenszyklus</h2><h2 id=\"startup\">Start</h2><p>Der IDestinationResolver sollte im DI-Container als Singleton registriert werden. Beim Start löst der Proxy diese Instanz auf und ruft ResolveDestinationsAsync(...) mit den konfigurierten Zielen auf, die von den aufgelösten IProxyConfigProviders abgerufen wurden. Bei diesem ersten Aufruf kann der Anbieter Folgendes tun:</p>\n<p>Eine Ausnahme auslösen, wenn der Anbieter aus irgendeinem Grund keine gültige Proxykonfiguration erzeugen kann. Dadurch wird der Start der Anwendung verhindert. Die Ziele asynchron auflösen. Dadurch wird der Start der Anwendung so lange verzögert, bis aufgelöste Ziele verfügbar sind.</p>\n<p>Oder, er kann eine leere ResolvedDestinationCollection-Instanz zurückgeben, während er</p>\n<p>Ziele im Hintergrund auflöst. Der Anbieter muss das</p>\n<p>IChangeToken auslösen, sobald die Konfiguration verfügbar ist.</p>\n<h2 id=\"atomicity\">Atomarität</h2><p>Die dem Proxy bereitgestellten Zielobjekte und -sammlungen sollten schreibgeschützt sein und nicht mehr geändert werden, sobald sie dem Proxy über GetConfig() übergeben wurden.</p>\n<h2 id=\"reload\">Neuladen</h2><p>Wenn das IChangeToken ActiveChangeCallbacks unterstützt, registriert der Proxy nach der Verarbeitung der anfänglichen Zielmenge einen Callback bei diesem Token. Unterstützt der Anbieter keine Callbacks, wird HasChanged alle 5 Minuten zusammen mit den IProxyConfig-Änderungstoken abgefragt.</p>\n<p>Wenn der Anbieter dem Proxy eine neue Menge von Zielen bereitstellen möchte, sollte er:</p>\n<p>Diese Ziele im Hintergrund auflösen. ResolvedDestinationCollection ist unveränderlich, sodass für neue Daten stets neue Instanzen erstellt werden müssen. Objekte für unveränderte Ziele können wiederverwendet werden, oder es können neue Instanzen erstellt werden.</p>\n<p>Das von dem vorherigen Aufruf von ResolveDestinationsAsync zurückgegebene IChangeToken ungültig machen.</p>\n<p>Sobald die neuen Ziele angewendet wurden, registriert der Proxy einen Callback beim neuen IChangeToken. Beachten Sie, dass der Proxy bei mehreren, kurz aufeinanderfolgend signalisierten Neuladevorgängen einige davon überspringen und Ziele auflösen kann, sobald er bereit ist.</p>\n<h2 id=\"dns-destination-resolver\">DNS-Ziel-Resolver</h2><p>YARP enthält eine Implementierung von IDestinationResolver, die die Menge der konfigurierten Ziele erweitert, indem jeder Hostname per DNS in eine oder mehrere IP-Adressen aufgelöst wird und für jede aufgelöste IP ein Ziel erstellt wird. Der DNS-Ziel-Resolver kann Ihrem Reverse Proxy über die Methode</p>\n<p>IReverseProxyBuilder.AddDnsDestinationResolver(Action<DnsDestinationResolverOptions>)</p>\n<p>hinzugefügt werden. Die Methode akzeptiert einen optionalen Delegaten, um die Optionen des Resolvers zu konfigurieren, DnsDestinationResolverOptions.</p>\n<h2 id=\"example\">Beispiel</h2><pre class=\"code-block standalone\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"destination-resolvers-code-1\" aria-label=\"Code kopieren\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"destination-resolvers-code-1\"><span class=\"tok-com\">// Add the DNS destination resolver, restricting results to IPv4 addresses</span>\nreverseProxyBuilder<span class=\"tok-punc\">.</span><span class=\"tok-type\">AddDnsDestinationResolver</span><span class=\"tok-punc\">(</span>o <span class=\"tok-punc\">=&gt;</span> o<span class=\"tok-punc\">.</span>AddressFamily <span class=\"tok-punc\">=</span>\nAddressFamily<span class=\"tok-punc\">.</span>InterNetwork<span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span></code></pre><h2 id=\"configuration\">Konfiguration</h2><p>Die Optionen des DNS-Ziel-Resolvers, DnsDestinationResolverOptions, verfügen über die folgenden Eigenschaften:</p>\n<h2 id=\"refreshperiod\">RefreshPeriod</h2><p>Der Zeitraum zwischen den Anforderungen zur Aktualisierung eines aufgelösten Namens. Der Standardwert beträgt 5 Minuten.</p>\n<h2 id=\"addressfamily\">AddressFamily</h2><p>Optional können Sie einen System.Net.Sockets.AddressFamily-Wert von AddressFamily.InterNetwork oder AddressFamily.InterNetworkV6 angeben, um die Auflösung auf IPv4- bzw. IPv6-Adressen zu beschränken. Der Standardwert null weist den Resolver an, die Adressfamilie der Ergebnisse nicht einzuschränken und alle zurückgegebenen Adressen zu akzeptieren.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Hinweis</div><p>Dieser Artikel wurde mit Unterstützung von KI erstellt. Weitere Informationen</p>\n</div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/destination-resolvers",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "direct-forwarding",
-    "title": "Direct forwarding"
+    "title": "Direkte Weiterleitung"
   },
   "next": {
     "slug": "extensibility-transforms",
-    "title": "Request & response transforms"
+    "title": "Anforderungs- und Antworttransformationen"
   }
 }

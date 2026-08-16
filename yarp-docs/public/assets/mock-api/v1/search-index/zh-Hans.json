@@ -1439,220 +1439,220 @@
     "slug": "rate-limiting",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination"
+    "title": "速率限制",
+    "excerpt": "反向代理可以在请求被代理到目标服务器之前对其进行速率限制"
   },
   {
     "slug": "rate-limiting",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Introduction",
+    "title": "速率限制",
+    "headingPath": "速率限制 › 简介",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination servers. This can reduce load on the destination servers, add a…"
+    "excerpt": "反向代理可以在请求被代理到目标服务器之前对其进行速率限制。这样做可以降低目标服务器的负载、增加一层防护，并确保各应用程序之间实施一致的策略。 此功能仅在使用 .NET 7 或更高版本时可用"
   },
   {
     "slug": "rate-limiting",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Defaults",
+    "title": "速率限制",
+    "headingPath": "速率限制 › 默认设置",
     "anchor": "defaults",
-    "excerpt": "No rate limiting is performed on requests unless enabled in the route or application configuration. However, the Rate Limiting middleware (…"
+    "excerpt": "除非在路由或应用程序配置中启用，否则不会对请求执行任何速率限制。不过，速率限制中间件（ app.UseRateLimiter() ）可以对所有路由应用一个默认限流器，这无需在配置中做任何显式启用。示例： C# services.AddRateLimiter(options =&gt;…"
   },
   {
     "slug": "rate-limiting",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Configuration",
+    "title": "速率限制",
+    "headingPath": "速率限制 › 配置",
     "anchor": "configuration",
-    "excerpt": "Rate Limiter policies can be specified per route via RouteConfig.RateLimiterPolicy and can be bound from the Routes sections of the config file. As with other…"
+    "excerpt": "可以通过 RouteConfig.RateLimiterPolicy 为每个路由指定速率限制器策略，该属性也可以从配置文件的 Routes 部分绑定。与其他路由属性一样，此设置可以在不重启代理的情况下进行修改并重新加载。策略名称不区分大小写。 示例： JSON{ \"ReverseProxy\": { \"Routes\":…"
   },
   {
     "slug": "rate-limiting",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Disable Rate Limiting",
+    "title": "速率限制",
+    "headingPath": "速率限制 › 禁用速率限制",
     "anchor": "disable-rate-limiting",
-    "excerpt": "Specifying the value disable in a route&#39;s RateLimiterPolicy parameter means the rate limiter middleware will not apply any policies to this route, even the…"
+    "excerpt": "在路由的 RateLimiterPolicy 参数中指定值 disable，表示速率限制中间件不会对该路由应用任何策略，即使是默认策略也不例外。 说明本文由作者在 AI 协助下创作完成。了解详细信息"
   },
   {
     "slug": "timeouts",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts"
+    "title": "请求超时",
+    "excerpt": ".NET 8 引入了请求超时中间件，可用于配置请求超时"
   },
   {
     "slug": "timeouts",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Introduction",
+    "title": "请求超时",
+    "headingPath": "请求超时 › 简介",
     "anchor": "introduction",
-    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts globally as well as per endpoint. This functionality is also available…"
+    "excerpt": ".NET 8 引入了请求超时中间件，用于全局以及按终结点配置请求超时。在 .NET 8 或更高版本上运行时，YARP 2.1 中同样提供此功能。"
   },
   {
     "slug": "timeouts",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Defaults",
+    "title": "请求超时",
+    "headingPath": "请求超时 › 默认设置",
     "anchor": "defaults",
-    "excerpt": "Requests do not have any timeouts by default, other than the Activity Timeout used to clean up idle requests. A default policy specified in…"
+    "excerpt": "默认情况下，请求不设置任何超时，用于清理空闲请求的活动超时（Activity Timeout）除外。在 RequestTimeoutOptions 中指定的默认策略同样会应用于被代理的请求。"
   },
   {
     "slug": "timeouts",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Configuration",
+    "title": "请求超时",
+    "headingPath": "请求超时 › 配置",
     "anchor": "configuration",
-    "excerpt": "Timeouts and Timeout Policies can be specified per route via RouteConfig and can be bound from the Routes sections of the config file. As with other route…"
+    "excerpt": "可以通过 RouteConfig 为每个路由指定超时和超时策略，这些设置也可以从配置文件的 Routes 部分绑定。与其他路由属性一样，此设置可以在不重启代理的情况下进行修改并重新加载。策略名称不区分大小写。 超时以 TimeSpan 格式（HH:MM:SS）指定。在同一个路由上同时指定 Timeout 和…"
   },
   {
     "slug": "timeouts",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Disable timeouts",
+    "title": "请求超时",
+    "headingPath": "请求超时 › 禁用超时",
     "anchor": "disable-timeouts",
-    "excerpt": "Specifying the value disable in a route&#39;s TimeoutPolicy parameter means the request timeout middleware will not apply timeouts to this route."
+    "excerpt": "在路由的 TimeoutPolicy 参数中指定值 disable，表示请求超时中间件不会对该路由应用超时。"
   },
   {
     "slug": "timeouts",
     "locale": "zh-Hans",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › WebSockets",
+    "title": "请求超时",
+    "headingPath": "请求超时 › WebSockets",
     "anchor": "websockets",
-    "excerpt": "Request timeouts are disabled after the initial WebSocket handshake. 说明The author created this article with assistance from AI. Learn more"
+    "excerpt": "WebSocket 握手完成后，请求超时将被禁用。 说明本文由作者在 AI 协助下创作完成。了解详细信息"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+    "title": "身份验证与授权",
+    "excerpt": "反向代理可用于在请求被转发之前对其进行身份验证和授权"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › YARP Authentication and Authorization",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › YARP 身份验证与授权",
     "anchor": "yarp-authentication-and-authorization",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+    "excerpt": "反向代理可用于在请求被转发之前对其进行身份验证和授权"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Introduction",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › 简介",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied to the destination servers. This can reduce load on the…"
+    "excerpt": "反向代理可用于在请求转发到目标服务器之前对其进行身份验证和授权。这样可以减轻目标服务器的负载,增加一层保护,并确保在各个应用程序中实施一致的策略。"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Defaults",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › 默认设置",
     "anchor": "defaults",
-    "excerpt": "No authentication or authorization is performed on requests unless enabled in the route or application configuration."
+    "excerpt": "除非在路由或应用程序配置中启用,否则不会对请求执行任何身份验证或授权。"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Configuration",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › 配置",
     "anchor": "configuration",
-    "excerpt": "Authorization policies can be specified per route via RouteConfig.AuthorizationPolicy and can be bound from the Routes sections of the config file. As with…"
+    "excerpt": "可以通过 RouteConfig.AuthorizationPolicy 为每个路由指定授权策略,并可从配置文件的 Routes 部分进行绑定。与其他路由属性一样,可以在不重启代理的情况下修改并重新加载该设置。策略名称不区分大小写。 示例: JSON{ \"ReverseProxy\": { \"Routes\": {…"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › DefaultPolicy",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › DefaultPolicy",
     "anchor": "defaultpolicy",
-    "excerpt": "Specifying the value default in a route&#39;s authorization parameter means that route will use the policy defined in AuthorizationOptions.DefaultPolicy. That…"
+    "excerpt": "在路由的授权参数中指定值 default 表示该路由将使用 AuthorizationOptions.DefaultPolicy 中定义的策略。该策略已预先配置为要求经过身份验证的用户。"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Anonymous",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › Anonymous",
     "anchor": "anonymous",
-    "excerpt": "Specifying the value anonymous in a route&#39;s authorization parameter means that route will not require authorization regardless of any other configuration…"
+    "excerpt": "在路由的授权参数中指定值 anonymous 表示该路由将不会 要求进行授权,无论应用程序中是否配置了其他策略,例如 FallbackPolicy。"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › FallbackPolicy",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › FallbackPolicy",
     "anchor": "fallbackpolicy",
-    "excerpt": "AuthorizationOptions.FallbackPolicy is the policy that will be used for any request or route that was not configured with a policy. FallbackPolicy does not…"
+    "excerpt": "AuthorizationOptions.FallbackPolicy 是应用于未配置策略的任何请求或路由的策略。FallbackPolicy 默认没有值,此时将允许所有请求通过。"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Flowing Credentials",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › 传递凭据",
     "anchor": "flowing-credentials",
-    "excerpt": "Even after a request has been authorized in the proxy, the destination server may still need to know who the user is (authentication) and what they&#39;re…"
+    "excerpt": "即使请求已在代理中获得授权,目标服务器可能仍需要知道用户是谁(身份验证)以及他们被允许执行哪些操作(授权)。如何传递这些信息取决于所使用的身份验证类型。"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Cookie, bearer, API keys",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › Cookie、持有者令牌、API 密钥",
     "anchor": "cookie-bearer-api-keys",
-    "excerpt": "These authentication types already pass their values in the request headers and these will flow to the destination server by default. That server will still…"
+    "excerpt": "这些身份验证类型已经在请求标头中传递其值,默认情况下这些值会传递到目标服务器。目标服务器仍需要验证并解释这些值,这会造成一些重复工作。"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › OAuth2, OpenIdConnect, WsFederation",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › OAuth2、OpenIdConnect、WsFederation",
     "anchor": "oauth2-openidconnect-wsfederation",
-    "excerpt": "These protocols are commonly used with remote identity providers. The authentication process can be configured in the proxy application and will result in an…"
+    "excerpt": "这些协议通常与远程标识提供程序一起使用。身份验证过程可以在代理应用程序中进行配置,并会生成一个身份验证 Cookie。该 Cookie 将作为普通请求标头传递到目标服务器。"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Windows, Negotiate, NTLM, Kerberos",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › Windows、Negotiate、NTLM、Kerberos",
     "anchor": "windows-negotiate-ntlm-kerberos",
-    "excerpt": "These authentication types are often bound to a specific connection. They are not supported as means of authenticating a user in a destination server behind…"
+    "excerpt": "这些身份验证类型通常绑定到特定连接。不支持将它们用作在 YARP 代理背后的目标服务器中对用户进行身份验证的手段(参见 #166)。它们可用于对传入代理的请求进行身份验证,但该身份信息必须以其他形式传递给目标服务器。它们也可用于让代理向目标服务器进行身份验证,但仅限于以代理自身用户的身份,不支持模拟客户端。"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Client Certificates",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › 客户端证书",
     "anchor": "client-certificates",
-    "excerpt": "Client certificates are a TLS feature and are negotiated as part of a connection. See these docs for additional information. The certificate can be forwarded…"
+    "excerpt": "客户端证书是 TLS 的一项功能,在连接建立过程中进行协商。请参阅这些文档 了解更多信息。可以使用 ClientCert 转换将该证书作为 HTTP 标头转发到目标服务器。"
   },
   {
     "slug": "authn-authz",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Swapping authentication types",
+    "title": "身份验证与授权",
+    "headingPath": "身份验证与授权 › 转换身份验证类型",
     "anchor": "swapping-authentication-types",
-    "excerpt": "Authentication types like Windows that don&#39;t flow naturally to the destination server will need to be converted in the proxy to an alternate form. For…"
+    "excerpt": "像 Windows 这样无法自然传递到目标服务器的身份验证类型,需要在代理中转换为另一种形式。例如,可以使用用户信息创建 JWT 持有者令牌,并将其设置在代理请求上。 这些转换可以通过自定义请求转换来实现。如果社区有足够的兴趣,可以针对特定场景开发详细示例。我们需要更多社区反馈,以了解您希望如何转换和传递身份信息。…"
   },
   {
     "slug": "cors",
@@ -1710,306 +1710,306 @@
     "slug": "https-tls",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "excerpt": "HTTPS (HTTP over TLS encrypted connections) is the standard way to make HTTP requests on"
+    "title": "HTTPS 与 TLS",
+    "excerpt": "HTTPS(基于 TLS 加密连接的 HTTP)是在"
   },
   {
     "slug": "https-tls",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › TLS Termination",
+    "title": "HTTPS 与 TLS",
+    "headingPath": "HTTPS 与 TLS › TLS 终止",
     "anchor": "tls-termination",
-    "excerpt": "YARP is a level 7 HTTP proxy which means that incoming HTTPS/TLS connections are fully decrypted by the proxy so it can process and forward the HTTP requests.…"
+    "excerpt": "YARP 是一个第 7 层 HTTP 代理,这意味着传入的 HTTPS/TLS 连接会由代理完全解密,以便代理能够处理并转发 HTTP 请求。这通常称为 TLS 终止。根据所提供的配置,与目标之间的传出连接可能加密,也可能不加密。 TLS 隧道传输(CONNECT) 使用 CONNECT 方法进行 TLS…"
   },
   {
     "slug": "https-tls",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Configuring incoming connections",
+    "title": "HTTPS 与 TLS",
+    "headingPath": "HTTPS 与 TLS › 配置传入连接",
     "anchor": "configuring-incoming-connections",
-    "excerpt": "YARP can run on top of all ASP.NET Core servers and configuring HTTPS/TLS for incoming connections is server specific. Check the docs for Kestrel, IIS, and…"
+    "excerpt": "YARP 可以运行在所有 ASP.NET Core 服务器之上,而传入连接的 HTTPS/TLS 配置则因服务器而异。有关配置详细信息,请查阅 Kestrel、IIS 和 Http.Sys 的相关文档。"
   },
   {
     "slug": "https-tls",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Advanced TLS filters with Kestrel",
+    "title": "HTTPS 与 TLS",
+    "headingPath": "HTTPS 与 TLS › 在 Kestrel 中使用高级 TLS 筛选器",
     "anchor": "advanced-tls-filters-with-kestrel",
-    "excerpt": "Kestrel supports intercepting incoming connections before the TLS handshake. YARP includes a TlsFrameHelper API that can parse the raw TLS handshake and enable…"
+    "excerpt": "Kestrel 支持在 TLS 握手之前拦截传入连接。YARP 提供了 TlsFrameHelper API,可用于解析原始 TLS 握手数据,使您能够收集自定义遥测数据或提前拒绝连接。这些 API 无法修改 TLS 握手或解密数据流。请参阅此示例。"
   },
   {
     "slug": "https-tls",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Configuring outgoing connections",
+    "title": "HTTPS 与 TLS",
+    "headingPath": "HTTPS 与 TLS › 配置传出连接",
     "anchor": "configuring-outgoing-connections",
-    "excerpt": "To enable TLS encryption when communicating with a destination specify the destination address as https like &quot;https://destinationHost&quot; . See the…"
+    "excerpt": "若要在与目标通信时启用 TLS 加密,请将目标地址指定为 https,例如 &quot;https://destinationHost&quot;。相关示例请参阅配置文档。 目标地址中指定的主机名默认将用于 TLS 握手, 包括 SNI 和服务器证书验证。如果启用了转发原始 Host 标头, 则将改用该值进行 TLS…"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+    "title": "HTTP 标头准则",
+    "excerpt": "标头是处理 HTTP 请求的重要组成部分,每个标头都有各自的语义和注意事项"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › YARP header filtering",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › YARP 标头筛选",
     "anchor": "yarp-header-filtering",
-    "excerpt": "YARP automatically removes request and response headers that could impact its ability to forward a request correctly, or that may be used maliciously to bypass…"
+    "excerpt": "YARP 会自动移除可能影响其正确转发请求能力的请求标头和响应标头,或可能被恶意用于绕过代理功能的标头。完整列表可以在此处找到,下面介绍了其中一些重点内容。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Connection , KeepAlive , Close",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › Connection、KeepAlive、Close",
     "anchor": "connection-keepalive-close",
-    "excerpt": "These headers control how the TCP connection is managed and are removed to prevent impacting the connection on the other side of the proxy."
+    "excerpt": "这些标头用于控制 TCP 连接的管理方式,为防止影响代理另一侧的连接,这些标头会被移除。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Transfer-Encoding",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › Transfer-Encoding",
     "anchor": "transfer-encoding",
-    "excerpt": "This header describes the format of the request or response body on the wire, e.g. &#39;chunked&#39;, and is removed because the format can vary between the…"
+    "excerpt": "此标头描述了请求或响应正文在传输过程中的格式(例如 &#39;chunked&#39;),由于内部连接和外部连接的格式可能不同,因此会移除该标头。传入和传出的 HTTP 协议栈会根据需要添加相应的传输标头。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › TE",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › TE",
     "anchor": "te",
-    "excerpt": "Only the TE: trailers header value is allowed through the proxy since it&#39;s required for some gRPC implementations."
+    "excerpt": "由于某些 gRPC 实现需要用到该值,因此只有 TE: trailers 这一标头值可以通过代理。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Upgrade",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › Upgrade",
     "anchor": "upgrade",
-    "excerpt": "This is used for protocols like WebSockets. It is removed by default and only added back for specifically supported protocols (WebSockets, SPDY)."
+    "excerpt": "此标头用于 WebSockets 等协议。默认情况下会被移除,仅在专门支持的协议(WebSockets、SPDY)中才会重新添加。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Proxy-*",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › Proxy-*",
     "anchor": "proxy",
-    "excerpt": "These are headers used with proxies and are not considered appropriate to forward."
+    "excerpt": "这些是与代理一起使用的标头,不适合转发。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Alt-Svc",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › Alt-Svc",
     "anchor": "alt-svc",
-    "excerpt": "This response header is used with HTTP/3 upgrades and only applies to the immediate connection."
+    "excerpt": "此响应标头用于 HTTP/3 升级,仅适用于当前直连的连接。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Distributed tracing headers",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › 分布式跟踪标头",
     "anchor": "distributed-tracing-headers",
-    "excerpt": "These headers include TraceParent , Request-Id , TraceState , Baggage , and Correlation- Context . They&#39;re automatically removed based on…"
+    "excerpt": "这些标头包括 TraceParent、Request-Id、TraceState、Baggage 和 Correlation-Context。 系统会根据 DistributedContextPropagator.Fields 自动移除这些标头,从而使转发用的 HttpClient 能够用更新后的值替换它们。…"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Strict-Transport-Security",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › Strict-Transport-Security",
     "anchor": "strict-transport-security",
-    "excerpt": "This header instructs clients to always use HTTPS, but there may be a conflict between values provided by the proxy and destination. To avoid confusion, the…"
+    "excerpt": "此标头指示客户端始终使用 HTTPS,但代理和目标提供的值之间可能存在冲突。为避免混淆,如果代理应用程序已经向响应中添加了该值,则不会再将目标的值复制到响应中。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Other header guidelines",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › 其他标头准则",
     "anchor": "other-header-guidelines",
-    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+    "excerpt": "标头是处理 HTTP 请求的重要组成部分,每个标头都有各自的语义和注意事项"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Host",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › Host",
     "anchor": "host",
-    "excerpt": "The Host header indicates which site on the server the request is intended for. This header is removed by default since the host name used publicly by the…"
+    "excerpt": "Host 标头指示请求所面向的服务器上的具体站点。由于代理对外公开使用的主机名很可能与代理背后服务所使用的主机名不同,因此默认情况下会移除此标头。可以使用 RequestHeaderOriginalHost 转换来配置此行为。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-Forwarded-* , Forwarded",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › X-Forwarded-*、Forwarded",
     "anchor": "x-forwarded-forwarded",
-    "excerpt": "Because a separate connection is used to communicate with the destination, these request headers can be used to forward information about the original…"
+    "excerpt": "由于与目标通信使用的是单独的连接,这些请求标头可用于转发有关原始连接的信息,例如 IP、方案、端口和客户端证书。默认情况下会启用 X-Forwarded-For、X-Forwarded-Proto、X-Forwarded-Host 和…"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-http-method-override , x-http-method , x-method-override",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › X-http-method-override、x-http-method、x-method-override",
     "anchor": "x-http-method-override-x-http-method-x-method-override",
-    "excerpt": "Some clients and servers limit which HTTP methods they allow (for example, GET). These request headers are sometimes used to work around those restrictions.…"
+    "excerpt": "某些客户端和服务器会限制其允许的 HTTP 方法(例如 GET)。这些请求标头有时被用来绕过此类限制。默认情况下,这些标头会被代理转发。如果希望在代理中阻止此类绕过行为,可以使用 RequestHeaderRemove 转换。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Set-Cookie",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › Set-Cookie",
     "anchor": "set-cookie",
-    "excerpt": "This response header may contain fields that constrain aspects of the URL, such as the scheme, domain, or path, where the cookie should be used. Using a…"
+    "excerpt": "此响应标头可能包含用于限制 Cookie 使用范围的字段,例如方案、域或路径。使用反向代理可能会改变站点在公众视角下的有效方案、域或路径。虽然可以通过自定义转换来重写响应 Cookie,但我们建议改用前面介绍的 Forwarded 标头,将正确的值传递给目标应用程序,以便它能够生成正确的 set-cookie 标头。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Location",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › Location",
     "anchor": "location",
-    "excerpt": "This response header is used with redirects and may contain a scheme, domain, and path that differ from the public values due to the use of the proxy. While it…"
+    "excerpt": "此响应标头用于重定向,由于使用了代理,其中的方案、域和路径可能与公开值不同。虽然可以通过自定义转换来重写 Location 标头,但建议改用上文介绍的 Forwarded 标头,将正确的值传递给目标应用程序,以便它能够生成正确的 Location 标头。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Server",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › Server",
     "anchor": "server",
-    "excerpt": "This response header indicates what server technology was used to generate the response (for example, IIS, Kestrel). This header is proxied from the…"
+    "excerpt": "此响应标头指示生成响应所使用的服务器技术(例如 IIS、Kestrel)。默认情况下,此标头会从目标转发。希望移除此标头的应用程序可以使用 ResponseHeaderRemove 转换,此时将改用代理的 默认服务器标头。禁止显示代理默认服务器标头的方式因服务器 而异,例如 Kestrel。"
   },
   {
     "slug": "header-guidelines",
     "locale": "zh-Hans",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-Powered-By",
+    "title": "HTTP 标头准则",
+    "headingPath": "HTTP 标头准则 › X-Powered-By",
     "anchor": "x-powered-by",
-    "excerpt": "This response header indicates what web framework was used to generate the response (for example, ASP.NET). ASP.NET Core does not generate this header but IIS…"
+    "excerpt": "此响应标头指示生成响应所使用的 Web 框架(例如 ASP.NET)。ASP.NET Core 不会生成此标头,但 IIS 可能会生成。默认情况下,此标头会从目标转发。希望移除此标头的应用程序可以使用 ResponseHeaderRemove 转换。 说明本文作者在 AI 的协助下创作本文。了解详情"
   },
   {
     "slug": "output-caching",
     "locale": "zh-Hans",
     "group": "performance",
-    "title": "Output caching",
-    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are"
+    "title": "输出缓存",
+    "excerpt": "反向代理可用于缓存被代理的响应,并在请求被转发之前提供服务"
   },
   {
     "slug": "output-caching",
     "locale": "zh-Hans",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Introduction",
+    "title": "输出缓存",
+    "headingPath": "输出缓存 › 简介",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are proxied to the destination servers. This can reduce load on the…"
+    "excerpt": "反向代理可用于缓存被代理的响应,并在请求转发到目标服务器之前直接提供响应。这样可以减轻目标服务器的负载,增加一层保护,并确保在各个应用程序中实施一致的策略。 此功能仅在使用 .NET 7 或更高版本时可用"
   },
   {
     "slug": "output-caching",
     "locale": "zh-Hans",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Defaults",
+    "title": "输出缓存",
+    "headingPath": "输出缓存 › 默认设置",
     "anchor": "defaults",
-    "excerpt": "No output caching is performed unless enabled in the route or application configuration."
+    "excerpt": "除非在路由或应用程序配置中启用,否则不会执行任何输出缓存。"
   },
   {
     "slug": "output-caching",
     "locale": "zh-Hans",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Configuration",
+    "title": "输出缓存",
+    "headingPath": "输出缓存 › 配置",
     "anchor": "configuration",
-    "excerpt": "Output Cache policies can be specified per route via RouteConfig.OutputCachePolicy and can be bound from the Routes sections of the config file. As with other…"
+    "excerpt": "可以通过 RouteConfig.OutputCachePolicy 为每个路由指定输出缓存策略,并可从配置文件的 Routes 部分进行绑定。与其他路由属性一样,可以在不重启代理的情况下修改并重新加载该设置。策略名称不区分大小写。 示例: JSON{ \"ReverseProxy\": { \"Routes\": {…"
   },
   {
     "slug": "grpc",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It's"
+    "title": "代理 gRPC",
+    "excerpt": "gRPC 是一种与语言无关的高性能远程过程调用 (RPC) 框架。它"
   },
   {
     "slug": "grpc",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Introduction",
+    "title": "代理 gRPC",
+    "headingPath": "代理 gRPC › 简介",
     "anchor": "introduction",
-    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It&#39;s built on top of HTTP/2 and can be proxied through YARP. While…"
+    "excerpt": "gRPC 是一种与语言无关的高性能远程过程调用 (RPC) 框架。它构建在 HTTP/2 之上,可以通过 YARP 进行代理。虽然 YARP 不需要了解 gRPC 消息的内容,但你需要确保启用了正确的 HTTP 协议。gRPC 需要使用 HTTP/2,如果未正确配置 YARP 以发送和接收 HTTP/2…"
   },
   {
     "slug": "grpc",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Configure YARP's Incoming Protocols",
+    "title": "代理 gRPC",
+    "headingPath": "代理 gRPC › 配置 YARP 的传入协议",
     "anchor": "configure-yarp-s-incoming-protocols",
-    "excerpt": "gRPC requires HTTP/2 for most scenarios. HTTP/1.1 and HTTP/2 are enabled by default on ASP.NET Core servers (YARP&#39;s front end) but they require https (TLS)…"
+    "excerpt": "在大多数场景下,gRPC 都需要使用 HTTP/2。ASP.NET Core 服务器(YARP 的前端)默认同时启用 HTTP/1.1 和 HTTP/2,但 HTTP/2 需要使用 https(TLS),因此 YARP 必须监听 https:// URL。 基于 http(非 TLS)的 HTTP/2 仅在…"
   },
   {
     "slug": "grpc",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Configure YARP's Outgoing Protocols",
+    "title": "代理 gRPC",
+    "headingPath": "代理 gRPC › 配置 YARP 的传出协议",
     "anchor": "configure-yarp-s-outgoing-protocols",
-    "excerpt": "YARP automatically negotiates HTTP/1.1 or HTTP/2 for outgoing proxy requests, but only for https (TLS). HTTP/2 over http (non-TLS) requires additional…"
+    "excerpt": "YARP 会自动为传出代理请求协商使用 HTTP/1.1 或 HTTP/2,但这仅适用于 https(TLS)。基于 http(非 TLS)的 HTTP/2 需要额外的设置。请注意,传出协议与传入协议是相互独立的。例如,传入 连接可以使用 https,而传出连接使用 http,这种方式称为 TLS 终止。有关配置…"
   },
   {
     "slug": "grpc",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › gRPC-Web",
+    "title": "代理 gRPC",
+    "headingPath": "代理 gRPC › gRPC-Web",
     "anchor": "grpc-web",
-    "excerpt": "gRPC-Web is an alternative wire-format for gRPC that&#39;s compatible with HTTP/1.1. application/grpc - gRPC over HTTP/2 is how gRPC is typically used.…"
+    "excerpt": "gRPC-Web 是 gRPC 的一种替代性线路格式,兼容 HTTP/1.1。 application/grpc——基于 HTTP/2 的 gRPC,是 gRPC 的典型使用方式。application/grpc-web——gRPC-Web 对 gRPC 协议进行了改造,使其兼容 HTTP/1.1。gRPC-Web…"
   },
   {
     "slug": "http3",
     "locale": "zh-Hans",
     "group": "protocols",
     "title": "HTTP/3",
-    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support"
+    "excerpt": "YARP 1.1 借助 .NET 7 中的 HTTP/3 支持,为入站和出站连接提供 HTTP/3"
   },
   {
     "slug": "http3",
     "locale": "zh-Hans",
     "group": "protocols",
     "title": "HTTP/3",
-    "headingPath": "HTTP/3 › Introduction",
+    "headingPath": "HTTP/3 › 简介",
     "anchor": "introduction",
-    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support in .NET 7. To enable the HTTP/3 protocol in YARP you need to: Configure…"
+    "excerpt": "YARP 1.1 借助 .NET 7 中的 HTTP/3 支持,为入站和出站连接提供 HTTP/3 支持。要在 YARP 中启用 HTTP/3 协议,你需要: 在 Kestrel 中配置入站连接 在 HttpClient 中配置出站连接"
   },
   {
     "slug": "http3",
     "locale": "zh-Hans",
     "group": "protocols",
     "title": "HTTP/3",
-    "headingPath": "HTTP/3 › Set up HTTP/3 on Kestrel",
+    "headingPath": "HTTP/3 › 在 Kestrel 上设置 HTTP/3",
     "anchor": "set-up-http-3-on-kestrel",
-    "excerpt": "Protocols are required in the listener options: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel =&gt; {…"
+    "excerpt": "需要在监听器选项中指定协议: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel =&gt; { kestrel.ListenAnyIP(443, portOptions =&gt;…"
   },
   {
     "slug": "http3",
@@ -2018,59 +2018,59 @@
     "title": "HTTP/3",
     "headingPath": "HTTP/3 › HttpClient",
     "anchor": "httpclient",
-    "excerpt": "The default version of HttpRequest should be replaced by &quot;3&quot;, find more details about HttpRequest configuration. 说明The author created this article…"
+    "excerpt": "应将 HttpRequest 的默认版本替换为 &quot;3&quot;;有关 HttpRequest 配置的更多详细信息,请参阅相关文档。 说明本文作者在 AI 的协助下创作本文。了解详情"
   },
   {
     "slug": "websockets",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+    "title": "WebSockets 与 SPDY",
+    "excerpt": "YARP 默认支持代理 WebSocket 和 SPDY 连接。此支持适用于"
   },
   {
     "slug": "websockets",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › YARP Proxying WebSockets and SPDY",
+    "title": "WebSockets 与 SPDY",
+    "headingPath": "WebSockets 与 SPDY › YARP 代理 WebSockets 和 SPDY",
     "anchor": "yarp-proxying-websockets-and-spdy",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+    "excerpt": "YARP 默认支持代理 WebSocket 和 SPDY 连接。此支持适用于"
   },
   {
     "slug": "websockets",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › Introduction",
+    "title": "WebSockets 与 SPDY",
+    "headingPath": "WebSockets 与 SPDY › 简介",
     "anchor": "introduction",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with both the direct forwarding and full pipeline approaches. WebSockets is…"
+    "excerpt": "YARP 默认支持代理 WebSocket 和 SPDY 连接。该支持同时适用于直接转发和完整管道两种方式。 WebSockets 是一种双向流式协议,构建于 HTTP/1.1 之上,后来又适配到了 HTTP/2 。 SPDY 是 HTTP/2 的前身,常用于 Kubernetes 环境中。"
   },
   {
     "slug": "websockets",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › HTTP/1.1 Upgrades",
+    "title": "WebSockets 与 SPDY",
+    "headingPath": "WebSockets 与 SPDY › HTTP/1.1 升级",
     "anchor": "http-1-1-upgrades",
-    "excerpt": "WebSockets and SPDY are built on top of HTTP/1.1 using a feature called connection upgrades . YARP proxies the initial request, and if the destination server…"
+    "excerpt": "WebSockets 和 SPDY 都构建于 HTTP/1.1 之上,借助一项称为“连接升级”的特性实现。YARP 会代理初始请求,如果目标服务器返回 101 Switching Protocols 响应,就会将该连接升级为使用新协议的不透明双向流。YARP 不支持以这种方式升级到 HTTP/2 等其他协议。"
   },
   {
     "slug": "websockets",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › HTTP/2",
+    "title": "WebSockets 与 SPDY",
+    "headingPath": "WebSockets 与 SPDY › HTTP/2",
     "anchor": "http-2",
-    "excerpt": "YARP supports WebSockets over HTTP/2 starting in .NET 7 and YARP 2.0. Kestrel is the only available AspNetCore server that will accept incoming HTTP/2…"
+    "excerpt": "从 .NET 7 和 YARP 2.0 开始,YARP 支持基于 HTTP/2 的 WebSockets。Kestrel 是唯一支持接受传入 HTTP/2 WebSocket 请求的 AspNetCore 服务器,且该支持是自动启用的。浏览器可以检测到服务器公告的这一支持,并自动切换到 HTTP/2。…"
   },
   {
     "slug": "websockets",
     "locale": "zh-Hans",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › Timeout",
+    "title": "WebSockets 与 SPDY",
+    "headingPath": "WebSockets 与 SPDY › 超时",
     "anchor": "timeout",
-    "excerpt": "Http Request Timeouts (.NET 8+) can apply timeouts to all requests by default or by policy. These timeouts will be disabled after a WebSocket handshake. They…"
+    "excerpt": "HTTP 请求超时(.NET 8+)可以按默认设置或按策略为所有请求应用超时。 这些超时会在 WebSocket 握手完成后被禁用。它们仍会适用于 gRPC 请求。有关更多配置信息,请参阅请求超时。 说明本文作者在 AI 的协助下创作本文。了解详情"
   },
   {
     "slug": "extensibility",

@@ -3,26 +3,37 @@
 // does. Validated by round-tripping an already-migrated slug (yarp-overview):
 // decompile(compile(X)) must equal X (modulo whitespace).
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import { join } from 'node:path';
 import { JSDOM } from 'jsdom';
 
 const ROOT = 'd:/DOWNLOADS/YARP/yarp-docs';
-const PAGES_EN = join(ROOT, 'public/assets/mock-api/v1/pages/en');
-const CONTENT_EN = join(ROOT, 'content/en');
-const i18n = JSON.parse(readFileSync(join(ROOT, 'public/assets/i18n/en.json'), 'utf8'));
-const docBody = i18n.docBody;
+const PAGES_ROOT = join(ROOT, 'public/assets/mock-api/v1/pages');
+const CONTENT_ROOT = join(ROOT, 'content');
 
-const DISPLAY_TO_FENCE = {
-  'C#': 'csharp',
-  JSON: 'json',
-  XML: 'xml',
-  '.NET CLI': 'dotnetcli',
-  Bash: 'bash',
-  PowerShell: 'powershell',
-  YAML: 'yaml',
-  [docBody.langOutput]: 'output',
-  [docBody.langConsole]: 'console',
-};
+const i18nCache = new Map();
+function docBodyFor(locale) {
+  if (!i18nCache.has(locale)) {
+    const i18n = JSON.parse(readFileSync(join(ROOT, 'public/assets/i18n', `${locale}.json`), 'utf8'));
+    i18nCache.set(locale, i18n.docBody);
+  }
+  return i18nCache.get(locale);
+}
+
+function fenceMapFor(locale) {
+  const docBody = docBodyFor(locale);
+  return {
+    'C#': 'csharp',
+    JSON: 'json',
+    XML: 'xml',
+    '.NET CLI': 'dotnetcli',
+    Bash: 'bash',
+    PowerShell: 'powershell',
+    YAML: 'yaml',
+    [docBody.langOutput]: 'output',
+    [docBody.langConsole]: 'console',
+  };
+}
 
 function unescapeHtml(s) {
   return s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
@@ -31,9 +42,9 @@ function unescapeHtml(s) {
 // Inline content of a <code id="..."> block: tok-* spans wrap text only
 // (highlight.mjs's round-trip invariant), so textContent recovers the exact
 // original code bytes after HTML-unescaping.
-function codeBlockToFence(preEl) {
+function codeBlockToFence(preEl, fenceMap) {
   const langTag = preEl.querySelector('.lang-tag').textContent.trim();
-  const fenceLang = DISPLAY_TO_FENCE[langTag] ?? langTag.toLowerCase();
+  const fenceLang = fenceMap[langTag] ?? langTag.toLowerCase();
   const codeEl = preEl.querySelector('code');
   const code = codeEl.textContent;
   return `\`\`\`${fenceLang}\n${code}\n\`\`\``;
@@ -68,14 +79,18 @@ function inline(node, doc) {
   return out;
 }
 
-function blocksToMarkdown(container, doc) {
+// includeHeadingIds: true only for content/en/*.md - translated files must
+// not carry {#id} at all, since the compiler transplants English ids onto
+// translated headings by position (see content/README.md).
+function blocksToMarkdown(container, doc, fenceMap, includeHeadingIds) {
   const parts = [];
   for (const el of container.children) {
     const tag = el.tagName.toLowerCase();
     if (tag === 'h2' || tag === 'h3') {
       const level = tag === 'h2' ? '##' : '###';
       const id = el.getAttribute('id');
-      parts.push(`${level} ${inline(el, doc)} {#${id}}`);
+      const suffix = includeHeadingIds ? ` {#${id}}` : '';
+      parts.push(`${level} ${inline(el, doc)}${suffix}`);
     } else if (tag === 'p') {
       parts.push(inline(el, doc));
     } else if (tag === 'ul' || tag === 'ol') {
@@ -92,14 +107,14 @@ function blocksToMarkdown(container, doc) {
       );
       parts.push([header, sep, ...rows].join('\n'));
     } else if (tag === 'pre' && el.classList.contains('code-block')) {
-      parts.push(codeBlockToFence(el));
+      parts.push(codeBlockToFence(el, fenceMap));
     } else if (tag === 'div' && el.classList.contains('example-box')) {
       const head = el.querySelector('.eb-head');
       const h3 = head.querySelector('h3');
       const title = h3 ? inline(h3, doc) : '';
       const descEls = [...head.children].filter((c) => c.tagName.toLowerCase() !== 'h3');
       const descMd = descEls.map((p) => inline(p, doc)).join('\n\n');
-      const codeBlocks = [...el.querySelectorAll(':scope > pre.code-block')].map(codeBlockToFence);
+      const codeBlocks = [...el.querySelectorAll(':scope > pre.code-block')].map((pre) => codeBlockToFence(pre, fenceMap));
       const body = [descMd, ...codeBlocks].filter(Boolean).join('\n\n');
       parts.push(`:::example ${title}\n${body}\n:::`);
     } else if (tag === 'div' && el.classList.contains('callout')) {
@@ -110,7 +125,7 @@ function blocksToMarkdown(container, doc) {
           : 'note';
       const inner = el.children[1]; // <div><div class="head">LABEL</div>BODY...</div>
       const bodyEls = [...inner.children].filter((c) => !c.classList.contains('head'));
-      const bodyMd = blocksToMarkdown({ children: bodyEls }, doc);
+      const bodyMd = blocksToMarkdown({ children: bodyEls }, doc, fenceMap, includeHeadingIds);
       parts.push(`:::${kind}\n${bodyMd}\n:::`);
     } else {
       throw new Error(`Unhandled top-level tag: ${tag} (class="${el.className}")`);
@@ -155,12 +170,23 @@ function yamlEscape(value) {
   return value;
 }
 
-export function decompileSlug(slug, { outDir = CONTENT_EN, write = true } = {}) {
-  const page = JSON.parse(readFileSync(join(PAGES_EN, `${slug}.json`), 'utf8'));
+function readPageJson(locale, slug, { gitRef } = {}) {
+  if (gitRef) {
+    const path = `yarp-docs/public/assets/mock-api/v1/pages/${locale}/${slug}.json`;
+    const raw = execFileSync('git', ['show', `${gitRef}:${path}`], { cwd: 'd:/DOWNLOADS/YARP', encoding: 'utf8' });
+    return JSON.parse(raw);
+  }
+  return JSON.parse(readFileSync(join(PAGES_ROOT, locale, `${slug}.json`), 'utf8'));
+}
+
+export function decompileSlug(slug, { locale = 'en', outDir, write = true, gitRef } = {}) {
+  const resolvedOutDir = outDir ?? join(CONTENT_ROOT, locale);
+  const page = readPageJson(locale, slug, { gitRef });
   const dom = new JSDOM(`<div id="root">${page.bodyHtml}</div>`);
   const root = dom.window.document.getElementById('root');
   const { seeAlso, trimmed } = extractSeeAlso(root);
-  const bodyMd = blocksToMarkdown(trimmed, dom.window.document);
+  const fenceMap = fenceMapFor(locale);
+  const bodyMd = blocksToMarkdown(trimmed, dom.window.document, fenceMap, locale === 'en');
 
   const fm = [
     '---',
@@ -176,7 +202,7 @@ export function decompileSlug(slug, { outDir = CONTENT_EN, write = true } = {}) 
 
   const md = `${fm.join('\n')}\n${bodyMd}\n`;
   if (write) {
-    writeFileSync(join(outDir, `${slug}.md`), md, 'utf8');
+    writeFileSync(join(resolvedOutDir, `${slug}.md`), md, 'utf8');
   }
   return md;
 }
@@ -184,16 +210,21 @@ export function decompileSlug(slug, { outDir = CONTENT_EN, write = true } = {}) 
 const args = process.argv.slice(2);
 if (args[0] === '--validate') {
   const slug = args[1] || 'yarp-overview';
-  const original = readFileSync(join(CONTENT_EN, `${slug}.md`), 'utf8');
+  const original = readFileSync(join(CONTENT_ROOT, 'en', `${slug}.md`), 'utf8');
   const rebuilt = decompileSlug(slug, { write: false });
   console.log('--- ORIGINAL ---');
   console.log(original);
   console.log('--- REBUILT ---');
   console.log(rebuilt);
   console.log('--- MATCH:', original.trim() === rebuilt.trim(), '---');
+} else if (args[0] === '--restore') {
+  // node decompile-legacy.mjs --restore <locale> <slug> <gitRef>
+  const [, locale, slug, gitRef] = args;
+  decompileSlug(slug, { locale, gitRef });
+  console.log(`Wrote content/${locale}/${slug}.md (from ${gitRef})`);
 } else if (args[0]) {
-  decompileSlug(args[0]);
+  decompileSlug(args[0], { locale: 'en' });
   console.log(`Wrote content/en/${args[0]}.md`);
 } else {
-  console.log('Usage: node decompile-legacy.mjs <slug> | --validate <slug>');
+  console.log('Usage: node decompile-legacy.mjs <slug> | --validate <slug> | --restore <locale> <slug> <gitRef>');
 }

@@ -63,7 +63,7 @@
   "translated": false,
   "prev": {
     "slug": "ab-testing",
-    "title": "A/B testing & rolling upgrades"
+    "title": "A/B-тестирование и поэтапные обновления"
   },
   "next": {
     "slug": "service-fabric-int",

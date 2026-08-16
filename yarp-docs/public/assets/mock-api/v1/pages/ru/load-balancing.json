@@ -28,10 +28,10 @@
   "translated": true,
   "prev": {
     "slug": "transforms-response",
-    "title": "Response & trailer transforms"
+    "title": "Преобразования ответов и трейлеров"
   },
   "next": {
     "slug": "session-affinity",
-    "title": "Session affinity"
+    "title": "Привязка сеансов"
   }
 }

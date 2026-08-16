@@ -58,13 +58,13 @@
       "items": [
         {
           "slug": "header-routing",
-          "title": "Header-based routing",
+          "title": "Маршрутизиране по заглавни части",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "queryparameter-routing",
-          "title": "Query parameter routing",
+          "title": "Маршрутизиране по параметри на заявката",
           "order": 2,
           "kind": "doc"
         }
@@ -77,19 +77,19 @@
       "items": [
         {
           "slug": "transforms",
-          "title": "Overview",
+          "title": "Преглед",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "transforms-request",
-          "title": "Request transforms",
+          "title": "Трансформации на заявки",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "transforms-response",
-          "title": "Response & trailer transforms",
+          "title": "Трансформации на отговори и трейлъри",
           "order": 3,
           "kind": "doc"
         }
@@ -108,25 +108,25 @@
         },
         {
           "slug": "session-affinity",
-          "title": "Session affinity",
+          "title": "Афинитет на сесията",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "dests-health-checks",
-          "title": "Destination health checks",
+          "title": "Проверки за състоянието на дестинациите",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "rate-limiting",
-          "title": "Rate limiting",
+          "title": "Ограничаване на скоростта на заявките",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "timeouts",
-          "title": "Request timeouts",
+          "title": "Таймаути на заявки",
           "order": 5,
           "kind": "doc"
         }
@@ -139,25 +139,25 @@
       "items": [
         {
           "slug": "authn-authz",
-          "title": "Authentication & authorization",
+          "title": "Удостоверяване и оторизация",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "cors",
-          "title": "Cross-origin requests (CORS)",
+          "title": "Заявки от различен произход (CORS)",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "https-tls",
-          "title": "HTTPS & TLS",
+          "title": "HTTPS и TLS",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "header-guidelines",
-          "title": "HTTP header guidelines",
+          "title": "Указания за HTTP заглавни части",
           "order": 4,
           "kind": "doc"
         }
@@ -170,7 +170,7 @@
       "items": [
         {
           "slug": "output-caching",
-          "title": "Output caching",
+          "title": "Кеширане на изхода",
           "order": 1,
           "kind": "doc"
         }
@@ -183,7 +183,7 @@
       "items": [
         {
           "slug": "grpc",
-          "title": "Proxying gRPC",
+          "title": "Проксиране на gRPC",
           "order": 1,
           "kind": "doc"
         },
@@ -195,7 +195,7 @@
         },
         {
           "slug": "websockets",
-          "title": "WebSockets & SPDY",
+          "title": "WebSockets и SPDY",
           "order": 3,
           "kind": "doc"
         }
@@ -208,31 +208,31 @@
       "items": [
         {
           "slug": "extensibility",
-          "title": "Overview",
+          "title": "Преглед",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "middleware",
-          "title": "Middleware",
+          "title": "Междинен софтуер",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "direct-forwarding",
-          "title": "Direct forwarding",
+          "title": "Директно препращане",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "destination-resolvers",
-          "title": "Destination resolvers",
+          "title": "Преобразуватели на дестинации",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "extensibility-transforms",
-          "title": "Request & response transforms",
+          "title": "Трансформации на заявки и отговори",
           "order": 5,
           "kind": "doc"
         }
@@ -245,19 +245,19 @@
       "items": [
         {
           "slug": "diagnosing-yarp-issues",
-          "title": "Diagnosing YARP-based proxies",
+          "title": "Диагностика на прокси сървъри, базирани на YARP",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "distributed-tracing",
-          "title": "Distributed tracing",
+          "title": "Разпределено проследяване",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "ab-testing",
-          "title": "A/B testing & rolling upgrades",
+          "title": "A/B тестване и постепенни надграждания",
           "order": 3,
           "kind": "doc"
         }
@@ -270,19 +270,19 @@
       "items": [
         {
           "slug": "kubernetes-ingress",
-          "title": "Kubernetes Ingress Controller",
+          "title": "Kubernetes Ingress контролер",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "service-fabric-int",
-          "title": "Service Fabric integration",
+          "title": "Интеграция със Service Fabric",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "httpsys-delegation",
-          "title": "HTTP.sys delegation",
+          "title": "Делегиране на HTTP.sys",
           "order": 3,
           "kind": "doc"
         }
@@ -292,7 +292,7 @@
   "appendix": [
     {
       "slug": "aspnetcore-getting-started",
-      "title": "Get started with ASP.NET Core",
+      "title": "Първи стъпки с ASP.NET Core",
       "order": 1,
       "kind": "appendix"
     }

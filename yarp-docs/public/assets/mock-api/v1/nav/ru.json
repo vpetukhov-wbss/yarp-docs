@@ -58,13 +58,13 @@
       "items": [
         {
           "slug": "header-routing",
-          "title": "Header-based routing",
+          "title": "Маршрутизация на основе заголовков",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "queryparameter-routing",
-          "title": "Query parameter routing",
+          "title": "Маршрутизация по параметрам запроса",
           "order": 2,
           "kind": "doc"
         }
@@ -77,19 +77,19 @@
       "items": [
         {
           "slug": "transforms",
-          "title": "Overview",
+          "title": "Обзор",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "transforms-request",
-          "title": "Request transforms",
+          "title": "Преобразования запросов",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "transforms-response",
-          "title": "Response & trailer transforms",
+          "title": "Преобразования ответов и трейлеров",
           "order": 3,
           "kind": "doc"
         }
@@ -108,25 +108,25 @@
         },
         {
           "slug": "session-affinity",
-          "title": "Session affinity",
+          "title": "Привязка сеансов",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "dests-health-checks",
-          "title": "Destination health checks",
+          "title": "Проверки работоспособности узлов назначения",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "rate-limiting",
-          "title": "Rate limiting",
+          "title": "Ограничение скорости запросов",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "timeouts",
-          "title": "Request timeouts",
+          "title": "Тайм-ауты запросов",
           "order": 5,
           "kind": "doc"
         }
@@ -139,25 +139,25 @@
       "items": [
         {
           "slug": "authn-authz",
-          "title": "Authentication & authorization",
+          "title": "Аутентификация и авторизация",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "cors",
-          "title": "Cross-origin requests (CORS)",
+          "title": "Междоменные запросы (CORS)",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "https-tls",
-          "title": "HTTPS & TLS",
+          "title": "HTTPS и TLS",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "header-guidelines",
-          "title": "HTTP header guidelines",
+          "title": "Рекомендации по HTTP-заголовкам",
           "order": 4,
           "kind": "doc"
         }
@@ -170,7 +170,7 @@
       "items": [
         {
           "slug": "output-caching",
-          "title": "Output caching",
+          "title": "Кэширование вывода",
           "order": 1,
           "kind": "doc"
         }
@@ -183,7 +183,7 @@
       "items": [
         {
           "slug": "grpc",
-          "title": "Proxying gRPC",
+          "title": "Проксирование gRPC",
           "order": 1,
           "kind": "doc"
         },
@@ -195,7 +195,7 @@
         },
         {
           "slug": "websockets",
-          "title": "WebSockets & SPDY",
+          "title": "WebSockets и SPDY",
           "order": 3,
           "kind": "doc"
         }
@@ -208,31 +208,31 @@
       "items": [
         {
           "slug": "extensibility",
-          "title": "Overview",
+          "title": "Обзор",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "middleware",
-          "title": "Middleware",
+          "title": "Промежуточное ПО",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "direct-forwarding",
-          "title": "Direct forwarding",
+          "title": "Прямая пересылка",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "destination-resolvers",
-          "title": "Destination resolvers",
+          "title": "Распознаватели узлов назначения",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "extensibility-transforms",
-          "title": "Request & response transforms",
+          "title": "Преобразования запросов и ответов",
           "order": 5,
           "kind": "doc"
         }
@@ -245,19 +245,19 @@
       "items": [
         {
           "slug": "diagnosing-yarp-issues",
-          "title": "Diagnosing YARP-based proxies",
+          "title": "Диагностика прокси на основе YARP",
           "order": 1,
           "kind": "doc"
         },
         {
           "slug": "distributed-tracing",
-          "title": "Distributed tracing",
+          "title": "Распределённая трассировка",
           "order": 2,
           "kind": "doc"
         },
         {
           "slug": "ab-testing",
-          "title": "A/B testing & rolling upgrades",
+          "title": "A/B-тестирование и поэтапные обновления",
           "order": 3,
           "kind": "doc"
         }

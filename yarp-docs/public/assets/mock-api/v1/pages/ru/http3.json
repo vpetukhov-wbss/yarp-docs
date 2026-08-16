@@ -4,16 +4,16 @@
   "group": "protocols",
   "kind": "doc",
   "title": "HTTP/3",
-  "lede": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support",
+  "lede": "YARP 1.1 поддерживает HTTP/3 для входящих и исходящих соединений благодаря поддержке HTTP/3",
   "headings": [
     {
       "id": "introduction",
-      "text": "Introduction",
+      "text": "Введение",
       "level": 2
     },
     {
       "id": "set-up-http-3-on-kestrel",
-      "text": "Set up HTTP/3 on Kestrel",
+      "text": "Настройка HTTP/3 в Kestrel",
       "level": 2
     },
     {
@@ -22,16 +22,16 @@
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"introduction\">Introduction</h2><p>YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support in .NET 7. To enable the HTTP/3 protocol in YARP you need to:</p>\n<p>Configure inbound connections in Kestrel Configure outbound connections in HttpClient</p>\n<h2 id=\"set-up-http-3-on-kestrel\">Set up HTTP/3 on Kestrel</h2><p>Protocols are required in the listener options:</p>\n<pre class=\"code-block standalone\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"http3-code-1\" aria-label=\"Копировать код\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"http3-code-1\">   <span class=\"tok-type\"><span class=\"tok-kw\">var</span></span> builder <span class=\"tok-punc\">=</span> WebApplication<span class=\"tok-punc\">.</span><span class=\"tok-type\">CreateBuilder</span><span class=\"tok-punc\">(</span>args<span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span>\n   builder<span class=\"tok-punc\">.</span>WebHost<span class=\"tok-punc\">.</span><span class=\"tok-type\">ConfigureKestrel</span><span class=\"tok-punc\">(</span>kestrel <span class=\"tok-punc\">=&gt;</span>\n   <span class=\"tok-punc\">{</span>\n          kestrel<span class=\"tok-punc\">.</span><span class=\"tok-type\">ListenAnyIP</span><span class=\"tok-punc\">(</span><span class=\"tok-num\">443</span><span class=\"tok-punc\">,</span> portOptions <span class=\"tok-punc\">=&gt;</span>\n          <span class=\"tok-punc\">{</span>\n                 portOptions<span class=\"tok-punc\">.</span>Protocols <span class=\"tok-punc\">=</span> HttpProtocols<span class=\"tok-punc\">.</span>Http1AndHttp2AndHttp3<span class=\"tok-punc\">;</span>\n                 portOptions<span class=\"tok-punc\">.</span><span class=\"tok-type\">UseHttps</span><span class=\"tok-punc\">(</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span>\n          <span class=\"tok-punc\">}</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span>\n   <span class=\"tok-punc\">}</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span></code></pre><h2 id=\"httpclient\">HttpClient</h2><p>The default version of HttpRequest should be replaced by &quot;3&quot;, find more details about HttpRequest configuration.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Примечание</div><p>The author created this article with assistance from AI. Learn more</p>\n</div></div>",
+  "bodyHtml": "<h2 id=\"introduction\">Введение</h2><p>YARP 1.1 поддерживает HTTP/3 для входящих и исходящих соединений благодаря поддержке HTTP/3 в .NET 7. Чтобы включить протокол HTTP/3 в YARP, необходимо:</p>\n<p>Настроить входящие соединения в Kestrel. Настроить исходящие соединения в HttpClient.</p>\n<h2 id=\"set-up-http-3-on-kestrel\">Настройка HTTP/3 в Kestrel</h2><p>В параметрах прослушивателя необходимо указать протоколы:</p>\n<pre class=\"code-block standalone\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"http3-code-1\" aria-label=\"Копировать код\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"http3-code-1\">   <span class=\"tok-type\"><span class=\"tok-kw\">var</span></span> builder <span class=\"tok-punc\">=</span> WebApplication<span class=\"tok-punc\">.</span><span class=\"tok-type\">CreateBuilder</span><span class=\"tok-punc\">(</span>args<span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span>\n   builder<span class=\"tok-punc\">.</span>WebHost<span class=\"tok-punc\">.</span><span class=\"tok-type\">ConfigureKestrel</span><span class=\"tok-punc\">(</span>kestrel <span class=\"tok-punc\">=&gt;</span>\n   <span class=\"tok-punc\">{</span>\n          kestrel<span class=\"tok-punc\">.</span><span class=\"tok-type\">ListenAnyIP</span><span class=\"tok-punc\">(</span><span class=\"tok-num\">443</span><span class=\"tok-punc\">,</span> portOptions <span class=\"tok-punc\">=&gt;</span>\n          <span class=\"tok-punc\">{</span>\n                 portOptions<span class=\"tok-punc\">.</span>Protocols <span class=\"tok-punc\">=</span> HttpProtocols<span class=\"tok-punc\">.</span>Http1AndHttp2AndHttp3<span class=\"tok-punc\">;</span>\n                 portOptions<span class=\"tok-punc\">.</span><span class=\"tok-type\">UseHttps</span><span class=\"tok-punc\">(</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span>\n          <span class=\"tok-punc\">}</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span>\n   <span class=\"tok-punc\">}</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span></code></pre><h2 id=\"httpclient\">HttpClient</h2><p>Версию HttpRequest по умолчанию следует заменить на &quot;3&quot;; подробнее о настройке HttpRequest см. в соответствующем разделе.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Примечание</div><p>Автор подготовил эту статью с помощью ИИ. Подробнее</p>\n</div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/http3",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "grpc",
-    "title": "Proxying gRPC"
+    "title": "Проксирование gRPC"
   },
   "next": {
     "slug": "websockets",
-    "title": "WebSockets & SPDY"
+    "title": "WebSockets и SPDY"
   }
 }

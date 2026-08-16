@@ -441,378 +441,378 @@
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+    "title": "Маршрутизиране по заглавни части",
+    "excerpt": "Прокси маршрутите, зададени в конфигурацията или чрез код, трябва да включват поне път или хост за съвпадение"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › YARP Header Based Routing",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Маршрутизиране по заглавни части в YARP",
     "anchor": "yarp-header-based-routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+    "excerpt": "Прокси маршрутите, зададени в конфигурацията или чрез код, трябва да включват поне път или хост, спрямо които да става съвпадението. Освен това маршрутът може…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Precedence",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Приоритет",
     "anchor": "precedence",
-    "excerpt": "The default route match precedence order is path method host headers query parameters That means a route which specifies methods and no headers will match…"
+    "excerpt": "Подразбиращият се ред на приоритет при съвпадение на маршрути е път метод хост заглавни части параметри на заявката Това означава, че маршрут, който задава…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Configuration",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Headers are specified in the Match section of a proxy route. If multiple headers rules are specified on a route then all must match for a route to be taken. OR…"
+    "excerpt": "Заглавните части се задават в секцията Match на прокси маршрута. Ако за маршрут са зададени правила за няколко заглавни части, всички трябва да съвпаднат, за…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Contract",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Контракт",
     "anchor": "contract",
-    "excerpt": "RouteHeader defines the code contract and is mapped from config."
+    "excerpt": "RouteHeader определя контракта в кода и се съпоставя с конфигурацията."
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Name",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Name",
     "anchor": "name",
-    "excerpt": "The header name to check for on the request. A non-empty value is required. This field is case- insensitive per the HTTP RFCs."
+    "excerpt": "Името на заглавната част, за което да се проверява в заявката. Изисква се непразна стойност. Полето не различава главни и малки букви съгласно HTTP RFC…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Values",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Values",
     "anchor": "values",
-    "excerpt": "A list of possible values to search for. The header must match at least one of these values according to the specified Mode except for the…"
+    "excerpt": "Списък с възможни стойности, за които да се търси. Заглавната част трябва да съвпадне поне с една от тези стойности съгласно зададения Mode, с изключение на…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Mode",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Mode",
     "anchor": "mode",
-    "excerpt": "HeaderMatchMode specifies how to match the value(s) against the request header. The default is ExactHeader . ExactHeader - Any of the headers with the given…"
+    "excerpt": "HeaderMatchMode определя как да се съпоставят стойността(ите) спрямо заглавната част на заявката. Стойността по подразбиране е ExactHeader. ExactHeader - всяка…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › IsCaseSensitive",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › IsCaseSensitive",
     "anchor": "iscasesensitive",
-    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+    "excerpt": "Указва дали съпоставянето на стойността да се извършва с чувствителност към главни/малки букви. Стойността по подразбиране е false, без чувствителност към…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Examples",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Примери",
     "anchor": "examples",
-    "excerpt": "These examples use the configuration specified above."
+    "excerpt": "Тези примери използват конфигурацията, зададена по-горе."
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 1 - Exact Header Match",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Сценарий 1 - Точно съвпадение на заглавна част",
     "anchor": "scenario-1-exact-header-match",
-    "excerpt": "A request with the following header will match against route1. Header1: Value1 If a header contains multiple values, each one will be matched separately. The…"
+    "excerpt": "Заявка със следната заглавна част ще съвпадне с route1. Header1: Value1 Ако заглавна част съдържа няколко стойности, всяка от тях се съпоставя поотделно.…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 2 - Multiple Values",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Сценарий 2 - Множество стойности",
     "anchor": "scenario-2-multiple-values",
-    "excerpt": "Route2 defined multiple values to search for in a header (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also specified the…"
+    "excerpt": "Route2 задава няколко стойности за търсене в заглавна част (&quot;1prefix&quot;, &quot;2prefix&quot;) - приема се всяка от тях. Той също така задава Mode като…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 3 - Exists",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Сценарий 3 - Exists",
     "anchor": "scenario-3-exists",
-    "excerpt": "Route3 only requires that the header &quot;Header3&quot; exists with any non-empty value The following is an example that will match route3. Header3: value An…"
+    "excerpt": "Route3 изисква само заглавната част &quot;Header3&quot; да съществува с произволна непразна стойност. Следва пример, който ще съвпадне с route3. Header3: value…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 4 - Multiple Headers",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Сценарий 4 - Множество заглавни части",
     "anchor": "scenario-4-multiple-headers",
-    "excerpt": "Route4 requires both header4 and header5 , each matching according to their specified Mode . The following headers will match route4: Header4: value1 Header5:…"
+    "excerpt": "Route4 изисква едновременно header4 и header5, всяка от които съвпада съгласно зададения ѝ Mode. Следните заглавни части ще съвпаднат с route4: Header4: value1…"
   },
   {
     "slug": "header-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 5 - NotExists",
+    "title": "Маршрутизиране по заглавни части",
+    "headingPath": "Маршрутизиране по заглавни части › Сценарий 5 - NotExists",
     "anchor": "scenario-5-notexists",
-    "excerpt": "Route7 requires that the header &quot;Header7&quot; must not exists The following headers will match route7: NotHeader7: AnyValue The following headers will…"
+    "excerpt": "Route7 изисква заглавната част &quot;Header7&quot; да не съществува. Следните заглавни части ще съвпаднат с route7: NotHeader7: AnyValue Следните заглавни…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+    "title": "Маршрутизиране по параметри на заявката",
+    "excerpt": "Прокси маршрутите, зададени в конфигурацията или чрез код, трябва да включват поне път или хост за съвпадение"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › YARP Query Parameter Based Routing",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Маршрутизиране по параметри на заявката в YARP",
     "anchor": "yarp-query-parameter-based-routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+    "excerpt": "Прокси маршрутите, зададени в конфигурацията или чрез код, трябва да включват поне път или хост, спрямо които да става съвпадението. Освен това маршрутът може…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Precedence",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Приоритет",
     "anchor": "precedence",
-    "excerpt": "The default route match precedence order is 1) path, 2) method, 3) host, 4) headers 5) query parameters. That means a route which specifies methods and no…"
+    "excerpt": "Подразбиращият се ред на приоритет при съвпадение на маршрути е 1) път, 2) метод, 3) хост, 4) заглавни части, 5) параметри на заявката. Това означава, че…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Configuration",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Query Parameters are specified in the Match section of a proxy route. If multiple query parameter rules are specified on a route then all must match for a…"
+    "excerpt": "Параметрите на заявката се задават в секцията Match на прокси маршрута. Ако за маршрут са зададени правила за няколко параметъра на заявката, всички трябва да…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Contract",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Контракт",
     "anchor": "contract",
-    "excerpt": "RouteQueryParameter defines the code contract and is mapped from config."
+    "excerpt": "RouteQueryParameter определя контракта в кода и се съпоставя с конфигурацията."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Name",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Name",
     "anchor": "name",
-    "excerpt": "The query parameter name to check for on the request. A non-empty value is required. This field is case-insensitive."
+    "excerpt": "Името на параметъра на заявката, за което да се проверява в заявката. Изисква се непразна стойност. Полето не различава главни и малки букви."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Values",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Values",
     "anchor": "values",
-    "excerpt": "A list of possible values to search for. The query parameter must match at least one of these values according to the specified Mode except for the…"
+    "excerpt": "Списък с възможни стойности, за които да се търси. Параметърът на заявката трябва да съвпадне поне с една от тези стойности съгласно зададения Mode, с…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Mode",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Mode",
     "anchor": "mode",
-    "excerpt": "QueryParameterMatchMode specifies how to match the value(s) against the request query parameter. The default is Exact . Exact - The query parameter must match…"
+    "excerpt": "QueryParameterMatchMode определя как да се съпоставят стойността(ите) спрямо параметъра на заявката. Стойността по подразбиране е Exact. Exact - параметърът на…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › IsCaseSensitive",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › IsCaseSensitive",
     "anchor": "iscasesensitive",
-    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+    "excerpt": "Указва дали съпоставянето на стойността да се извършва с чувствителност към главни/малки букви. Стойността по подразбиране е false, без чувствителност към…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Encoding",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Кодиране",
     "anchor": "encoding",
-    "excerpt": "The request query string will be parsed and decoded before matching against the route rules. &quot;route8&quot; : { &quot;ClusterId&quot;:…"
+    "excerpt": "Низът за заявка (query string) на заявката ще бъде анализиран и декодиран, преди да бъде съпоставен спрямо правилата на маршрута. &quot;route8&quot; : {…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Examples",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Примери",
     "anchor": "examples",
-    "excerpt": "These examples use the configuration specified above."
+    "excerpt": "Тези примери използват конфигурацията, зададена по-горе."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 1 - Exact Query Parameter Match",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Сценарий 1 - Точно съвпадение на параметър на заявката",
     "anchor": "scenario-1-exact-query-parameter-match",
-    "excerpt": "A request with the following query parameter will match against route1. ?QueryParam1=Value1 Multiple query parameters with the same name are not currently…"
+    "excerpt": "Заявка със следния параметър на заявката ще съвпадне с route1. ?QueryParam1=Value1 Понастоящем не се поддържат няколко параметъра на заявката със същото име и…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 2 - Multiple Values",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Сценарий 2 - Множество стойности",
     "anchor": "scenario-2-multiple-values",
-    "excerpt": "Route2 defined multiple values to search for in a query parameter (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also…"
+    "excerpt": "Route2 задава няколко стойности за търсене в параметър на заявката (&quot;1prefix&quot;, &quot;2prefix&quot;) - приема се всяка от тях. Той също така задава…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 3 - Exists",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Сценарий 3 - Exists",
     "anchor": "scenario-3-exists",
-    "excerpt": "Route3 only requires that the query parameter &quot;QueryParam3&quot; exists with any non-empty value The following is an example that will match route3.…"
+    "excerpt": "Route3 изисква само параметърът на заявката &quot;QueryParam3&quot; да съществува с произволна непразна стойност. Следва пример, който ще съвпадне с route3.…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "bg",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 4 - Multiple QueryParameters",
+    "title": "Маршрутизиране по параметри на заявката",
+    "headingPath": "Маршрутизиране по параметри на заявката › Сценарий 4 - Множество параметри на заявката",
     "anchor": "scenario-4-multiple-queryparameters",
-    "excerpt": "Route4 requires both QueryParam4 and QueryParam5 , each matching according to their specified Mode . The following query parameters will match route4:…"
+    "excerpt": "Route4 изисква едновременно QueryParam4 и QueryParam5, всеки от които съвпада съгласно зададения му Mode. Следните параметри на заявката ще съвпаднат с route4:…"
   },
   {
     "slug": "transforms",
     "locale": "bg",
     "group": "transforms",
-    "title": "Overview",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "title": "Преглед",
+    "excerpt": "При проксиране на заявка е обичайно да се променят части от заявката или отговора, за да се адаптират към"
   },
   {
     "slug": "transforms",
     "locale": "bg",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › YARP Request and Response Transforms",
+    "title": "Преглед",
+    "headingPath": "Преглед › Трансформации на заявки и отговори в YARP",
     "anchor": "yarp-request-and-response-transforms",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "При проксиране на заявка е обичайно да се променят части от заявката или отговора, за да се адаптират към"
   },
   {
     "slug": "transforms",
     "locale": "bg",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Introduction",
+    "title": "Преглед",
+    "headingPath": "Преглед › Въведение",
     "anchor": "introduction",
-    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+    "excerpt": "При проксиране на заявка е обичайно да се променят части от заявката или отговора, за да се адаптират към изискванията на дестинационния сървър или за да се…"
   },
   {
     "slug": "transforms",
     "locale": "bg",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Defaults",
+    "title": "Преглед",
+    "headingPath": "Преглед › Стойности по подразбиране",
     "anchor": "defaults",
-    "excerpt": "The following transforms are enabled by default for all routes. They can be configured or disabled as shown later in this document. Host - Suppress the…"
+    "excerpt": "Следните трансформации са активирани по подразбиране за всички маршрути. Те могат да бъдат конфигурирани или деактивирани, както е показано по-нататък в този…"
   },
   {
     "slug": "transforms",
     "locale": "bg",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Transform Categories",
+    "title": "Преглед",
+    "headingPath": "Преглед › Категории трансформации",
     "anchor": "transform-categories",
-    "excerpt": "Transforms fall into a few categories: Request, Response, and Response Trailers. Request trailers are not supported because they are not supported by the…"
+    "excerpt": "Трансформациите се разделят на няколко категории: Request (заявка), Response (отговор) и Response Trailers (трейлъри на отговора). Трейлъри на заявката не се…"
   },
   {
     "slug": "transforms",
     "locale": "bg",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Adding transforms",
+    "title": "Преглед",
+    "headingPath": "Преглед › Добавяне на трансформации",
     "anchor": "adding-transforms",
-    "excerpt": "Transforms can be added to routes either through configuration or programmatically."
+    "excerpt": "Трансформации могат да се добавят към маршрути както чрез конфигурация, така и програмно."
   },
   {
     "slug": "transforms",
     "locale": "bg",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › From Configuration",
+    "title": "Преглед",
+    "headingPath": "Преглед › От конфигурация",
     "anchor": "from-configuration",
-    "excerpt": "Transforms can be configured on RouteConfig.Transforms and can be bound from the Routes sections of the config file. These can be modified and reloaded without…"
+    "excerpt": "Трансформациите могат да се конфигурират чрез RouteConfig.Transforms и могат да се обвързват от секциите Routes на конфигурационния файл. Те могат да бъдат…"
   },
   {
     "slug": "transforms",
     "locale": "bg",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › From Code",
+    "title": "Преглед",
+    "headingPath": "Преглед › От код",
     "anchor": "from-code",
-    "excerpt": "Transforms can be added to routes programmatically by calling the AddTransforms method. AddTransforms can be called after AddReverseProxy to provide a callback…"
+    "excerpt": "Трансформации могат да се добавят към маршрути програмно чрез извикване на метода AddTransforms. AddTransforms може да се извика след AddReverseProxy, за да…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "title": "Трансформации на заявки",
+    "excerpt": "Трансформациите на заявки включват пътя на заявката, низа за заявка, HTTP версията, метода и заглавните части. В кода те се представят чрез"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathPrefix",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › PathPrefix",
     "anchor": "pathprefix",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Трансформациите на заявки включват пътя на заявката, низа за заявка, HTTP версията, метода и заглавните части. В кода те се представят чрез"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Modifies the request path adding a prefix value",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › Променя пътя на заявката, като добавя стойност на префикс",
     "anchor": "modifies-the-request-path-adding-a-prefix-value",
-    "excerpt": "Key Value Required PathPrefix A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } Code: C# routeConfig =…"
+    "excerpt": "Key Value Required PathPrefix A path starting with a &#39;/&#39; yes Конфигурация: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } Код: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathRemovePrefix",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › PathRemovePrefix",
     "anchor": "pathremoveprefix",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Трансформациите на заявки включват пътя на заявката, низа за заявка, HTTP версията, метода и заглавните части. В кода те се представят чрез"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Modifies the request path removing a prefix value",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › Променя пътя на заявката, като премахва стойност на префикс",
     "anchor": "modifies-the-request-path-removing-a-prefix-value",
     "excerpt": "Key Value Expand table PathRemovePrefix A path starting with a &#39;/&#39; Required yes Config: 1/13 JSON…"
   },
@@ -820,35 +820,35 @@
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathSet",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › PathSet",
     "anchor": "pathset",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Трансформациите на заявки включват пътя на заявката, низа за заявка, HTTP версията, метода и заглавните части. В кода те се представят чрез"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Replaces the request path with the specified value",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › Заменя пътя на заявката със зададената стойност",
     "anchor": "replaces-the-request-path-with-the-specified-value",
-    "excerpt": "Key Value Required PathSet A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } Code: C# routeConfig =…"
+    "excerpt": "Key Value Required PathSet A path starting with a &#39;/&#39; yes Конфигурация: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } Код: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathPattern",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › PathPattern",
     "anchor": "pathpattern",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Трансформациите на заявки включват пътя на заявката, низа за заявка, HTTP версията, метода и заглавните части. В кода те се представят чрез"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Replaces the request path using a pattern template",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › Заменя пътя на заявката с помощта на шаблон",
     "anchor": "replaces-the-request-path-using-a-pattern-template",
     "excerpt": "Key Value Expand table PathPattern A path template starting with a &#39;/&#39; Required yes Config: 2/13 JSON…"
   },
@@ -856,44 +856,44 @@
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryValueParameter",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › QueryValueParameter",
     "anchor": "queryvalueparameter",
-    "excerpt": "Adds or replaces parameters in the request query string Key Value Expand table QueryValueParameter Name of a query string parameter Required Set/Append Static…"
+    "excerpt": "Добавя или заменя параметри в низа за заявка на заявката Key Value Expand table QueryValueParameter Name of a query string parameter Required Set/Append Static…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryRouteParameter",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › QueryRouteParameter",
     "anchor": "queryrouteparameter",
-    "excerpt": "Adds or replaces a query string parameter with a value from the route configuration Key Value Expand table QueryRouteParameter Name of a query string parameter…"
+    "excerpt": "Добавя или заменя параметър на низа за заявка със стойност от конфигурацията на маршрута Key Value Expand table QueryRouteParameter Name of a query string…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryRemoveParameter",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › QueryRemoveParameter",
     "anchor": "queryremoveparameter",
-    "excerpt": "Removes the specified parameter from the request query string Key Value Expand table QueryRemoveParameter Name of a query string parameter Required yes Config:…"
+    "excerpt": "Премахва зададения параметър от низа за заявка на заявката Key Value Expand table QueryRemoveParameter Name of a query string parameter Required yes Config:…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › HttpMethodChange",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › HttpMethodChange",
     "anchor": "httpmethodchange",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Трансформациите на заявки включват пътя на заявката, низа за заявка, HTTP версията, метода и заглавните части. В кода те се представят чрез"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Changes the http method used in the request",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › Променя HTTP метода, използван в заявката",
     "anchor": "changes-the-http-method-used-in-the-request",
     "excerpt": "Key Value Expand table HttpMethodChange The http method to replace Required Set The new http method yes yes Config: JSON { \"HttpMethodChange\": \"PUT\", \"Set\":…"
   },
@@ -901,35 +901,35 @@
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeadersCopy",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › RequestHeadersCopy",
     "anchor": "requestheaderscopy",
-    "excerpt": "Sets whether incoming request headers are copied to the outbound request Key Value Default Expand table RequestHeadersCopy true/false true Required yes Config:…"
+    "excerpt": "Задава дали входящите заглавни части на заявката се копират в изходящата заявка Key Value Default Expand table RequestHeadersCopy true/false true Required yes…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderOriginalHost",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › RequestHeaderOriginalHost",
     "anchor": "requestheaderoriginalhost",
-    "excerpt": "Specifies if the incoming request Host header should be copied to the proxy request Key Value Default Expand table RequestHeaderOriginalHost true/false false…"
+    "excerpt": "Указва дали заглавната част Host на входящата заявка трябва да бъде копирана в прокси заявката Key Value Default Expand table RequestHeaderOriginalHost…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeader",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › RequestHeader",
     "anchor": "requestheader",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Трансформациите на заявки включват пътя на заявката, низа за заявка, HTTP версията, метода и заглавните части. В кода те се представят чрез"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Adds or replaces request headers",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › Добавя или заменя заглавни части на заявката",
     "anchor": "adds-or-replaces-request-headers",
     "excerpt": "Key Expand table RequestHeader Set/Append Value Required The header name yes Config: The header value yes JSON { &quot;RequestHeader&quot;:…"
   },
@@ -937,26 +937,26 @@
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderRouteValue",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › RequestHeaderRouteValue",
     "anchor": "requestheaderroutevalue",
-    "excerpt": "Adds or replaces a header with a value from the route configuration Key Value Expand table RequestHeader Name of a query string parameter Required Set/Append…"
+    "excerpt": "Добавя или заменя заглавна част със стойност от конфигурацията на маршрута Key Value Expand table RequestHeader Name of a query string parameter Required…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderRemove",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › RequestHeaderRemove",
     "anchor": "requestheaderremove",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Трансформациите на заявки включват пътя на заявката, низа за заявка, HTTP версията, метода и заглавните части. В кода те се представят чрез"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Removes request headers",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › Премахва заглавни части на заявката",
     "anchor": "removes-request-headers",
     "excerpt": "Key Value Expand table RequestHeaderRemove The header name Required yes Config: JSON { \"RequestHeaderRemove\": \"MyHeader\" } Code: C# routeConfig =…"
   },
@@ -964,8 +964,8 @@
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeadersAllowed",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › RequestHeadersAllowed",
     "anchor": "requestheadersallowed",
     "excerpt": "Key Value Expand table RequestHeadersAllowed A semicolon separated list of allowed header names. Required yes…"
   },
@@ -973,69 +973,69 @@
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › X-Forwarded",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › X-Forwarded",
     "anchor": "x-forwarded",
-    "excerpt": "Adds headers with information about the original client request Key Value Default Required X-Forwarded Default action (Set, Append, Remove, Off) to apply to…"
+    "excerpt": "Добавя заглавни части с информация за оригиналната заявка на клиента Key Value Default Required X-Forwarded Default action (Set, Append, Remove, Off) to apply…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Forwarded",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › Forwarded",
     "anchor": "forwarded",
-    "excerpt": "Adds a header with information about the original client request Key Value Default Re Forwarded A comma separated list containing any of these values:…"
+    "excerpt": "Добавя заглавна част с информация за оригиналната заявка на клиента Key Value Default Re Forwarded A comma separated list containing any of these values:…"
   },
   {
     "slug": "transforms-request",
     "locale": "bg",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › ClientCert",
+    "title": "Трансформации на заявки",
+    "headingPath": "Трансформации на заявки › ClientCert",
     "anchor": "clientcert",
-    "excerpt": "Forwards the client cert used on the inbound connection as a header to destination Key Value Required ClientCert The header name yes Config: JSON {…"
+    "excerpt": "Препраща клиентския сертификат, използван във входящата връзка, като заглавна част към дестинацията Key Value Required ClientCert The header name yes…"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "title": "Трансформации на отговори и трейлъри",
+    "excerpt": "Всички заглавни части и трейлъри на отговора се копират от проксирания отговор към изходящия клиентски"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Response and Response Trailers",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › Отговор и трейлъри на отговора",
     "anchor": "response-and-response-trailers",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client response by default. Response and response trailer transforms may…"
+    "excerpt": "По подразбиране всички заглавни части и трейлъри на отговора се копират от проксирания отговор в изходящия отговор към клиента. Трансформациите на отговора и…"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeadersCopy",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › ResponseHeadersCopy",
     "anchor": "responseheaderscopy",
-    "excerpt": "Sets whether destination response headers are copied to the client Key Value Default Expand table ResponseHeadersCopy true/false true Required yes Config: JSON…"
+    "excerpt": "Задава дали заглавните части на отговора от дестинацията се копират към клиента Key Value Default Expand table ResponseHeadersCopy true/false true Required yes…"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeader",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › ResponseHeader",
     "anchor": "responseheader",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Всички заглавни части и трейлъри на отговора се копират от проксирания отговор към изходящия клиентски"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Adds or replaces response headers",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › Добавя или заменя заглавни части на отговора",
     "anchor": "adds-or-replaces-response-headers",
     "excerpt": "Key Value Default Expand table ResponseHeader The header name (none) Required Set/Append The header value (none) yes When Success/Always/Failure Success yes no…"
   },
@@ -1043,53 +1043,53 @@
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeaderRemove",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › ResponseHeaderRemove",
     "anchor": "responseheaderremove",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Всички заглавни части и трейлъри на отговора се копират от проксирания отговор към изходящия клиентски"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Removes response headers",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › Премахва заглавни части на отговора",
     "anchor": "removes-response-headers",
-    "excerpt": "Key Value Default Required ResponseHeaderRemove The header name (none) yes When Success/Always/Failure Success no Config: JSON{ \"ResponseHeaderRemove\":…"
+    "excerpt": "Key Value Default Required ResponseHeaderRemove The header name (none) yes When Success/Always/Failure Success no Конфигурация: JSON{ \"ResponseHeaderRemove\":…"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeadersAllowed",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › ResponseHeadersAllowed",
     "anchor": "responseheadersallowed",
-    "excerpt": "Key Value Required ResponseHeadersAllowed A semicolon separated list of allowed header names. yes Config: JSON { \"ResponseHeadersAllowed\": \"Header1;header2\" }…"
+    "excerpt": "Key Value Required ResponseHeadersAllowed A semicolon separated list of allowed header names. yes Конфигурация: JSON { \"ResponseHeadersAllowed\":…"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailersCopy",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › ResponseTrailersCopy",
     "anchor": "responsetrailerscopy",
-    "excerpt": "Sets whether destination trailing response headers are copied to the client Key Value Default Expand table ResponseTrailersCopy true/false true Required yes…"
+    "excerpt": "Задава дали трейлър заглавните части на отговора от дестинацията се копират към клиента Key Value Default Expand table ResponseTrailersCopy true/false true…"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailer",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › ResponseTrailer",
     "anchor": "responsetrailer",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Всички заглавни части и трейлъри на отговора се копират от проксирания отговор към изходящия клиентски"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Adds or replaces trailing response headers",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › Добавя или заменя трейлър заглавни части на отговора",
     "anchor": "adds-or-replaces-trailing-response-headers",
     "excerpt": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/transforms-response?view=aspnetcore-9.0 Expand table 5/8 Key Value Default Required…"
   },
@@ -1097,28 +1097,28 @@
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailerRemove",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › ResponseTrailerRemove",
     "anchor": "responsetrailerremove",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Всички заглавни части и трейлъри на отговора се копират от проксирания отговор към изходящия клиентски"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Removes trailing response headers",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › Премахва трейлър заглавни части на отговора",
     "anchor": "removes-trailing-response-headers",
-    "excerpt": "Key Expand table ResponseTrailerRemove When Value Default Required The header name (none) yes Success/Always/Failure Success no Config: JSON {…"
+    "excerpt": "Key Expand table ResponseTrailerRemove When Value Default Required The header name (none) yes Success/Always/Failure Success no Конфигурация: JSON {…"
   },
   {
     "slug": "transforms-response",
     "locale": "bg",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailersAllowed",
+    "title": "Трансформации на отговори и трейлъри",
+    "headingPath": "Трансформации на отговори и трейлъри › ResponseTrailersAllowed",
     "anchor": "responsetrailersallowed",
-    "excerpt": "yes Key Value ResponseTrailersAllowed A semicolon separated list of allowed header names. Config: JSON{ \"ResponseTrailersAllowed\": \"Header1;header2\" } Code:C#…"
+    "excerpt": "yes Key Value ResponseTrailersAllowed A semicolon separated list of allowed header names. Конфигурация: JSON{ \"ResponseTrailersAllowed\": \"Header1;header2\" }…"
   },
   {
     "slug": "load-balancing",
@@ -1164,112 +1164,112 @@
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+    "title": "Афинитет на сесията",
+    "excerpt": "Афинитетът на сесията е механизъм за обвързване (афинитизиране) на причинно свързана последователност от заявки с"
   },
   {
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Concept",
+    "title": "Афинитет на сесията",
+    "headingPath": "Афинитет на сесията › Концепция",
     "anchor": "concept",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the destination that handled the first request when the load is…"
+    "excerpt": "Афинитетът на сесията е механизъм за обвързване (афинитизиране) на причинно свързана последователност от заявки с дестинацията, обработила първата заявка,…"
   },
   {
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Configuration",
+    "title": "Афинитет на сесията",
+    "headingPath": "Афинитет на сесията › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+    "excerpt": "Афинитетът на сесията е механизъм за обвързване (афинитизиране) на причинно свързана последователност от заявки с"
   },
   {
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Services and middleware registration",
+    "title": "Афинитет на сесията",
+    "headingPath": "Афинитет на сесията › Регистриране на услуги и middleware",
     "anchor": "services-and-middleware-registration",
-    "excerpt": "Session affinity services are registered in the DI container automatically by AddReverseProxy() . The middleware UseSessionAffinity() is included by default in…"
+    "excerpt": "Услугите за афинитет на сесията се регистрират автоматично в DI контейнера от AddReverseProxy() . Middleware компонентът UseSessionAffinity() е включен по…"
   },
   {
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Cluster configuration",
+    "title": "Афинитет на сесията",
+    "headingPath": "Афинитет на сесията › Конфигурация на клъстера",
     "anchor": "cluster-configuration",
-    "excerpt": "Session affinity is configured per cluster according to the following configuration scheme. JSON\"ReverseProxy\": { \"Clusters\": { \"&lt;cluster-name&gt;\": {…"
+    "excerpt": "Афинитетът на сесията се конфигурира за всеки клъстер поотделно, съгласно следната конфигурационна схема. JSON\"ReverseProxy\": { \"Clusters\": {…"
   },
   {
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Cookie configuration",
+    "title": "Афинитет на сесията",
+    "headingPath": "Афинитет на сесията › Конфигурация на cookie",
     "anchor": "cookie-configuration",
-    "excerpt": "Attributes for configuring the cookie used with the HashCookie, ArrCookie and Cookie policies can be configured using SessionAffinityCookieConfig . The…"
+    "excerpt": "Атрибутите за конфигуриране на бисквитката (cookie), използвана с политиките HashCookie, ArrCookie и Cookie, могат да се задават чрез…"
   },
   {
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Affinity Key",
+    "title": "Афинитет на сесията",
+    "headingPath": "Афинитет на сесията › Ключ на афинитета",
     "anchor": "affinity-key",
-    "excerpt": "Request to destination affinity is established via the affinity key identifying the target destination. That key can be stored on different request parts…"
+    "excerpt": "Афинитетът между заявка и дестинация се установява чрез ключ на афинитета, идентифициращ целевата дестинация. Този ключ може да се съхранява в различни части…"
   },
   {
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Key Protection",
+    "title": "Афинитет на сесията",
+    "headingPath": "Афинитет на сесията › Защита на ключа",
     "anchor": "key-protection",
-    "excerpt": "The HashCookie policy uses the XxHash64 hash to produce a fast, compact, obscured output format for the cookie value. The ArrCookie policy uses the SHA-256…"
+    "excerpt": "Политиката HashCookie използва хеш алгоритъма XxHash64, за да получи бърз, компактен и прикрит формат за стойността на бисквитката. Политиката ArrCookie…"
   },
   {
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Affinity failure policy",
+    "title": "Афинитет на сесията",
+    "headingPath": "Афинитет на сесията › Политика при неуспешен афинитет",
     "anchor": "affinity-failure-policy",
-    "excerpt": "If the affinity key cannot be decoded or no healthy destination found it&#39;s considered as a failure and an affinity failure policy is called to handle it.…"
+    "excerpt": "Ако ключът на афинитета не може да бъде декодиран или не е намерена здрава дестинация, това се счита за неуспех и се извиква политика при неуспешен афинитет,…"
   },
   {
     "slug": "session-affinity",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Request pipeline",
+    "title": "Афинитет на сесията",
+    "headingPath": "Афинитет на сесията › Конвейер на заявките",
     "anchor": "request-pipeline",
-    "excerpt": "The session affinity mechanisms are implemented by the services (mentioned above) and the two following middleware: SessionAffinityMiddleware - coordinates the…"
+    "excerpt": "Механизмите за афинитет на сесията се реализират от услугите (споменати по-горе) и следните два middleware компонента: SessionAffinityMiddleware - координира…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+    "title": "Проверки за състоянието на дестинациите",
+    "excerpt": "При повечето реални системи е обичайно възлите им от време на време да изпитват"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Active health checks",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Активни проверки за състоянието",
     "anchor": "active-health-checks",
-    "excerpt": "YARP can proactively monitor destination health by sending periodic probing requests to designated health endpoints and analyzing responses. That analysis is…"
+    "excerpt": "YARP може проактивно да наблюдава състоянието на дестинациите, като изпраща периодични пробни заявки към определени крайни точки за здравословно състояние и…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Пример с файл",
     "anchor": "file-example",
     "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Active\": { \"Enabled\": \"true\", \"Interval\": \"00:00:10\", \"Timeout\": \"00:00:10\", \"Policy\": \"ConsecutiveFailures\",…"
   },
@@ -1277,8 +1277,8 @@
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Code example",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Пример с код",
     "anchor": "code-example",
     "excerpt": "C# var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Active = new ActiveHealthCheckConfig { Enabled =…"
   },
@@ -1286,71 +1286,71 @@
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "All but one of active health check settings are specified on the cluster level in Cluster/HealthCheck/Active section. The only exception is an optional…"
+    "excerpt": "Всички настройки за активна проверка на състоянието, с изключение на една, се задават на ниво клъстер в секцията Cluster/HealthCheck/Active. Единственото…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Built-in policies",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Вградени политики",
     "anchor": "built-in-policies",
-    "excerpt": "There is currently one built-in active health check policy - ConsecutiveFailuresHealthPolicy . It counts consecutive health probe failures and marks a…"
+    "excerpt": "В момента съществува една вградена политика за активна проверка на състоянието - ConsecutiveFailuresHealthPolicy . Тя брои последователните неуспешни пробни…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Design",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Дизайн",
     "anchor": "design",
-    "excerpt": "The main service in this process is IActiveHealthCheckMonitor that periodically creates probing requests via IProbingRequestFactory, sends them to all…"
+    "excerpt": "Основната услуга в този процес е IActiveHealthCheckMonitor, която периодично създава пробни заявки чрез IProbingRequestFactory, изпраща ги към всички…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Extensibility",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Разширяемост",
     "anchor": "extensibility",
-    "excerpt": "There are 2 main extensibility points in the active health check subsystem."
+    "excerpt": "В подсистемата за активна проверка на състоянието съществуват 2 основни точки за разширяемост."
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IActiveHealthCheckPolicy",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › IActiveHealthCheckPolicy",
     "anchor": "iactivehealthcheckpolicy",
-    "excerpt": "IActiveHealthCheckPolicy analyzes how destinations respond to active health probes sent by IActiveHealthCheckMonitor , evaluates new active health states for…"
+    "excerpt": "IActiveHealthCheckPolicy анализира как дестинациите отговарят на активните пробни заявки, изпратени от IActiveHealthCheckMonitor , оценява новите активни…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IProbingRequestFactory",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › IProbingRequestFactory",
     "anchor": "iprobingrequestfactory",
-    "excerpt": "IProbingRequestFactory creates active health probing requests to be sent to destination health endpoints. It can take into account…"
+    "excerpt": "IProbingRequestFactory създава активни пробни заявки за проверка на състоянието, които се изпращат към крайните точки за здраве на дестинациите. Тя може да…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Passive health checks",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Пасивни проверки за състоянието",
     "anchor": "passive-health-checks",
-    "excerpt": "YARP can passively watch for successes and failures in client request proxying to reactively evaluate destination health states. Responses to the proxied…"
+    "excerpt": "YARP може пасивно да наблюдава успехите и неуспехите при препращането на клиентски заявки, за да оценява реактивно състоянията на здравето на дестинациите.…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Пример с файл",
     "anchor": "file-example-2",
     "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Passive\": { \"Enabled\": \"true\", \"Policy\": \"TransportFailureRate\", \"ReactivationPeriod\": \"00:02:00\" } },…"
   },
@@ -1358,8 +1358,8 @@
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Code example",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Пример с код",
     "anchor": "code-example-2",
     "excerpt": "C#var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Passive = new PassiveHealthCheckConfig { Enabled =…"
   },
@@ -1367,71 +1367,71 @@
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Конфигурация",
     "anchor": "configuration-2",
-    "excerpt": "Passive health check settings are specified on the cluster level in Cluster/HealthCheck/Passive section. Alternatively, they can be defined in code via the…"
+    "excerpt": "Настройките за пасивна проверка на състоянието се задават на ниво клъстер в секцията Cluster/HealthCheck/Passive. Като алтернатива могат да се дефинират и в…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Built-in policies",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Вградени политики",
     "anchor": "built-in-policies-2",
-    "excerpt": "There is currently one built-in passive health check policy - TransportFailureRateHealthPolicy. It calculates the proxied requests failure rate for each…"
+    "excerpt": "В момента съществува една вградена политика за пасивна проверка на състоянието - TransportFailureRateHealthPolicy. Тя изчислява процента на неуспешните…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Design",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Дизайн",
     "anchor": "design-2",
-    "excerpt": "The main component is PassiveHealthCheckMiddleware sitting in the request pipeline and analyzing responses returned by destinations. For each response from a…"
+    "excerpt": "Основният компонент е PassiveHealthCheckMiddleware, който се намира в конвейера на заявките и анализира отговорите, връщани от дестинациите. За всеки отговор…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Extensibility",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Разширяемост",
     "anchor": "extensibility-2",
-    "excerpt": "There is one main extensibility point in the passive health check subsystem, the IPassiveHealthCheckPolicy ."
+    "excerpt": "В подсистемата за пасивна проверка на състоянието съществува една основна точка за разширяемост - IPassiveHealthCheckPolicy ."
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IPassiveHealthCheckPolicy",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › IPassiveHealthCheckPolicy",
     "anchor": "ipassivehealthcheckpolicy",
-    "excerpt": "IPassiveHealthCheckPolicy analyzes how a destination responded to a proxied client request, evaluates its new passive health state and finally calls…"
+    "excerpt": "IPassiveHealthCheckPolicy анализира как дадена дестинация е отговорила на препратена клиентска заявка, оценява новото ѝ пасивно състояние на здравето и накрая…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Available destination collection",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Колекция от налични дестинации",
     "anchor": "available-destination-collection",
-    "excerpt": "Destinations health state is used to determine which of them are eligible for receiving proxied requests. Each cluster maintains its own list of available…"
+    "excerpt": "Състоянието на здравето на дестинациите се използва, за да се определи кои от тях са допустими за получаване на препратени заявки. Всеки клъстер поддържа…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Конфигурация",
     "anchor": "configuration-3",
-    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+    "excerpt": "При повечето реални системи е обичайно възлите им от време на време да изпитват"
   },
   {
     "slug": "dests-health-checks",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Проверки за състоянието на дестинациите",
+    "headingPath": "Проверки за състоянието на дестинациите › Пример с файл",
     "anchor": "file-example-3",
     "excerpt": "JSON \"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"AvailableDestinationsPolicy\": \"HealthyOrPanic\", \"Passive\": { \"Enabled\": \"true\" } }, \"Destinations\": {…"
   },
@@ -1439,577 +1439,577 @@
     "slug": "rate-limiting",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination"
+    "title": "Ограничаване на скоростта на заявките",
+    "excerpt": "Обратният прокси сървър може да се използва за ограничаване на скоростта на заявките, преди те да бъдат препратени към"
   },
   {
     "slug": "rate-limiting",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Introduction",
+    "title": "Ограничаване на скоростта на заявките",
+    "headingPath": "Ограничаване на скоростта на заявките › Въведение",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination servers. This can reduce load on the destination servers, add a…"
+    "excerpt": "Обратният прокси сървър може да се използва за ограничаване на скоростта на заявките, преди те да бъдат препратени към сървърите на дестинациите. Това може да…"
   },
   {
     "slug": "rate-limiting",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Defaults",
+    "title": "Ограничаване на скоростта на заявките",
+    "headingPath": "Ограничаване на скоростта на заявките › Стойности по подразбиране",
     "anchor": "defaults",
-    "excerpt": "No rate limiting is performed on requests unless enabled in the route or application configuration. However, the Rate Limiting middleware (…"
+    "excerpt": "Не се извършва ограничаване на скоростта на заявките, освен ако това не е включено в конфигурацията на маршрута или приложението. Middleware компонентът за…"
   },
   {
     "slug": "rate-limiting",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Configuration",
+    "title": "Ограничаване на скоростта на заявките",
+    "headingPath": "Ограничаване на скоростта на заявките › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Rate Limiter policies can be specified per route via RouteConfig.RateLimiterPolicy and can be bound from the Routes sections of the config file. As with other…"
+    "excerpt": "Политиките за ограничител на скоростта могат да се задават за отделен маршрут чрез RouteConfig.RateLimiterPolicy и могат да се обвързват от секцията Routes на…"
   },
   {
     "slug": "rate-limiting",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Disable Rate Limiting",
+    "title": "Ограничаване на скоростта на заявките",
+    "headingPath": "Ограничаване на скоростта на заявките › Изключване на ограничаването на скоростта",
     "anchor": "disable-rate-limiting",
-    "excerpt": "Specifying the value disable in a route&#39;s RateLimiterPolicy parameter means the rate limiter middleware will not apply any policies to this route, even the…"
+    "excerpt": "Задаването на стойност disable в параметъра RateLimiterPolicy на даден маршрут означава, че middleware компонентът за ограничител на скоростта няма да прилага…"
   },
   {
     "slug": "timeouts",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts"
+    "title": "Таймаути на заявки",
+    "excerpt": ".NET 8 въведе Request Timeouts Middleware, за да позволи конфигурирането на таймаути на заявките"
   },
   {
     "slug": "timeouts",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Introduction",
+    "title": "Таймаути на заявки",
+    "headingPath": "Таймаути на заявки › Въведение",
     "anchor": "introduction",
-    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts globally as well as per endpoint. This functionality is also available…"
+    "excerpt": ".NET 8 въведе Request Timeouts Middleware, за да позволи конфигурирането на таймаути на заявките както глобално, така и за отделна крайна точка. Тази…"
   },
   {
     "slug": "timeouts",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Defaults",
+    "title": "Таймаути на заявки",
+    "headingPath": "Таймаути на заявки › Стойности по подразбиране",
     "anchor": "defaults",
-    "excerpt": "Requests do not have any timeouts by default, other than the Activity Timeout used to clean up idle requests. A default policy specified in…"
+    "excerpt": "По подразбиране заявките нямат никакви таймаути, с изключение на Activity Timeout, който се използва за прочистване на неактивни заявки. Политика по…"
   },
   {
     "slug": "timeouts",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Configuration",
+    "title": "Таймаути на заявки",
+    "headingPath": "Таймаути на заявки › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Timeouts and Timeout Policies can be specified per route via RouteConfig and can be bound from the Routes sections of the config file. As with other route…"
+    "excerpt": "Таймаутите и политиките за таймаут могат да се задават за отделен маршрут чрез RouteConfig и могат да се обвързват от секцията Routes на конфигурационния файл.…"
   },
   {
     "slug": "timeouts",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Disable timeouts",
+    "title": "Таймаути на заявки",
+    "headingPath": "Таймаути на заявки › Изключване на таймаутите",
     "anchor": "disable-timeouts",
-    "excerpt": "Specifying the value disable in a route&#39;s TimeoutPolicy parameter means the request timeout middleware will not apply timeouts to this route."
+    "excerpt": "Задаването на стойност disable в параметъра TimeoutPolicy на даден маршрут означава, че middleware компонентът за таймаут на заявки няма да прилага таймаути…"
   },
   {
     "slug": "timeouts",
     "locale": "bg",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › WebSockets",
+    "title": "Таймаути на заявки",
+    "headingPath": "Таймаути на заявки › WebSockets",
     "anchor": "websockets",
-    "excerpt": "Request timeouts are disabled after the initial WebSocket handshake. БележкаThe author created this article with assistance from AI. Learn more"
+    "excerpt": "Таймаутите на заявките се изключват след първоначалното установяване на WebSocket връзката (handshake). БележкаТази статия е създадена от автора с помощта на…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+    "title": "Удостоверяване и оторизация",
+    "excerpt": "Обратният прокси сървър може да се използва за удостоверяване и оторизация на заявките, преди те да бъдат препратени"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › YARP Authentication and Authorization",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › Удостоверяване и оторизация в YARP",
     "anchor": "yarp-authentication-and-authorization",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+    "excerpt": "Обратният прокси сървър може да се използва за удостоверяване и оторизация на заявките, преди те да бъдат препратени"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Introduction",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › Въведение",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied to the destination servers. This can reduce load on the…"
+    "excerpt": "Обратният прокси сървър може да се използва за удостоверяване и оторизация на заявките, преди те да бъдат препратени към дестинациите. Това може да намали…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Defaults",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › Стойности по подразбиране",
     "anchor": "defaults",
-    "excerpt": "No authentication or authorization is performed on requests unless enabled in the route or application configuration."
+    "excerpt": "Върху заявките не се извършва удостоверяване или оторизация, освен ако това не е разрешено в конфигурацията на маршрута или на приложението."
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Configuration",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Authorization policies can be specified per route via RouteConfig.AuthorizationPolicy and can be bound from the Routes sections of the config file. As with…"
+    "excerpt": "Политиките за оторизация могат да бъдат зададени за всеки маршрут поотделно чрез RouteConfig.AuthorizationPolicy и могат да бъдат обвързани от секциите Routes…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › DefaultPolicy",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › DefaultPolicy",
     "anchor": "defaultpolicy",
-    "excerpt": "Specifying the value default in a route&#39;s authorization parameter means that route will use the policy defined in AuthorizationOptions.DefaultPolicy. That…"
+    "excerpt": "Задаването на стойност default в параметъра за оторизация на даден маршрут означава, че този маршрут ще използва политиката, дефинирана в…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Anonymous",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › Anonymous",
     "anchor": "anonymous",
-    "excerpt": "Specifying the value anonymous in a route&#39;s authorization parameter means that route will not require authorization regardless of any other configuration…"
+    "excerpt": "Задаването на стойност anonymous в параметъра за оторизация на даден маршрут означава, че този маршрут няма да изисква оторизация, независимо от друга…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › FallbackPolicy",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › FallbackPolicy",
     "anchor": "fallbackpolicy",
-    "excerpt": "AuthorizationOptions.FallbackPolicy is the policy that will be used for any request or route that was not configured with a policy. FallbackPolicy does not…"
+    "excerpt": "AuthorizationOptions.FallbackPolicy е политиката, която ще се използва за всяка заявка или маршрут, за които не е конфигурирана политика. FallbackPolicy няма…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Flowing Credentials",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › Предаване на удостоверителни данни",
     "anchor": "flowing-credentials",
-    "excerpt": "Even after a request has been authorized in the proxy, the destination server may still need to know who the user is (authentication) and what they&#39;re…"
+    "excerpt": "Дори след като дадена заявка вече е била оторизирана в прокси сървъра, дестинацията може все още да се нуждае да знае кой е потребителят (удостоверяване) и…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Cookie, bearer, API keys",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › Cookie, bearer, API ключове",
     "anchor": "cookie-bearer-api-keys",
-    "excerpt": "These authentication types already pass their values in the request headers and these will flow to the destination server by default. That server will still…"
+    "excerpt": "Тези типове удостоверяване вече предават стойностите си в заглавните части на заявката и по подразбиране те се прехвърлят към дестинацията. Тя все пак ще…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › OAuth2, OpenIdConnect, WsFederation",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › OAuth2, OpenIdConnect, WsFederation",
     "anchor": "oauth2-openidconnect-wsfederation",
-    "excerpt": "These protocols are commonly used with remote identity providers. The authentication process can be configured in the proxy application and will result in an…"
+    "excerpt": "Тези протоколи обикновено се използват с отдалечени доставчици на идентичност. Процесът на удостоверяване може да бъде конфигуриран в прокси приложението и…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Windows, Negotiate, NTLM, Kerberos",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › Windows, Negotiate, NTLM, Kerberos",
     "anchor": "windows-negotiate-ntlm-kerberos",
-    "excerpt": "These authentication types are often bound to a specific connection. They are not supported as means of authenticating a user in a destination server behind…"
+    "excerpt": "Тези типове удостоверяване често са обвързани с конкретна връзка. Те не се поддържат като средство за удостоверяване на потребител в дестинация зад YARP прокси…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Client Certificates",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › Клиентски сертификати",
     "anchor": "client-certificates",
-    "excerpt": "Client certificates are a TLS feature and are negotiated as part of a connection. See these docs for additional information. The certificate can be forwarded…"
+    "excerpt": "Клиентските сертификати са функция на TLS и се договарят като част от установяването на връзката. Вижте тази документация за допълнителна информация.…"
   },
   {
     "slug": "authn-authz",
     "locale": "bg",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Swapping authentication types",
+    "title": "Удостоверяване и оторизация",
+    "headingPath": "Удостоверяване и оторизация › Смяна на типовете удостоверяване",
     "anchor": "swapping-authentication-types",
-    "excerpt": "Authentication types like Windows that don&#39;t flow naturally to the destination server will need to be converted in the proxy to an alternate form. For…"
+    "excerpt": "Типове удостоверяване като Windows, които не се предават естествено към дестинацията, трябва да бъдат преобразувани в прокси сървъра в алтернативна форма.…"
   },
   {
     "slug": "cors",
     "locale": "bg",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination"
+    "title": "Заявки от различен произход (CORS)",
+    "excerpt": "Обратният прокси сървър може да обработва заявки от различен произход, преди те да бъдат препратени към дестинацията"
   },
   {
     "slug": "cors",
     "locale": "bg",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Introduction",
+    "title": "Заявки от различен произход (CORS)",
+    "headingPath": "Заявки от различен произход (CORS) › Въведение",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination servers. This can reduce load on the destination servers and…"
+    "excerpt": "Обратният прокси сървър може да обработва заявки от различен произход, преди те да бъдат препратени към дестинациите. Това може да намали натоварването на…"
   },
   {
     "slug": "cors",
     "locale": "bg",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Defaults",
+    "title": "Заявки от различен произход (CORS)",
+    "headingPath": "Заявки от различен произход (CORS) › Стойности по подразбиране",
     "anchor": "defaults",
-    "excerpt": "The requests won&#39;t be automatically matched for cors preflight requests unless enabled in the route or application configuration."
+    "excerpt": "Заявките няма да бъдат автоматично съпоставяни като CORS предварителни (preflight) заявки, освен ако това не е разрешено в конфигурацията на маршрута или на…"
   },
   {
     "slug": "cors",
     "locale": "bg",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Configuration",
+    "title": "Заявки от различен произход (CORS)",
+    "headingPath": "Заявки от различен произход (CORS) › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "CORS policies can be specified per route via RouteConfig.CorsPolicy and can be bound from the Routes sections of the config file. As with other route…"
+    "excerpt": "Политиките за CORS могат да бъдат зададени за всеки маршрут поотделно чрез RouteConfig.CorsPolicy и могат да бъдат обвързани от секциите Routes на…"
   },
   {
     "slug": "cors",
     "locale": "bg",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › DefaultPolicy",
+    "title": "Заявки от различен произход (CORS)",
+    "headingPath": "Заявки от различен произход (CORS) › DefaultPolicy",
     "anchor": "defaultpolicy",
-    "excerpt": "Specifying the value default in a route&#39;s CorsPolicy parameter means that route will use the policy defined in CorsOptions.DefaultPolicy."
+    "excerpt": "Задаването на стойност default в параметъра CorsPolicy на даден маршрут означава, че този маршрут ще използва политиката, дефинирана в…"
   },
   {
     "slug": "cors",
     "locale": "bg",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Disable CORS",
+    "title": "Заявки от различен произход (CORS)",
+    "headingPath": "Заявки от различен произход (CORS) › Деактивиране на CORS",
     "anchor": "disable-cors",
-    "excerpt": "Specifying the value disable in a route&#39;s CorsPolicy parameter means the CORS middleware will refuse the CORS requests. БележкаThe author created this…"
+    "excerpt": "Задаването на стойност disable в параметъра CorsPolicy на даден маршрут означава, че CORS междинният софтуер ще отказва CORS заявките. БележкаТази статия е…"
   },
   {
     "slug": "https-tls",
     "locale": "bg",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "excerpt": "HTTPS (HTTP over TLS encrypted connections) is the standard way to make HTTP requests on"
+    "title": "HTTPS и TLS",
+    "excerpt": "HTTPS (HTTP през криптирани TLS връзки) е стандартният начин за извършване на HTTP заявки в"
   },
   {
     "slug": "https-tls",
     "locale": "bg",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › TLS Termination",
+    "title": "HTTPS и TLS",
+    "headingPath": "HTTPS и TLS › Прекратяване на TLS",
     "anchor": "tls-termination",
-    "excerpt": "YARP is a level 7 HTTP proxy which means that incoming HTTPS/TLS connections are fully decrypted by the proxy so it can process and forward the HTTP requests.…"
+    "excerpt": "YARP е HTTP прокси сървър от ниво 7, което означава, че входящите HTTPS/TLS връзки се дешифрират напълно от прокси сървъра, за да може той да обработи и…"
   },
   {
     "slug": "https-tls",
     "locale": "bg",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Configuring incoming connections",
+    "title": "HTTPS и TLS",
+    "headingPath": "HTTPS и TLS › Конфигуриране на входящите връзки",
     "anchor": "configuring-incoming-connections",
-    "excerpt": "YARP can run on top of all ASP.NET Core servers and configuring HTTPS/TLS for incoming connections is server specific. Check the docs for Kestrel, IIS, and…"
+    "excerpt": "YARP може да работи върху всички сървъри на ASP.NET Core, а конфигурирането на HTTPS/TLS за входящите връзки е специфично за конкретния сървър. Прегледайте…"
   },
   {
     "slug": "https-tls",
     "locale": "bg",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Advanced TLS filters with Kestrel",
+    "title": "HTTPS и TLS",
+    "headingPath": "HTTPS и TLS › Разширени TLS филтри с Kestrel",
     "anchor": "advanced-tls-filters-with-kestrel",
-    "excerpt": "Kestrel supports intercepting incoming connections before the TLS handshake. YARP includes a TlsFrameHelper API that can parse the raw TLS handshake and enable…"
+    "excerpt": "Kestrel поддържа прихващане на входящите връзки преди установяването на TLS връзката (handshake). YARP включва API-то TlsFrameHelper, което може да анализира…"
   },
   {
     "slug": "https-tls",
     "locale": "bg",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Configuring outgoing connections",
+    "title": "HTTPS и TLS",
+    "headingPath": "HTTPS и TLS › Конфигуриране на изходящите връзки",
     "anchor": "configuring-outgoing-connections",
-    "excerpt": "To enable TLS encryption when communicating with a destination specify the destination address as https like &quot;https://destinationHost&quot; . See the…"
+    "excerpt": "За да активирате TLS криптиране при комуникация с дестинация, задайте адреса на дестинацията като https, например &quot;https://destinationHost&quot;. Вижте…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+    "title": "Указания за HTTP заглавни части",
+    "excerpt": "Заглавните части са много важна част от обработката на HTTP заявките и всяка от тях има своя"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › YARP header filtering",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Филтриране на заглавни части в YARP",
     "anchor": "yarp-header-filtering",
-    "excerpt": "YARP automatically removes request and response headers that could impact its ability to forward a request correctly, or that may be used maliciously to bypass…"
+    "excerpt": "YARP автоматично премахва заглавни части на заявката и отговора, които биха могли да повлияят на способността му да препраща заявката правилно, или които биха…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Connection , KeepAlive , Close",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Connection , KeepAlive , Close",
     "anchor": "connection-keepalive-close",
-    "excerpt": "These headers control how the TCP connection is managed and are removed to prevent impacting the connection on the other side of the proxy."
+    "excerpt": "Тези заглавни части контролират начина на управление на TCP връзката и се премахват, за да не се повлияе на връзката от другата страна на прокси сървъра."
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Transfer-Encoding",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Transfer-Encoding",
     "anchor": "transfer-encoding",
-    "excerpt": "This header describes the format of the request or response body on the wire, e.g. &#39;chunked&#39;, and is removed because the format can vary between the…"
+    "excerpt": "Тази заглавна част описва формата на тялото на заявката или отговора при преноса, например &#39;chunked&#39;, и се премахва, защото форматът може да се…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › TE",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › TE",
     "anchor": "te",
-    "excerpt": "Only the TE: trailers header value is allowed through the proxy since it&#39;s required for some gRPC implementations."
+    "excerpt": "През прокси сървъра се пропуска само стойността TE: trailers, тъй като тя е необходима за някои реализации на gRPC."
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Upgrade",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Upgrade",
     "anchor": "upgrade",
-    "excerpt": "This is used for protocols like WebSockets. It is removed by default and only added back for specifically supported protocols (WebSockets, SPDY)."
+    "excerpt": "Тя се използва за протоколи като WebSockets. По подразбиране се премахва и се добавя обратно само за изрично поддържаните протоколи (WebSockets, SPDY)."
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Proxy-*",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Proxy-*",
     "anchor": "proxy",
-    "excerpt": "These are headers used with proxies and are not considered appropriate to forward."
+    "excerpt": "Това са заглавни части, използвани с прокси сървъри, и не се считат за подходящи за препращане."
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Alt-Svc",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Alt-Svc",
     "anchor": "alt-svc",
-    "excerpt": "This response header is used with HTTP/3 upgrades and only applies to the immediate connection."
+    "excerpt": "Тази заглавна част на отговора се използва при надграждания до HTTP/3 и важи само за непосредствената връзка."
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Distributed tracing headers",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Заглавни части за разпределено проследяване",
     "anchor": "distributed-tracing-headers",
-    "excerpt": "These headers include TraceParent , Request-Id , TraceState , Baggage , and Correlation- Context . They&#39;re automatically removed based on…"
+    "excerpt": "Тези заглавни части включват TraceParent , Request-Id , TraceState , Baggage и Correlation- Context . Те се премахват автоматично въз основа на…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Strict-Transport-Security",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Strict-Transport-Security",
     "anchor": "strict-transport-security",
-    "excerpt": "This header instructs clients to always use HTTPS, but there may be a conflict between values provided by the proxy and destination. To avoid confusion, the…"
+    "excerpt": "Тази заглавна част инструктира клиентите винаги да използват HTTPS, но може да възникне конфликт между стойностите, предоставени от прокси сървъра и от…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Other header guidelines",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Други указания за заглавни части",
     "anchor": "other-header-guidelines",
-    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+    "excerpt": "Заглавните части са много важна част от обработката на HTTP заявките и всяка от тях има своя"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Host",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Host",
     "anchor": "host",
-    "excerpt": "The Host header indicates which site on the server the request is intended for. This header is removed by default since the host name used publicly by the…"
+    "excerpt": "Заглавната част Host указва за кой сайт на сървъра е предназначена заявката. По подразбиране тя се премахва, тъй като хост името, използвано публично от прокси…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-Forwarded-* , Forwarded",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › X-Forwarded-* , Forwarded",
     "anchor": "x-forwarded-forwarded",
-    "excerpt": "Because a separate connection is used to communicate with the destination, these request headers can be used to forward information about the original…"
+    "excerpt": "Тъй като за комуникацията с дестинацията се използва отделна връзка, тези заглавни части на заявката могат да се използват за препращане на информация за…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-http-method-override , x-http-method , x-method-override",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › X-http-method-override , x-http-method , x-method-override",
     "anchor": "x-http-method-override-x-http-method-x-method-override",
-    "excerpt": "Some clients and servers limit which HTTP methods they allow (for example, GET). These request headers are sometimes used to work around those restrictions.…"
+    "excerpt": "Някои клиенти и сървъри ограничават кои HTTP методи позволяват (например GET). Тези заглавни части на заявката понякога се използват за заобикаляне на тези…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Set-Cookie",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Set-Cookie",
     "anchor": "set-cookie",
-    "excerpt": "This response header may contain fields that constrain aspects of the URL, such as the scheme, domain, or path, where the cookie should be used. Using a…"
+    "excerpt": "Тази заглавна част на отговора може да съдържа полета, които ограничават аспекти на URL адреса, като схема, домейн или път, за които бисквитката трябва да се…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Location",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Location",
     "anchor": "location",
-    "excerpt": "This response header is used with redirects and may contain a scheme, domain, and path that differ from the public values due to the use of the proxy. While it…"
+    "excerpt": "Тази заглавна част на отговора се използва при пренасочвания и може да съдържа схема, домейн и път, различни от публичните стойности поради използването на…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Server",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › Server",
     "anchor": "server",
-    "excerpt": "This response header indicates what server technology was used to generate the response (for example, IIS, Kestrel). This header is proxied from the…"
+    "excerpt": "Тази заглавна част на отговора указва каква сървърна технология е използвана за генериране на отговора (например IIS, Kestrel). По подразбиране тази заглавна…"
   },
   {
     "slug": "header-guidelines",
     "locale": "bg",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-Powered-By",
+    "title": "Указания за HTTP заглавни части",
+    "headingPath": "Указания за HTTP заглавни части › X-Powered-By",
     "anchor": "x-powered-by",
-    "excerpt": "This response header indicates what web framework was used to generate the response (for example, ASP.NET). ASP.NET Core does not generate this header but IIS…"
+    "excerpt": "Тази заглавна част на отговора указва каква уеб рамка е използвана за генериране на отговора (например ASP.NET). ASP.NET Core не генерира тази заглавна част,…"
   },
   {
     "slug": "output-caching",
     "locale": "bg",
     "group": "performance",
-    "title": "Output caching",
-    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are"
+    "title": "Кеширане на изхода",
+    "excerpt": "Обратният прокси сървър може да се използва за кеширане на проксираните отговори и обслужване на заявки, преди те"
   },
   {
     "slug": "output-caching",
     "locale": "bg",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Introduction",
+    "title": "Кеширане на изхода",
+    "headingPath": "Кеширане на изхода › Въведение",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are proxied to the destination servers. This can reduce load on the…"
+    "excerpt": "Обратният прокси сървър може да се използва за кеширане на проксираните отговори и обслужване на заявки, преди те да бъдат препратени към дестинациите. Това…"
   },
   {
     "slug": "output-caching",
     "locale": "bg",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Defaults",
+    "title": "Кеширане на изхода",
+    "headingPath": "Кеширане на изхода › Стойности по подразбиране",
     "anchor": "defaults",
-    "excerpt": "No output caching is performed unless enabled in the route or application configuration."
+    "excerpt": "Не се извършва кеширане на изхода, освен ако това не е разрешено в конфигурацията на маршрута или на приложението."
   },
   {
     "slug": "output-caching",
     "locale": "bg",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Configuration",
+    "title": "Кеширане на изхода",
+    "headingPath": "Кеширане на изхода › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Output Cache policies can be specified per route via RouteConfig.OutputCachePolicy and can be bound from the Routes sections of the config file. As with other…"
+    "excerpt": "Политиките за кеширане на изхода могат да бъдат зададени за всеки маршрут поотделно чрез RouteConfig.OutputCachePolicy и могат да бъдат обвързани от секциите…"
   },
   {
     "slug": "grpc",
     "locale": "bg",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It's"
+    "title": "Проксиране на gRPC",
+    "excerpt": "gRPC е независима от езика, високопроизводителна рамка за отдалечено извикване на процедури (RPC). Тя е"
   },
   {
     "slug": "grpc",
     "locale": "bg",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Introduction",
+    "title": "Проксиране на gRPC",
+    "headingPath": "Проксиране на gRPC › Въведение",
     "anchor": "introduction",
-    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It&#39;s built on top of HTTP/2 and can be proxied through YARP. While…"
+    "excerpt": "gRPC е независима от езика, високопроизводителна рамка за отдалечено извикване на процедури (RPC). Тя е изградена върху HTTP/2 и може да бъде проксирана през…"
   },
   {
     "slug": "grpc",
     "locale": "bg",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Configure YARP's Incoming Protocols",
+    "title": "Проксиране на gRPC",
+    "headingPath": "Проксиране на gRPC › Конфигуриране на входящите протоколи на YARP",
     "anchor": "configure-yarp-s-incoming-protocols",
-    "excerpt": "gRPC requires HTTP/2 for most scenarios. HTTP/1.1 and HTTP/2 are enabled by default on ASP.NET Core servers (YARP&#39;s front end) but they require https (TLS)…"
+    "excerpt": "За повечето сценарии gRPC изисква HTTP/2. HTTP/1.1 и HTTP/2 са активирани по подразбиране на сървърите на ASP.NET Core (входната част на YARP), но за HTTP/2 се…"
   },
   {
     "slug": "grpc",
     "locale": "bg",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Configure YARP's Outgoing Protocols",
+    "title": "Проксиране на gRPC",
+    "headingPath": "Проксиране на gRPC › Конфигуриране на изходящите протоколи на YARP",
     "anchor": "configure-yarp-s-outgoing-protocols",
-    "excerpt": "YARP automatically negotiates HTTP/1.1 or HTTP/2 for outgoing proxy requests, but only for https (TLS). HTTP/2 over http (non-TLS) requires additional…"
+    "excerpt": "YARP автоматично договаря HTTP/1.1 или HTTP/2 за изходящите прокси заявки, но само за https (TLS). HTTP/2 през http (без TLS) изисква допълнителни настройки.…"
   },
   {
     "slug": "grpc",
     "locale": "bg",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › gRPC-Web",
+    "title": "Проксиране на gRPC",
+    "headingPath": "Проксиране на gRPC › gRPC-Web",
     "anchor": "grpc-web",
-    "excerpt": "gRPC-Web is an alternative wire-format for gRPC that&#39;s compatible with HTTP/1.1. application/grpc - gRPC over HTTP/2 is how gRPC is typically used.…"
+    "excerpt": "gRPC-Web е алтернативен формат за пренос на данни за gRPC, който е съвместим с HTTP/1.1. application/grpc — gRPC през HTTP/2 е обичайният начин на използване…"
   },
   {
     "slug": "http3",
     "locale": "bg",
     "group": "protocols",
     "title": "HTTP/3",
-    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support"
+    "excerpt": "YARP 1.1 поддържа HTTP/3 за входящи и изходящи връзки, като използва поддръжката на HTTP/3"
   },
   {
     "slug": "http3",
     "locale": "bg",
     "group": "protocols",
     "title": "HTTP/3",
-    "headingPath": "HTTP/3 › Introduction",
+    "headingPath": "HTTP/3 › Въведение",
     "anchor": "introduction",
-    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support in .NET 7. To enable the HTTP/3 protocol in YARP you need to: Configure…"
+    "excerpt": "YARP 1.1 поддържа HTTP/3 за входящи и изходящи връзки, като използва поддръжката на HTTP/3 в .NET 7. За да активирате протокола HTTP/3 в YARP, трябва да:…"
   },
   {
     "slug": "http3",
     "locale": "bg",
     "group": "protocols",
     "title": "HTTP/3",
-    "headingPath": "HTTP/3 › Set up HTTP/3 on Kestrel",
+    "headingPath": "HTTP/3 › Настройване на HTTP/3 в Kestrel",
     "anchor": "set-up-http-3-on-kestrel",
-    "excerpt": "Protocols are required in the listener options: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel =&gt; {…"
+    "excerpt": "В опциите на listener-а са необходими протоколи: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel =&gt; {…"
   },
   {
     "slug": "http3",
@@ -2018,249 +2018,249 @@
     "title": "HTTP/3",
     "headingPath": "HTTP/3 › HttpClient",
     "anchor": "httpclient",
-    "excerpt": "The default version of HttpRequest should be replaced by &quot;3&quot;, find more details about HttpRequest configuration. БележкаThe author created this…"
+    "excerpt": "Стойността по подразбиране на версията на HttpRequest трябва да се замени с &quot;3&quot;; вижте повече подробности за конфигурацията на HttpRequest.…"
   },
   {
     "slug": "websockets",
     "locale": "bg",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+    "title": "WebSockets и SPDY",
+    "excerpt": "По подразбиране YARP позволява проксиране на WebSocket и SPDY връзки. Тази поддръжка работи с"
   },
   {
     "slug": "websockets",
     "locale": "bg",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › YARP Proxying WebSockets and SPDY",
+    "title": "WebSockets и SPDY",
+    "headingPath": "WebSockets и SPDY › Проксиране на WebSockets и SPDY с YARP",
     "anchor": "yarp-proxying-websockets-and-spdy",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+    "excerpt": "По подразбиране YARP позволява проксиране на WebSocket и SPDY връзки. Тази поддръжка работи с"
   },
   {
     "slug": "websockets",
     "locale": "bg",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › Introduction",
+    "title": "WebSockets и SPDY",
+    "headingPath": "WebSockets и SPDY › Въведение",
     "anchor": "introduction",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with both the direct forwarding and full pipeline approaches. WebSockets is…"
+    "excerpt": "По подразбиране YARP позволява проксиране на WebSocket и SPDY връзки. Тази поддръжка работи както с директното препращане, така и с подхода с пълен конвейер…"
   },
   {
     "slug": "websockets",
     "locale": "bg",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › HTTP/1.1 Upgrades",
+    "title": "WebSockets и SPDY",
+    "headingPath": "WebSockets и SPDY › Надграждания на HTTP/1.1",
     "anchor": "http-1-1-upgrades",
-    "excerpt": "WebSockets and SPDY are built on top of HTTP/1.1 using a feature called connection upgrades . YARP proxies the initial request, and if the destination server…"
+    "excerpt": "WebSockets и SPDY са изградени върху HTTP/1.1, като използват функция, наречена надграждания на връзката (connection upgrades). YARP проксира първоначалната…"
   },
   {
     "slug": "websockets",
     "locale": "bg",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › HTTP/2",
+    "title": "WebSockets и SPDY",
+    "headingPath": "WebSockets и SPDY › HTTP/2",
     "anchor": "http-2",
-    "excerpt": "YARP supports WebSockets over HTTP/2 starting in .NET 7 and YARP 2.0. Kestrel is the only available AspNetCore server that will accept incoming HTTP/2…"
+    "excerpt": "YARP поддържа WebSockets през HTTP/2, считано от .NET 7 и YARP 2.0. Kestrel е единственият наличен AspNetCore сървър, който приема входящи HTTP/2 WebSocket…"
   },
   {
     "slug": "websockets",
     "locale": "bg",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › Timeout",
+    "title": "WebSockets и SPDY",
+    "headingPath": "WebSockets и SPDY › Таймаут",
     "anchor": "timeout",
-    "excerpt": "Http Request Timeouts (.NET 8+) can apply timeouts to all requests by default or by policy. These timeouts will be disabled after a WebSocket handshake. They…"
+    "excerpt": "Таймаутите за HTTP заявки (Http Request Timeouts, .NET 8+) могат да прилагат таймаути към всички заявки по подразбиране или чрез политика. Тези таймаути се…"
   },
   {
     "slug": "extensibility",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Overview",
-    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:"
+    "title": "Преглед",
+    "excerpt": "Съществуват 2 основни стила на разширяемост за YARP, в зависимост от желаното поведение на маршрутизация:"
   },
   {
     "slug": "extensibility",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › Overview of YARP extensibility",
+    "title": "Преглед",
+    "headingPath": "Преглед › Преглед на разширяемостта на YARP",
     "anchor": "overview-of-yarp-extensibility",
-    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired: Middleware Pipeline Http Forwarder"
+    "excerpt": "Съществуват 2 основни стила на разширяемост за YARP, в зависимост от желаното поведение на маршрутизация: Конвейер от междинен софтуер (Middleware Pipeline)…"
   },
   {
     "slug": "extensibility",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › Middleware pipeline",
+    "title": "Преглед",
+    "headingPath": "Преглед › Конвейер от междинен софтуер (middleware pipeline)",
     "anchor": "middleware-pipeline",
-    "excerpt": "YARP uses the concept of Routes, Clusters and Destinations. These can be supplied through configuration files or directly through code. Based on the routing…"
+    "excerpt": "YARP използва понятията маршрути (Routes), клъстери (Clusters) и дестинации (Destinations). Те могат да бъдат предоставени чрез конфигурационни файлове или…"
   },
   {
     "slug": "extensibility",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › HTTP Forwarder",
+    "title": "Преглед",
+    "headingPath": "Преглед › HTTP Forwarder",
     "anchor": "http-forwarder",
-    "excerpt": "If the YARP pipeline is too rigid for your use case or the scale of routing rules and destinations isn&#39;t suitable for loading into memory, then you can…"
+    "excerpt": "Ако конвейерът на YARP е твърде ограничаващ за вашия случай на употреба или мащабът на правилата за маршрутизация и дестинациите не е подходящ за зареждане в…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The"
+    "title": "Междинен софтуер",
+    "excerpt": "ASP.NET Core използва конвейер от междинен софтуер, за да раздели обработката на заявките на отделни стъпки. Разработчикът"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Introduction",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › Въведение",
     "anchor": "introduction",
-    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The app developer can add and order middleware as needed. ASP.NET…"
+    "excerpt": "ASP.NET Core използва конвейер от междинен софтуер (middleware pipeline), за да раздели обработката на заявките на отделни стъпки. Разработчикът на…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Defaults",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › По подразбиране",
     "anchor": "defaults",
-    "excerpt": "The getting started sample shows the following Configure method. This sets up a middleware pipeline with development tools, routing, and proxy configured…"
+    "excerpt": "Примерът от Getting Started показва следния метод Configure. Той настройва конвейер от междинен софтуер с инструменти за разработка, маршрутизация и крайни…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Adding Middleware",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › Добавяне на междинен софтуер",
     "anchor": "adding-middleware",
-    "excerpt": "Middleware added to your application pipeline will see the request in different states of processing depending on where the middleware is added. Middleware…"
+    "excerpt": "Междинният софтуер, добавен към конвейера на вашето приложение, ще вижда заявката в различни състояния на обработка в зависимост от това къде е добавен.…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › // Custom inline middleware",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › // Custom inline middleware",
     "anchor": "custom-inline-middleware",
-    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); By default this overload…"
+    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); По подразбиране това…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Custom Proxy Middleware",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › Персонализиран прокси междинен софтуер",
     "anchor": "custom-proxy-middleware",
-    "excerpt": "Middleware inside the MapReverseProxy pipeline have access to all of the proxy data and state associated with a request (the route, cluster, destinations,…"
+    "excerpt": "Междинният софтуер в конвейера на MapReverseProxy има достъп до всички прокси данни и състояние, свързани със заявката (маршрут, клъстер, дестинации и т.н.),…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › What to do with middleware",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › Какво да правите с междинния софтуер",
     "anchor": "what-to-do-with-middleware",
-    "excerpt": "Middleware can generate logs, control if a request gets proxied or not, influence where it&#39;s proxied to, and add additional features like error handling,…"
+    "excerpt": "Междинният софтуер може да генерира логове, да контролира дали заявката се проксира или не, да влияе на това къде се проксира, и да добавя допълнителни функции…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Logs and Metrics",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › Логове и метрики",
     "anchor": "logs-and-metrics",
-    "excerpt": "Middleware can inspect request and response fields to generate logs and aggregate metrics. See the note about bodies under &quot;What not to do with…"
+    "excerpt": "Междинният софтуер може да инспектира полетата на заявката и отговора, за да генерира логове и да агрегира метрики. Вижте бележката за телата на съобщенията в…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Send an immediate response",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › Изпращане на незабавен отговор",
     "anchor": "send-an-immediate-response",
-    "excerpt": "If a middleware inspects a request and determines that it should not be proxied, it may generate its own response and return control to the server without…"
+    "excerpt": "Ако междинният софтуер инспектира заявка и определи, че тя не трябва да бъде проксирана, той може да генерира собствен отговор и да върне контрола на сървъра,…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Filter destinations",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › Филтриране на дестинации",
     "anchor": "filter-destinations",
-    "excerpt": "Middleware like session affinity and load balancing examine the IReverseProxyFeature and the cluster configuration to decide which destination a request should…"
+    "excerpt": "Междинен софтуер като афинитета на сесията и балансирането на натоварването проверява IReverseProxyFeature и конфигурацията на клъстера, за да реши към коя…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Error handling",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › Обработка на грешки",
     "anchor": "error-handling",
-    "excerpt": "Middleware can wrap the call to await next() in a try/catch block to handle exceptions from later components. The proxy logic at the end of the pipeline…"
+    "excerpt": "Междинният софтуер може да обвие извикването на await next() в блок try/catch, за да обработва изключения от следващите компоненти. Прокси логиката в края на…"
   },
   {
     "slug": "middleware",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › What not to do with middleware",
+    "title": "Междинен софтуер",
+    "headingPath": "Междинен софтуер › Какво да не правите с междинния софтуер",
     "anchor": "what-not-to-do-with-middleware",
-    "excerpt": "Middleware should be cautious about modifying request fields such as headers in order to affect the outgoing proxied request. Such modifications may interfere…"
+    "excerpt": "Междинният софтуер трябва да бъде внимателен при промяна на полета на заявката, като заглавни части, с цел да повлияе на изходящата проксирана заявка. Подобни…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "excerpt": "Some applications only need the ability to take a specific request and forward it to a specific"
+    "title": "Директно препращане",
+    "excerpt": "Някои приложения се нуждаят единствено от възможността да вземат конкретна заявка и да я препратят към конкретна"
   },
   {
     "slug": "direct-forwarding",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › IHttpForwarder",
+    "title": "Директно препращане",
+    "headingPath": "Директно препращане › IHttpForwarder",
     "anchor": "ihttpforwarder",
-    "excerpt": "IHttpForwarder serves as the core proxy adapter between incoming AspNetCore and outgoing System.Net.Http requests. It handles the mechanics of creating a…"
+    "excerpt": "IHttpForwarder служи като основен прокси адаптер между входящите AspNetCore заявки и изходящите заявки чрез System.Net.Http. Той се грижи за механиката по…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Example",
+    "title": "Директно препращане",
+    "headingPath": "Директно препращане › Пример",
     "anchor": "example",
-    "excerpt": "See ReverseProxy.Direct.Sample as a pre-built sample, or use the steps below."
+    "excerpt": "Вижте ReverseProxy.Direct.Sample като готов пример, или следвайте стъпките по-долу."
   },
   {
     "slug": "direct-forwarding",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Create a new project",
+    "title": "Директно препращане",
+    "headingPath": "Директно препращане › Създаване на нов проект",
     "anchor": "create-a-new-project",
-    "excerpt": "Follow the Getting Started guide to create a project and add the Yarp.ReverseProxy nuget dependency."
+    "excerpt": "Следвайте ръководството Getting Started, за да създадете проект и да добавите зависимостта от nuget пакета Yarp.ReverseProxy."
   },
   {
     "slug": "direct-forwarding",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Update Program.cs",
+    "title": "Директно препращане",
+    "headingPath": "Директно препращане › Актуализиране на Program.cs",
     "anchor": "update-program-cs",
-    "excerpt": "In this example the IHttpForwarder is registered in DI, injected into the endpoint method, and used to forward requests from a specific route to…"
+    "excerpt": "В този пример IHttpForwarder се регистрира в DI, инжектира се в метода на крайната точка и се използва за препращане на заявки от конкретен маршрут към…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › // Check if the operation was successful",
+    "title": "Директно препращане",
+    "headingPath": "Директно препращане › // Check if the operation was successful",
     "anchor": "check-if-the-operation-was-successful",
     "excerpt": "if (error != ForwarderError.None) { var errorFeature = httpContext.GetForwarderErrorFeature(); var exception = errorFeature.Exception; } }); app.Run(); /// ///…"
   },
@@ -2268,132 +2268,132 @@
     "slug": "direct-forwarding",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › The HTTP Client",
+    "title": "Директно препращане",
+    "headingPath": "Директно препращане › HTTP клиентът",
     "anchor": "the-http-client",
-    "excerpt": "The http client may be customized, but the above example is recommended for common proxy scenarios. Always use HttpMessageInvoker rather than HttpClient,…"
+    "excerpt": "HTTP клиентът може да бъде персонализиран, но горният пример е препоръчителен за обичайните прокси сценарии. Винаги използвайте HttpMessageInvoker вместо…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Transforms",
+    "title": "Директно препращане",
+    "headingPath": "Директно препращане › Трансформации",
     "anchor": "transforms",
-    "excerpt": "The request and response can be modified by providing a derived HttpTransformer as a parameter to SendAsync method."
+    "excerpt": "Заявката и отговорът могат да бъдат променяни, като се предостави производен клас на HttpTransformer като параметър на метода SendAsync."
   },
   {
     "slug": "direct-forwarding",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Error handling",
+    "title": "Директно препращане",
+    "headingPath": "Директно препращане › Обработка на грешки",
     "anchor": "error-handling",
-    "excerpt": "IHttpForwarder catches exceptions and timeouts from the HTTP client, logs them, and converts them to 5xx status codes or aborts the response. An error code is…"
+    "excerpt": "IHttpForwarder улавя изключения и таймаути от HTTP клиента, логва ги и ги превръща в 5xx статус кодове или прекратява отговора. От SendAsync се връща код на…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "title": "Преобразуватели на дестинации",
+    "excerpt": "YARP използва преобразувател на дестинации, за да разшири набора от конфигурирани адреси на дестинации. Преобразувателят"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › YARP Extensibility Destination Resolvers",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › Разширяемост на YARP: преобразуватели на дестинации",
     "anchor": "yarp-extensibility-destination-resolvers",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "YARP използва преобразувател на дестинации, за да разшири набора от конфигурирани адреси на дестинации. Преобразувателят"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Introduction",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › Въведение",
     "anchor": "introduction",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The destination resolver can be used as an integration point with…"
+    "excerpt": "YARP използва преобразувател на дестинации (destination resolver), за да разшири набора от конфигурирани адреси на дестинации. Преобразувателят на дестинации…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Structure",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › Структура",
     "anchor": "structure",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "YARP използва преобразувател на дестинации, за да разшири набора от конфигурирани адреси на дестинации. Преобразувателят"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › IDestinationResolver has a single method",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › IDestinationResolver има един-единствен метод",
     "anchor": "idestinationresolver-has-a-single-method",
-    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken) which should return a…"
+    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken), който трябва да връща…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › DestinationConfig",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › DestinationConfig",
     "anchor": "destinationconfig",
-    "excerpt": "DestinationConfig has a Host property which can be used to specify the default Host header value which the proxy should use when communicating with that…"
+    "excerpt": "DestinationConfig има свойство Host, което може да се използва за задаване на стойността по подразбиране на заглавната част Host, която прокси сървърът трябва…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Lifecycle",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › Жизнен цикъл",
     "anchor": "lifecycle",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "YARP използва преобразувател на дестинации, за да разшири набора от конфигурирани адреси на дестинации. Преобразувателят"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Startup",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › Стартиране",
     "anchor": "startup",
-    "excerpt": "The IDestinationResolver should be registered in the DI container as a singleton. At startup, the proxy will resolve this instance and call…"
+    "excerpt": "IDestinationResolver трябва да бъде регистриран в DI контейнера като singleton. При стартиране прокси сървърът ще разреши тази инстанция и ще извика…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Atomicity",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › Атомарност",
     "anchor": "atomicity",
-    "excerpt": "The destinations objects and collections supplied to the proxy should be read-only and not modified once they have been handed to the proxy via GetConfig() ."
+    "excerpt": "Обектите и колекциите с дестинации, предоставени на прокси сървъра, трябва да бъдат само за четене и да не се променят, след като са предадени на прокси…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Reload",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › Презареждане",
     "anchor": "reload",
-    "excerpt": "If the IChangeToken supports ActiveChangeCallbacks , once the proxy has processed the initial set of destinations it will register a callback with this token.…"
+    "excerpt": "Ако IChangeToken поддържа ActiveChangeCallbacks , щом прокси сървърът обработи първоначалния набор от дестинации, той ще регистрира обратно извикване с този…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › DNS Destination Resolver",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › DNS преобразувател на дестинации",
     "anchor": "dns-destination-resolver",
-    "excerpt": "YARP includes an IDestinationResolver implementation which expands the set of configured destinations by resolving each host name to one or more IP addresses…"
+    "excerpt": "YARP включва реализация на IDestinationResolver, която разширява набора от конфигурирани дестинации, като преобразува всяко име на хост в един или повече IP…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Example",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › Пример",
     "anchor": "example",
     "excerpt": "C#// Add the DNS destination resolver, restricting results to IPv4 addresses reverseProxyBuilder.AddDnsDestinationResolver(o =&gt; o.AddressFamily =…"
   },
@@ -2401,288 +2401,288 @@
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Configuration",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "The DNS destination resolver&#39;s options, DnsDestinationResolverOptions, has the following properties:"
+    "excerpt": "Опциите на DNS преобразувателя на дестинации, DnsDestinationResolverOptions, имат следните свойства:"
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › RefreshPeriod",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › RefreshPeriod",
     "anchor": "refreshperiod",
-    "excerpt": "The period between requesting a refresh of a resolved name. This defaults to 5 minutes."
+    "excerpt": "Периодът между заявките за опресняване на разрешено име. По подразбиране е 5 минути."
   },
   {
     "slug": "destination-resolvers",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › AddressFamily",
+    "title": "Преобразуватели на дестинации",
+    "headingPath": "Преобразуватели на дестинации › AddressFamily",
     "anchor": "addressfamily",
-    "excerpt": "Optionally, specify an System.Net.Sockets.AddressFamily value of AddressFamily.InterNetwork or AddressFamily.InterNetworkV6 to restrict resolved resolution to…"
+    "excerpt": "Незадължително можете да зададете стойност на System.Net.Sockets.AddressFamily — AddressFamily.InterNetwork или AddressFamily.InterNetworkV6 — за да ограничите…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "title": "Трансформации на заявки и отговори",
+    "excerpt": "При проксиране на заявка е обичайно да се променят части от заявката или отговора, за да се адаптират към"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Request and Response Transform",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › Трансформация на заявки и отговори",
     "anchor": "request-and-response-transform",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "При проксиране на заявка е обичайно да се променят части от заявката или отговора, за да се адаптират към"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Extensibility",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › Разширяемост",
     "anchor": "extensibility",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "При проксиране на заявка е обичайно да се променят части от заявката или отговора, за да се адаптират към"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Introduction",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › Въведение",
     "anchor": "introduction",
-    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+    "excerpt": "При проксиране на заявка е обичайно да се променят части от заявката или отговора, за да се адаптират към изискванията на целевия сървър или за да се предаде…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › RequestTransform",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › RequestTransform",
     "anchor": "requesttransform",
-    "excerpt": "All request transforms must derive from the abstract base class RequestTransform. These can freely modify the proxy HttpRequestMessage . Avoid reading or…"
+    "excerpt": "Всички трансформации на заявки трябва да наследяват абстрактния базов клас RequestTransform. Те могат свободно да променят прокси HttpRequestMessage .…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ResponseTransform",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › ResponseTransform",
     "anchor": "responsetransform",
-    "excerpt": "All response transforms must derive from the abstract base class ResponseTransform. These can freely modify the client HttpResponse . Avoid reading or…"
+    "excerpt": "Всички трансформации на отговори трябва да наследяват абстрактния базов клас ResponseTransform. Те могат свободно да променят клиентския HttpResponse .…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ResponseTrailersTransform",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › ResponseTrailersTransform",
     "anchor": "responsetrailerstransform",
-    "excerpt": "All response trailers transforms must derive from the abstract base class ResponseTrailersTransform. These can freely modify the client HttpResponse trailers.…"
+    "excerpt": "Всички трансформации на трейлъри на отговори трябва да наследяват абстрактния базов клас ResponseTrailersTransform. Те могат свободно да променят трейлърите на…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Request body transforms",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › Трансформации на тялото на заявката",
     "anchor": "request-body-transforms",
-    "excerpt": "YARP does not provide any built in transforms for modifying the request body. However, the body can be modified by custom transforms. Be careful about which…"
+    "excerpt": "YARP не предоставя вградени трансформации за промяна на тялото на заявката. Въпреки това тялото може да бъде променяно чрез персонализирани трансформации.…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › any",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › any",
     "anchor": "any",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "При проксиране на заявка е обичайно да се променят части от заявката или отговора, за да се адаптират към"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › // needed headers on the ProxyRequest",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › // needed headers on the ProxyRequest",
     "anchor": "needed-headers-on-the-proxyrequest",
-    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); Custom transforms can only modify a request body if one is already present.…"
+    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); Персонализираните трансформации могат да променят тялото на заявката само…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Response body transforms",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › Трансформации на тялото на отговора",
     "anchor": "response-body-transforms",
-    "excerpt": "YARP does not provide any built in transforms for modifying the response body. However, the body can be modified by custom transforms. Be careful about which…"
+    "excerpt": "YARP не предоставя вградени трансформации за промяна на тялото на отговора. Въпреки това тялото може да бъде променяно чрез персонализирани трансформации.…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ITransformProvider",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › ITransformProvider",
     "anchor": "itransformprovider",
-    "excerpt": "ITransformProvider provides the functionality of AddTransforms described above as well as DI integration and validation support. ITransformProvider &#39;s can…"
+    "excerpt": "ITransformProvider предоставя функционалността на AddTransforms, описана по-горе, както и интеграция с DI и поддръжка на валидация. Инстанции на…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "bg",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ITransformFactory",
+    "title": "Трансформации на заявки и отговори",
+    "headingPath": "Трансформации на заявки и отговори › ITransformFactory",
     "anchor": "itransformfactory",
-    "excerpt": "Developers that want to integrate their custom transforms with the Transforms section of configuration can implement an ITransformFactory. This should be…"
+    "excerpt": "Разработчиците, които искат да интегрират своите персонализирани трансформации с раздела Transforms на конфигурацията, могат да реализират ITransformFactory.…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "bg",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "excerpt": "When using a reverse proxy, there is an additional hop from the client to the proxy, and then"
+    "title": "Диагностика на прокси сървъри, базирани на YARP",
+    "excerpt": "Когато се използва обратен прокси, се появява допълнителна стъпка от клиента до проксито, а след това"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "bg",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Logging",
+    "title": "Диагностика на прокси сървъри, базирани на YARP",
+    "headingPath": "Диагностика на прокси сървъри, базирани на YARP › Регистриране",
     "anchor": "logging",
-    "excerpt": "The first step to being able to tell what is going on with YARP is to turn on logging. This is a configuration flag so can be changed on the fly. YARP is…"
+    "excerpt": "Първата стъпка, за да разберете какво се случва с YARP, е да включите регистрирането. Това е конфигурационен флаг, така че може да се променя в движение. YARP…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "bg",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Understanding log entries",
+    "title": "Диагностика на прокси сървъри, базирани на YARP",
+    "headingPath": "Диагностика на прокси сървъри, базирани на YARP › Разбиране на записите в дневника",
     "anchor": "understanding-log-entries",
-    "excerpt": "The logging output is directly tied to the way that ASP.NET Core processes requests. It&#39;s important to realize that as middleware, YARP is relying on much…"
+    "excerpt": "Изходът от регистрирането е пряко свързан с начина, по който ASP.NET Core обработва заявките. Важно е да се разбере, че като междинен софтуер, YARP разчита в…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "bg",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using ASP.NET request logging",
+    "title": "Диагностика на прокси сървъри, базирани на YARP",
+    "headingPath": "Диагностика на прокси сървъри, базирани на YARP › Използване на регистрирането на заявки в ASP.NET",
     "anchor": "using-asp-net-request-logging",
-    "excerpt": "ASP.NET includes a middleware component that can be used to provide more details about the request and response. The UseHttpLogging component can be added to…"
+    "excerpt": "ASP.NET включва компонент от тип междинен софтуер, който може да се използва за предоставяне на повече подробности за заявката и отговора. Компонентът…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "bg",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using telemetry events",
+    "title": "Диагностика на прокси сървъри, базирани на YARP",
+    "headingPath": "Диагностика на прокси сървъри, базирани на YARP › Използване на телеметрични събития",
     "anchor": "using-telemetry-events",
-    "excerpt": "We recommend reading Networking telemetry in .NET as a primer on how to consume networking telemetry in .NET. The Metrics sample shows how to listen to events…"
+    "excerpt": "Препоръчваме да прочетете Networking telemetry in .NET като въведение в начина на консумиране на мрежова телеметрия в .NET. Примерът Metrics sample показва как…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "bg",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using custom middleware",
+    "title": "Диагностика на прокси сървъри, базирани на YARP",
+    "headingPath": "Диагностика на прокси сървъри, базирани на YARP › Използване на персонализиран междинен софтуер",
     "anchor": "using-custom-middleware",
-    "excerpt": "Another way to inspect the state for requests is to insert additional middleware into the request pipeline. You can insert between the other stages to see the…"
+    "excerpt": "Друг начин за инспектиране на състоянието на заявките е да вмъкнете допълнителен междинен софтуер в конвейера за обработка на заявки. Можете да го вмъкнете…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "bg",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using the debugger",
+    "title": "Диагностика на прокси сървъри, базирани на YARP",
+    "headingPath": "Диагностика на прокси сървъри, базирани на YARP › Използване на дебъгера",
     "anchor": "using-the-debugger",
-    "excerpt": "A debugger, such as Visual Studio, can be attached to the proxy process. However, unless you have existing middleware, there isn&#39;t a good place in the app…"
+    "excerpt": "Дебъгер, като например Visual Studio, може да бъде прикачен към процеса на проксито. Въпреки това, ако нямате съществуващ междинен софтуер, няма подходящо…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "bg",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Network tracing",
+    "title": "Диагностика на прокси сървъри, базирани на YARP",
+    "headingPath": "Диагностика на прокси сървъри, базирани на YARP › Проследяване на мрежата",
     "anchor": "network-tracing",
-    "excerpt": "It can be attractive to use network tracing tools like Fiddler or Wireshark to try to monitor what&#39;s happening either side of the proxy. However, be…"
+    "excerpt": "Може да е примамливо да се използват инструменти за мрежово проследяване като Fiddler или Wireshark, за да се наблюдава какво се случва от двете страни на…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "bg",
     "group": "operations",
-    "title": "Distributed tracing",
-    "excerpt": "As an ASP.NET Core component, YARP can easily integrate into different tracing systems the"
+    "title": "Разпределено проследяване",
+    "excerpt": "Като компонент на ASP.NET Core, YARP може лесно да се интегрира с различни системи за проследяване, които"
   },
   {
     "slug": "distributed-tracing",
     "locale": "bg",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Using Open Telemetry",
+    "title": "Разпределено проследяване",
+    "headingPath": "Разпределено проследяване › Използване на Open Telemetry",
     "anchor": "using-open-telemetry",
-    "excerpt": "YARP supports distributed tracing using Open Telemetry (OTEL). When a request comes in, and there is a listener for Activities, then ASP.NET Core will…"
+    "excerpt": "YARP поддържа разпределено проследяване чрез Open Telemetry (OTEL). Когато постъпи заявка и има слушател (listener) за Activities, ASP.NET Core разпространява…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "bg",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Using custom tracing headers",
+    "title": "Разпределено проследяване",
+    "headingPath": "Разпределено проследяване › Използване на персонализирани заглавни части за проследяване",
     "anchor": "using-custom-tracing-headers",
-    "excerpt": "When using a propagation mechanism that is not built into .NET (e.g. B3 propagation ), you should implement a custom [ DistributedContextPropagator ] for that…"
+    "excerpt": "Когато използвате механизъм за разпространение, който не е вграден в .NET (напр. B3 propagation ), трябва да реализирате персонализиран […"
   },
   {
     "slug": "distributed-tracing",
     "locale": "bg",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Pass-through proxy",
+    "title": "Разпределено проследяване",
+    "headingPath": "Разпределено проследяване › Прозрачен прокси",
     "anchor": "pass-through-proxy",
-    "excerpt": "If you do not wish the proxy to actively participate in the trace, and wish to keep all the tracing headers as-is, you may do so by setting…"
+    "excerpt": "Ако не желаете проксито активно да участва в трасирането и искате да запазите всички заглавни части за проследяване непроменени, можете да зададете…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "bg",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › DistributedContextPropagator DistributedContextPropagator.Fields",
+    "title": "Разпределено проследяване",
+    "headingPath": "Разпределено проследяване › DistributedContextPropagator DistributedContextPropagator.Fields",
     "anchor": "distributedcontextpropagator-distributedcontextpropagator-fi",
-    "excerpt": "БележкаThe author created this article with assistance from AI. Learn more"
+    "excerpt": "БележкаТази статия е създадена от автора с помощта на изкуствен интелект (AI). Научете повече"
   },
   {
     "slug": "ab-testing",
     "locale": "bg",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+    "title": "A/B тестване и постепенни надграждания",
+    "excerpt": "A/B тестването и постепенните надграждания изискват процедури за динамично разпределяне на входящия трафик"
   },
   {
     "slug": "ab-testing",
     "locale": "bg",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › YARP A/B Testing and Rolling Upgrades",
+    "title": "A/B тестване и постепенни надграждания",
+    "headingPath": "A/B тестване и постепенни надграждания › A/B тестване и постепенни надграждания в YARP",
     "anchor": "yarp-a-b-testing-and-rolling-upgrades",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+    "excerpt": "A/B тестването и постепенните надграждания изискват процедури за динамично разпределяне на входящия трафик"
   },
   {
     "slug": "ab-testing",
     "locale": "bg",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Introduction",
+    "title": "A/B тестване и постепенни надграждания",
+    "headingPath": "A/B тестване и постепенни надграждания › Въведение",
     "anchor": "introduction",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic to evaluate changes in the destination application. YARP does…"
+    "excerpt": "A/B тестването и постепенните надграждания изискват процедури за динамично разпределяне на входящия трафик, за да се оценят промените в приложението на…"
   },
   {
     "slug": "ab-testing",
     "locale": "bg",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Example",
+    "title": "A/B тестване и постепенни надграждания",
+    "headingPath": "A/B тестване и постепенни надграждания › Пример",
     "anchor": "example",
     "excerpt": "app.MapReverseProxy(proxyPipeline =&gt; { // Custom cluster selection proxyPipeline.Use((context, next) =&gt; { var lookup =…"
   },
@@ -2690,234 +2690,234 @@
     "slug": "ab-testing",
     "locale": "bg",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Usage",
+    "title": "A/B тестване и постепенни надграждания",
+    "headingPath": "A/B тестване и постепенни надграждания › Използване",
     "anchor": "usage",
-    "excerpt": "This scenario makes use of two APIs, IProxyStateLookup and ReassignProxyRequest, called from a custom proxy middleware as shown in the sample above.…"
+    "excerpt": "Този сценарий използва две API, IProxyStateLookup и ReassignProxyRequest, извиквани от персонализиран междинен софтуер за проксито, както е показано в примера…"
   },
   {
     "slug": "ab-testing",
     "locale": "bg",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Session affinity",
+    "title": "A/B тестване и постепенни надграждания",
+    "headingPath": "A/B тестване и постепенни надграждания › Афинитет на сесията",
     "anchor": "session-affinity",
-    "excerpt": "Бележкаthat session affinity functionality is split between middleware, which reads it settings from the current cluster, and transforms, which are part of the…"
+    "excerpt": "БележкаФункционалността за афинитет на сесията е разделена между междинния софтуер, който чете настройките си от текущия клъстер, и трансформациите, които са…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+    "title": "Kubernetes Ingress контролер",
+    "excerpt": "YARP може да бъде интегриран с Kubernetes като обратен прокси, управляващ входящия HTTP/HTTPS трафик"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Prerequisites",
+    "title": "Kubernetes Ingress контролер",
+    "headingPath": "Kubernetes Ingress контролер › Предварителни изисквания",
     "anchor": "prerequisites",
-    "excerpt": "Before we continue with this tutorial, make sure you have the following ready... Installing Docker based on your operating system. A container registry. Docker…"
+    "excerpt": "Преди да продължите с това ръководство, уверете се, че разполагате със следното... Инсталиран Docker, съобразен с вашата операционна система. Регистър за…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Get started",
+    "title": "Kubernetes Ingress контролер",
+    "headingPath": "Kubernetes Ingress контролер › Първи стъпки",
     "anchor": "get-started",
-    "excerpt": "БележкаFor now, there is no official Docker image for the YARP ingress controller. In the meantime, the YARP ingress controller must be built locally and…"
+    "excerpt": "БележкаЗасега няма официален Docker образ за ingress контролера на YARP. Междувременно ingress контролерът на YARP трябва да бъде компилиран локално и…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f ingress-controller.yaml",
+    "title": "Kubernetes Ingress контролер",
+    "headingPath": "Kubernetes Ingress контролер › kubectl apply -f ingress-controller.yaml",
     "anchor": "kubectl-apply-f-ingress-controller-yaml",
-    "excerpt": "To verify that the ingress controller has been deployed, run:"
+    "excerpt": "За да проверите, че ingress контролерът е разгърнат, изпълнете:"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl get pods -n yarp",
+    "title": "Kubernetes Ingress контролер",
+    "headingPath": "Kubernetes Ingress контролер › kubectl get pods -n yarp",
     "anchor": "kubectl-get-pods-n-yarp",
-    "excerpt": "You can then check logs from the ingress controller by running: kubectl logs {POD NAME} -n yarp All services, deployments, and pods for YARP are in the…"
+    "excerpt": "След това можете да проверите логовете от ingress контролера, като изпълните: kubectl logs {POD NAME} -n yarp Всички services, deployments и pods за YARP се…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress.yaml",
+    "title": "Kubernetes Ingress контролер",
+    "headingPath": "Kubernetes Ingress контролер › kubectl apply -f .\\ingress.yaml",
     "anchor": "kubectl-apply-f-ingress-yaml",
-    "excerpt": "At this point, your ingress and controller should be running."
+    "excerpt": "На този етап вашият ingress и контролерът трябва да работят."
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Deploying an app",
+    "title": "Kubernetes Ingress контролер",
+    "headingPath": "Kubernetes Ingress контролер › Разгръщане на приложение",
     "anchor": "deploying-an-app",
-    "excerpt": "To use the ingress, we now need to deploy an application to Kubernetes. Navigate to samples\\KuberenetesIngress.Sample\\backend and run: docker build . -t…"
+    "excerpt": "За да използвате ingress-а, сега трябва да разгърнете приложение в Kubernetes. Отидете в samples\\KuberenetesIngress.Sample\\backend и изпълнете: docker build .…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\backend.yaml",
+    "title": "Kubernetes Ingress контролер",
+    "headingPath": "Kubernetes Ingress контролер › kubectl apply -f .\\backend.yaml",
     "anchor": "kubectl-apply-f-backend-yaml",
-    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+    "excerpt": "YARP може да бъде интегриран с Kubernetes като обратен прокси, управляващ входящия HTTP/HTTPS трафик"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Creating the ingress definition",
+    "title": "Kubernetes Ingress контролер",
+    "headingPath": "Kubernetes Ingress контролер › Създаване на дефиницията за ingress",
     "anchor": "creating-the-ingress-definition",
-    "excerpt": "Finally, once we have deployed the backend application, we need to route traffic to the backend. To do this, run in the backend directory:"
+    "excerpt": "Накрая, след като приложението backend е разгърнато, трябва да насочим трафика към него. За целта изпълнете в директорията backend:"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress-sample.yaml",
+    "title": "Kubernetes Ingress контролер",
+    "headingPath": "Kubernetes Ingress контролер › kubectl apply -f .\\ingress-sample.yaml",
     "anchor": "kubectl-apply-f-ingress-sample-yaml",
-    "excerpt": "And then execute the following command to get the external IP of the ingress, the name of the related service being yarp-proxy :"
+    "excerpt": "След това изпълнете следната команда, за да получите външния IP адрес на ingress-а, като името на съответната услуга е yarp-proxy :"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "bg",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl get service -n yarp",
+    "title": "Kubernetes Ingress контролер",
+    "headingPath": "Kubernetes Ingress контролер › kubectl get service -n yarp",
     "anchor": "kubectl-get-service-n-yarp",
-    "excerpt": "If you&#39;re using a local K8s cluster and don&#39;t get an external IP, you may be able to avoid using the default port: 80 for the yarp-proxy service. If…"
+    "excerpt": "Ако използвате локален K8s клъстер и не получите външен IP адрес, е възможно да се наложи да избегнете използването на порт по подразбиране: 80 за услугата…"
   },
   {
     "slug": "service-fabric-int",
     "locale": "bg",
     "group": "deployment",
-    "title": "Service Fabric integration",
-    "excerpt": "This functionality has been deprecated in favor of service-fabric-yarp (GitHub repository) ."
+    "title": "Интеграция със Service Fabric",
+    "excerpt": "Тази функционалност е обявена за остаряла (deprecated) в полза на service-fabric-yarp (хранилище в GitHub) ."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "bg",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which"
+    "title": "Делегиране на HTTP.sys",
+    "excerpt": "Делегирането на HTTP.sys е функция на ниво ядро, добавена в по-новите версии на Windows, която"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "bg",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Introduction",
+    "title": "Делегиране на HTTP.sys",
+    "headingPath": "Делегиране на HTTP.sys › Въведение",
     "anchor": "introduction",
-    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which allows a request to be transferred from the receiving process&#39;s…"
+    "excerpt": "Делегирането на HTTP.sys е функция на ниво ядро, добавена в по-новите версии на Windows, която позволява заявка да бъде прехвърлена от опашката на HTTP.sys на…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "bg",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Requirements",
+    "title": "Делегиране на HTTP.sys",
+    "headingPath": "Делегиране на HTTP.sys › Изисквания",
     "anchor": "requirements",
-    "excerpt": "HTTP.sys delegation requires: ASP.NET Core&#39;s HTTP.sys server Windows Server 2019 or Windows 10 (build number 1809) or newer."
+    "excerpt": "Делегирането на HTTP.sys изисква: HTTP.sys сървъра на ASP.NET Core Windows Server 2019 или Windows 10 (номер на build 1809) или по-нова версия."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "bg",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Defaults",
+    "title": "Делегиране на HTTP.sys",
+    "headingPath": "Делегиране на HTTP.sys › Стойности по подразбиране",
     "anchor": "defaults",
-    "excerpt": "HTTP.sys delegation won&#39;t be used unless added to the proxy pipeline and enabled in the destination configuration."
+    "excerpt": "Делегирането на HTTP.sys няма да се използва, освен ако не бъде добавено към конвейера на проксито и активирано в конфигурацията на дестинацията."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "bg",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Configuration",
+    "title": "Делегиране на HTTP.sys",
+    "headingPath": "Делегиране на HTTP.sys › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "HTTP.sys delegation can be enabled per destination by adding the HttpSysDelegationQueue metadata to the destination. The value of this metadata should be the…"
+    "excerpt": "Делегирането на HTTP.sys може да се активира за всяка отделна дестинация, като се добави метаданните HttpSysDelegationQueue към дестинацията. Стойността на…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "bg",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Delegation queue lifetime",
+    "title": "Делегиране на HTTP.sys",
+    "headingPath": "Делегиране на HTTP.sys › Жизнен цикъл на опашката за делегиране",
     "anchor": "delegation-queue-lifetime",
-    "excerpt": "When YARP is configured to use delegation for a destination, a handle is created to the specified HTTP.sys queue. This handle is kept alive as long as the…"
+    "excerpt": "Когато YARP е конфигуриран да използва делегиране за дадена дестинация, се създава handle към посочената опашка на HTTP.sys. Този handle се поддържа активен,…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "title": "Първи стъпки с ASP.NET Core",
+    "excerpt": "Това ръководство показва как да създадете и стартирате уеб приложение с ASP.NET Core, използвайки .NET CLI."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Prerequisites",
+    "title": "Първи стъпки с ASP.NET Core",
+    "headingPath": "Първи стъпки с ASP.NET Core › Предварителни изисквания",
     "anchor": "prerequisites",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "Това ръководство показва как да създадете и стартирате уеб приложение с ASP.NET Core, използвайки .NET CLI."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › .NET 8 SDK",
+    "title": "Първи стъпки с ASP.NET Core",
+    "headingPath": "Първи стъпки с ASP.NET Core › .NET 8 SDK",
     "anchor": "net-8-sdk",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "Това ръководство показва как да създадете и стартирате уеб приложение с ASP.NET Core, използвайки .NET CLI."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Create a web app project",
+    "title": "Първи стъпки с ASP.NET Core",
+    "headingPath": "Първи стъпки с ASP.NET Core › Създаване на проект за уеб приложение",
     "anchor": "create-a-web-app-project",
-    "excerpt": "Open a command shell, and enter the following command: .NET CLI dotnet new webapp --output aspnetcoreapp --no-https The preceding command creates a new web app…"
+    "excerpt": "Отворете команден ред и въведете следната команда: .NET CLI dotnet new webapp --output aspnetcoreapp --no-https Предходната команда създава нов проект за уеб…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Run the app",
+    "title": "Първи стъпки с ASP.NET Core",
+    "headingPath": "Първи стъпки с ASP.NET Core › Стартиране на приложението",
     "anchor": "run-the-app",
-    "excerpt": "Run the following commands: .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:Изход Building... info:…"
+    "excerpt": "Изпълнете следните команди: .NET CLI cd aspnetcoreapp dotnet run The run command produces output like the following example:Изход Building... info:…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Edit a Razor page",
+    "title": "Първи стъпки с ASP.NET Core",
+    "headingPath": "Първи стъпки с ASP.NET Core › Редактиране на Razor страница",
     "anchor": "edit-a-razor-page",
-    "excerpt": "Change the home page: In the command shell, press Ctrl+C (Cmd+C in macOS) to exit the program. Open Pages/Index.cshtml in a text editor. Replace the line that…"
+    "excerpt": "Променете началната страница: В командния ред натиснете Ctrl+C (Cmd+C в macOS), за да излезете от програмата. Отворете Pages/Index.cshtml в текстов редактор.…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › CSHTML",
+    "title": "Първи стъпки с ASP.NET Core",
+    "headingPath": "Първи стъпки с ASP.NET Core › CSHTML",
     "anchor": "cshtml",
     "excerpt": "@page @model IndexModel @{ ViewData[&quot;Title&quot;] = &quot;Home page&quot;; } Welcome Hello, world! The time on the server is @DateTime.Now"
   },
@@ -2925,27 +2925,27 @@
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › </div>",
+    "title": "Първи стъпки с ASP.NET Core",
+    "headingPath": "Първи стъпки с ASP.NET Core › </div>",
     "anchor": "div",
-    "excerpt": "Save your changes. In the command shell run the dotnet run command again. In the browser, refresh the page and verify the changes are displayed."
+    "excerpt": "Запазете промените. В командния ред изпълнете отново командата dotnet run. В браузъра презаредете страницата и проверете дали промените се показват."
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Next steps",
+    "title": "Първи стъпки с ASP.NET Core",
+    "headingPath": "Първи стъпки с ASP.NET Core › Следващи стъпки",
     "anchor": "next-steps",
-    "excerpt": "In this tutorial, you learned how to: Create a web app project. Run the project. Make a change. To learn more about ASP.NET Core, see the following:"
+    "excerpt": "В това ръководство научихте как да: Създадете проект за уеб приложение. Стартирате проекта. Направите промяна. За да научите повече за ASP.NET Core, вижте…"
   },
   {
     "slug": "aspnetcore-getting-started",
     "locale": "bg",
     "group": "appendix",
-    "title": "Get started with ASP.NET Core",
-    "headingPath": "Get started with ASP.NET Core › Overview of ASP.NET Core",
+    "title": "Първи стъпки с ASP.NET Core",
+    "headingPath": "Първи стъпки с ASP.NET Core › Общ преглед на ASP.NET Core",
     "anchor": "overview-of-asp-net-core",
-    "excerpt": "This tutorial shows how to create and run an ASP.NET Core web app using the .NET CLI."
+    "excerpt": "Това ръководство показва как да създадете и стартирате уеб приложение с ASP.NET Core, използвайки .NET CLI."
   }
 ]

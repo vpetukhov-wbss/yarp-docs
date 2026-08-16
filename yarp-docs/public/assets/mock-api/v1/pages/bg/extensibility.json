@@ -3,17 +3,17 @@
   "locale": "bg",
   "group": "extensibility",
   "kind": "doc",
-  "title": "Overview",
-  "lede": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:",
+  "title": "Преглед",
+  "lede": "Съществуват 2 основни стила на разширяемост за YARP, в зависимост от желаното поведение на маршрутизация:",
   "headings": [
     {
       "id": "overview-of-yarp-extensibility",
-      "text": "Overview of YARP extensibility",
+      "text": "Преглед на разширяемостта на YARP",
       "level": 2
     },
     {
       "id": "middleware-pipeline",
-      "text": "Middleware pipeline",
+      "text": "Конвейер от междинен софтуер (middleware pipeline)",
       "level": 2
     },
     {
@@ -22,16 +22,16 @@
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"overview-of-yarp-extensibility\">Overview of YARP extensibility</h2><p>There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:</p>\n<p>Middleware Pipeline Http Forwarder</p>\n<h2 id=\"middleware-pipeline\">Middleware pipeline</h2><p>YARP uses the concept of Routes, Clusters and Destinations. These can be supplied through configuration files or directly through code. Based on the routing rules, YARP picks a cluster and enumerates the possible destinations. It then uses the middleware pipeline to select the destination based on destination health, session affinity, load balancing etc.</p>\n<p>Most of the prebuilt pipeline can be customized through code:</p>\n<p>Configuration Providers Destination Enumeration Session Affinity Load Balancing Health Checks Request Transforms HttpClient configuration</p>\n<p>You can also change the pipeline definition to replace modules with your own implementation(s) or add additional modules as needed. For more information see Middleware.</p>\n<h2 id=\"http-forwarder\">HTTP Forwarder</h2><p>If the YARP pipeline is too rigid for your use case or the scale of routing rules and destinations isn&#39;t suitable for loading into memory, then you can implement your own routing logic and use the HTTP Forwarder to direct requests to your chosen destination. The HttpForwarder component takes the HTTP context and forwards the request to the supplied destination.</p>\n<p>The transform component can still be used if the forwarder is needed. For more information see Direct forwarding.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Бележка</div><p>The author created this article with assistance from AI. Learn more</p>\n</div></div>",
+  "bodyHtml": "<h2 id=\"overview-of-yarp-extensibility\">Преглед на разширяемостта на YARP</h2><p>Съществуват 2 основни стила на разширяемост за YARP, в зависимост от желаното поведение на маршрутизация:</p>\n<p>Конвейер от междинен софтуер (Middleware Pipeline) Http Forwarder</p>\n<h2 id=\"middleware-pipeline\">Конвейер от междинен софтуер (middleware pipeline)</h2><p>YARP използва понятията маршрути (Routes), клъстери (Clusters) и дестинации (Destinations). Те могат да бъдат предоставени чрез конфигурационни файлове или директно чрез код. Въз основа на правилата за маршрутизация YARP избира клъстер и изброява възможните дестинации. След това използва конвейера от междинен софтуер, за да избере дестинацията въз основа на нейното състояние, афинитета на сесията, балансирането на натоварването и т.н.</p>\n<p>По-голямата част от предварително изградения конвейер може да бъде персонализирана чрез код:</p>\n<p>Доставчици на конфигурация Изброяване на дестинации Афинитет на сесията Балансиране на натоварването Проверки за състоянието Трансформации на заявки Конфигурация на HttpClient</p>\n<p>Можете също да промените дефиницията на конвейера, за да замените модули със собствени реализации или да добавите допълнителни модули според нуждите. За повече информация вижте Middleware.</p>\n<h2 id=\"http-forwarder\">HTTP Forwarder</h2><p>Ако конвейерът на YARP е твърде ограничаващ за вашия случай на употреба или мащабът на правилата за маршрутизация и дестинациите не е подходящ за зареждане в паметта, тогава можете да реализирате собствена логика за маршрутизация и да използвате HTTP Forwarder, за да насочвате заявките към избраната от вас дестинация. Компонентът HttpForwarder приема HTTP контекста и препраща заявката към предоставената дестинация.</p>\n<p>Компонентът за трансформации все още може да се използва, ако е необходим forwarder-ът. За повече информация вижте Direct forwarding.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Бележка</div><p>Тази статия е създадена от автора с помощта на AI. Научете повече</p>\n</div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/extensibility",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "websockets",
-    "title": "WebSockets & SPDY"
+    "title": "WebSockets и SPDY"
   },
   "next": {
     "slug": "middleware",
-    "title": "Middleware"
+    "title": "Междинен софтуер"
   }
 }

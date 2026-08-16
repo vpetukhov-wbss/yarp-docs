@@ -3,17 +3,17 @@
   "locale": "zh-Hans",
   "group": "security",
   "kind": "doc",
-  "title": "HTTP header guidelines",
-  "lede": "Headers are a very important part of processing HTTP requests and each have their own",
+  "title": "HTTP 标头准则",
+  "lede": "标头是处理 HTTP 请求的重要组成部分,每个标头都有各自的语义和注意事项",
   "headings": [
     {
       "id": "yarp-header-filtering",
-      "text": "YARP header filtering",
+      "text": "YARP 标头筛选",
       "level": 2
     },
     {
       "id": "connection-keepalive-close",
-      "text": "Connection , KeepAlive , Close",
+      "text": "Connection、KeepAlive、Close",
       "level": 2
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "id": "distributed-tracing-headers",
-      "text": "Distributed tracing headers",
+      "text": "分布式跟踪标头",
       "level": 2
     },
     {
@@ -53,7 +53,7 @@
     },
     {
       "id": "other-header-guidelines",
-      "text": "Other header guidelines",
+      "text": "其他标头准则",
       "level": 2
     },
     {
@@ -63,12 +63,12 @@
     },
     {
       "id": "x-forwarded-forwarded",
-      "text": "X-Forwarded-* , Forwarded",
+      "text": "X-Forwarded-*、Forwarded",
       "level": 2
     },
     {
       "id": "x-http-method-override-x-http-method-x-method-override",
-      "text": "X-http-method-override , x-http-method , x-method-override",
+      "text": "X-http-method-override、x-http-method、x-method-override",
       "level": 2
     },
     {
@@ -92,16 +92,16 @@
       "level": 2
     }
   ],
-  "bodyHtml": "<p>Headers are a very important part of processing HTTP requests and each have their own semantics and considerations. Most headers are proxied by default, though some used to control how the request is delivered are automatically adjusted or removed by the proxy. The connections between the client and the proxy and between the proxy and the destination are independent. Therefore, headers that affect the connection and transport must be filtered. Many headers contain information like domain names, paths, or other details that may be affected when a reverse proxy is included in the application architecture. The following is a collection of guidelines about how specific headers might be impacted and what to do about them.</p>\n<h2 id=\"yarp-header-filtering\">YARP header filtering</h2><p>YARP automatically removes request and response headers that could impact its ability to forward a request correctly, or that may be used maliciously to bypass features of the proxy. A complete list can be found here , with some highlights described below.</p>\n<h2 id=\"connection-keepalive-close\">Connection , KeepAlive , Close</h2><p>These headers control how the TCP connection is managed and are removed to prevent impacting the connection on the other side of the proxy.</p>\n<h2 id=\"transfer-encoding\">Transfer-Encoding</h2><p>This header describes the format of the request or response body on the wire, e.g. &#39;chunked&#39;, and is removed because the format can vary between the internal and external connection. The incoming and outgoing HTTP stacks will add transport headers as needed.</p>\n<h2 id=\"te\">TE</h2><p>Only the TE: trailers header value is allowed through the proxy since it&#39;s required for some gRPC implementations.</p>\n<h2 id=\"upgrade\">Upgrade</h2><p>This is used for protocols like WebSockets. It is removed by default and only added back for specifically supported protocols (WebSockets, SPDY).</p>\n<h2 id=\"proxy\">Proxy-*</h2><p>These are headers used with proxies and are not considered appropriate to forward.</p>\n<h2 id=\"alt-svc\">Alt-Svc</h2><p>This response header is used with HTTP/3 upgrades and only applies to the immediate connection.</p>\n<h2 id=\"distributed-tracing-headers\">Distributed tracing headers</h2><p>These headers include TraceParent , Request-Id , TraceState , Baggage , and Correlation- Context .</p>\n<p>They&#39;re automatically removed based on DistributedContextPropagator.Fields, allowing the forwarding HttpClient to replace them with updated values.</p>\n<p>You can opt out of modifying these headers by setting SocketsHttpHandler.ActivityHeadersPropagator to null :</p>\n<pre class=\"code-block standalone\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"header-guidelines-code-1\" aria-label=\"复制代码\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"header-guidelines-code-1\">   services<span class=\"tok-punc\">.</span><span class=\"tok-type\">AddReverseProxy</span><span class=\"tok-punc\">(</span><span class=\"tok-punc\">)</span>\n          <span class=\"tok-punc\">.</span><span class=\"tok-type\">ConfigureHttpClient</span><span class=\"tok-punc\">(</span><span class=\"tok-punc\">(</span>_<span class=\"tok-punc\">,</span> handler<span class=\"tok-punc\">)</span> <span class=\"tok-punc\">=&gt;</span> handler<span class=\"tok-punc\">.</span>ActivityHeadersPropagator <span class=\"tok-punc\">=</span>\n   <span class=\"tok-kw\">null</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span></code></pre><h2 id=\"strict-transport-security\">Strict-Transport-Security</h2><p>This header instructs clients to always use HTTPS, but there may be a conflict between values provided by the proxy and destination. To avoid confusion, the destination&#39;s value is not copied to the response if one was already added to the response by the proxy application.</p>\n<h2 id=\"other-header-guidelines\">Other header guidelines</h2><h2 id=\"host\">Host</h2><p>The Host header indicates which site on the server the request is intended for. This header is removed by default since the host name used publicly by the proxy is likely to differ from the one used by the service behind the proxy. This can be configured using the RequestHeaderOriginalHost transform.</p>\n<h2 id=\"x-forwarded-forwarded\">X-Forwarded-* , Forwarded</h2><p>Because a separate connection is used to communicate with the destination, these request headers can be used to forward information about the original connection, such as the IP, scheme, port, and client certificate. X-Forwarded-For , X-Forwarded-Proto , X-Forwarded-Host , and X-Forwarded-Prefix are enabled by default. This information is subject to spoofing attacks so any existing headers on the request are removed and replaced by default. The destination app should be careful about how much trust it places in these values. See transforms for configuring these in the proxy. For guidance on configuring the destination app to read these headers, see Configure ASP.NET Core to work with proxy servers and load balancers.</p>\n<h2 id=\"x-http-method-override-x-http-method-x-method-override\">X-http-method-override , x-http-method , x-method-override</h2><p>Some clients and servers limit which HTTP methods they allow (for example, GET). These request headers are sometimes used to work around those restrictions. These headers are proxied by default. If in the proxy you want to prevent these bypasses then use the RequestHeaderRemove transform.</p>\n<h2 id=\"set-cookie\">Set-Cookie</h2><p>This response header may contain fields that constrain aspects of the URL, such as the scheme, domain, or path, where the cookie should be used. Using a reverse proxy may change the effective scheme, domain, or path of a site from the public view. While it would be possible to rewrite response cookies using custom transforms , we recommended instead to use the Forwarded headers described earlier to flow the correct values to the destination app so it can generate the correct set-cookie headers.</p>\n<h2 id=\"location\">Location</h2><p>This response header is used with redirects and may contain a scheme, domain, and path that differ from the public values due to the use of the proxy. While it would be possible to rewrite the Location header using custom transforms, it&#39;s recommended instead to use the Forwarded headers described above to flow the correct values to the destination app so it can generate the correct Location headers.</p>\n<h2 id=\"server\">Server</h2><p>This response header indicates what server technology was used to generate the response (for example, IIS, Kestrel). This header is proxied from the destination by default. Applications that want to remove it can use the ResponseHeaderRemove transform, in which case the proxy&#39;s</p>\n<p>default server header will be used. Suppressing the proxy default server header is server</p>\n<p>specific, such as for Kestrel.</p>\n<h2 id=\"x-powered-by\">X-Powered-By</h2><p>This response header indicates what web framework was used to generate the response (for example, ASP.NET). ASP.NET Core does not generate this header but IIS can. This header is proxied from the destination by default. Applications that want to remove it can use the ResponseHeaderRemove transform.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">说明</div><p>The author created this article with assistance from AI. Learn more</p>\n</div></div>",
+  "bodyHtml": "<p>标头是处理 HTTP 请求过程中非常重要的一部分,每个标头都有各自的语义和注意事项。默认情况下,大多数标头会被代理转发,不过一些用于控制请求传递方式的标头会由代理自动调整或移除。客户端与代理之间的连接,以及代理与目标之间的连接是相互独立的。因此,必须对影响连接和传输的标头进行过滤。许多标头包含域名、路径或其他详细信息,当应用程序架构中包含反向代理时,这些信息可能会受到影响。以下是关于特定标头可能受到哪些影响以及应如何处理的一系列准则。</p>\n<h2 id=\"yarp-header-filtering\">YARP 标头筛选</h2><p>YARP 会自动移除可能影响其正确转发请求能力的请求标头和响应标头,或可能被恶意用于绕过代理功能的标头。完整列表可以在此处找到,下面介绍了其中一些重点内容。</p>\n<h2 id=\"connection-keepalive-close\">Connection、KeepAlive、Close</h2><p>这些标头用于控制 TCP 连接的管理方式,为防止影响代理另一侧的连接,这些标头会被移除。</p>\n<h2 id=\"transfer-encoding\">Transfer-Encoding</h2><p>此标头描述了请求或响应正文在传输过程中的格式(例如 &#39;chunked&#39;),由于内部连接和外部连接的格式可能不同,因此会移除该标头。传入和传出的 HTTP 协议栈会根据需要添加相应的传输标头。</p>\n<h2 id=\"te\">TE</h2><p>由于某些 gRPC 实现需要用到该值,因此只有 TE: trailers 这一标头值可以通过代理。</p>\n<h2 id=\"upgrade\">Upgrade</h2><p>此标头用于 WebSockets 等协议。默认情况下会被移除,仅在专门支持的协议(WebSockets、SPDY)中才会重新添加。</p>\n<h2 id=\"proxy\">Proxy-*</h2><p>这些是与代理一起使用的标头,不适合转发。</p>\n<h2 id=\"alt-svc\">Alt-Svc</h2><p>此响应标头用于 HTTP/3 升级,仅适用于当前直连的连接。</p>\n<h2 id=\"distributed-tracing-headers\">分布式跟踪标头</h2><p>这些标头包括 TraceParent、Request-Id、TraceState、Baggage 和 Correlation-Context。</p>\n<p>系统会根据 DistributedContextPropagator.Fields 自动移除这些标头,从而使转发用的 HttpClient 能够用更新后的值替换它们。</p>\n<p>您可以通过将 SocketsHttpHandler.ActivityHeadersPropagator 设置为 null 来选择不修改这些标头:</p>\n<pre class=\"code-block standalone\"><span class=\"lang-tag\">C#</span><button class=\"copy-btn\" data-copy=\"header-guidelines-code-1\" aria-label=\"复制代码\"><svg class=\"copy\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"9\" y=\"9\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1\"/></svg><svg class=\"check\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M20 6 9 17l-5-5\"/></svg></button><code id=\"header-guidelines-code-1\">   services<span class=\"tok-punc\">.</span><span class=\"tok-type\">AddReverseProxy</span><span class=\"tok-punc\">(</span><span class=\"tok-punc\">)</span>\n          <span class=\"tok-punc\">.</span><span class=\"tok-type\">ConfigureHttpClient</span><span class=\"tok-punc\">(</span><span class=\"tok-punc\">(</span>_<span class=\"tok-punc\">,</span> handler<span class=\"tok-punc\">)</span> <span class=\"tok-punc\">=&gt;</span> handler<span class=\"tok-punc\">.</span>ActivityHeadersPropagator <span class=\"tok-punc\">=</span>\n   <span class=\"tok-kw\">null</span><span class=\"tok-punc\">)</span><span class=\"tok-punc\">;</span></code></pre><h2 id=\"strict-transport-security\">Strict-Transport-Security</h2><p>此标头指示客户端始终使用 HTTPS,但代理和目标提供的值之间可能存在冲突。为避免混淆,如果代理应用程序已经向响应中添加了该值,则不会再将目标的值复制到响应中。</p>\n<h2 id=\"other-header-guidelines\">其他标头准则</h2><h2 id=\"host\">Host</h2><p>Host 标头指示请求所面向的服务器上的具体站点。由于代理对外公开使用的主机名很可能与代理背后服务所使用的主机名不同,因此默认情况下会移除此标头。可以使用 RequestHeaderOriginalHost 转换来配置此行为。</p>\n<h2 id=\"x-forwarded-forwarded\">X-Forwarded-*、Forwarded</h2><p>由于与目标通信使用的是单独的连接,这些请求标头可用于转发有关原始连接的信息,例如 IP、方案、端口和客户端证书。默认情况下会启用 X-Forwarded-For、X-Forwarded-Proto、X-Forwarded-Host 和 X-Forwarded-Prefix。由于这些信息可能被伪造,因此默认情况下会移除请求中已有的同名标头并替换为新值。目标应用程序应谨慎决定对这些值的信任程度。有关在代理中配置这些标头的方法,请参阅转换。有关配置目标应用程序读取这些标头的指导,请参阅配置 ASP.NET Core 以使用代理服务器和负载均衡器。</p>\n<h2 id=\"x-http-method-override-x-http-method-x-method-override\">X-http-method-override、x-http-method、x-method-override</h2><p>某些客户端和服务器会限制其允许的 HTTP 方法(例如 GET)。这些请求标头有时被用来绕过此类限制。默认情况下,这些标头会被代理转发。如果希望在代理中阻止此类绕过行为,可以使用 RequestHeaderRemove 转换。</p>\n<h2 id=\"set-cookie\">Set-Cookie</h2><p>此响应标头可能包含用于限制 Cookie 使用范围的字段,例如方案、域或路径。使用反向代理可能会改变站点在公众视角下的有效方案、域或路径。虽然可以通过自定义转换来重写响应 Cookie,但我们建议改用前面介绍的 Forwarded 标头,将正确的值传递给目标应用程序,以便它能够生成正确的 set-cookie 标头。</p>\n<h2 id=\"location\">Location</h2><p>此响应标头用于重定向,由于使用了代理,其中的方案、域和路径可能与公开值不同。虽然可以通过自定义转换来重写 Location 标头,但建议改用上文介绍的 Forwarded 标头,将正确的值传递给目标应用程序,以便它能够生成正确的 Location 标头。</p>\n<h2 id=\"server\">Server</h2><p>此响应标头指示生成响应所使用的服务器技术(例如 IIS、Kestrel)。默认情况下,此标头会从目标转发。希望移除此标头的应用程序可以使用 ResponseHeaderRemove 转换,此时将改用代理的</p>\n<p>默认服务器标头。禁止显示代理默认服务器标头的方式因服务器</p>\n<p>而异,例如 Kestrel。</p>\n<h2 id=\"x-powered-by\">X-Powered-By</h2><p>此响应标头指示生成响应所使用的 Web 框架(例如 ASP.NET)。ASP.NET Core 不会生成此标头,但 IIS 可能会生成。默认情况下,此标头会从目标转发。希望移除此标头的应用程序可以使用 ResponseHeaderRemove 转换。</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">说明</div><p>本文作者在 AI 的协助下创作本文。了解详情</p>\n</div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/header-guidelines",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "https-tls",
-    "title": "HTTPS & TLS"
+    "title": "HTTPS 与 TLS"
   },
   "next": {
     "slug": "output-caching",
-    "title": "Output caching"
+    "title": "输出缓存"
   }
 }

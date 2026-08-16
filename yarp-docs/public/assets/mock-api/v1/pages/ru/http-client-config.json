@@ -42,6 +42,6 @@
   },
   "next": {
     "slug": "header-routing",
-    "title": "Header-based routing"
+    "title": "Маршрутизация на основе заголовков"
   }
 }

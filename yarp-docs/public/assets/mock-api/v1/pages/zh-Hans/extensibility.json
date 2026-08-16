@@ -28,7 +28,7 @@
   "translated": false,
   "prev": {
     "slug": "websockets",
-    "title": "WebSockets & SPDY"
+    "title": "WebSockets 与 SPDY"
   },
   "next": {
     "slug": "middleware",

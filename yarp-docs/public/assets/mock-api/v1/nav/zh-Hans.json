@@ -120,13 +120,13 @@
         },
         {
           "slug": "rate-limiting",
-          "title": "Rate limiting",
+          "title": "速率限制",
           "order": 4,
           "kind": "doc"
         },
         {
           "slug": "timeouts",
-          "title": "Request timeouts",
+          "title": "请求超时",
           "order": 5,
           "kind": "doc"
         }
@@ -139,7 +139,7 @@
       "items": [
         {
           "slug": "authn-authz",
-          "title": "Authentication & authorization",
+          "title": "身份验证与授权",
           "order": 1,
           "kind": "doc"
         },
@@ -151,13 +151,13 @@
         },
         {
           "slug": "https-tls",
-          "title": "HTTPS & TLS",
+          "title": "HTTPS 与 TLS",
           "order": 3,
           "kind": "doc"
         },
         {
           "slug": "header-guidelines",
-          "title": "HTTP header guidelines",
+          "title": "HTTP 标头准则",
           "order": 4,
           "kind": "doc"
         }
@@ -170,7 +170,7 @@
       "items": [
         {
           "slug": "output-caching",
-          "title": "Output caching",
+          "title": "输出缓存",
           "order": 1,
           "kind": "doc"
         }
@@ -183,7 +183,7 @@
       "items": [
         {
           "slug": "grpc",
-          "title": "Proxying gRPC",
+          "title": "代理 gRPC",
           "order": 1,
           "kind": "doc"
         },
@@ -195,7 +195,7 @@
         },
         {
           "slug": "websockets",
-          "title": "WebSockets & SPDY",
+          "title": "WebSockets 与 SPDY",
           "order": 3,
           "kind": "doc"
         }

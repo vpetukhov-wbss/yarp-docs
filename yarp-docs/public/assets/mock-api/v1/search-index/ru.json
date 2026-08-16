@@ -441,378 +441,378 @@
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+    "title": "Маршрутизация на основе заголовков",
+    "excerpt": "Маршруты прокси, заданные в конфигурации или в коде, должны включать как минимум путь или узел для сопоставления"
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › YARP Header Based Routing",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Маршрутизация YARP на основе заголовков",
     "anchor": "yarp-header-based-routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+    "excerpt": "Маршруты прокси, заданные в конфигурации или в коде, должны включать как минимум путь или узел для сопоставления. Помимо этого, маршрут может также указывать…"
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Precedence",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Приоритет",
     "anchor": "precedence",
-    "excerpt": "The default route match precedence order is path method host headers query parameters That means a route which specifies methods and no headers will match…"
+    "excerpt": "Порядок приоритета сопоставления маршрутов по умолчанию: путь метод узел заголовки параметры запроса Это означает, что маршрут, задающий методы, но не…"
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Configuration",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Headers are specified in the Match section of a proxy route. If multiple headers rules are specified on a route then all must match for a route to be taken. OR…"
+    "excerpt": "Заголовки задаются в разделе Match маршрута прокси. Если для маршрута указано несколько правил заголовков, все они должны совпасть, чтобы маршрут был выбран.…"
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Contract",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Контракт",
     "anchor": "contract",
-    "excerpt": "RouteHeader defines the code contract and is mapped from config."
+    "excerpt": "RouteHeader определяет контракт кода и сопоставляется из конфигурации."
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Name",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Name",
     "anchor": "name",
-    "excerpt": "The header name to check for on the request. A non-empty value is required. This field is case- insensitive per the HTTP RFCs."
+    "excerpt": "Имя заголовка, который проверяется в запросе. Требуется непустое значение. Это поле нечувствительно к регистру в соответствии со спецификациями HTTP (RFC)."
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Values",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Values",
     "anchor": "values",
-    "excerpt": "A list of possible values to search for. The header must match at least one of these values according to the specified Mode except for the…"
+    "excerpt": "Список возможных значений для поиска. Заголовок должен совпадать как минимум с одним из этих значений в соответствии с указанным Mode, за исключением режима…"
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Mode",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Mode",
     "anchor": "mode",
-    "excerpt": "HeaderMatchMode specifies how to match the value(s) against the request header. The default is ExactHeader . ExactHeader - Any of the headers with the given…"
+    "excerpt": "HeaderMatchMode определяет, как сопоставлять значение(-я) с заголовком запроса. Значение по умолчанию — ExactHeader. ExactHeader — любой из заголовков с…"
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › IsCaseSensitive",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › IsCaseSensitive",
     "anchor": "iscasesensitive",
-    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+    "excerpt": "Указывает, следует ли выполнять сопоставление значений с учётом регистра. Значение по умолчанию — false, то есть без учёта регистра."
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Examples",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Примеры",
     "anchor": "examples",
-    "excerpt": "These examples use the configuration specified above."
+    "excerpt": "В этих примерах используется конфигурация, приведённая выше."
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 1 - Exact Header Match",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Сценарий 1 - Точное совпадение заголовка",
     "anchor": "scenario-1-exact-header-match",
-    "excerpt": "A request with the following header will match against route1. Header1: Value1 If a header contains multiple values, each one will be matched separately. The…"
+    "excerpt": "Запрос со следующим заголовком совпадёт с route1. Header1: Value1 Если заголовок содержит несколько значений, каждое из них сопоставляется отдельно. Следующий…"
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 2 - Multiple Values",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Сценарий 2 - Несколько значений",
     "anchor": "scenario-2-multiple-values",
-    "excerpt": "Route2 defined multiple values to search for in a header (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also specified the…"
+    "excerpt": "Route2 задаёт несколько значений для поиска в заголовке (&quot;1prefix&quot;, &quot;2prefix&quot;); подходит любое из них. Также для этого маршрута указан Mode…"
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 3 - Exists",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Сценарий 3 - Exists",
     "anchor": "scenario-3-exists",
-    "excerpt": "Route3 only requires that the header &quot;Header3&quot; exists with any non-empty value The following is an example that will match route3. Header3: value An…"
+    "excerpt": "Route3 требует лишь того, чтобы заголовок &quot;Header3&quot; существовал с любым непустым значением. Ниже приведён пример запроса, который совпадёт с route3.…"
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 4 - Multiple Headers",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Сценарий 4 - Несколько заголовков",
     "anchor": "scenario-4-multiple-headers",
-    "excerpt": "Route4 requires both header4 and header5 , each matching according to their specified Mode . The following headers will match route4: Header4: value1 Header5:…"
+    "excerpt": "Route4 требует наличия одновременно header4 и header5, каждый из которых должен совпадать согласно своему указанному Mode. Следующие заголовки совпадут с…"
   },
   {
     "slug": "header-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 5 - NotExists",
+    "title": "Маршрутизация на основе заголовков",
+    "headingPath": "Маршрутизация на основе заголовков › Сценарий 5 - NotExists",
     "anchor": "scenario-5-notexists",
-    "excerpt": "Route7 requires that the header &quot;Header7&quot; must not exists The following headers will match route7: NotHeader7: AnyValue The following headers will…"
+    "excerpt": "Route7 требует, чтобы заголовок &quot;Header7&quot; отсутствовал. Следующие заголовки совпадут с route7: NotHeader7: AnyValue Следующие заголовки не совпадут с…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+    "title": "Маршрутизация по параметрам запроса",
+    "excerpt": "Маршруты прокси, заданные в конфигурации или в коде, должны включать как минимум путь или узел для сопоставления"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › YARP Query Parameter Based Routing",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Маршрутизация YARP по параметрам запроса",
     "anchor": "yarp-query-parameter-based-routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+    "excerpt": "Маршруты прокси, заданные в конфигурации или в коде, должны включать как минимум путь или узел для сопоставления. Помимо этого, маршрут может также указывать…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Precedence",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Приоритет",
     "anchor": "precedence",
-    "excerpt": "The default route match precedence order is 1) path, 2) method, 3) host, 4) headers 5) query parameters. That means a route which specifies methods and no…"
+    "excerpt": "Порядок приоритета сопоставления маршрутов по умолчанию: 1) путь, 2) метод, 3) узел, 4) заголовки, 5) параметры запроса. Это означает, что маршрут, задающий…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Configuration",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Query Parameters are specified in the Match section of a proxy route. If multiple query parameter rules are specified on a route then all must match for a…"
+    "excerpt": "Параметры запроса задаются в разделе Match маршрута прокси. Если для маршрута указано несколько правил параметров запроса, все они должны совпасть, чтобы…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Contract",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Контракт",
     "anchor": "contract",
-    "excerpt": "RouteQueryParameter defines the code contract and is mapped from config."
+    "excerpt": "RouteQueryParameter определяет контракт кода и сопоставляется из конфигурации."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Name",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Name",
     "anchor": "name",
-    "excerpt": "The query parameter name to check for on the request. A non-empty value is required. This field is case-insensitive."
+    "excerpt": "Имя параметра запроса, который проверяется в запросе. Требуется непустое значение. Это поле нечувствительно к регистру."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Values",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Values",
     "anchor": "values",
-    "excerpt": "A list of possible values to search for. The query parameter must match at least one of these values according to the specified Mode except for the…"
+    "excerpt": "Список возможных значений для поиска. Параметр запроса должен совпадать как минимум с одним из этих значений в соответствии с указанным Mode, за исключением…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Mode",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Mode",
     "anchor": "mode",
-    "excerpt": "QueryParameterMatchMode specifies how to match the value(s) against the request query parameter. The default is Exact . Exact - The query parameter must match…"
+    "excerpt": "QueryParameterMatchMode определяет, как сопоставлять значение(-я) с параметром запроса в запросе. Значение по умолчанию — Exact. Exact — параметр запроса…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › IsCaseSensitive",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › IsCaseSensitive",
     "anchor": "iscasesensitive",
-    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+    "excerpt": "Указывает, следует ли выполнять сопоставление значений с учётом регистра. Значение по умолчанию — false, то есть без учёта регистра."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Encoding",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Кодирование",
     "anchor": "encoding",
-    "excerpt": "The request query string will be parsed and decoded before matching against the route rules. &quot;route8&quot; : { &quot;ClusterId&quot;:…"
+    "excerpt": "Строка запроса будет разобрана и декодирована перед сопоставлением с правилами маршрута. &quot;route8&quot; : { &quot;ClusterId&quot;: &quot;cluster1&quot;,…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Examples",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Примеры",
     "anchor": "examples",
-    "excerpt": "These examples use the configuration specified above."
+    "excerpt": "В этих примерах используется конфигурация, приведённая выше."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 1 - Exact Query Parameter Match",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Сценарий 1 - Точное совпадение параметра запроса",
     "anchor": "scenario-1-exact-query-parameter-match",
-    "excerpt": "A request with the following query parameter will match against route1. ?QueryParam1=Value1 Multiple query parameters with the same name are not currently…"
+    "excerpt": "Запрос со следующим параметром запроса совпадёт с route1. ?QueryParam1=Value1 Несколько параметров запроса с одинаковым именем в настоящее время не…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 2 - Multiple Values",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Сценарий 2 - Несколько значений",
     "anchor": "scenario-2-multiple-values",
-    "excerpt": "Route2 defined multiple values to search for in a query parameter (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also…"
+    "excerpt": "Route2 задаёт несколько значений для поиска в параметре запроса (&quot;1prefix&quot;, &quot;2prefix&quot;); подходит любое из них. Также для этого маршрута…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 3 - Exists",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Сценарий 3 - Exists",
     "anchor": "scenario-3-exists",
-    "excerpt": "Route3 only requires that the query parameter &quot;QueryParam3&quot; exists with any non-empty value The following is an example that will match route3.…"
+    "excerpt": "Route3 требует лишь того, чтобы параметр запроса &quot;QueryParam3&quot; существовал с любым непустым значением. Ниже приведён пример запроса, который совпадёт…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "ru",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 4 - Multiple QueryParameters",
+    "title": "Маршрутизация по параметрам запроса",
+    "headingPath": "Маршрутизация по параметрам запроса › Сценарий 4 - Несколько параметров запроса",
     "anchor": "scenario-4-multiple-queryparameters",
-    "excerpt": "Route4 requires both QueryParam4 and QueryParam5 , each matching according to their specified Mode . The following query parameters will match route4:…"
+    "excerpt": "Route4 требует наличия одновременно QueryParam4 и QueryParam5, каждый из которых должен совпадать согласно своему указанному Mode. Следующие параметры запроса…"
   },
   {
     "slug": "transforms",
     "locale": "ru",
     "group": "transforms",
-    "title": "Overview",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "title": "Обзор",
+    "excerpt": "При проксировании запроса части запроса или ответа часто требуется изменить, чтобы адаптировать их к"
   },
   {
     "slug": "transforms",
     "locale": "ru",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › YARP Request and Response Transforms",
+    "title": "Обзор",
+    "headingPath": "Обзор › Преобразования запросов и ответов YARP",
     "anchor": "yarp-request-and-response-transforms",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "При проксировании запроса части запроса или ответа часто требуется изменить, чтобы адаптировать их к"
   },
   {
     "slug": "transforms",
     "locale": "ru",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Introduction",
+    "title": "Обзор",
+    "headingPath": "Обзор › Введение",
     "anchor": "introduction",
-    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+    "excerpt": "При проксировании запроса части запроса или ответа часто требуется изменить, чтобы адаптировать их к требованиям сервера назначения или передать дополнительные…"
   },
   {
     "slug": "transforms",
     "locale": "ru",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Defaults",
+    "title": "Обзор",
+    "headingPath": "Обзор › Значения по умолчанию",
     "anchor": "defaults",
-    "excerpt": "The following transforms are enabled by default for all routes. They can be configured or disabled as shown later in this document. Host - Suppress the…"
+    "excerpt": "Следующие преобразования включены по умолчанию для всех маршрутов. Их можно настроить или отключить, как показано далее в этом документе. Host — подавляет…"
   },
   {
     "slug": "transforms",
     "locale": "ru",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Transform Categories",
+    "title": "Обзор",
+    "headingPath": "Обзор › Категории преобразований",
     "anchor": "transform-categories",
-    "excerpt": "Transforms fall into a few categories: Request, Response, and Response Trailers. Request trailers are not supported because they are not supported by the…"
+    "excerpt": "Преобразования делятся на несколько категорий: запросы (Request), ответы (Response) и трейлеры ответа (Response Trailers). Трейлеры запроса не поддерживаются,…"
   },
   {
     "slug": "transforms",
     "locale": "ru",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Adding transforms",
+    "title": "Обзор",
+    "headingPath": "Обзор › Добавление преобразований",
     "anchor": "adding-transforms",
-    "excerpt": "Transforms can be added to routes either through configuration or programmatically."
+    "excerpt": "Преобразования можно добавлять к маршрутам либо через конфигурацию, либо программно."
   },
   {
     "slug": "transforms",
     "locale": "ru",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › From Configuration",
+    "title": "Обзор",
+    "headingPath": "Обзор › Через конфигурацию",
     "anchor": "from-configuration",
-    "excerpt": "Transforms can be configured on RouteConfig.Transforms and can be bound from the Routes sections of the config file. These can be modified and reloaded without…"
+    "excerpt": "Преобразования можно настроить в RouteConfig.Transforms, они также могут быть привязаны из раздела Routes файла конфигурации. Их можно изменять и перезагружать…"
   },
   {
     "slug": "transforms",
     "locale": "ru",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › From Code",
+    "title": "Обзор",
+    "headingPath": "Обзор › Через код",
     "anchor": "from-code",
-    "excerpt": "Transforms can be added to routes programmatically by calling the AddTransforms method. AddTransforms can be called after AddReverseProxy to provide a callback…"
+    "excerpt": "Преобразования можно добавлять к маршрутам программно, вызывая метод AddTransforms. Метод AddTransforms можно вызвать после AddReverseProxy, чтобы указать…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "title": "Преобразования запросов",
+    "excerpt": "Преобразования запроса затрагивают путь запроса, строку запроса, версию HTTP, метод и заголовки. В коде они представлены"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathPrefix",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › PathPrefix",
     "anchor": "pathprefix",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Преобразования запроса затрагивают путь запроса, строку запроса, версию HTTP, метод и заголовки. В коде они представлены"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Modifies the request path adding a prefix value",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › Добавляет префикс к пути запроса",
     "anchor": "modifies-the-request-path-adding-a-prefix-value",
-    "excerpt": "Key Value Required PathPrefix A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } Code: C# routeConfig =…"
+    "excerpt": "Key Value Required PathPrefix A path starting with a &#39;/&#39; yes Конфигурация: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } Код: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathRemovePrefix",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › PathRemovePrefix",
     "anchor": "pathremoveprefix",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Преобразования запроса затрагивают путь запроса, строку запроса, версию HTTP, метод и заголовки. В коде они представлены"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Modifies the request path removing a prefix value",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › Удаляет префикс из пути запроса",
     "anchor": "modifies-the-request-path-removing-a-prefix-value",
     "excerpt": "Key Value Expand table PathRemovePrefix A path starting with a &#39;/&#39; Required yes Config: 1/13 JSON…"
   },
@@ -820,35 +820,35 @@
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathSet",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › PathSet",
     "anchor": "pathset",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Преобразования запроса затрагивают путь запроса, строку запроса, версию HTTP, метод и заголовки. В коде они представлены"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Replaces the request path with the specified value",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › Заменяет путь запроса указанным значением",
     "anchor": "replaces-the-request-path-with-the-specified-value",
-    "excerpt": "Key Value Required PathSet A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } Code: C# routeConfig =…"
+    "excerpt": "Key Value Required PathSet A path starting with a &#39;/&#39; yes Конфигурация: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } Код: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathPattern",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › PathPattern",
     "anchor": "pathpattern",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Преобразования запроса затрагивают путь запроса, строку запроса, версию HTTP, метод и заголовки. В коде они представлены"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Replaces the request path using a pattern template",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › Заменяет путь запроса с помощью шаблона",
     "anchor": "replaces-the-request-path-using-a-pattern-template",
     "excerpt": "Key Value Expand table PathPattern A path template starting with a &#39;/&#39; Required yes Config: 2/13 JSON…"
   },
@@ -856,44 +856,44 @@
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryValueParameter",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › QueryValueParameter",
     "anchor": "queryvalueparameter",
-    "excerpt": "Adds or replaces parameters in the request query string Key Value Expand table QueryValueParameter Name of a query string parameter Required Set/Append Static…"
+    "excerpt": "Добавляет или заменяет параметры в строке запроса Key Value Expand table QueryValueParameter Name of a query string parameter Required Set/Append Static value…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryRouteParameter",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › QueryRouteParameter",
     "anchor": "queryrouteparameter",
-    "excerpt": "Adds or replaces a query string parameter with a value from the route configuration Key Value Expand table QueryRouteParameter Name of a query string parameter…"
+    "excerpt": "Добавляет или заменяет параметр строки запроса значением из конфигурации маршрута Key Value Expand table QueryRouteParameter Name of a query string parameter…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryRemoveParameter",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › QueryRemoveParameter",
     "anchor": "queryremoveparameter",
-    "excerpt": "Removes the specified parameter from the request query string Key Value Expand table QueryRemoveParameter Name of a query string parameter Required yes Config:…"
+    "excerpt": "Удаляет указанный параметр из строки запроса Key Value Expand table QueryRemoveParameter Name of a query string parameter Required yes Config: JSON {…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › HttpMethodChange",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › HttpMethodChange",
     "anchor": "httpmethodchange",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Преобразования запроса затрагивают путь запроса, строку запроса, версию HTTP, метод и заголовки. В коде они представлены"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Changes the http method used in the request",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › Изменяет HTTP-метод запроса",
     "anchor": "changes-the-http-method-used-in-the-request",
     "excerpt": "Key Value Expand table HttpMethodChange The http method to replace Required Set The new http method yes yes Config: JSON { \"HttpMethodChange\": \"PUT\", \"Set\":…"
   },
@@ -901,35 +901,35 @@
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeadersCopy",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › RequestHeadersCopy",
     "anchor": "requestheaderscopy",
-    "excerpt": "Sets whether incoming request headers are copied to the outbound request Key Value Default Expand table RequestHeadersCopy true/false true Required yes Config:…"
+    "excerpt": "Определяет, копируются ли входящие заголовки запроса в исходящий запрос Key Value Default Expand table RequestHeadersCopy true/false true Required yes Config:…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderOriginalHost",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › RequestHeaderOriginalHost",
     "anchor": "requestheaderoriginalhost",
-    "excerpt": "Specifies if the incoming request Host header should be copied to the proxy request Key Value Default Expand table RequestHeaderOriginalHost true/false false…"
+    "excerpt": "Определяет, следует ли копировать заголовок Host входящего запроса в прокси-запрос Key Value Default Expand table RequestHeaderOriginalHost true/false false…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeader",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › RequestHeader",
     "anchor": "requestheader",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Преобразования запроса затрагивают путь запроса, строку запроса, версию HTTP, метод и заголовки. В коде они представлены"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Adds or replaces request headers",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › Добавляет или заменяет заголовки запроса",
     "anchor": "adds-or-replaces-request-headers",
     "excerpt": "Key Expand table RequestHeader Set/Append Value Required The header name yes Config: The header value yes JSON { &quot;RequestHeader&quot;:…"
   },
@@ -937,26 +937,26 @@
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderRouteValue",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › RequestHeaderRouteValue",
     "anchor": "requestheaderroutevalue",
-    "excerpt": "Adds or replaces a header with a value from the route configuration Key Value Expand table RequestHeader Name of a query string parameter Required Set/Append…"
+    "excerpt": "Добавляет или заменяет заголовок значением из конфигурации маршрута Key Value Expand table RequestHeader Name of a query string parameter Required Set/Append…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderRemove",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › RequestHeaderRemove",
     "anchor": "requestheaderremove",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "Преобразования запроса затрагивают путь запроса, строку запроса, версию HTTP, метод и заголовки. В коде они представлены"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Removes request headers",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › Удаляет заголовки запроса",
     "anchor": "removes-request-headers",
     "excerpt": "Key Value Expand table RequestHeaderRemove The header name Required yes Config: JSON { \"RequestHeaderRemove\": \"MyHeader\" } Code: C# routeConfig =…"
   },
@@ -964,8 +964,8 @@
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeadersAllowed",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › RequestHeadersAllowed",
     "anchor": "requestheadersallowed",
     "excerpt": "Key Value Expand table RequestHeadersAllowed A semicolon separated list of allowed header names. Required yes…"
   },
@@ -973,69 +973,69 @@
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › X-Forwarded",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › X-Forwarded",
     "anchor": "x-forwarded",
-    "excerpt": "Adds headers with information about the original client request Key Value Default Required X-Forwarded Default action (Set, Append, Remove, Off) to apply to…"
+    "excerpt": "Добавляет заголовки со сведениями об исходном запросе клиента Key Value Default Required X-Forwarded Default action (Set, Append, Remove, Off) to apply to all…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Forwarded",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › Forwarded",
     "anchor": "forwarded",
-    "excerpt": "Adds a header with information about the original client request Key Value Default Re Forwarded A comma separated list containing any of these values:…"
+    "excerpt": "Добавляет заголовок со сведениями об исходном запросе клиента Key Value Default Re Forwarded A comma separated list containing any of these values:…"
   },
   {
     "slug": "transforms-request",
     "locale": "ru",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › ClientCert",
+    "title": "Преобразования запросов",
+    "headingPath": "Преобразования запросов › ClientCert",
     "anchor": "clientcert",
-    "excerpt": "Forwards the client cert used on the inbound connection as a header to destination Key Value Required ClientCert The header name yes Config: JSON {…"
+    "excerpt": "Пересылает клиентский сертификат, использованный для входящего подключения, в заголовке к серверу назначения Key Value Required ClientCert The header name yes…"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "title": "Преобразования ответов и трейлеров",
+    "excerpt": "Все заголовки и трейлеры ответа копируются из проксируемого ответа в исходящий ответ клиента"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Response and Response Trailers",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › Ответ и трейлеры ответа",
     "anchor": "response-and-response-trailers",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client response by default. Response and response trailer transforms may…"
+    "excerpt": "По умолчанию все заголовки и трейлеры ответа копируются из проксируемого ответа в исходящий ответ клиенту. Преобразования заголовков ответа и трейлеров ответа…"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeadersCopy",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › ResponseHeadersCopy",
     "anchor": "responseheaderscopy",
-    "excerpt": "Sets whether destination response headers are copied to the client Key Value Default Expand table ResponseHeadersCopy true/false true Required yes Config: JSON…"
+    "excerpt": "Определяет, копируются ли заголовки ответа сервера назначения клиенту Key Value Default Expand table ResponseHeadersCopy true/false true Required yes…"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeader",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › ResponseHeader",
     "anchor": "responseheader",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Все заголовки и трейлеры ответа копируются из проксируемого ответа в исходящий ответ клиента"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Adds or replaces response headers",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › Добавляет или заменяет заголовки ответа",
     "anchor": "adds-or-replaces-response-headers",
     "excerpt": "Key Value Default Expand table ResponseHeader The header name (none) Required Set/Append The header value (none) yes When Success/Always/Failure Success yes no…"
   },
@@ -1043,53 +1043,53 @@
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeaderRemove",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › ResponseHeaderRemove",
     "anchor": "responseheaderremove",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Все заголовки и трейлеры ответа копируются из проксируемого ответа в исходящий ответ клиента"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Removes response headers",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › Удаляет заголовки ответа",
     "anchor": "removes-response-headers",
-    "excerpt": "Key Value Default Required ResponseHeaderRemove The header name (none) yes When Success/Always/Failure Success no Config: JSON{ \"ResponseHeaderRemove\":…"
+    "excerpt": "Key Value Default Required ResponseHeaderRemove The header name (none) yes When Success/Always/Failure Success no Конфигурация: JSON{ \"ResponseHeaderRemove\":…"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeadersAllowed",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › ResponseHeadersAllowed",
     "anchor": "responseheadersallowed",
-    "excerpt": "Key Value Required ResponseHeadersAllowed A semicolon separated list of allowed header names. yes Config: JSON { \"ResponseHeadersAllowed\": \"Header1;header2\" }…"
+    "excerpt": "Key Value Required ResponseHeadersAllowed A semicolon separated list of allowed header names. yes Конфигурация: JSON { \"ResponseHeadersAllowed\":…"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailersCopy",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › ResponseTrailersCopy",
     "anchor": "responsetrailerscopy",
-    "excerpt": "Sets whether destination trailing response headers are copied to the client Key Value Default Expand table ResponseTrailersCopy true/false true Required yes…"
+    "excerpt": "Определяет, копируются ли трейлер-заголовки ответа сервера назначения клиенту Key Value Default Expand table ResponseTrailersCopy true/false true Required yes…"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailer",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › ResponseTrailer",
     "anchor": "responsetrailer",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Все заголовки и трейлеры ответа копируются из проксируемого ответа в исходящий ответ клиента"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Adds or replaces trailing response headers",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › Добавляет или заменяет трейлер-заголовки ответа",
     "anchor": "adds-or-replaces-trailing-response-headers",
     "excerpt": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/transforms-response?view=aspnetcore-9.0 Expand table 5/8 Key Value Default Required…"
   },
@@ -1097,28 +1097,28 @@
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailerRemove",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › ResponseTrailerRemove",
     "anchor": "responsetrailerremove",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Все заголовки и трейлеры ответа копируются из проксируемого ответа в исходящий ответ клиента"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Removes trailing response headers",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › Удаляет трейлер-заголовки ответа",
     "anchor": "removes-trailing-response-headers",
-    "excerpt": "Key Expand table ResponseTrailerRemove When Value Default Required The header name (none) yes Success/Always/Failure Success no Config: JSON {…"
+    "excerpt": "Key Expand table ResponseTrailerRemove When Value Default Required The header name (none) yes Success/Always/Failure Success no Конфигурация: JSON {…"
   },
   {
     "slug": "transforms-response",
     "locale": "ru",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailersAllowed",
+    "title": "Преобразования ответов и трейлеров",
+    "headingPath": "Преобразования ответов и трейлеров › ResponseTrailersAllowed",
     "anchor": "responsetrailersallowed",
-    "excerpt": "yes Key Value ResponseTrailersAllowed A semicolon separated list of allowed header names. Config: JSON{ \"ResponseTrailersAllowed\": \"Header1;header2\" } Code:C#…"
+    "excerpt": "yes Key Value ResponseTrailersAllowed A semicolon separated list of allowed header names. Конфигурация: JSON{ \"ResponseTrailersAllowed\": \"Header1;header2\" }…"
   },
   {
     "slug": "load-balancing",
@@ -1164,112 +1164,112 @@
     "slug": "session-affinity",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+    "title": "Привязка сеансов",
+    "excerpt": "Привязка сеансов — это механизм, который привязывает (аффинитизирует) причинно связанную последовательность запросов к"
   },
   {
     "slug": "session-affinity",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Concept",
+    "title": "Привязка сеансов",
+    "headingPath": "Привязка сеансов › Концепция",
     "anchor": "concept",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the destination that handled the first request when the load is…"
+    "excerpt": "Привязка сеансов (session affinity) — это механизм, который привязывает (аффинитизирует) причинно связанную последовательность запросов к тому узлу назначения,…"
   },
   {
     "slug": "session-affinity",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Configuration",
+    "title": "Привязка сеансов",
+    "headingPath": "Привязка сеансов › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+    "excerpt": "Привязка сеансов — это механизм, который привязывает (аффинитизирует) причинно связанную последовательность запросов к"
   },
   {
     "slug": "session-affinity",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Services and middleware registration",
+    "title": "Привязка сеансов",
+    "headingPath": "Привязка сеансов › Регистрация служб и промежуточного ПО",
     "anchor": "services-and-middleware-registration",
-    "excerpt": "Session affinity services are registered in the DI container automatically by AddReverseProxy() . The middleware UseSessionAffinity() is included by default in…"
+    "excerpt": "Службы привязки сеансов автоматически регистрируются в контейнере DI вызовом AddReverseProxy() . Промежуточное ПО UseSessionAffinity() по умолчанию включено в…"
   },
   {
     "slug": "session-affinity",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Cluster configuration",
+    "title": "Привязка сеансов",
+    "headingPath": "Привязка сеансов › Конфигурация кластера",
     "anchor": "cluster-configuration",
-    "excerpt": "Session affinity is configured per cluster according to the following configuration scheme. JSON\"ReverseProxy\": { \"Clusters\": { \"&lt;cluster-name&gt;\": {…"
+    "excerpt": "Привязка сеансов настраивается для каждого кластера по следующей схеме конфигурации. JSON\"ReverseProxy\": { \"Clusters\": { \"&lt;cluster-name&gt;\": {…"
   },
   {
     "slug": "session-affinity",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Cookie configuration",
+    "title": "Привязка сеансов",
+    "headingPath": "Привязка сеансов › Конфигурация cookie-файла",
     "anchor": "cookie-configuration",
-    "excerpt": "Attributes for configuring the cookie used with the HashCookie, ArrCookie and Cookie policies can be configured using SessionAffinityCookieConfig . The…"
+    "excerpt": "Атрибуты для настройки cookie-файла, используемого политиками HashCookie, ArrCookie и Cookie, задаются с помощью SessionAffinityCookieConfig . Эти свойства…"
   },
   {
     "slug": "session-affinity",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Affinity Key",
+    "title": "Привязка сеансов",
+    "headingPath": "Привязка сеансов › Ключ привязки",
     "anchor": "affinity-key",
-    "excerpt": "Request to destination affinity is established via the affinity key identifying the target destination. That key can be stored on different request parts…"
+    "excerpt": "Привязка запроса к узлу назначения устанавливается с помощью ключа привязки, идентифицирующего целевой узел назначения. Этот ключ может храниться в разных…"
   },
   {
     "slug": "session-affinity",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Key Protection",
+    "title": "Привязка сеансов",
+    "headingPath": "Привязка сеансов › Защита ключа",
     "anchor": "key-protection",
-    "excerpt": "The HashCookie policy uses the XxHash64 hash to produce a fast, compact, obscured output format for the cookie value. The ArrCookie policy uses the SHA-256…"
+    "excerpt": "Политика HashCookie использует хэш-функцию XxHash64, чтобы получить быстрый, компактный и обфусцированный формат значения cookie-файла. Политика ArrCookie…"
   },
   {
     "slug": "session-affinity",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Affinity failure policy",
+    "title": "Привязка сеансов",
+    "headingPath": "Привязка сеансов › Политика обработки сбоев привязки",
     "anchor": "affinity-failure-policy",
-    "excerpt": "If the affinity key cannot be decoded or no healthy destination found it&#39;s considered as a failure and an affinity failure policy is called to handle it.…"
+    "excerpt": "Если ключ привязки не удаётся декодировать или не найдено ни одного работоспособного узла назначения, это считается сбоем, для обработки которого вызывается…"
   },
   {
     "slug": "session-affinity",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Request pipeline",
+    "title": "Привязка сеансов",
+    "headingPath": "Привязка сеансов › Конвейер обработки запроса",
     "anchor": "request-pipeline",
-    "excerpt": "The session affinity mechanisms are implemented by the services (mentioned above) and the two following middleware: SessionAffinityMiddleware - coordinates the…"
+    "excerpt": "Механизмы привязки сеансов реализуются службами (упомянутыми выше) и двумя следующими компонентами промежуточного ПО: SessionAffinityMiddleware — координирует…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+    "title": "Проверки работоспособности узлов назначения",
+    "excerpt": "В большинстве реальных систем следует ожидать, что их узлы будут время от времени испытывать"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Active health checks",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Активные проверки работоспособности",
     "anchor": "active-health-checks",
-    "excerpt": "YARP can proactively monitor destination health by sending periodic probing requests to designated health endpoints and analyzing responses. That analysis is…"
+    "excerpt": "YARP может проактивно отслеживать работоспособность узлов назначения, периодически отправляя пробные запросы на назначенные конечные точки проверки…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Пример файла",
     "anchor": "file-example",
     "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Active\": { \"Enabled\": \"true\", \"Interval\": \"00:00:10\", \"Timeout\": \"00:00:10\", \"Policy\": \"ConsecutiveFailures\",…"
   },
@@ -1277,8 +1277,8 @@
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Code example",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Пример кода",
     "anchor": "code-example",
     "excerpt": "C# var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Active = new ActiveHealthCheckConfig { Enabled =…"
   },
@@ -1286,71 +1286,71 @@
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "All but one of active health check settings are specified on the cluster level in Cluster/HealthCheck/Active section. The only exception is an optional…"
+    "excerpt": "Все параметры активной проверки работоспособности, кроме одного, задаются на уровне кластера в разделе Cluster/HealthCheck/Active. Единственное исключение —…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Built-in policies",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Встроенные политики",
     "anchor": "built-in-policies",
-    "excerpt": "There is currently one built-in active health check policy - ConsecutiveFailuresHealthPolicy . It counts consecutive health probe failures and marks a…"
+    "excerpt": "В настоящее время есть одна встроенная политика активной проверки работоспособности — ConsecutiveFailuresHealthPolicy . Она подсчитывает число подряд идущих…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Design",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Архитектура",
     "anchor": "design",
-    "excerpt": "The main service in this process is IActiveHealthCheckMonitor that periodically creates probing requests via IProbingRequestFactory, sends them to all…"
+    "excerpt": "Основная служба в этом процессе — IActiveHealthCheckMonitor, которая периодически создаёт пробные запросы через IProbingRequestFactory, отправляет их всем…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Extensibility",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Расширяемость",
     "anchor": "extensibility",
-    "excerpt": "There are 2 main extensibility points in the active health check subsystem."
+    "excerpt": "В подсистеме активной проверки работоспособности есть 2 основные точки расширения."
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IActiveHealthCheckPolicy",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › IActiveHealthCheckPolicy",
     "anchor": "iactivehealthcheckpolicy",
-    "excerpt": "IActiveHealthCheckPolicy analyzes how destinations respond to active health probes sent by IActiveHealthCheckMonitor , evaluates new active health states for…"
+    "excerpt": "IActiveHealthCheckPolicy анализирует, как узлы назначения отвечают на активные пробные запросы, отправляемые IActiveHealthCheckMonitor , вычисляет новые…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IProbingRequestFactory",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › IProbingRequestFactory",
     "anchor": "iprobingrequestfactory",
-    "excerpt": "IProbingRequestFactory creates active health probing requests to be sent to destination health endpoints. It can take into account…"
+    "excerpt": "IProbingRequestFactory создаёт активные пробные запросы, которые отправляются на конечные точки проверки работоспособности узлов назначения. При построении…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Passive health checks",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Пассивные проверки работоспособности",
     "anchor": "passive-health-checks",
-    "excerpt": "YARP can passively watch for successes and failures in client request proxying to reactively evaluate destination health states. Responses to the proxied…"
+    "excerpt": "YARP может пассивно отслеживать успешные и неуспешные попытки проксирования клиентских запросов, чтобы реактивно вычислять состояния работоспособности узлов…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Пример файла",
     "anchor": "file-example-2",
     "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Passive\": { \"Enabled\": \"true\", \"Policy\": \"TransportFailureRate\", \"ReactivationPeriod\": \"00:02:00\" } },…"
   },
@@ -1358,8 +1358,8 @@
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Code example",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Пример кода",
     "anchor": "code-example-2",
     "excerpt": "C#var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Passive = new PassiveHealthCheckConfig { Enabled =…"
   },
@@ -1367,71 +1367,71 @@
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Конфигурация",
     "anchor": "configuration-2",
-    "excerpt": "Passive health check settings are specified on the cluster level in Cluster/HealthCheck/Passive section. Alternatively, they can be defined in code via the…"
+    "excerpt": "Параметры пассивной проверки работоспособности задаются на уровне кластера в разделе Cluster/HealthCheck/Passive. Их также можно задать в коде через…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Built-in policies",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Встроенные политики",
     "anchor": "built-in-policies-2",
-    "excerpt": "There is currently one built-in passive health check policy - TransportFailureRateHealthPolicy. It calculates the proxied requests failure rate for each…"
+    "excerpt": "В настоящее время есть одна встроенная политика пассивной проверки работоспособности — TransportFailureRateHealthPolicy. Она вычисляет для каждого узла…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Design",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Архитектура",
     "anchor": "design-2",
-    "excerpt": "The main component is PassiveHealthCheckMiddleware sitting in the request pipeline and analyzing responses returned by destinations. For each response from a…"
+    "excerpt": "Основной компонент — PassiveHealthCheckMiddleware, находящийся в конвейере обработки запроса и анализирующий ответы, возвращаемые узлами назначения. Для…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Extensibility",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Расширяемость",
     "anchor": "extensibility-2",
-    "excerpt": "There is one main extensibility point in the passive health check subsystem, the IPassiveHealthCheckPolicy ."
+    "excerpt": "В подсистеме пассивной проверки работоспособности есть одна основная точка расширения — IPassiveHealthCheckPolicy ."
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IPassiveHealthCheckPolicy",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › IPassiveHealthCheckPolicy",
     "anchor": "ipassivehealthcheckpolicy",
-    "excerpt": "IPassiveHealthCheckPolicy analyzes how a destination responded to a proxied client request, evaluates its new passive health state and finally calls…"
+    "excerpt": "IPassiveHealthCheckPolicy анализирует, как узел назначения ответил на проксируемый клиентский запрос, вычисляет его новое пассивное состояние работоспособности…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Available destination collection",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Список доступных узлов назначения",
     "anchor": "available-destination-collection",
-    "excerpt": "Destinations health state is used to determine which of them are eligible for receiving proxied requests. Each cluster maintains its own list of available…"
+    "excerpt": "Состояние работоспособности узлов назначения используется для определения того, какие из них могут принимать проксируемые запросы. Каждый кластер ведёт…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Конфигурация",
     "anchor": "configuration-3",
-    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+    "excerpt": "В большинстве реальных систем следует ожидать, что их узлы будут время от времени испытывать"
   },
   {
     "slug": "dests-health-checks",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Проверки работоспособности узлов назначения",
+    "headingPath": "Проверки работоспособности узлов назначения › Пример файла",
     "anchor": "file-example-3",
     "excerpt": "JSON \"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"AvailableDestinationsPolicy\": \"HealthyOrPanic\", \"Passive\": { \"Enabled\": \"true\" } }, \"Destinations\": {…"
   },
@@ -1439,577 +1439,577 @@
     "slug": "rate-limiting",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination"
+    "title": "Ограничение скорости запросов",
+    "excerpt": "Обратный прокси можно использовать для ограничения скорости запросов, прежде чем они будут проксированы на узел"
   },
   {
     "slug": "rate-limiting",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Introduction",
+    "title": "Ограничение скорости запросов",
+    "headingPath": "Ограничение скорости запросов › Введение",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination servers. This can reduce load on the destination servers, add a…"
+    "excerpt": "Обратный прокси можно использовать для ограничения скорости запросов, прежде чем они будут проксированы на серверы назначения. Это позволяет снизить нагрузку…"
   },
   {
     "slug": "rate-limiting",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Defaults",
+    "title": "Ограничение скорости запросов",
+    "headingPath": "Ограничение скорости запросов › Значения по умолчанию",
     "anchor": "defaults",
-    "excerpt": "No rate limiting is performed on requests unless enabled in the route or application configuration. However, the Rate Limiting middleware (…"
+    "excerpt": "Ограничение скорости запросов не выполняется, если оно не включено в конфигурации маршрута или приложения. Однако промежуточное ПО ограничения скорости (…"
   },
   {
     "slug": "rate-limiting",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Configuration",
+    "title": "Ограничение скорости запросов",
+    "headingPath": "Ограничение скорости запросов › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Rate Limiter policies can be specified per route via RouteConfig.RateLimiterPolicy and can be bound from the Routes sections of the config file. As with other…"
+    "excerpt": "Политики ограничителя скорости запросов можно задать для каждого маршрута через RouteConfig.RateLimiterPolicy; они привязываются из разделов Routes файла…"
   },
   {
     "slug": "rate-limiting",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Disable Rate Limiting",
+    "title": "Ограничение скорости запросов",
+    "headingPath": "Ограничение скорости запросов › Отключение ограничения скорости запросов",
     "anchor": "disable-rate-limiting",
-    "excerpt": "Specifying the value disable in a route&#39;s RateLimiterPolicy parameter means the rate limiter middleware will not apply any policies to this route, even the…"
+    "excerpt": "Если для параметра RateLimiterPolicy маршрута указано значение disable, промежуточное ПО ограничителя скорости не будет применять к этому маршруту никакие…"
   },
   {
     "slug": "timeouts",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts"
+    "title": "Тайм-ауты запросов",
+    "excerpt": ".NET 8 представил промежуточное ПО Request Timeouts Middleware, позволяющее настраивать тайм-ауты запросов"
   },
   {
     "slug": "timeouts",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Introduction",
+    "title": "Тайм-ауты запросов",
+    "headingPath": "Тайм-ауты запросов › Введение",
     "anchor": "introduction",
-    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts globally as well as per endpoint. This functionality is also available…"
+    "excerpt": ".NET 8 представил промежуточное ПО Request Timeouts Middleware, позволяющее настраивать тайм-ауты запросов как глобально, так и для отдельных конечных точек.…"
   },
   {
     "slug": "timeouts",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Defaults",
+    "title": "Тайм-ауты запросов",
+    "headingPath": "Тайм-ауты запросов › Значения по умолчанию",
     "anchor": "defaults",
-    "excerpt": "Requests do not have any timeouts by default, other than the Activity Timeout used to clean up idle requests. A default policy specified in…"
+    "excerpt": "По умолчанию у запросов нет никаких тайм-аутов, кроме Activity Timeout, который используется для очистки простаивающих запросов. Политика по умолчанию,…"
   },
   {
     "slug": "timeouts",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Configuration",
+    "title": "Тайм-ауты запросов",
+    "headingPath": "Тайм-ауты запросов › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "Timeouts and Timeout Policies can be specified per route via RouteConfig and can be bound from the Routes sections of the config file. As with other route…"
+    "excerpt": "Тайм-ауты и политики тайм-аутов можно задать для каждого маршрута через RouteConfig; они привязываются из разделов Routes файла конфигурации. Как и другие…"
   },
   {
     "slug": "timeouts",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Disable timeouts",
+    "title": "Тайм-ауты запросов",
+    "headingPath": "Тайм-ауты запросов › Отключение тайм-аутов",
     "anchor": "disable-timeouts",
-    "excerpt": "Specifying the value disable in a route&#39;s TimeoutPolicy parameter means the request timeout middleware will not apply timeouts to this route."
+    "excerpt": "Если для параметра TimeoutPolicy маршрута указано значение disable, промежуточное ПО тайм-аутов запросов не будет применять тайм-ауты к этому маршруту."
   },
   {
     "slug": "timeouts",
     "locale": "ru",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › WebSockets",
+    "title": "Тайм-ауты запросов",
+    "headingPath": "Тайм-ауты запросов › WebSockets",
     "anchor": "websockets",
-    "excerpt": "Request timeouts are disabled after the initial WebSocket handshake. ПримечаниеThe author created this article with assistance from AI. Learn more"
+    "excerpt": "После завершения начального рукопожатия WebSocket тайм-ауты запросов отключаются. ПримечаниеЭта статья создана автором при помощи ИИ. Подробнее."
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+    "title": "Аутентификация и авторизация",
+    "excerpt": "Обратный прокси-сервер можно использовать для аутентификации и авторизации запросов до того, как они будут проксированы"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › YARP Authentication and Authorization",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › Аутентификация и авторизация в YARP",
     "anchor": "yarp-authentication-and-authorization",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+    "excerpt": "Обратный прокси-сервер можно использовать для аутентификации и авторизации запросов до того, как они будут проксированы"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Introduction",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › Введение",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied to the destination servers. This can reduce load on the…"
+    "excerpt": "Обратный прокси-сервер можно использовать для аутентификации и авторизации запросов до того, как они будут проксированы на серверы назначения. Это позволяет…"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Defaults",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › Значения по умолчанию",
     "anchor": "defaults",
-    "excerpt": "No authentication or authorization is performed on requests unless enabled in the route or application configuration."
+    "excerpt": "Аутентификация и авторизация запросов не выполняются, если они не включены в конфигурации маршрута или приложения."
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Configuration",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › Настройка",
     "anchor": "configuration",
-    "excerpt": "Authorization policies can be specified per route via RouteConfig.AuthorizationPolicy and can be bound from the Routes sections of the config file. As with…"
+    "excerpt": "Политики авторизации можно задавать для каждого маршрута через RouteConfig.AuthorizationPolicy, привязывая их из раздела Routes файла конфигурации. Как и…"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › DefaultPolicy",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › DefaultPolicy",
     "anchor": "defaultpolicy",
-    "excerpt": "Specifying the value default in a route&#39;s authorization parameter means that route will use the policy defined in AuthorizationOptions.DefaultPolicy. That…"
+    "excerpt": "Если в параметре авторизации маршрута указано значение default, этот маршрут будет использовать политику, заданную в AuthorizationOptions.DefaultPolicy. Эта…"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Anonymous",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › Anonymous",
     "anchor": "anonymous",
-    "excerpt": "Specifying the value anonymous in a route&#39;s authorization parameter means that route will not require authorization regardless of any other configuration…"
+    "excerpt": "Если в параметре авторизации маршрута указано значение anonymous, этот маршрут не будет требовать авторизации независимо от любой другой конфигурации в…"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › FallbackPolicy",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › FallbackPolicy",
     "anchor": "fallbackpolicy",
-    "excerpt": "AuthorizationOptions.FallbackPolicy is the policy that will be used for any request or route that was not configured with a policy. FallbackPolicy does not…"
+    "excerpt": "AuthorizationOptions.FallbackPolicy — это политика, которая применяется к любому запросу или маршруту, для которого не задана политика. По умолчанию у…"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Flowing Credentials",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › Передача учётных данных",
     "anchor": "flowing-credentials",
-    "excerpt": "Even after a request has been authorized in the proxy, the destination server may still need to know who the user is (authentication) and what they&#39;re…"
+    "excerpt": "Даже после того как запрос был авторизован на прокси-сервере, серверу назначения может всё ещё требоваться знать, кто такой пользователь (аутентификация) и что…"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Cookie, bearer, API keys",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › Cookie, bearer-токены, API-ключи",
     "anchor": "cookie-bearer-api-keys",
-    "excerpt": "These authentication types already pass their values in the request headers and these will flow to the destination server by default. That server will still…"
+    "excerpt": "Эти типы аутентификации уже передают свои значения в заголовках запроса, и по умолчанию они будут переданы на сервер назначения. Этому серверу всё равно…"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › OAuth2, OpenIdConnect, WsFederation",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › OAuth2, OpenIdConnect, WsFederation",
     "anchor": "oauth2-openidconnect-wsfederation",
-    "excerpt": "These protocols are commonly used with remote identity providers. The authentication process can be configured in the proxy application and will result in an…"
+    "excerpt": "Эти протоколы обычно используются с внешними поставщиками удостоверений. Процесс аутентификации можно настроить в приложении прокси-сервера, и в результате…"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Windows, Negotiate, NTLM, Kerberos",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › Windows, Negotiate, NTLM, Kerberos",
     "anchor": "windows-negotiate-ntlm-kerberos",
-    "excerpt": "These authentication types are often bound to a specific connection. They are not supported as means of authenticating a user in a destination server behind…"
+    "excerpt": "Эти типы аутентификации часто привязаны к конкретному соединению. Они не поддерживаются как способ аутентификации пользователя на сервере назначения за…"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Client Certificates",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › Клиентские сертификаты",
     "anchor": "client-certificates",
-    "excerpt": "Client certificates are a TLS feature and are negotiated as part of a connection. See these docs for additional information. The certificate can be forwarded…"
+    "excerpt": "Клиентские сертификаты — это функция TLS, согласуемая в рамках установления соединения. Дополнительные сведения приведены в этой документации . Сертификат…"
   },
   {
     "slug": "authn-authz",
     "locale": "ru",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Swapping authentication types",
+    "title": "Аутентификация и авторизация",
+    "headingPath": "Аутентификация и авторизация › Замена типов аутентификации",
     "anchor": "swapping-authentication-types",
-    "excerpt": "Authentication types like Windows that don&#39;t flow naturally to the destination server will need to be converted in the proxy to an alternate form. For…"
+    "excerpt": "Типы аутентификации, такие как Windows, которые не передаются на сервер назначения естественным образом, необходимо преобразовать на прокси-сервере в…"
   },
   {
     "slug": "cors",
     "locale": "ru",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination"
+    "title": "Междоменные запросы (CORS)",
+    "excerpt": "Обратный прокси-сервер может обрабатывать междоменные запросы до того, как они будут проксированы на сервер назначения"
   },
   {
     "slug": "cors",
     "locale": "ru",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Introduction",
+    "title": "Междоменные запросы (CORS)",
+    "headingPath": "Междоменные запросы (CORS) › Введение",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination servers. This can reduce load on the destination servers and…"
+    "excerpt": "Обратный прокси-сервер может обрабатывать междоменные запросы до того, как они будут проксированы на серверы назначения. Это позволяет снизить нагрузку на…"
   },
   {
     "slug": "cors",
     "locale": "ru",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Defaults",
+    "title": "Междоменные запросы (CORS)",
+    "headingPath": "Междоменные запросы (CORS) › Значения по умолчанию",
     "anchor": "defaults",
-    "excerpt": "The requests won&#39;t be automatically matched for cors preflight requests unless enabled in the route or application configuration."
+    "excerpt": "Запросы не будут автоматически сопоставляться с предварительными (preflight) CORS-запросами, если это не включено в конфигурации маршрута или приложения."
   },
   {
     "slug": "cors",
     "locale": "ru",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Configuration",
+    "title": "Междоменные запросы (CORS)",
+    "headingPath": "Междоменные запросы (CORS) › Настройка",
     "anchor": "configuration",
-    "excerpt": "CORS policies can be specified per route via RouteConfig.CorsPolicy and can be bound from the Routes sections of the config file. As with other route…"
+    "excerpt": "Политики CORS можно задавать для каждого маршрута через RouteConfig.CorsPolicy, привязывая их из раздела Routes файла конфигурации. Как и другие свойства…"
   },
   {
     "slug": "cors",
     "locale": "ru",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › DefaultPolicy",
+    "title": "Междоменные запросы (CORS)",
+    "headingPath": "Междоменные запросы (CORS) › DefaultPolicy",
     "anchor": "defaultpolicy",
-    "excerpt": "Specifying the value default in a route&#39;s CorsPolicy parameter means that route will use the policy defined in CorsOptions.DefaultPolicy."
+    "excerpt": "Если в параметре CorsPolicy маршрута указано значение default, этот маршрут будет использовать политику, заданную в CorsOptions.DefaultPolicy."
   },
   {
     "slug": "cors",
     "locale": "ru",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Disable CORS",
+    "title": "Междоменные запросы (CORS)",
+    "headingPath": "Междоменные запросы (CORS) › Отключение CORS",
     "anchor": "disable-cors",
-    "excerpt": "Specifying the value disable in a route&#39;s CorsPolicy parameter means the CORS middleware will refuse the CORS requests. ПримечаниеThe author created this…"
+    "excerpt": "Если в параметре CorsPolicy маршрута указано значение disable, промежуточное ПО CORS будет отклонять CORS-запросы. ПримечаниеЭта статья создана автором с…"
   },
   {
     "slug": "https-tls",
     "locale": "ru",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "excerpt": "HTTPS (HTTP over TLS encrypted connections) is the standard way to make HTTP requests on"
+    "title": "HTTPS и TLS",
+    "excerpt": "HTTPS (HTTP поверх зашифрованных TLS-соединений) — это стандартный способ выполнения HTTP-запросов в"
   },
   {
     "slug": "https-tls",
     "locale": "ru",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › TLS Termination",
+    "title": "HTTPS и TLS",
+    "headingPath": "HTTPS и TLS › Завершение TLS",
     "anchor": "tls-termination",
-    "excerpt": "YARP is a level 7 HTTP proxy which means that incoming HTTPS/TLS connections are fully decrypted by the proxy so it can process and forward the HTTP requests.…"
+    "excerpt": "YARP — это HTTP-прокси уровня 7 (L7), что означает, что входящие HTTPS/TLS-соединения полностью расшифровываются прокси-сервером, чтобы он мог обрабатывать и…"
   },
   {
     "slug": "https-tls",
     "locale": "ru",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Configuring incoming connections",
+    "title": "HTTPS и TLS",
+    "headingPath": "HTTPS и TLS › Настройка входящих подключений",
     "anchor": "configuring-incoming-connections",
-    "excerpt": "YARP can run on top of all ASP.NET Core servers and configuring HTTPS/TLS for incoming connections is server specific. Check the docs for Kestrel, IIS, and…"
+    "excerpt": "YARP может работать поверх любого сервера ASP.NET Core, а настройка HTTPS/TLS для входящих подключений зависит от конкретного сервера. Сведения о настройке см.…"
   },
   {
     "slug": "https-tls",
     "locale": "ru",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Advanced TLS filters with Kestrel",
+    "title": "HTTPS и TLS",
+    "headingPath": "HTTPS и TLS › Дополнительные фильтры TLS в Kestrel",
     "anchor": "advanced-tls-filters-with-kestrel",
-    "excerpt": "Kestrel supports intercepting incoming connections before the TLS handshake. YARP includes a TlsFrameHelper API that can parse the raw TLS handshake and enable…"
+    "excerpt": "Kestrel поддерживает перехват входящих подключений до выполнения TLS-рукопожатия. В состав YARP входит API TlsFrameHelper, который умеет разбирать…"
   },
   {
     "slug": "https-tls",
     "locale": "ru",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Configuring outgoing connections",
+    "title": "HTTPS и TLS",
+    "headingPath": "HTTPS и TLS › Настройка исходящих подключений",
     "anchor": "configuring-outgoing-connections",
-    "excerpt": "To enable TLS encryption when communicating with a destination specify the destination address as https like &quot;https://destinationHost&quot; . See the…"
+    "excerpt": "Чтобы включить шифрование TLS при обращении к узлу назначения, укажите адрес узла назначения по схеме https, например &quot;https://destinationHost&quot; .…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+    "title": "Рекомендации по HTTP-заголовкам",
+    "excerpt": "Заголовки — очень важная часть обработки HTTP-запросов, и у каждого из них есть собственная"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › YARP header filtering",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Фильтрация заголовков в YARP",
     "anchor": "yarp-header-filtering",
-    "excerpt": "YARP automatically removes request and response headers that could impact its ability to forward a request correctly, or that may be used maliciously to bypass…"
+    "excerpt": "YARP автоматически удаляет заголовки запросов и ответов, которые могут повлиять на его способность корректно пересылать запрос, а также заголовки, которые…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Connection , KeepAlive , Close",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Connection , KeepAlive , Close",
     "anchor": "connection-keepalive-close",
-    "excerpt": "These headers control how the TCP connection is managed and are removed to prevent impacting the connection on the other side of the proxy."
+    "excerpt": "Эти заголовки управляют тем, как обрабатывается TCP-соединение, и удаляются, чтобы не повлиять на соединение по другую сторону прокси-сервера."
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Transfer-Encoding",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Transfer-Encoding",
     "anchor": "transfer-encoding",
-    "excerpt": "This header describes the format of the request or response body on the wire, e.g. &#39;chunked&#39;, and is removed because the format can vary between the…"
+    "excerpt": "Этот заголовок описывает формат тела запроса или ответа при передаче по сети, например &#39;chunked&#39;, и удаляется, поскольку формат может различаться для…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › TE",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › TE",
     "anchor": "te",
-    "excerpt": "Only the TE: trailers header value is allowed through the proxy since it&#39;s required for some gRPC implementations."
+    "excerpt": "Через прокси-сервер пропускается только значение заголовка TE: trailers, поскольку оно требуется для некоторых реализаций gRPC."
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Upgrade",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Upgrade",
     "anchor": "upgrade",
-    "excerpt": "This is used for protocols like WebSockets. It is removed by default and only added back for specifically supported protocols (WebSockets, SPDY)."
+    "excerpt": "Этот заголовок используется для таких протоколов, как WebSockets. По умолчанию он удаляется и добавляется обратно только для протоколов, поддержка которых…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Proxy-*",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Proxy-*",
     "anchor": "proxy",
-    "excerpt": "These are headers used with proxies and are not considered appropriate to forward."
+    "excerpt": "Это заголовки, используемые прокси-серверами, и их пересылка считается нежелательной."
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Alt-Svc",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Alt-Svc",
     "anchor": "alt-svc",
-    "excerpt": "This response header is used with HTTP/3 upgrades and only applies to the immediate connection."
+    "excerpt": "Этот заголовок ответа используется при переходе на HTTP/3 и применяется только к непосредственному соединению."
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Distributed tracing headers",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Заголовки распределённой трассировки",
     "anchor": "distributed-tracing-headers",
-    "excerpt": "These headers include TraceParent , Request-Id , TraceState , Baggage , and Correlation- Context . They&#39;re automatically removed based on…"
+    "excerpt": "К ним относятся заголовки TraceParent , Request-Id , TraceState , Baggage и Correlation- Context . Они автоматически удаляются на основе…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Strict-Transport-Security",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Strict-Transport-Security",
     "anchor": "strict-transport-security",
-    "excerpt": "This header instructs clients to always use HTTPS, but there may be a conflict between values provided by the proxy and destination. To avoid confusion, the…"
+    "excerpt": "Этот заголовок указывает клиентам всегда использовать HTTPS, однако между значениями, предоставленными прокси-сервером и узлом назначения, может возникнуть…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Other header guidelines",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Другие рекомендации по заголовкам",
     "anchor": "other-header-guidelines",
-    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+    "excerpt": "Заголовки — очень важная часть обработки HTTP-запросов, и у каждого из них есть собственная"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Host",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Host",
     "anchor": "host",
-    "excerpt": "The Host header indicates which site on the server the request is intended for. This header is removed by default since the host name used publicly by the…"
+    "excerpt": "Заголовок Host указывает, для какого сайта на сервере предназначен запрос. По умолчанию этот заголовок удаляется, поскольку имя узла, публично используемое…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-Forwarded-* , Forwarded",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › X-Forwarded-* , Forwarded",
     "anchor": "x-forwarded-forwarded",
-    "excerpt": "Because a separate connection is used to communicate with the destination, these request headers can be used to forward information about the original…"
+    "excerpt": "Поскольку для взаимодействия с узлом назначения используется отдельное соединение, эти заголовки запроса можно использовать для передачи информации об исходном…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-http-method-override , x-http-method , x-method-override",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › X-http-method-override , x-http-method , x-method-override",
     "anchor": "x-http-method-override-x-http-method-x-method-override",
-    "excerpt": "Some clients and servers limit which HTTP methods they allow (for example, GET). These request headers are sometimes used to work around those restrictions.…"
+    "excerpt": "Некоторые клиенты и серверы ограничивают набор допустимых HTTP-методов (например, GET). Эти заголовки запроса иногда используются для обхода таких ограничений.…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Set-Cookie",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Set-Cookie",
     "anchor": "set-cookie",
-    "excerpt": "This response header may contain fields that constrain aspects of the URL, such as the scheme, domain, or path, where the cookie should be used. Using a…"
+    "excerpt": "Этот заголовок ответа может содержать поля, ограничивающие такие аспекты URL-адреса, как схема, домен или путь, для которых должен использоваться cookie-файл.…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Location",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Location",
     "anchor": "location",
-    "excerpt": "This response header is used with redirects and may contain a scheme, domain, and path that differ from the public values due to the use of the proxy. While it…"
+    "excerpt": "Этот заголовок ответа используется при перенаправлениях и может содержать схему, домен и путь, отличающиеся от публичных значений из-за использования…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Server",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › Server",
     "anchor": "server",
-    "excerpt": "This response header indicates what server technology was used to generate the response (for example, IIS, Kestrel). This header is proxied from the…"
+    "excerpt": "Этот заголовок ответа указывает, какая серверная технология использовалась для формирования ответа (например, IIS, Kestrel). По умолчанию этот заголовок…"
   },
   {
     "slug": "header-guidelines",
     "locale": "ru",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-Powered-By",
+    "title": "Рекомендации по HTTP-заголовкам",
+    "headingPath": "Рекомендации по HTTP-заголовкам › X-Powered-By",
     "anchor": "x-powered-by",
-    "excerpt": "This response header indicates what web framework was used to generate the response (for example, ASP.NET). ASP.NET Core does not generate this header but IIS…"
+    "excerpt": "Этот заголовок ответа указывает, какой веб-фреймворк использовался для формирования ответа (например, ASP.NET). ASP.NET Core не создаёт этот заголовок, но IIS…"
   },
   {
     "slug": "output-caching",
     "locale": "ru",
     "group": "performance",
-    "title": "Output caching",
-    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are"
+    "title": "Кэширование вывода",
+    "excerpt": "Обратный прокси-сервер можно использовать для кэширования проксируемых ответов и обслуживания запросов до того, как они"
   },
   {
     "slug": "output-caching",
     "locale": "ru",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Introduction",
+    "title": "Кэширование вывода",
+    "headingPath": "Кэширование вывода › Введение",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are proxied to the destination servers. This can reduce load on the…"
+    "excerpt": "Обратный прокси-сервер можно использовать для кэширования проксируемых ответов и обслуживания запросов до того, как они будут проксированы на серверы…"
   },
   {
     "slug": "output-caching",
     "locale": "ru",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Defaults",
+    "title": "Кэширование вывода",
+    "headingPath": "Кэширование вывода › Значения по умолчанию",
     "anchor": "defaults",
-    "excerpt": "No output caching is performed unless enabled in the route or application configuration."
+    "excerpt": "Кэширование вывода не выполняется, если оно не включено в конфигурации маршрута или приложения."
   },
   {
     "slug": "output-caching",
     "locale": "ru",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Configuration",
+    "title": "Кэширование вывода",
+    "headingPath": "Кэширование вывода › Настройка",
     "anchor": "configuration",
-    "excerpt": "Output Cache policies can be specified per route via RouteConfig.OutputCachePolicy and can be bound from the Routes sections of the config file. As with other…"
+    "excerpt": "Политики кэширования вывода можно задавать для каждого маршрута через RouteConfig.OutputCachePolicy, привязывая их из раздела Routes файла конфигурации. Как и…"
   },
   {
     "slug": "grpc",
     "locale": "ru",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It's"
+    "title": "Проксирование gRPC",
+    "excerpt": "gRPC — это независимый от языка программирования, высокопроизводительный фреймворк удалённого вызова процедур (RPC). Он"
   },
   {
     "slug": "grpc",
     "locale": "ru",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Introduction",
+    "title": "Проксирование gRPC",
+    "headingPath": "Проксирование gRPC › Введение",
     "anchor": "introduction",
-    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It&#39;s built on top of HTTP/2 and can be proxied through YARP. While…"
+    "excerpt": "gRPC — это независимый от языка программирования, высокопроизводительный фреймворк удалённого вызова процедур (RPC). Он построен поверх HTTP/2 и может…"
   },
   {
     "slug": "grpc",
     "locale": "ru",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Configure YARP's Incoming Protocols",
+    "title": "Проксирование gRPC",
+    "headingPath": "Проксирование gRPC › Настройка входящих протоколов YARP",
     "anchor": "configure-yarp-s-incoming-protocols",
-    "excerpt": "gRPC requires HTTP/2 for most scenarios. HTTP/1.1 and HTTP/2 are enabled by default on ASP.NET Core servers (YARP&#39;s front end) but they require https (TLS)…"
+    "excerpt": "В большинстве сценариев gRPC требует HTTP/2. HTTP/1.1 и HTTP/2 включены по умолчанию на серверах ASP.NET Core (интерфейсной части YARP), но для HTTP/2…"
   },
   {
     "slug": "grpc",
     "locale": "ru",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Configure YARP's Outgoing Protocols",
+    "title": "Проксирование gRPC",
+    "headingPath": "Проксирование gRPC › Настройка исходящих протоколов YARP",
     "anchor": "configure-yarp-s-outgoing-protocols",
-    "excerpt": "YARP automatically negotiates HTTP/1.1 or HTTP/2 for outgoing proxy requests, but only for https (TLS). HTTP/2 over http (non-TLS) requires additional…"
+    "excerpt": "YARP автоматически согласовывает HTTP/1.1 или HTTP/2 для исходящих проксируемых запросов, но только для https (TLS). Для HTTP/2 поверх http (без TLS) требуются…"
   },
   {
     "slug": "grpc",
     "locale": "ru",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › gRPC-Web",
+    "title": "Проксирование gRPC",
+    "headingPath": "Проксирование gRPC › gRPC-Web",
     "anchor": "grpc-web",
-    "excerpt": "gRPC-Web is an alternative wire-format for gRPC that&#39;s compatible with HTTP/1.1. application/grpc - gRPC over HTTP/2 is how gRPC is typically used.…"
+    "excerpt": "gRPC-Web — это альтернативный формат передачи данных для gRPC, совместимый с HTTP/1.1. application/grpc — так обычно используется gRPC поверх HTTP/2.…"
   },
   {
     "slug": "http3",
     "locale": "ru",
     "group": "protocols",
     "title": "HTTP/3",
-    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support"
+    "excerpt": "YARP 1.1 поддерживает HTTP/3 для входящих и исходящих соединений благодаря поддержке HTTP/3"
   },
   {
     "slug": "http3",
     "locale": "ru",
     "group": "protocols",
     "title": "HTTP/3",
-    "headingPath": "HTTP/3 › Introduction",
+    "headingPath": "HTTP/3 › Введение",
     "anchor": "introduction",
-    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support in .NET 7. To enable the HTTP/3 protocol in YARP you need to: Configure…"
+    "excerpt": "YARP 1.1 поддерживает HTTP/3 для входящих и исходящих соединений благодаря поддержке HTTP/3 в .NET 7. Чтобы включить протокол HTTP/3 в YARP, необходимо:…"
   },
   {
     "slug": "http3",
     "locale": "ru",
     "group": "protocols",
     "title": "HTTP/3",
-    "headingPath": "HTTP/3 › Set up HTTP/3 on Kestrel",
+    "headingPath": "HTTP/3 › Настройка HTTP/3 в Kestrel",
     "anchor": "set-up-http-3-on-kestrel",
-    "excerpt": "Protocols are required in the listener options: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel =&gt; {…"
+    "excerpt": "В параметрах прослушивателя необходимо указать протоколы: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel =&gt; {…"
   },
   {
     "slug": "http3",
@@ -2018,249 +2018,249 @@
     "title": "HTTP/3",
     "headingPath": "HTTP/3 › HttpClient",
     "anchor": "httpclient",
-    "excerpt": "The default version of HttpRequest should be replaced by &quot;3&quot;, find more details about HttpRequest configuration. ПримечаниеThe author created this…"
+    "excerpt": "Версию HttpRequest по умолчанию следует заменить на &quot;3&quot;; подробнее о настройке HttpRequest см. в соответствующем разделе. ПримечаниеАвтор подготовил…"
   },
   {
     "slug": "websockets",
     "locale": "ru",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+    "title": "WebSockets и SPDY",
+    "excerpt": "YARP по умолчанию поддерживает проксирование соединений WebSocket и SPDY. Эта поддержка работает"
   },
   {
     "slug": "websockets",
     "locale": "ru",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › YARP Proxying WebSockets and SPDY",
+    "title": "WebSockets и SPDY",
+    "headingPath": "WebSockets и SPDY › Проксирование WebSockets и SPDY в YARP",
     "anchor": "yarp-proxying-websockets-and-spdy",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+    "excerpt": "YARP по умолчанию поддерживает проксирование соединений WebSocket и SPDY. Эта поддержка работает"
   },
   {
     "slug": "websockets",
     "locale": "ru",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › Introduction",
+    "title": "WebSockets и SPDY",
+    "headingPath": "WebSockets и SPDY › Введение",
     "anchor": "introduction",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with both the direct forwarding and full pipeline approaches. WebSockets is…"
+    "excerpt": "YARP по умолчанию поддерживает проксирование соединений WebSocket и SPDY. Эта поддержка работает как при прямой пересылке, так и при использовании полного…"
   },
   {
     "slug": "websockets",
     "locale": "ru",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › HTTP/1.1 Upgrades",
+    "title": "WebSockets и SPDY",
+    "headingPath": "WebSockets и SPDY › Обновления HTTP/1.1",
     "anchor": "http-1-1-upgrades",
-    "excerpt": "WebSockets and SPDY are built on top of HTTP/1.1 using a feature called connection upgrades . YARP proxies the initial request, and if the destination server…"
+    "excerpt": "WebSockets и SPDY построены поверх HTTP/1.1 с использованием механизма обновления соединения (connection upgrades) . YARP проксирует исходный запрос, и если…"
   },
   {
     "slug": "websockets",
     "locale": "ru",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › HTTP/2",
+    "title": "WebSockets и SPDY",
+    "headingPath": "WebSockets и SPDY › HTTP/2",
     "anchor": "http-2",
-    "excerpt": "YARP supports WebSockets over HTTP/2 starting in .NET 7 and YARP 2.0. Kestrel is the only available AspNetCore server that will accept incoming HTTP/2…"
+    "excerpt": "YARP поддерживает WebSockets поверх HTTP/2 начиная с .NET 7 и YARP 2.0. Kestrel — единственный доступный сервер AspNetCore, который принимает входящие запросы…"
   },
   {
     "slug": "websockets",
     "locale": "ru",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › Timeout",
+    "title": "WebSockets и SPDY",
+    "headingPath": "WebSockets и SPDY › Тайм-аут",
     "anchor": "timeout",
-    "excerpt": "Http Request Timeouts (.NET 8+) can apply timeouts to all requests by default or by policy. These timeouts will be disabled after a WebSocket handshake. They…"
+    "excerpt": "Тайм-ауты HTTP-запросов (Http Request Timeouts, .NET 8+) можно применять ко всем запросам по умолчанию или по определённой политике. Эти тайм-ауты отключаются…"
   },
   {
     "slug": "extensibility",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Overview",
-    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:"
+    "title": "Обзор",
+    "excerpt": "Есть два основных способа расширения YARP — в зависимости от желаемого поведения маршрутизации:"
   },
   {
     "slug": "extensibility",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › Overview of YARP extensibility",
+    "title": "Обзор",
+    "headingPath": "Обзор › Обзор расширяемости YARP",
     "anchor": "overview-of-yarp-extensibility",
-    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired: Middleware Pipeline Http Forwarder"
+    "excerpt": "Есть два основных способа расширения YARP — в зависимости от желаемого поведения маршрутизации: Конвейер промежуточного ПО (Middleware Pipeline). HTTP…"
   },
   {
     "slug": "extensibility",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › Middleware pipeline",
+    "title": "Обзор",
+    "headingPath": "Обзор › Конвейер промежуточного ПО",
     "anchor": "middleware-pipeline",
-    "excerpt": "YARP uses the concept of Routes, Clusters and Destinations. These can be supplied through configuration files or directly through code. Based on the routing…"
+    "excerpt": "YARP использует понятия маршрутов (Routes), кластеров (Clusters) и узлов назначения (Destinations). Они могут задаваться через файлы конфигурации или напрямую…"
   },
   {
     "slug": "extensibility",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › HTTP Forwarder",
+    "title": "Обзор",
+    "headingPath": "Обзор › HTTP Forwarder",
     "anchor": "http-forwarder",
-    "excerpt": "If the YARP pipeline is too rigid for your use case or the scale of routing rules and destinations isn&#39;t suitable for loading into memory, then you can…"
+    "excerpt": "Если конвейер YARP слишком жёсткий для вашего сценария или масштаб правил маршрутизации и узлов назначения не подходит для загрузки в память, вы можете…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The"
+    "title": "Промежуточное ПО",
+    "excerpt": "ASP.NET Core использует конвейер промежуточного ПО, чтобы разбить обработку запроса на отдельные этапы."
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Introduction",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › Введение",
     "anchor": "introduction",
-    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The app developer can add and order middleware as needed. ASP.NET…"
+    "excerpt": "ASP.NET Core использует конвейер промежуточного ПО, чтобы разбить обработку запроса на отдельные этапы. Разработчик приложения может добавлять промежуточное ПО…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Defaults",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › Значения по умолчанию",
     "anchor": "defaults",
-    "excerpt": "The getting started sample shows the following Configure method. This sets up a middleware pipeline with development tools, routing, and proxy configured…"
+    "excerpt": "В примере из руководства по началу работы показан следующий метод Configure. Он настраивает конвейер промежуточного ПО со средствами разработки, маршрутизацией…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Adding Middleware",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › Добавление промежуточного ПО",
     "anchor": "adding-middleware",
-    "excerpt": "Middleware added to your application pipeline will see the request in different states of processing depending on where the middleware is added. Middleware…"
+    "excerpt": "Промежуточное ПО, добавленное в конвейер приложения, будет видеть запрос на разных этапах обработки — в зависимости от того, где оно добавлено. Промежуточное…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › // Custom inline middleware",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › // Custom inline middleware",
     "anchor": "custom-inline-middleware",
-    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); By default this overload…"
+    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); По умолчанию эта…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Custom Proxy Middleware",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › Настраиваемое промежуточное ПО прокси",
     "anchor": "custom-proxy-middleware",
-    "excerpt": "Middleware inside the MapReverseProxy pipeline have access to all of the proxy data and state associated with a request (the route, cluster, destinations,…"
+    "excerpt": "Промежуточное ПО внутри конвейера MapReverseProxy имеет доступ ко всем данным и состоянию прокси, связанным с запросом (маршрут, кластер, узлы назначения и т.…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › What to do with middleware",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › Что стоит делать с промежуточным ПО",
     "anchor": "what-to-do-with-middleware",
-    "excerpt": "Middleware can generate logs, control if a request gets proxied or not, influence where it&#39;s proxied to, and add additional features like error handling,…"
+    "excerpt": "Промежуточное ПО может формировать журналы, определять, будет ли запрос проксирован, влиять на то, куда он будет проксирован, а также добавлять дополнительные…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Logs and Metrics",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › Журналы и метрики",
     "anchor": "logs-and-metrics",
-    "excerpt": "Middleware can inspect request and response fields to generate logs and aggregate metrics. See the note about bodies under &quot;What not to do with…"
+    "excerpt": "Промежуточное ПО может проверять поля запроса и ответа, чтобы формировать журналы и агрегировать метрики. См. примечание о телах сообщений в разделе «Чего не…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Send an immediate response",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › Отправка немедленного ответа",
     "anchor": "send-an-immediate-response",
-    "excerpt": "If a middleware inspects a request and determines that it should not be proxied, it may generate its own response and return control to the server without…"
+    "excerpt": "Если промежуточное ПО проверяет запрос и определяет, что его не следует проксировать, оно может сформировать собственный ответ и вернуть управление серверу, не…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Filter destinations",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › Фильтрация узлов назначения",
     "anchor": "filter-destinations",
-    "excerpt": "Middleware like session affinity and load balancing examine the IReverseProxyFeature and the cluster configuration to decide which destination a request should…"
+    "excerpt": "Такое промежуточное ПО, как привязка сеансов и балансировка нагрузки, анализирует IReverseProxyFeature и конфигурацию кластера, чтобы решить, на какой узел…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › Error handling",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › Обработка ошибок",
     "anchor": "error-handling",
-    "excerpt": "Middleware can wrap the call to await next() in a try/catch block to handle exceptions from later components. The proxy logic at the end of the pipeline…"
+    "excerpt": "Промежуточное ПО может обернуть вызов await next() в блок try/catch, чтобы обрабатывать исключения от компонентов, выполняющихся позже. Логика прокси в конце…"
   },
   {
     "slug": "middleware",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Middleware",
-    "headingPath": "Middleware › What not to do with middleware",
+    "title": "Промежуточное ПО",
+    "headingPath": "Промежуточное ПО › Чего не стоит делать с промежуточным ПО",
     "anchor": "what-not-to-do-with-middleware",
-    "excerpt": "Middleware should be cautious about modifying request fields such as headers in order to affect the outgoing proxied request. Such modifications may interfere…"
+    "excerpt": "Промежуточному ПО следует с осторожностью изменять поля запроса, такие как заголовки, чтобы повлиять на исходящий проксируемый запрос. Такие изменения могут…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "excerpt": "Some applications only need the ability to take a specific request and forward it to a specific"
+    "title": "Прямая пересылка",
+    "excerpt": "Некоторым приложениям достаточно возможности взять конкретный запрос и переслать его на конкретный"
   },
   {
     "slug": "direct-forwarding",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › IHttpForwarder",
+    "title": "Прямая пересылка",
+    "headingPath": "Прямая пересылка › IHttpForwarder",
     "anchor": "ihttpforwarder",
-    "excerpt": "IHttpForwarder serves as the core proxy adapter between incoming AspNetCore and outgoing System.Net.Http requests. It handles the mechanics of creating a…"
+    "excerpt": "IHttpForwarder служит основным адаптером прокси между входящими запросами AspNetCore и исходящими запросами System.Net.Http. Он берёт на себя механику создания…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Example",
+    "title": "Прямая пересылка",
+    "headingPath": "Прямая пересылка › Пример",
     "anchor": "example",
-    "excerpt": "See ReverseProxy.Direct.Sample as a pre-built sample, or use the steps below."
+    "excerpt": "См. готовый пример ReverseProxy.Direct.Sample либо выполните приведённые ниже шаги."
   },
   {
     "slug": "direct-forwarding",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Create a new project",
+    "title": "Прямая пересылка",
+    "headingPath": "Прямая пересылка › Создание нового проекта",
     "anchor": "create-a-new-project",
-    "excerpt": "Follow the Getting Started guide to create a project and add the Yarp.ReverseProxy nuget dependency."
+    "excerpt": "Следуйте руководству по началу работы, чтобы создать проект и добавить зависимость NuGet-пакета Yarp.ReverseProxy."
   },
   {
     "slug": "direct-forwarding",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Update Program.cs",
+    "title": "Прямая пересылка",
+    "headingPath": "Прямая пересылка › Обновление Program.cs",
     "anchor": "update-program-cs",
-    "excerpt": "In this example the IHttpForwarder is registered in DI, injected into the endpoint method, and used to forward requests from a specific route to…"
+    "excerpt": "В этом примере IHttpForwarder регистрируется в DI, внедряется в метод конечной точки и используется для пересылки запросов с определённого маршрута на…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › // Check if the operation was successful",
+    "title": "Прямая пересылка",
+    "headingPath": "Прямая пересылка › // Check if the operation was successful",
     "anchor": "check-if-the-operation-was-successful",
     "excerpt": "if (error != ForwarderError.None) { var errorFeature = httpContext.GetForwarderErrorFeature(); var exception = errorFeature.Exception; } }); app.Run(); /// ///…"
   },
@@ -2268,132 +2268,132 @@
     "slug": "direct-forwarding",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › The HTTP Client",
+    "title": "Прямая пересылка",
+    "headingPath": "Прямая пересылка › HTTP-клиент",
     "anchor": "the-http-client",
-    "excerpt": "The http client may be customized, but the above example is recommended for common proxy scenarios. Always use HttpMessageInvoker rather than HttpClient,…"
+    "excerpt": "HTTP-клиент можно настроить по-своему, но для типичных сценариев прокси рекомендуется приведённый выше пример. Всегда используйте HttpMessageInvoker вместо…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Transforms",
+    "title": "Прямая пересылка",
+    "headingPath": "Прямая пересылка › Преобразования",
     "anchor": "transforms",
-    "excerpt": "The request and response can be modified by providing a derived HttpTransformer as a parameter to SendAsync method."
+    "excerpt": "Запрос и ответ можно изменять, передав производный класс HttpTransformer в качестве параметра метода SendAsync."
   },
   {
     "slug": "direct-forwarding",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Error handling",
+    "title": "Прямая пересылка",
+    "headingPath": "Прямая пересылка › Обработка ошибок",
     "anchor": "error-handling",
-    "excerpt": "IHttpForwarder catches exceptions and timeouts from the HTTP client, logs them, and converts them to 5xx status codes or aborts the response. An error code is…"
+    "excerpt": "IHttpForwarder перехватывает исключения и тайм-ауты от HTTP-клиента, регистрирует их в журнале и преобразует в коды состояния 5xx либо прерывает ответ. Метод…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "title": "Распознаватели узлов назначения",
+    "excerpt": "YARP использует распознаватель узлов назначения, чтобы расширить набор настроенных адресов узлов назначения."
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › YARP Extensibility Destination Resolvers",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › Расширяемость YARP: распознаватели узлов назначения",
     "anchor": "yarp-extensibility-destination-resolvers",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "YARP использует распознаватель узлов назначения, чтобы расширить набор настроенных адресов узлов назначения."
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Introduction",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › Введение",
     "anchor": "introduction",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The destination resolver can be used as an integration point with…"
+    "excerpt": "YARP использует распознаватель узлов назначения, чтобы расширить набор настроенных адресов узлов назначения. Распознаватель узлов назначения можно использовать…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Structure",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › Структура",
     "anchor": "structure",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "YARP использует распознаватель узлов назначения, чтобы расширить набор настроенных адресов узлов назначения."
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › IDestinationResolver has a single method",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › У IDestinationResolver есть единственный метод",
     "anchor": "idestinationresolver-has-a-single-method",
-    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken) which should return a…"
+    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken) — этот метод должен возвращать…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › DestinationConfig",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › DestinationConfig",
     "anchor": "destinationconfig",
-    "excerpt": "DestinationConfig has a Host property which can be used to specify the default Host header value which the proxy should use when communicating with that…"
+    "excerpt": "У DestinationConfig есть свойство Host, которое можно использовать, чтобы задать значение заголовка Host по умолчанию, применяемое прокси при обращении к этому…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Lifecycle",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › Жизненный цикл",
     "anchor": "lifecycle",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "YARP использует распознаватель узлов назначения, чтобы расширить набор настроенных адресов узлов назначения."
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Startup",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › Запуск",
     "anchor": "startup",
-    "excerpt": "The IDestinationResolver should be registered in the DI container as a singleton. At startup, the proxy will resolve this instance and call…"
+    "excerpt": "IDestinationResolver следует регистрировать в контейнере DI как singleton. При запуске прокси разрешит этот экземпляр и вызовет ResolveDestinationsAsync(...) с…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Atomicity",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › Атомарность",
     "anchor": "atomicity",
-    "excerpt": "The destinations objects and collections supplied to the proxy should be read-only and not modified once they have been handed to the proxy via GetConfig() ."
+    "excerpt": "Объекты и коллекции узлов назначения, передаваемые прокси, должны быть доступны только для чтения и не изменяться после того, как они были переданы прокси…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Reload",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › Обновление",
     "anchor": "reload",
-    "excerpt": "If the IChangeToken supports ActiveChangeCallbacks , once the proxy has processed the initial set of destinations it will register a callback with this token.…"
+    "excerpt": "Если IChangeToken поддерживает ActiveChangeCallbacks , после обработки начального набора узлов назначения прокси зарегистрирует обратный вызов для этого…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › DNS Destination Resolver",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › DNS-распознаватель узлов назначения",
     "anchor": "dns-destination-resolver",
-    "excerpt": "YARP includes an IDestinationResolver implementation which expands the set of configured destinations by resolving each host name to one or more IP addresses…"
+    "excerpt": "YARP включает реализацию IDestinationResolver, которая расширяет набор настроенных узлов назначения, разрешая каждое имя узла в один или несколько IP-адресов с…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Example",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › Пример",
     "anchor": "example",
     "excerpt": "C#// Add the DNS destination resolver, restricting results to IPv4 addresses reverseProxyBuilder.AddDnsDestinationResolver(o =&gt; o.AddressFamily =…"
   },
@@ -2401,288 +2401,288 @@
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Configuration",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › Конфигурация",
     "anchor": "configuration",
-    "excerpt": "The DNS destination resolver&#39;s options, DnsDestinationResolverOptions, has the following properties:"
+    "excerpt": "Параметры DNS-распознавателя узлов назначения, DnsDestinationResolverOptions, включают следующие свойства:"
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › RefreshPeriod",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › RefreshPeriod",
     "anchor": "refreshperiod",
-    "excerpt": "The period between requesting a refresh of a resolved name. This defaults to 5 minutes."
+    "excerpt": "Период между запросами обновления разрешённого имени. Значение по умолчанию — 5 минут."
   },
   {
     "slug": "destination-resolvers",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › AddressFamily",
+    "title": "Распознаватели узлов назначения",
+    "headingPath": "Распознаватели узлов назначения › AddressFamily",
     "anchor": "addressfamily",
-    "excerpt": "Optionally, specify an System.Net.Sockets.AddressFamily value of AddressFamily.InterNetwork or AddressFamily.InterNetworkV6 to restrict resolved resolution to…"
+    "excerpt": "При необходимости укажите значение System.Net.Sockets.AddressFamily — AddressFamily.InterNetwork или AddressFamily.InterNetworkV6, — чтобы ограничить…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "title": "Преобразования запросов и ответов",
+    "excerpt": "При проксировании запроса нередко требуется изменить часть запроса или ответа, чтобы адаптировать их"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Request and Response Transform",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › Преобразование запросов и ответов",
     "anchor": "request-and-response-transform",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "При проксировании запроса нередко требуется изменить часть запроса или ответа, чтобы адаптировать их"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Extensibility",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › Расширяемость",
     "anchor": "extensibility",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "При проксировании запроса нередко требуется изменить часть запроса или ответа, чтобы адаптировать их"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Introduction",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › Введение",
     "anchor": "introduction",
-    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+    "excerpt": "При проксировании запроса нередко требуется изменить часть запроса или ответа, чтобы адаптировать их к требованиям сервера назначения или передать…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › RequestTransform",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › RequestTransform",
     "anchor": "requesttransform",
-    "excerpt": "All request transforms must derive from the abstract base class RequestTransform. These can freely modify the proxy HttpRequestMessage . Avoid reading or…"
+    "excerpt": "Все преобразования запросов должны наследоваться от абстрактного базового класса RequestTransform. Они могут свободно изменять проксируемый HttpRequestMessage…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ResponseTransform",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › ResponseTransform",
     "anchor": "responsetransform",
-    "excerpt": "All response transforms must derive from the abstract base class ResponseTransform. These can freely modify the client HttpResponse . Avoid reading or…"
+    "excerpt": "Все преобразования ответов должны наследоваться от абстрактного базового класса ResponseTransform. Они могут свободно изменять клиентский HttpResponse .…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ResponseTrailersTransform",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › ResponseTrailersTransform",
     "anchor": "responsetrailerstransform",
-    "excerpt": "All response trailers transforms must derive from the abstract base class ResponseTrailersTransform. These can freely modify the client HttpResponse trailers.…"
+    "excerpt": "Все преобразования трейлеров ответа должны наследоваться от абстрактного базового класса ResponseTrailersTransform. Они могут свободно изменять трейлеры…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Request body transforms",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › Преобразования тела запроса",
     "anchor": "request-body-transforms",
-    "excerpt": "YARP does not provide any built in transforms for modifying the request body. However, the body can be modified by custom transforms. Be careful about which…"
+    "excerpt": "YARP не предоставляет встроенных преобразований для изменения тела запроса. Однако тело можно изменить с помощью пользовательских преобразований. Внимательно…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › any",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › any",
     "anchor": "any",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "При проксировании запроса нередко требуется изменить часть запроса или ответа, чтобы адаптировать их"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › // needed headers on the ProxyRequest",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › // needed headers on the ProxyRequest",
     "anchor": "needed-headers-on-the-proxyrequest",
-    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); Custom transforms can only modify a request body if one is already present.…"
+    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); Пользовательские преобразования могут изменять тело запроса, только если…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Response body transforms",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › Преобразования тела ответа",
     "anchor": "response-body-transforms",
-    "excerpt": "YARP does not provide any built in transforms for modifying the response body. However, the body can be modified by custom transforms. Be careful about which…"
+    "excerpt": "YARP не предоставляет встроенных преобразований для изменения тела ответа. Однако тело можно изменить с помощью пользовательских преобразований. Внимательно…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ITransformProvider",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › ITransformProvider",
     "anchor": "itransformprovider",
-    "excerpt": "ITransformProvider provides the functionality of AddTransforms described above as well as DI integration and validation support. ITransformProvider &#39;s can…"
+    "excerpt": "ITransformProvider предоставляет функциональность AddTransforms, описанную выше, а также поддержку интеграции с DI и валидации. Реализации ITransformProvider…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "ru",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ITransformFactory",
+    "title": "Преобразования запросов и ответов",
+    "headingPath": "Преобразования запросов и ответов › ITransformFactory",
     "anchor": "itransformfactory",
-    "excerpt": "Developers that want to integrate their custom transforms with the Transforms section of configuration can implement an ITransformFactory. This should be…"
+    "excerpt": "Разработчики, которые хотят интегрировать свои пользовательские преобразования с разделом Transforms конфигурации, могут реализовать ITransformFactory. Его…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "ru",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "excerpt": "When using a reverse proxy, there is an additional hop from the client to the proxy, and then"
+    "title": "Диагностика прокси на основе YARP",
+    "excerpt": "При использовании реверс-прокси появляется дополнительный переход — от клиента к прокси, а затем"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "ru",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Logging",
+    "title": "Диагностика прокси на основе YARP",
+    "headingPath": "Диагностика прокси на основе YARP › Логирование",
     "anchor": "logging",
-    "excerpt": "The first step to being able to tell what is going on with YARP is to turn on logging. This is a configuration flag so can be changed on the fly. YARP is…"
+    "excerpt": "Первый шаг к пониманию того, что происходит с YARP, — включить логирование. Это делается флагом конфигурации, поэтому его можно менять «на лету». YARP…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "ru",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Understanding log entries",
+    "title": "Диагностика прокси на основе YARP",
+    "headingPath": "Диагностика прокси на основе YARP › Понимание записей журнала",
     "anchor": "understanding-log-entries",
-    "excerpt": "The logging output is directly tied to the way that ASP.NET Core processes requests. It&#39;s important to realize that as middleware, YARP is relying on much…"
+    "excerpt": "Содержимое журнала напрямую связано с тем, как ASP.NET Core обрабатывает запросы. Важно понимать, что YARP как промежуточное ПО во многом опирается на…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "ru",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using ASP.NET request logging",
+    "title": "Диагностика прокси на основе YARP",
+    "headingPath": "Диагностика прокси на основе YARP › Использование журналирования запросов ASP.NET",
     "anchor": "using-asp-net-request-logging",
-    "excerpt": "ASP.NET includes a middleware component that can be used to provide more details about the request and response. The UseHttpLogging component can be added to…"
+    "excerpt": "В ASP.NET есть компонент промежуточного ПО, который позволяет получить более подробную информацию о запросе и ответе. Компонент UseHttpLogging можно добавить в…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "ru",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using telemetry events",
+    "title": "Диагностика прокси на основе YARP",
+    "headingPath": "Диагностика прокси на основе YARP › Использование событий телеметрии",
     "anchor": "using-telemetry-events",
-    "excerpt": "We recommend reading Networking telemetry in .NET as a primer on how to consume networking telemetry in .NET. The Metrics sample shows how to listen to events…"
+    "excerpt": "Рекомендуем сначала ознакомиться со статьёй Networking telemetry in .NET — она даёт общее представление о том, как использовать сетевую телеметрию в .NET. В…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "ru",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using custom middleware",
+    "title": "Диагностика прокси на основе YARP",
+    "headingPath": "Диагностика прокси на основе YARP › Использование пользовательского промежуточного ПО",
     "anchor": "using-custom-middleware",
-    "excerpt": "Another way to inspect the state for requests is to insert additional middleware into the request pipeline. You can insert between the other stages to see the…"
+    "excerpt": "Ещё один способ изучить состояние запроса — добавить в конвейер обработки дополнительное промежуточное ПО. Его можно вставить между другими этапами, чтобы…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "ru",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using the debugger",
+    "title": "Диагностика прокси на основе YARP",
+    "headingPath": "Диагностика прокси на основе YARP › Использование отладчика",
     "anchor": "using-the-debugger",
-    "excerpt": "A debugger, such as Visual Studio, can be attached to the proxy process. However, unless you have existing middleware, there isn&#39;t a good place in the app…"
+    "excerpt": "К процессу прокси можно подключить отладчик, например Visual Studio. Однако, если у вас нет собственного промежуточного ПО, в коде приложения попросту нет…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "ru",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Network tracing",
+    "title": "Диагностика прокси на основе YARP",
+    "headingPath": "Диагностика прокси на основе YARP › Сетевая трассировка",
     "anchor": "network-tracing",
-    "excerpt": "It can be attractive to use network tracing tools like Fiddler or Wireshark to try to monitor what&#39;s happening either side of the proxy. However, be…"
+    "excerpt": "Может возникнуть соблазн воспользоваться инструментами сетевой трассировки, такими как Fiddler или Wireshark, чтобы отследить, что происходит по обе стороны…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "ru",
     "group": "operations",
-    "title": "Distributed tracing",
-    "excerpt": "As an ASP.NET Core component, YARP can easily integrate into different tracing systems the"
+    "title": "Распределённая трассировка",
+    "excerpt": "Будучи компонентом ASP.NET Core, YARP так же легко интегрируется с различными системами трассировки, как"
   },
   {
     "slug": "distributed-tracing",
     "locale": "ru",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Using Open Telemetry",
+    "title": "Распределённая трассировка",
+    "headingPath": "Распределённая трассировка › Использование Open Telemetry",
     "anchor": "using-open-telemetry",
-    "excerpt": "YARP supports distributed tracing using Open Telemetry (OTEL). When a request comes in, and there is a listener for Activities, then ASP.NET Core will…"
+    "excerpt": "YARP поддерживает распределённую трассировку с использованием Open Telemetry (OTEL). Когда поступает запрос и есть слушатель для Activities, ASP.NET Core…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "ru",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Using custom tracing headers",
+    "title": "Распределённая трассировка",
+    "headingPath": "Распределённая трассировка › Использование пользовательских заголовков трассировки",
     "anchor": "using-custom-tracing-headers",
-    "excerpt": "When using a propagation mechanism that is not built into .NET (e.g. B3 propagation ), you should implement a custom [ DistributedContextPropagator ] for that…"
+    "excerpt": "При использовании механизма распространения контекста, не встроенного в .NET (например, B3 propagation ), для такой схемы следует реализовать собственный […"
   },
   {
     "slug": "distributed-tracing",
     "locale": "ru",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Pass-through proxy",
+    "title": "Распределённая трассировка",
+    "headingPath": "Распределённая трассировка › Сквозной прокси",
     "anchor": "pass-through-proxy",
-    "excerpt": "If you do not wish the proxy to actively participate in the trace, and wish to keep all the tracing headers as-is, you may do so by setting…"
+    "excerpt": "Если вы не хотите, чтобы прокси активно участвовал в трассировке, и хотите сохранить все заголовки трассировки без изменений, для этого можно установить…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "ru",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › DistributedContextPropagator DistributedContextPropagator.Fields",
+    "title": "Распределённая трассировка",
+    "headingPath": "Распределённая трассировка › DistributedContextPropagator DistributedContextPropagator.Fields",
     "anchor": "distributedcontextpropagator-distributedcontextpropagator-fi",
-    "excerpt": "ПримечаниеThe author created this article with assistance from AI. Learn more"
+    "excerpt": "ПримечаниеЭта статья создана автором при помощи ИИ. Подробнее."
   },
   {
     "slug": "ab-testing",
     "locale": "ru",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+    "title": "A/B-тестирование и поэтапные обновления",
+    "excerpt": "Для A/B-тестирования и поэтапных обновлений нужны механизмы динамического распределения входящего трафика"
   },
   {
     "slug": "ab-testing",
     "locale": "ru",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › YARP A/B Testing and Rolling Upgrades",
+    "title": "A/B-тестирование и поэтапные обновления",
+    "headingPath": "A/B-тестирование и поэтапные обновления › A/B-тестирование и поэтапные обновления в YARP",
     "anchor": "yarp-a-b-testing-and-rolling-upgrades",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+    "excerpt": "Для A/B-тестирования и поэтапных обновлений нужны механизмы динамического распределения входящего трафика"
   },
   {
     "slug": "ab-testing",
     "locale": "ru",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Introduction",
+    "title": "A/B-тестирование и поэтапные обновления",
+    "headingPath": "A/B-тестирование и поэтапные обновления › Введение",
     "anchor": "introduction",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic to evaluate changes in the destination application. YARP does…"
+    "excerpt": "Для A/B-тестирования и поэтапных обновлений нужны механизмы динамического распределения входящего трафика, позволяющие оценивать изменения в приложении на…"
   },
   {
     "slug": "ab-testing",
     "locale": "ru",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Example",
+    "title": "A/B-тестирование и поэтапные обновления",
+    "headingPath": "A/B-тестирование и поэтапные обновления › Пример",
     "anchor": "example",
     "excerpt": "app.MapReverseProxy(proxyPipeline =&gt; { // Custom cluster selection proxyPipeline.Use((context, next) =&gt; { var lookup =…"
   },
@@ -2690,19 +2690,19 @@
     "slug": "ab-testing",
     "locale": "ru",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Usage",
+    "title": "A/B-тестирование и поэтапные обновления",
+    "headingPath": "A/B-тестирование и поэтапные обновления › Использование",
     "anchor": "usage",
-    "excerpt": "This scenario makes use of two APIs, IProxyStateLookup and ReassignProxyRequest, called from a custom proxy middleware as shown in the sample above.…"
+    "excerpt": "В этом сценарии используются два API — IProxyStateLookup и ReassignProxyRequest, — вызываемые из пользовательского промежуточного ПО прокси, как показано в…"
   },
   {
     "slug": "ab-testing",
     "locale": "ru",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Session affinity",
+    "title": "A/B-тестирование и поэтапные обновления",
+    "headingPath": "A/B-тестирование и поэтапные обновления › Привязка сеансов",
     "anchor": "session-affinity",
-    "excerpt": "Примечаниеthat session affinity functionality is split between middleware, which reads it settings from the current cluster, and transforms, which are part of…"
+    "excerpt": "ПримечаниеФункциональность привязки сеансов разделена между промежуточным ПО, которое считывает её настройки из текущего кластера, и преобразованиями, которые…"
   },
   {
     "slug": "kubernetes-ingress",

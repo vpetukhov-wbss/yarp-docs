@@ -441,378 +441,378 @@
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+    "title": "Roteamento baseado em cabeçalho",
+    "excerpt": "As rotas de proxy especificadas na configuração ou via código devem incluir pelo menos um caminho ou host para corresponder"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › YARP Header Based Routing",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Roteamento baseado em cabeçalho do YARP",
     "anchor": "yarp-header-based-routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+    "excerpt": "As rotas de proxy especificadas na configuração ou via código devem incluir pelo menos um caminho ou host para corresponder. Além disso, uma rota também pode…"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Precedence",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Precedência",
     "anchor": "precedence",
-    "excerpt": "The default route match precedence order is path method host headers query parameters That means a route which specifies methods and no headers will match…"
+    "excerpt": "A ordem de precedência padrão de correspondência de rotas é caminho método host cabeçalhos parâmetros de consulta Isso significa que uma rota que especifica…"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Configuration",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Configuração",
     "anchor": "configuration",
-    "excerpt": "Headers are specified in the Match section of a proxy route. If multiple headers rules are specified on a route then all must match for a route to be taken. OR…"
+    "excerpt": "Os cabeçalhos são especificados na seção Match de uma rota de proxy. Se várias regras de cabeçalho forem especificadas em uma rota, todas devem corresponder…"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Contract",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Contrato",
     "anchor": "contract",
-    "excerpt": "RouteHeader defines the code contract and is mapped from config."
+    "excerpt": "RouteHeader define o contrato de código e é mapeado a partir da configuração."
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Name",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Name",
     "anchor": "name",
-    "excerpt": "The header name to check for on the request. A non-empty value is required. This field is case- insensitive per the HTTP RFCs."
+    "excerpt": "O nome do cabeçalho a ser verificado na requisição. Um valor não vazio é obrigatório. Este campo não diferencia maiúsculas de minúsculas, conforme os RFCs de…"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Values",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Values",
     "anchor": "values",
-    "excerpt": "A list of possible values to search for. The header must match at least one of these values according to the specified Mode except for the…"
+    "excerpt": "Uma lista de valores possíveis a serem procurados. O cabeçalho deve corresponder a pelo menos um desses valores de acordo com o Mode especificado, exceto para…"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Mode",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Mode",
     "anchor": "mode",
-    "excerpt": "HeaderMatchMode specifies how to match the value(s) against the request header. The default is ExactHeader . ExactHeader - Any of the headers with the given…"
+    "excerpt": "HeaderMatchMode especifica como corresponder o(s) valor(es) ao cabeçalho da requisição. O padrão é ExactHeader . ExactHeader - Qualquer um dos cabeçalhos com o…"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › IsCaseSensitive",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › IsCaseSensitive",
     "anchor": "iscasesensitive",
-    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+    "excerpt": "Indica se a correspondência de valor deve ser feita diferenciando maiúsculas de minúsculas ou não. O padrão é false , ou seja, não diferencia."
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Examples",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Exemplos",
     "anchor": "examples",
-    "excerpt": "These examples use the configuration specified above."
+    "excerpt": "Estes exemplos usam a configuração especificada acima."
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 1 - Exact Header Match",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Cenário 1 - Correspondência exata de cabeçalho",
     "anchor": "scenario-1-exact-header-match",
-    "excerpt": "A request with the following header will match against route1. Header1: Value1 If a header contains multiple values, each one will be matched separately. The…"
+    "excerpt": "Uma requisição com o seguinte cabeçalho corresponderá à route1. Header1: Value1 Se um cabeçalho contiver múltiplos valores, cada um será correspondido…"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 2 - Multiple Values",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Cenário 2 - Múltiplos valores",
     "anchor": "scenario-2-multiple-values",
-    "excerpt": "Route2 defined multiple values to search for in a header (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also specified the…"
+    "excerpt": "A route2 definiu múltiplos valores para procurar em um cabeçalho (&quot;1prefix&quot;, &quot;2prefix&quot;), qualquer um dos valores é aceitável. Ela também…"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 3 - Exists",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Cenário 3 - Exists",
     "anchor": "scenario-3-exists",
-    "excerpt": "Route3 only requires that the header &quot;Header3&quot; exists with any non-empty value The following is an example that will match route3. Header3: value An…"
+    "excerpt": "A route3 exige apenas que o cabeçalho &quot;Header3&quot; exista com qualquer valor não vazio. O exemplo a seguir corresponderá à route3. Header3: value Um…"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 4 - Multiple Headers",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Cenário 4 - Múltiplos cabeçalhos",
     "anchor": "scenario-4-multiple-headers",
-    "excerpt": "Route4 requires both header4 and header5 , each matching according to their specified Mode . The following headers will match route4: Header4: value1 Header5:…"
+    "excerpt": "A route4 exige tanto header4 quanto header5 , cada um correspondendo de acordo com seu Mode especificado. Os seguintes cabeçalhos corresponderão à route4:…"
   },
   {
     "slug": "header-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Header-based routing",
-    "headingPath": "Header-based routing › Scenario 5 - NotExists",
+    "title": "Roteamento baseado em cabeçalho",
+    "headingPath": "Roteamento baseado em cabeçalho › Cenário 5 - NotExists",
     "anchor": "scenario-5-notexists",
-    "excerpt": "Route7 requires that the header &quot;Header7&quot; must not exists The following headers will match route7: NotHeader7: AnyValue The following headers will…"
+    "excerpt": "A route7 exige que o cabeçalho &quot;Header7&quot; não exista. Os seguintes cabeçalhos corresponderão à route7: NotHeader7: AnyValue Os seguintes cabeçalhos…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match"
+    "title": "Roteamento por parâmetro de consulta",
+    "excerpt": "As rotas de proxy especificadas na configuração ou via código devem incluir pelo menos um caminho ou host para corresponder"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › YARP Query Parameter Based Routing",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Roteamento baseado em parâmetro de consulta do YARP",
     "anchor": "yarp-query-parameter-based-routing",
-    "excerpt": "Proxy routes specified in config or via code must include at least a path or host to match against. In addition to these, a route can also specify one or more…"
+    "excerpt": "As rotas de proxy especificadas na configuração ou via código devem incluir pelo menos um caminho ou host para corresponder. Além disso, uma rota também pode…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Precedence",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Precedência",
     "anchor": "precedence",
-    "excerpt": "The default route match precedence order is 1) path, 2) method, 3) host, 4) headers 5) query parameters. That means a route which specifies methods and no…"
+    "excerpt": "A ordem de precedência padrão de correspondência de rotas é 1) caminho, 2) método, 3) host, 4) cabeçalhos, 5) parâmetros de consulta. Isso significa que uma…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Configuration",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Configuração",
     "anchor": "configuration",
-    "excerpt": "Query Parameters are specified in the Match section of a proxy route. If multiple query parameter rules are specified on a route then all must match for a…"
+    "excerpt": "Os parâmetros de consulta são especificados na seção Match de uma rota de proxy. Se várias regras de parâmetro de consulta forem especificadas em uma rota,…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Contract",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Contrato",
     "anchor": "contract",
-    "excerpt": "RouteQueryParameter defines the code contract and is mapped from config."
+    "excerpt": "RouteQueryParameter define o contrato de código e é mapeado a partir da configuração."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Name",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Name",
     "anchor": "name",
-    "excerpt": "The query parameter name to check for on the request. A non-empty value is required. This field is case-insensitive."
+    "excerpt": "O nome do parâmetro de consulta a ser verificado na requisição. Um valor não vazio é obrigatório. Este campo não diferencia maiúsculas de minúsculas."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Values",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Values",
     "anchor": "values",
-    "excerpt": "A list of possible values to search for. The query parameter must match at least one of these values according to the specified Mode except for the…"
+    "excerpt": "Uma lista de valores possíveis a serem procurados. O parâmetro de consulta deve corresponder a pelo menos um desses valores de acordo com o Mode especificado,…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Mode",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Mode",
     "anchor": "mode",
-    "excerpt": "QueryParameterMatchMode specifies how to match the value(s) against the request query parameter. The default is Exact . Exact - The query parameter must match…"
+    "excerpt": "QueryParameterMatchMode especifica como corresponder o(s) valor(es) ao parâmetro de consulta da requisição. O padrão é Exact . Exact - O parâmetro de consulta…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › IsCaseSensitive",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › IsCaseSensitive",
     "anchor": "iscasesensitive",
-    "excerpt": "Indicates if the value match should be performed as case sensitive or insensitive. The default is false , insensitive."
+    "excerpt": "Indica se a correspondência de valor deve ser feita diferenciando maiúsculas de minúsculas ou não. O padrão é false , ou seja, não diferencia."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Encoding",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Encoding",
     "anchor": "encoding",
-    "excerpt": "The request query string will be parsed and decoded before matching against the route rules. &quot;route8&quot; : { &quot;ClusterId&quot;:…"
+    "excerpt": "A cadeia de consulta da requisição será analisada e decodificada antes da correspondência com as regras de rota. &quot;route8&quot; : { &quot;ClusterId&quot;:…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Examples",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Exemplos",
     "anchor": "examples",
-    "excerpt": "These examples use the configuration specified above."
+    "excerpt": "Estes exemplos usam a configuração especificada acima."
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 1 - Exact Query Parameter Match",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Cenário 1 - Correspondência exata de parâmetro de consulta",
     "anchor": "scenario-1-exact-query-parameter-match",
-    "excerpt": "A request with the following query parameter will match against route1. ?QueryParam1=Value1 Multiple query parameters with the same name are not currently…"
+    "excerpt": "Uma requisição com o seguinte parâmetro de consulta corresponderá à route1. ?QueryParam1=Value1 Múltiplos parâmetros de consulta com o mesmo nome não são…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 2 - Multiple Values",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Cenário 2 - Múltiplos valores",
     "anchor": "scenario-2-multiple-values",
-    "excerpt": "Route2 defined multiple values to search for in a query parameter (&quot;1prefix&quot;, &quot;2prefix&quot;), any of the values are acceptable. It also…"
+    "excerpt": "A route2 definiu múltiplos valores para procurar em um parâmetro de consulta (&quot;1prefix&quot;, &quot;2prefix&quot;), qualquer um dos valores é aceitável.…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 3 - Exists",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Cenário 3 - Exists",
     "anchor": "scenario-3-exists",
-    "excerpt": "Route3 only requires that the query parameter &quot;QueryParam3&quot; exists with any non-empty value The following is an example that will match route3.…"
+    "excerpt": "A route3 exige apenas que o parâmetro de consulta &quot;QueryParam3&quot; exista com qualquer valor não vazio. O exemplo a seguir corresponderá à route3.…"
   },
   {
     "slug": "queryparameter-routing",
     "locale": "pt-BR",
     "group": "routing",
-    "title": "Query parameter routing",
-    "headingPath": "Query parameter routing › Scenario 4 - Multiple QueryParameters",
+    "title": "Roteamento por parâmetro de consulta",
+    "headingPath": "Roteamento por parâmetro de consulta › Cenário 4 - Múltiplos parâmetros de consulta",
     "anchor": "scenario-4-multiple-queryparameters",
-    "excerpt": "Route4 requires both QueryParam4 and QueryParam5 , each matching according to their specified Mode . The following query parameters will match route4:…"
+    "excerpt": "A route4 exige tanto QueryParam4 quanto QueryParam5 , cada um correspondendo de acordo com seu Mode especificado. Os seguintes parâmetros de consulta…"
   },
   {
     "slug": "transforms",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Overview",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "title": "Visão geral",
+    "excerpt": "Ao fazer proxy de uma requisição, é comum modificar partes da requisição ou da resposta para se adaptar a"
   },
   {
     "slug": "transforms",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › YARP Request and Response Transforms",
+    "title": "Visão geral",
+    "headingPath": "Visão geral › Transformações de requisição e resposta do YARP",
     "anchor": "yarp-request-and-response-transforms",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "Ao fazer proxy de uma requisição, é comum modificar partes da requisição ou da resposta para se adaptar a"
   },
   {
     "slug": "transforms",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Introduction",
+    "title": "Visão geral",
+    "headingPath": "Visão geral › Introdução",
     "anchor": "introduction",
-    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+    "excerpt": "Ao fazer proxy de uma requisição, é comum modificar partes da requisição ou da resposta para se adaptar aos requisitos do servidor de destino ou para propagar…"
   },
   {
     "slug": "transforms",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Defaults",
+    "title": "Visão geral",
+    "headingPath": "Visão geral › Padrões",
     "anchor": "defaults",
-    "excerpt": "The following transforms are enabled by default for all routes. They can be configured or disabled as shown later in this document. Host - Suppress the…"
+    "excerpt": "As seguintes transformações são habilitadas por padrão para todas as rotas. Elas podem ser configuradas ou desabilitadas conforme mostrado mais adiante neste…"
   },
   {
     "slug": "transforms",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Transform Categories",
+    "title": "Visão geral",
+    "headingPath": "Visão geral › Categorias de transformação",
     "anchor": "transform-categories",
-    "excerpt": "Transforms fall into a few categories: Request, Response, and Response Trailers. Request trailers are not supported because they are not supported by the…"
+    "excerpt": "As transformações se dividem em algumas categorias: Request (requisição), Response (resposta) e Response Trailers (trailers de resposta). Trailers de…"
   },
   {
     "slug": "transforms",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › Adding transforms",
+    "title": "Visão geral",
+    "headingPath": "Visão geral › Adicionando transformações",
     "anchor": "adding-transforms",
-    "excerpt": "Transforms can be added to routes either through configuration or programmatically."
+    "excerpt": "Transformações podem ser adicionadas a rotas por meio de configuração ou de forma programática."
   },
   {
     "slug": "transforms",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › From Configuration",
+    "title": "Visão geral",
+    "headingPath": "Visão geral › A partir da configuração",
     "anchor": "from-configuration",
-    "excerpt": "Transforms can be configured on RouteConfig.Transforms and can be bound from the Routes sections of the config file. These can be modified and reloaded without…"
+    "excerpt": "As transformações podem ser configuradas em RouteConfig.Transforms e podem ser vinculadas a partir das seções Routes do arquivo de configuração. Elas podem ser…"
   },
   {
     "slug": "transforms",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Overview",
-    "headingPath": "Overview › From Code",
+    "title": "Visão geral",
+    "headingPath": "Visão geral › A partir do código",
     "anchor": "from-code",
-    "excerpt": "Transforms can be added to routes programmatically by calling the AddTransforms method. AddTransforms can be called after AddReverseProxy to provide a callback…"
+    "excerpt": "Transformações podem ser adicionadas a rotas de forma programática chamando o método AddTransforms. AddTransforms pode ser chamado após AddReverseProxy para…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "title": "Transformações de requisição",
+    "excerpt": "As transformações de requisição incluem o caminho, a query, a versão HTTP, o método e os cabeçalhos da requisição. No código, elas são representadas pela"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathPrefix",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › PathPrefix",
     "anchor": "pathprefix",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "As transformações de requisição incluem o caminho, a query, a versão HTTP, o método e os cabeçalhos da requisição. No código, elas são representadas pela"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Modifies the request path adding a prefix value",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › Modifica o caminho da requisição adicionando um valor de prefixo",
     "anchor": "modifies-the-request-path-adding-a-prefix-value",
-    "excerpt": "Key Value Required PathPrefix A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } Code: C# routeConfig =…"
+    "excerpt": "Key Value Required PathPrefix A path starting with a &#39;/&#39; yes Configuração: JSON { &quot;PathPrefix&quot;: &quot;/prefix&quot; } Código: C# routeConfig…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathRemovePrefix",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › PathRemovePrefix",
     "anchor": "pathremoveprefix",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "As transformações de requisição incluem o caminho, a query, a versão HTTP, o método e os cabeçalhos da requisição. No código, elas são representadas pela"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Modifies the request path removing a prefix value",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › Modifica o caminho da requisição removendo um valor de prefixo",
     "anchor": "modifies-the-request-path-removing-a-prefix-value",
     "excerpt": "Key Value Expand table PathRemovePrefix A path starting with a &#39;/&#39; Required yes Config: 1/13 JSON…"
   },
@@ -820,35 +820,35 @@
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathSet",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › PathSet",
     "anchor": "pathset",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "As transformações de requisição incluem o caminho, a query, a versão HTTP, o método e os cabeçalhos da requisição. No código, elas são representadas pela"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Replaces the request path with the specified value",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › Substitui o caminho da requisição pelo valor especificado",
     "anchor": "replaces-the-request-path-with-the-specified-value",
-    "excerpt": "Key Value Required PathSet A path starting with a &#39;/&#39; yes Config: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } Code: C# routeConfig =…"
+    "excerpt": "Key Value Required PathSet A path starting with a &#39;/&#39; yes Configuração: JSON { &quot;PathSet&quot;: &quot;/newpath&quot; } Código: C# routeConfig =…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › PathPattern",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › PathPattern",
     "anchor": "pathpattern",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "As transformações de requisição incluem o caminho, a query, a versão HTTP, o método e os cabeçalhos da requisição. No código, elas são representadas pela"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Replaces the request path using a pattern template",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › Substitui o caminho da requisição usando um modelo de padrão",
     "anchor": "replaces-the-request-path-using-a-pattern-template",
     "excerpt": "Key Value Expand table PathPattern A path template starting with a &#39;/&#39; Required yes Config: 2/13 JSON…"
   },
@@ -856,44 +856,44 @@
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryValueParameter",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › QueryValueParameter",
     "anchor": "queryvalueparameter",
-    "excerpt": "Adds or replaces parameters in the request query string Key Value Expand table QueryValueParameter Name of a query string parameter Required Set/Append Static…"
+    "excerpt": "Adiciona ou substitui parâmetros na cadeia de consulta (query string) da requisição Key Value Expand table QueryValueParameter Name of a query string parameter…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryRouteParameter",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › QueryRouteParameter",
     "anchor": "queryrouteparameter",
-    "excerpt": "Adds or replaces a query string parameter with a value from the route configuration Key Value Expand table QueryRouteParameter Name of a query string parameter…"
+    "excerpt": "Adiciona ou substitui um parâmetro de query com um valor da configuração de rota Key Value Expand table QueryRouteParameter Name of a query string parameter…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › QueryRemoveParameter",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › QueryRemoveParameter",
     "anchor": "queryremoveparameter",
-    "excerpt": "Removes the specified parameter from the request query string Key Value Expand table QueryRemoveParameter Name of a query string parameter Required yes Config:…"
+    "excerpt": "Remove o parâmetro especificado da cadeia de consulta (query string) da requisição Key Value Expand table QueryRemoveParameter Name of a query string parameter…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › HttpMethodChange",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › HttpMethodChange",
     "anchor": "httpmethodchange",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "As transformações de requisição incluem o caminho, a query, a versão HTTP, o método e os cabeçalhos da requisição. No código, elas são representadas pela"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Changes the http method used in the request",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › Altera o método HTTP usado na requisição",
     "anchor": "changes-the-http-method-used-in-the-request",
     "excerpt": "Key Value Expand table HttpMethodChange The http method to replace Required Set The new http method yes yes Config: JSON { \"HttpMethodChange\": \"PUT\", \"Set\":…"
   },
@@ -901,35 +901,35 @@
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeadersCopy",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › RequestHeadersCopy",
     "anchor": "requestheaderscopy",
-    "excerpt": "Sets whether incoming request headers are copied to the outbound request Key Value Default Expand table RequestHeadersCopy true/false true Required yes Config:…"
+    "excerpt": "Define se os cabeçalhos da requisição de entrada são copiados para a requisição de saída Key Value Default Expand table RequestHeadersCopy true/false true…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderOriginalHost",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › RequestHeaderOriginalHost",
     "anchor": "requestheaderoriginalhost",
-    "excerpt": "Specifies if the incoming request Host header should be copied to the proxy request Key Value Default Expand table RequestHeaderOriginalHost true/false false…"
+    "excerpt": "Especifica se o cabeçalho Host da requisição de entrada deve ser copiado para a requisição de proxy Key Value Default Expand table RequestHeaderOriginalHost…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeader",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › RequestHeader",
     "anchor": "requestheader",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "As transformações de requisição incluem o caminho, a query, a versão HTTP, o método e os cabeçalhos da requisição. No código, elas são representadas pela"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Adds or replaces request headers",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › Adiciona ou substitui cabeçalhos de requisição",
     "anchor": "adds-or-replaces-request-headers",
     "excerpt": "Key Expand table RequestHeader Set/Append Value Required The header name yes Config: The header value yes JSON { &quot;RequestHeader&quot;:…"
   },
@@ -937,26 +937,26 @@
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderRouteValue",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › RequestHeaderRouteValue",
     "anchor": "requestheaderroutevalue",
-    "excerpt": "Adds or replaces a header with a value from the route configuration Key Value Expand table RequestHeader Name of a query string parameter Required Set/Append…"
+    "excerpt": "Adiciona ou substitui um cabeçalho com um valor da configuração de rota Key Value Expand table RequestHeader Name of a query string parameter Required…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeaderRemove",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › RequestHeaderRemove",
     "anchor": "requestheaderremove",
-    "excerpt": "Request transforms include the request path, query, HTTP version, method, and headers. In code these are represented by the"
+    "excerpt": "As transformações de requisição incluem o caminho, a query, a versão HTTP, o método e os cabeçalhos da requisição. No código, elas são representadas pela"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Removes request headers",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › Remove cabeçalhos de requisição",
     "anchor": "removes-request-headers",
     "excerpt": "Key Value Expand table RequestHeaderRemove The header name Required yes Config: JSON { \"RequestHeaderRemove\": \"MyHeader\" } Code: C# routeConfig =…"
   },
@@ -964,8 +964,8 @@
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › RequestHeadersAllowed",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › RequestHeadersAllowed",
     "anchor": "requestheadersallowed",
     "excerpt": "Key Value Expand table RequestHeadersAllowed A semicolon separated list of allowed header names. Required yes…"
   },
@@ -973,69 +973,69 @@
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › X-Forwarded",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › X-Forwarded",
     "anchor": "x-forwarded",
-    "excerpt": "Adds headers with information about the original client request Key Value Default Required X-Forwarded Default action (Set, Append, Remove, Off) to apply to…"
+    "excerpt": "Adiciona cabeçalhos com informações sobre a requisição original do cliente Key Value Default Required X-Forwarded Default action (Set, Append, Remove, Off) to…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › Forwarded",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › Forwarded",
     "anchor": "forwarded",
-    "excerpt": "Adds a header with information about the original client request Key Value Default Re Forwarded A comma separated list containing any of these values:…"
+    "excerpt": "Adiciona um cabeçalho com informações sobre a requisição original do cliente Key Value Default Re Forwarded A comma separated list containing any of these…"
   },
   {
     "slug": "transforms-request",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Request transforms",
-    "headingPath": "Request transforms › ClientCert",
+    "title": "Transformações de requisição",
+    "headingPath": "Transformações de requisição › ClientCert",
     "anchor": "clientcert",
-    "excerpt": "Forwards the client cert used on the inbound connection as a header to destination Key Value Required ClientCert The header name yes Config: JSON {…"
+    "excerpt": "Encaminha o certificado de cliente usado na conexão de entrada como um cabeçalho para o destino Key Value Required ClientCert The header name yes Configuração:…"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "title": "Transformações de resposta e trailer",
+    "excerpt": "Todos os cabeçalhos e trailers de resposta são copiados da resposta obtida via proxy para o cliente"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Response and Response Trailers",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › Resposta e trailers de resposta",
     "anchor": "response-and-response-trailers",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client response by default. Response and response trailer transforms may…"
+    "excerpt": "Por padrão, todos os cabeçalhos e trailers de resposta são copiados da resposta obtida via proxy para a resposta enviada ao cliente. As transformações de…"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeadersCopy",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › ResponseHeadersCopy",
     "anchor": "responseheaderscopy",
-    "excerpt": "Sets whether destination response headers are copied to the client Key Value Default Expand table ResponseHeadersCopy true/false true Required yes Config: JSON…"
+    "excerpt": "Define se os cabeçalhos de resposta do destino são copiados para o cliente Key Value Default Expand table ResponseHeadersCopy true/false true Required yes…"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeader",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › ResponseHeader",
     "anchor": "responseheader",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Todos os cabeçalhos e trailers de resposta são copiados da resposta obtida via proxy para o cliente"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Adds or replaces response headers",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › Adiciona ou substitui cabeçalhos de resposta",
     "anchor": "adds-or-replaces-response-headers",
     "excerpt": "Key Value Default Expand table ResponseHeader The header name (none) Required Set/Append The header value (none) yes When Success/Always/Failure Success yes no…"
   },
@@ -1043,53 +1043,53 @@
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeaderRemove",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › ResponseHeaderRemove",
     "anchor": "responseheaderremove",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Todos os cabeçalhos e trailers de resposta são copiados da resposta obtida via proxy para o cliente"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Removes response headers",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › Remove cabeçalhos de resposta",
     "anchor": "removes-response-headers",
-    "excerpt": "Key Value Default Required ResponseHeaderRemove The header name (none) yes When Success/Always/Failure Success no Config: JSON{ \"ResponseHeaderRemove\":…"
+    "excerpt": "Key Value Default Required ResponseHeaderRemove The header name (none) yes When Success/Always/Failure Success no Configuração: JSON{ \"ResponseHeaderRemove\":…"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseHeadersAllowed",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › ResponseHeadersAllowed",
     "anchor": "responseheadersallowed",
-    "excerpt": "Key Value Required ResponseHeadersAllowed A semicolon separated list of allowed header names. yes Config: JSON { \"ResponseHeadersAllowed\": \"Header1;header2\" }…"
+    "excerpt": "Key Value Required ResponseHeadersAllowed A semicolon separated list of allowed header names. yes Configuração: JSON { \"ResponseHeadersAllowed\":…"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailersCopy",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › ResponseTrailersCopy",
     "anchor": "responsetrailerscopy",
-    "excerpt": "Sets whether destination trailing response headers are copied to the client Key Value Default Expand table ResponseTrailersCopy true/false true Required yes…"
+    "excerpt": "Define se os trailers de resposta do destino são copiados para o cliente Key Value Default Expand table ResponseTrailersCopy true/false true Required yes…"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailer",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › ResponseTrailer",
     "anchor": "responsetrailer",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Todos os cabeçalhos e trailers de resposta são copiados da resposta obtida via proxy para o cliente"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Adds or replaces trailing response headers",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › Adiciona ou substitui trailers de resposta",
     "anchor": "adds-or-replaces-trailing-response-headers",
     "excerpt": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/transforms-response?view=aspnetcore-9.0 Expand table 5/8 Key Value Default Required…"
   },
@@ -1097,28 +1097,28 @@
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailerRemove",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › ResponseTrailerRemove",
     "anchor": "responsetrailerremove",
-    "excerpt": "All response headers and trailers are copied from the proxied response to the outgoing client"
+    "excerpt": "Todos os cabeçalhos e trailers de resposta são copiados da resposta obtida via proxy para o cliente"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › Removes trailing response headers",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › Remove trailers de resposta",
     "anchor": "removes-trailing-response-headers",
-    "excerpt": "Key Expand table ResponseTrailerRemove When Value Default Required The header name (none) yes Success/Always/Failure Success no Config: JSON {…"
+    "excerpt": "Key Expand table ResponseTrailerRemove When Value Default Required The header name (none) yes Success/Always/Failure Success no Configuração: JSON {…"
   },
   {
     "slug": "transforms-response",
     "locale": "pt-BR",
     "group": "transforms",
-    "title": "Response & trailer transforms",
-    "headingPath": "Response & trailer transforms › ResponseTrailersAllowed",
+    "title": "Transformações de resposta e trailer",
+    "headingPath": "Transformações de resposta e trailer › ResponseTrailersAllowed",
     "anchor": "responsetrailersallowed",
-    "excerpt": "yes Key Value ResponseTrailersAllowed A semicolon separated list of allowed header names. Config: JSON{ \"ResponseTrailersAllowed\": \"Header1;header2\" } Code:C#…"
+    "excerpt": "yes Key Value ResponseTrailersAllowed A semicolon separated list of allowed header names. Configuração: JSON{ \"ResponseTrailersAllowed\": \"Header1;header2\" }…"
   },
   {
     "slug": "load-balancing",
@@ -1164,112 +1164,112 @@
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+    "title": "Afinidade de sessão",
+    "excerpt": "A afinidade de sessão é um mecanismo para vincular (afinizar) uma sequência de requisições causalmente relacionadas ao"
   },
   {
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Concept",
+    "title": "Afinidade de sessão",
+    "headingPath": "Afinidade de sessão › Conceito",
     "anchor": "concept",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the destination that handled the first request when the load is…"
+    "excerpt": "A afinidade de sessão é um mecanismo para vincular (afinizar) uma sequência de requisições causalmente relacionadas ao destino que atendeu à primeira…"
   },
   {
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Configuration",
+    "title": "Afinidade de sessão",
+    "headingPath": "Afinidade de sessão › Configuração",
     "anchor": "configuration",
-    "excerpt": "Session affinity is a mechanism to bind (affinitize) a causally related request sequence to the"
+    "excerpt": "A afinidade de sessão é um mecanismo para vincular (afinizar) uma sequência de requisições causalmente relacionadas ao"
   },
   {
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Services and middleware registration",
+    "title": "Afinidade de sessão",
+    "headingPath": "Afinidade de sessão › Registro de serviços e middleware",
     "anchor": "services-and-middleware-registration",
-    "excerpt": "Session affinity services are registered in the DI container automatically by AddReverseProxy() . The middleware UseSessionAffinity() is included by default in…"
+    "excerpt": "Os serviços de afinidade de sessão são registrados automaticamente no contêiner de DI por AddReverseProxy() . O middleware UseSessionAffinity() é incluído por…"
   },
   {
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Cluster configuration",
+    "title": "Afinidade de sessão",
+    "headingPath": "Afinidade de sessão › Configuração de cluster",
     "anchor": "cluster-configuration",
-    "excerpt": "Session affinity is configured per cluster according to the following configuration scheme. JSON\"ReverseProxy\": { \"Clusters\": { \"&lt;cluster-name&gt;\": {…"
+    "excerpt": "A afinidade de sessão é configurada por cluster de acordo com o seguinte esquema de configuração. JSON\"ReverseProxy\": { \"Clusters\": { \"&lt;cluster-name&gt;\": {…"
   },
   {
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Cookie configuration",
+    "title": "Afinidade de sessão",
+    "headingPath": "Afinidade de sessão › Configuração de cookie",
     "anchor": "cookie-configuration",
-    "excerpt": "Attributes for configuring the cookie used with the HashCookie, ArrCookie and Cookie policies can be configured using SessionAffinityCookieConfig . The…"
+    "excerpt": "Os atributos para configurar o cookie usado com as políticas HashCookie, ArrCookie e Cookie podem ser configurados usando SessionAffinityCookieConfig . As…"
   },
   {
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Affinity Key",
+    "title": "Afinidade de sessão",
+    "headingPath": "Afinidade de sessão › Chave de afinidade",
     "anchor": "affinity-key",
-    "excerpt": "Request to destination affinity is established via the affinity key identifying the target destination. That key can be stored on different request parts…"
+    "excerpt": "A afinidade entre requisição e destino é estabelecida por meio da chave de afinidade que identifica o destino alvo. Essa chave pode ser armazenada em…"
   },
   {
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Key Protection",
+    "title": "Afinidade de sessão",
+    "headingPath": "Afinidade de sessão › Proteção de chave",
     "anchor": "key-protection",
-    "excerpt": "The HashCookie policy uses the XxHash64 hash to produce a fast, compact, obscured output format for the cookie value. The ArrCookie policy uses the SHA-256…"
+    "excerpt": "A política HashCookie usa o hash XxHash64 para produzir um formato de saída rápido, compacto e ofuscado para o valor do cookie. A política ArrCookie usa o hash…"
   },
   {
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Affinity failure policy",
+    "title": "Afinidade de sessão",
+    "headingPath": "Afinidade de sessão › Política de falha de afinidade",
     "anchor": "affinity-failure-policy",
-    "excerpt": "If the affinity key cannot be decoded or no healthy destination found it&#39;s considered as a failure and an affinity failure policy is called to handle it.…"
+    "excerpt": "Se a chave de afinidade não puder ser decodificada ou nenhum destino íntegro for encontrado, isso é considerado uma falha e uma política de falha de afinidade…"
   },
   {
     "slug": "session-affinity",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Session affinity",
-    "headingPath": "Session affinity › Request pipeline",
+    "title": "Afinidade de sessão",
+    "headingPath": "Afinidade de sessão › Pipeline de requisição",
     "anchor": "request-pipeline",
-    "excerpt": "The session affinity mechanisms are implemented by the services (mentioned above) and the two following middleware: SessionAffinityMiddleware - coordinates the…"
+    "excerpt": "Os mecanismos de afinidade de sessão são implementados pelos serviços (mencionados acima) e pelos dois middlewares a seguir: SessionAffinityMiddleware -…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+    "title": "Verificações de integridade de destino",
+    "excerpt": "Na maioria dos sistemas do mundo real, é esperado que seus nós ocasionalmente sofram"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Active health checks",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Verificações de integridade ativas",
     "anchor": "active-health-checks",
-    "excerpt": "YARP can proactively monitor destination health by sending periodic probing requests to designated health endpoints and analyzing responses. That analysis is…"
+    "excerpt": "O YARP pode monitorar proativamente a integridade dos destinos enviando requisições de sondagem periódicas para endpoints de integridade designados e…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Exemplo de arquivo",
     "anchor": "file-example",
     "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Active\": { \"Enabled\": \"true\", \"Interval\": \"00:00:10\", \"Timeout\": \"00:00:10\", \"Policy\": \"ConsecutiveFailures\",…"
   },
@@ -1277,8 +1277,8 @@
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Code example",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Exemplo de código",
     "anchor": "code-example",
     "excerpt": "C# var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Active = new ActiveHealthCheckConfig { Enabled =…"
   },
@@ -1286,71 +1286,71 @@
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Configuração",
     "anchor": "configuration",
-    "excerpt": "All but one of active health check settings are specified on the cluster level in Cluster/HealthCheck/Active section. The only exception is an optional…"
+    "excerpt": "Todas as configurações de verificação de integridade ativa, exceto uma, são especificadas em nível de cluster na seção Cluster/HealthCheck/Active. A única…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Built-in policies",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Políticas integradas",
     "anchor": "built-in-policies",
-    "excerpt": "There is currently one built-in active health check policy - ConsecutiveFailuresHealthPolicy . It counts consecutive health probe failures and marks a…"
+    "excerpt": "Atualmente existe uma política de verificação de integridade ativa integrada - ConsecutiveFailuresHealthPolicy . Ela conta as falhas consecutivas de sondagem…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Design",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Design",
     "anchor": "design",
-    "excerpt": "The main service in this process is IActiveHealthCheckMonitor that periodically creates probing requests via IProbingRequestFactory, sends them to all…"
+    "excerpt": "O principal serviço nesse processo é o IActiveHealthCheckMonitor, que cria periodicamente requisições de sondagem por meio do IProbingRequestFactory, envia-as…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Extensibility",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Extensibilidade",
     "anchor": "extensibility",
-    "excerpt": "There are 2 main extensibility points in the active health check subsystem."
+    "excerpt": "Existem 2 pontos de extensibilidade principais no subsistema de verificação de integridade ativa."
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IActiveHealthCheckPolicy",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › IActiveHealthCheckPolicy",
     "anchor": "iactivehealthcheckpolicy",
-    "excerpt": "IActiveHealthCheckPolicy analyzes how destinations respond to active health probes sent by IActiveHealthCheckMonitor , evaluates new active health states for…"
+    "excerpt": "IActiveHealthCheckPolicy analisa como os destinos respondem às sondagens de integridade ativa enviadas pelo IActiveHealthCheckMonitor , avalia novos estados de…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IProbingRequestFactory",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › IProbingRequestFactory",
     "anchor": "iprobingrequestfactory",
-    "excerpt": "IProbingRequestFactory creates active health probing requests to be sent to destination health endpoints. It can take into account…"
+    "excerpt": "IProbingRequestFactory cria as requisições de sondagem de integridade ativa a serem enviadas aos endpoints de integridade dos destinos. Ele pode levar em conta…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Passive health checks",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Verificações de integridade passivas",
     "anchor": "passive-health-checks",
-    "excerpt": "YARP can passively watch for successes and failures in client request proxying to reactively evaluate destination health states. Responses to the proxied…"
+    "excerpt": "O YARP pode observar passivamente os sucessos e as falhas no encaminhamento de requisições de clientes para avaliar reativamente os estados de integridade dos…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Exemplo de arquivo",
     "anchor": "file-example-2",
     "excerpt": "JSON\"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"Passive\": { \"Enabled\": \"true\", \"Policy\": \"TransportFailureRate\", \"ReactivationPeriod\": \"00:02:00\" } },…"
   },
@@ -1358,8 +1358,8 @@
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Code example",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Exemplo de código",
     "anchor": "code-example-2",
     "excerpt": "C#var clusters = new[] { new ClusterConfig() { ClusterId = \"cluster1\", HealthCheck = new HealthCheckConfig { Passive = new PassiveHealthCheckConfig { Enabled =…"
   },
@@ -1367,71 +1367,71 @@
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Configuração",
     "anchor": "configuration-2",
-    "excerpt": "Passive health check settings are specified on the cluster level in Cluster/HealthCheck/Passive section. Alternatively, they can be defined in code via the…"
+    "excerpt": "As configurações de verificação de integridade passiva são especificadas em nível de cluster na seção Cluster/HealthCheck/Passive. Alternativamente, podem ser…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Built-in policies",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Políticas integradas",
     "anchor": "built-in-policies-2",
-    "excerpt": "There is currently one built-in passive health check policy - TransportFailureRateHealthPolicy. It calculates the proxied requests failure rate for each…"
+    "excerpt": "Atualmente existe uma política de verificação de integridade passiva integrada - TransportFailureRateHealthPolicy. Ela calcula a taxa de falha das requisições…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Design",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Design",
     "anchor": "design-2",
-    "excerpt": "The main component is PassiveHealthCheckMiddleware sitting in the request pipeline and analyzing responses returned by destinations. For each response from a…"
+    "excerpt": "O principal componente é o PassiveHealthCheckMiddleware, que fica no pipeline de requisições analisando as respostas retornadas pelos destinos. Para cada…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Extensibility",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Extensibilidade",
     "anchor": "extensibility-2",
-    "excerpt": "There is one main extensibility point in the passive health check subsystem, the IPassiveHealthCheckPolicy ."
+    "excerpt": "Há um ponto de extensibilidade principal no subsistema de verificação de integridade passiva, o IPassiveHealthCheckPolicy ."
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › IPassiveHealthCheckPolicy",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › IPassiveHealthCheckPolicy",
     "anchor": "ipassivehealthcheckpolicy",
-    "excerpt": "IPassiveHealthCheckPolicy analyzes how a destination responded to a proxied client request, evaluates its new passive health state and finally calls…"
+    "excerpt": "IPassiveHealthCheckPolicy analisa como um destino respondeu a uma requisição de cliente encaminhada, avalia seu novo estado de integridade passiva e, por fim,…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Available destination collection",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Coleção de destinos disponíveis",
     "anchor": "available-destination-collection",
-    "excerpt": "Destinations health state is used to determine which of them are eligible for receiving proxied requests. Each cluster maintains its own list of available…"
+    "excerpt": "O estado de integridade dos destinos é usado para determinar quais deles são elegíveis para receber requisições encaminhadas. Cada cluster mantém sua própria…"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › Configuration",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Configuração",
     "anchor": "configuration-3",
-    "excerpt": "In most of the real-world systems, it's expected for their nodes to occasionally experience"
+    "excerpt": "Na maioria dos sistemas do mundo real, é esperado que seus nós ocasionalmente sofram"
   },
   {
     "slug": "dests-health-checks",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Destination health checks",
-    "headingPath": "Destination health checks › File example",
+    "title": "Verificações de integridade de destino",
+    "headingPath": "Verificações de integridade de destino › Exemplo de arquivo",
     "anchor": "file-example-3",
     "excerpt": "JSON \"Clusters\": { \"cluster1\": { \"HealthCheck\": { \"AvailableDestinationsPolicy\": \"HealthyOrPanic\", \"Passive\": { \"Enabled\": \"true\" } }, \"Destinations\": {…"
   },
@@ -1439,577 +1439,577 @@
     "slug": "rate-limiting",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination"
+    "title": "Limitação de taxa",
+    "excerpt": "O proxy reverso pode ser usado para limitar a taxa de requisições antes que elas sejam encaminhadas ao destino"
   },
   {
     "slug": "rate-limiting",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Introduction",
+    "title": "Limitação de taxa",
+    "headingPath": "Limitação de taxa › Introdução",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to rate-limit requests before they are proxied to the destination servers. This can reduce load on the destination servers, add a…"
+    "excerpt": "O proxy reverso pode ser usado para limitar a taxa de requisições antes que elas sejam encaminhadas aos servidores de destino. Isso pode reduzir a carga nos…"
   },
   {
     "slug": "rate-limiting",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Defaults",
+    "title": "Limitação de taxa",
+    "headingPath": "Limitação de taxa › Padrões",
     "anchor": "defaults",
-    "excerpt": "No rate limiting is performed on requests unless enabled in the route or application configuration. However, the Rate Limiting middleware (…"
+    "excerpt": "Nenhuma limitação de taxa é aplicada às requisições, a menos que seja habilitada na configuração da rota ou da aplicação. No entanto, o middleware de limitação…"
   },
   {
     "slug": "rate-limiting",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Configuration",
+    "title": "Limitação de taxa",
+    "headingPath": "Limitação de taxa › Configuração",
     "anchor": "configuration",
-    "excerpt": "Rate Limiter policies can be specified per route via RouteConfig.RateLimiterPolicy and can be bound from the Routes sections of the config file. As with other…"
+    "excerpt": "As políticas do RateLimiter podem ser especificadas por rota via RouteConfig.RateLimiterPolicy e podem ser vinculadas a partir das seções Routes do arquivo de…"
   },
   {
     "slug": "rate-limiting",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Rate limiting",
-    "headingPath": "Rate limiting › Disable Rate Limiting",
+    "title": "Limitação de taxa",
+    "headingPath": "Limitação de taxa › Desabilitar a limitação de taxa",
     "anchor": "disable-rate-limiting",
-    "excerpt": "Specifying the value disable in a route&#39;s RateLimiterPolicy parameter means the rate limiter middleware will not apply any policies to this route, even the…"
+    "excerpt": "Especificar o valor disable no parâmetro RateLimiterPolicy de uma rota significa que o middleware de limitação de taxa não aplicará nenhuma política a essa…"
   },
   {
     "slug": "timeouts",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts"
+    "title": "Tempos limite de requisição",
+    "excerpt": "O .NET 8 introduziu o Middleware de Tempos Limite de Requisição para permitir a configuração de tempos limite de requisição"
   },
   {
     "slug": "timeouts",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Introduction",
+    "title": "Tempos limite de requisição",
+    "headingPath": "Tempos limite de requisição › Introdução",
     "anchor": "introduction",
-    "excerpt": ".NET 8 introduced the Request Timeouts Middleware to enable configuring request timeouts globally as well as per endpoint. This functionality is also available…"
+    "excerpt": "O .NET 8 introduziu o Middleware de Tempos Limite de Requisição para permitir a configuração de tempos limite de requisição de forma global, bem como por…"
   },
   {
     "slug": "timeouts",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Defaults",
+    "title": "Tempos limite de requisição",
+    "headingPath": "Tempos limite de requisição › Padrões",
     "anchor": "defaults",
-    "excerpt": "Requests do not have any timeouts by default, other than the Activity Timeout used to clean up idle requests. A default policy specified in…"
+    "excerpt": "As requisições não têm nenhum tempo limite por padrão, além do Tempo Limite de Atividade usado para encerrar requisições ociosas. Uma política padrão…"
   },
   {
     "slug": "timeouts",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Configuration",
+    "title": "Tempos limite de requisição",
+    "headingPath": "Tempos limite de requisição › Configuração",
     "anchor": "configuration",
-    "excerpt": "Timeouts and Timeout Policies can be specified per route via RouteConfig and can be bound from the Routes sections of the config file. As with other route…"
+    "excerpt": "Tempos limite e Políticas de Tempo Limite podem ser especificados por rota via RouteConfig e podem ser vinculados a partir das seções Routes do arquivo de…"
   },
   {
     "slug": "timeouts",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › Disable timeouts",
+    "title": "Tempos limite de requisição",
+    "headingPath": "Tempos limite de requisição › Desabilitar tempos limite",
     "anchor": "disable-timeouts",
-    "excerpt": "Specifying the value disable in a route&#39;s TimeoutPolicy parameter means the request timeout middleware will not apply timeouts to this route."
+    "excerpt": "Especificar o valor disable no parâmetro TimeoutPolicy de uma rota significa que o middleware de tempo limite de requisição não aplicará tempos limite a essa…"
   },
   {
     "slug": "timeouts",
     "locale": "pt-BR",
     "group": "traffic-reliability",
-    "title": "Request timeouts",
-    "headingPath": "Request timeouts › WebSockets",
+    "title": "Tempos limite de requisição",
+    "headingPath": "Tempos limite de requisição › WebSockets",
     "anchor": "websockets",
-    "excerpt": "Request timeouts are disabled after the initial WebSocket handshake. NotaThe author created this article with assistance from AI. Learn more"
+    "excerpt": "Os tempos limite de requisição são desabilitados após a negociação inicial do handshake do WebSocket. NotaO autor criou este artigo com o auxílio de IA. Saiba…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+    "title": "Autenticação e autorização",
+    "excerpt": "O proxy reverso pode ser usado para autenticar e autorizar requisições antes que sejam encaminhadas por proxy"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › YARP Authentication and Authorization",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › Autenticação e autorização no YARP",
     "anchor": "yarp-authentication-and-authorization",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied"
+    "excerpt": "O proxy reverso pode ser usado para autenticar e autorizar requisições antes que sejam encaminhadas por proxy"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Introduction",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › Introdução",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to authenticate and authorize requests before they are proxied to the destination servers. This can reduce load on the…"
+    "excerpt": "O proxy reverso pode ser usado para autenticar e autorizar requisições antes que sejam encaminhadas para os servidores de destino. Isso pode reduzir a carga…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Defaults",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › Padrões",
     "anchor": "defaults",
-    "excerpt": "No authentication or authorization is performed on requests unless enabled in the route or application configuration."
+    "excerpt": "Nenhuma autenticação ou autorização é realizada nas requisições, a menos que isso seja habilitado na configuração da rota ou da aplicação."
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Configuration",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › Configuração",
     "anchor": "configuration",
-    "excerpt": "Authorization policies can be specified per route via RouteConfig.AuthorizationPolicy and can be bound from the Routes sections of the config file. As with…"
+    "excerpt": "As políticas de autorização podem ser especificadas por rota por meio de RouteConfig.AuthorizationPolicy e podem ser vinculadas a partir das seções Routes do…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › DefaultPolicy",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › DefaultPolicy",
     "anchor": "defaultpolicy",
-    "excerpt": "Specifying the value default in a route&#39;s authorization parameter means that route will use the policy defined in AuthorizationOptions.DefaultPolicy. That…"
+    "excerpt": "Especificar o valor default no parâmetro de autorização de uma rota significa que essa rota usará a política definida em AuthorizationOptions.DefaultPolicy.…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Anonymous",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › Anonymous",
     "anchor": "anonymous",
-    "excerpt": "Specifying the value anonymous in a route&#39;s authorization parameter means that route will not require authorization regardless of any other configuration…"
+    "excerpt": "Especificar o valor anonymous no parâmetro de autorização de uma rota significa que essa rota não vai exigir autorização, independentemente de qualquer outra…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › FallbackPolicy",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › FallbackPolicy",
     "anchor": "fallbackpolicy",
-    "excerpt": "AuthorizationOptions.FallbackPolicy is the policy that will be used for any request or route that was not configured with a policy. FallbackPolicy does not…"
+    "excerpt": "AuthorizationOptions.FallbackPolicy é a política que será usada para qualquer requisição ou rota que não tenha sido configurada com uma política. Por padrão,…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Flowing Credentials",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › Propagação de credenciais",
     "anchor": "flowing-credentials",
-    "excerpt": "Even after a request has been authorized in the proxy, the destination server may still need to know who the user is (authentication) and what they&#39;re…"
+    "excerpt": "Mesmo depois que uma requisição foi autorizada no proxy, o servidor de destino ainda pode precisar saber quem é o usuário (autenticação) e o que ele tem…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Cookie, bearer, API keys",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › Cookie, bearer, API keys",
     "anchor": "cookie-bearer-api-keys",
-    "excerpt": "These authentication types already pass their values in the request headers and these will flow to the destination server by default. That server will still…"
+    "excerpt": "Esses tipos de autenticação já passam seus valores nos cabeçalhos da requisição, que fluem para o servidor de destino por padrão. Esse servidor ainda precisará…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › OAuth2, OpenIdConnect, WsFederation",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › OAuth2, OpenIdConnect, WsFederation",
     "anchor": "oauth2-openidconnect-wsfederation",
-    "excerpt": "These protocols are commonly used with remote identity providers. The authentication process can be configured in the proxy application and will result in an…"
+    "excerpt": "Esses protocolos são comumente usados com provedores de identidade remotos. O processo de autenticação pode ser configurado na aplicação do proxy e resultará…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Windows, Negotiate, NTLM, Kerberos",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › Windows, Negotiate, NTLM, Kerberos",
     "anchor": "windows-negotiate-ntlm-kerberos",
-    "excerpt": "These authentication types are often bound to a specific connection. They are not supported as means of authenticating a user in a destination server behind…"
+    "excerpt": "Esses tipos de autenticação costumam estar vinculados a uma conexão específica. Eles não são compatíveis como meio de autenticar um usuário em um servidor de…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Client Certificates",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › Certificados de cliente",
     "anchor": "client-certificates",
-    "excerpt": "Client certificates are a TLS feature and are negotiated as part of a connection. See these docs for additional information. The certificate can be forwarded…"
+    "excerpt": "Certificados de cliente são um recurso do TLS e são negociados como parte de uma conexão. Consulte esta documentação para mais informações. O certificado pode…"
   },
   {
     "slug": "authn-authz",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Authentication & authorization",
-    "headingPath": "Authentication & authorization › Swapping authentication types",
+    "title": "Autenticação e autorização",
+    "headingPath": "Autenticação e autorização › Troca de tipos de autenticação",
     "anchor": "swapping-authentication-types",
-    "excerpt": "Authentication types like Windows that don&#39;t flow naturally to the destination server will need to be converted in the proxy to an alternate form. For…"
+    "excerpt": "Tipos de autenticação como Windows, que não fluem naturalmente para o servidor de destino, precisarão ser convertidos no proxy para outro formato. Por exemplo,…"
   },
   {
     "slug": "cors",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination"
+    "title": "Requisições entre origens (CORS)",
+    "excerpt": "O proxy reverso pode tratar requisições entre origens antes que sejam encaminhadas para o destino"
   },
   {
     "slug": "cors",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Introduction",
+    "title": "Requisições entre origens (CORS)",
+    "headingPath": "Requisições entre origens (CORS) › Introdução",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can handle cross-origin requests before they are proxied to the destination servers. This can reduce load on the destination servers and…"
+    "excerpt": "O proxy reverso pode tratar requisições entre origens antes que sejam encaminhadas para os servidores de destino. Isso pode reduzir a carga nos servidores de…"
   },
   {
     "slug": "cors",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Defaults",
+    "title": "Requisições entre origens (CORS)",
+    "headingPath": "Requisições entre origens (CORS) › Padrões",
     "anchor": "defaults",
-    "excerpt": "The requests won&#39;t be automatically matched for cors preflight requests unless enabled in the route or application configuration."
+    "excerpt": "As requisições não serão automaticamente correspondidas para requisições de preflight do CORS, a menos que isso seja habilitado na configuração da rota ou da…"
   },
   {
     "slug": "cors",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Configuration",
+    "title": "Requisições entre origens (CORS)",
+    "headingPath": "Requisições entre origens (CORS) › Configuração",
     "anchor": "configuration",
-    "excerpt": "CORS policies can be specified per route via RouteConfig.CorsPolicy and can be bound from the Routes sections of the config file. As with other route…"
+    "excerpt": "As políticas de CORS podem ser especificadas por rota por meio de RouteConfig.CorsPolicy e podem ser vinculadas a partir das seções Routes do arquivo de…"
   },
   {
     "slug": "cors",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › DefaultPolicy",
+    "title": "Requisições entre origens (CORS)",
+    "headingPath": "Requisições entre origens (CORS) › DefaultPolicy",
     "anchor": "defaultpolicy",
-    "excerpt": "Specifying the value default in a route&#39;s CorsPolicy parameter means that route will use the policy defined in CorsOptions.DefaultPolicy."
+    "excerpt": "Especificar o valor default no parâmetro CorsPolicy de uma rota significa que essa rota usará a política definida em CorsOptions.DefaultPolicy."
   },
   {
     "slug": "cors",
     "locale": "pt-BR",
     "group": "security",
-    "title": "Cross-origin requests (CORS)",
-    "headingPath": "Cross-origin requests (CORS) › Disable CORS",
+    "title": "Requisições entre origens (CORS)",
+    "headingPath": "Requisições entre origens (CORS) › Desabilitar o CORS",
     "anchor": "disable-cors",
-    "excerpt": "Specifying the value disable in a route&#39;s CorsPolicy parameter means the CORS middleware will refuse the CORS requests. NotaThe author created this article…"
+    "excerpt": "Especificar o valor disable no parâmetro CorsPolicy de uma rota significa que o middleware de CORS recusará as requisições de CORS. NotaO autor criou este…"
   },
   {
     "slug": "https-tls",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "excerpt": "HTTPS (HTTP over TLS encrypted connections) is the standard way to make HTTP requests on"
+    "title": "HTTPS e TLS",
+    "excerpt": "HTTPS (HTTP sobre conexões criptografadas por TLS) é a forma padrão de fazer requisições HTTP na"
   },
   {
     "slug": "https-tls",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › TLS Termination",
+    "title": "HTTPS e TLS",
+    "headingPath": "HTTPS e TLS › Terminação de TLS",
     "anchor": "tls-termination",
-    "excerpt": "YARP is a level 7 HTTP proxy which means that incoming HTTPS/TLS connections are fully decrypted by the proxy so it can process and forward the HTTP requests.…"
+    "excerpt": "O YARP é um proxy HTTP de camada 7, o que significa que as conexões HTTPS/TLS de entrada são totalmente descriptografadas pelo proxy para que ele possa…"
   },
   {
     "slug": "https-tls",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Configuring incoming connections",
+    "title": "HTTPS e TLS",
+    "headingPath": "HTTPS e TLS › Configurando conexões de entrada",
     "anchor": "configuring-incoming-connections",
-    "excerpt": "YARP can run on top of all ASP.NET Core servers and configuring HTTPS/TLS for incoming connections is server specific. Check the docs for Kestrel, IIS, and…"
+    "excerpt": "O YARP pode ser executado sobre todos os servidores do ASP.NET Core, e a configuração de HTTPS/TLS para conexões de entrada é específica de cada servidor.…"
   },
   {
     "slug": "https-tls",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Advanced TLS filters with Kestrel",
+    "title": "HTTPS e TLS",
+    "headingPath": "HTTPS e TLS › Filtros avançados de TLS com o Kestrel",
     "anchor": "advanced-tls-filters-with-kestrel",
-    "excerpt": "Kestrel supports intercepting incoming connections before the TLS handshake. YARP includes a TlsFrameHelper API that can parse the raw TLS handshake and enable…"
+    "excerpt": "O Kestrel oferece suporte à interceptação de conexões de entrada antes do handshake de TLS. O YARP inclui uma API TlsFrameHelper que pode analisar o handshake…"
   },
   {
     "slug": "https-tls",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTPS & TLS",
-    "headingPath": "HTTPS & TLS › Configuring outgoing connections",
+    "title": "HTTPS e TLS",
+    "headingPath": "HTTPS e TLS › Configurando conexões de saída",
     "anchor": "configuring-outgoing-connections",
-    "excerpt": "To enable TLS encryption when communicating with a destination specify the destination address as https like &quot;https://destinationHost&quot; . See the…"
+    "excerpt": "Para habilitar a criptografia TLS na comunicação com um destino, especifique o endereço de destino como https, como em &quot;https://destinationHost&quot; .…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "excerpt": "Os cabeçalhos são uma parte muito importante do processamento de requisições HTTP, e cada um tem sua própria"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › YARP header filtering",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Filtragem de cabeçalhos do YARP",
     "anchor": "yarp-header-filtering",
-    "excerpt": "YARP automatically removes request and response headers that could impact its ability to forward a request correctly, or that may be used maliciously to bypass…"
+    "excerpt": "O YARP remove automaticamente cabeçalhos de requisição e resposta que poderiam afetar sua capacidade de encaminhar uma requisição corretamente, ou que poderiam…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Connection , KeepAlive , Close",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Connection , KeepAlive , Close",
     "anchor": "connection-keepalive-close",
-    "excerpt": "These headers control how the TCP connection is managed and are removed to prevent impacting the connection on the other side of the proxy."
+    "excerpt": "Esses cabeçalhos controlam como a conexão TCP é gerenciada e são removidos para evitar impactos na conexão do outro lado do proxy."
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Transfer-Encoding",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Transfer-Encoding",
     "anchor": "transfer-encoding",
-    "excerpt": "This header describes the format of the request or response body on the wire, e.g. &#39;chunked&#39;, and is removed because the format can vary between the…"
+    "excerpt": "Esse cabeçalho descreve o formato do corpo da requisição ou da resposta na conexão, por exemplo, &#39;chunked&#39;, e é removido porque o formato pode variar…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › TE",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › TE",
     "anchor": "te",
-    "excerpt": "Only the TE: trailers header value is allowed through the proxy since it&#39;s required for some gRPC implementations."
+    "excerpt": "Somente o valor de cabeçalho TE: trailers é permitido através do proxy, já que ele é exigido por algumas implementações de gRPC."
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Upgrade",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Upgrade",
     "anchor": "upgrade",
-    "excerpt": "This is used for protocols like WebSockets. It is removed by default and only added back for specifically supported protocols (WebSockets, SPDY)."
+    "excerpt": "Isso é usado para protocolos como WebSockets. Ele é removido por padrão e só é adicionado novamente para protocolos especificamente compatíveis (WebSockets,…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Proxy-*",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Proxy-*",
     "anchor": "proxy",
-    "excerpt": "These are headers used with proxies and are not considered appropriate to forward."
+    "excerpt": "Esses são cabeçalhos usados com proxies e não são considerados apropriados para encaminhamento."
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Alt-Svc",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Alt-Svc",
     "anchor": "alt-svc",
-    "excerpt": "This response header is used with HTTP/3 upgrades and only applies to the immediate connection."
+    "excerpt": "Esse cabeçalho de resposta é usado com upgrades para HTTP/3 e se aplica somente à conexão imediata."
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Distributed tracing headers",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Cabeçalhos de rastreamento distribuído",
     "anchor": "distributed-tracing-headers",
-    "excerpt": "These headers include TraceParent , Request-Id , TraceState , Baggage , and Correlation- Context . They&#39;re automatically removed based on…"
+    "excerpt": "Esses cabeçalhos incluem TraceParent , Request-Id , TraceState , Baggage e Correlation- Context . Eles são removidos automaticamente com base em…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Strict-Transport-Security",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Strict-Transport-Security",
     "anchor": "strict-transport-security",
-    "excerpt": "This header instructs clients to always use HTTPS, but there may be a conflict between values provided by the proxy and destination. To avoid confusion, the…"
+    "excerpt": "Esse cabeçalho instrui os clientes a sempre usar HTTPS, mas pode haver um conflito entre os valores fornecidos pelo proxy e pelo destino. Para evitar confusão,…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Other header guidelines",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Outras diretrizes de cabeçalho",
     "anchor": "other-header-guidelines",
-    "excerpt": "Headers are a very important part of processing HTTP requests and each have their own"
+    "excerpt": "Os cabeçalhos são uma parte muito importante do processamento de requisições HTTP, e cada um tem sua própria"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Host",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Host",
     "anchor": "host",
-    "excerpt": "The Host header indicates which site on the server the request is intended for. This header is removed by default since the host name used publicly by the…"
+    "excerpt": "O cabeçalho Host indica para qual site no servidor a requisição se destina. Esse cabeçalho é removido por padrão, já que o nome de host usado publicamente pelo…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-Forwarded-* , Forwarded",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › X-Forwarded-* , Forwarded",
     "anchor": "x-forwarded-forwarded",
-    "excerpt": "Because a separate connection is used to communicate with the destination, these request headers can be used to forward information about the original…"
+    "excerpt": "Como uma conexão separada é usada para se comunicar com o destino, esses cabeçalhos de requisição podem ser usados para encaminhar informações sobre a conexão…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-http-method-override , x-http-method , x-method-override",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › X-http-method-override , x-http-method , x-method-override",
     "anchor": "x-http-method-override-x-http-method-x-method-override",
-    "excerpt": "Some clients and servers limit which HTTP methods they allow (for example, GET). These request headers are sometimes used to work around those restrictions.…"
+    "excerpt": "Alguns clientes e servidores limitam quais métodos HTTP permitem (por exemplo, GET). Esses cabeçalhos de requisição às vezes são usados para contornar essas…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Set-Cookie",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Set-Cookie",
     "anchor": "set-cookie",
-    "excerpt": "This response header may contain fields that constrain aspects of the URL, such as the scheme, domain, or path, where the cookie should be used. Using a…"
+    "excerpt": "Esse cabeçalho de resposta pode conter campos que restringem aspectos da URL, como o esquema, o domínio ou o caminho em que o cookie deve ser usado. O uso de…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Location",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Location",
     "anchor": "location",
-    "excerpt": "This response header is used with redirects and may contain a scheme, domain, and path that differ from the public values due to the use of the proxy. While it…"
+    "excerpt": "Esse cabeçalho de resposta é usado com redirecionamentos e pode conter um esquema, domínio e caminho diferentes dos valores públicos devido ao uso do proxy.…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › Server",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › Server",
     "anchor": "server",
-    "excerpt": "This response header indicates what server technology was used to generate the response (for example, IIS, Kestrel). This header is proxied from the…"
+    "excerpt": "Esse cabeçalho de resposta indica qual tecnologia de servidor foi usada para gerar a resposta (por exemplo, IIS, Kestrel). Esse cabeçalho é encaminhado do…"
   },
   {
     "slug": "header-guidelines",
     "locale": "pt-BR",
     "group": "security",
-    "title": "HTTP header guidelines",
-    "headingPath": "HTTP header guidelines › X-Powered-By",
+    "title": "Diretrizes de cabeçalhos HTTP",
+    "headingPath": "Diretrizes de cabeçalhos HTTP › X-Powered-By",
     "anchor": "x-powered-by",
-    "excerpt": "This response header indicates what web framework was used to generate the response (for example, ASP.NET). ASP.NET Core does not generate this header but IIS…"
+    "excerpt": "Esse cabeçalho de resposta indica qual framework web foi usado para gerar a resposta (por exemplo, ASP.NET). O ASP.NET Core não gera esse cabeçalho, mas o IIS…"
   },
   {
     "slug": "output-caching",
     "locale": "pt-BR",
     "group": "performance",
-    "title": "Output caching",
-    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are"
+    "title": "Cache de saída",
+    "excerpt": "O proxy reverso pode ser usado para armazenar em cache as respostas encaminhadas por proxy e atender requisições antes que elas sejam"
   },
   {
     "slug": "output-caching",
     "locale": "pt-BR",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Introduction",
+    "title": "Cache de saída",
+    "headingPath": "Cache de saída › Introdução",
     "anchor": "introduction",
-    "excerpt": "The reverse proxy can be used to cache proxied responses and serve requests before they are proxied to the destination servers. This can reduce load on the…"
+    "excerpt": "O proxy reverso pode ser usado para armazenar em cache as respostas encaminhadas por proxy e atender requisições antes que elas sejam encaminhadas para os…"
   },
   {
     "slug": "output-caching",
     "locale": "pt-BR",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Defaults",
+    "title": "Cache de saída",
+    "headingPath": "Cache de saída › Padrões",
     "anchor": "defaults",
-    "excerpt": "No output caching is performed unless enabled in the route or application configuration."
+    "excerpt": "Nenhum cache de saída é realizado, a menos que isso seja habilitado na configuração da rota ou da aplicação."
   },
   {
     "slug": "output-caching",
     "locale": "pt-BR",
     "group": "performance",
-    "title": "Output caching",
-    "headingPath": "Output caching › Configuration",
+    "title": "Cache de saída",
+    "headingPath": "Cache de saída › Configuração",
     "anchor": "configuration",
-    "excerpt": "Output Cache policies can be specified per route via RouteConfig.OutputCachePolicy and can be bound from the Routes sections of the config file. As with other…"
+    "excerpt": "As políticas de Output Cache podem ser especificadas por rota por meio de RouteConfig.OutputCachePolicy e podem ser vinculadas a partir das seções Routes do…"
   },
   {
     "slug": "grpc",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It's"
+    "title": "Proxy de gRPC",
+    "excerpt": "gRPC é um framework de RPC (Remote Procedure Call) de alto desempenho e independente de linguagem. É"
   },
   {
     "slug": "grpc",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Introduction",
+    "title": "Proxy de gRPC",
+    "headingPath": "Proxy de gRPC › Introdução",
     "anchor": "introduction",
-    "excerpt": "gRPC is a language agnostic, high-performance Remote Procedure Call (RPC) framework. It&#39;s built on top of HTTP/2 and can be proxied through YARP. While…"
+    "excerpt": "gRPC é um framework de RPC (Remote Procedure Call) de alto desempenho e independente de linguagem. É construído sobre o HTTP/2 e pode ser encaminhado pelo…"
   },
   {
     "slug": "grpc",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Configure YARP's Incoming Protocols",
+    "title": "Proxy de gRPC",
+    "headingPath": "Proxy de gRPC › Configurar os protocolos de entrada do YARP",
     "anchor": "configure-yarp-s-incoming-protocols",
-    "excerpt": "gRPC requires HTTP/2 for most scenarios. HTTP/1.1 and HTTP/2 are enabled by default on ASP.NET Core servers (YARP&#39;s front end) but they require https (TLS)…"
+    "excerpt": "O gRPC requer HTTP/2 na maioria dos cenários. O HTTP/1.1 e o HTTP/2 são habilitados por padrão em servidores ASP.NET Core (o front-end do YARP), mas eles…"
   },
   {
     "slug": "grpc",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › Configure YARP's Outgoing Protocols",
+    "title": "Proxy de gRPC",
+    "headingPath": "Proxy de gRPC › Configurar os protocolos de saída do YARP",
     "anchor": "configure-yarp-s-outgoing-protocols",
-    "excerpt": "YARP automatically negotiates HTTP/1.1 or HTTP/2 for outgoing proxy requests, but only for https (TLS). HTTP/2 over http (non-TLS) requires additional…"
+    "excerpt": "O YARP negocia automaticamente HTTP/1.1 ou HTTP/2 para as requisições de proxy de saída, mas apenas para https (TLS). HTTP/2 sobre http (sem TLS) requer…"
   },
   {
     "slug": "grpc",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "Proxying gRPC",
-    "headingPath": "Proxying gRPC › gRPC-Web",
+    "title": "Proxy de gRPC",
+    "headingPath": "Proxy de gRPC › gRPC-Web",
     "anchor": "grpc-web",
-    "excerpt": "gRPC-Web is an alternative wire-format for gRPC that&#39;s compatible with HTTP/1.1. application/grpc - gRPC over HTTP/2 is how gRPC is typically used.…"
+    "excerpt": "gRPC-Web é um formato alternativo de transmissão (wire-format) para gRPC compatível com HTTP/1.1. application/grpc - gRPC sobre HTTP/2 é a forma típica de uso…"
   },
   {
     "slug": "http3",
     "locale": "pt-BR",
     "group": "protocols",
     "title": "HTTP/3",
-    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support"
+    "excerpt": "O YARP 1.1 suporta HTTP/3 para conexões de entrada e saída usando o suporte a HTTP/3"
   },
   {
     "slug": "http3",
     "locale": "pt-BR",
     "group": "protocols",
     "title": "HTTP/3",
-    "headingPath": "HTTP/3 › Introduction",
+    "headingPath": "HTTP/3 › Introdução",
     "anchor": "introduction",
-    "excerpt": "YARP 1.1 supports HTTP/3 for inbound and outbound connections using the HTTP/3 support in .NET 7. To enable the HTTP/3 protocol in YARP you need to: Configure…"
+    "excerpt": "O YARP 1.1 suporta HTTP/3 para conexões de entrada e saída usando o suporte a HTTP/3 do .NET 7. Para habilitar o protocolo HTTP/3 no YARP, você precisa:…"
   },
   {
     "slug": "http3",
     "locale": "pt-BR",
     "group": "protocols",
     "title": "HTTP/3",
-    "headingPath": "HTTP/3 › Set up HTTP/3 on Kestrel",
+    "headingPath": "HTTP/3 › Configurar o HTTP/3 no Kestrel",
     "anchor": "set-up-http-3-on-kestrel",
-    "excerpt": "Protocols are required in the listener options: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel =&gt; {…"
+    "excerpt": "Os protocolos são exigidos nas opções do listener: C# var builder = WebApplication.CreateBuilder(args); builder.WebHost.ConfigureKestrel(kestrel =&gt; {…"
   },
   {
     "slug": "http3",
@@ -2018,127 +2018,127 @@
     "title": "HTTP/3",
     "headingPath": "HTTP/3 › HttpClient",
     "anchor": "httpclient",
-    "excerpt": "The default version of HttpRequest should be replaced by &quot;3&quot;, find more details about HttpRequest configuration. NotaThe author created this article…"
+    "excerpt": "A versão padrão do HttpRequest deve ser substituída por &quot;3&quot;; encontre mais detalhes sobre a configuração do HttpRequest. NotaO autor criou este…"
   },
   {
     "slug": "websockets",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+    "title": "WebSockets e SPDY",
+    "excerpt": "O YARP habilita o encaminhamento de conexões WebSocket e SPDY por padrão. Esse suporte funciona com"
   },
   {
     "slug": "websockets",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › YARP Proxying WebSockets and SPDY",
+    "title": "WebSockets e SPDY",
+    "headingPath": "WebSockets e SPDY › Encaminhamento de WebSockets e SPDY pelo YARP",
     "anchor": "yarp-proxying-websockets-and-spdy",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with"
+    "excerpt": "O YARP habilita o encaminhamento de conexões WebSocket e SPDY por padrão. Esse suporte funciona com"
   },
   {
     "slug": "websockets",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › Introduction",
+    "title": "WebSockets e SPDY",
+    "headingPath": "WebSockets e SPDY › Introdução",
     "anchor": "introduction",
-    "excerpt": "YARP enables proxying WebSocket and SPDY connections by default. This support works with both the direct forwarding and full pipeline approaches. WebSockets is…"
+    "excerpt": "O YARP habilita o encaminhamento de conexões WebSocket e SPDY por padrão. Esse suporte funciona tanto com a abordagem de encaminhamento direto quanto com o…"
   },
   {
     "slug": "websockets",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › HTTP/1.1 Upgrades",
+    "title": "WebSockets e SPDY",
+    "headingPath": "WebSockets e SPDY › Upgrades de HTTP/1.1",
     "anchor": "http-1-1-upgrades",
-    "excerpt": "WebSockets and SPDY are built on top of HTTP/1.1 using a feature called connection upgrades . YARP proxies the initial request, and if the destination server…"
+    "excerpt": "WebSockets e SPDY são construídos sobre HTTP/1.1 usando um recurso chamado upgrades de conexão. O YARP encaminha a requisição inicial e, se o servidor de…"
   },
   {
     "slug": "websockets",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › HTTP/2",
+    "title": "WebSockets e SPDY",
+    "headingPath": "WebSockets e SPDY › HTTP/2",
     "anchor": "http-2",
-    "excerpt": "YARP supports WebSockets over HTTP/2 starting in .NET 7 and YARP 2.0. Kestrel is the only available AspNetCore server that will accept incoming HTTP/2…"
+    "excerpt": "O YARP suporta WebSockets sobre HTTP/2 a partir do .NET 7 e do YARP 2.0. O Kestrel é o único servidor AspNetCore disponível que aceitará requisições WebSocket…"
   },
   {
     "slug": "websockets",
     "locale": "pt-BR",
     "group": "protocols",
-    "title": "WebSockets & SPDY",
-    "headingPath": "WebSockets & SPDY › Timeout",
+    "title": "WebSockets e SPDY",
+    "headingPath": "WebSockets e SPDY › Tempo limite",
     "anchor": "timeout",
-    "excerpt": "Http Request Timeouts (.NET 8+) can apply timeouts to all requests by default or by policy. These timeouts will be disabled after a WebSocket handshake. They…"
+    "excerpt": "Os Http Request Timeouts (.NET 8+) podem aplicar tempos limite a todas as requisições por padrão ou por política. Esses tempos limite serão desabilitados após…"
   },
   {
     "slug": "extensibility",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Overview",
-    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:"
+    "title": "Visão geral",
+    "excerpt": "Existem 2 estilos principais de extensibilidade para o YARP, dependendo do comportamento de roteamento desejado:"
   },
   {
     "slug": "extensibility",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › Overview of YARP extensibility",
+    "title": "Visão geral",
+    "headingPath": "Visão geral › Visão geral da extensibilidade do YARP",
     "anchor": "overview-of-yarp-extensibility",
-    "excerpt": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired: Middleware Pipeline Http Forwarder"
+    "excerpt": "Existem 2 estilos principais de extensibilidade para o YARP, dependendo do comportamento de roteamento desejado: Pipeline de middleware Http Forwarder"
   },
   {
     "slug": "extensibility",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › Middleware pipeline",
+    "title": "Visão geral",
+    "headingPath": "Visão geral › Pipeline de middleware",
     "anchor": "middleware-pipeline",
-    "excerpt": "YARP uses the concept of Routes, Clusters and Destinations. These can be supplied through configuration files or directly through code. Based on the routing…"
+    "excerpt": "O YARP usa o conceito de Rotas, Clusters e Destinos. Estes podem ser fornecidos por meio de arquivos de configuração ou diretamente pelo código. Com base nas…"
   },
   {
     "slug": "extensibility",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Overview",
-    "headingPath": "Overview › HTTP Forwarder",
+    "title": "Visão geral",
+    "headingPath": "Visão geral › HTTP Forwarder",
     "anchor": "http-forwarder",
-    "excerpt": "If the YARP pipeline is too rigid for your use case or the scale of routing rules and destinations isn&#39;t suitable for loading into memory, then you can…"
+    "excerpt": "Se o pipeline do YARP for rígido demais para o seu caso de uso, ou se a escala das regras de roteamento e dos destinos não for adequada para carregamento em…"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The"
+    "excerpt": "O ASP.NET Core usa um pipeline de middleware para dividir o processamento de requisições em etapas discretas. O"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "headingPath": "Middleware › Introduction",
+    "headingPath": "Middleware › Introdução",
     "anchor": "introduction",
-    "excerpt": "ASP.NET Core uses a middleware pipeline to divide request processing into discrete steps. The app developer can add and order middleware as needed. ASP.NET…"
+    "excerpt": "O ASP.NET Core usa um pipeline de middleware para dividir o processamento de requisições em etapas discretas. O desenvolvedor da aplicação pode adicionar e…"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "headingPath": "Middleware › Defaults",
+    "headingPath": "Middleware › Padrões",
     "anchor": "defaults",
-    "excerpt": "The getting started sample shows the following Configure method. This sets up a middleware pipeline with development tools, routing, and proxy configured…"
+    "excerpt": "O exemplo de primeiros passos mostra o seguinte método Configure. Ele configura um pipeline de middleware com ferramentas de desenvolvimento, roteamento e os…"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "headingPath": "Middleware › Adding Middleware",
+    "headingPath": "Middleware › Adicionando middleware",
     "anchor": "adding-middleware",
-    "excerpt": "Middleware added to your application pipeline will see the request in different states of processing depending on where the middleware is added. Middleware…"
+    "excerpt": "O middleware adicionado ao pipeline da sua aplicação verá a requisição em diferentes estados de processamento, dependendo de onde o middleware for adicionado.…"
   },
   {
     "slug": "middleware",
@@ -2147,120 +2147,120 @@
     "title": "Middleware",
     "headingPath": "Middleware › // Custom inline middleware",
     "anchor": "custom-inline-middleware",
-    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); By default this overload…"
+    "excerpt": "return next(); }); proxyPipeline.UseSessionAffinity(); proxyPipeline.UseLoadBalancing(); proxyPipeline.UsePassiveHealthChecks(); }); Por padrão, essa…"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "headingPath": "Middleware › Custom Proxy Middleware",
+    "headingPath": "Middleware › Middleware de proxy personalizado",
     "anchor": "custom-proxy-middleware",
-    "excerpt": "Middleware inside the MapReverseProxy pipeline have access to all of the proxy data and state associated with a request (the route, cluster, destinations,…"
+    "excerpt": "O middleware dentro do pipeline do MapReverseProxy tem acesso a todos os dados e ao estado do proxy associados a uma requisição (a rota, o cluster, os destinos…"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "headingPath": "Middleware › What to do with middleware",
+    "headingPath": "Middleware › O que fazer com o middleware",
     "anchor": "what-to-do-with-middleware",
-    "excerpt": "Middleware can generate logs, control if a request gets proxied or not, influence where it&#39;s proxied to, and add additional features like error handling,…"
+    "excerpt": "O middleware pode gerar logs, controlar se uma requisição é encaminhada ou não, influenciar para onde ela é encaminhada e adicionar funcionalidades adicionais,…"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "headingPath": "Middleware › Logs and Metrics",
+    "headingPath": "Middleware › Logs e métricas",
     "anchor": "logs-and-metrics",
-    "excerpt": "Middleware can inspect request and response fields to generate logs and aggregate metrics. See the note about bodies under &quot;What not to do with…"
+    "excerpt": "O middleware pode inspecionar campos da requisição e da resposta para gerar logs e agregar métricas. Veja a observação sobre corpos de mensagem em &quot;O que…"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "headingPath": "Middleware › Send an immediate response",
+    "headingPath": "Middleware › Enviar uma resposta imediata",
     "anchor": "send-an-immediate-response",
-    "excerpt": "If a middleware inspects a request and determines that it should not be proxied, it may generate its own response and return control to the server without…"
+    "excerpt": "Se um middleware inspecionar uma requisição e determinar que ela não deve ser encaminhada, ele pode gerar sua própria resposta e devolver o controle ao…"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "headingPath": "Middleware › Filter destinations",
+    "headingPath": "Middleware › Filtrar destinos",
     "anchor": "filter-destinations",
-    "excerpt": "Middleware like session affinity and load balancing examine the IReverseProxyFeature and the cluster configuration to decide which destination a request should…"
+    "excerpt": "Middlewares como afinidade de sessão e balanceamento de carga examinam o IReverseProxyFeature e a configuração do cluster para decidir para qual destino uma…"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "headingPath": "Middleware › Error handling",
+    "headingPath": "Middleware › Tratamento de erros",
     "anchor": "error-handling",
-    "excerpt": "Middleware can wrap the call to await next() in a try/catch block to handle exceptions from later components. The proxy logic at the end of the pipeline…"
+    "excerpt": "O middleware pode envolver a chamada a await next() em um bloco try/catch para tratar exceções de componentes posteriores. A lógica de proxy no final do…"
   },
   {
     "slug": "middleware",
     "locale": "pt-BR",
     "group": "extensibility",
     "title": "Middleware",
-    "headingPath": "Middleware › What not to do with middleware",
+    "headingPath": "Middleware › O que não fazer com o middleware",
     "anchor": "what-not-to-do-with-middleware",
-    "excerpt": "Middleware should be cautious about modifying request fields such as headers in order to affect the outgoing proxied request. Such modifications may interfere…"
+    "excerpt": "O middleware deve ter cautela ao modificar campos da requisição, como cabeçalhos, para afetar a requisição de proxy de saída. Essas modificações podem…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "excerpt": "Some applications only need the ability to take a specific request and forward it to a specific"
+    "title": "Encaminhamento direto",
+    "excerpt": "Algumas aplicações precisam apenas da capacidade de pegar uma requisição específica e encaminhá-la para um destino"
   },
   {
     "slug": "direct-forwarding",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › IHttpForwarder",
+    "title": "Encaminhamento direto",
+    "headingPath": "Encaminhamento direto › IHttpForwarder",
     "anchor": "ihttpforwarder",
-    "excerpt": "IHttpForwarder serves as the core proxy adapter between incoming AspNetCore and outgoing System.Net.Http requests. It handles the mechanics of creating a…"
+    "excerpt": "IHttpForwarder atua como o adaptador central de proxy entre as requisições AspNetCore de entrada e as requisições System.Net.Http de saída. Ele cuida da…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Example",
+    "title": "Encaminhamento direto",
+    "headingPath": "Encaminhamento direto › Exemplo",
     "anchor": "example",
-    "excerpt": "See ReverseProxy.Direct.Sample as a pre-built sample, or use the steps below."
+    "excerpt": "Veja o ReverseProxy.Direct.Sample como um exemplo pré-construído, ou siga as etapas abaixo."
   },
   {
     "slug": "direct-forwarding",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Create a new project",
+    "title": "Encaminhamento direto",
+    "headingPath": "Encaminhamento direto › Criar um novo projeto",
     "anchor": "create-a-new-project",
-    "excerpt": "Follow the Getting Started guide to create a project and add the Yarp.ReverseProxy nuget dependency."
+    "excerpt": "Siga o guia de Primeiros passos para criar um projeto e adicionar a dependência nuget Yarp.ReverseProxy."
   },
   {
     "slug": "direct-forwarding",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Update Program.cs",
+    "title": "Encaminhamento direto",
+    "headingPath": "Encaminhamento direto › Atualizar o Program.cs",
     "anchor": "update-program-cs",
-    "excerpt": "In this example the IHttpForwarder is registered in DI, injected into the endpoint method, and used to forward requests from a specific route to…"
+    "excerpt": "Neste exemplo o IHttpForwarder é registrado na DI, injetado no método do endpoint e usado para encaminhar requisições de uma rota específica para…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › // Check if the operation was successful",
+    "title": "Encaminhamento direto",
+    "headingPath": "Encaminhamento direto › // Check if the operation was successful",
     "anchor": "check-if-the-operation-was-successful",
     "excerpt": "if (error != ForwarderError.None) { var errorFeature = httpContext.GetForwarderErrorFeature(); var exception = errorFeature.Exception; } }); app.Run(); /// ///…"
   },
@@ -2268,132 +2268,132 @@
     "slug": "direct-forwarding",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › The HTTP Client",
+    "title": "Encaminhamento direto",
+    "headingPath": "Encaminhamento direto › O cliente HTTP",
     "anchor": "the-http-client",
-    "excerpt": "The http client may be customized, but the above example is recommended for common proxy scenarios. Always use HttpMessageInvoker rather than HttpClient,…"
+    "excerpt": "O cliente HTTP pode ser personalizado, mas o exemplo acima é recomendado para cenários comuns de proxy. Sempre use HttpMessageInvoker em vez de HttpClient; o…"
   },
   {
     "slug": "direct-forwarding",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Transforms",
+    "title": "Encaminhamento direto",
+    "headingPath": "Encaminhamento direto › Transformações",
     "anchor": "transforms",
-    "excerpt": "The request and response can be modified by providing a derived HttpTransformer as a parameter to SendAsync method."
+    "excerpt": "A requisição e a resposta podem ser modificadas fornecendo um HttpTransformer derivado como parâmetro para o método SendAsync."
   },
   {
     "slug": "direct-forwarding",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Direct forwarding",
-    "headingPath": "Direct forwarding › Error handling",
+    "title": "Encaminhamento direto",
+    "headingPath": "Encaminhamento direto › Tratamento de erros",
     "anchor": "error-handling",
-    "excerpt": "IHttpForwarder catches exceptions and timeouts from the HTTP client, logs them, and converts them to 5xx status codes or aborts the response. An error code is…"
+    "excerpt": "IHttpForwarder captura exceções e tempos limite do cliente HTTP, registra-os em log e os converte em códigos de status 5xx ou aborta a resposta. Um código de…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "title": "Resolvedores de destino",
+    "excerpt": "O YARP usa um resolvedor de destino para expandir o conjunto de endereços de destino configurados. O"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › YARP Extensibility Destination Resolvers",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › Resolvedores de destino da extensibilidade do YARP",
     "anchor": "yarp-extensibility-destination-resolvers",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "O YARP usa um resolvedor de destino para expandir o conjunto de endereços de destino configurados. O"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Introduction",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › Introdução",
     "anchor": "introduction",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The destination resolver can be used as an integration point with…"
+    "excerpt": "O YARP usa um resolvedor de destino para expandir o conjunto de endereços de destino configurados. O resolvedor de destino pode ser usado como um ponto de…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Structure",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › Estrutura",
     "anchor": "structure",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "O YARP usa um resolvedor de destino para expandir o conjunto de endereços de destino configurados. O"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › IDestinationResolver has a single method",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › IDestinationResolver tem um único método",
     "anchor": "idestinationresolver-has-a-single-method",
-    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken) which should return a…"
+    "excerpt": "ResolveDestinationsAsync(IReadOnlyDictionary&lt;string, DestinationConfig&gt; destinations, CancellationToken cancellationToken) que deve retornar uma…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › DestinationConfig",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › DestinationConfig",
     "anchor": "destinationconfig",
-    "excerpt": "DestinationConfig has a Host property which can be used to specify the default Host header value which the proxy should use when communicating with that…"
+    "excerpt": "DestinationConfig tem uma propriedade Host que pode ser usada para especificar o valor padrão do cabeçalho Host que o proxy deve usar ao se comunicar com…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Lifecycle",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › Ciclo de vida",
     "anchor": "lifecycle",
-    "excerpt": "YARP uses a destination resolver to expand the set of configured destination addresses. The"
+    "excerpt": "O YARP usa um resolvedor de destino para expandir o conjunto de endereços de destino configurados. O"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Startup",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › Inicialização",
     "anchor": "startup",
-    "excerpt": "The IDestinationResolver should be registered in the DI container as a singleton. At startup, the proxy will resolve this instance and call…"
+    "excerpt": "O IDestinationResolver deve ser registrado no contêiner de DI como um singleton. Na inicialização, o proxy resolverá essa instância e chamará…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Atomicity",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › Atomicidade",
     "anchor": "atomicity",
-    "excerpt": "The destinations objects and collections supplied to the proxy should be read-only and not modified once they have been handed to the proxy via GetConfig() ."
+    "excerpt": "Os objetos e coleções de destinos fornecidos ao proxy devem ser somente leitura e não devem ser modificados depois de terem sido entregues ao proxy via…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Reload",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › Recarregamento",
     "anchor": "reload",
-    "excerpt": "If the IChangeToken supports ActiveChangeCallbacks , once the proxy has processed the initial set of destinations it will register a callback with this token.…"
+    "excerpt": "Se o IChangeToken suportar ActiveChangeCallbacks , assim que o proxy tiver processado o conjunto inicial de destinos, ele registrará um callback com esse…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › DNS Destination Resolver",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › Resolvedor de destino DNS",
     "anchor": "dns-destination-resolver",
-    "excerpt": "YARP includes an IDestinationResolver implementation which expands the set of configured destinations by resolving each host name to one or more IP addresses…"
+    "excerpt": "O YARP inclui uma implementação de IDestinationResolver que expande o conjunto de destinos configurados resolvendo cada nome de host para um ou mais endereços…"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Example",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › Exemplo",
     "anchor": "example",
     "excerpt": "C#// Add the DNS destination resolver, restricting results to IPv4 addresses reverseProxyBuilder.AddDnsDestinationResolver(o =&gt; o.AddressFamily =…"
   },
@@ -2401,288 +2401,288 @@
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › Configuration",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › Configuração",
     "anchor": "configuration",
-    "excerpt": "The DNS destination resolver&#39;s options, DnsDestinationResolverOptions, has the following properties:"
+    "excerpt": "As opções do resolvedor de destino DNS, DnsDestinationResolverOptions, têm as seguintes propriedades:"
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › RefreshPeriod",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › RefreshPeriod",
     "anchor": "refreshperiod",
-    "excerpt": "The period between requesting a refresh of a resolved name. This defaults to 5 minutes."
+    "excerpt": "O período entre as solicitações de atualização de um nome resolvido. O padrão é 5 minutos."
   },
   {
     "slug": "destination-resolvers",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Destination resolvers",
-    "headingPath": "Destination resolvers › AddressFamily",
+    "title": "Resolvedores de destino",
+    "headingPath": "Resolvedores de destino › AddressFamily",
     "anchor": "addressfamily",
-    "excerpt": "Optionally, specify an System.Net.Sockets.AddressFamily value of AddressFamily.InterNetwork or AddressFamily.InterNetworkV6 to restrict resolved resolution to…"
+    "excerpt": "Opcionalmente, especifique um valor de System.Net.Sockets.AddressFamily igual a AddressFamily.InterNetwork ou AddressFamily.InterNetworkV6 para restringir a…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "title": "Transformações de requisição e resposta",
+    "excerpt": "Ao encaminhar uma requisição, é comum modificar partes da requisição ou da resposta para se adequar a"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Request and Response Transform",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › Transformação de requisição e resposta",
     "anchor": "request-and-response-transform",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "Ao encaminhar uma requisição, é comum modificar partes da requisição ou da resposta para se adequar a"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Extensibility",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › Extensibilidade",
     "anchor": "extensibility",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "Ao encaminhar uma requisição, é comum modificar partes da requisição ou da resposta para se adequar a"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Introduction",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › Introdução",
     "anchor": "introduction",
-    "excerpt": "When proxying a request it&#39;s common to modify parts of the request or response to adapt to the destination server&#39;s requirements or to flow additional…"
+    "excerpt": "Ao encaminhar uma requisição, é comum modificar partes da requisição ou da resposta para se adequar aos requisitos do servidor de destino ou para propagar…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › RequestTransform",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › RequestTransform",
     "anchor": "requesttransform",
-    "excerpt": "All request transforms must derive from the abstract base class RequestTransform. These can freely modify the proxy HttpRequestMessage . Avoid reading or…"
+    "excerpt": "Todas as transformações de requisição devem derivar da classe base abstrata RequestTransform. Elas podem modificar livremente o HttpRequestMessage do proxy.…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ResponseTransform",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › ResponseTransform",
     "anchor": "responsetransform",
-    "excerpt": "All response transforms must derive from the abstract base class ResponseTransform. These can freely modify the client HttpResponse . Avoid reading or…"
+    "excerpt": "Todas as transformações de resposta devem derivar da classe base abstrata ResponseTransform. Elas podem modificar livremente o HttpResponse do cliente. Evite…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ResponseTrailersTransform",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › ResponseTrailersTransform",
     "anchor": "responsetrailerstransform",
-    "excerpt": "All response trailers transforms must derive from the abstract base class ResponseTrailersTransform. These can freely modify the client HttpResponse trailers.…"
+    "excerpt": "Todas as transformações de trailers de resposta devem derivar da classe base abstrata ResponseTrailersTransform. Elas podem modificar livremente os trailers do…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Request body transforms",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › Transformações do corpo da requisição",
     "anchor": "request-body-transforms",
-    "excerpt": "YARP does not provide any built in transforms for modifying the request body. However, the body can be modified by custom transforms. Be careful about which…"
+    "excerpt": "O YARP não fornece nenhuma transformação integrada para modificar o corpo da requisição. No entanto, o corpo pode ser modificado por transformações…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › any",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › any",
     "anchor": "any",
-    "excerpt": "When proxying a request it's common to modify parts of the request or response to adapt to"
+    "excerpt": "Ao encaminhar uma requisição, é comum modificar partes da requisição ou da resposta para se adequar a"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › // needed headers on the ProxyRequest",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › // needed headers on the ProxyRequest",
     "anchor": "needed-headers-on-the-proxyrequest",
-    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); Custom transforms can only modify a request body if one is already present.…"
+    "excerpt": "requestContext.ProxyRequest.Content.Headers.ContentLength = bytes.Length; } }); }); Transformações personalizadas só podem modificar o corpo de uma requisição…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › Response body transforms",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › Transformações do corpo da resposta",
     "anchor": "response-body-transforms",
-    "excerpt": "YARP does not provide any built in transforms for modifying the response body. However, the body can be modified by custom transforms. Be careful about which…"
+    "excerpt": "O YARP não fornece nenhuma transformação integrada para modificar o corpo da resposta. No entanto, o corpo pode ser modificado por transformações…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ITransformProvider",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › ITransformProvider",
     "anchor": "itransformprovider",
-    "excerpt": "ITransformProvider provides the functionality of AddTransforms described above as well as DI integration and validation support. ITransformProvider &#39;s can…"
+    "excerpt": "ITransformProvider fornece a funcionalidade de AddTransforms descrita acima, além de integração com DI e suporte a validação. Instâncias de ITransformProvider…"
   },
   {
     "slug": "extensibility-transforms",
     "locale": "pt-BR",
     "group": "extensibility",
-    "title": "Request & response transforms",
-    "headingPath": "Request & response transforms › ITransformFactory",
+    "title": "Transformações de requisição e resposta",
+    "headingPath": "Transformações de requisição e resposta › ITransformFactory",
     "anchor": "itransformfactory",
-    "excerpt": "Developers that want to integrate their custom transforms with the Transforms section of configuration can implement an ITransformFactory. This should be…"
+    "excerpt": "Desenvolvedores que desejam integrar suas transformações personalizadas à seção Transforms da configuração podem implementar um ITransformFactory. Ele deve ser…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "excerpt": "When using a reverse proxy, there is an additional hop from the client to the proxy, and then"
+    "title": "Diagnosticando proxies baseados em YARP",
+    "excerpt": "Ao usar um proxy reverso, há um salto adicional do cliente para o proxy e depois"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Logging",
+    "title": "Diagnosticando proxies baseados em YARP",
+    "headingPath": "Diagnosticando proxies baseados em YARP › Registro em log",
     "anchor": "logging",
-    "excerpt": "The first step to being able to tell what is going on with YARP is to turn on logging. This is a configuration flag so can be changed on the fly. YARP is…"
+    "excerpt": "O primeiro passo para conseguir identificar o que está acontecendo com o YARP é habilitar o registro em log. Trata-se de um sinalizador de configuração,…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Understanding log entries",
+    "title": "Diagnosticando proxies baseados em YARP",
+    "headingPath": "Diagnosticando proxies baseados em YARP › Entendendo as entradas de log",
     "anchor": "understanding-log-entries",
-    "excerpt": "The logging output is directly tied to the way that ASP.NET Core processes requests. It&#39;s important to realize that as middleware, YARP is relying on much…"
+    "excerpt": "A saída do registro em log está diretamente ligada à forma como o ASP.NET Core processa as solicitações. É importante perceber que, como middleware, o YARP…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using ASP.NET request logging",
+    "title": "Diagnosticando proxies baseados em YARP",
+    "headingPath": "Diagnosticando proxies baseados em YARP › Usando o registro em log de solicitações do ASP.NET",
     "anchor": "using-asp-net-request-logging",
-    "excerpt": "ASP.NET includes a middleware component that can be used to provide more details about the request and response. The UseHttpLogging component can be added to…"
+    "excerpt": "O ASP.NET inclui um componente de middleware que pode ser usado para fornecer mais detalhes sobre a solicitação e a resposta. O componente UseHttpLogging pode…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using telemetry events",
+    "title": "Diagnosticando proxies baseados em YARP",
+    "headingPath": "Diagnosticando proxies baseados em YARP › Usando eventos de telemetria",
     "anchor": "using-telemetry-events",
-    "excerpt": "We recommend reading Networking telemetry in .NET as a primer on how to consume networking telemetry in .NET. The Metrics sample shows how to listen to events…"
+    "excerpt": "Recomendamos a leitura de Networking telemetry in .NET como uma introdução sobre como consumir telemetria de rede no .NET. O exemplo do Metrics mostra como…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using custom middleware",
+    "title": "Diagnosticando proxies baseados em YARP",
+    "headingPath": "Diagnosticando proxies baseados em YARP › Usando middleware personalizado",
     "anchor": "using-custom-middleware",
-    "excerpt": "Another way to inspect the state for requests is to insert additional middleware into the request pipeline. You can insert between the other stages to see the…"
+    "excerpt": "Outra forma de inspecionar o estado das solicitações é inserir middleware adicional no pipeline de solicitações. É possível inserir esse middleware entre os…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Using the debugger",
+    "title": "Diagnosticando proxies baseados em YARP",
+    "headingPath": "Diagnosticando proxies baseados em YARP › Usando o depurador",
     "anchor": "using-the-debugger",
-    "excerpt": "A debugger, such as Visual Studio, can be attached to the proxy process. However, unless you have existing middleware, there isn&#39;t a good place in the app…"
+    "excerpt": "Um depurador, como o Visual Studio, pode ser anexado ao processo do proxy. No entanto, a menos que você já tenha middleware existente, não há um bom lugar no…"
   },
   {
     "slug": "diagnosing-yarp-issues",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Diagnosing YARP-based proxies",
-    "headingPath": "Diagnosing YARP-based proxies › Network tracing",
+    "title": "Diagnosticando proxies baseados em YARP",
+    "headingPath": "Diagnosticando proxies baseados em YARP › Rastreamento de rede",
     "anchor": "network-tracing",
-    "excerpt": "It can be attractive to use network tracing tools like Fiddler or Wireshark to try to monitor what&#39;s happening either side of the proxy. However, be…"
+    "excerpt": "Pode parecer atraente usar ferramentas de rastreamento de rede, como Fiddler ou Wireshark, para tentar monitorar o que está acontecendo em ambos os lados do…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Distributed tracing",
-    "excerpt": "As an ASP.NET Core component, YARP can easily integrate into different tracing systems the"
+    "title": "Rastreamento distribuído",
+    "excerpt": "Como um componente do ASP.NET Core, o YARP pode se integrar facilmente a diferentes sistemas de rastreamento"
   },
   {
     "slug": "distributed-tracing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Using Open Telemetry",
+    "title": "Rastreamento distribuído",
+    "headingPath": "Rastreamento distribuído › Usando o Open Telemetry",
     "anchor": "using-open-telemetry",
-    "excerpt": "YARP supports distributed tracing using Open Telemetry (OTEL). When a request comes in, and there is a listener for Activities, then ASP.NET Core will…"
+    "excerpt": "O YARP oferece suporte a rastreamento distribuído usando o Open Telemetry (OTEL). Quando uma solicitação chega e há um listener para Activities, o ASP.NET Core…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Using custom tracing headers",
+    "title": "Rastreamento distribuído",
+    "headingPath": "Rastreamento distribuído › Usando cabeçalhos de rastreamento personalizados",
     "anchor": "using-custom-tracing-headers",
-    "excerpt": "When using a propagation mechanism that is not built into .NET (e.g. B3 propagation ), you should implement a custom [ DistributedContextPropagator ] for that…"
+    "excerpt": "Ao usar um mecanismo de propagação que não é integrado ao .NET (por exemplo, a propagação B3), você deve implementar um [DistributedContextPropagator]…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › Pass-through proxy",
+    "title": "Rastreamento distribuído",
+    "headingPath": "Rastreamento distribuído › Proxy de passagem direta",
     "anchor": "pass-through-proxy",
-    "excerpt": "If you do not wish the proxy to actively participate in the trace, and wish to keep all the tracing headers as-is, you may do so by setting…"
+    "excerpt": "Se você não quiser que o proxy participe ativamente do rastreamento e quiser manter todos os cabeçalhos de rastreamento como estão, é possível fazer isso…"
   },
   {
     "slug": "distributed-tracing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "Distributed tracing",
-    "headingPath": "Distributed tracing › DistributedContextPropagator DistributedContextPropagator.Fields",
+    "title": "Rastreamento distribuído",
+    "headingPath": "Rastreamento distribuído › DistributedContextPropagator DistributedContextPropagator.Fields",
     "anchor": "distributedcontextpropagator-distributedcontextpropagator-fi",
-    "excerpt": "NotaThe author created this article with assistance from AI. Learn more"
+    "excerpt": "NotaO autor criou este artigo com a ajuda de IA. Saiba mais"
   },
   {
     "slug": "ab-testing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+    "title": "Testes A/B e atualizações graduais",
+    "excerpt": "Testes A/B e atualizações graduais exigem procedimentos para atribuir dinamicamente o tráfego de entrada"
   },
   {
     "slug": "ab-testing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › YARP A/B Testing and Rolling Upgrades",
+    "title": "Testes A/B e atualizações graduais",
+    "headingPath": "Testes A/B e atualizações graduais › Testes A/B e atualizações graduais no YARP",
     "anchor": "yarp-a-b-testing-and-rolling-upgrades",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic"
+    "excerpt": "Testes A/B e atualizações graduais exigem procedimentos para atribuir dinamicamente o tráfego de entrada"
   },
   {
     "slug": "ab-testing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Introduction",
+    "title": "Testes A/B e atualizações graduais",
+    "headingPath": "Testes A/B e atualizações graduais › Introdução",
     "anchor": "introduction",
-    "excerpt": "A/B testing and rolling upgrades require procedures for dynamically assigning incoming traffic to evaluate changes in the destination application. YARP does…"
+    "excerpt": "Testes A/B e atualizações graduais exigem procedimentos para atribuir dinamicamente o tráfego de entrada, a fim de avaliar alterações no aplicativo de destino.…"
   },
   {
     "slug": "ab-testing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Example",
+    "title": "Testes A/B e atualizações graduais",
+    "headingPath": "Testes A/B e atualizações graduais › Exemplo",
     "anchor": "example",
     "excerpt": "app.MapReverseProxy(proxyPipeline =&gt; { // Custom cluster selection proxyPipeline.Use((context, next) =&gt; { var lookup =…"
   },
@@ -2690,175 +2690,175 @@
     "slug": "ab-testing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Usage",
+    "title": "Testes A/B e atualizações graduais",
+    "headingPath": "Testes A/B e atualizações graduais › Uso",
     "anchor": "usage",
-    "excerpt": "This scenario makes use of two APIs, IProxyStateLookup and ReassignProxyRequest, called from a custom proxy middleware as shown in the sample above.…"
+    "excerpt": "Esse cenário usa duas APIs, IProxyStateLookup e ReassignProxyRequest, chamadas a partir de um middleware de proxy personalizado, como mostrado no exemplo…"
   },
   {
     "slug": "ab-testing",
     "locale": "pt-BR",
     "group": "operations",
-    "title": "A/B testing & rolling upgrades",
-    "headingPath": "A/B testing & rolling upgrades › Session affinity",
+    "title": "Testes A/B e atualizações graduais",
+    "headingPath": "Testes A/B e atualizações graduais › Afinidade de sessão",
     "anchor": "session-affinity",
-    "excerpt": "Notathat session affinity functionality is split between middleware, which reads it settings from the current cluster, and transforms, which are part of the…"
+    "excerpt": "Notaque a funcionalidade de afinidade de sessão é dividida entre o middleware, que lê suas configurações a partir do cluster atual, e as transformações, que…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+    "title": "Controlador de Ingress do Kubernetes",
+    "excerpt": "O YARP pode ser integrado ao Kubernetes como um proxy reverso que gerencia o tráfego HTTP/HTTPS"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Prerequisites",
+    "title": "Controlador de Ingress do Kubernetes",
+    "headingPath": "Controlador de Ingress do Kubernetes › Pré-requisitos",
     "anchor": "prerequisites",
-    "excerpt": "Before we continue with this tutorial, make sure you have the following ready... Installing Docker based on your operating system. A container registry. Docker…"
+    "excerpt": "Antes de continuar este tutorial, verifique se você tem o seguinte pronto... Instalar o Docker de acordo com o seu sistema operacional. Um registro de…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Get started",
+    "title": "Controlador de Ingress do Kubernetes",
+    "headingPath": "Controlador de Ingress do Kubernetes › Primeiros passos",
     "anchor": "get-started",
-    "excerpt": "NotaFor now, there is no official Docker image for the YARP ingress controller. In the meantime, the YARP ingress controller must be built locally and deploy…"
+    "excerpt": "NotaPor enquanto, não há uma imagem oficial do Docker para o controlador de ingress do YARP. Enquanto isso, o controlador de ingress do YARP precisa ser…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f ingress-controller.yaml",
+    "title": "Controlador de Ingress do Kubernetes",
+    "headingPath": "Controlador de Ingress do Kubernetes › kubectl apply -f ingress-controller.yaml",
     "anchor": "kubectl-apply-f-ingress-controller-yaml",
-    "excerpt": "To verify that the ingress controller has been deployed, run:"
+    "excerpt": "Para verificar se o controlador de ingress foi implantado, execute:"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl get pods -n yarp",
+    "title": "Controlador de Ingress do Kubernetes",
+    "headingPath": "Controlador de Ingress do Kubernetes › kubectl get pods -n yarp",
     "anchor": "kubectl-get-pods-n-yarp",
-    "excerpt": "You can then check logs from the ingress controller by running: kubectl logs {POD NAME} -n yarp All services, deployments, and pods for YARP are in the…"
+    "excerpt": "Em seguida, você pode verificar os logs do controlador de ingress executando: kubectl logs {POD NAME} -n yarp Todos os serviços, implantações e pods do YARP…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress.yaml",
+    "title": "Controlador de Ingress do Kubernetes",
+    "headingPath": "Controlador de Ingress do Kubernetes › kubectl apply -f .\\ingress.yaml",
     "anchor": "kubectl-apply-f-ingress-yaml",
-    "excerpt": "At this point, your ingress and controller should be running."
+    "excerpt": "Neste ponto, seu ingress e o controlador já devem estar em execução."
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Deploying an app",
+    "title": "Controlador de Ingress do Kubernetes",
+    "headingPath": "Controlador de Ingress do Kubernetes › Implantando um aplicativo",
     "anchor": "deploying-an-app",
-    "excerpt": "To use the ingress, we now need to deploy an application to Kubernetes. Navigate to samples\\KuberenetesIngress.Sample\\backend and run: docker build . -t…"
+    "excerpt": "Para usar o ingress, agora precisamos implantar um aplicativo no Kubernetes. Navegue até samples\\KuberenetesIngress.Sample\\backend e execute: docker build . -t…"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\backend.yaml",
+    "title": "Controlador de Ingress do Kubernetes",
+    "headingPath": "Controlador de Ingress do Kubernetes › kubectl apply -f .\\backend.yaml",
     "anchor": "kubectl-apply-f-backend-yaml",
-    "excerpt": "YARP can be integrated with Kubernetes as a reverse proxy managing HTTP/HTTPS traffic"
+    "excerpt": "O YARP pode ser integrado ao Kubernetes como um proxy reverso que gerencia o tráfego HTTP/HTTPS"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › Creating the ingress definition",
+    "title": "Controlador de Ingress do Kubernetes",
+    "headingPath": "Controlador de Ingress do Kubernetes › Criando a definição do ingress",
     "anchor": "creating-the-ingress-definition",
-    "excerpt": "Finally, once we have deployed the backend application, we need to route traffic to the backend. To do this, run in the backend directory:"
+    "excerpt": "Por fim, depois de implantar o aplicativo de backend, precisamos rotear o tráfego para ele. Para isso, execute no diretório backend:"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl apply -f .\\ingress-sample.yaml",
+    "title": "Controlador de Ingress do Kubernetes",
+    "headingPath": "Controlador de Ingress do Kubernetes › kubectl apply -f .\\ingress-sample.yaml",
     "anchor": "kubectl-apply-f-ingress-sample-yaml",
-    "excerpt": "And then execute the following command to get the external IP of the ingress, the name of the related service being yarp-proxy :"
+    "excerpt": "Em seguida, execute o seguinte comando para obter o IP externo do ingress; o nome do serviço relacionado é yarp-proxy:"
   },
   {
     "slug": "kubernetes-ingress",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Kubernetes Ingress Controller",
-    "headingPath": "Kubernetes Ingress Controller › kubectl get service -n yarp",
+    "title": "Controlador de Ingress do Kubernetes",
+    "headingPath": "Controlador de Ingress do Kubernetes › kubectl get service -n yarp",
     "anchor": "kubectl-get-service-n-yarp",
-    "excerpt": "If you&#39;re using a local K8s cluster and don&#39;t get an external IP, you may be able to avoid using the default port: 80 for the yarp-proxy service. If…"
+    "excerpt": "Se você estiver usando um cluster K8s local e não obtiver um IP externo, talvez seja possível evitar o uso da porta padrão: 80 para o serviço yarp-proxy. Nesse…"
   },
   {
     "slug": "service-fabric-int",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "Service Fabric integration",
-    "excerpt": "This functionality has been deprecated in favor of service-fabric-yarp (GitHub repository) ."
+    "title": "Integração com o Service Fabric",
+    "excerpt": "Essa funcionalidade foi descontinuada em favor do service-fabric-yarp (repositório do GitHub)."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which"
+    "title": "Delegação do HTTP.sys",
+    "excerpt": "A delegação do HTTP.sys é um recurso em nível de kernel adicionado a versões mais recentes do Windows que"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Introduction",
+    "title": "Delegação do HTTP.sys",
+    "headingPath": "Delegação do HTTP.sys › Introdução",
     "anchor": "introduction",
-    "excerpt": "HTTP.sys delegation is a kernel level feature added into newer versions of Windows which allows a request to be transferred from the receiving process&#39;s…"
+    "excerpt": "A delegação do HTTP.sys é um recurso em nível de kernel adicionado a versões mais recentes do Windows que permite transferir uma solicitação da fila do…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Requirements",
+    "title": "Delegação do HTTP.sys",
+    "headingPath": "Delegação do HTTP.sys › Requisitos",
     "anchor": "requirements",
-    "excerpt": "HTTP.sys delegation requires: ASP.NET Core&#39;s HTTP.sys server Windows Server 2019 or Windows 10 (build number 1809) or newer."
+    "excerpt": "A delegação do HTTP.sys requer: O servidor HTTP.sys do ASP.NET Core Windows Server 2019 ou Windows 10 (build 1809) ou mais recente."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Defaults",
+    "title": "Delegação do HTTP.sys",
+    "headingPath": "Delegação do HTTP.sys › Padrões",
     "anchor": "defaults",
-    "excerpt": "HTTP.sys delegation won&#39;t be used unless added to the proxy pipeline and enabled in the destination configuration."
+    "excerpt": "A delegação do HTTP.sys não será usada a menos que seja adicionada ao pipeline do proxy e habilitada na configuração do destino."
   },
   {
     "slug": "httpsys-delegation",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Configuration",
+    "title": "Delegação do HTTP.sys",
+    "headingPath": "Delegação do HTTP.sys › Configuração",
     "anchor": "configuration",
-    "excerpt": "HTTP.sys delegation can be enabled per destination by adding the HttpSysDelegationQueue metadata to the destination. The value of this metadata should be the…"
+    "excerpt": "A delegação do HTTP.sys pode ser habilitada por destino adicionando os metadados HttpSysDelegationQueue ao destino. O valor desses metadados deve ser o nome da…"
   },
   {
     "slug": "httpsys-delegation",
     "locale": "pt-BR",
     "group": "deployment",
-    "title": "HTTP.sys delegation",
-    "headingPath": "HTTP.sys delegation › Delegation queue lifetime",
+    "title": "Delegação do HTTP.sys",
+    "headingPath": "Delegação do HTTP.sys › Tempo de vida da fila de delegação",
     "anchor": "delegation-queue-lifetime",
-    "excerpt": "When YARP is configured to use delegation for a destination, a handle is created to the specified HTTP.sys queue. This handle is kept alive as long as the…"
+    "excerpt": "Quando o YARP é configurado para usar delegação em um destino, é criado um identificador (handle) para a fila do HTTP.sys especificada. Esse identificador é…"
   },
   {
     "slug": "aspnetcore-getting-started",

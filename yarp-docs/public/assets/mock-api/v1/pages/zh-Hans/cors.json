@@ -38,10 +38,10 @@
   "translated": false,
   "prev": {
     "slug": "authn-authz",
-    "title": "Authentication & authorization"
+    "title": "身份验证与授权"
   },
   "next": {
     "slug": "https-tls",
-    "title": "HTTPS & TLS"
+    "title": "HTTPS 与 TLS"
   }
 }

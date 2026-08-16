@@ -3,17 +3,17 @@
   "locale": "de",
   "group": "extensibility",
   "kind": "doc",
-  "title": "Overview",
-  "lede": "There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:",
+  "title": "Übersicht",
+  "lede": "Es gibt zwei Hauptstile der Erweiterbarkeit für YARP, je nachdem, welches Routingverhalten gewünscht ist:",
   "headings": [
     {
       "id": "overview-of-yarp-extensibility",
-      "text": "Overview of YARP extensibility",
+      "text": "Übersicht über die YARP-Erweiterbarkeit",
       "level": 2
     },
     {
       "id": "middleware-pipeline",
-      "text": "Middleware pipeline",
+      "text": "Middleware-Pipeline",
       "level": 2
     },
     {
@@ -22,10 +22,10 @@
       "level": 2
     }
   ],
-  "bodyHtml": "<h2 id=\"overview-of-yarp-extensibility\">Overview of YARP extensibility</h2><p>There are 2 main styles of extensibility for YARP, depending on the routing behavior desired:</p>\n<p>Middleware Pipeline Http Forwarder</p>\n<h2 id=\"middleware-pipeline\">Middleware pipeline</h2><p>YARP uses the concept of Routes, Clusters and Destinations. These can be supplied through configuration files or directly through code. Based on the routing rules, YARP picks a cluster and enumerates the possible destinations. It then uses the middleware pipeline to select the destination based on destination health, session affinity, load balancing etc.</p>\n<p>Most of the prebuilt pipeline can be customized through code:</p>\n<p>Configuration Providers Destination Enumeration Session Affinity Load Balancing Health Checks Request Transforms HttpClient configuration</p>\n<p>You can also change the pipeline definition to replace modules with your own implementation(s) or add additional modules as needed. For more information see Middleware.</p>\n<h2 id=\"http-forwarder\">HTTP Forwarder</h2><p>If the YARP pipeline is too rigid for your use case or the scale of routing rules and destinations isn&#39;t suitable for loading into memory, then you can implement your own routing logic and use the HTTP Forwarder to direct requests to your chosen destination. The HttpForwarder component takes the HTTP context and forwards the request to the supplied destination.</p>\n<p>The transform component can still be used if the forwarder is needed. For more information see Direct forwarding.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Hinweis</div><p>The author created this article with assistance from AI. Learn more</p>\n</div></div>",
+  "bodyHtml": "<h2 id=\"overview-of-yarp-extensibility\">Übersicht über die YARP-Erweiterbarkeit</h2><p>Es gibt zwei Hauptstile der Erweiterbarkeit für YARP, je nachdem, welches Routingverhalten gewünscht ist:</p>\n<p>Middleware-Pipeline HTTP Forwarder</p>\n<h2 id=\"middleware-pipeline\">Middleware-Pipeline</h2><p>YARP verwendet das Konzept von Routen, Clustern und Zielen. Diese können über Konfigurationsdateien oder direkt über Code bereitgestellt werden. Anhand der Routingregeln wählt YARP einen Cluster aus und ermittelt die möglichen Ziele. Anschließend verwendet es die Middleware-Pipeline, um das Ziel anhand der Zielintegrität, der Sitzungsaffinität, des Lastenausgleichs usw. auszuwählen.</p>\n<p>Der Großteil der vorgefertigten Pipeline lässt sich über Code anpassen:</p>\n<p>Konfigurationsanbieter Zielaufzählung Sitzungsaffinität Lastenausgleich Integritätsprüfungen Anforderungstransformationen HttpClient-Konfiguration</p>\n<p>Sie können die Pipelinedefinition auch ändern, um Module durch eigene Implementierungen zu ersetzen oder bei Bedarf zusätzliche Module hinzuzufügen. Weitere Informationen finden Sie unter Middleware.</p>\n<h2 id=\"http-forwarder\">HTTP Forwarder</h2><p>Wenn die YARP-Pipeline für Ihren Anwendungsfall zu starr ist oder der Umfang der Routingregeln und Ziele nicht für das Laden in den Arbeitsspeicher geeignet ist, können Sie Ihre eigene Routinglogik implementieren und den HTTP Forwarder verwenden, um Anforderungen an das von Ihnen gewählte Ziel zu leiten. Die HttpForwarder-Komponente nimmt den HTTP-Kontext entgegen und leitet die Anforderung an das angegebene Ziel weiter.</p>\n<p>Die Transform-Komponente kann weiterhin verwendet werden, wenn der Forwarder benötigt wird. Weitere Informationen finden Sie unter Direkte Weiterleitung.</p>\n<div class=\"callout\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8h.01M11 12h1v5h1\"/></svg><div><div class=\"head\">Hinweis</div><p>Dieser Artikel wurde mit Unterstützung von KI erstellt. Weitere Informationen</p>\n</div></div>",
   "sourceUrl": "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/extensibility",
   "lastUpdated": "2026-08-11",
-  "translated": false,
+  "translated": true,
   "prev": {
     "slug": "websockets",
     "title": "WebSockets & SPDY"

@@ -1,0 +1,46 @@
+---
+slug: https-tls
+title: HTTPS 与 TLS
+lede: >-
+  HTTPS(基于 TLS 加密连接的 HTTP)是在
+sourceUrl: https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/yarp/https-tls
+lastUpdated: 2026-08-11
+---
+
+出于安全性、完整性和隐私方面的考虑,HTTPS(基于 TLS 加密连接的 HTTP)是在 Internet 上发出 HTTP 请求的标准方式。在使用像 YARP 这样的反向代理时,需要考虑几个与 HTTPS/TLS 相关的问题。
+
+## TLS 终止
+
+YARP 是一个第 7 层 HTTP 代理,这意味着传入的 HTTPS/TLS 连接会由代理完全解密,以便代理能够处理并转发 HTTP 请求。这通常称为 TLS 终止。根据所提供的配置,与目标之间的传出连接可能加密,也可能不加密。
+
+TLS 隧道传输(CONNECT)
+
+使用 CONNECT 方法进行 TLS 隧道传输是一项在不解密请求的情况下对其进行代理的功能。YARP 不支持此功能,目前也没有添加该功能的计划。
+
+## 配置传入连接
+
+YARP 可以运行在所有 ASP.NET Core 服务器之上,而传入连接的 HTTPS/TLS 配置则因服务器而异。有关配置详细信息,请查阅 Kestrel、IIS 和 Http.Sys 的相关文档。
+
+## 在 Kestrel 中使用高级 TLS 筛选器
+
+Kestrel 支持在 TLS 握手之前拦截传入连接。YARP 提供了 TlsFrameHelper API,可用于解析原始 TLS 握手数据,使您能够收集自定义遥测数据或提前拒绝连接。这些 API 无法修改 TLS 握手或解密数据流。请参阅此示例。
+
+## 配置传出连接
+
+若要在与目标通信时启用 TLS 加密,请将目标地址指定为 https,例如 "https://destinationHost"。相关示例请参阅配置文档。
+
+目标地址中指定的主机名默认将用于 TLS 握手,
+
+包括 SNI 和服务器证书验证。如果启用了转发原始 Host 标头,
+
+则将改用该值进行 TLS 握手。如果需要使用
+
+自定义主机值,则可以使用 RequestHeader 转换来设置 Host 标头。
+
+到目标的出站连接由 HttpClient/SocketsHttpHandler 处理。可以为每个群集配置不同的实例和设置。部分设置可在配置模型中提供,而其他设置只能在代码中配置。有关详细信息,请参阅 HttpClient 文档。
+
+目标服务器证书需要受到代理的信任,或者需要通过 HttpClient 配置应用自定义验证。
+
+:::note
+本文作者在 AI 的协助下创作本文。了解详情
+:::
