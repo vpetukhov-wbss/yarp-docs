@@ -5,6 +5,8 @@
     (click)="toggleOpen()"
     aria-haspopup="true"
     [attr.aria-expanded]="open()"
+    [attr.aria-label]="'language.chooseLanguage' | translate"
+    [attr.title]="'language.chooseLanguage' | translate"
   >
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
       <circle cx="12" cy="12" r="9" />

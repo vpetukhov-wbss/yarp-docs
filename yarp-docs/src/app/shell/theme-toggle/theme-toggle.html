@@ -3,6 +3,7 @@
   class="icon-btn"
   (click)="store.toggle()"
   [attr.aria-label]="(store.isDark() ? 'theme.switchToLight' : 'theme.switchToDark') | translate"
+  [attr.title]="(store.isDark() ? 'theme.switchToLight' : 'theme.switchToDark') | translate"
 >
   <svg
     width="17"
