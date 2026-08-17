@@ -1,3 +1,5 @@
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID, inject } from '@angular/core';
 import { patchState, signalStore, withHooks, withMethods, withState } from '@ngrx/signals';
 
 export type ApiHealth = 'ok' | 'degraded' | 'down';
@@ -29,7 +31,13 @@ export const ConnectivityStore = signalStore(
     },
   })),
   withHooks({
+    // No real "offline" concept server-side (during SSR/prerendering) -
+    // navigator/window don't exist there at all, and the server obviously
+    // has connectivity to itself, so this hook is a no-op off-browser.
     onInit(store) {
+      if (!isPlatformBrowser(inject(PLATFORM_ID))) {
+        return;
+      }
       const syncFromBrowser = (): void => {
         patchState(store, { health: navigator.onLine ? 'ok' : 'down' });
       };

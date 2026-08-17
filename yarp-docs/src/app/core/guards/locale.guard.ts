@@ -1,5 +1,5 @@
-import { inject } from '@angular/core';
 import type { CanActivateFn } from '@angular/router';
+import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -11,8 +11,16 @@ const STORAGE_KEY = 'yarp-docs:locale';
 
 // Shared by both the root '' redirect (app.routes.ts) and this guard's
 // fallback path for an unresolvable :locale segment, so "which locale do we
-// pick when we have to guess" has exactly one implementation.
+// pick when we have to guess" has exactly one implementation. typeof-checked
+// (not isPlatformBrowser/inject) so this keeps working when called directly,
+// outside an injection context (as the spec does) - localStorage/navigator
+// don't exist server-side (SSR/prerendering) either way, where DEFAULT_LOCALE
+// is the only sensible answer anyway (there's no request-specific browser to
+// read).
 export function detectPreferredLocale(): LocaleCode {
+  if (typeof localStorage === 'undefined' || typeof navigator === 'undefined') {
+    return DEFAULT_LOCALE;
+  }
   const stored = localStorage.getItem(STORAGE_KEY);
   if (stored && isSupportedLocale(stored)) {
     return stored;
@@ -46,7 +54,9 @@ export const localeGuard: CanActivateFn = (route, state) => {
 
   if (requested && isSupportedLocale(requested)) {
     localeStore.setLocale(requested);
-    localStorage.setItem(STORAGE_KEY, requested);
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(STORAGE_KEY, requested);
+    }
     translate.use(requested);
     return true;
   }

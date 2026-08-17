@@ -1,4 +1,5 @@
-import { effect } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { effect, inject } from '@angular/core';
 import { patchState, signalStore, withHooks, withMethods, withState } from '@ngrx/signals';
 
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from '../locales';
@@ -24,6 +25,10 @@ export const LocaleStore = signalStore(
   })),
   withHooks({
     onInit(store) {
+      // DOCUMENT (not the global) so this also runs correctly during SSR/
+      // prerendering - the lang/dir attributes need to land in the actual
+      // prerendered HTML output, not just the live browser DOM.
+      const document = inject(DOCUMENT);
       effect(() => {
         const code = store.current();
         document.documentElement.lang = code;

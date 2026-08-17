@@ -1,6 +1,7 @@
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import type { ApplicationConfig } from '@angular/core';
 import { provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 import { TitleStrategy, provideRouter, withRouterConfig } from '@angular/router';
 import { provideTranslateLoader, provideTranslateService } from '@ngx-translate/core';
 
@@ -35,5 +36,6 @@ export const appConfig: ApplicationConfig = {
       fallbackLang: DEFAULT_LOCALE,
       loader: provideTranslateLoader(TranslateHttpLoader),
     }),
+    provideClientHydration(withEventReplay()),
   ],
 };

@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "npm run sitemap:build && ng build",
+    "build": "npm run prerender-routes:build && npm run sitemap:build && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test && vitest run --config vitest.content.config.mts",
     "lint": "ng lint",
@@ -12,7 +12,8 @@
     "format:check": "prettier --check \"src/**/*.{ts,html,scss}\"",
     "content:build": "node scripts/content/build-content.mjs",
     "content:check": "node scripts/content/validate.mjs",
-    "sitemap:build": "node scripts/seo/build-sitemap.mjs"
+    "sitemap:build": "node scripts/seo/build-sitemap.mjs",
+    "prerender-routes:build": "node scripts/seo/build-prerender-routes.mjs"
   },
   "private": true,
   "packageManager": "npm@11.11.0",
@@ -25,10 +26,13 @@
     "@angular/core": "^21.2.0",
     "@angular/forms": "^21.2.0",
     "@angular/platform-browser": "^21.2.0",
+    "@angular/platform-server": "^21.2.0",
     "@angular/router": "^21.2.0",
+    "@angular/ssr": "^21.2.20",
     "@ngrx/operators": "^21.1.1",
     "@ngrx/signals": "^21.1.1",
     "@ngx-translate/core": "^18.0.0",
+    "express": "^5.1.0",
     "minisearch": "^7.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
@@ -38,6 +42,8 @@
     "@angular/cli": "^21.2.12",
     "@angular/compiler-cli": "^21.2.0",
     "@eslint/js": "^10.0.1",
+    "@types/express": "^5.0.1",
+    "@types/node": "^20.17.19",
     "angular-eslint": "21.4.0",
     "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",

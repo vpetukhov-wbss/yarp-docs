@@ -1,4 +1,5 @@
-import { computed, effect } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { computed, effect, inject } from '@angular/core';
 import {
   patchState,
   signalStore,
@@ -12,7 +13,15 @@ type ThemePreference = 'light' | 'dark' | null;
 
 const STORAGE_KEY = 'yarp-docs:theme';
 
+// typeof-checked (not isPlatformBrowser/inject) since this runs as
+// withState's initializer, evaluated at store-definition time - not
+// guaranteed to be inside an injection context the way onInit's hook body
+// is. No localStorage server-side (SSR/prerendering) means no persisted
+// preference to read; null (follow the OS via CSS) is the correct default.
 function readStoredPreference(): ThemePreference {
+  if (typeof localStorage === 'undefined') {
+    return null;
+  }
   const stored = localStorage.getItem(STORAGE_KEY);
   return stored === 'dark' || stored === 'light' ? stored : null;
 }
@@ -48,14 +57,24 @@ export const ThemeStore = signalStore(
   })),
   withHooks({
     onInit(store) {
+      // DOCUMENT (not the global) so data-theme still lands in the actual
+      // prerendered HTML output during SSR/prerendering, not just the live
+      // browser DOM - localStorage has no server equivalent, so that part
+      // stays guarded.
+      const document = inject(DOCUMENT);
+      const hasStorage = typeof localStorage !== 'undefined';
       effect(() => {
         const preference = store.preference();
         if (preference) {
           document.documentElement.setAttribute('data-theme', preference);
-          localStorage.setItem(STORAGE_KEY, preference);
+          if (hasStorage) {
+            localStorage.setItem(STORAGE_KEY, preference);
+          }
         } else {
           document.documentElement.removeAttribute('data-theme');
-          localStorage.removeItem(STORAGE_KEY);
+          if (hasStorage) {
+            localStorage.removeItem(STORAGE_KEY);
+          }
         }
       });
     },
