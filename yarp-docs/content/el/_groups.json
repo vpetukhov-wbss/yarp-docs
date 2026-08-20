@@ -1,0 +1,13 @@
+{
+  "getting-started": "Ξεκινώντας",
+  "configuration": "Διαμόρφωση",
+  "routing": "Δρομολόγηση",
+  "transforms": "Μετασχηματισμοί",
+  "traffic-reliability": "Κίνηση & αξιοπιστία",
+  "security": "Ασφάλεια",
+  "performance": "Απόδοση",
+  "protocols": "Πρωτόκολλα",
+  "extensibility": "Επεκτασιμότητα",
+  "operations": "Λειτουργίες",
+  "deployment": "Ανάπτυξη"
+}

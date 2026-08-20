@@ -3,7 +3,7 @@
   "groups": [
     {
       "id": "getting-started",
-      "label": "Getting started",
+      "label": "Първи стъпки",
       "order": 1,
       "items": [
         {
@@ -22,7 +22,7 @@
     },
     {
       "id": "configuration",
-      "label": "Configuration",
+      "label": "Конфигурация",
       "order": 2,
       "items": [
         {
@@ -53,7 +53,7 @@
     },
     {
       "id": "routing",
-      "label": "Routing",
+      "label": "Маршрутизиране",
       "order": 3,
       "items": [
         {
@@ -72,7 +72,7 @@
     },
     {
       "id": "transforms",
-      "label": "Transforms",
+      "label": "Трансформации",
       "order": 4,
       "items": [
         {
@@ -97,7 +97,7 @@
     },
     {
       "id": "traffic-reliability",
-      "label": "Traffic & reliability",
+      "label": "Трафик и надеждност",
       "order": 5,
       "items": [
         {
@@ -134,7 +134,7 @@
     },
     {
       "id": "security",
-      "label": "Security",
+      "label": "Сигурност",
       "order": 6,
       "items": [
         {
@@ -165,7 +165,7 @@
     },
     {
       "id": "performance",
-      "label": "Performance",
+      "label": "Производителност",
       "order": 7,
       "items": [
         {
@@ -178,7 +178,7 @@
     },
     {
       "id": "protocols",
-      "label": "Protocols",
+      "label": "Протоколи",
       "order": 8,
       "items": [
         {
@@ -203,7 +203,7 @@
     },
     {
       "id": "extensibility",
-      "label": "Extensibility",
+      "label": "Разширяемост",
       "order": 9,
       "items": [
         {
@@ -240,7 +240,7 @@
     },
     {
       "id": "operations",
-      "label": "Operations",
+      "label": "Експлоатация",
       "order": 10,
       "items": [
         {
@@ -265,7 +265,7 @@
     },
     {
       "id": "deployment",
-      "label": "Deployment",
+      "label": "Разгръщане",
       "order": 11,
       "items": [
         {

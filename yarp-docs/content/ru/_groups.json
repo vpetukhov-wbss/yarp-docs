@@ -1,0 +1,13 @@
+{
+  "getting-started": "Начало работы",
+  "configuration": "Конфигурация",
+  "routing": "Маршрутизация",
+  "transforms": "Преобразования",
+  "traffic-reliability": "Трафик и надёжность",
+  "security": "Безопасность",
+  "performance": "Производительность",
+  "protocols": "Протоколы",
+  "extensibility": "Расширяемость",
+  "operations": "Эксплуатация",
+  "deployment": "Развёртывание"
+}

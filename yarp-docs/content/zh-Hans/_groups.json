@@ -1,0 +1,13 @@
+{
+  "getting-started": "入门",
+  "configuration": "配置",
+  "routing": "路由",
+  "transforms": "转换",
+  "traffic-reliability": "流量与可靠性",
+  "security": "安全",
+  "performance": "性能",
+  "protocols": "协议",
+  "extensibility": "可扩展性",
+  "operations": "运维",
+  "deployment": "部署"
+}

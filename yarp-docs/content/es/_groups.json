@@ -1,0 +1,13 @@
+{
+  "getting-started": "Introducción",
+  "configuration": "Configuración",
+  "routing": "Enrutamiento",
+  "transforms": "Transformaciones",
+  "traffic-reliability": "Tráfico y fiabilidad",
+  "security": "Seguridad",
+  "performance": "Rendimiento",
+  "protocols": "Protocolos",
+  "extensibility": "Extensibilidad",
+  "operations": "Operaciones",
+  "deployment": "Implementación"
+}

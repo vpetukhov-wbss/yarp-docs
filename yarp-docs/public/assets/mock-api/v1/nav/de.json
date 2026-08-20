@@ -3,7 +3,7 @@
   "groups": [
     {
       "id": "getting-started",
-      "label": "Getting started",
+      "label": "Erste Schritte",
       "order": 1,
       "items": [
         {
@@ -22,7 +22,7 @@
     },
     {
       "id": "configuration",
-      "label": "Configuration",
+      "label": "Konfiguration",
       "order": 2,
       "items": [
         {
@@ -72,7 +72,7 @@
     },
     {
       "id": "transforms",
-      "label": "Transforms",
+      "label": "Transformationen",
       "order": 4,
       "items": [
         {
@@ -97,7 +97,7 @@
     },
     {
       "id": "traffic-reliability",
-      "label": "Traffic & reliability",
+      "label": "Datenverkehr & Zuverlässigkeit",
       "order": 5,
       "items": [
         {
@@ -134,7 +134,7 @@
     },
     {
       "id": "security",
-      "label": "Security",
+      "label": "Sicherheit",
       "order": 6,
       "items": [
         {
@@ -165,7 +165,7 @@
     },
     {
       "id": "performance",
-      "label": "Performance",
+      "label": "Leistung",
       "order": 7,
       "items": [
         {
@@ -178,7 +178,7 @@
     },
     {
       "id": "protocols",
-      "label": "Protocols",
+      "label": "Protokolle",
       "order": 8,
       "items": [
         {
@@ -203,7 +203,7 @@
     },
     {
       "id": "extensibility",
-      "label": "Extensibility",
+      "label": "Erweiterbarkeit",
       "order": 9,
       "items": [
         {
@@ -240,7 +240,7 @@
     },
     {
       "id": "operations",
-      "label": "Operations",
+      "label": "Betrieb",
       "order": 10,
       "items": [
         {
@@ -265,7 +265,7 @@
     },
     {
       "id": "deployment",
-      "label": "Deployment",
+      "label": "Bereitstellung",
       "order": 11,
       "items": [
         {
