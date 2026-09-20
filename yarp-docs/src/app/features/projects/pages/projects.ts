@@ -5,15 +5,15 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { map } from 'rxjs';
 
 import type { LocaleCode } from '../../../core/models/locale.model';
-import { localized, projectCatalog } from '../../projects/data/project-catalog';
+import { localized, projectCatalog } from '../data/project-catalog';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-projects',
   imports: [RouterLink, TranslatePipe],
-  templateUrl: './home.html',
-  styleUrl: './home.scss',
+  templateUrl: './projects.html',
+  styleUrl: './projects.scss',
 })
-export class Home {
+export class Projects {
   private readonly route = inject(ActivatedRoute);
 
   protected readonly locale = toSignal(
@@ -21,11 +21,13 @@ export class Home {
     { initialValue: null },
   );
 
-  protected readonly featuredProjects = computed(() =>
+  protected readonly projects = computed(() =>
     projectCatalog.map((project) => ({
       ...project,
       domainLabel: localized(project.domain, this.locale()),
       description: localized(project.shortDescription, this.locale()),
+      problemLabel: localized(project.problem, this.locale()),
+      statusLabel: localized(project.status, this.locale()),
     })),
   );
 }

@@ -5,53 +5,68 @@
     <p class="lede">{{ 'home.heroLede' | translate }}</p>
     @if (locale(); as loc) {
       <div class="hero-actions">
-        <a [routerLink]="['/', loc, 'yarp-overview']" class="cta primary">{{ 'home.getStarted' | translate }}</a>
-        <a [routerLink]="['/', loc, 'docs']" class="cta secondary">{{ 'home.browseDocs' | translate }}</a>
+        <a [routerLink]="['/', loc, 'projects']" class="cta primary">{{ 'home.exploreProjects' | translate }}</a>
+        <a [routerLink]="['/', loc, 'engineering']" class="cta secondary">{{ 'home.exploreEngineering' | translate }}</a>
+        <a [routerLink]="['/', loc, 'docs']" class="text-link">{{ 'home.readDocs' | translate }} →</a>
       </div>
     }
   </section>
 
-  <h2 class="sections-title">{{ 'home.sectionsTitle' | translate }}</h2>
-
-  @switch (navStore.status()) {
-    @case ('loading') {
-      <div class="card-grid">
-        @for (i of skeletonCards; track i) {
-          <div class="card skeleton-card">
-            <app-skeleton height="14px" width="55%" />
-            <app-skeleton height="11px" width="85%" />
-            <app-skeleton height="11px" width="70%" />
-          </div>
-        }
-      </div>
-    }
-    @case ('error') {
-      <app-error-state [title]="'home.errorTitle' | translate" [body]="'home.errorBody' | translate">
-        <button type="button" class="cta primary" (click)="retry()">{{ 'home.retry' | translate }}</button>
-      </app-error-state>
-    }
-    @case ('success') {
-      @if (locale(); as loc) {
-        <div class="card-grid">
-          @for (group of navStore.groups(); track group.id) {
-            <div class="card">
-              <h3>{{ group.label }}</h3>
-              <ul>
-                @for (item of group.items; track item.slug) {
-                  <li><a [routerLink]="['/', loc, item.slug]">{{ item.title }}</a></li>
-                }
-              </ul>
-            </div>
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">{{ 'home.projectsEyebrow' | translate }}</p>
+      <h2>{{ 'home.projectsTitle' | translate }}</h2>
+    </div>
+    <div class="project-grid">
+      @for (project of featuredProjects(); track project.slug) {
+        <article class="project-card">
+          <p class="project-domain">{{ project.domainLabel }}</p>
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.description }}</p>
+          @if (locale(); as loc) {
+            <a [routerLink]="['/', loc, 'projects', project.slug]">{{ 'home.viewProject' | translate }} →</a>
           }
-        </div>
+        </article>
       }
+    </div>
+  </section>
+
+  <section class="section focus">
+    <div class="section-heading">
+      <p class="eyebrow">{{ 'home.engineeringEyebrow' | translate }}</p>
+      <h2>{{ 'home.engineeringTitle' | translate }}</h2>
+    </div>
+    <div class="focus-grid">
+      <article><h3>.NET & backend</h3><p>ASP.NET Core · EF Core · Aspire · OpenTelemetry · PostgreSQL · SQL Server</p></article>
+      <article><h3>Architecture</h3><p>DDD · CQRS · Modular Monolith · Vertical Slice · bounded contexts</p></article>
+      <article><h3>Products & UX</h3><p>Blazor · MAUI · enterprise workflows · multi-tenancy · compliance systems</p></article>
+      <article><h3>AI infrastructure</h3><p>AI gateways · local models · cloud fallback · RAG · tools · observability</p></article>
+    </div>
+  </section>
+
+  <section class="practice">
+    <p class="eyebrow">{{ 'home.practiceEyebrow' | translate }}</p>
+    <h2>{{ 'home.practiceTitle' | translate }}</h2>
+    <div class="practice-flow">
+      @for (step of ['Problem', 'Domain', 'Architecture', 'UX', 'API', 'Implementation', 'Tests', 'Operations']; track step; let last = $last) {
+        <span>{{ step }}</span>@if (!last) { <b aria-hidden="true">→</b> }
+      }
+    </div>
+  </section>
+
+  <section class="docs-callout">
+    <div>
+      <p class="eyebrow">{{ 'home.docsEyebrow' | translate }}</p>
+      <h2>{{ 'home.docsTitle' | translate }}</h2>
+      <p>{{ 'home.docsBody' | translate }}</p>
+    </div>
+    @if (locale(); as loc) {
+      <a [routerLink]="['/', loc, 'docs']">{{ 'home.exploreDocs' | translate }} →</a>
     }
-  }
+  </section>
 
   <footer class="home-footer">
     <p>{{ 'home.footerAttribution' | translate }}</p>
-    <a href="https://github.com/dotnet/yarp" target="_blank" rel="noopener">{{
-      'home.footerSourceProject' | translate
-    }}</a>
+    <a href="https://github.com/dotnet/yarp" target="_blank" rel="noopener">{{ 'home.footerSourceProject' | translate }}</a>
   </footer>
 </main>

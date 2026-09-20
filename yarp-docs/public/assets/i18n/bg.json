@@ -7,7 +7,11 @@
     "searchPlaceholder": "Търсене в документацията…",
     "searchAriaLabel": "Търсене в документацията",
     "toggleNav": "Превключване на навигацията",
-    "creatorLinkedIn": "LinkedIn профил на създателя"
+    "creatorLinkedIn": "LinkedIn профил на създателя",
+    "primaryNavigation": "Основна навигация",
+    "projects": "Проекти",
+    "engineering": "Инженеринг",
+    "about": "За мен"
   },
   "theme": {
     "switchToLight": "Превключване към светла тема",
@@ -17,7 +21,7 @@
     "chooseLanguage": "Изберете език"
   },
   "meta": {
-    "titleTemplate": "{{title}} · YARP Docs"
+    "titleTemplate": "{{title}} · YARP.DEV"
   },
   "docBody": {
     "copyCode": "Копирай кода",
@@ -64,17 +68,68 @@
     "message": "Тази страница все още не е преведена — показва се на английски."
   },
   "home": {
-    "heroEyebrow": "Документация на YARP",
-    "heroTitle": "Yet Another Reverse Proxy, за .NET",
-    "heroLede": "Изключително гъвкава библиотека за обратно прокси, за изграждане на бързи и адаптивни edge и gateway услуги върху ASP.NET Core.",
-    "getStarted": "Начало",
-    "browseDocs": "Разгледайте цялата документация",
-    "sectionsTitle": "Разгледайте документацията",
-    "errorTitle": "Нещо се обърка",
-    "errorBody": "Индексът на документацията не можа да се зареди. Проверете връзката си и опитайте отново.",
-    "retry": "Опитай отново",
-    "footerAttribution": "Съдържанието е адаптирано от Microsoft Learn, лицензирано под CC BY 4.0.",
-    "footerSourceProject": "YARP в GitHub ↗"
+    "metaTitle": "Инженеринг, продукти и техническа документация",
+    "heroEyebrow": "Софтуерен инженеринг публично",
+    "heroTitle": "Реални продукти, не demo проекти.",
+    "heroLede": "Production-minded .NET инженеринг, домейн архитектура, продуктова разработка и техническа документация — показани чрез реални системи и инженерни решения.",
+    "exploreProjects": "Разгледай проектите",
+    "exploreEngineering": "Разгледай инженеринга",
+    "readDocs": "YARP документация",
+    "projectsEyebrow": "Продукти",
+    "projectsTitle": "Системи, изградени около реални домейни.",
+    "viewProject": "Виж проекта",
+    "engineeringEyebrow": "Инженерен фокус",
+    "engineeringTitle": "Архитектурата се вижда в работата.",
+    "practiceEyebrow": "Инженеринг на практика",
+    "practiceTitle": "От дефинирането на проблема до operations.",
+    "docsEyebrow": "Документация",
+    "docsTitle": "Документацията е част от инженерния резултат.",
+    "docsBody": "YARP.DEV запазва съществуващите ръководства за Microsoft YARP като първокласна част от сайта и добавя подбрано съдържание за продуктова архитектура и инженеринг.",
+    "exploreDocs": "Разгледай документацията",
+    "footerAttribution": "Документацията за Microsoft YARP е адаптирана от Microsoft Learn под CC BY 4.0. YARP.DEV е независим инженерен и документационен сайт.",
+    "footerSourceProject": "Microsoft YARP в GitHub ↗"
+  },
+  "projects": {
+    "metaTitle": "Проекти",
+    "eyebrow": "Продуктов инженеринг",
+    "title": "Проекти",
+    "lede": "Портфолио от реални продуктови домейни, архитектурни решения и implementation работа — представени като системи, а не като списък от технологии.",
+    "problem": "Проблем",
+    "architecture": "Архитектура",
+    "viewProject": "Виж проекта"
+  },
+  "projectDetail": {
+    "allProjects": "Всички проекти",
+    "technicalDocs": "Техническа документация",
+    "problem": "Проблем",
+    "problemTitle": "Какво решава продуктът",
+    "users": "Потребители",
+    "usersTitle": "За кого е системата",
+    "architecture": "Архитектура",
+    "architectureTitle": "Как е структурирана системата",
+    "patterns": "Patterns и граници",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "infrastructure": "Инфраструктура",
+    "engineering": "Инженерни акценти",
+    "engineeringTitle": "Проблеми, които си струва да бъдат показани"
+  },
+  "engineering": {
+    "metaTitle": "Инженеринг",
+    "eyebrow": "Инженерна практика",
+    "title": "Архитектура чрез работещи системи.",
+    "lede": "Фокусът не е CV-списък с технологии. Проектите показват как домейн моделирането, модерният .NET, надеждността, frontend архитектурата и AI-assisted development работят заедно в production-minded системи.",
+    "practiceEyebrow": "Модел на изпълнение",
+    "practiceTitle": "Инженерингът като свързана система."
+  },
+  "about": {
+    "metaTitle": "За мен",
+    "eyebrow": "За мен",
+    "title": "Software Engineer / .NET Architect",
+    "lede": "Backend и full-stack инженеринг с фокус върху ясни домейн граници, поддържаема архитектура и production-oriented софтуер.",
+    "focus": "Фокус",
+    "principles": "Инженерни принципи",
+    "statement": "Целта е проста: архитектурата да се разбира от кода, продуктът да се разбира от UX-а, а инженерните решения да се разбират от документацията."
   },
   "docsIndex": {
     "title": "Цялата документация",

@@ -1,0 +1,101 @@
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 64px 48px 96px;
+}
+
+.page-hero {
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+.eyebrow,
+.meta {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
+  line-height: .98;
+  letter-spacing: -.045em;
+  color: var(--ink);
+}
+
+.lede {
+  margin: 0;
+  max-width: 68ch;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.project-list {
+  display: grid;
+  gap: 18px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 32px;
+  align-items: end;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.project-card h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: var(--ink);
+}
+
+.project-card p:not(.meta) {
+  margin: 0 0 20px;
+  max-width: 72ch;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+dl div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+}
+
+dt {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--faint);
+}
+
+dd {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.project-link {
+  white-space: nowrap;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .page { padding: 44px 20px 72px; }
+  .project-card { grid-template-columns: 1fr; }
+  dl div { grid-template-columns: 1fr; gap: 2px; }
+}

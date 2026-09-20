@@ -1,0 +1,26 @@
+<main id="main" class="page projects-page">
+  <header class="page-hero">
+    <p class="eyebrow">{{ 'projects.eyebrow' | translate }}</p>
+    <h1>{{ 'projects.title' | translate }}</h1>
+    <p class="lede">{{ 'projects.lede' | translate }}</p>
+  </header>
+
+  <div class="project-list">
+    @for (project of projects(); track project.slug) {
+      <article class="project-card">
+        <div>
+          <p class="meta">{{ project.domainLabel }} · {{ project.statusLabel }}</p>
+          <h2>{{ project.name }}</h2>
+          <p>{{ project.description }}</p>
+          <dl>
+            <div><dt>{{ 'projects.problem' | translate }}</dt><dd>{{ project.problemLabel }}</dd></div>
+            <div><dt>{{ 'projects.architecture' | translate }}</dt><dd>{{ project.architecture.join(' · ') }}</dd></div>
+          </dl>
+        </div>
+        @if (locale(); as localeCode) {
+          <a class="project-link" [routerLink]="['/', localeCode, 'projects', project.slug]">{{ 'projects.viewProject' | translate }} →</a>
+        }
+      </article>
+    }
+  </div>
+</main>
