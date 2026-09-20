@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { map } from 'rxjs';
 
 import { MobileNavStore } from '../../core/state/mobile-nav.store';
 import { SEARCH_QUERY_PARAM } from '../../features/search/search-query-param';
@@ -11,7 +13,7 @@ import { ThemeToggle } from '../theme-toggle/theme-toggle';
 
 @Component({
   selector: 'app-site-header',
-  imports: [RouterLink, LanguagePicker, ThemeToggle, SupportButton, TranslatePipe],
+  imports: [RouterLink, RouterLinkActive, LanguagePicker, ThemeToggle, SupportButton, TranslatePipe],
   templateUrl: './site-header.html',
   styleUrl: './site-header.scss',
 })
@@ -20,15 +22,13 @@ export class SiteHeader {
   private readonly router = inject(Router);
   private readonly route = inject(ActivatedRoute);
 
-  // The platform doesn't change over the page's lifetime, so this is a
-  // plain field rather than a signal - computed once, read by both the
-  // visible <kbd> glyph and the aria-label's {{key}} param.
+  protected readonly locale = toSignal(
+    this.route.paramMap.pipe(map((params) => params.get('locale'))),
+    { initialValue: 'en' },
+  );
   protected readonly isApple = isApplePlatform();
   protected readonly shortcutKey = this.isApple ? '⌘K' : 'Ctrl+K';
 
-  // Same navigation SearchDialog's own Ctrl/Cmd+K handler performs - see
-  // search-query-param.ts for why this is a shared constant rather than a
-  // shared service.
   protected openSearch(): void {
     void this.router.navigate([], {
       relativeTo: this.route,
