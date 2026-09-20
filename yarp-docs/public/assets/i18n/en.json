@@ -7,7 +7,11 @@
     "searchPlaceholder": "Search documentation…",
     "searchAriaLabel": "Search documentation",
     "toggleNav": "Toggle navigation",
-    "creatorLinkedIn": "Creator's LinkedIn profile"
+    "creatorLinkedIn": "Creator's LinkedIn profile",
+    "primaryNavigation": "Primary navigation",
+    "projects": "Projects",
+    "engineering": "Engineering",
+    "about": "About"
   },
   "theme": {
     "switchToLight": "Switch to light theme",
@@ -17,7 +21,7 @@
     "chooseLanguage": "Choose a language"
   },
   "meta": {
-    "titleTemplate": "{{title}} · YARP Docs"
+    "titleTemplate": "{{title}} · YARP.DEV"
   },
   "docBody": {
     "copyCode": "Copy code",
@@ -64,17 +68,68 @@
     "message": "This page hasn't been translated yet — showing English."
   },
   "home": {
-    "heroEyebrow": "YARP Documentation",
-    "heroTitle": "Yet Another Reverse Proxy, for .NET",
-    "heroLede": "A highly customizable reverse proxy library for building fast, flexible edge and gateway services on top of ASP.NET Core.",
-    "getStarted": "Get started",
-    "browseDocs": "Browse all docs",
-    "sectionsTitle": "Explore the docs",
-    "errorTitle": "Something went wrong",
-    "errorBody": "The documentation index couldn't be loaded. Check your connection and try again.",
-    "retry": "Retry",
-    "footerAttribution": "Content adapted from Microsoft Learn, licensed under CC BY 4.0.",
-    "footerSourceProject": "YARP on GitHub ↗"
+    "metaTitle": "Engineering, products and technical documentation",
+    "heroEyebrow": "Software engineering in public",
+    "heroTitle": "Engineering real products, not demo projects.",
+    "heroLede": "Production-minded .NET engineering, domain architecture, product development and technical documentation — demonstrated through real systems and engineering decisions.",
+    "exploreProjects": "Explore Projects",
+    "exploreEngineering": "Explore Engineering",
+    "readDocs": "Read YARP Documentation",
+    "projectsEyebrow": "Products",
+    "projectsTitle": "Systems built around real domains.",
+    "viewProject": "View project",
+    "engineeringEyebrow": "Engineering focus",
+    "engineeringTitle": "Architecture is visible in the work.",
+    "practiceEyebrow": "Engineering in practice",
+    "practiceTitle": "From problem framing to operations.",
+    "docsEyebrow": "Documentation",
+    "docsTitle": "Documentation is part of the engineering output.",
+    "docsBody": "YARP.DEV keeps the existing Microsoft YARP guides first-class while adding curated product architecture and engineering material around them.",
+    "exploreDocs": "Explore Documentation",
+    "footerAttribution": "Microsoft YARP documentation is adapted from Microsoft Learn under CC BY 4.0. YARP.DEV is an independent engineering/documentation site.",
+    "footerSourceProject": "Microsoft YARP on GitHub ↗"
+  },
+  "projects": {
+    "metaTitle": "Projects",
+    "eyebrow": "Product engineering",
+    "title": "Projects",
+    "lede": "A portfolio of real product domains, architecture decisions and implementation work — presented as systems rather than a list of technologies.",
+    "problem": "Problem",
+    "architecture": "Architecture",
+    "viewProject": "View project"
+  },
+  "projectDetail": {
+    "allProjects": "All projects",
+    "technicalDocs": "Technical Documentation",
+    "problem": "Problem",
+    "problemTitle": "What the product is solving",
+    "users": "Users",
+    "usersTitle": "Who the system serves",
+    "architecture": "Architecture",
+    "architectureTitle": "How the system is shaped",
+    "patterns": "Patterns & boundaries",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "infrastructure": "Infrastructure",
+    "engineering": "Engineering highlights",
+    "engineeringTitle": "Problems worth showing"
+  },
+  "engineering": {
+    "metaTitle": "Engineering",
+    "eyebrow": "Engineering practice",
+    "title": "Architecture through working systems.",
+    "lede": "The focus is not a CV-style technology inventory. The work shows how domain modelling, modern .NET, reliability, frontend architecture and AI-assisted development fit together in production-minded systems.",
+    "practiceEyebrow": "Delivery model",
+    "practiceTitle": "Engineering as a connected system."
+  },
+  "about": {
+    "metaTitle": "About",
+    "eyebrow": "About",
+    "title": "Software Engineer / .NET Architect",
+    "lede": "Backend and full-stack engineering focused on explicit domain boundaries, maintainable architecture and production-oriented software.",
+    "focus": "Focus",
+    "principles": "Engineering principles",
+    "statement": "The goal is simple: make the architecture understandable in the code, the product understandable in the UX, and the engineering decisions understandable in the documentation."
   },
   "docsIndex": {
     "title": "All documentation",
