@@ -1,11 +1,4 @@
 #!/usr/bin/env node
-// Generates public/sitemap.xml by enumerating every (locale, path) the app
-// actually serves - the same ALL_ITEMS/LOCALES tables build-content.mjs
-// uses, so a slug added there is automatically covered here too. Static
-// pages (home, docs index) are added by hand since ia.mjs only knows about
-// doc slugs. Each <url> carries xhtml:link hreflang alternates for every
-// locale plus x-default, so this is also the sitemap-level counterpart to
-// SeoService's per-page <link rel="alternate"> tags.
 import { writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -16,9 +9,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = join(__dirname, '..', '..', 'public', 'sitemap.xml');
 const SITE_URL = 'https://yarp.dev';
 
-const STATIC_PATHS = ['', 'docs'];
+const PROJECT_SLUGS = ['dudewash', 'foodreg', 'rasm', 'qwen-hosting'];
+const STATIC_PATHS = ['', 'projects', 'engineering', 'about', 'docs'];
+const PROJECT_PATHS = PROJECT_SLUGS.map((slug) => `projects/${slug}`);
 const DOC_PATHS = ALL_ITEMS.map((item) => item.slug);
-const ALL_PATHS = [...STATIC_PATHS, ...DOC_PATHS];
+const ALL_PATHS = [...STATIC_PATHS, ...PROJECT_PATHS, ...DOC_PATHS];
 
 function urlFor(locale, path) {
   return path ? `${SITE_URL}/${locale}/${path}` : `${SITE_URL}/${locale}`;
@@ -53,9 +48,6 @@ function main() {
   console.log(`Wrote ${OUTPUT_PATH} (${urlCount} URLs across ${LOCALES.length} locales).`);
 }
 
-// pathToFileURL handles Windows drive-letter casing, backslashes, and
-// spaces correctly, unlike a hand-rolled string comparison - see
-// build-content.mjs's identical guard.
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main();
 }
