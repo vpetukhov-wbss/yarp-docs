@@ -12,8 +12,8 @@ import { TranslatePipe } from '@ngx-translate/core';
         <p class="lede">{{ 'about.lede' | translate }}</p>
       </header>
       <section class="grid">
-        <article><h2>{{ 'about.focus' | translate }}</h2><p>.NET backend systems · domain architecture · SaaS · compliance · distributed systems · AI infrastructure · cross-platform .NET</p></article>
-        <article><h2>{{ 'about.principles' | translate }}</h2><p>Simple code · explicit domain boundaries · documentation-driven development · testable vertical slices · pragmatic use of AI</p></article>
+        <article><h2>{{ 'about.focus' | translate }}</h2><p>{{ 'about.focusBody' | translate }}</p></article>
+        <article><h2>{{ 'about.principles' | translate }}</h2><p>{{ 'about.principlesBody' | translate }}</p></article>
       </section>
       <section class="statement">
         <p>{{ 'about.statement' | translate }}</p>
