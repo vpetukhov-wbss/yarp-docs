@@ -5,11 +5,6 @@
   display: none;
 }
 
-// Every icon-only button in this template shares this class - unlike
-// theme-toggle/language-picker (each a separate component, each defining
-// its own .icon-btn locally since component styles are encapsulated by
-// default), the mobile search button and this link both live directly in
-// site-header's own template, so this is the one place that needs the rule.
 .icon-btn {
   @include icon-button;
   text-decoration: none;
@@ -33,30 +28,39 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: .02em;
   color: var(--ink);
   white-space: nowrap;
 
-  svg {
-    color: var(--accent);
-    flex: none;
-  }
+  svg { color: var(--accent); flex: none; }
+}
 
-  .ver {
-    font-weight: 500;
-    color: var(--faint);
-    font-size: 12.5px;
-    padding: 2px 6px;
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    margin-left: 2px;
-  }
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.primary-nav a {
+  padding: 7px 9px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.primary-nav a:hover,
+.primary-nav a.active {
+  background: var(--surface);
+  color: var(--ink);
 }
 
 .hdr-search {
   flex: 1;
-  max-width: 460px;
+  max-width: 360px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -71,114 +75,31 @@
   font-family: var(--font-ui);
   cursor: pointer;
 
-  &:hover {
-    border-color: var(--border-strong);
-  }
-
-  svg {
-    flex: none;
-    color: var(--faint);
-  }
-
-  .kbd {
-    margin-left: auto;
-    display: flex;
-    gap: 3px;
-  }
-
-  kbd {
-    background: var(--bg);
-    border: 1px solid var(--border-strong);
-    border-bottom-width: 2px;
-    border-radius: 4px;
-    padding: 1px 6px;
-    font-size: 11px;
-    color: var(--muted);
-  }
+  &:hover { border-color: var(--border-strong); }
+  svg { flex: none; color: var(--faint); }
+  .kbd { margin-left: auto; display: flex; gap: 3px; }
+  kbd { background: var(--bg); border: 1px solid var(--border-strong); border-bottom-width: 2px; border-radius: 4px; padding: 1px 6px; font-size: 11px; color: var(--muted); }
 }
 
-.hdr-actions {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  flex: none;
-}
+.hdr-actions { display: flex; align-items: center; gap: 0.4rem; flex: none; }
 
-// Floating vertical dock, pinned to the right edge of the viewport and
-// vertically centered - independent of .site's document flow so it stays
-// put across scroll. Houses the two non-functional/social icons (support,
-// LinkedIn); language + theme stay in the header since those are controls
-// people expect to find there.
-.fab-rail {
-  position: fixed;
-  right: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 55;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+.fab-rail { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 55; display: flex; flex-direction: column; gap: 10px; }
+.fab-btn { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: var(--bg); border: 1px solid var(--border); box-shadow: var(--shadow); color: var(--muted); text-decoration: none; cursor: pointer; transition: transform .15s ease,color .15s ease,border-color .15s ease; }
+.fab-btn:hover { color: var(--ink); border-color: var(--border-strong); transform: scale(1.06); }
+.search-btn-mobile { display: none; }
 
-.fab-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  color: var(--muted);
-  text-decoration: none;
-  cursor: pointer;
-  transition:
-    transform 0.15s ease,
-    color 0.15s ease,
-    border-color 0.15s ease;
-
-  &:hover {
-    color: var(--ink);
-    border-color: var(--border-strong);
-    transform: scale(1.06);
-  }
-}
-
-@media (max-width: 640px) {
-  .fab-rail {
-    right: 12px;
-  }
-
-  .fab-btn {
-    width: 42px;
-    height: 42px;
-  }
-}
-
-// The full search field collapses below 1024px, same as the mockup - but
-// unlike the mockup, that's no longer a dead end: this button is the
-// replacement entry point, not just decoration hidden until then.
-.search-btn-mobile {
-  display: none;
+@media (max-width: 1180px) {
+  .primary-nav { display: none; }
+  .menu-btn { display: flex !important; }
 }
 
 @media (max-width: 1024px) {
-  .hdr-search {
-    display: none;
-  }
-
-  .search-btn-mobile {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: flex !important;
-  }
+  .hdr-search { display: none; }
+  .search-btn-mobile { display: flex; }
 }
 
 @media (max-width: 640px) {
-  .brand .name {
-    display: none;
-  }
+  .fab-rail { right: 12px; }
+  .fab-btn { width: 42px; height: 42px; }
+  .brand .name { font-size: 13px; }
 }
