@@ -3,14 +3,10 @@ import { RenderMode } from '@angular/ssr';
 
 import { SUPPORTED_LOCALES } from './core/locales';
 import { PRERENDER_SLUGS } from './core/prerender-slugs.generated';
+import { projectCatalog } from './features/projects/data/project-catalog';
 
-// Every route this app serves is fully static (same content for every
-// visitor, no user-specific data), so every one of them is prerenderable -
-// see angular.json's outputMode: "static", which turns this into pure
-// build-time SSG instead of a server that renders on every request.
-// Order matters, same as app.routes.ts's own children: the literal
-// ':locale/docs' path must be registered before the ':locale/:slug'
-// wildcard, or the wildcard would swallow it.
+const localizedStaticPaths = ['projects', 'engineering', 'about', 'docs'] as const;
+
 export const serverRoutes: ServerRoute[] = [
   {
     path: ':locale',
@@ -19,11 +15,22 @@ export const serverRoutes: ServerRoute[] = [
       return SUPPORTED_LOCALES.map((locale) => ({ locale: locale.code }));
     },
   },
+  ...localizedStaticPaths.map(
+    (segment): ServerRoute => ({
+      path: `:locale/${segment}`,
+      renderMode: RenderMode.Prerender,
+      async getPrerenderParams() {
+        return SUPPORTED_LOCALES.map((locale) => ({ locale: locale.code }));
+      },
+    }),
+  ),
   {
-    path: ':locale/docs',
+    path: ':locale/projects/:projectSlug',
     renderMode: RenderMode.Prerender,
     async getPrerenderParams() {
-      return SUPPORTED_LOCALES.map((locale) => ({ locale: locale.code }));
+      return SUPPORTED_LOCALES.flatMap((locale) =>
+        projectCatalog.map((project) => ({ locale: locale.code, projectSlug: project.slug })),
+      );
     },
   },
   {
@@ -35,10 +42,6 @@ export const serverRoutes: ServerRoute[] = [
       );
     },
   },
-  // The not-found catch-all has no finite param space to enumerate (the
-  // wildcard matches any unmatched slug) and isn't a page worth indexing
-  // anyway - left client-rendered, same as today, served by vercel.json's
-  // SPA fallback rewrite for any path with no prerendered file.
   {
     path: ':locale/**',
     renderMode: RenderMode.Client,
