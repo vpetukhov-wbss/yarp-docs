@@ -37,19 +37,19 @@
       <h2>{{ 'home.engineeringTitle' | translate }}</h2>
     </div>
     <div class="focus-grid">
-      <article><h3>.NET & backend</h3><p>ASP.NET Core · EF Core · Aspire · OpenTelemetry · PostgreSQL · SQL Server</p></article>
-      <article><h3>Architecture</h3><p>DDD · CQRS · Modular Monolith · Vertical Slice · bounded contexts</p></article>
-      <article><h3>Products & UX</h3><p>Blazor · MAUI · enterprise workflows · multi-tenancy · compliance systems</p></article>
-      <article><h3>AI infrastructure</h3><p>AI gateways · local models · cloud fallback · RAG · tools · observability</p></article>
+      <article><h3>{{ 'home.focusBackend' | translate }}</h3><p>{{ 'home.focusBackendBody' | translate }}</p></article>
+      <article><h3>{{ 'home.focusArchitecture' | translate }}</h3><p>{{ 'home.focusArchitectureBody' | translate }}</p></article>
+      <article><h3>{{ 'home.focusProducts' | translate }}</h3><p>{{ 'home.focusProductsBody' | translate }}</p></article>
+      <article><h3>{{ 'home.focusAi' | translate }}</h3><p>{{ 'home.focusAiBody' | translate }}</p></article>
     </div>
   </section>
 
   <section class="practice">
     <p class="eyebrow">{{ 'home.practiceEyebrow' | translate }}</p>
     <h2>{{ 'home.practiceTitle' | translate }}</h2>
-    <div class="practice-flow">
-      @for (step of ['Problem', 'Domain', 'Architecture', 'UX', 'API', 'Implementation', 'Tests', 'Operations']; track step; let last = $last) {
-        <span>{{ step }}</span>@if (!last) { <b aria-hidden="true">→</b> }
+    <div class="practice-flow" [attr.aria-label]="'process.aria' | translate">
+      @for (stepKey of processStepKeys; track stepKey; let last = $last) {
+        <span>{{ stepKey | translate }}</span>@if (!last) { <b aria-hidden="true">→</b> }
       }
     </div>
   </section>
