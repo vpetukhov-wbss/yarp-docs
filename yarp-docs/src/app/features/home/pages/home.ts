@@ -16,6 +16,17 @@ import { localized, projectCatalog } from '../../projects/data/project-catalog';
 export class Home {
   private readonly route = inject(ActivatedRoute);
 
+  protected readonly processStepKeys = [
+    'process.problem',
+    'process.domain',
+    'process.architecture',
+    'process.ux',
+    'process.api',
+    'process.implementation',
+    'process.tests',
+    'process.operations',
+  ] as const;
+
   protected readonly locale = toSignal(
     this.route.paramMap.pipe(map((params) => params.get('locale') as LocaleCode | null)),
     { initialValue: null },
