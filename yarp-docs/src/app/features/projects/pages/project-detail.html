@@ -1,0 +1,52 @@
+<main id="main" class="page project-detail">
+  @if (project(); as item) {
+    <a class="back-link" [routerLink]="['/', locale(), 'projects']">← {{ 'projectDetail.allProjects' | translate }}</a>
+
+    <header class="page-hero">
+      <p class="eyebrow">{{ item.domainLabel }} · {{ item.statusLabel }}</p>
+      <h1>{{ item.name }}</h1>
+      <p class="lede">{{ item.description }}</p>
+      <div class="hero-actions">
+        <a class="primary-link" [href]="item.documentationUrl" target="_blank" rel="noopener">{{ 'projectDetail.technicalDocs' | translate }} ↗</a>
+      </div>
+    </header>
+
+    <section class="narrative-grid">
+      <article>
+        <p class="section-label">{{ 'projectDetail.problem' | translate }}</p>
+        <h2>{{ 'projectDetail.problemTitle' | translate }}</h2>
+        <p>{{ item.problemLabel }}</p>
+      </article>
+      <article>
+        <p class="section-label">{{ 'projectDetail.users' | translate }}</p>
+        <h2>{{ 'projectDetail.usersTitle' | translate }}</h2>
+        <ul>
+          @for (user of item.targetUsers; track user) { <li>{{ user }}</li> }
+        </ul>
+      </article>
+    </section>
+
+    <section class="architecture">
+      <p class="section-label">{{ 'projectDetail.architecture' | translate }}</p>
+      <h2>{{ 'projectDetail.architectureTitle' | translate }}</h2>
+      <div class="architecture-grid">
+        <article><h3>{{ 'projectDetail.patterns' | translate }}</h3><p>{{ item.architecture.join(' · ') }}</p></article>
+        <article><h3>{{ 'projectDetail.frontend' | translate }}</h3><p>{{ item.frontend.join(' · ') }}</p></article>
+        <article><h3>{{ 'projectDetail.backend' | translate }}</h3><p>{{ item.backend.join(' · ') }}</p></article>
+        <article><h3>{{ 'projectDetail.infrastructure' | translate }}</h3><p>{{ item.infrastructure.join(' · ') }}</p></article>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <p class="section-label">{{ 'projectDetail.engineering' | translate }}</p>
+      <h2>{{ 'projectDetail.engineeringTitle' | translate }}</h2>
+      <ol>
+        @for (highlight of item.highlights; track highlight; let index = $index) {
+          <li><span>{{ index + 1 }}</span><p>{{ highlight }}</p></li>
+        }
+      </ol>
+    </section>
+  } @else {
+    <section class="page-hero"><h1>{{ 'notFound.title' | translate }}</h1><p class="lede">{{ 'notFound.body' | translate }}</p></section>
+  }
+</main>
