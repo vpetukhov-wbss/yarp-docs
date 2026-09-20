@@ -1,11 +1,12 @@
 import { Component, computed, effect, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { map } from 'rxjs';
 
 import type { LocaleCode } from '../../../core/models/locale.model';
+import { SeoService } from '../../../core/seo.service';
 import { findProject, localized } from '../data/project-catalog';
 
 @Component({
@@ -17,6 +18,8 @@ import { findProject, localized } from '../data/project-catalog';
 export class ProjectDetail {
   private readonly route = inject(ActivatedRoute);
   private readonly title = inject(Title);
+  private readonly meta = inject(Meta);
+  private readonly seo = inject(SeoService);
 
   protected readonly locale = toSignal(
     this.route.paramMap.pipe(map((params) => params.get('locale') as LocaleCode | null)),
@@ -44,7 +47,18 @@ export class ProjectDetail {
   constructor() {
     effect(() => {
       const project = this.project();
-      if (project) this.title.setTitle(`${project.name} · YARP.DEV`);
+      const locale = this.locale();
+      if (!project || !locale) return;
+
+      const title = `${project.name} · YARP.DEV`;
+      const path = `/${locale}/projects/${project.slug}`;
+      const suffix = `/projects/${project.slug}`;
+
+      this.title.setTitle(title);
+      this.meta.updateTag({ name: 'description', content: project.description });
+      this.seo.setCanonical(path);
+      this.seo.setHreflangAlternates(suffix);
+      this.seo.setSocialTags({ title, description: project.description, path });
     });
   }
 }
