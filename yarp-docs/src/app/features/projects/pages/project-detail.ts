@@ -40,6 +40,7 @@ export class ProjectDetail {
       description: localized(project.shortDescription, this.locale()),
       problemLabel: localized(project.problem, this.locale()),
       statusLabel: localized(project.status, this.locale()),
+      targetUsers: project.targetUsers.map((item) => localized(item, this.locale())),
       highlights: project.engineeringHighlights.map((item) => localized(item, this.locale())),
     };
   });
