@@ -3,7 +3,7 @@ import { RenderMode } from '@angular/ssr';
 
 import { SUPPORTED_LOCALES } from './core/locales';
 import { PRERENDER_SLUGS } from './core/prerender-slugs.generated';
-import { projectCatalog } from './features/projects/data/project-catalog';
+import { publicProjectCatalog } from './features/projects/data/public-project-catalog';
 
 const localizedStaticPaths = ['projects', 'engineering', 'about', 'docs'] as const;
 
@@ -29,7 +29,7 @@ export const serverRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
     async getPrerenderParams() {
       return SUPPORTED_LOCALES.flatMap((locale) =>
-        projectCatalog.map((project) => ({ locale: locale.code, projectSlug: project.slug })),
+        publicProjectCatalog.map((project) => ({ locale: locale.code, projectSlug: project.slug })),
       );
     },
   },
