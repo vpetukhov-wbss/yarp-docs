@@ -4,9 +4,9 @@
   position: relative;
 }
 
-// Sized to match site-header.scss's .fab-btn (the LinkedIn link sharing
-// this component's floating rail) rather than the shared 34px icon-button
-// mixin - this button only ever renders inside that rail now.
+// Round floating button. It only ever renders inside the fixed right-hand
+// rail (.fab-rail in site-header.scss), so it has its own 48px size rather
+// than the shared 34px icon-button mixin.
 .icon-btn {
   display: flex;
   align-items: center;

@@ -6,8 +6,7 @@
   "header": {
     "searchPlaceholder": "Dokumentation durchsuchen…",
     "searchAriaLabel": "Dokumentation durchsuchen",
-    "toggleNav": "Navigation umschalten",
-    "creatorLinkedIn": "LinkedIn-Profil des Erstellers"
+    "toggleNav": "Navigation umschalten"
   },
   "theme": {
     "switchToLight": "Zu hellem Design wechseln",
