@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT_PATH = join(__dirname, '..', '..', 'public', 'sitemap.xml');
 const SITE_URL = 'https://yarp.dev';
 
-const PROJECT_SLUGS = ['dudewash', 'foodreg', 'rasm', 'qwen-hosting'];
+const PROJECT_SLUGS = ['dudewash', 'foodreg', 'rasm', 'qwen-hosting', 'yarp-gateway'];
 const STATIC_PATHS = ['', 'projects', 'engineering', 'about', 'docs'];
 const PROJECT_PATHS = PROJECT_SLUGS.map((slug) => `projects/${slug}`);
 const DOC_PATHS = ALL_ITEMS.map((item) => item.slug);

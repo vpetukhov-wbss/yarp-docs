@@ -5,7 +5,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { map } from 'rxjs';
 
 import type { LocaleCode } from '../../../core/models/locale.model';
-import { localized, projectCatalog } from '../../projects/data/project-catalog';
+import { localized, publicProjectCatalog } from '../../projects/data/public-project-catalog';
 
 @Component({
   selector: 'app-home',
@@ -33,7 +33,7 @@ export class Home {
   );
 
   protected readonly featuredProjects = computed(() =>
-    projectCatalog.map((project) => ({
+    publicProjectCatalog.map((project) => ({
       ...project,
       domainLabel: localized(project.domain, this.locale()),
       description: localized(project.shortDescription, this.locale()),

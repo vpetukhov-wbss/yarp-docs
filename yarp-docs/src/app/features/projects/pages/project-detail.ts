@@ -7,7 +7,7 @@ import { map } from 'rxjs';
 
 import type { LocaleCode } from '../../../core/models/locale.model';
 import { SeoService } from '../../../core/seo.service';
-import { findProject, localized } from '../data/project-catalog';
+import { findPublicProject, localized } from '../data/public-project-catalog';
 
 @Component({
   selector: 'app-project-detail',
@@ -31,7 +31,7 @@ export class ProjectDetail {
   );
 
   protected readonly project = computed(() => {
-    const project = findProject(this.slug());
+    const project = findPublicProject(this.slug());
     if (!project) return undefined;
 
     return {

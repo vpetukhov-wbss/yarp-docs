@@ -6,9 +6,11 @@
       <p class="eyebrow">{{ item.domainLabel }} · {{ item.statusLabel }}</p>
       <h1>{{ item.name }}</h1>
       <p class="lede">{{ item.description }}</p>
-      <div class="hero-actions">
-        <a class="primary-link" [href]="item.documentationUrl" target="_blank" rel="noopener">{{ 'projectDetail.technicalDocs' | translate }} ↗</a>
-      </div>
+      @if (item.documentationUrl) {
+        <div class="hero-actions">
+          <a class="primary-link" [href]="item.documentationUrl" target="_blank" rel="noopener">{{ 'projectDetail.technicalDocs' | translate }} ↗</a>
+        </div>
+      }
     </header>
 
     <section class="narrative-grid">
