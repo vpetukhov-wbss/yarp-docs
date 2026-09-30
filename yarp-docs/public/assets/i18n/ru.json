@@ -6,8 +6,7 @@
   "header": {
     "searchPlaceholder": "Поиск по документации…",
     "searchAriaLabel": "Поиск по документации",
-    "toggleNav": "Переключить навигацию",
-    "creatorLinkedIn": "Профиль создателя в LinkedIn"
+    "toggleNav": "Переключить навигацию"
   },
   "theme": {
     "switchToLight": "Переключить на светлую тему",

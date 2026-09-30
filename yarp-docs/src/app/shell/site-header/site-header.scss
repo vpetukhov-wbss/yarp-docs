@@ -84,8 +84,6 @@
 .hdr-actions { display: flex; align-items: center; gap: 0.4rem; flex: none; }
 
 .fab-rail { position: fixed; right: 18px; top: 50%; transform: translateY(-50%); z-index: 55; display: flex; flex-direction: column; gap: 10px; }
-.fab-btn { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; background: var(--bg); border: 1px solid var(--border); box-shadow: var(--shadow); color: var(--muted); text-decoration: none; cursor: pointer; transition: transform .15s ease,color .15s ease,border-color .15s ease; }
-.fab-btn:hover { color: var(--ink); border-color: var(--border-strong); transform: scale(1.06); }
 .search-btn-mobile { display: none; }
 
 @media (max-width: 1180px) {
@@ -100,6 +98,5 @@
 
 @media (max-width: 640px) {
   .fab-rail { right: 12px; }
-  .fab-btn { width: 42px; height: 42px; }
   .brand .name { font-size: 13px; }
 }
